@@ -1,0 +1,44 @@
+project:
+  type: website
+
+website:
+  title: "Statistiek B"
+  page-navigation: true
+  
+  page-footer:
+    right: "Gemaakt met veel ❤ en [Quarto](https://quarto.org/)."
+    left: "&copy; CC-By Universiteit Antwerpen, 2024"
+
+  sidebar: 
+    style: "docked"
+    pinned: true
+    search: true
+    align: center
+    border: false
+    contents: 
+      - text: "Welkom"
+        href: index.qmd
+      - text: ""
+      - text: "Over ons"
+        href: about.qmd
+    
+    tools: 
+      - icon: globe
+        href: https://www.uantwerpen.be/nl/
+        text: "uantwerpen.be/nl/"
+      - icon: github
+        href: https://github.com/openscapes/quarto-website-tutorial
+        text: "Statistiek B"
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+    
+editor: visual
+
