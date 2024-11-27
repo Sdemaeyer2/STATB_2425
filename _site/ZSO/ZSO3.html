@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ZSO 2 – Statistiek B</title>
+<title>ZSO 3 – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,8 +63,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ZSO/ZSO3.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../ZSO/ZSO4.html" rel="next">
+<link href="../ZSO/ZSO2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,6 +102,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -115,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ZSO</li><li class="breadcrumb-item"><a href="../ZSO/ZSO2.html">ZSO2: t-test</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ZSO</li><li class="breadcrumb-item"><a href="../ZSO/ZSO3.html">ZSO3: ANOVA</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -205,19 +234,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ZSO/ZSO2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO2: t-test</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO3.html" class="sidebar-item-text sidebar-link">
+  <a href="../ZSO/ZSO3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ZSO3: ANOVA</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">ZSO4: Kruistabellen</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO4: Kruistabellen</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">ZSO5: Correlaties</span>
   </li>
@@ -277,25 +309,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a>
-  <ul class="collapse">
-  <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
-  <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
-  </ul></li>
+  <li><a href="#opdracht" id="toc-opdracht" class="nav-link active" data-scroll-target="#opdracht">OPDRACHT</a></li>
   <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
   <ul class="collapse">
-  <li><a href="#vraag-1-1" id="toc-vraag-1-1" class="nav-link" data-scroll-target="#vraag-1-1">Vraag 1</a></li>
-  <li><a href="#vraag-2-1" id="toc-vraag-2-1" class="nav-link" data-scroll-target="#vraag-2-1">Vraag 2</a></li>
+  <li><a href="#onderzoeksvragen" id="toc-onderzoeksvragen" class="nav-link" data-scroll-target="#onderzoeksvragen">Onderzoeksvragen</a></li>
+  <li><a href="#analyses" id="toc-analyses" class="nav-link" data-scroll-target="#analyses">Analyses</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO3.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ZSO</li><li class="breadcrumb-item"><a href="../ZSO/ZSO2.html">ZSO2: t-test</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ZSO</li><li class="breadcrumb-item"><a href="../ZSO/ZSO3.html">ZSO3: ANOVA</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ZSO 2</h1>
+<h1 class="title">ZSO 3</h1>
 </div>
 
 
@@ -312,22 +340,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="opdrachten" class="level1 unnumbered">
-<h1 class="unnumbered">OPDRACHTEN</h1>
-<section id="vraag-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
-<p>Als minister van onderwijs enerzijds en van gelijke kansen anderzijds heeft Ella twee belangrijke speerpunten in haar beleid: wetenschapsonderwijs en ‘met goesting naar school gaan’. Op het kruispunt tussen haar twee beleidsdomeinen schrijft zij een onderzoeksopdracht uit: “Een stand van zaken inzake gelijke kansen met betrekking tot wetenschapskennis en schoolattitude. Is het allochtoon deficit anno 2020 weggewerkt?”.</p>
-<p>Jij dient als jonge onderzoeker, samen met de promotor van je thesis, hiervoor een projectvoorstel in. Jullie beloven om met behulp van de representatieve steekproef van PISA in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen in wetenschapskennis en attitude ten aanzien van de school. Hierbij gaan jullie ook na op welk van beide twee elementen allochtone afkomst meer van invloed is.</p>
-<p>‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschapstest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).</p>
+<section id="opdracht" class="level1 unnumbered">
+<h1 class="unnumbered">OPDRACHT</h1>
+<p>We pikken even de draad op bij Vraag 1 van ZSO 2. Daar diende je als jonge onderzoeker, samen met de promotor van je thesis, een projectvoorstel in om onderzoek te doen naar invloed van achtergrond van leerlingen. Jullie beloofden om met behulp van de representatieve steekproef PISA voor het Vlaamse onderwijs in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen met betrekking tot wetenschapskennis en attitude ten aanzien van de school.</p>
+<p>‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschappentest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).</p>
+<p>Op de stuurgroep van je project presenteer je de eerste resultaten van je onderzoek (ZSO - Vraag 1). De kabinetschef van de minister trekt nogal fel van leer tegen je conclusies: “Ander onderzoek wijst toch uit dat allochtonen van de eerste generatie anders te beschouwen zijn dan allochtonen van de tweede generatie. Met deze resultaten kunnen wij niet naar buiten komen, ze zijn te simplistisch om de complexe werkelijkheid samen te kunnen vatten.”</p>
+<p>Er wordt besloten dat je meer fijnmazige analyses moet doen, ditmaal een onderscheid makend tussen allochtone leerlingen van de eerste en van de tweede generatie.</p>
 <p><em>Formuleer de onderzoeksvragen en hypotheses. Kies de gepaste analysetechniek.</em></p>
-<p>[RESPONS ACHTERAAN DOCUMENT]</p>
-</section>
-<section id="vraag-2" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2">Vraag 2</h2>
-<p>Nu we een keuze gemaakt hebben voor de analysetechnieken zijn we klaar om onze handen vuil te maken en empirisch op zoek te gaan naar antwoorden op deze onderzoeksvragen.</p>
-<p><em>Voer de gepaste analyses uit om de onderzoeksvragen te beantwoorden. Geef de relevante output van je analyses en bespreek deze. Stel het resultaat ook visueel voor.</em></p>
+<p><em>Voer de gepaste analyses uit om de onderzoeksvragen te beantwoorden. Geef de meest relevante output van je analyses en bespreek deze. Stel het resultaat ook visueel voor.</em></p>
 <p>[RESPONS ACHTERAAN DOCUMENT] </p>
-</section>
 </section>
 <section id="responsen" class="level1 unnumbered">
 <h1 class="unnumbered">RESPONSEN</h1>
@@ -336,9 +357,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Data ZSO2.RData"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"OLP2 Functies.R"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="vraag-1-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1-1">Vraag 1</h2>
-<p>Een <strong>eerste onderzoeksvraag</strong> die we uit het geschetste onderzoeksprobleem kunnen afleiden zou als volgt geformuleerd kunnen worden:</p>
+<section id="onderzoeksvragen" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="onderzoeksvragen">Onderzoeksvragen</h2>
+<p>De <strong>eerste onderzoeksvraag</strong> die we uit het geschetste onderzoeksprobleem kunnen afleiden zou als volgt geformuleerd kunnen worden:</p>
 <blockquote class="blockquote">
 <p>OV1: In welke mate heeft etnische afkomst een invloed op de wetenschapskennis van leerlingen?</p>
 </blockquote>
@@ -347,19 +368,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ZSO2_1_OV1.jpg" class="img-fluid figure-img" width="400"></p>
+<p><img src="ZSO3_1_OV1.jpg" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
 </div>
 </div>
 <p><em>Hypotheses:</em></p>
 <blockquote class="blockquote">
-<p>Nulhypothese (H0): Er is in de populatie geen verschil in wetenschapskennis tussen leerlingen van allochtone en van autochtone afkomst.</p>
+<p>Nulhypothese (H0): Er is in de populatie geen verschil in wetenschapskennis tussen leerlingen van autochtone afkomst en leerlingen van allochtone afkomst van de eerste of tweede generatie.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>Alternatieve hypothese (H1): Er is in de populatie wel een verschil in wetenschapskennis naar etnische afkomst.</p>
+<p>Alternatieve hypothese (H1): Er is in de populatie wel een verschil in wetenschapskennis tussen de drie groepen leerlingen (autochtoon, allochtoon eerste generatie, allochtoon tweede generatie).</p>
 </blockquote>
-<p><em>Analysetechniek:</em> t-test</p>
+<p><em>Analysetechniek:</em> ANOVA</p>
 <p><strong>Onderzoeksvraag 2</strong> die we uit het geschetste onderzoeksprobleem kunnen afleiden kan als volgt luiden:</p>
 <blockquote class="blockquote">
 <p>OV2: In welke mate beïnvloedt etnische afkomst de positieve attitude van leerlingen t.a.v. de school?</p>
@@ -369,191 +390,157 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ZSO2_1_OV2.jpg" class="img-fluid figure-img" width="400"></p>
+<p><img src="ZSO3_1_OV2.jpg" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
 </div>
 </div>
 <p><em>Hypotheses:</em></p>
 <blockquote class="blockquote">
-<p>Nulhypothese (H0): Er is in de populatie geen verschil in attitude ten aanzien van de school tussen allochtone en autochtone leerlingen.</p>
+<p>Nulhypothese (H0): Er is in de populatie geen verschil in attitude ten aanzien van de school tussen leerlingen van autochtone afkomst en leerlingen van allochtone afkomst van de eerste of tweede generatie.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>Alternatieve hypothese (H1): Er is in de populatie wel een verschil in schoolattitude naar immigratie status.</p>
+<p>Alternatieve hypothese (H1): Er is in de populatie wel een verschil in schoolattitude tussen de drie groepen leerlingen (autochtoon, allochtoon eerste generatie, allochtoon tweede generatie).</p>
 </blockquote>
-<p><em>Analysetechniek:</em> t-test</p>
+<p><em>Analysetechniek:</em> ANOVA </p>
 <p><strong>Onderzoeksvraag 3</strong> kan als volgt geformuleerd worden:</p>
 <blockquote class="blockquote">
 <p>OV3: Is de invloed van etnische afkomst op wetenschapskennis sterker dan op schoolattitude?</p>
 </blockquote>
-<p><em>Analysetechniek:</em> Deze onderzoeksvraag kan je beantwoorden a.d.h.v. de resultaten van de analyses van OV1 en OV2. Je vergelijkt daartoe de Cohen’s d’s.</p>
+<p><em>Analysetechniek:</em> Deze onderzoeksvraag kan je beantwoorden a.d.h.v. de resultaten van de analyses van OV1 en OV2: de <em>eta</em><span class="math inline">\(^2\)</span> geeft hiertoe inzicht.</p>
 </section>
-<section id="vraag-2-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2-1">Vraag 2</h2>
+<section id="analyses" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="analyses">Analyses</h2>
 <p><strong>OV1</strong></p>
-<ol type="a">
-<li>Hercoderen ‘Immigratie’</li>
-</ol>
-<p>In het Pisa2 databestand vinden we de variabele ‘Immigratie’ terug. Deze heeft echter drie categorieën. Dit kunnen we zien door een tabel op te vragen met absolute frequenties:</p>
+<p>Beschrijvende statistieken per categorie opvragen, samen met een Levene Test (voor die Levene Test hebben we het pakket <code>car</code> nodig):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Wetenschappenz, Pisa2<span class="sc">$</span>Immigratie, mean, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-           Native Second-Generation  First-Generation 
-             4107               211               206 </code></pre>
+<pre><code>           Native Second-Generation  First-Generation 
+       0.09473451       -0.88898981       -0.60996975 </code></pre>
 </div>
-</div>
-<p>Gezien we enkel geïnteresseerd zijn in het onderscheid tussen autochtone en allochtone leerlingen moeten we deze variabele eerst hercoderen. We voegen daarbij de categorieën ‘Second-generation’ en ‘First-generation’ samen tot ‘Allochtoon’. Daartoe maken we gebruik van het commando <code>recode</code> uit het pakket <code>car</code>. Ter controle vragen we ook een tabel met absolute frequenties op voor de nieuw gemaakte variabele.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Pisa2<span class="sc">$</span>Allochtoon<span class="ot">&lt;-</span><span class="fu">recode</span>(Pisa2<span class="sc">$</span>Immigratie,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"'Native'='Autochtoon';</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">                         'Second-Generation'='Allochtoon';</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">                         'First-Generation' ='Allochtoon'"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(Pisa2<span class="sc">$</span>Allochtoon) </span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Wetenschappenz, Pisa2<span class="sc">$</span>Immigratie, sd,   <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-Allochtoon Autochtoon 
-       417       4107 </code></pre>
+<pre><code>           Native Second-Generation  First-Generation 
+        0.9540174         1.0198130         0.9846143 </code></pre>
 </div>
-</div>
-<ol start="2" type="a">
-<li>De feitelijke analyses (t-testen)</li>
-</ol>
-<p>Bij de eerste onderzoeksvraag is de afhankelijke variabele <code>Wetenschappenz</code>.</p>
-<p>We starten met een eerste beschrijvende verkenning van de gegevens door per categorie van de variabele <code>Allochtoon</code> zowel het gemiddelde als de standaardafwijking voor <code>Wetenschappenz</code> te berekenen:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  Gemiddelde</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Wetenschappenz, Pisa2<span class="sc">$</span>Allochtoon, mean, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> Allochtoon  Autochtoon 
--0.75115256  0.09473451 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standaardafwijking</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Wetenschappenz, Pisa2<span class="sc">$</span>Allochtoon, sd, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Allochtoon Autochtoon 
- 1.0110676  0.9540174 </code></pre>
-</div>
-</div>
-<p>Vooraleer we een t-test kunnen uitvoeren gaan we na of de assumptie van gelijke binnengroepvarianties opgaat. Daarbij onderzoeken we of de variantie in wetenschapskennis tussen autochtone leerlingen onderling niet significant afwijkt van de variantie in wetenschapskennis tussen allochtone leerlingen onderling. Daartoe voeren we de Levene Test uit:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Pisa2<span class="sc">$</span>Wetenschappenz, Pisa2<span class="sc">$</span>Allochtoon)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Pisa2<span class="sc">$</span>Wetenschappen, Pisa2<span class="sc">$</span>Immigratie) <span class="co"># vergeet library(car) niet te laden!</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Levene's Test for Homogeneity of Variance (center = median)
         Df F value Pr(&gt;F)
-group    1  2.2614 0.1327
-      4522               </code></pre>
+group    2  1.0716 0.3425
+      4521               </code></pre>
 </div>
 </div>
-<p>De p-waarde van deze test toont aan dat er geen significant verschil is in varianties tussen beide groepen (<em>F</em>(1,4522) = 2.26; <em>p</em> = 0.133). Dit impliceert dat we kunnen uitgaan van gelijke varianties bij het uitvoeren van de t-test.</p>
+<p>Vooraleer we de analyses uitvoeren eerste nagaan of <code>Pisa2$Immigratie</code> in <code>R</code> als factor is opgenomen:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Pisa2<span class="sc">$</span>Wetenschappenz<span class="sc">~</span>Pisa2<span class="sc">$</span>Allochtoon, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-    Two Sample t-test
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>Vervolgens de analyse uitvoeren en de resultaten samenvatten:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Model1 <span class="ot">&lt;-</span> <span class="fu">aov</span>(Pisa2<span class="sc">$</span>Wetenschappenz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   Df Sum Sq Mean Sq F value Pr(&gt;F)    
+Pisa2$Immigratie    2    279  139.49   151.8 &lt;2e-16 ***
+Residuals        4521   4154    0.92                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+72 observations deleted due to missingness</code></pre>
+</div>
+</div>
+<p>Effectgrootte nagaan en tevens een post-hoc analyse uitvoeren:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">etasq</span>(<span class="fu">aov</span>(Pisa2<span class="sc">$</span>Wetenschappenz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie)) <span class="co">#OLP2 functies nodig!!!</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 Partial eta^2
+Pisa2$Immigratie    0.06293106
+Residuals                   NA</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">TukeyHSD</span>(<span class="fu">aov</span>(Pisa2<span class="sc">$</span>Wetenschappenz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Tukey multiple comparisons of means
+    95% family-wise confidence level
 
-data:  Pisa2$Wetenschappenz by Pisa2$Allochtoon
-t = -17.155, df = 4522, p-value &lt; 2.2e-16
-alternative hypothesis: true difference in means between group Allochtoon and group Autochtoon is not equal to 0
-95 percent confidence interval:
- -0.9425585 -0.7492156
-sample estimates:
-mean in group Allochtoon mean in group Autochtoon 
-             -0.75115256               0.09473451 </code></pre>
+Fit: aov(formula = Pisa2$Wetenschappenz ~ Pisa2$Immigratie)
+
+$`Pisa2$Immigratie`
+                                         diff         lwr        upr     p adj
+Second-Generation-Native           -0.9837243 -1.14236355 -0.8250851 0.0000000
+First-Generation-Native            -0.7047043 -0.86516420 -0.5442443 0.0000000
+First-Generation-Second-Generation  0.2790201  0.05889674  0.4991434 0.0083663</code></pre>
 </div>
 </div>
-<p>We willen ons ook kunnen uitspreken over hoe sterk het verschil is. Daartoe berekenen we de Cohen’s d.&nbsp;Dit doen we door gebruik te maken van de functie <code>d()</code> opgenomen in <code>OLP2 functies</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Pisa2<span class="sc">$</span>Wetenschappenz,Pisa2<span class="sc">$</span>Allochtoon)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.8609165</code></pre>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-<ol start="3" type="a">
-<li>Bespreking van de resultaten met verwijzing naar de output</li>
-</ol>
-<p>Uit de resultaten van de Levene’s test blijkt dat de binnenen-groepen-variantie voor beide groepen (allochtoon en autochtoon) niet significant afwijkt van 0 (<em>F</em>(1,4522) = 2.261, <em>p</em> = 0.133). De kans dat het verschil in binnen-groepen-variantie tussen beide groepen 0 is, bedraagt 0.133. We kunnen de nulhypothese in dit geval niet verwerpen en gaan ervan uit dat de binnengroepvariantie voor beide groepen gelijk is. In de PISA-steekproef scoren kinderen van autochtone afkomst (<em>M</em> = 0.095, <em>SD</em> = 0.954) gemiddeld gezien hoger op de wetenschapstoets dan kinderen van allochtone afkomst (M = -0.751, SD = 1.011). We verwachten dit verschil ook in de populatie terug te vinden (<em>t</em>(4522) = -17.155, <em>p</em> &lt; 0.001). We verwerpen dus de nulhypothese ten voordele van de alternatieve hypothese: er is in de populatie wel een verschil in wetenschapskennis naar etnische afkomst. We verwachten dat kinderen van allochtone afkomst tussen 0.749 en 0.943 standaardafwijkingen lager scoren op de wetenschapstoets dan kinderen van autochtone afkomst. (Dit verschil wordt hier aangegeven in standaardafwijkingen omdat ‘Wetenschappenz’ een z-score is.) We kunnen dit effect van etnische origine op wetenschapskennis omschrijven als een groot effect (<em>d</em> = 0.861).</p>
-<ol start="4" type="a">
-<li>Visualisatie van de resultaten</li>
-</ol>
+<p>Uit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor de drie groepen (allochtoon eerste generatie, allochtoon tweede generatie en autochtoon) niet significant afwijkt van 0 (<em>F</em>(2,4521) = 1.072, <em>p</em> = 0.343). De kans dat er geen verschil is in binnen-groepen-variantie tussen de drie groepen bedraagt hier 34%. Deze kans is groter dan 0.05, dit betekent m.a.w. dat we er vanuit kunnen gaan dat er geen verschil is in binnen-groepen-variantie tussen de drie groepen. In de steekproef waren er verschillen in de gemiddelde score op de wetenschapstest tussen allochtone leerlingen van de eerste generatie (<em>M</em> = -0.610, <em>S</em>D = 0.985), van de tweede generatie (<em>M</em> = -0.889, <em>SD</em> = 1.020) en autochtone leerlingen (<em>M</em> = 0.095, <em>SD</em> = 0.954). De ANOVA-analyse geeft aan dat deze verschillen hoogstwaarschijnlijk ook in de populatie terug te vinden zijn (<em>F</em>(2,4521) = 151.8, <em>p</em> &lt; 0.001). Dit effect van etnische origine op wetenschapskennis kunnen we omschrijven als medium in grootte (<em>eta²</em> = 0.063). Uit de post-hoc analyse blijkt dat alle drie de groepen statistisch significant van elkaar verschillen: autochtone leerlingen scoren beter op wetenschappen dan eerste en tweede generatie allochtone leerlingen. Eerste generatie allochtone leerlingen zijn beter in wetenschappen dan tweede generatie allochtone leerlingen.</p>
+<p>Tot slot kunnen we grafisch de resultaten weergeven door een plot te maken met daarin de betrouwbaarheidsintervallen rond het gemiddelde per categorie voor de variabele immigratie:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Pisa2<span class="sc">$</span>Wetenschappenz<span class="sc">~</span>Pisa2<span class="sc">$</span>Allochtoon)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Pisa2<span class="sc">$</span>Wetenschappenz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="ZSO2_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="ZSO3_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><code>R</code> geeft hier een aantal warnings en toont het interval ook niet voor de autochtone leerlingen. Eigenlijk is het betrouwbaarheidsinterval, mede door de grote steekproef, te klein om te kunnen tekenen. </p>
 <p><strong>OV2</strong></p>
-<ol type="a">
-<li>Analyses</li>
-</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Pisa2<span class="sc">$</span>Attitudeschoolz, Pisa2<span class="sc">$</span>Allochtoon)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Attitudeschoolz, Pisa2<span class="sc">$</span>Immigratie, mean, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           Native Second-Generation  First-Generation 
+     -0.009127535       0.121309256       0.117825141 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Attitudeschoolz, Pisa2<span class="sc">$</span>Immigratie, sd,   <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           Native Second-Generation  First-Generation 
+        0.9864208         1.1781462         1.0011141 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Pisa2<span class="sc">$</span>Attitudeschoolz, Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Levene's Test for Homogeneity of Variance (center = median)
         Df F value   Pr(&gt;F)   
-group    1  8.2988 0.003988 **
-      4130                    
+group    2  4.7117 0.009038 **
+      4129                    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Attitudeschoolz, Pisa2<span class="sc">$</span>Allochtoon, mean, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  Allochtoon   Autochtoon 
- 0.119553035 -0.009127535 </code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(Pisa2<span class="sc">$</span>Attitudeschoolz, Pisa2<span class="sc">$</span>Allochtoon, sd,   <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Allochtoon Autochtoon 
- 1.0910141  0.9864208 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Pisa2<span class="sc">$</span>Attitudeschoolz <span class="sc">~</span> Pisa2<span class="sc">$</span>Allochtoon, <span class="at">var.equal=</span><span class="cn">FALSE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oneway.test</span>(Pisa2<span class="sc">$</span>Attitudeschoolz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Welch Two Sample t-test
+    One-way analysis of means (not assuming equal variances)
 
-data:  Pisa2$Attitudeschoolz by Pisa2$Allochtoon
-t = 2.18, df = 429.09, p-value = 0.0298
-alternative hypothesis: true difference in means between group Allochtoon and group Autochtoon is not equal to 0
-95 percent confidence interval:
- 0.01265974 0.24470140
-sample estimates:
-mean in group Allochtoon mean in group Autochtoon 
-             0.119553035             -0.009127535 </code></pre>
+data:  Pisa2$Attitudeschoolz and Pisa2$Immigratie
+F = 2.4125, num df = 2.00, denom df = 264.24, p-value = 0.09156</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Pisa2<span class="sc">$</span>Attitudeschoolz,Pisa2<span class="sc">$</span>Allochtoon)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">etasq</span>(<span class="fu">aov</span>(Pisa2<span class="sc">$</span>Attitudeschoolz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1238841</code></pre>
+<pre><code>                 Partial eta^2
+Pisa2$Immigratie   0.001356105
+Residuals                   NA</code></pre>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
-<ol start="2" type="a">
-<li>Resultaten bespreken met verwijzing naar output</li>
-</ol>
-<p>Uit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor beide groepen (allochtoon en autochtoon) significant afwijkt van 0 (<em>F</em>(1,4130) = 8.299, <em>p</em> &lt;0.004). De kans dat het verschil in binnen-groepen-variantie tussen beide groepen 0 bedraagt is kleiner dan 5%. We verwerpen de nulhypothese in dit geval wel en gaan ervan uit dat de binnen-groepen-variantie voor beide groepen ongelijk is. In 2009 was voor de Vlaamse kinderen die meededen aan het PISA-onderzoek de attitude ten aanzien van de school verschillend naar etnische origine. Kinderen van allochtone afkomst hadden gemiddeld gezien een meer positieve houding ten aanzien van de school (<em>M</em> = 0.120, <em>SD</em> = 1.091) dan kinderen van autochtone origine (<em>M</em> = -0.009, <em>S</em>D = 0.986). Een independent samples t-test geeft aan dat we deze bevindingen kunnen generaliseren naar de populatie: in de populatie hebben kinderen van allochtone origine een meer positieve attitude ten aanzien van de school (<em>t</em>(429.09) = 2.18, <em>p</em> = 0.030). We hebben slechts 3% kans dat we ons vergissen in deze uitspraak. Wanneer we echter kijken naar de grootte van dit effect, merken we dat dit verwaarloosbaar klein is (<em>d</em> = 0.124). We concluderen dus dat er in de populatie van 14-jarige Vlaamse leerlingen geen verschillen zijn in attitude ten aanzien van de school naar etnische origine van de leerling.</p>
-<ol start="3" type="a">
-<li>Visualisatie van de resultaten</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Pisa2<span class="sc">$</span>Attitudeschoolz<span class="sc">~</span>Pisa2<span class="sc">$</span>Allochtoon)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In de Pisa-steekproef 2009 zijn er kleine verschillen naar etnische afkomst in de mate waarin 14-jarigen een positieve attitude hebben ten aanzien van de school: eerste (<em>M</em> = 0.118, <em>SD</em> = 1.001) en tweede generatie (<em>M</em> = 0.121, <em>SD</em> = 1.178) allochtone leerlingen zijn gemiddeld gezien iets positiever dan hun autochtone medestudenten (<em>M</em> = -0.009, <em>SD</em> = 0. 986). De resultaten van de Anova-analyse, gecorrigeerd voor ongelijke varianties binnen de drie groepen (<em>F</em> Levene’s test(2,4129) = 4.712, <em>p</em> = 0.009), toont aan dat deze verschillen echter niet door te trekken zijn naar de populatie (<em>F</em>(2,264.24) = 2.413, <em>p</em> = 0.092). We verwachten dus dat in de populatie de attitude ten aanzien van de school niet verschilt naar etnische afkomst. We verwerpen de nulhypothese m.a.w. niet. De <em>eta²</em> geeft bovendien ook aan dat er geen effect is van etnische origine op de attitude ten aanzien van de school (<em>eta</em><span class="math inline">\(^2\)</span> = 0.001).</p>
+<p>We kunnen het ook grafisch tonen:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Pisa2<span class="sc">$</span>Attitudeschoolz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="ZSO2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="ZSO3_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p><strong>OV3</strong></p>
-<p>De invloed van etnische afkomst op wetenschapskennis (<em>d</em> = 0.861) is groter dan deze op attitude ten aanzien van de school (<em>d</em> = 0.124). We kunnen deze effecten respectievelijk groot en verwaarloosbaar klein noemen.</p>
+<p>Aangezien uit de analyses blijkt dat het effect van etnische afkomst op attitude t.o.v. school niet significant is (<em>F</em>(2,264.24) = 2.413, <em>p</em> = 0.092) en bovendien verwaarloosbaar klein (<em>eta</em><span class="math inline">\(^2\)</span> = 0.001), is het effect van etnische afkomst op wetenschapskennis sowieso sterker. Uit de resultaten van de Anova-analyse blijkt dat het om een medium effect gaat (<em>F</em>(2,4521) = 151.8, <em>p</em> &lt; 0.001, <em>eta</em><span class="math inline">\(^2\)</span> = 0.063).</p>
 
 
 </section>
@@ -982,13 +969,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Welkom">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welkom</span>
+      <a href="../ZSO/ZSO2.html" class="pagination-link" aria-label="ZSO2: t-test">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO2: t-test</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ZSO/ZSO3.html" class="pagination-link" aria-label="ZSO3: ANOVA">
-        <span class="nav-page-text">ZSO3: ANOVA</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ZSO/ZSO4.html" class="pagination-link" aria-label="ZSO4: Kruistabellen">
+        <span class="nav-page-text">ZSO4: Kruistabellen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

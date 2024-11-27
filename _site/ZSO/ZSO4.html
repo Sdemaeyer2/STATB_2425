@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto documenten – Statistiek B</title>
+<title>ZSO 4 – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,8 +63,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../studiewijzer.html" rel="next">
-<link href="../Extra/Projecten.html" rel="prev">
+<link href="../Extra/Projecten.html" rel="next">
+<link href="../ZSO/ZSO3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Extra/Projecten.html">Extra materiaal</a></li><li class="breadcrumb-item"><a href="../Extra/Quarto_documenten.html">Quarto documenten</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ZSO</li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -159,13 +193,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">ZSO</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
  <span class="menu-text">ZSO1: van vraag naar methode</span>
   </li>
@@ -182,8 +216,11 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">ZSO4: Kruistabellen</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">ZSO4: Kruistabellen</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">ZSO5: Correlaties</span>
   </li>
@@ -203,13 +240,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Extra materiaal</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Extra/Projecten.html" class="sidebar-item-text sidebar-link">
@@ -218,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto documenten</span></a>
   </div>
 </li>
@@ -243,17 +280,33 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#een-voorbeeld" id="toc-een-voorbeeld" class="nav-link active" data-scroll-target="#een-voorbeeld">Een voorbeeld</a></li>
-  <li><a href="#tutorials-op-youtube" id="toc-tutorials-op-youtube" class="nav-link" data-scroll-target="#tutorials-op-youtube">Tutorials op YouTube</a></li>
+  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a>
+  <ul class="collapse">
+  <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
+  <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
+  </ul></li>
+  <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
+  <ul class="collapse">
+  <li><a href="#vraag-1-1" id="toc-vraag-1-1" class="nav-link" data-scroll-target="#vraag-1-1">Vraag 1</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.1</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1.2</a></li>
+  </ul></li>
+  <li><a href="#vraag-2-1" id="toc-vraag-2-1" class="nav-link" data-scroll-target="#vraag-2-1">Vraag 2</a>
+  <ul class="collapse">
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2.1</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2.2</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Extra/Projecten.html">Extra materiaal</a></li><li class="breadcrumb-item"><a href="../Extra/Quarto_documenten.html">Quarto documenten</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ZSO</li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quarto documenten</h1>
+<h1 class="title">ZSO 4</h1>
 </div>
 
 
@@ -270,49 +323,138 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Doorheen mijn carrière als onderzoeker heb ik geleerd hoe moeilijk het kan zijn om alles wat je doet in het kader van een onderzoek voldoende goed te documenteren zodanig dat het onderzoek <strong>reproduceerbaar</strong> is.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Opmerking
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Met reproduceerbaarheid van onderzoek doelen we op de mate waarin een collega onderzoeker jouw onderzoek opnieuw kan herhalen met al het materiaal voor handen. Stel, je publiceert een wetenschappelijk artikel met een reeks resultaten van statistische analyses. Idealiter kan een collega, vertrekkend van de ruwe data, deze resultaten helemaal opnieuw bekomen.</p>
-</div>
-</div>
-<p>Een belangrijk aspect in het reproduceerbaar maken van je onderzoek is het goed documenteren van alle stappen in de analyses. Dit gaat over alle analysestappen die je zet, startend vanuit de ruwe dataset.</p>
-<p><code>R</code> code delen en begrijpbaar maken, kan daartoe een krachtig hulpmiddel zijn. Maar, vaak zien we dat onderzoekers de code zeer ontransparant opstellen. De code wordt iteratief uitgewerkt en wat werkt wordt bewaard, zonder enige verdere toelichting. En laat het duidelijk zijn, ook ik heb me daaraan in het verleden vaak schuldig gemaakt.</p>
-<p>Waar ik ondertussen echter systematisch op hamer bij mezelf en medewerkers is het uitwerken van een analyserapport in een Quarto document. Zo’n Quarto document stelt je in staat om je R code te integreren met lopende tekst (ook deze pagina en hele website is gemaakt in Quarto trouwens). In <code>RStudio</code> kan je zo’n document opmaken in een interface die veel gelijkenissen vertoont met een typische tekst-editor (zoals Word bijvoorbeeld). Super handig!! En het gaat zelfs verder. Zo’n Quarto document kan je vervolgens, met één druk op de knop, vertalen in een html-file (hadig om te delen met anderen), een pdf of een Word-document. Je kan ook verder gaan en hele slideshows bouwen met Quarto waarin je je analyses integreert.</p>
-<p>Investeren in een goed Quarto document is ook als student meer dan de moeite waard. Immers, zo kan je de verschillende stukjes code die we leren bij een techniek beter documenteren voor jezelf. Zo’n Quarto document is simpelweg een manier om lief te zijn voor je toekomstige ik!</p>
-<section id="een-voorbeeld" class="level2">
-<h2 class="anchored" data-anchor-id="een-voorbeeld">Een voorbeeld</h2>
-<p>Een voorbeeld verduidelijkt allicht meer. In 2024 heb ik samen met een reeks collega’s een artikel gepubliceerd waarbij we ook een extra document publiceerden (via een website) met daarin alle stappen van de analyses.</p>
-<p>Het artikel kan je hier vinden:</p>
-<p><a href="https://link.springer.com/article/10.1007/s11145-023-10483-7" class="uri">https://link.springer.com/article/10.1007/s11145-023-10483-7</a></p>
-<p>De “Walkthrough” voor de analyses vind je terug via de volgende link (ik verwacht niet dat je dit document snapt ofzo, het is eerder illustratief bedoeld):</p>
-<p><a href="https://majestic-pixie-28398c.netlify.app/" class="uri">https://majestic-pixie-28398c.netlify.app/</a></p>
+<section id="opdrachten" class="level1 unnumbered">
+<h1 class="unnumbered">OPDRACHTEN</h1>
+<section id="vraag-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
+<p>Na het zinken van de Titanic deden er verschillende verhalen de ronde. Na vele jaren onderzoek heeft men een nagenoeg volledig bestand kunnen aanleggen van eigenschappen van de passagiers. Nu zijn we in staat om enkele prangende vragen te onderzoeken. De eerste vraag die mensen boeide was of men tijdens die ramp echt wel voorrang heeft gegeven aan vrouwen. Hadden vrouwen een grotere overlevingskans dan mannen?</p>
+<p>Het bijhorende databestand (Titanic2.RData) bevat gegevens over een groot deel van de passagiers op de Titanic. De volgende drie variabelen zijn opgenomen in het bestand: - Survived (“Yes”, “No”); - Class (“1st”, “2nd”, “3rd”, “Crew”); - Gender (“Male”, “Female”).</p>
+<p><em>1.1 Ga na of er een verband is tussen het geslacht en de overlevingskans. Voer de gepaste analyses uit om deze vraag te beantwoorden. Geef de relevante output van je analyses en bespreek deze.</em></p>
+<p><em>1.2 Maak ook een gepaste visualisatie van het resultaat.</em></p>
 </section>
-<section id="tutorials-op-youtube" class="level2">
-<h2 class="anchored" data-anchor-id="tutorials-op-youtube">Tutorials op YouTube</h2>
-<p>Er is een hele reeks op YouTube waarin een van de meest gerenomeerde docenten statistiek (internationaal), Andy Field, toont hoe je met Quarto aan de slag kan gaan. Hieronder enkele van z’n video’s.</p>
-<p>Quarto installeren:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4rKWIJXe3mA?si=_cpj1hNYEUDuUkBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<p>Aan de slag met de Visual Editor (Deel 1):</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/31Q9ZTZOHIM?si=A8iHkp_C4NZk2Wdx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<p>Aan de slag met de Visual Editor (Deel 2) (hier leer je R Code chunks toevoegen etc):</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QlYgnf_qCNo?si=xtL4z2Wc-e62AW3W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<p>Aan de slag met de YAML van het Quarto document om allerlei extra opties te activeren:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Auo1hjyeCl4?si=Ng0Hl_2bCaqLAHe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
+<section id="vraag-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-2">Vraag 2</h2>
+<p>Sommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de klasse waarin passagiers geboekt hadden meer invloed had op de kans op overleven dan kenmerken zoals het geslacht.</p>
+<p><em>2.1 Is er een effect van de klasse waarin men boekte? Staaf je antwoord met output van je analyses.</em></p>
+<p><em>2.2 Klopt de uitspraak dat de klasse meer invloed had op de overlevingskans dan het geslacht? Staaf je antwoord met gegevens uit de output van je analyses.</em></p>
+<p>[RESPONS ACHTERAAN DOCUMENT] </p>
+</section>
+</section>
+<section id="responsen" class="level1 unnumbered">
+<h1 class="unnumbered">RESPONSEN</h1>
+<p>Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in <code>R</code> en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando’s <code>load( )</code> en <code>source( )</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Titanic2.RData"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"OLP2 Functies.R"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: carData</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'car'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked _by_ '.GlobalEnv':
+
+    Anova, lht, linearHypothesis, linearHypothesis.default,
+    makeHypothesis, matchCoefs, printHypothesis</code></pre>
+</div>
+</div>
+<section id="vraag-1-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-1-1">Vraag 1</h2>
+<section id="section" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section">1.1</h3>
+<ol type="a">
+<li>Analyses</li>
+</ol>
+<p>Om het verband na te gaan maken we gebruik van een kruistabel, met in de kolommen ‘Gender’ (Eigenlijk kunnen we veronderstellen dat dit de onafhankelijke variabele is) en in de rijen ‘Survived’. Bovendien vragen we kolompercentages op.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     x
+y        Female      Male       Sum
+  no   26.80851  78.79838  67.69650
+  yes  73.19149  21.20162  32.30350
+  Sum 100.00000 100.00000 100.00000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  table(Titanic2$Survived, Titanic2$Gender)
+X-squared = 456.87, df = 1, p-value &lt; 2.2e-16
+95 percent confidence interval:
+ 0.4138267 0.4973825
+sample estimates:
+Cramer's V 
+ 0.4556048 </code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Resultaten bespreken met verwijzing naar output</li>
+</ol>
+<p>Uit de kruistabel blijkt dat vrouwen (73,19%) duidelijk een grotere overlevingskans hebben dan mannen (21,20%). Uit de Chi-kwadraattoets (<em>chi²</em>(1) = 456.874, <em>p</em> &lt; 0.001) kunnen we bovendien afleiden dat de kans dat de nulhypothese opgaat zeer klein is. M.a.w. de kans dat in de populatie van Titanic-passagiers geen verschil in overlevingskans was tussen vrouwen en mannen is zo klein dat we deze verwerpen. (We verwerpen H0!) Het verband tussen ‘Survival’ en ‘Gender’ is dus statistisch significant. De sterkte van het verband is af te leiden uit de Cramer’s V (0.456) en dit geldt ook voor de populatie, 95% BI [0.414,0.497].</p>
+</section>
+<section id="section-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-1">1.2</h3>
+<p>Om een grafiek te maken, gebruiken we <code>assocplot( )</code>. Let op de volgorde van de variabelen binnen dit commando!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">assocplot</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Gender,Titanic2<span class="sc">$</span>Survived))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ZSO4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="vraag-2-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-2-1">Vraag 2</h2>
+<section id="section-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-2">2.1</h3>
+<ol type="a">
+<li>Analyses</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     x
+y           1st       2nd       3rd      Crew       Sum
+  no   37.53846  58.59649  74.78754  76.04520  67.69650
+  yes  62.46154  41.40351  25.21246  23.95480  32.30350
+  Sum 100.00000 100.00000 100.00000 100.00000 100.00000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  table(Titanic2$Survived, Titanic2$Class)
+X-squared = 190.4, df = 3, p-value &lt; 2.2e-16
+95 percent confidence interval:
+ 0.2506724 0.3344483
+sample estimates:
+Cramer's V 
+ 0.2941201 </code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Resultaten bespreken met verwijzing naar output</li>
+</ol>
+<p>Uit de kruistabel kan je aflezen dat de overlevingskans het grootst is voor passagiers uit 1ste klasse (62,462%), het tweede grootst voor passagiers uit 2de klasse (41,404%) en het laagst voor bemanningsleden (23,955%). Dit wijst duidelijk op een samenhang tussen ‘Survived’ en ‘Class’. Deze samenhang is ook statistisch significant (<em>chi²</em>(3) = 190.401, <em>p</em> &lt; 0.001). We kunnen dus stellen dat deze samenhang zich ook in de populatie van Titanic-passagiers zal voordoen. De sterkte van verband wordt uitgedrukt door Cramer’s V (0.294). Uit het 95% BI [0.251,0.334] rond Cramer’s V kunnen we afleiden dat de Cramer’s V ergens tussen 0.251 en 0.334 zal bedragen voor de populatie.</p>
+</section>
+<section id="section-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-3">2.2</h3>
+<p>Om na te gaan of ‘Class’ inderdaad meer invloed had op de overlevingskans (‘Survived’) dan geslacht(‘Gender’) vergelijken we de Cramer’s V voor beide kruistabellen. De Cramer’s V voor de associatie tussen geslacht en de ramp overleven bedraagt 0.456. Voor het verband tussen klasse en de ramp overleven is de Cramer’s V 0.294. De uitspraak dat klasse meer invloed had op de overlevingskans dan geslacht klopt dus niet.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -738,13 +880,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Extra/Projecten.html" class="pagination-link" aria-label="Projecten in RStudio">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Projecten in RStudio</span>
+      <a href="../ZSO/ZSO3.html" class="pagination-link" aria-label="ZSO3: ANOVA">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO3: ANOVA</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../studiewijzer.html" class="pagination-link" aria-label="Studiewijzer">
-        <span class="nav-page-text">Studiewijzer</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Extra/Projecten.html" class="pagination-link" aria-label="Projecten in RStudio">
+        <span class="nav-page-text">Projecten in RStudio</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

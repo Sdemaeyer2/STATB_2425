@@ -38,7 +38,9 @@ website:
           - text: "ZSO2: t-test"
             href: ZSO/ZSO2.qmd
           - text: "ZSO3: ANOVA"
+            href: ZSO/ZSO3.qmd
           - text: "ZSO4: Kruistabellen"
+            href: ZSO/ZSO4.qmd
           - text: "ZSO5: Correlaties"
           - text: "ZSO6: Bivariate regressie"
           - text: "ZSO7: Assumpties regressie"

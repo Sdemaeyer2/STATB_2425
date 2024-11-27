@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="JJ Allaire and Yihui Xie">
+<meta name="dcterms.date" content="2024-11-27">
 
-<title>Quarto documenten – Statistiek B</title>
+<title>Tufte Handout – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../studiewijzer.html" rel="next">
-<link href="../Extra/Projecten.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Extra/Projecten.html">Extra materiaal</a></li><li class="breadcrumb-item"><a href="../Extra/Quarto_documenten.html">Quarto documenten</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Statistiek B
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -176,11 +178,8 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO3: ANOVA</span></a>
-  </div>
-</li>
+ <span class="menu-text">ZSO3: ANOVA</span>
+  </li>
           <li class="sidebar-item">
  <span class="menu-text">ZSO4: Kruistabellen</span>
   </li>
@@ -203,13 +202,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Extra materiaal</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Extra/Projecten.html" class="sidebar-item-text sidebar-link">
@@ -218,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto documenten</span></a>
   </div>
 </li>
@@ -243,24 +242,45 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#een-voorbeeld" id="toc-een-voorbeeld" class="nav-link active" data-scroll-target="#een-voorbeeld">Een voorbeeld</a></li>
-  <li><a href="#tutorials-op-youtube" id="toc-tutorials-op-youtube" class="nav-link" data-scroll-target="#tutorials-op-youtube">Tutorials op YouTube</a></li>
+  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">Opdrachten</a>
+  <ul class="collapse">
+  <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
+  <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
+  </ul></li>
+  <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
+  <ul class="collapse">
+  <li><a href="#vraag-1-1" id="toc-vraag-1-1" class="nav-link" data-scroll-target="#vraag-1-1">Vraag 1</a></li>
+  <li><a href="#vraag-2-1" id="toc-vraag-2-1" class="nav-link" data-scroll-target="#vraag-2-1">Vraag 2</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Extra/Projecten.html">Extra materiaal</a></li><li class="breadcrumb-item"><a href="../Extra/Quarto_documenten.html">Quarto documenten</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto documenten</h1>
+<h1 class="title">Tufte Handout</h1>
+<p class="subtitle lead">An implementation in R Markdown</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Auteur</div>
+    <div class="quarto-title-meta-contents">
+             <p>JJ Allaire and Yihui Xie </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Publicatiedatum</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">27 november 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -270,49 +290,36 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Doorheen mijn carrière als onderzoeker heb ik geleerd hoe moeilijk het kan zijn om alles wat je doet in het kader van een onderzoek voldoende goed te documenteren zodanig dat het onderzoek <strong>reproduceerbaar</strong> is.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Opmerking
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Met reproduceerbaarheid van onderzoek doelen we op de mate waarin een collega onderzoeker jouw onderzoek opnieuw kan herhalen met al het materiaal voor handen. Stel, je publiceert een wetenschappelijk artikel met een reeks resultaten van statistische analyses. Idealiter kan een collega, vertrekkend van de ruwe data, deze resultaten helemaal opnieuw bekomen.</p>
-</div>
-</div>
-<p>Een belangrijk aspect in het reproduceerbaar maken van je onderzoek is het goed documenteren van alle stappen in de analyses. Dit gaat over alle analysestappen die je zet, startend vanuit de ruwe dataset.</p>
-<p><code>R</code> code delen en begrijpbaar maken, kan daartoe een krachtig hulpmiddel zijn. Maar, vaak zien we dat onderzoekers de code zeer ontransparant opstellen. De code wordt iteratief uitgewerkt en wat werkt wordt bewaard, zonder enige verdere toelichting. En laat het duidelijk zijn, ook ik heb me daaraan in het verleden vaak schuldig gemaakt.</p>
-<p>Waar ik ondertussen echter systematisch op hamer bij mezelf en medewerkers is het uitwerken van een analyserapport in een Quarto document. Zo’n Quarto document stelt je in staat om je R code te integreren met lopende tekst (ook deze pagina en hele website is gemaakt in Quarto trouwens). In <code>RStudio</code> kan je zo’n document opmaken in een interface die veel gelijkenissen vertoont met een typische tekst-editor (zoals Word bijvoorbeeld). Super handig!! En het gaat zelfs verder. Zo’n Quarto document kan je vervolgens, met één druk op de knop, vertalen in een html-file (hadig om te delen met anderen), een pdf of een Word-document. Je kan ook verder gaan en hele slideshows bouwen met Quarto waarin je je analyses integreert.</p>
-<p>Investeren in een goed Quarto document is ook als student meer dan de moeite waard. Immers, zo kan je de verschillende stukjes code die we leren bij een techniek beter documenteren voor jezelf. Zo’n Quarto document is simpelweg een manier om lief te zijn voor je toekomstige ik!</p>
-<section id="een-voorbeeld" class="level2">
-<h2 class="anchored" data-anchor-id="een-voorbeeld">Een voorbeeld</h2>
-<p>Een voorbeeld verduidelijkt allicht meer. In 2024 heb ik samen met een reeks collega’s een artikel gepubliceerd waarbij we ook een extra document publiceerden (via een website) met daarin alle stappen van de analyses.</p>
-<p>Het artikel kan je hier vinden:</p>
-<p><a href="https://link.springer.com/article/10.1007/s11145-023-10483-7" class="uri">https://link.springer.com/article/10.1007/s11145-023-10483-7</a></p>
-<p>De “Walkthrough” voor de analyses vind je terug via de volgende link (ik verwacht niet dat je dit document snapt ofzo, het is eerder illustratief bedoeld):</p>
-<p><a href="https://majestic-pixie-28398c.netlify.app/" class="uri">https://majestic-pixie-28398c.netlify.app/</a></p>
+<section id="opdrachten" class="level1 unnumbered">
+<h1 class="unnumbered">Opdrachten</h1>
+<section id="vraag-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
+<p>Als minister van onderwijs enerzijds en van gelijke kansen anderzijds heeft Ella twee belangrijke speerpunten in haar beleid: wetenschapsonderwijs en ‘met goesting naar school gaan’. Op het kruispunt tussen haar twee beleidsdomeinen schrijft zij een onderzoeksopdracht uit: “Een stand van zaken inzake gelijke kansen met betrekking tot wetenschapskennis en schoolattitude. Is het allochtoon deficit anno 2020 weggewerkt?”.</p>
+<p>Jij dient als jonge onderzoeker, samen met de promotor van je thesis, hiervoor een projectvoorstel in. Jullie beloven om met behulp van de representatieve steekproef PISA voor het Vlaamse onderwijs in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen met betrekking tot wetenschapskennis en attitude ten aanzien van de school. Hierbij gaan jullie ook na op welk van beide twee elementen allochtone afkomst meer van invloed is.</p>
+<p>‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschappentest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).</p>
+<p><em>Formuleer de onderzoeksvragen en hypotheses. Kies de gepaste analysetechniek.</em></p>
+<p>[RESPONS ACHTERAAN DOCUMENT]</p>
 </section>
-<section id="tutorials-op-youtube" class="level2">
-<h2 class="anchored" data-anchor-id="tutorials-op-youtube">Tutorials op YouTube</h2>
-<p>Er is een hele reeks op YouTube waarin een van de meest gerenomeerde docenten statistiek (internationaal), Andy Field, toont hoe je met Quarto aan de slag kan gaan. Hieronder enkele van z’n video’s.</p>
-<p>Quarto installeren:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4rKWIJXe3mA?si=_cpj1hNYEUDuUkBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<p>Aan de slag met de Visual Editor (Deel 1):</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/31Q9ZTZOHIM?si=A8iHkp_C4NZk2Wdx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<p>Aan de slag met de Visual Editor (Deel 2) (hier leer je R Code chunks toevoegen etc):</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QlYgnf_qCNo?si=xtL4z2Wc-e62AW3W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<p>Aan de slag met de YAML van het Quarto document om allerlei extra opties te activeren:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Auo1hjyeCl4?si=Ng0Hl_2bCaqLAHe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
+<section id="vraag-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-2">Vraag 2</h2>
+<p>Nu we een keuze gemaakt hebben voor de analysetechnieken zijn we klaar om onze handen vuil te maken en empirisch op zoek te gaan naar antwoorden voor deze onderzoeksvragen.</p>
+<p><em>Voer de gepaste analyses uit om de onderzoeksvragen te beantwoorden. Geef de relevante output van je analyses en bespreek deze. Stel het resultaat ook visueel voor.</em></p>
+<p>[RESPONS ACHTERAAN DOCUMENT]</p>
+</section>
+</section>
+<section id="responsen" class="level1 unnumbered">
+<h1 class="unnumbered">RESPONSEN</h1>
+<section id="vraag-1-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-1-1">Vraag 1</h2>
+<p>Onderzoeksvraag 1:</p>
+<p>OV1: In welke mate heeft etnische afkomst een invloed op de wetenschapskennis van leerlingen?</p>
+<p>Visueel:</p>
+</section>
+<section id="vraag-2-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="vraag-2-1">Vraag 2</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -736,18 +743,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../Extra/Projecten.html" class="pagination-link" aria-label="Projecten in RStudio">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Projecten in RStudio</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../studiewijzer.html" class="pagination-link" aria-label="Studiewijzer">
-        <span class="nav-page-text">Studiewijzer</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
