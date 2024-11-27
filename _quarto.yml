@@ -11,6 +11,8 @@ website:
 
   sidebar: 
     style: "docked"
+    background: "#ADA601"
+    foreground: "#FFFFFF"
     pinned: true
     search: true
     align: center
@@ -35,6 +37,7 @@ website:
       - section: "ZSO"
         contents: 
           - text: "ZSO1: van vraag naar methode"
+            href: ZSO/ZSO1.qmd
           - text: "ZSO2: t-test"
             href: ZSO/ZSO2.qmd
           - text: "ZSO3: ANOVA"
@@ -42,11 +45,14 @@ website:
           - text: "ZSO4: Kruistabellen"
             href: ZSO/ZSO4.qmd
           - text: "ZSO5: Correlaties"
+            href: ZSO/ZSO5.qmd
           - text: "ZSO6: Bivariate regressie"
-          - text: "ZSO7: Assumpties regressie"
-          - text: "ZSO8: Multivariate regressie"
-          - text: "ZSO9: Dummy-variabelen en interacties"
-          
+            href: ZSO/ZSO6.qmd
+          - text: "ZSO7: Multivariate regressie en assumpties"
+            href: ZSO/ZSO7.qmd
+          - text: "ZSO8: Dummy-variabelen en interacties"
+            href: ZSO/ZSO8.qmd
+            
       - section: "Extra materiaal"
         contents: 
           - text: "Projecten in RStudio"

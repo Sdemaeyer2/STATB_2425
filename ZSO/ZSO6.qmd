@@ -1,0 +1,129 @@
+---
+title: "ZSO 6"
+
+format: 
+  html: default
+  pdf: default
+---
+
+# OPDRACHTEN {.unnumbered}
+
+## Vraag 1 {.unnumbered}
+
+Voor deze opdracht maken we gebruik van een databestand dat door ons werd samengesteld op basis van OESO-gegevens. Voor een reeks landen hebben we twee variabelen opgenomen: - Exptotal: dit is het gemiddeld bedrag dat aan een leerling besteed wordt door de overheid om een leerling van onderwijs te voorzien gedurende de gehele carrière van het plichtonderwijs, uitgedrukt in US Dollars. - Reading: de gemiddelde score voor een internationaal vergelijkbare leestoets afgenomen bij 14-jarigen.
+
+Een wederkerende discussie die je hoort op allerlei beleidsniveaus aangaande onderwijskwaliteit is de vraag naar de rol van de “centen”. Zo zijn er mensen die beweren dat grote verschillen tussen landen in cognitieve outputmaten te verklaren zijn vanuit een verschillend budget dat overheden vrijmaken voor onderwijs.
+
+*1.1 Ga na of de hypothese klopt dat meer uitgaven aan onderwijs doorgaans leidt tot betere leerresultaten van leerlingen. Rapporteer zo volledig mogelijk.*
+
+*1.2 Maak een grafiek met daarin de trend die je kan afleiden op basis van je analyses.*
+
+*1.3 Allicht gaat het gevonden model niet op voor alle landen. Voor welk land is het gehanteerde model het minst geschikt?*
+
+*1.4 De resulterende parameterschattingen zijn vrij klein. We gaan daar een oplossing voor uitwerken. Deel de variabele ‘Exptotal’ door 1000. Daarnaast centreer je de variabele ‘Reading’ rond z’n gemiddelde (=voor elk land het algemeen gemiddelde aftrekken). Schrijf je nieuwe variabelen weg in* `Oecd$Expend2` *en* `Oecd$Read2`. *Doe nu dezelfde analyse opnieuw, maar maak gebruik van deze nieuwe variabelen.*
+
+*Verandert je algemene conclusie?*
+
+*Hoe kan je inhoudelijk het intercept en de hellingsgraad interpreteren?*
+
+[RESPONS ACHTERAAN DOCUMENT] \newpage    
+
+# RESPONSEN {.unnumbered}
+
+Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in `R` en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando's `load( )` en `source( )`.
+
+```{r}
+#| message: false
+#| warning: false
+#| error: false 
+load("Oecd.RData")
+source("OLP2 Functies.R")
+library(car)
+```
+
+
+## 1.1 {.unnumbered}
+
+a)  Analyses 
+
+We willen het effect nagaan van onderwijsuitgaven (‘Exptotal’) op de gemiddelde leesscore (‘Reading’). Het onderstaande commando geeft als resultaat een regressieanalyse van ‘Exptotal’ op ‘Reading’. Het resultaat wordt weggeschreven in het object met naam ‘Model1’. Via summary( ) roepen we vervolgens de concrete output op.
+
+```{r, comment=""}
+#| message: false
+#| warning: false
+#| error: false 
+Model1 <- lm(Oecd$Reading ~ Oecd$Exptotal)
+summary(Model1)
+```
+
+b)  Resultaten bespreken met verwijzing naar output 
+
+Uit $R^2$ blijkt dat het gemiddeld bedrag dat aan leerlingen wordt uitgegeven (‘Exptotal’) 14,25% van de verschillen in leesscore (‘Reading’) verklaart. De gemiddelde uitgave per leerling heeft dus een groot effect op de leesvaardigheid. Bovendien geeft het resultaat van de F-toets aan dat we dit verband hoogst waarschijnlijk ook in de populatie van landen zullen terugvinden (*F*(1,32) = 5.319, *p* = 0.028). De kans dat er geen verschillen in leesscore zijn naar gemiddeld gespendeerd budget per leerling is duidelijk lager dan 0.05. ‘Exptotal’ zal dus ook in de populatie van landen verschillen in leesprestaties (‘Reading’) verklaren. De hellingsgraad ($\beta_1$ = 0.000263, *p* = 0.028) geeft aan dat het om een positief verband gaat. Per US Dollar dat een land meer spendeert aan de studieloopbaan van een leerling, stijgt de gemiddelde leesscore met 0.00026 eenheden. Het intercept bedraagt 467.7 (*p* \< 0.001). Dus, voor landen die hypothetisch gezien niets zouden spenderen aan onderwijs van leerlingen, zou de gemiddelde leerling een leesscore behalen van 467.7. \newpage    
+
+## 1.2 {.unnumbered}
+
+Om een grafiek te maken, maken we gebruik van de volgende commando’s (we hebben ervoor gekozen om de regressielijn in rood te tekenen):
+
+```{r, comment=""}
+#| message: false
+#| warning: false
+#| error: false 
+plot(Oecd$Reading ~ Oecd$Exptotal)
+abline(reg=Model1, col="red")
+```
+
+## 1.3 {.unnumbered}
+
+a)  Analyses 
+
+De vraag naar voor welk land deze regressievergelijking het minst goed past, is eigenlijk de vraag naar welk land (welk punt) het verst afligt van de regressielijn in de bovenstaande plot. Om daar een antwoord op te formuleren kunnen we de voorspelde leesscore voor elk land vergelijken met de waargenomen leesscore. We doen dit stapje voor stapje in R:
+
+```{r, comment=""}
+#| message: false
+#| warning: false
+#| error: false 
+
+# STAP1: Voorspelde leesscores berekenen
+# (op basis van de coefficienten die we halen uit de regressieanalyse)
+
+Oecd$Voorspeld <- 4.677e+02 + 2.636e-04 * Oecd$Exptotal
+
+# voorspelde leesscore = intercept + hellingsgraad*waargenomen leesscore
+
+Oecd
+
+# STAP 2: De predictiefouten per land berekenen en tonen
+
+Oecd$Predictiefout <- Oecd$Reading - Oecd$Voorspeld
+
+# predictiefout = waargenomen leesscore – voorspelde leesscore
+
+Oecd
+
+```
+
+b)  Resultaten bespreken met verwijzing naar output 
+
+De bovenstaande output toont dat de voorspelde score voor Brazilië het verste af ligt van de werkelijke leesscore voor dat land. Het verschil bedraagt 60.84 punten. Dus, de gemiddelde Braziliaanse leerlingen doen het opvallend minder goed voor lezen dan wat zou verwacht mogen worden op basis van het budget dat besteed wordt aan onderwijs.
+
+## 1.4 {.unnumbered}
+
+a)  Analyses
+
+```{r, comment=""}
+#| message: false
+#| warning: false
+#| error: false 
+
+Oecd$Expend2 <- Oecd$Exptotal/1000
+
+Oecd$Read2 <- Oecd$Reading - mean(Oecd$Reading)
+
+Model2 <- lm(Oecd$Read2 ~ Oecd$Expend2)
+
+summary(Model2)
+```
+
+b)  Resultaten bespreken met verwijzing naar output 
+
+De algemene conclusie is net hetzelfde als in de oorspronkelijke analyse. Je zou net zo goed concluderen dat uitgaven een grote invloed hebben op leesprestaties. Dit kan je afleiden uit de $R^2$ van 0.143 en de p-waarde lager dan 0.05 (*F*(1,32) = 5.319, p = 0.028). Het intercept bedraagt nu echter -23.451 (*p* = 0.042). Dit is een gevolg van het centreren van de afhankelijke variabele ‘Reading’. Dit betekent dat een score van 0 op ‘Read2’ hetzelfde betekent als als land gemiddeld scoren voor lezen. Het intercept bedraagt -23.451, een land dat nul scoort op ‘Expend2’, dat geen geld uitgeeft aan onderwijs, scoort 23.451 punten lager dan het gemiddelde voor lezen. Het intercept wijkt nog steeds statistische significant af van 0. De hellingsgraad bedraagt 0.264 (*p* = 0.028). Dus, per 1000 USD dat een land meer uitgeeft per kind aan onderwijs stijgt de gemiddelde leesscore voor dat land met 0.264 punten. Want 1 eenheid stijgen op de variabele ‘Expend2’ staat nu gelijk aan 1000 USD meer uitgeven. Dit effect vinden we vermoedelijk ook de in de populatie terug aangezien de kans dat er in de populatie geen effect van ‘Expend2’ is, slechts 0.028 bedraagt.

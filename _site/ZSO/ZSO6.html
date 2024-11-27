@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ZSO 4 – Statistiek B</title>
+<title>ZSO 6 – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,8 +63,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ZSO/ZSO5.html" rel="next">
-<link href="../ZSO/ZSO3.html" rel="prev">
+<link href="../ZSO/ZSO7.html" rel="next">
+<link href="../ZSO/ZSO5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,6 +102,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -115,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO6.html">ZSO6: Bivariate regressie</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -220,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO4: Kruistabellen</span></a>
   </div>
 </li>
@@ -232,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO6.html" class="sidebar-item-text sidebar-link">
+  <a href="../ZSO/ZSO6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ZSO6: Bivariate regressie</span></a>
   </div>
 </li>
@@ -295,30 +324,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a>
   <ul class="collapse">
   <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
-  <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
   </ul></li>
   <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
   <ul class="collapse">
-  <li><a href="#vraag-1-1" id="toc-vraag-1-1" class="nav-link" data-scroll-target="#vraag-1-1">Vraag 1</a>
-  <ul class="collapse">
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.1</a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1.2</a></li>
-  </ul></li>
-  <li><a href="#vraag-2-1" id="toc-vraag-2-1" class="nav-link" data-scroll-target="#vraag-2-1">Vraag 2</a>
-  <ul class="collapse">
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2.1</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2.2</a></li>
-  </ul></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">1.3</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">1.4</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO6.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO6.html">ZSO6: Bivariate regressie</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ZSO 4</h1>
+<h1 class="title">ZSO 6</h1>
 </div>
 
 
@@ -339,16 +361,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">OPDRACHTEN</h1>
 <section id="vraag-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
-<p>Na het zinken van de Titanic deden er verschillende verhalen de ronde. Na vele jaren onderzoek heeft men een nagenoeg volledig bestand kunnen aanleggen van eigenschappen van de passagiers. Nu zijn we in staat om enkele prangende vragen te onderzoeken. De eerste vraag die mensen boeide was of men tijdens die ramp echt wel voorrang heeft gegeven aan vrouwen. Hadden vrouwen een grotere overlevingskans dan mannen?</p>
-<p>Het bijhorende databestand (Titanic2.RData) bevat gegevens over een groot deel van de passagiers op de Titanic. De volgende drie variabelen zijn opgenomen in het bestand: - Survived (“Yes”, “No”); - Class (“1st”, “2nd”, “3rd”, “Crew”); - Gender (“Male”, “Female”).</p>
-<p><em>1.1 Ga na of er een verband is tussen het geslacht en de overlevingskans. Voer de gepaste analyses uit om deze vraag te beantwoorden. Geef de relevante output van je analyses en bespreek deze.</em></p>
-<p><em>1.2 Maak ook een gepaste visualisatie van het resultaat.</em></p>
-</section>
-<section id="vraag-2" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2">Vraag 2</h2>
-<p>Sommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de klasse waarin passagiers geboekt hadden meer invloed had op de kans op overleven dan kenmerken zoals het geslacht.</p>
-<p><em>2.1 Is er een effect van de klasse waarin men boekte? Staaf je antwoord met output van je analyses.</em></p>
-<p><em>2.2 Klopt de uitspraak dat de klasse meer invloed had op de overlevingskans dan het geslacht? Staaf je antwoord met gegevens uit de output van je analyses.</em></p>
+<p>Voor deze opdracht maken we gebruik van een databestand dat door ons werd samengesteld op basis van OESO-gegevens. Voor een reeks landen hebben we twee variabelen opgenomen: - Exptotal: dit is het gemiddeld bedrag dat aan een leerling besteed wordt door de overheid om een leerling van onderwijs te voorzien gedurende de gehele carrière van het plichtonderwijs, uitgedrukt in US Dollars. - Reading: de gemiddelde score voor een internationaal vergelijkbare leestoets afgenomen bij 14-jarigen.</p>
+<p>Een wederkerende discussie die je hoort op allerlei beleidsniveaus aangaande onderwijskwaliteit is de vraag naar de rol van de “centen”. Zo zijn er mensen die beweren dat grote verschillen tussen landen in cognitieve outputmaten te verklaren zijn vanuit een verschillend budget dat overheden vrijmaken voor onderwijs.</p>
+<p><em>1.1 Ga na of de hypothese klopt dat meer uitgaven aan onderwijs doorgaans leidt tot betere leerresultaten van leerlingen. Rapporteer zo volledig mogelijk.</em></p>
+<p><em>1.2 Maak een grafiek met daarin de trend die je kan afleiden op basis van je analyses.</em></p>
+<p><em>1.3 Allicht gaat het gevonden model niet op voor alle landen. Voor welk land is het gehanteerde model het minst geschikt?</em></p>
+<p><em>1.4 De resulterende parameterschattingen zijn vrij klein. We gaan daar een oplossing voor uitwerken. Deel de variabele ‘Exptotal’ door 1000. Daarnaast centreer je de variabele ‘Reading’ rond z’n gemiddelde (=voor elk land het algemeen gemiddelde aftrekken). Schrijf je nieuwe variabelen weg in</em> <code>Oecd$Expend2</code> <em>en</em> <code>Oecd$Read2</code>. <em>Doe nu dezelfde analyse opnieuw, maar maak gebruik van deze nieuwe variabelen.</em></p>
+<p><em>Verandert je algemene conclusie?</em></p>
+<p><em>Hoe kan je inhoudelijk het intercept en de hellingsgraad interpreteren?</em></p>
 <p>[RESPONS ACHTERAAN DOCUMENT] </p>
 </section>
 </section>
@@ -356,103 +376,202 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">RESPONSEN</h1>
 <p>Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in <code>R</code> en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando’s <code>load( )</code> en <code>source( )</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Titanic2.RData"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Oecd.RData"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"OLP2 Functies.R"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="vraag-1-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1-1">Vraag 1</h2>
-<section id="section" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section">1.1</h3>
+<section id="section" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section">1.1</h2>
 <ol type="a">
 <li>Analyses</li>
 </ol>
-<p>Om het verband na te gaan maken we gebruik van een kruistabel, met in de kolommen ‘Gender’ (Eigenlijk kunnen we veronderstellen dat dit de onafhankelijke variabele is) en in de rijen ‘Survived’. Bovendien vragen we kolompercentages op.</p>
+<p>We willen het effect nagaan van onderwijsuitgaven (‘Exptotal’) op de gemiddelde leesscore (‘Reading’). Het onderstaande commando geeft als resultaat een regressieanalyse van ‘Exptotal’ op ‘Reading’. Het resultaat wordt weggeschreven in het object met naam ‘Model1’. Via summary( ) roepen we vervolgens de concrete output op.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     x
-y        Female      Male       Sum
-  no   26.80851  78.79838  67.69650
-  yes  73.19149  21.20162  32.30350
-  Sum 100.00000 100.00000 100.00000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Oecd<span class="sc">$</span>Reading <span class="sc">~</span> Oecd<span class="sc">$</span>Exptotal)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Pearson's Chi-squared test
+Call:
+lm(formula = Oecd$Reading ~ Oecd$Exptotal)
 
-data:  table(Titanic2$Survived, Titanic2$Gender)
-X-squared = 456.87, df = 1, p-value &lt; 2.2e-16
-95 percent confidence interval:
- 0.4138267 0.4973825
-sample estimates:
-Cramer's V 
- 0.4556048 </code></pre>
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-60.811  -8.370  -1.325  15.393  50.153 
+
+Coefficients:
+               Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   4.677e+02  1.106e+01  42.283   &lt;2e-16 ***
+Oecd$Exptotal 2.636e-04  1.143e-04   2.306   0.0277 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 25.37 on 32 degrees of freedom
+Multiple R-squared:  0.1425,    Adjusted R-squared:  0.1157 
+F-statistic: 5.319 on 1 and 32 DF,  p-value: 0.02772</code></pre>
 </div>
 </div>
 <ol start="2" type="a">
 <li>Resultaten bespreken met verwijzing naar output</li>
 </ol>
-<p>Uit de kruistabel blijkt dat vrouwen (73,19%) duidelijk een grotere overlevingskans hebben dan mannen (21,20%). Uit de Chi-kwadraattoets (<em>chi²</em>(1) = 456.874, <em>p</em> &lt; 0.001) kunnen we bovendien afleiden dat de kans dat de nulhypothese opgaat zeer klein is. M.a.w. de kans dat in de populatie van Titanic-passagiers geen verschil in overlevingskans was tussen vrouwen en mannen is zo klein dat we deze verwerpen. (We verwerpen H0!) Het verband tussen ‘Survival’ en ‘Gender’ is dus statistisch significant. De sterkte van het verband is af te leiden uit de Cramer’s V (0.456) en dit geldt ook voor de populatie, 95% BI [0.414,0.497].</p>
+<p>Uit <span class="math inline">\(R^2\)</span> blijkt dat het gemiddeld bedrag dat aan leerlingen wordt uitgegeven (‘Exptotal’) 14,25% van de verschillen in leesscore (‘Reading’) verklaart. De gemiddelde uitgave per leerling heeft dus een groot effect op de leesvaardigheid. Bovendien geeft het resultaat van de F-toets aan dat we dit verband hoogst waarschijnlijk ook in de populatie van landen zullen terugvinden (<em>F</em>(1,32) = 5.319, <em>p</em> = 0.028). De kans dat er geen verschillen in leesscore zijn naar gemiddeld gespendeerd budget per leerling is duidelijk lager dan 0.05. ‘Exptotal’ zal dus ook in de populatie van landen verschillen in leesprestaties (‘Reading’) verklaren. De hellingsgraad (<span class="math inline">\(\beta_1\)</span> = 0.000263, <em>p</em> = 0.028) geeft aan dat het om een positief verband gaat. Per US Dollar dat een land meer spendeert aan de studieloopbaan van een leerling, stijgt de gemiddelde leesscore met 0.00026 eenheden. Het intercept bedraagt 467.7 (<em>p</em> &lt; 0.001). Dus, voor landen die hypothetisch gezien niets zouden spenderen aan onderwijs van leerlingen, zou de gemiddelde leerling een leesscore behalen van 467.7. </p>
 </section>
-<section id="section-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1">1.2</h3>
-<p>Om een grafiek te maken, gebruiken we <code>assocplot( )</code>. Let op de volgorde van de variabelen binnen dit commando!</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">assocplot</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Gender,Titanic2<span class="sc">$</span>Survived))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="section-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section-1">1.2</h2>
+<p>Om een grafiek te maken, maken we gebruik van de volgende commando’s (we hebben ervoor gekozen om de regressielijn in rood te tekenen):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Oecd<span class="sc">$</span>Reading <span class="sc">~</span> Oecd<span class="sc">$</span>Exptotal)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">reg=</span>Model1, <span class="at">col=</span><span class="st">"red"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div>
 <figure class="figure">
-<p><img src="ZSO4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="ZSO6_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </section>
-</section>
-<section id="vraag-2-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2-1">Vraag 2</h2>
-<section id="section-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-2">2.1</h3>
+<section id="section-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section-2">1.3</h2>
 <ol type="a">
 <li>Analyses</li>
 </ol>
+<p>De vraag naar voor welk land deze regressievergelijking het minst goed past, is eigenlijk de vraag naar welk land (welk punt) het verst afligt van de regressielijn in de bovenstaande plot. Om daar een antwoord op te formuleren kunnen we de voorspelde leesscore voor elk land vergelijken met de waargenomen leesscore. We doen dit stapje voor stapje in R:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># STAP1: Voorspelde leesscores berekenen</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (op basis van de coefficienten die we halen uit de regressieanalyse)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Oecd<span class="sc">$</span>Voorspeld <span class="ot">&lt;-</span> <span class="fl">4.677e+02</span> <span class="sc">+</span> <span class="fl">2.636e-04</span> <span class="sc">*</span> Oecd<span class="sc">$</span>Exptotal</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># voorspelde leesscore = intercept + hellingsgraad*waargenomen leesscore</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>Oecd</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     x
-y           1st       2nd       3rd      Crew       Sum
-  no   37.53846  58.59649  74.78754  76.04520  67.69650
-  yes  62.46154  41.40351  25.21246  23.95480  32.30350
-  Sum 100.00000 100.00000 100.00000 100.00000 100.00000</code></pre>
+<pre><code>                Cntry  Exptotal Reading Labels Voorspeld
+1  Australia           98630.39     515     Au  493.6990
+2  Austria            119925.44     470   Oost  499.3123
+3  Belgium             98128.00     506    Bel  493.5665
+4  Canada              96541.43     524    Can  493.1483
+5  Chile               26942.89     449   Chil  474.8021
+6  Czech Republic      61044.58     478    Tsj  483.7914
+7  Denmark            122070.41     495    Den  499.8778
+8  Finland             87013.15     536    Fin  490.6367
+9  France              96822.80     496     Fr  493.2225
+10 Germany             91966.32     497    Dui  491.9423
+11 Hungary             52432.61     494    Hon  481.5212
+12 Iceland            126075.94     500    Ijs  500.9336
+13 Ireland            106762.91     496    Ier  495.8427
+14 Italy              100902.70     486    Ita  494.2980
+15 Japan               95998.90     520    Jap  493.0053
+16 Korea               80344.73     539    Kor  488.8789
+17 Luxembourg         209406.65     472    Lux  522.8996
+18 Mexico              27314.38     425    Mex  474.9001
+19 Netherlands         90964.06     508    Ndl  491.6781
+20 New Zealand         69117.81     521    Nwz  485.9195
+21 Norway             140659.92     503    Nor  504.7780
+22 Poland              49479.26     500    Pol  480.7427
+23 Portugal            71289.16     489    Por  486.4918
+24 Slovak Republic     42626.15     477   Slov  478.9363
+25 Spain               91578.95     481    Spa  491.8402
+26 Sweden             104826.34     497    Zwe  495.3322
+27 Switzerland        147756.32     501    Zwi  506.6486
+28 United Kingdom     107128.52     494     Uk  495.9391
+29 United States      129326.96     500    Usa  501.7906
+30 Brazil              19515.95     412    Bra  472.8444
+31 Estonia             53447.55     501    Est  481.7888
+32 Israel              64802.75     474    Isr  484.7820
+33 Russian Federation  53657.54     459    Rus  481.8441
+34 Slovenia            90042.47     483   Slov  491.4352</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># STAP 2: De predictiefouten per land berekenen en tonen</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Oecd<span class="sc">$</span>Predictiefout <span class="ot">&lt;-</span> Oecd<span class="sc">$</span>Reading <span class="sc">-</span> Oecd<span class="sc">$</span>Voorspeld</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># predictiefout = waargenomen leesscore – voorspelde leesscore</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Oecd</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  table(Titanic2$Survived, Titanic2$Class)
-X-squared = 190.4, df = 3, p-value &lt; 2.2e-16
-95 percent confidence interval:
- 0.2506724 0.3344483
-sample estimates:
-Cramer's V 
- 0.2941201 </code></pre>
+<pre><code>                Cntry  Exptotal Reading Labels Voorspeld Predictiefout
+1  Australia           98630.39     515     Au  493.6990    21.3010294
+2  Austria            119925.44     470   Oost  499.3123   -29.3123470
+3  Belgium             98128.00     506    Bel  493.5665    12.4334601
+4  Canada              96541.43     524    Can  493.1483    30.8516802
+5  Chile               26942.89     449   Chil  474.8021   -25.8021448
+6  Czech Republic      61044.58     478    Tsj  483.7914    -5.7913511
+7  Denmark            122070.41     495    Den  499.8778    -4.8777588
+8  Finland             87013.15     536    Fin  490.6367    45.3633329
+9  France              96822.80     496     Fr  493.2225     2.7775092
+10 Germany             91966.32     497    Dui  491.9423     5.0576769
+11 Hungary             52432.61     494    Hon  481.5212    12.4787644
+12 Iceland            126075.94     500    Ijs  500.9336    -0.9336169
+13 Ireland            106762.91     496    Ier  495.8427     0.1572961
+14 Italy              100902.70     486    Ita  494.2980    -8.2979523
+15 Japan               95998.90     520    Jap  493.0053    26.9946903
+16 Korea               80344.73     539    Kor  488.8789    50.1211281
+17 Luxembourg         209406.65     472    Lux  522.8996   -50.8995922
+18 Mexico              27314.38     425    Mex  474.9001   -49.9000710
+19 Netherlands         90964.06     508    Ndl  491.6781    16.3218731
+20 New Zealand         69117.81     521    Nwz  485.9195    35.0805444
+21 Norway             140659.92     503    Nor  504.7780    -1.7779551
+22 Poland              49479.26     500    Pol  480.7427    19.2572675
+23 Portugal            71289.16     489    Por  486.4918     2.5081767
+24 Slovak Republic     42626.15     477   Slov  478.9363    -1.9362529
+25 Spain               91578.95     481    Spa  491.8402   -10.8402115
+26 Sweden             104826.34     497    Zwe  495.3322     1.6677756
+27 Switzerland        147756.32     501    Zwi  506.6486    -5.6485662
+28 United Kingdom     107128.52     494     Uk  495.9391    -1.9390779
+29 United States      129326.96     500    Usa  501.7906    -1.7905865
+30 Brazil              19515.95     412    Bra  472.8444   -60.8444056
+31 Estonia             53447.55     501    Est  481.7888    19.2112253
+32 Israel              64802.75     474    Isr  484.7820   -10.7820044
+33 Russian Federation  53657.54     459    Rus  481.8441   -22.8441270
+34 Slovenia            90042.47     483   Slov  491.4352    -8.4351939</code></pre>
 </div>
 </div>
 <ol start="2" type="a">
 <li>Resultaten bespreken met verwijzing naar output</li>
 </ol>
-<p>Uit de kruistabel kan je aflezen dat de overlevingskans het grootst is voor passagiers uit 1ste klasse (62,462%), het tweede grootst voor passagiers uit 2de klasse (41,404%) en het laagst voor bemanningsleden (23,955%). Dit wijst duidelijk op een samenhang tussen ‘Survived’ en ‘Class’. Deze samenhang is ook statistisch significant (<em>chi²</em>(3) = 190.401, <em>p</em> &lt; 0.001). We kunnen dus stellen dat deze samenhang zich ook in de populatie van Titanic-passagiers zal voordoen. De sterkte van verband wordt uitgedrukt door Cramer’s V (0.294). Uit het 95% BI [0.251,0.334] rond Cramer’s V kunnen we afleiden dat de Cramer’s V ergens tussen 0.251 en 0.334 zal bedragen voor de populatie.</p>
+<p>De bovenstaande output toont dat de voorspelde score voor Brazilië het verste af ligt van de werkelijke leesscore voor dat land. Het verschil bedraagt 60.84 punten. Dus, de gemiddelde Braziliaanse leerlingen doen het opvallend minder goed voor lezen dan wat zou verwacht mogen worden op basis van het budget dat besteed wordt aan onderwijs.</p>
 </section>
-<section id="section-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-3">2.2</h3>
-<p>Om na te gaan of ‘Class’ inderdaad meer invloed had op de overlevingskans (‘Survived’) dan geslacht(‘Gender’) vergelijken we de Cramer’s V voor beide kruistabellen. De Cramer’s V voor de associatie tussen geslacht en de ramp overleven bedraagt 0.456. Voor het verband tussen klasse en de ramp overleven is de Cramer’s V 0.294. De uitspraak dat klasse meer invloed had op de overlevingskans dan geslacht klopt dus niet.</p>
+<section id="section-3" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section-3">1.4</h2>
+<ol type="a">
+<li>Analyses</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Oecd<span class="sc">$</span>Expend2 <span class="ot">&lt;-</span> Oecd<span class="sc">$</span>Exptotal<span class="sc">/</span><span class="dv">1000</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Oecd<span class="sc">$</span>Read2 <span class="ot">&lt;-</span> Oecd<span class="sc">$</span>Reading <span class="sc">-</span> <span class="fu">mean</span>(Oecd<span class="sc">$</span>Reading)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>Model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Oecd<span class="sc">$</span>Read2 <span class="sc">~</span> Oecd<span class="sc">$</span>Expend2)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model2)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Oecd$Read2 ~ Oecd$Expend2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-60.811  -8.370  -1.325  15.393  50.153 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)  -23.4513    11.0604  -2.120   0.0418 *
+Oecd$Expend2   0.2636     0.1143   2.306   0.0277 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 25.37 on 32 degrees of freedom
+Multiple R-squared:  0.1425,    Adjusted R-squared:  0.1157 
+F-statistic: 5.319 on 1 and 32 DF,  p-value: 0.02772</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Resultaten bespreken met verwijzing naar output</li>
+</ol>
+<p>De algemene conclusie is net hetzelfde als in de oorspronkelijke analyse. Je zou net zo goed concluderen dat uitgaven een grote invloed hebben op leesprestaties. Dit kan je afleiden uit de <span class="math inline">\(R^2\)</span> van 0.143 en de p-waarde lager dan 0.05 (<em>F</em>(1,32) = 5.319, p = 0.028). Het intercept bedraagt nu echter -23.451 (<em>p</em> = 0.042). Dit is een gevolg van het centreren van de afhankelijke variabele ‘Reading’. Dit betekent dat een score van 0 op ‘Read2’ hetzelfde betekent als als land gemiddeld scoren voor lezen. Het intercept bedraagt -23.451, een land dat nul scoort op ‘Expend2’, dat geen geld uitgeeft aan onderwijs, scoort 23.451 punten lager dan het gemiddelde voor lezen. Het intercept wijkt nog steeds statistische significant af van 0. De hellingsgraad bedraagt 0.264 (<em>p</em> = 0.028). Dus, per 1000 USD dat een land meer uitgeeft per kind aan onderwijs stijgt de gemiddelde leesscore voor dat land met 0.264 punten. Want 1 eenheid stijgen op de variabele ‘Expend2’ staat nu gelijk aan 1000 USD meer uitgeven. Dit effect vinden we vermoedelijk ook de in de populatie terug aangezien de kans dat er in de populatie geen effect van ‘Expend2’ is, slechts 0.028 bedraagt.</p>
 
 
-</section>
 </section>
 </section>
 
@@ -879,13 +998,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ZSO/ZSO3.html" class="pagination-link" aria-label="ZSO3: ANOVA">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO3: ANOVA</span>
+      <a href="../ZSO/ZSO5.html" class="pagination-link" aria-label="ZSO5: Correlaties">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO5: Correlaties</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ZSO/ZSO5.html" class="pagination-link" aria-label="ZSO5: Correlaties">
-        <span class="nav-page-text">ZSO5: Correlaties</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ZSO/ZSO7.html" class="pagination-link" aria-label="ZSO7: Multivariate regressie en assumpties">
+        <span class="nav-page-text">ZSO7: Multivariate regressie en assumpties</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

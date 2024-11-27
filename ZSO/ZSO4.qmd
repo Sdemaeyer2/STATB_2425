@@ -33,6 +33,9 @@ Sommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de
 Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in `R` en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando's `load( )` en `source( )`.
 
 ```{r}
+#| message: false
+#| warning: false
+#| error: false 
 load("Titanic2.RData")
 source("OLP2 Functies.R")
 library(car)

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ZSO 4 – Statistiek B</title>
+<title>ZSO 7 – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,8 +63,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ZSO/ZSO5.html" rel="next">
-<link href="../ZSO/ZSO3.html" rel="prev">
+<link href="../ZSO/ZSO8.html" rel="next">
+<link href="../ZSO/ZSO6.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,6 +102,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -115,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO7.html">ZSO7: Multivariate regressie en assumpties</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -220,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO4: Kruistabellen</span></a>
   </div>
 </li>
@@ -238,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO7.html" class="sidebar-item-text sidebar-link">
+  <a href="../ZSO/ZSO7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ZSO7: Multivariate regressie en assumpties</span></a>
   </div>
 </li>
@@ -292,33 +321,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a>
-  <ul class="collapse">
-  <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
-  <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
-  </ul></li>
+  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a></li>
   <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
-  <ul class="collapse">
-  <li><a href="#vraag-1-1" id="toc-vraag-1-1" class="nav-link" data-scroll-target="#vraag-1-1">Vraag 1</a>
   <ul class="collapse">
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.1</a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1.2</a></li>
-  </ul></li>
-  <li><a href="#vraag-2-1" id="toc-vraag-2-1" class="nav-link" data-scroll-target="#vraag-2-1">Vraag 2</a>
-  <ul class="collapse">
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2.1</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2.2</a></li>
-  </ul></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">1.3</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">1.4</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO7.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO7.html">ZSO7: Multivariate regressie en assumpties</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ZSO 4</h1>
+<h1 class="title">ZSO 7</h1>
 </div>
 
 
@@ -337,122 +356,205 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="opdrachten" class="level1 unnumbered">
 <h1 class="unnumbered">OPDRACHTEN</h1>
-<section id="vraag-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
-<p>Na het zinken van de Titanic deden er verschillende verhalen de ronde. Na vele jaren onderzoek heeft men een nagenoeg volledig bestand kunnen aanleggen van eigenschappen van de passagiers. Nu zijn we in staat om enkele prangende vragen te onderzoeken. De eerste vraag die mensen boeide was of men tijdens die ramp echt wel voorrang heeft gegeven aan vrouwen. Hadden vrouwen een grotere overlevingskans dan mannen?</p>
-<p>Het bijhorende databestand (Titanic2.RData) bevat gegevens over een groot deel van de passagiers op de Titanic. De volgende drie variabelen zijn opgenomen in het bestand: - Survived (“Yes”, “No”); - Class (“1st”, “2nd”, “3rd”, “Crew”); - Gender (“Male”, “Female”).</p>
-<p><em>1.1 Ga na of er een verband is tussen het geslacht en de overlevingskans. Voer de gepaste analyses uit om deze vraag te beantwoorden. Geef de relevante output van je analyses en bespreek deze.</em></p>
-<p><em>1.2 Maak ook een gepaste visualisatie van het resultaat.</em></p>
-</section>
-<section id="vraag-2" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2">Vraag 2</h2>
-<p>Sommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de klasse waarin passagiers geboekt hadden meer invloed had op de kans op overleven dan kenmerken zoals het geslacht.</p>
-<p><em>2.1 Is er een effect van de klasse waarin men boekte? Staaf je antwoord met output van je analyses.</em></p>
-<p><em>2.2 Klopt de uitspraak dat de klasse meer invloed had op de overlevingskans dan het geslacht? Staaf je antwoord met gegevens uit de output van je analyses.</em></p>
+<p>Het databestand bevat de gegevens van de lerarenbevraging uit de ‘Civic Education Study’. Deze studie is een internationale studie naar burgerschapsopvoeding (vergelijkbaar met PISA onderzoek, maar dan over een ander onderwerp). Daarbij werden zowel 14-jarigen als leraren en schoolhoofden in verschillende landen over dit thema bevraagd.</p>
+<p>Concreet bevat dit bestand een selectie van de gegevens uit de leerkrachtenbevraging. Meerbepaald bevat het bestand o.a. de volgende variabelen:</p>
+<p>-‘Ondmeth1’: burgerschapsopvoeding als afzonderlijk vak; -‘Onderwijservaring’: aantal jaren onderwijservaring; -‘ErvaringBO’: aantal jaren ervaring in het geven van burgerschapsopvoeding; -‘DiplomaBO’: respondent heeft een diploma in een discipline die gerelateerd is aan burgerschapsopvoeding; -‘NavormBO’: respondent heeft navorming genoten in een discipline die gerelateerd is aan burgerschapsopvoeding; -‘Leeftijd’: leeftijd van de leraar (als continue variabele); -‘Leeftijd6’: leeftijd van de leraar (ingedeeld in 6 categorieën); -‘Belang’: belang dat gehecht wordt aan het geven van kennisinhouden bij burgerschapsopvoeding; -‘Zelfver’: zelfvertrouwen in het geven van kennisinhouden bij burgerschapsopvoeding.</p>
+<p>Er bestaan verschillende psychologische theorieën die stellen dat een persoon voornamelijk belang hecht aan zaken waarvan hij of zij ook zeker is dat hij of zij ze kan uitvoeren. Als we dit toepassen op deze data, dan kan je veronderstellen dat zelfvertrouwen in het geven van kennisinhouden aangaande burgerschapsopvoeding bij leerkrachten (‘Zelfver’) een goede voorspeller is van het belang dat leerkrachten hechten aan het geven van kennisinhouden (‘Belang’).</p>
+<p>In de onderzoeksgroep waar je werkt stelt iemand anders dat het veel eerder te maken heeft met onderwijservaring (‘Onderwijservaring’). Hij veronderstelt dat, als iemand al lang in het onderwijs staat, dat die persoon dan ook meer en meer het belang gaat inzien om bij jongeren expliciet onderwijs te geven aangaande burgerschapsopvoeding (‘Belang’).</p>
+<p><em>1.1 Je zit dus met 2 hypothesen. Je wil deze hypothesen in 2 afzonderlijke analyses toetsen. Voor zelfvertrouwen maak je gebruik van de variabele ‘Zelfver’. Om het effect van het onderwijservaring na te gaan maak je gebruik van de variabele ‘Onderwijservaring’. Aan de hand van welke onderzoekstechniek zou je beide hypothesen afzonderlijk testen en waarom?</em></p>
+<p><em>1.2 Toets beide hypothesen. Welke conclusies kan je trekken? Wees hierbij zo volledig mogelijk. Kan je deze doortrekken naar de gehele populatie? Van welke variabele kan je zeggen dat die het sterkste een invloed uitoefent op de variabele ‘Belang’?</em></p>
+<p><em>1.3 We hebben in de dataset de volgende variabelen: ‘Belang’, ‘Zelfver’, ‘ErvaringBO’ en ‘Onderwijservaring’ (aantal jaren onderwijservaring). Teken het onderzoekschema dat bij de volgende onderzoeksvraag past: Is het zo dat het belang dat leerkrachten hechten aan het geven van kennisinhouden bij het vak burgerschapsopvoeding beïnvloed wordt door het zelfvertrouwen, nadat je controleert voor zowel het aantal jaren onderwijservaring in het algemeen als het aantal jaren ervaring in het geven van burgerschapsopvoeding specifiek? Welke onderzoekstechniek hoort hierbij?</em></p>
+<p><em>1.4 Voer de analyse uit die je in 1.3 suggereerde? Vooraleer je dit doet, ga je eerst na of dit wel gepast is. Interpreteer vervolgens de resultaten van de analyse zelf.</em></p>
 <p>[RESPONS ACHTERAAN DOCUMENT] </p>
-</section>
 </section>
 <section id="responsen" class="level1 unnumbered">
 <h1 class="unnumbered">RESPONSEN</h1>
 <p>Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in <code>R</code> en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando’s <code>load( )</code> en <code>source( )</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Titanic2.RData"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"CivedZSO7.RData"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"OLP2 Functies.R"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="vraag-1-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1-1">Vraag 1</h2>
-<section id="section" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section">1.1</h3>
+<section id="section" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section">1.1</h2>
+<p>Beide hypothesen gaan over het causale effect van één kwantitatieve variabele op een andere kwantitatieve variabele. Daarom kunnen we voor elk van beide hypothesen gebruik maken van een bivariate regressieanalyse.</p>
+</section>
+<section id="section-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section-1">1.2</h2>
 <ol type="a">
-<li>Analyses</li>
+<li>Analyses + bespreking resultaten aangaande Zelfvertrouwen</li>
 </ol>
-<p>Om het verband na te gaan maken we gebruik van een kruistabel, met in de kolommen ‘Gender’ (Eigenlijk kunnen we veronderstellen dat dit de onafhankelijke variabele is) en in de rijen ‘Survived’. Bovendien vragen we kolompercentages op.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     x
-y        Female      Male       Sum
-  no   26.80851  78.79838  67.69650
-  yes  73.19149  21.20162  32.30350
-  Sum 100.00000 100.00000 100.00000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Belang <span class="sc">~</span> Zelfver, <span class="at">data =</span> CivedZSO7)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Pearson's Chi-squared test
+Call:
+lm(formula = Belang ~ Zelfver, data = CivedZSO7)
 
-data:  table(Titanic2$Survived, Titanic2$Gender)
-X-squared = 456.87, df = 1, p-value &lt; 2.2e-16
-95 percent confidence interval:
- 0.4138267 0.4973825
-sample estimates:
-Cramer's V 
- 0.4556048 </code></pre>
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.55780 -0.23645  0.01354  0.22793  1.19233 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  2.55760    0.03794   67.41   &lt;2e-16 ***
+Zelfver      0.25007    0.01275   19.61   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.3448 on 2135 degrees of freedom
+  (349 observations deleted due to missingness)
+Multiple R-squared:  0.1527,    Adjusted R-squared:  0.1523 
+F-statistic: 384.7 on 1 and 2135 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
+<p>Uit deze analyse blijkt dat 15.23% (Adj. <span class="math inline">\(R^2\)</span> = 0.1523) van de verschillen in het belang dat leerkrachten hechten aan kennisinhoud (‘Belang’) toe te schrijven zijn aan verschillen in zelfvertrouwen om effectief kennisinhouden te onderwijzen (‘Zelfver’). Het gaat dus om een groot effect (zie vuistregels van Cohen). Op basis van de F-test (<em>F</em>(1,2135) = 384.7, <em>p</em> &lt; 0.001) leren we bovendien dat ‘Zelfver’ ook in de gehele populatie van leerkrachten een deel van de variantie in ‘Belang’ zou verklaren. Het model is m.a.w. statistisch significant.</p>
+<p>Het intercept geeft aan dat een leerkracht met een score 0 op de schaal ‘Zelfver’, 2.558 zou scoren op de schaal ‘Belang’. Per punt dat een leerkracht hoger scoort op ‘Zelfver’ stijgt de score op ‘Belang’ met 0.25 punten. Zowel het intercept (<span class="math inline">\(\beta_0\)</span> = 2.558, <em>p</em> &lt; 0.001) als de hellingsgraad (<span class="math inline">\(\beta_1\)</span> = 0.25, <em>p</em> &lt; 0.001) zijn bovendien statistisch significant. De kans dat het intercept en de hellingsgraad 0 zouden bedragen is zo klein dat we ervan uitgaan dat we ook in de populatie een gelijkaardig intercept en hellingsgraad zouden vaststellen. </p>
 <ol start="2" type="a">
-<li>Resultaten bespreken met verwijzing naar output</li>
+<li>Analyses + bespreking resultaten aangaande Onderwijservaring</li>
 </ol>
-<p>Uit de kruistabel blijkt dat vrouwen (73,19%) duidelijk een grotere overlevingskans hebben dan mannen (21,20%). Uit de Chi-kwadraattoets (<em>chi²</em>(1) = 456.874, <em>p</em> &lt; 0.001) kunnen we bovendien afleiden dat de kans dat de nulhypothese opgaat zeer klein is. M.a.w. de kans dat in de populatie van Titanic-passagiers geen verschil in overlevingskans was tussen vrouwen en mannen is zo klein dat we deze verwerpen. (We verwerpen H0!) Het verband tussen ‘Survival’ en ‘Gender’ is dus statistisch significant. De sterkte van het verband is af te leiden uit de Cramer’s V (0.456) en dit geldt ook voor de populatie, 95% BI [0.414,0.497].</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Belang <span class="sc">~</span> Onderwijservaring, <span class="at">data =</span> CivedZSO7)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model2)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Belang ~ Onderwijservaring, data = CivedZSO7)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.60502 -0.27632  0.00632  0.27054  0.78816 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        3.3377295  0.0158758 210.241  &lt; 2e-16 ***
+Onderwijservaring -0.0030705  0.0008003  -3.836 0.000128 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.3752 on 2196 degrees of freedom
+  (288 observations deleted due to missingness)
+Multiple R-squared:  0.006658,  Adjusted R-squared:  0.006205 
+F-statistic: 14.72 on 1 and 2196 DF,  p-value: 0.0001283</code></pre>
+</div>
+</div>
+<p>Hoewel de F-toets (<em>F</em>(1,2196) = 14.72, <em>p</em> &lt; 0.001) aangeeft dat het model statistisch significant afwijkt aandeel van variantie verklaard, is de verklaarde variantie verwaarloosbaar klein (Adj. <span class="math inline">\(R^2\)</span> = 0.006). De variabele ‘Onderwijservaring’ zal dus in de gehele populatie ook een deel van de verschillen in ‘Belang’ verklaren, maar dit effect is zo klein dat het van weinig praktische waarde is.</p>
+<p>Hoewel het model weinig verschillen verklaart in ‘Belang’ blijken zowel het intercept als de slope voor ‘Onderwijservaring’ statistisch significant af te wijken van 0. Ook hier kunnen we de conclusies op basis van de steekproefgevens dus doortrekken naar de populatie. Uit het intercept lezen we af dat een leerkracht met nul jaren onderwijservaring 3.338 (<em>p</em> &lt; 0.001) zou scoren op belang gehecht aan kennisinhouden (‘Belang’). Naarmate een leerkracht meer onderwijservaring heeft, daalt dit belang gehecht aan kennisinhouden: per jaar meer ervaring daalt de verwachte score voor ‘Belang’ met 0.003 eenheden (<span class="math inline">\(\beta_1\)</span> = -0.003, <em>p</em> &lt; 0.001). De relatie tussen ‘Onderwijservaring’ en ‘Belang’ is dus negatief.</p>
+<p>Om na te gaan welke variabele het meeste invloed uitoefent op ‘Belang’, vergelijken we de <span class="math inline">\(R^2\)</span> van beide analyses. Hieruit blijkt dat de variabele ‘Zelfver’ duidelijk een sterkere invloed heeft op ‘Belang’ dan de variabele ‘Onderwijservaring’. Die laatste variabele verklaart immers slechts 0.62% (Adj <span class="math inline">\(R^2\)</span> = 0.0062, <em>p</em> &lt; 0.001) van de verschillen in ‘Belang’ wat vergeleken met de 15,23% verklaarde variantie (Adj <span class="math inline">\(R^2\)</span> = 0.1523, <em>p</em> &lt; 0.001) door de variabele ‘Zelfver’ een pak lager is. </p>
 </section>
-<section id="section-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1">1.2</h3>
-<p>Om een grafiek te maken, gebruiken we <code>assocplot( )</code>. Let op de volgorde van de variabelen binnen dit commando!</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">assocplot</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Gender,Titanic2<span class="sc">$</span>Survived))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="section-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section-2">1.3</h2>
+<p>De visualisatie ziet er als volgt uit:</p>
+<div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div>
 <figure class="figure">
-<p><img src="ZSO4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="ZSO7_figuur1_3.jpg" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
+<p>Dit vraagt om een <strong>meervoudige regressieanalyse</strong>.</p>
 </section>
-</section>
-<section id="vraag-2-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2-1">Vraag 2</h2>
-<section id="section-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-2">2.1</h3>
+<section id="section-3" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="section-3">1.4</h2>
 <ol type="a">
-<li>Analyses</li>
+<li>Analyses assumpties bij regressieanalyse</li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     x
-y           1st       2nd       3rd      Crew       Sum
-  no   37.53846  58.59649  74.78754  76.04520  67.69650
-  yes  62.46154  41.40351  25.21246  23.95480  32.30350
-  Sum 100.00000 100.00000 100.00000 100.00000 100.00000</code></pre>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Belang <span class="sc">~</span> Zelfver <span class="sc">+</span> ErvaringBO <span class="sc">+</span> Onderwijservaring, <span class="at">data =</span> CivedZSO7)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Model3)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ZSO7_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">residuals_plot</span>(Model3)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Residuals_plotZSO7.jpeg" class="img-fluid figure-img" width="350"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cooks_plot</span>(Model3)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Cook_PlotZSO7.jpeg" class="img-fluid figure-img" width="350"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(Model3)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  table(Titanic2$Survived, Titanic2$Class)
-X-squared = 190.4, df = 3, p-value &lt; 2.2e-16
-95 percent confidence interval:
- 0.2506724 0.3344483
-sample estimates:
-Cramer's V 
- 0.2941201 </code></pre>
+<pre><code>          Zelfver        ErvaringBO Onderwijservaring 
+         1.010080          4.015503          3.999973 </code></pre>
 </div>
 </div>
 <ol start="2" type="a">
 <li>Resultaten bespreken met verwijzing naar output</li>
 </ol>
-<p>Uit de kruistabel kan je aflezen dat de overlevingskans het grootst is voor passagiers uit 1ste klasse (62,462%), het tweede grootst voor passagiers uit 2de klasse (41,404%) en het laagst voor bemanningsleden (23,955%). Dit wijst duidelijk op een samenhang tussen ‘Survived’ en ‘Class’. Deze samenhang is ook statistisch significant (<em>chi²</em>(3) = 190.401, <em>p</em> &lt; 0.001). We kunnen dus stellen dat deze samenhang zich ook in de populatie van Titanic-passagiers zal voordoen. De sterkte van verband wordt uitgedrukt door Cramer’s V (0.294). Uit het 95% BI [0.251,0.334] rond Cramer’s V kunnen we afleiden dat de Cramer’s V ergens tussen 0.251 en 0.334 zal bedragen voor de populatie.</p>
-</section>
-<section id="section-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-3">2.2</h3>
-<p>Om na te gaan of ‘Class’ inderdaad meer invloed had op de overlevingskans (‘Survived’) dan geslacht(‘Gender’) vergelijken we de Cramer’s V voor beide kruistabellen. De Cramer’s V voor de associatie tussen geslacht en de ramp overleven bedraagt 0.456. Voor het verband tussen klasse en de ramp overleven is de Cramer’s V 0.294. De uitspraak dat klasse meer invloed had op de overlevingskans dan geslacht klopt dus niet.</p>
+<p>De plot linksboven (Residuals versus Fitted) geeft aan dat er aan de assumpties m.b.t. lineariteit, homoscedasticiteit en afwezigheid van clustering is voldaan. De Scale-location plot bevestigt de vaststelling inzake heteroscedasticiteit (de variantie in residuelen is onafhankelijk van de y-waarden) en afwezigheid van clustering. Het ‘vreemde’ patroon in de ‘Scale-location plot’ is een gevolg van het gebruik van discrete variabelen in het model. Discrete variabelen zijn variabelen waarbij er geen tussenliggende waarden zijn (bv. aantal jaren onderwijservaring: het gaat om 1, 2, 3 of… jaar, maar niet om 1.22 jaar onderwijservaring). Uit de QQ-plot blijkt dat de errortermen bij benadering normaal verdeeld zijn. Alle punten vallen immers min of meer op de rechte.</p>
+<p>Om na te gaan of er outliers zijn die de resultaten van de regressieanalyse kunnen vertekenen, baseren we ons op de studentized residuals en op Cook’s distance. Uit de studentized residuals leren we dat voornamelijk leerkrachten op rijen 1417 (onderaan figuur, cijfers vallen wat weg), 345 en 1362 een te sterke invloed hebben op de parameterschattingen. We zouden kunnen overwegen om die drie alvast weg te laten. Het Cook’s distance criterium bevestigt de impact van zowel de leerkrachten op rij 345 en op rij 1417. Beiden vallen opnieuw buiten de grenzen van wat aanvaardbaar is. Er is m.a.w. evidentie om deze gevallen uit de analyse te verwijderen en vervolgens de analyse opnieuw uit te voeren.</p>
+<p>Ten slotte wordt de assumpties inzake multicollineaireit getoetst aan de hand van de VIF-waarden. Uit de analyses blijkt dat de VIF’s voor de verschillende onafhankelijke variabelen niet boven de grenswaarde van 5 uitkomt. Er is dus geen probleem van multicollineariteit.</p>
+<ol start="3" type="a">
+<li>Analyses meervoudige regressie</li>
+</ol>
+<p>Vooraleer de eigenlijk analyse uit te voeren, maken we een nieuw databestand aan zonder de rijen 345 en 1417 (outliers). In principe zouden we de assumpties nu opnieuw kunnen nagegaan en indien nodig verdere outliers verwijderen. We werken echter verder op dit databestand.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># databestand maken zonder rij 345 en rij 1417</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>CivedZSO7_bis <span class="ot">&lt;-</span> CivedZSO7[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">344</span>, <span class="dv">346</span><span class="sc">:</span><span class="dv">1416</span>, <span class="dv">1418</span><span class="sc">:</span><span class="dv">2486</span>), ] </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Model opnieuw schatten op de nieuw aangemaakte data</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>Model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Belang <span class="sc">~</span> Zelfver <span class="sc">+</span> ErvaringBO <span class="sc">+</span> Onderwijservaring, <span class="at">data=</span>CivedZSO7_bis)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model3)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Belang ~ Zelfver + ErvaringBO + Onderwijservaring, 
+    data = CivedZSO7_bis)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.48846 -0.25172 -0.00118  0.23370  0.96304 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        2.567087   0.041794  61.422   &lt;2e-16 ***
+Zelfver            0.262839   0.013357  19.679   &lt;2e-16 ***
+ErvaringBO        -0.001138   0.001604  -0.710    0.478    
+Onderwijservaring -0.001978   0.001540  -1.285    0.199    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.343 on 2022 degrees of freedom
+  (458 observations deleted due to missingness)
+Multiple R-squared:  0.1654,    Adjusted R-squared:  0.1641 
+F-statistic: 133.5 on 3 and 2022 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<ol start="4" type="a">
+<li>Resultaten bespreken met verwijzing naar output</li>
+</ol>
+<p>Zelfvertrouwen (‘Zelfver’), het aantal jaren ervaring in burgerschapsopvoeding (‘ErvaringBO’) en het aantal jaren onderwijservaring (‘Onderwijservaring’ ) verklaren samen 16.41% (Adj. <span class="math inline">\(R^2\)</span> = 0.1641, <em>p</em> &lt; 0.001) van de variantie in belang gehecht aan kennisinhouden (‘Belang’). De F-test (<em>F</em>(3,2022) = 133.5, <em>p</em> &lt; 0.001) leert bovendien dat in de populatie deze drie variabelen samen ook een deel van de verschillen in de afhankelijke variabele zouden verklaren.</p>
+<p>Uit het intercept blijkt dat een leerkracht die 0 scoort op de drie onafhankelijke variabelen, een score van 2.567 behaalt op ‘Belang’ (<span class="math inline">\(\beta_0\)</span> = 2.567, <em>p</em> &lt; 0.001). De overige parameterschattingen geven aan dat er enkel een statistisch significant effect is van zelfvertrouwen (‘Zelfver’): één punt hoger scoren op ‘Zelfver’ leidt tot 0.263 punten hoger scoren op ‘Belang’ (<span class="math inline">\(\beta_1\)</span> = 0.263, <em>p</em> &lt; 0.001). Het gaat dus om een positief effect: hoe hoger het zelfvertrouwen van leerkrachten om kennisinhouden aan te brengen, des te meer belang gaan ze ook hechten aan die kennisinhouden. Dit effect is onafhankelijk van de ervaring van de leerkracht (al dan niet specifieke onderwijservaring voor het geven van Burgerschapsopvoeding; ‘ErvaringBO’ en ‘Onderwijservaring’). De parameterschattingen voor zowel ‘ErvaringBO’ (<span class="math inline">\(\beta_2\)</span> = -0.001, <em>p</em> = 0.478) als ‘Onderwijservaring’ (<span class="math inline">\(\beta_3\)</span> = -0.002, <em>p</em> = 0.199) zijn niet statistisch significant. Bijgevolg kunnen we niet met voldoende zekerheid stellen dat er in de populatie ook sprake zal zijn van een effect van die twee variabelen.</p>
 
 
-</section>
 </section>
 </section>
 
@@ -879,13 +981,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ZSO/ZSO3.html" class="pagination-link" aria-label="ZSO3: ANOVA">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO3: ANOVA</span>
+      <a href="../ZSO/ZSO6.html" class="pagination-link" aria-label="ZSO6: Bivariate regressie">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO6: Bivariate regressie</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ZSO/ZSO5.html" class="pagination-link" aria-label="ZSO5: Correlaties">
-        <span class="nav-page-text">ZSO5: Correlaties</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ZSO/ZSO8.html" class="pagination-link" aria-label="ZSO8: Dummy-variabelen en interacties">
+        <span class="nav-page-text">ZSO8: Dummy-variabelen en interacties</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
