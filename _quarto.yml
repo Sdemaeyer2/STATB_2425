@@ -4,7 +4,7 @@ project:
 website:
   title: "Statistiek B"
   page-navigation: true
-  
+  reader-mode: true
   page-footer:
     right: "Gemaakt met veel ❤ en [Quarto](https://quarto.org/)."
     left: "&copy; CC-By Universiteit Antwerpen, 2024"
@@ -15,12 +15,46 @@ website:
     search: true
     align: center
     border: false
+    collapse-level: 1
     contents: 
       - text: "Welkom"
         href: index.qmd
-      - text: ""
-      - text: "Over ons"
-        href: about.qmd
+        
+      - section: "Open Leer Pakket"
+      
+      - section: "Contactmomenten"
+        contents: 
+          - text: "C1"
+          - text: "C2"
+          - text: "C3"
+          - text: "C4"
+          - text: "C5"
+          - text: "C6"
+          - text: "C7"
+          
+      - section: "ZSO"
+        contents: 
+          - text: "ZSO1: van vraag naar methode"
+          - text: "ZSO2: t-test"
+            href: ZSO/ZSO2.qmd
+          - text: "ZSO3: ANOVA"
+          - text: "ZSO4: Kruistabellen"
+          - text: "ZSO5: Correlaties"
+          - text: "ZSO6: Bivariate regressie"
+          - text: "ZSO7: Assumpties regressie"
+          - text: "ZSO8: Multivariate regressie"
+          - text: "ZSO9: Dummy-variabelen en interacties"
+          
+      - section: "Extra materiaal"
+        contents: 
+          - text: "Projecten in RStudio"
+            href: Extra/Projecten.qmd
+          - text: "Quarto documenten"
+            href: Extra/Quarto_documenten.qmd
+          - text: "Data-manipulatie met dplyr"
+          
+      - text: "Studiewijzer"
+        href: studiewijzer.qmd
     
     tools: 
       - icon: globe
@@ -30,6 +64,7 @@ website:
         href: https://github.com/openscapes/quarto-website-tutorial
         text: "Statistiek B"
 
+lang: nl
 
 format:
   html:
@@ -38,7 +73,6 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
-    mainfont: "Atkinson Hyperlegible"
     
 editor: visual
 

@@ -12,11 +12,76 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Over ons",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
+    "text": "Over ons\n\n1 + 1\n\n[1] 2",
     "crumbs": [
       "Over ons"
+    ]
+  },
+  {
+    "objectID": "studiewijzer.html",
+    "href": "studiewijzer.html",
+    "title": "Studiewijzer",
+    "section": "",
+    "text": "Inhoud\nDeze module wil een inleiding geven tot de gangbare klassieke bivariate en multivariate technieken van statistische analyse binnen het onderwijskundig onderzoek. De module is vooral op de praktijk afgestemd. Dit impliceert dat er geen aandacht wordt besteed aan streng wiskundige bewijzen, maar zoveel mogelijk praktische problemen worden behandeld. \nEerst staan we stil bij hoe we een kwantitatieve onderzoeksvraag kunnen vertalen in een formeel analysemodel. Op basis van dit analysemodel kunnen we dan de meest gepaste analysetechniek selecteren. Daarna leren we verschillende bivariate en multivariate analysetechnieken uitvoeren in RStudio om analysemodellen te testen, schatten en interpreteren. \n\n\nDoelstellingen\nWat wordt je verwacht te kunnen na het volgen van dit opleidingsonderdeel?\nAlgemeen: \nJe bent in staat om zelf eenvoudige onderzoeksvragen over niet-causale en causale verbanden tussen één of meerdere kenmerken, statistisch te onderzoeken. Ook kan je wetenschappelijke publicaties waarin gebruik gemaakt wordt van kruistabellen, correlaties, t-testen, ANOVA en regressieanalyse (al dan niet met dummy-variabelen en interacties) begrijpen en interpreteren. \n \nMeer specifiek:  \nJe kan een bivariate of multivariate kwantitatieve analyse uitvoeren. \nHiertoe onderscheiden we de volgende deelvaardigheden: \n- je kan de juiste techniek associëren bij een bepaald analysemodel; \n- je kan een t-test uitvoeren, interpreteren en rapporteren; \n- je kan een onderzoek a.d.h.v. kruistabellen uitvoeren, interpreteren en rapporteren; \n- je kan een correlatieonderzoek uitvoeren, interpreteren en rapporteren; \n- je kan een ANOVA uitvoeren, interpreteren en rapporteren; \n- je kan een bivariate en meervoudige regressieanalyse uitvoeren, interpreteren en rapporteren; \n- je kan regressieanalyse met dummy-variabelen en interactievariabelen uitvoeren, interpreteren en rapporteren; \n- je kan voor elk van deze technieken de assumpties nagaan. \n\n\nLeermateriaal\nHet boek ‘Bivariate en multivariate statistiek met R. Een openleerpakket.’ De Maeyer, Coertjens en Ardies (2012) vormt het studiemateriaal voor dit opleidingsonderdeel. Dit boek is verkrijgbaar bij Acco. We raden je aan om telkens voor de les het hoofdstuk (of de hoofdstukken) voor die les door te nemen. \nNaast dit verplichte cursusmateriaal zijn er ook zelfstudieopdrachten (ZSO’s) op het Studentenportaal terug te vinden. Deze ZSO’s zijn telkens oefeningen waarin de aangereikte leerstof moet worden toegepast op reële datasets. Ook de respons op deze oefeningen is beschikbaar op het Studentenportaal. \nVoor dit opleidingsonderdeel maken we gebruik van de softwarepakketten R en RStudio. Deze zijn gratis te downloaden van www.r-project.org en www.posit.co en kunnen op de courante besturingssystemen geïnstalleerd worden. Studenten die nog niet vertrouwd zijn met het werken met R kunnen best eerst het boek ‘Univariate statistiek voor de menswetenschappen. Een openleerpakket in R’ van De Maeyer, van Daal en Vandervieren doornemen. Dit boek is o.a. verkrijgbaar bij Acco. \n\n\nSchematisch overzicht\nVoor dit vak zijn 7 contactmomenten voorzien. Om meerwaarde te halen uit de contactmomenten dien je op voorhand de relevante hoofdstukken uit het OLP door te nemen en de bijhorende videolessen te bekijken.  \n\n\nEvaluatie\nDe evaluatie van statistiek B bestaat uit een schriftelijk PC-examen dat in twee delen is opgesplitst: \n\neen gesloten boek gedeelte waarin naar kennis en inzicht gepeild wordt (70% van de punten); \n\n\n\neen open boek gedeelte dat focust op je vermogen om analyses uit te voeren in RStudio (30% van de punten).  \n\nJe moet minimaal de helft halen op het gesloten deel om te kunnen slagen voor Statistiek B. Anders bedraagt de score voor Statistiek B maximaal 8/20.  \n\n\nOnderwijsteam\nHet onderwijsteam voor dit opleidingsonderdeel bestaat uit Sven De Maeyer en Sofie Vermeiren. Heb je vragen over “Statistiek B” praktisch of inhoudelijk van aard? Dan stel je deze steeds eerst via het discussieforum op de het Studentenportaal. Dit zal wekelijks worden nagekeken en opgevolgd.  \nSven.Demaeyer@uantwerpen.be \nSofie.Vermeiren@uantwerpen.be",
+    "crumbs": [
+      "Studiewijzer"
+    ]
+  },
+  {
+    "objectID": "Extra/Quarto_documenten.html",
+    "href": "Extra/Quarto_documenten.html",
+    "title": "Quarto documenten",
+    "section": "",
+    "text": "Doorheen mijn carrière als onderzoeker heb ik geleerd hoe moeilijk het kan zijn om alles wat je doet in het kader van een onderzoek voldoende goed te documenteren zodanig dat het onderzoek reproduceerbaar is.\nEen belangrijk aspect in het reproduceerbaar maken van je onderzoek is het goed documenteren van alle stappen in de analyses. Dit gaat over alle analysestappen die je zet, startend vanuit de ruwe dataset.\nR code delen en begrijpbaar maken, kan daartoe een krachtig hulpmiddel zijn. Maar, vaak zien we dat onderzoekers de code zeer ontransparant opstellen. De code wordt iteratief uitgewerkt en wat werkt wordt bewaard, zonder enige verdere toelichting. En laat het duidelijk zijn, ook ik heb me daaraan in het verleden vaak schuldig gemaakt.\nWaar ik ondertussen echter systematisch op hamer bij mezelf en medewerkers is het uitwerken van een analyserapport in een Quarto document. Zo’n Quarto document stelt je in staat om je R code te integreren met lopende tekst (ook deze pagina en hele website is gemaakt in Quarto trouwens). In RStudio kan je zo’n document opmaken in een interface die veel gelijkenissen vertoont met een typische tekst-editor (zoals Word bijvoorbeeld). Super handig!! En het gaat zelfs verder. Zo’n Quarto document kan je vervolgens, met één druk op de knop, vertalen in een html-file (hadig om te delen met anderen), een pdf of een Word-document. Je kan ook verder gaan en hele slideshows bouwen met Quarto waarin je je analyses integreert.\nInvesteren in een goed Quarto document is ook als student meer dan de moeite waard. Immers, zo kan je de verschillende stukjes code die we leren bij een techniek beter documenteren voor jezelf. Zo’n Quarto document is simpelweg een manier om lief te zijn voor je toekomstige ik!",
+    "crumbs": [
+      "Extra materiaal",
+      "Quarto documenten"
+    ]
+  },
+  {
+    "objectID": "Extra/Quarto_documenten.html#enkele-voorbeelden",
+    "href": "Extra/Quarto_documenten.html#enkele-voorbeelden",
+    "title": "Quarto documenten",
+    "section": "Enkele voorbeelden",
+    "text": "Enkele voorbeelden",
+    "crumbs": [
+      "Extra materiaal",
+      "Quarto documenten"
+    ]
+  },
+  {
+    "objectID": "Extra/Quarto_documenten.html#tutorials-op-youtube",
+    "href": "Extra/Quarto_documenten.html#tutorials-op-youtube",
+    "title": "Quarto documenten",
+    "section": "Tutorials op YouTube",
+    "text": "Tutorials op YouTube\nEr is een hele reeks op YouTube waarin een van de meest gerenomeerde docenten statistiek (internationaal), Andy Field, toont hoe je met Quarto aan de slag kan gaan. Hieronder enkele van z’n video’s.\nQuarto installeren:\n\n\nAan de slag met de Visual Editor (Deel 1):\n\n\nAan de slag met de Visual Editor (Deel 2) (hier leer je R Code chunks toevoegen etc):\n\n\nAan de slag met de YAML van het Quarto document om allerlei extra opties te activeren:",
+    "crumbs": [
+      "Extra materiaal",
+      "Quarto documenten"
+    ]
+  },
+  {
+    "objectID": "Extra/Quarto_documenten.html#een-voorbeeld",
+    "href": "Extra/Quarto_documenten.html#een-voorbeeld",
+    "title": "Quarto documenten",
+    "section": "Een voorbeeld",
+    "text": "Een voorbeeld\nEen voorbeeld verduidelijkt allicht meer. In 2024 heb ik samen met een reeks collega’s een artikel gepubliceerd waarbij we ook een extra document publiceerden (via een website) met daarin alle stappen van de analyses.\nHet artikel kan je hier vinden:\nhttps://link.springer.com/article/10.1007/s11145-023-10483-7\nDe “Walkthrough” voor de analyses vind je terug via de volgende link (ik verwacht niet dat je dit document snapt ofzo, het is eerder illustratief bedoeld):\nhttps://majestic-pixie-28398c.netlify.app/",
+    "crumbs": [
+      "Extra materiaal",
+      "Quarto documenten"
+    ]
+  },
+  {
+    "objectID": "Extra/Projecten.html",
+    "href": "Extra/Projecten.html",
+    "title": "Projecten in RStudio",
+    "section": "",
+    "text": "Werken in R en RStudio gaat gepaard met het werken met meerdere bestanden. Typisch voor een doorsnee analyses heb je alvast een databestand (ruwe data in .Rdata, .xlsx, .csv, …), een R script en eventueel een Quarto document.\nDoor het werken met verschillende documenten en het feit dat je vaak met code aan de slag gaat, kan het gebeuren dat heel de workflow redelijk rommelig wordt. Daarom raad ik je aan om te werken met “Projects” in “RStudio”. Zo’n project is eigenlijk een specifieke map op je pc die je hanteert om alle relevante documenten voor een bepaalde studie of analyse in onder te brengen. In RStudio kan je vervolgens aangeven dat deze map gerelateerd is aan een project. Het grote voordeel is dat alle documenten samen staan op één plaats en dat alle code waarin je verwijst naar een ander bestand (dus ook om bv data in te laden) vertrekt vanuit die map en niet vanuit je hele mappenstructuur specifiek op je pc.\nDat klinkt mogelijk redelijk abstract. Het wordt in de onderstaande tutorial van Andy Field echter zeer goed toegelicht. De workflow die hij voorstelt is echt het overwegen waard! Ook voor jou als student kan dit helpen. Bijvoorbeeld, maak een specfiek project voor de ZSO’s en zo leer je omgaan met die projecten.",
+    "crumbs": [
+      "Extra materiaal",
+      "Projecten in RStudio"
     ]
   }
 ]

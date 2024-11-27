@@ -1,0 +1,50 @@
+---
+title: "Quarto documenten"
+---
+
+Doorheen mijn carrière als onderzoeker heb ik geleerd hoe moeilijk het kan zijn om alles wat je doet in het kader van een onderzoek voldoende goed te documenteren zodanig dat het onderzoek **reproduceerbaar** is.
+
+::: callout-note
+Met reproduceerbaarheid van onderzoek doelen we op de mate waarin een collega onderzoeker jouw onderzoek opnieuw kan herhalen met al het materiaal voor handen. Stel, je publiceert een wetenschappelijk artikel met een reeks resultaten van statistische analyses. Idealiter kan een collega, vertrekkend van de ruwe data, deze resultaten helemaal opnieuw bekomen.
+:::
+
+Een belangrijk aspect in het reproduceerbaar maken van je onderzoek is het goed documenteren van alle stappen in de analyses. Dit gaat over alle analysestappen die je zet, startend vanuit de ruwe dataset. 
+
+`R` code delen en begrijpbaar maken, kan daartoe een krachtig hulpmiddel zijn. Maar, vaak zien we dat onderzoekers de code zeer ontransparant opstellen. De code wordt iteratief uitgewerkt en wat werkt wordt bewaard, zonder enige verdere toelichting. En laat het duidelijk zijn, ook ik heb me daaraan in het verleden vaak schuldig gemaakt. 
+
+Waar ik ondertussen echter systematisch op hamer bij mezelf en medewerkers is het uitwerken van een analyserapport in een Quarto document. Zo'n Quarto document stelt je in staat om je R code te integreren met lopende tekst (ook deze pagina en hele website is gemaakt in Quarto trouwens). In `RStudio` kan je zo'n document opmaken in een interface die veel gelijkenissen vertoont met een typische tekst-editor (zoals Word bijvoorbeeld). Super handig!! En het gaat zelfs verder. Zo'n Quarto document kan je vervolgens, met één druk op de knop, vertalen in een html-file (hadig om te delen met anderen), een pdf of een Word-document. Je kan ook verder gaan en hele slideshows bouwen met Quarto waarin je je analyses integreert.
+
+Investeren in een goed Quarto document is ook als student meer dan de moeite waard. Immers, zo kan je de verschillende stukjes code die we leren bij een techniek beter documenteren voor jezelf. Zo'n Quarto document is simpelweg een manier om lief te zijn voor je toekomstige ik! 
+
+## Een voorbeeld
+
+Een voorbeeld verduidelijkt allicht meer. In 2024 heb ik samen met een reeks collega's een artikel gepubliceerd waarbij we ook een extra document publiceerden (via een website) met daarin alle stappen van de analyses.
+
+
+Het artikel kan je hier vinden:
+
+<https://link.springer.com/article/10.1007/s11145-023-10483-7>
+
+De "Walkthrough" voor de analyses vind je terug via de volgende link (ik verwacht niet dat je dit document snapt ofzo, het is eerder illustratief bedoeld):
+
+<https://majestic-pixie-28398c.netlify.app/>
+
+
+## Tutorials op YouTube
+Er is een hele reeks op YouTube waarin een van de meest gerenomeerde docenten statistiek (internationaal), Andy Field, toont hoe je met Quarto aan de slag kan gaan. Hieronder enkele van z'n video's.
+
+Quarto installeren:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4rKWIJXe3mA?si=_cpj1hNYEUDuUkBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Aan de slag met de Visual Editor (Deel 1):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/31Q9ZTZOHIM?si=A8iHkp_C4NZk2Wdx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Aan de slag met de Visual Editor (Deel 2) (hier leer je R Code chunks toevoegen etc):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QlYgnf_qCNo?si=xtL4z2Wc-e62AW3W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Aan de slag met de YAML van het Quarto document om allerlei extra opties te activeren:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Auo1hjyeCl4?si=Ng0Hl_2bCaqLAHe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
