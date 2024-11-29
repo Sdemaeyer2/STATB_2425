@@ -78,3 +78,58 @@ tapply(penguins$body_mass_g, penguins$sex , mean)
 
 :::
 :::
+
+## Oefening 2
+
+In de eerste oefening kregen we zicht op de gemiddelde lichaamsmassa van mannelijke en vrouwelijke pinguïns in de steekproef. Uiteraard zijn we meer geïnteresseerd in hoe dit in de populatie zit! We wensen dus een t-test uit te voeren. 
+
+*Voer in het onderstaande code blok de juiste code in om de t-test uit te voeren (je mag er even vanuit gaan dat er voldaan is aan de assumptie van gelijke varianties).*
+
+::: {.panel-tabset}
+
+## Oefening
+
+```{webr}
+#| exercise: ex2
+#| caption: Oefening2
+
+
+```
+
+```{webr}
+#| exercise: ex2
+#| check: true
+answer <- t.test(penguins$body_mass_g ~penguins$sex)
+if (identical(.result, answer)) {
+  list(correct = TRUE, message = "Juist!")
+} else {
+  list(correct = FALSE, message = "Fout.")
+}
+```
+
+## Hints
+
+::: { .hint exercise="ex2" }
+We willen een t-test uitvoeren. Daartoe maak je best gebruik van de functie `t.test( )`. 
+
+```r
+t.test(______ ~ _______)
+```
+
+:::
+
+## Oplossing
+::: { .solution exercise="ex2" }
+
+**Oplossing:**
+
+De volledige oplossing ziet er zo uit!
+
+```{webr}
+#| exercise: ex2
+#| solution: true
+t.test(penguins$body_mass_g ~ penguins$sex)
+```
+
+:::
+:::

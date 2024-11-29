@@ -24,4 +24,6 @@ Tijdens het examen voor dit vak is er tevens een gesloten boek onderdeel waarin 
 
 Voor dit vak hebben we ook een set van ZSO's opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO's dien je ook de datasets op je eigen pc in `RStudio` op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO's zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in `RStudio` en `R`, wat ook getoetst zal worden op het examen. 
 
-## Extra 
+## Extra materiaal
+
+Onder extra materiaal vind je meer informatie en tutorials die je workflow in `R` en `RStudio` nog een pak efficiënter maken. Je vindt er links naar een aantal tutorials op YouTube. Weet dat dit facultatief materiaal is en dat dit niet dient toegepast worden op één of andere wijze om te kunnen slagen voor het vak.

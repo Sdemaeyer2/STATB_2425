@@ -651,5 +651,37 @@
       "ZSO",
       "ZSO4: Kruistabellen"
     ]
+  },
+  {
+    "objectID": "index.html#extra-materiaal",
+    "href": "index.html#extra-materiaal",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Extra materiaal",
+    "text": "Extra materiaal\nOnder extra materiaal vind je meer informatie en tutorials die je workflow in R en RStudio nog een pak efficiënter maken. Je vindt er links naar een aantal tutorials op YouTube. Weet dat dit facultatief materiaal is en dat dit niet dient toegepast worden op één of andere wijze om te kunnen slagen voor het vak.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "Zelftest_t_test.html#oefening-2",
+    "href": "Zelftest_t_test.html#oefening-2",
+    "title": "t-test zelftoetsing",
+    "section": "Oefening 2",
+    "text": "Oefening 2\nIn de eerste oefening kregen we zicht op de gemiddelde lichaamsmassa van mannelijke en vrouwelijke pinguïns in de steekproef. Uiteraard zijn we meer geïnteresseerd in hoe dit in de populatie zit! We wensen dus een t-test uit te voeren.\nVoer in het onderstaande code blok de juiste code in om de t-test uit te voeren (je mag er even vanuit gaan dat er voldaan is aan de assumptie van gelijke varianties).\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen een t-test uitvoeren. Daartoe maak je best gebruik van de functie t.test( ).\nt.test(______ ~ _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nt.test(penguins$body_mass_g ~ penguins$sex)\nt.test(penguins$body_mass_g ~ penguins$sex)",
+    "crumbs": [
+      "Online R oefeningen",
+      "t-test"
+    ]
+  },
+  {
+    "objectID": "Zelftest_t_test.html#oplossing-1",
+    "href": "Zelftest_t_test.html#oplossing-1",
+    "title": "t-test zelftoetsing",
+    "section": "Oplossing",
+    "text": "Oplossing\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nt.test(penguins$body_mass_g ~penguins$sex)\nt.test(penguins$body_mass_g ~penguins$sex)\n\n\n\n:::",
+    "crumbs": [
+      "Online R oefeningen",
+      "t-test"
+    ]
   }
 ]
