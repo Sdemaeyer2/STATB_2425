@@ -1,0 +1,44 @@
+---
+title: "Penguins"
+format: live-html
+engine: knitr
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+Vertrouwd raken met R-code en bepaalde functies goed kunnen inzetten is cruciaal in dit vak. Om dit op zich in te oefenen, los van de gehele workflow in `RStudio` op zich hebben we hier een hele set aan oefeningen uitgewerkt die je simpelweg op deze website zelf kan doorlopen. Geen behoefte dus aan `RStudio` ofzo. Niet alle `R` functies zullen in deze oefeningen worden gebruikt, maar enkel dus een setje basisfuncties. Het hoofddoel hier is dus zeer rudimentair de link te maken tussen code, output en resultaat.
+
+## Palmerpenguins
+
+```{r, out.width = "150px", echo=F}
+knitr::include_graphics("images/palmerpenguins.png")
+```
+
+Heel dit onderdeel maakt gebruik van interactieve code op de website. Dat betekent ook dat we deze oefeningenreeks baseren op een bestaande dataset die via `R` zelf beschikbaar is: de penguins dataset!
+
+Het pakket `palmerpenguins` bevat een dataset over een reeks metingen die biologen gedaan hebben bij drie soorten pinguïns. Dit pakket moeten we dus telkens laden bij de start van een oefening. In elk van de oefeningen zal je het volgende stukje R-code bovenaan terug vinden. Deze code laadt het het pakket `palmerpenguins` en activeert vervolgens de dataset `penguins`. Het is dus belangrijk om dit stukje code zeker te laten lopen (met de blauwe play-knop rechtsboven) bij de start van de oefeningen. 
+
+Het dataframe in `R` waarmee we dus aan de slag gaan heet `penguins`. 
+
+```{webr}
+library(palmerpenguins)
+data("penguins")
+```
+
+De data zijn metingen bij 3 soorten pinguïns: 
+
+```{r, out.width = "350px", echo=F}
+knitr::include_graphics("images/penguins.png")
+```
+
+Deze dataset bevat een setje variabelen die makkelijk te begrijpen zijn! Het volgende code blok bevat de functie `str()` waarbij we verwijzen naar het dataframe om zo te vragen aan `R` om de structuur van het dataframe te printen. Het resultaat is een lijstje van de verschillende variabelen in de dataset.
+
+```{webr}
+str(penguins)
+```
+
+Uit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen.
+
+```{r, out.width = "350px", echo=F}
+knitr::include_graphics("images/culmen_depth.png")
+```

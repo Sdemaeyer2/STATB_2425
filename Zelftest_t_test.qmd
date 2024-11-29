@@ -1,0 +1,80 @@
+---
+title: "t-test zelftoetsing"
+format: live-html
+engine: knitr
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+In wat volgt staan een aantal interactieve oefeningen die je kan doorlopen om te testen of je de materie aangaande t-testen voldoende onder de knie hebt. 
+
+Om de oefeningen te kunnen uitvoeren hebben we de dataset `penguins` nodit uit het pakket `palmerpenguins`. Volgende code loopt automatisch zodanig dat je meteen aan de oefeningen kan beginnen!
+
+```{webr}
+#| autorun: true
+#| runbutton: false
+library(palmerpenguins)
+data("penguins")
+```
+
+## Oefening 1
+
+We zijn geïnteresseerd in verschillen tussen mannelijk en vrouwelijke pinguïns. Meerbepaald zijn we benieuwd wat het verschil in lichaamsmassa (`body_mass_g`) is tussen beide sekses (`sex`).
+
+*Vul onderstaande code aan om de gemiddeldes per sekse te berekenen.*
+
+::: {.panel-tabset}
+
+## Oefening
+
+```{webr}
+#| exercise: ex1
+#| caption: Oefening1
+
+tapply(penguins$body_mass_g, _______ , _______)
+```
+
+```{webr}
+#| exercise: ex1
+#| check: true
+answer <- tapply(penguins$body_mass_g, penguins$sex , mean)
+if (identical(.result, answer)) {
+  list(correct = TRUE, message = "Juist!")
+} else {
+  list(correct = FALSE, message = "Fout.")
+}
+```
+
+## Hints
+
+::: { .hint exercise="ex1" }
+We willen het gemiddelde per categorie van de variabele `penguins$sex` berekenen. Dus, je moet in je code iets met die variabele doen.
+
+```r
+tapply(penguins$body_mass_g, penguins$____ , _____)
+```
+:::
+
+::: { .hint exercise="ex1" }
+Als je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in `R` kan je hanteren om het gemiddelde te berekenen?
+
+```r
+tapply(penguins$body_mass_g, penguins$sex , _____)
+```
+:::
+
+## Oplossing
+::: { .solution exercise="ex1" }
+
+**Oplossing:**
+
+De volledige oplossing ziet er zo uit!
+
+```{webr}
+#| exercise: ex1
+#| solution: true
+tapply(penguins$body_mass_g, penguins$sex , mean)
+```
+
+:::
+:::

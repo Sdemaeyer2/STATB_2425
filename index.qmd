@@ -2,6 +2,26 @@
 title: "Statistiek B (AJ 2024-2025)"
 ---
 
-Welkom op de website voor de cursus Statistiek B voor het academiejaar 2024 - 2025. Op deze website vind je alle informatie voor het vak. 
+Welkom op de website voor de cursus Statistiek B (Schakelprogramma OOW, academiejaar 2024 - 2025). Op deze website vind je alle informatie en leermiddelen voor het vak. 
 
-Er zijn twee verschillende onderdelen
+Wat kan je op deze website allemaal terugvinden?
+
+# Open Leer Pakket
+
+Het cursusmateriaal voor dit vak is het open leerpakket dat we opstelden.
+
+# Contactmomenten
+
+Dit onderdeel van de websit bundelt de informatie per contactmoment. Voor elk contactmoment kan je hier de slides vinden, net als ook het materiaal dat hoort bij de computer lab oefeningen. 
+
+# Online R oefeningen
+
+Je vaardigheden in `R` inoefenen kan op verschillende manieren: op je eigen PC in `RStudio` maar net zo goed online. In deze sectie zit een hele opbouw van oefeningen die je kan doorlopen, los van `RStudio`. Dit deel focust dus voornamelijk op het goed begrijpen en inoefenen van de R code op zich, los van hoe je aan de slag gaat met `R` en `RStudio` op je pc.
+
+# Kennis en inzichttoetsen
+
+Tijdens het examen voor dit vak is er een gesloten boek onderdeel waarin we voornamelijk je kennis en inzicht in de materie wensen te testen. In dit deel van de website vind je een reeks voorbeeldvragen voor de verschillende onderdelen uit de cursus die representatief zijn voor het gesloten boek onderdeel. Wil je je eigen inzicht en kennis testen, doorloop dan zeker de verschillende testen hier.
+
+# ZSO (Zelfstudie opdrachten)
+
+Voor dit vak hebben we ook een set van ZSO's opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO's dien je ook de datasets op je eigen pc in `RStudio` op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO's zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in `RStudio` en `R`, wat ook getoetst zal worden op het examen. 

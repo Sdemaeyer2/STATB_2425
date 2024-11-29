@@ -53,6 +53,12 @@ website:
           - text: "ZSO8: Dummy-variabelen en interacties"
             href: ZSO/ZSO8.qmd
             
+      - section: "Online R oefeningen"
+        href: Penguins.qmd
+        contents: 
+          - text: "t-test"
+            href: Zelftest_t_test.qmd
+          
       - section: "Extra materiaal"
         contents: 
           - text: "Projecten in RStudio"

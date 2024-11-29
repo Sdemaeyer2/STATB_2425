@@ -270,7 +270,7 @@
     "href": "index.html",
     "title": "Statistiek B (AJ 2024-2025)",
     "section": "",
-    "text": "Welkom op de website voor de cursus Statistiek B voor het academiejaar 2024 - 2025. Op deze website vind je alle informatie voor het vak.\nEr zijn twee verschillende onderdelen",
+    "text": "Welkom op de website voor de cursus Statistiek B (Schakelprogramma OOW, academiejaar 2024 - 2025). Op deze website vind je alle informatie en leermiddelen voor het vak.\nWat kan je op deze website allemaal terugvinden?\n\nOpen Leer Pakket\nHet cursusmateriaal voor dit vak is het open leerpakket dat we opstelden.\n\n\nContactmomenten\nDit onderdeel van de websit bundelt de informatie per contactmoment. Voor elk contactmoment kan je hier de slides vinden, net als ook het materiaal dat hoort bij de computer lab oefeningen.\n\n\nOnline R oefeningen\nJe vaardigheden in R inoefenen kan op verschillende manieren: op je eigen PC in RStudio maar net zo goed online. In deze sectie zit een hele opbouw van oefeningen die je kan doorlopen, los van RStudio. Dit deel focust dus voornamelijk op het goed begrijpen en inoefenen van de R code op zich, los van hoe je aan de slag gaat met R en RStudio op je pc.\n\n\nKennis en inzichttoetsen\nTijdens het examen voor dit vak is er een gesloten boek onderdeel waarin we voornamelijk je kennis en inzicht in de materie wensen te testen. In dit deel van de website vind je een reeks voorbeeldvragen voor de verschillende onderdelen uit de cursus die representatief zijn voor het gesloten boek onderdeel. Wil je je eigen inzicht en kennis testen, doorloop dan zeker de verschillende testen hier.\n\n\nZSO (Zelfstudie opdrachten)\nVoor dit vak hebben we ook een set van ZSO’s opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO’s dien je ook de datasets op je eigen pc in RStudio op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO’s zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in RStudio en R, wat ook getoetst zal worden op het examen.",
     "crumbs": [
       "Welkom"
     ]
@@ -558,6 +558,59 @@
     "crumbs": [
       "ZSO",
       "ZSO5: Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_t_test.html",
+    "href": "Zelftest_t_test.html",
+    "title": "t-test zelftoetsing",
+    "section": "",
+    "text": "In wat volgt staan een aantal interactieve oefeningen die je kan doorlopen om te testen of je de materie aangaande t-testen voldoende onder de knie hebt.\nOm de oefeningen te kunnen uitvoeren hebben we de dataset penguins nodit uit het pakket palmerpenguins. Volgende code loopt automatisch zodanig dat je meteen aan de oefeningen kan beginnen!",
+    "crumbs": [
+      "Online R oefeningen",
+      "t-test"
+    ]
+  },
+  {
+    "objectID": "Zelftest_t_test.html#oefening-1",
+    "href": "Zelftest_t_test.html#oefening-1",
+    "title": "t-test zelftoetsing",
+    "section": "Oefening 1",
+    "text": "Oefening 1\nWe zijn geïnteresseerd in verschillen tussen mannelijk en vrouwelijke pinguïns. Meerbepaald zijn we benieuwd wat het verschil in lichaamsmassa (body_mass_g) is tussen beide sekses (sex).\nVul onderstaande code aan om de gemiddeldes per sekse te berekenen.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen het gemiddelde per categorie van de variabele penguins$sex berekenen. Dus, je moet in je code iets met die variabele doen.\ntapply(penguins$body_mass_g, penguins$____ , _____)\n\n\nAls je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in R kan je hanteren om het gemiddelde te berekenen?\ntapply(penguins$body_mass_g, penguins$sex , _____)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\ntapply(penguins$body_mass_g, penguins$sex , mean)\ntapply(penguins$body_mass_g, penguins$sex , mean)",
+    "crumbs": [
+      "Online R oefeningen",
+      "t-test"
+    ]
+  },
+  {
+    "objectID": "Penguins.html",
+    "href": "Penguins.html",
+    "title": "Penguins",
+    "section": "",
+    "text": "Vertrouwd raken met R-code en bepaalde functies goed kunnen inzetten is cruciaal in dit vak. Om dit op zich in te oefenen, los van de gehele workflow in RStudio op zich hebben we hier een hele set aan oefeningen uitgewerkt die je simpelweg op deze website zelf kan doorlopen. Geen behoefte dus aan RStudio ofzo. Niet alle R functies zullen in deze oefeningen worden gebruikt, maar enkel dus een setje basisfuncties. Het hoofddoel hier is dus zeer rudimentair de link te maken tussen code, output en resultaat.",
+    "crumbs": [
+      "Online R oefeningen"
+    ]
+  },
+  {
+    "objectID": "Penguins.html#palmerpenguins",
+    "href": "Penguins.html#palmerpenguins",
+    "title": "Penguins",
+    "section": "Palmerpenguins",
+    "text": "Palmerpenguins\n\n\n\n\n\n\n\n\n\nHeel dit onderdeel maakt gebruik van interactieve code op de website. Dat betekent ook dat we deze oefeningenreeks baseren op een bestaande dataset die via R zelf beschikbaar is: de penguins dataset!\nHet pakket palmerpenguins bevat een dataset over een reeks metingen die biologen gedaan hebben bij drie soorten pinguïns. Dit pakket moeten we dus telkens laden bij de start van een oefening. In elk van de oefeningen zal je het volgende stukje R-code bovenaan terug vinden. Deze code laadt het het pakket palmerpenguins en activeert vervolgens de dataset penguins. Het is dus belangrijk om dit stukje code zeker te laten lopen (met de blauwe play-knop rechtsboven) bij de start van de oefeningen.\nHet dataframe in R waarmee we dus aan de slag gaan heet penguins.\n\n\n\n\n\n\n\n\nDe data zijn metingen bij 3 soorten pinguïns:\n\n\n\n\n\n\n\n\n\nDeze dataset bevat een setje variabelen die makkelijk te begrijpen zijn! Het volgende code blok bevat de functie str() waarbij we verwijzen naar het dataframe om zo te vragen aan R om de structuur van het dataframe te printen. Het resultaat is een lijstje van de verschillende variabelen in de dataset.\n\n\n\n\n\n\n\n\nUit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen.",
+    "crumbs": [
+      "Online R oefeningen"
+    ]
+  },
+  {
+    "objectID": "Zelftest_t_test.html#oplossing",
+    "href": "Zelftest_t_test.html#oplossing",
+    "title": "t-test zelftoetsing",
+    "section": "Oplossing",
+    "text": "Oplossing\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\ntapply(penguins$body_mass_g, penguins$sex , mean)\ntapply(penguins$body_mass_g, penguins$sex , mean)",
+    "crumbs": [
+      "Online R oefeningen",
+      "t-test"
     ]
   }
 ]
