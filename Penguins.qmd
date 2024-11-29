@@ -37,8 +37,14 @@ Deze dataset bevat een setje variabelen die makkelijk te begrijpen zijn! Het vol
 str(penguins)
 ```
 
-Uit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen.
+Uit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen. Twee van deze variabelen gaan over de dimensies van de snavels van de pinguïns. Om die beter te begrijpen, kan volgend plaatje helpen.
 
 ```{r, out.width = "350px", echo=F}
 knitr::include_graphics("images/culmen_depth.png")
 ```
+
+De originele studie achter deze data is de volgende:
+Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081
+
+Meer informatie over het pakket kan je hier vinden:
+<https://allisonhorst.github.io/palmerpenguins/articles/intro.html>
