@@ -33,7 +33,13 @@ website:
           - text: "C5"
           - text: "C6"
           - text: "C7"
-          
+
+      - section: "Online R oefeningen"
+        href: Penguins.qmd
+        contents: 
+          - text: "t-test"
+            href: Zelftest_t_test.qmd
+
       - section: "ZSO"
         contents: 
           - text: "ZSO1: van vraag naar methode"
@@ -52,12 +58,6 @@ website:
             href: ZSO/ZSO7.qmd
           - text: "ZSO8: Dummy-variabelen en interacties"
             href: ZSO/ZSO8.qmd
-            
-      - section: "Online R oefeningen"
-        href: Penguins.qmd
-        contents: 
-          - text: "t-test"
-            href: Zelftest_t_test.qmd
           
       - section: "Extra materiaal"
         contents: 
