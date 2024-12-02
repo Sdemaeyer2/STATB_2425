@@ -17,6 +17,27 @@ library(palmerpenguins)
 data("penguins")
 ```
 
+```{webr}
+#| autorun: true
+#| runbutton: false
+#| include: false
+
+d = function(Y,X){
+	data<-na.omit(data.frame(Y,X))
+	laagste<-data$X[rank(data$X)==rank(data$X)[order(rank(data$X))][2]][1] 
+	hoogste<-data$X[rank(data$X)==rank(data$X)[order(rank(data$X),decreasing = TRUE)][2]][1] 
+	teller=mean(data$Y [which (data$X==laagste)], na.rm=TRUE)- mean(data$Y [which (data$X==hoogste)], na.rm=TRUE)
+	noemer=(sd(data$Y [which (data$X==laagste)], na.rm=TRUE) + sd(data$Y [which (data$X==hoogste)], na.rm=TRUE))/2
+	teller/noemer
+	}
+
+dpaired=function(Y,X){
+	teller=Y
+	noemer=sqrt(X)
+	teller/noemer
+	}
+```
+
 ## Oefening 1
 
 We zijn geïnteresseerd in verschillen tussen mannelijk en vrouwelijke pinguïns. Meerbepaald zijn we benieuwd wat het verschil in lichaamsmassa (`body_mass_g`) is tussen beide sekses (`sex`).
@@ -133,3 +154,64 @@ t.test(penguins$body_mass_g ~ penguins$sex)
 
 :::
 :::
+
+## Oefening 3
+
+Met de t-test zijn we nagegaan of we statistische evidentie hebben dat het verschil in gemiddelden in de steekproef ook kan worden veralgemeend naar een verschil in de populatie van alle pinguïns. We zijn dus de statistische significantie nagegaan. Echter, het resultaat van zo'n test is afhankelijk van de steekproefgrootte. Om een algemeen beeld te krijgen over hoe groot het verschil is tussen beide groepen introduceren we het idee van effectgrootte.
+
+*Doe de nodige analyse om tevens de effectgrootte na te gaan voor het verschil in lichaamsmasse tussen mannelijke en vrouwelijke pinguïns* 
+
+::: {.panel-tabset}
+
+## Oefening
+
+```{webr}
+#| exercise: ex3
+#| caption: Oefening3
+
+
+```
+
+```{webr}
+#| exercise: ex3
+#| check: true
+answer <- d(penguins$body_mass_g, penguins$sex)
+if (identical(.result, answer)) {
+  list(correct = TRUE, message = "Juist!")
+} else {
+  list(correct = FALSE, message = "Fout.")
+}
+```
+
+## Hints
+
+::: { .hint exercise="ex2" }
+We willen Cohen's d berekenen om de effectgrootte uit te drukken. Daartoe maak je best gebruik van de functie `d( )`. 
+
+```r
+d(______ , _______)
+```
+
+:::
+
+## Oplossing
+::: { .solution exercise="ex2" }
+
+**Oplossing:**
+
+De volledige oplossing ziet er zo uit!
+
+```{webr}
+#| exercise: ex3
+#| solution: true
+
+d(penguins$body_mass_g, penguins$sex)
+```
+
+:::
+:::
+
+
+## Oefening 4
+
+Nu we de output hebben van de t-test, is een belangrijk aspect deze goed interpreteren. Hieronder vind je opnieuw het resultaat van de analyse. Tracht in je eigen woorden een zo volledig mogelijk antwoord te formuleren op de vraag of er een statistich verschil is tussen

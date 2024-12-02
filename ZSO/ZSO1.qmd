@@ -16,7 +16,7 @@ Jan doet onderzoek naar de voorspellers van een positieve attitude van arbeiders
 
 *Welke analysetechniek is het meest gepast volgens jou?*
 
-[RESPONS ACHTERAAN DOCUMENT]
+\[RESPONS ACHTERAAN DOCUMENT\]
 
 ## Vraag 2 {.unnumbered}
 
@@ -32,7 +32,7 @@ In BSO-TSO scholen is dat wat anders. Die zijn contenter met onze inspecteurs. N
 
 *Welke analysetechniek zou je gebruiken om de vraag (vragen) te beantwoorden?*
 
-[RESPONS ACHTERAAN DOCUMENT]
+\[RESPONS ACHTERAAN DOCUMENT\]
 
 ## Vraag 3 {.unnumbered}
 
@@ -48,7 +48,7 @@ Stel dat je beschikt over alle nodige statistieken over verkeersongevallen (al d
 
 *Geef aan welke onderzoekstechniek je hier zou gebruiken.*
 
-[RESPONS ACHTERAAN DOCUMENT] \newpage
+\[RESPONS ACHTERAAN DOCUMENT\] \newpage
 
 # RESPONSEN {.unnumbered}
 
