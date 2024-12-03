@@ -2,6 +2,14 @@ project:
   type: website
 
 website:
+  google-analytics: 
+    tracking-id: "G-WB6XE1H6V1"
+    storage: "cookies"
+    anonymize-ip: true
+  cookie-consent: 
+   type: implied
+   style: simple
+   prefs-text: "Wij maken gebruik van cookies om de surfervaring te verbeteren en om de website te optimaliseren. IP-adressen worden niet bewaard."
   title: "Statistiek B"
   page-navigation: true
   reader-mode: true
