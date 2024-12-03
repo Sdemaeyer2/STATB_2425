@@ -4,7 +4,7 @@
     "href": "Zelftest_t_test.html",
     "title": "t-test zelftoetsing",
     "section": "",
-    "text": "In wat volgt staan een aantal interactieve oefeningen die je kan doorlopen om te testen of je de materie aangaande t-testen voldoende onder de knie hebt.\nOm de oefeningen te kunnen uitvoeren hebben we de dataset penguins nodit uit het pakket palmerpenguins. Volgende code loopt automatisch zodanig dat je meteen aan de oefeningen kan beginnen!",
+    "text": "In wat volgt staan een aantal interactieve oefeningen die je kan doorlopen om te testen of je de materie aangaande t-testen voldoende onder de knie hebt.\nOm de oefeningen te kunnen uitvoeren hebben we de dataset penguins nodit uit het pakket palmerpenguins. Volgende code loopt automatisch zodanig dat je meteen aan de oefeningen kan beginnen!\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins",
     "crumbs": [
       "Online R oefeningen",
       "t-test"
@@ -689,7 +689,7 @@
     "href": "Zelftest_t_test.html#oefening-3-1",
     "title": "t-test zelftoetsing",
     "section": "Oefening 3",
-    "text": "Oefening 3\nNu we de output hebben van de t-test, is een belangrijk aspect deze goed interpreteren. Hieronder vind je opnieuw het resultaat van de analyse. Tracht in je eigen woorden een zo volledig mogelijk antwoord te formuleren op de vraag of er een statistich verschil is tussen",
+    "text": "Oefening 3\nMet de t-test zijn we nagegaan of we statistische evidentie hebben dat het verschil in gemiddelden in de steekproef ook kan worden veralgemeend naar een verschil in de populatie van alle pinguïns. We zijn dus de statistische significantie nagegaan. Echter, het resultaat van zo’n test is afhankelijk van de steekproefgrootte. Om een algemeen beeld te krijgen over hoe groot het verschil is tussen beide groepen introduceren we het idee van effectgrootte.\nDoe de nodige analyse om tevens de effectgrootte na te gaan voor het verschil in lichaamsmasse tussen mannelijke en vrouwelijke pinguïns\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen Cohen’s d berekenen om de effectgrootte uit te drukken. Daartoe maak je best gebruik van de functie d( ).\nd(______ , _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\n\nd(penguins$body_mass_g, penguins$sex)\n\nd(penguins$body_mass_g, penguins$sex)",
     "crumbs": [
       "Online R oefeningen",
       "t-test"
@@ -700,7 +700,29 @@
     "href": "Zelftest_t_test.html#oefening-4-1",
     "title": "t-test zelftoetsing",
     "section": "Oefening 4",
-    "text": "Oefening 4\nNu we de output hebben van de t-test, is een belangrijk aspect deze goed interpreteren. Hieronder vind je opnieuw het resultaat van de analyse. Tracht in je eigen woorden een zo volledig mogelijk antwoord te formuleren op de vraag of er een statistich verschil is tussen",
+    "text": "Oefening 4\nIn oefening 2 hebben we abstractie gemaakt van de assumptie van gelijke binnen-groepen varianties voor beide sekses.\nTest nu de assumptie dat beide varianties gelijk zijn. Is het zo dat de variantie in lichaamsmassa voor mannelijke pinguïns vergelijkbaar is met de variantie in lichaamsmassa voor vrouwelijke pinguïns?\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm deze assumptie na te gaan dienen we een Levene test uit te voeren.\nleveneTest(_____, _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\n\nleveneTest(penguins$body_mass_g, penguins$sex)\n\nleveneTest(penguins$body_mass_g, penguins$sex)",
+    "crumbs": [
+      "Online R oefeningen",
+      "t-test"
+    ]
+  },
+  {
+    "objectID": "Zelftest_t_test.html#oefening-5-1",
+    "href": "Zelftest_t_test.html#oefening-5-1",
+    "title": "t-test zelftoetsing",
+    "section": "Oefening 5",
+    "text": "Oefening 5\nNu je meer zicht hebt op het feit dat de assumptie van gelijke varianties niet op gaat, betekent dit dat we de t-test opnieuw moeten uitvoeren adhv een andere functie.\nVoer de t-test opnieuw uit met de gepaste toets en functie in R.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHiertoe moeten we de functie t.test( ) uitbreiden met een extra argument dat aan R meegeeft dat de assumptie van gelijke varianties niet opgaat.\nt.test(penguins$body_mass_g ~ penguins$sex, _____)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\n\nt.test(penguins$body_mass_g ~ penguins$sex, var.equal = FALSE)\n\nt.test(penguins$body_mass_g ~ penguins$sex, var.equal = FALSE)",
+    "crumbs": [
+      "Online R oefeningen",
+      "t-test"
+    ]
+  },
+  {
+    "objectID": "Zelftest_t_test.html#oefening-6-1",
+    "href": "Zelftest_t_test.html#oefening-6-1",
+    "title": "t-test zelftoetsing",
+    "section": "Oefening 6",
+    "text": "Oefening 6\nDe nodige analyses zijn uitgevoerd. Wat nu nog rest is het goed interpreteren en uitschrijven van conclusies op basis van de output die gegenereerd is tijdens de analyses.\nSchrijf voor jezelf een alinea waarin je de nodige informatie opneemt om de resultaten van de analyse te communiceren.\n\n\n\n\n\n\nOplossing\n\n\n\n\n\nDit is een mogelijke verwoording van de resultaten;\nIn de steekproef van onderzochte pinguïns stellen we vast dat vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben (gemiddelde = 3862 gram) dan de mannelijke pinguïns (gemiddelde = 4546 gram). Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p &lt;0.001). Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag. We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns. Uit de effectgrootte (Cohen’s d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.",
     "crumbs": [
       "Online R oefeningen",
       "t-test"

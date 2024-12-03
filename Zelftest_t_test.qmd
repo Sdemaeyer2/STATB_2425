@@ -35,8 +35,62 @@ dpaired=function(Y,X){
 	teller=Y
 	noemer=sqrt(X)
 	teller/noemer
+}
+
+# moved from Rcmdr 13 July 2004
+
+# levene.test.default function slightly modified and generalized from Brian Ripley via R-help
+# the original generic version was contributed by Derek Ogle
+# last modified 2019-02-01 by J. Fox
+
+leveneTest <- function (y, ...) {
+	UseMethod("leveneTest") 
+}
+
+leveneTest.default <- function (y, group, center=median, ...) { # original levene.test
+	if (!is.numeric(y)) 
+		stop(deparse(substitute(y)), " is not a numeric variable")
+	if (!is.factor(group)) {
+		warning(deparse(substitute(group)), " coerced to factor.")
+		group <- as.factor(group)
 	}
+	valid <- complete.cases(y, group)
+	meds <- tapply(y[valid], group[valid], center, ...)
+	resp <- abs(y - meds[group])
+	table <- anova(lm(resp ~ group))[, c(1, 4, 5)]
+	rownames(table)[2] <- " "
+	dots <- deparse(substitute(...))
+	attr(table, "heading") <- paste("Levene's Test for Homogeneity of Variance (center = ", 
+			deparse(substitute(center)), if(!(dots == "NULL")) paste(":", dots),  ")", sep="")
+	table
+}
+
+
+leveneTest.formula <- function(y, data, ...) {
+	form <- y
+	mf <- if (missing(data)) model.frame(form) else model.frame(form, data)
+	if (any(sapply(2:dim(mf)[2], function(j) is.numeric(mf[[j]])))) 
+		stop("Levene's test is not appropriate with quantitative explanatory variables.")
+	y <- mf[,1]
+	if(dim(mf)[2]==2) group <- mf[,2]
+	else {
+		if (length(grep("\\+ | \\| | \\^ | \\:",form))>0) stop("Model must be completely crossed formula only.")
+		group <- interaction(mf[,2:dim(mf)[2]])
+	}
+	leveneTest.default(y=y, group=group, ...)
+}
+
+
+leveneTest.lm <- function(y, ...) {
+    m <- model.frame(y)
+    m$..y <- model.response(m)
+    f <- formula(y)
+    f[2] <- expression(..y)
+	leveneTest.formula(f, data=m, ...)
+}
 ```
+
+Meer achtergrond over deze dataset vind je via volgende link: [palmerpenguins](Penguins.qmd)
 
 ## Oefening 1
 
@@ -185,7 +239,7 @@ if (identical(.result, answer)) {
 
 ## Hints
 
-::: { .hint exercise="ex2" }
+::: { .hint exercise="ex3" }
 We willen Cohen's d berekenen om de effectgrootte uit te drukken. Daartoe maak je best gebruik van de functie `d( )`. 
 
 ```r
@@ -195,7 +249,7 @@ d(______ , _______)
 :::
 
 ## Oplossing
-::: { .solution exercise="ex2" }
+::: { .solution exercise="ex3" }
 
 **Oplossing:**
 
@@ -211,7 +265,128 @@ d(penguins$body_mass_g, penguins$sex)
 :::
 :::
 
-
 ## Oefening 4
 
-Nu we de output hebben van de t-test, is een belangrijk aspect deze goed interpreteren. Hieronder vind je opnieuw het resultaat van de analyse. Tracht in je eigen woorden een zo volledig mogelijk antwoord te formuleren op de vraag of er een statistich verschil is tussen
+In oefening 2 hebben we abstractie gemaakt van de assumptie van gelijke binnen-groepen varianties voor beide sekses. 
+
+*Test nu de assumptie dat beide varianties gelijk zijn. Is het zo dat de variantie in lichaamsmassa voor mannelijke pinguïns vergelijkbaar is met de variantie in lichaamsmassa voor vrouwelijke pinguïns?*
+
+::: {.panel-tabset}
+
+## Oefening
+
+```{webr}
+#| exercise: ex4
+#| caption: Oefening4
+
+
+```
+
+```{webr}
+#| exercise: ex4
+#| check: true
+answer <- leveneTest(penguins$body_mass_g, penguins$sex)
+if (identical(.result, answer)) {
+  list(correct = TRUE, message = "Juist!")
+} else {
+  list(correct = FALSE, message = "Fout.")
+}
+```
+
+## Hints
+
+::: { .hint exercise="ex4" }
+Om deze assumptie na te gaan dienen we een **Levene test** uit te voeren. 
+
+```r
+leveneTest(_____, _______)
+```
+
+:::
+
+## Oplossing
+::: { .solution exercise="ex4" }
+
+**Oplossing:**
+
+De volledige oplossing ziet er zo uit!
+
+```{webr}
+#| exercise: ex4
+#| solution: true
+
+leveneTest(penguins$body_mass_g, penguins$sex)
+```
+
+:::
+:::
+
+## Oefening 5
+
+Nu je meer zicht hebt op het feit dat de assumptie van gelijke varianties niet op gaat, betekent dit dat we de t-test opnieuw moeten uitvoeren adhv een andere functie. 
+
+*Voer de t-test opnieuw uit met de gepaste toets en functie in R.*
+
+::: {.panel-tabset}
+
+## Oefening
+
+```{webr}
+#| exercise: ex5
+#| caption: Oefening5
+
+
+```
+
+```{webr}
+#| exercise: ex5
+#| check: true
+answer <- t.test(penguins$body_mass_g ~ penguins$sex, var.equal = FALSE)
+if (identical(.result, answer)) {
+  list(correct = TRUE, message = "Juist!")
+} else {
+  list(correct = FALSE, message = "Fout.")
+}
+```
+
+## Hints
+
+::: { .hint exercise="ex5" }
+Hiertoe moeten we de functie `t.test( )` uitbreiden met een extra argument dat aan `R` meegeeft dat de assumptie van gelijke varianties niet opgaat. 
+
+```r
+t.test(penguins$body_mass_g ~ penguins$sex, _____)
+```
+
+:::
+
+## Oplossing
+::: { .solution exercise="ex4" }
+
+**Oplossing:**
+
+De volledige oplossing ziet er zo uit!
+
+```{webr}
+#| exercise: ex5
+#| solution: true
+
+t.test(penguins$body_mass_g ~ penguins$sex, var.equal = FALSE)
+```
+
+:::
+:::
+
+
+## Oefening 6
+
+De nodige analyses zijn uitgevoerd. Wat nu nog rest is het goed interpreteren en uitschrijven van conclusies op basis van de output die gegenereerd is tijdens de analyses.
+
+*Schrijf voor jezelf een alinea waarin je de nodige informatie opneemt om de resultaten van de analyse te communiceren.*
+
+::: { .callout-tip title="Oplossing" collapse="true"}
+Dit is een mogelijke verwoording van de resultaten;
+
+*In de steekproef van onderzochte pinguïns stellen we vast dat vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben (gemiddelde = 3862 gram) dan  de mannelijke pinguïns (gemiddelde = 4546 gram). Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p <0.001). Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag. We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns. Uit de effectgrootte (Cohen's d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.*
+:::
+
