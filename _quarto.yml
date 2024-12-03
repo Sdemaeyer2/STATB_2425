@@ -34,7 +34,7 @@ website:
           - text: "C6"
           - text: "C7"
 
-      - section: "Online R oefeningen"
+      - section: "Online (R) oefeningen"
         href: Penguins.qmd
         contents: 
           - text: "t-test"
@@ -58,7 +58,13 @@ website:
             href: ZSO/ZSO7.qmd
           - text: "ZSO8: Dummy-variabelen en interacties"
             href: ZSO/ZSO8.qmd
-          
+            
+      - section: "Rapporteren"
+        href: Rapporteren.qmd
+        contents: 
+          - text: "t-test rapporteren"
+            href: t_test_Rapportage.qmd
+            
       - section: "Extra materiaal"
         contents: 
           - text: "Projecten in RStudio"

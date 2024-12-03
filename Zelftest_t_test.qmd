@@ -390,3 +390,4 @@ Dit is een mogelijke verwoording van de resultaten;
 *In de steekproef van onderzochte pinguïns stellen we vast dat vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben (gemiddelde = 3862 gram) dan  de mannelijke pinguïns (gemiddelde = 4546 gram). Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p <0.001). Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag. We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns. Uit de effectgrootte (Cohen's d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.*
 :::
 
+Rapporteren is van cruciaal belang. Wil je meer toelichting bij de bovenstaande rapportage, klik dan door naar [hier](t_test_Rapportage.qmd).

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistiek B (AJ 2024-2025) – Statistiek B</title>
+<title>t-test rapporteren – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Penguins.html" rel="next">
+<link href="./Extra/Projecten.html" rel="next">
+<link href="./Rapporteren.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -39,6 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -66,250 +70,42 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Zoeken"
   }
 }</script>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welkom</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Statistiek B</a> 
-        <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.uantwerpen.be/nl/" title="uantwerpen.be/nl/" class="quarto-navigation-tool px-1" aria-label="uantwerpen.be/nl/"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/openscapes/quarto-website-tutorial" title="Statistiek B" class="quarto-navigation-tool px-1" aria-label="Statistiek B"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Schakel leesmodus">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Zoeken"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Welkom</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Open Leer Pakket</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Contactmomenten</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">C1</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">C2</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">C3</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">C4</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">C5</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">C6</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">C7</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./Penguins.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Online (R) oefeningen</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Zelftest_t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">t-test</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">ZSO</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO1: van vraag naar methode</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO2: t-test</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO3: ANOVA</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO4: Kruistabellen</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO5: Correlaties</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO6: Bivariate regressie</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO7: Multivariate regressie en assumpties</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ZSO/ZSO8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO8: Dummy-variabelen en interacties</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./Rapporteren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rapporteren</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./t_test_Rapportage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">t-test rapporteren</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Extra materiaal</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Extra/Projecten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Projecten in RStudio</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto documenten</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
- <span class="menu-text">Data-manipulatie met dplyr</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./studiewijzer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Studiewijzer</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Op deze pagina</h2>
-   
-  <ul>
-  <li><a href="#open-leer-pakket" id="toc-open-leer-pakket" class="nav-link active" data-scroll-target="#open-leer-pakket">Open Leer Pakket</a></li>
-  <li><a href="#contactmomenten" id="toc-contactmomenten" class="nav-link" data-scroll-target="#contactmomenten">Contactmomenten</a></li>
-  <li><a href="#online-r-oefeningen" id="toc-online-r-oefeningen" class="nav-link" data-scroll-target="#online-r-oefeningen">Online (R) oefeningen</a></li>
-  <li><a href="#zso-zelfstudie-opdrachten" id="toc-zso-zelfstudie-opdrachten" class="nav-link" data-scroll-target="#zso-zelfstudie-opdrachten">ZSO (Zelfstudie opdrachten)</a></li>
-  <li><a href="#extra-materiaal" id="toc-extra-materiaal" class="nav-link" data-scroll-target="#extra-materiaal">Extra materiaal</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-narrative-text-color-overlay: white;
+--cr-narrative-background-color-sidebar: #ADA601;
+--cr-section-background-color: transparent;
+--cr-narrative-background-color-overlay: transparent;
+        }
+      </style>
+    
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Rapporteren.html">Rapporteren</a></li><li class="breadcrumb-item"><a href="./t_test_Rapportage.html">t-test rapporteren</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Statistiek B (AJ 2024-2025)</h1>
+<h1 class="title">t-test rapporteren</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -321,31 +117,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welkom op de website voor de cursus Statistiek B (Schakelprogramma OOW, academiejaar 2024 - 2025). Op deze website vind je alle informatie en leermiddelen voor het vak.</p>
-<p>Wat kan je op deze website allemaal terugvinden?</p>
-<section id="open-leer-pakket" class="level2">
-<h2 class="anchored" data-anchor-id="open-leer-pakket">Open Leer Pakket</h2>
-<p>Het cursusmateriaal voor dit vak is het open leerpakket dat we opstelden.</p>
-</section>
-<section id="contactmomenten" class="level2">
-<h2 class="anchored" data-anchor-id="contactmomenten">Contactmomenten</h2>
-<p>Dit onderdeel van de websit bundelt de informatie per contactmoment. Voor elk contactmoment kan je hier de slides vinden, net als ook het materiaal dat hoort bij de computer lab oefeningen.</p>
-</section>
-<section id="online-r-oefeningen" class="level2">
-<h2 class="anchored" data-anchor-id="online-r-oefeningen">Online (R) oefeningen</h2>
-<p>Je vaardigheden in <code>R</code> inoefenen kan op verschillende manieren: op je eigen PC in <code>RStudio</code> maar net zo goed online. In deze sectie zit een hele opbouw van oefeningen die je kan doorlopen, los van <code>RStudio</code>. Dit deel focust dus voornamelijk op het goed begrijpen en inoefenen van de R code op zich, los van hoe je aan de slag gaat met <code>R</code> en <code>RStudio</code> op je pc.</p>
-<p>Tijdens het examen voor dit vak is er tevens een gesloten boek onderdeel waarin we voornamelijk je kennis en inzicht in de materie wensen te testen. In dit deel van de website vind je een reeks voorbeeldvragen voor de verschillende onderdelen uit de cursus die representatief zijn voor het gesloten boek onderdeel. Wil je je eigen inzicht en kennis testen, doorloop dan zeker de verschillende testen hier.</p>
-</section>
-<section id="zso-zelfstudie-opdrachten" class="level2">
-<h2 class="anchored" data-anchor-id="zso-zelfstudie-opdrachten">ZSO (Zelfstudie opdrachten)</h2>
-<p>Voor dit vak hebben we ook een set van ZSO’s opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO’s dien je ook de datasets op je eigen pc in <code>RStudio</code> op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO’s zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in <code>RStudio</code> en <code>R</code>, wat ook getoetst zal worden op het examen.</p>
-</section>
-<section id="extra-materiaal" class="level2">
-<h2 class="anchored" data-anchor-id="extra-materiaal">Extra materiaal</h2>
-<p>Onder extra materiaal vind je meer informatie en tutorials die je workflow in <code>R</code> en <code>RStudio</code> nog een pak efficiënter maken. Je vindt er links naar een aantal tutorials op YouTube. Weet dat dit facultatief materiaal is en dat dit niet dient toegepast worden op één of andere wijze om te kunnen slagen voor het vak.</p>
+<p><a href="./Rapporteren.html">terug naar overzicht</a></p>
+<p>Deze pagina neemt je mee doorheen cruciale elementen in de rapportage van resultaten van de t-test.</p>
+<p>We hernemen hier de resultaten van de oefeningen aangaande het verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns. De oefening kan je <a href="./Zelftest_t_test.html">hier</a> terug vinden.</p>
+<p>Scroll op deze pagina door naar beneden en we analyseren, zin per zin het stukje rapportage.</p>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-highlight="cr-gemiddelde1,cr-gemiddelde2">
+<div class="narrative">
+<p>De rapportage start met het rapporteren van de twee berekende gemiddelden.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-hlz="cr-richting">
+<div class="narrative">
+<p>De eerste zin benadrukt meteen ook hoe beide gemiddelden verschillen van elkaar.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-hlz="cr-steekproef">
+<div class="narrative">
+<p>In die zin benadrukken we dat deze gemiddelden gebaseerd zijn op steekproefgegevens.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-hlz="2">
+<div class="narrative">
+<p>De volgende zin rapporteert expliciet de conclusie op basis van de t-test.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-rapportage" class="scale-to-fill sticky">
+<div class="line-block"><span id="lb1-1"><span id="cr-steekproef">In de steekproef</span> van onderzochte pinguïns stellen we vast dat <span id="cr-richting">vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben</span> <span id="cr-gemiddelde1">(gemiddelde = 3862 gram)</span> dan de mannelijke pinguïns <span id="cr-gemiddelde2">(gemiddelde = 4546 gram)</span>.</span><br>
+<span id="lb1-2">Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p &lt;0.001).</span><br>
+<span id="lb1-3">Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag.</span><br>
+<span id="lb1-4">We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns.</span><br>
+<span id="lb1-5">Uit de effectgrootte (Cohen’s d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.</span></div>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -768,12 +580,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-page">
   <div class="nav-page nav-page-previous">
+      <a href="./Rapporteren.html" class="pagination-link" aria-label="Rapporteren">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Rapporteren</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Penguins.html" class="pagination-link" aria-label="Online (R) oefeningen">
-        <span class="nav-page-text">Online (R) oefeningen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Extra/Projecten.html" class="pagination-link" aria-label="Projecten in RStudio">
+        <span class="nav-page-text">Projecten in RStudio</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

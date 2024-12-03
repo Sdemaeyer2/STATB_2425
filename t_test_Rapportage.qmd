@@ -1,0 +1,40 @@
+---
+title: "t-test rapporteren"
+format: 
+  closeread-html:
+    cr-style:
+      narrative-background-color-overlay: transparent
+      narrative-background-color-sidebar: "#ADA601"
+      section-background-color: transparent
+      narrative-text-color-overlay: white
+sidebar: false
+
+---
+
+[terug naar overzicht](Rapporteren.qmd)
+
+Deze pagina neemt je mee doorheen cruciale elementen in de rapportage van resultaten van de t-test. 
+
+We hernemen hier de resultaten van de oefeningen aangaande het verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns. De oefening kan je [hier](Zelftest_t_test.qmd) terug vinden.
+
+Scroll op deze pagina door naar beneden en we analyseren, zin per zin het stukje rapportage.
+
+
+
+:::{.cr-section}
+
+De rapportage start met het rapporteren van de twee berekende gemiddelden. [@cr-rapportage]{highlight="cr-gemiddelde1,cr-gemiddelde2"}
+
+De eerste zin benadrukt meteen ook hoe beide gemiddelden verschillen van elkaar. [@cr-rapportage]{hlz="cr-richting"}
+
+In die zin benadrukken we dat deze gemiddelden gebaseerd zijn op steekproefgegevens. [@cr-rapportage]{hlz="cr-steekproef"}
+
+De volgende zin rapporteert expliciet de conclusie op basis van de t-test. [@cr-rapportage]{hlz="2"}
+
+| {#cr-rapportage .scale-to-fill}
+| [In de steekproef]{#cr-steekproef} van onderzochte pinguïns stellen we vast dat [vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben]{#cr-richting} [(gemiddelde = 3862 gram)]{#cr-gemiddelde1} dan de mannelijke pinguïns [(gemiddelde = 4546 gram)]{#cr-gemiddelde2}. 
+| Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p <0.001). 
+| Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag. 
+| We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns. 
+| Uit de effectgrootte (Cohen's d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.
+:::

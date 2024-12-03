@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistiek B (AJ 2024-2025) – Statistiek B</title>
+<title>Rapporteren – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Penguins.html" rel="next">
+<link href="./t_test_Rapportage.html" rel="next">
+<link href="./ZSO/ZSO8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welkom</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Rapporteren.html">Rapporteren</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -116,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welkom</span></a>
   </div>
 </li>
@@ -234,13 +235,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Rapporteren.html" class="sidebar-item-text sidebar-link">
+            <a href="./Rapporteren.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Rapporteren</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./t_test_Rapportage.html" class="sidebar-item-text sidebar-link">
@@ -286,25 +287,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Op deze pagina</h2>
-   
-  <ul>
-  <li><a href="#open-leer-pakket" id="toc-open-leer-pakket" class="nav-link active" data-scroll-target="#open-leer-pakket">Open Leer Pakket</a></li>
-  <li><a href="#contactmomenten" id="toc-contactmomenten" class="nav-link" data-scroll-target="#contactmomenten">Contactmomenten</a></li>
-  <li><a href="#online-r-oefeningen" id="toc-online-r-oefeningen" class="nav-link" data-scroll-target="#online-r-oefeningen">Online (R) oefeningen</a></li>
-  <li><a href="#zso-zelfstudie-opdrachten" id="toc-zso-zelfstudie-opdrachten" class="nav-link" data-scroll-target="#zso-zelfstudie-opdrachten">ZSO (Zelfstudie opdrachten)</a></li>
-  <li><a href="#extra-materiaal" id="toc-extra-materiaal" class="nav-link" data-scroll-target="#extra-materiaal">Extra materiaal</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Statistiek B (AJ 2024-2025)</h1>
+<h1 class="title">Rapporteren</h1>
 </div>
 
 
@@ -321,31 +312,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welkom op de website voor de cursus Statistiek B (Schakelprogramma OOW, academiejaar 2024 - 2025). Op deze website vind je alle informatie en leermiddelen voor het vak.</p>
-<p>Wat kan je op deze website allemaal terugvinden?</p>
-<section id="open-leer-pakket" class="level2">
-<h2 class="anchored" data-anchor-id="open-leer-pakket">Open Leer Pakket</h2>
-<p>Het cursusmateriaal voor dit vak is het open leerpakket dat we opstelden.</p>
-</section>
-<section id="contactmomenten" class="level2">
-<h2 class="anchored" data-anchor-id="contactmomenten">Contactmomenten</h2>
-<p>Dit onderdeel van de websit bundelt de informatie per contactmoment. Voor elk contactmoment kan je hier de slides vinden, net als ook het materiaal dat hoort bij de computer lab oefeningen.</p>
-</section>
-<section id="online-r-oefeningen" class="level2">
-<h2 class="anchored" data-anchor-id="online-r-oefeningen">Online (R) oefeningen</h2>
-<p>Je vaardigheden in <code>R</code> inoefenen kan op verschillende manieren: op je eigen PC in <code>RStudio</code> maar net zo goed online. In deze sectie zit een hele opbouw van oefeningen die je kan doorlopen, los van <code>RStudio</code>. Dit deel focust dus voornamelijk op het goed begrijpen en inoefenen van de R code op zich, los van hoe je aan de slag gaat met <code>R</code> en <code>RStudio</code> op je pc.</p>
-<p>Tijdens het examen voor dit vak is er tevens een gesloten boek onderdeel waarin we voornamelijk je kennis en inzicht in de materie wensen te testen. In dit deel van de website vind je een reeks voorbeeldvragen voor de verschillende onderdelen uit de cursus die representatief zijn voor het gesloten boek onderdeel. Wil je je eigen inzicht en kennis testen, doorloop dan zeker de verschillende testen hier.</p>
-</section>
-<section id="zso-zelfstudie-opdrachten" class="level2">
-<h2 class="anchored" data-anchor-id="zso-zelfstudie-opdrachten">ZSO (Zelfstudie opdrachten)</h2>
-<p>Voor dit vak hebben we ook een set van ZSO’s opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO’s dien je ook de datasets op je eigen pc in <code>RStudio</code> op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO’s zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in <code>RStudio</code> en <code>R</code>, wat ook getoetst zal worden op het examen.</p>
-</section>
-<section id="extra-materiaal" class="level2">
-<h2 class="anchored" data-anchor-id="extra-materiaal">Extra materiaal</h2>
-<p>Onder extra materiaal vind je meer informatie en tutorials die je workflow in <code>R</code> en <code>RStudio</code> nog een pak efficiënter maken. Je vindt er links naar een aantal tutorials op YouTube. Weet dat dit facultatief materiaal is en dat dit niet dient toegepast worden op één of andere wijze om te kunnen slagen voor het vak.</p>
+<p>Deze cursus behandelt een hele reeks analysetechnieken en leert je ook hoe je deze dient uit te voeren in <code>R</code> en <code>RStudio</code>.</p>
+<p>Deze analyses uitvoeren en inzicht hebben in de resultaten is één zaak. Maar als onderzoeker is het ook belangrijk om helder te communiceren over de resultaten. In deze sectie vind je per analysetechniek een stukje voorbeeld rapportage dat we systematisch ontleden.</p>
+<p>De voorbeelden zijn allen gebaseerd op de resultaten die je kan repliceren indien je de Online (R) oefeningen op deze website oplost.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -770,10 +741,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./ZSO/ZSO8.html" class="pagination-link" aria-label="ZSO8: Dummy-variabelen en interacties">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO8: Dummy-variabelen en interacties</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Penguins.html" class="pagination-link" aria-label="Online (R) oefeningen">
-        <span class="nav-page-text">Online (R) oefeningen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./t_test_Rapportage.html" class="pagination-link" aria-label="t-test rapporteren">
+        <span class="nav-page-text">t-test rapporteren</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
