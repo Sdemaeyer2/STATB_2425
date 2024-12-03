@@ -13,6 +13,7 @@ website:
     style: "docked"
     background: "#ADA601"
     foreground: "#FFFFFF"
+    logo: "images/STAT B.png"
     pinned: true
     search: true
     align: center
