@@ -2,8 +2,10 @@
 title: "Rapporteren"
 ---
 
-Deze cursus behandelt een hele reeks analysetechnieken en leert je ook hoe je deze dient uit te voeren in `R` en `RStudio`. 
+Deze cursus behandelt een hele reeks analysetechnieken en leert je ook hoe je deze dient uit te voeren in `R` en `RStudio`.
 
 Deze analyses uitvoeren en inzicht hebben in de resultaten is één zaak. Maar als onderzoeker is het ook belangrijk om helder te communiceren over de resultaten. In deze sectie vind je per analysetechniek een stukje voorbeeld rapportage dat we systematisch ontleden.
 
 De voorbeelden zijn allen gebaseerd op de resultaten die je kan repliceren indien je de Online (R) oefeningen op deze website oplost.
+
+![figuur gemaakt met DALL-E](images/writer.png){width="40%"}

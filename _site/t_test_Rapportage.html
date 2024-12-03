@@ -90,10 +90,11 @@ ul.task-list li input[type="checkbox"] {
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-text-color-overlay: white;
---cr-narrative-background-color-sidebar: #ADA601;
---cr-section-background-color: transparent;
+          --cr-narrative-background-color-sidebar: #ADA601;
 --cr-narrative-background-color-overlay: transparent;
+--cr-section-background-color: transparent;
+--cr-narrative-text-color-sidebar: white;
+--cr-narrative-text-color-overlay: black;
         }
       </style>
     
@@ -123,24 +124,59 @@ ul.task-list li input[type="checkbox"] {
 <p>Scroll op deze pagina door naar beneden en we analyseren, zin per zin het stukje rapportage.</p>
 <div class="cr-section cr-column-screen sidebar-left">
 <div class="narrative-col">
-<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-highlight="cr-gemiddelde1,cr-gemiddelde2">
+<div class="trigger new-trigger" data-highlight="cr-gemiddelde1,cr-gemiddelde2" data-focus-on="cr-rapportage">
 <div class="narrative">
 <p>De rapportage start met het rapporteren van de twee berekende gemiddelden.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-hlz="cr-richting">
+<div class="trigger new-trigger" data-hlz="cr-richting" data-focus-on="cr-rapportage">
 <div class="narrative">
 <p>De eerste zin benadrukt meteen ook hoe beide gemiddelden verschillen van elkaar.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-hlz="cr-steekproef">
+<div class="trigger new-trigger" data-hlz="cr-steekproef" data-focus-on="cr-rapportage">
 <div class="narrative">
 <p>In die zin benadrukken we dat deze gemiddelden gebaseerd zijn op steekproefgegevens.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-rapportage" data-hlz="2">
+<div class="trigger new-trigger" data-hlz="2" data-focus-on="cr-rapportage">
 <div class="narrative">
 <p>De volgende zin rapporteert expliciet de conclusie op basis van de t-test.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="cr-significant" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>In die tweede zin voegen we ook expliciet onze conclusie toe.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="cr-gegevens" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>Wetenschappelijk rapporteren vergt ook de nodige transparantie. Daarom nemen we tevens de resultaten van de t-test zelf op achteraan de zin.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="cr-nulhypothese" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>Daarna volgt een zin die benadrukt wat we eigenlijk leren over de nulhypothese.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="4" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>De belangrijkste conclusie wordt nog een keer herhaald in andere bewoording. Deze zin kan soms overbodig zijn.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="5" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>We eindigen met informatie over de effectgrootte.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="cr-cohen" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>Bij een t-test kunnen we <em>Cohen’s d</em> gebruiken om de effectgrootte te berekenen.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="cr-effectgrootte" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>We zijn ook expliciet in wat deze waarde precies impliceert!</p>
 </div>
 </div>
 </div>
@@ -148,10 +184,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="sticky-col-stack">
 <div id="cr-rapportage" class="scale-to-fill sticky">
 <div class="line-block"><span id="lb1-1"><span id="cr-steekproef">In de steekproef</span> van onderzochte pinguïns stellen we vast dat <span id="cr-richting">vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben</span> <span id="cr-gemiddelde1">(gemiddelde = 3862 gram)</span> dan de mannelijke pinguïns <span id="cr-gemiddelde2">(gemiddelde = 4546 gram)</span>.</span><br>
-<span id="lb1-2">Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p &lt;0.001).</span><br>
-<span id="lb1-3">Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag.</span><br>
+<span id="lb1-2">Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is <span id="cr-significant">statistisch significant</span> <span id="cr-gegevens">(t = -8.55, df = 323.9, p &lt;0.001)</span>.</span><br>
+<span id="lb1-3">Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef <span id="cr-nulhypothese">indien er in de gehele populatie geen verschil zou zijn</span>, is bijzonder laag.</span><br>
 <span id="lb1-4">We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns.</span><br>
-<span id="lb1-5">Uit de effectgrootte (Cohen’s d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.</span></div>
+<span id="lb1-5">Uit de effectgrootte <span id="cr-cohen">(Cohen’s d = -0.94)</span> kunnen we afleiden dat dit gezien kan worden als <span id="cr-effectgrootte">een groot verschil</span>.</span></div>
 </div>
 </div>
 </div>

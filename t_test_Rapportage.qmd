@@ -6,7 +6,8 @@ format:
       narrative-background-color-overlay: transparent
       narrative-background-color-sidebar: "#ADA601"
       section-background-color: transparent
-      narrative-text-color-overlay: white
+      narrative-text-color-sidebar: white
+      narrative-text-color-overlay: black
 sidebar: false
 
 ---
@@ -31,10 +32,24 @@ In die zin benadrukken we dat deze gemiddelden gebaseerd zijn op steekproefgegev
 
 De volgende zin rapporteert expliciet de conclusie op basis van de t-test. [@cr-rapportage]{hlz="2"}
 
+In die tweede zin voegen we ook expliciet onze conclusie toe. [@cr-rapportage]{hlz="cr-significant"}
+
+Wetenschappelijk rapporteren vergt ook de nodige transparantie. Daarom nemen we tevens de resultaten van de t-test zelf op achteraan de zin. [@cr-rapportage]{hlz="cr-gegevens"}
+
+Daarna volgt een zin die benadrukt wat we eigenlijk leren over de nulhypothese. [@cr-rapportage]{hlz="cr-nulhypothese"}
+
+De belangrijkste conclusie wordt nog een keer herhaald in andere bewoording. Deze zin kan soms overbodig zijn. [@cr-rapportage]{hlz="4"} 
+
+We eindigen met informatie over de effectgrootte. [@cr-rapportage]{hlz="5"}
+
+Bij een t-test kunnen we *Cohen's d* gebruiken om de effectgrootte te berekenen. [@cr-rapportage]{hlz="cr-cohen"}
+
+We zijn ook expliciet in wat deze waarde precies impliceert! [@cr-rapportage]{hlz="cr-effectgrootte"}
+
 | {#cr-rapportage .scale-to-fill}
 | [In de steekproef]{#cr-steekproef} van onderzochte pinguïns stellen we vast dat [vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben]{#cr-richting} [(gemiddelde = 3862 gram)]{#cr-gemiddelde1} dan de mannelijke pinguïns [(gemiddelde = 4546 gram)]{#cr-gemiddelde2}. 
-| Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p <0.001). 
-| Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag. 
+| Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is [statistisch significant]{#cr-significant} [(t = -8.55, df = 323.9, p <0.001)]{#cr-gegevens}. 
+| Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef [indien er in de gehele populatie geen verschil zou zijn]{#cr-nulhypothese}, is bijzonder laag. 
 | We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns. 
-| Uit de effectgrootte (Cohen's d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.
+| Uit de effectgrootte [(Cohen's d = -0.94)]{#cr-cohen} kunnen we afleiden dat dit gezien kan worden als [een groot verschil]{#cr-effectgrootte}.
 :::
