@@ -2,6 +2,12 @@ project:
   type: website
 
 website:
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "**Alert** - deze website is nog in ontwikkeling - feedback altijd welkom bij sven.demaeyer@uantwperen.be"
+    type: primary
+    position: above-navbar
   google-analytics: 
     tracking-id: "G-WB6XE1H6V1"
     storage: "cookies"
