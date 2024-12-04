@@ -330,44 +330,58 @@
     ]
   },
   {
-    "objectID": "Extra/Projecten.html",
-    "href": "Extra/Projecten.html",
-    "title": "Projecten in RStudio",
+    "objectID": "Zelftest_ANOVA.html",
+    "href": "Zelftest_ANOVA.html",
+    "title": "ANOVA zelftoetsing",
     "section": "",
-    "text": "Werken in R en RStudio gaat gepaard met het werken met meerdere bestanden. Typisch voor een doorsnee analyses heb je alvast een databestand (ruwe data in .Rdata, .xlsx, .csv, …), een R script en eventueel een Quarto document.\nDoor het werken met verschillende documenten en het feit dat je vaak met code aan de slag gaat, kan het gebeuren dat heel de workflow redelijk rommelig wordt. Daarom raad ik je aan om te werken met “Projects” in “RStudio”. Zo’n project is eigenlijk een specifieke map op je pc die je hanteert om alle relevante documenten voor een bepaalde studie of analyse in onder te brengen. In RStudio kan je vervolgens aangeven dat deze map gerelateerd is aan een project. Het grote voordeel is dat alle documenten samen staan op één plaats en dat alle code waarin je verwijst naar een ander bestand (dus ook om bv data in te laden) vertrekt vanuit die map en niet vanuit je hele mappenstructuur specifiek op je pc.\nDat klinkt mogelijk redelijk abstract. Het wordt in de onderstaande tutorial van Andy Field echter zeer goed toegelicht. De workflow die hij voorstelt is echt het overwegen waard! Ook voor jou als student kan dit helpen. Bijvoorbeeld, maak een specfiek project voor de ZSO’s en zo leer je omgaan met die projecten.",
+    "text": "We werken verder met de pinguïns data om ook voor ANOVA de verschillende R functies en output onder de knie te krijgen. Meer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nANOVA voeren we uit indien de onderzoeksvraag een kwantitatieve afhankelijke variabele (= interval of ratio niveau) bevat en één (of meer, zie later) *categorische onafhankelijke variabele (met meer dan 2 categorieën)**.\nVoor deze oefening willen we volgende onderzoeksvraag beantwoorden:",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
+    "objectID": "Zelftest_ANOVA.html#oefening-1",
+    "href": "Zelftest_ANOVA.html#oefening-1",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 1",
+    "text": "Oefening 1\nAls startpunt van de analyses willen we zicht krijgen op de verschillen in snavellengte tussen de verschillende soorten pinguïns in onze steekproef. We starten dus met gemiddelden te berekenen tussen de 3 soorten penguïns.\nVul onderstaande code aan om de gemiddeldes per pinguïnsoort te berekenen.\n\n\n\n\n\n\nTip\n\n\n\nDenk eraan dat er mogelijk wat ontbrekende waarden zijn. Dat maakt dat het berekenen van het gemiddelde per soort mogelijk in de soep draait. Daarom ook de nood aan een 4de argument in de onderstaande tapply( ) functie.\n\n\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHet eerste argument verwijst altijd naar de variabele waarop we berekeningen wensen uit te voeren. Maw, het eerste argument gaat over de afhankelijke variabele: bill_length_mm.\ntapply(penguins$_______ , ________ , _____, _______)\n\n\nWe willen het gemiddelde per categorie van de variabele species berekenen. Dus, je moet in je code iets met die variabele doen.\ntapply(penguins$bill_length_mm , penguins$______ , _____, _______)\n\n\nAls je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in R kan je hanteren om het gemiddelde te berekenen?\ntapply(penguins$bill_length_mm, penguins$species , _____, _______)\n\n\nwe kunnen de functie mean() gebruiken om per soort de gemiddelde snavellengte te berekenen. Echter, we moeten nog een extra argument meegeven omdat er voor sommige soorten enkele ontbrekende waarden zijn. In de functie mean() is er de mogelijkheid om een bijkomend argument mee te geven: na.rm = T. Dit extra argument geven we in de tapply( ) functie ook mee als afzonderlijk argument.\ntapply(penguins$bill_length_mm, penguins$species , mean , na.rm = T)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\ntapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)\ntapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
+    "objectID": "Extra/Quarto_documenten.html",
+    "href": "Extra/Quarto_documenten.html",
+    "title": "Quarto documenten",
+    "section": "",
+    "text": "Doorheen mijn carrière als onderzoeker heb ik geleerd hoe moeilijk het kan zijn om alles wat je doet in het kader van een onderzoek voldoende goed te documenteren zodanig dat het onderzoek reproduceerbaar is.\nEen belangrijk aspect in het reproduceerbaar maken van je onderzoek is het goed documenteren van alle stappen in de analyses. Dit gaat over alle analysestappen die je zet, startend vanuit de ruwe dataset.\nR code delen en begrijpbaar maken, kan daartoe een krachtig hulpmiddel zijn. Maar, vaak zien we dat onderzoekers de code zeer ontransparant opstellen. De code wordt iteratief uitgewerkt en wat werkt wordt bewaard, zonder enige verdere toelichting. En laat het duidelijk zijn, ook ik heb me daaraan in het verleden vaak schuldig gemaakt.\nWaar ik ondertussen echter systematisch op hamer bij mezelf en medewerkers is het uitwerken van een analyserapport in een Quarto document. Zo’n Quarto document stelt je in staat om je R code te integreren met lopende tekst (ook deze pagina en hele website is gemaakt in Quarto trouwens). In RStudio kan je zo’n document opmaken in een interface die veel gelijkenissen vertoont met een typische tekst-editor (zoals Word bijvoorbeeld). Super handig!! En het gaat zelfs verder. Zo’n Quarto document kan je vervolgens, met één druk op de knop, vertalen in een html-file (hadig om te delen met anderen), een pdf of een Word-document. Je kan ook verder gaan en hele slideshows bouwen met Quarto waarin je je analyses integreert.\nInvesteren in een goed Quarto document is ook als student meer dan de moeite waard. Immers, zo kan je de verschillende stukjes code die we leren bij een techniek beter documenteren voor jezelf. Zo’n Quarto document is simpelweg een manier om lief te zijn voor je toekomstige ik!",
     "crumbs": [
       "Extra materiaal",
-      "Projecten in RStudio"
+      "Quarto documenten"
     ]
   },
   {
-    "objectID": "Penguins.html",
-    "href": "Penguins.html",
-    "title": "Penguins",
-    "section": "",
-    "text": "Vertrouwd raken met R-code en bepaalde functies goed kunnen inzetten is cruciaal in dit vak. Om dit op zich in te oefenen, los van de gehele workflow in RStudio op zich hebben we hier een hele set aan oefeningen uitgewerkt die je simpelweg op deze website zelf kan doorlopen. Geen behoefte dus aan RStudio ofzo. Niet alle R functies zullen in deze oefeningen worden gebruikt, maar enkel dus een setje basisfuncties. Het hoofddoel hier is dus zeer rudimentair de link te maken tussen code, output en resultaat.",
+    "objectID": "Extra/Quarto_documenten.html#een-voorbeeld",
+    "href": "Extra/Quarto_documenten.html#een-voorbeeld",
+    "title": "Quarto documenten",
+    "section": "Een voorbeeld",
+    "text": "Een voorbeeld\nEen voorbeeld verduidelijkt allicht meer. In 2024 heb ik samen met een reeks collega’s een artikel gepubliceerd waarbij we ook een extra document publiceerden (via een website) met daarin alle stappen van de analyses.\nHet artikel kan je hier vinden:\nhttps://link.springer.com/article/10.1007/s11145-023-10483-7\nDe “Walkthrough” voor de analyses vind je terug via de volgende link (ik verwacht niet dat je dit document snapt ofzo, het is eerder illustratief bedoeld):\nhttps://majestic-pixie-28398c.netlify.app/",
     "crumbs": [
-      "Online (R) oefeningen"
+      "Extra materiaal",
+      "Quarto documenten"
     ]
   },
   {
-    "objectID": "Penguins.html#palmerpenguins",
-    "href": "Penguins.html#palmerpenguins",
-    "title": "Penguins",
-    "section": "Palmerpenguins",
-    "text": "Palmerpenguins\n\n\n\n\n\n\n\n\n\nHeel dit onderdeel maakt gebruik van interactieve code op de website. Dat betekent ook dat we deze oefeningenreeks baseren op een bestaande dataset die via R zelf beschikbaar is: de penguins dataset!\nHet pakket palmerpenguins bevat een dataset over een reeks metingen die biologen gedaan hebben bij drie soorten pinguïns. Dit pakket moeten we dus telkens laden bij de start van een oefening. In elk van de oefeningen zal je het volgende stukje R-code bovenaan terug vinden. Deze code laadt het het pakket palmerpenguins en activeert vervolgens de dataset penguins. Het is dus belangrijk om dit stukje code zeker te laten lopen (met de blauwe play-knop rechtsboven) bij de start van de oefeningen.\nHet dataframe in R waarmee we dus aan de slag gaan heet penguins.\n\n\n\n\n\n\n\n\nDe data zijn metingen bij 3 soorten pinguïns:\n\n\n\n\n\n\n\n\n\nDeze dataset bevat een setje variabelen die makkelijk te begrijpen zijn! Het volgende code blok bevat de functie str() waarbij we verwijzen naar het dataframe om zo te vragen aan R om de structuur van het dataframe te printen. Het resultaat is een lijstje van de verschillende variabelen in de dataset.\n\n\n\n\n\n\n\n\nUit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen. Twee van deze variabelen gaan over de dimensies van de snavels van de pinguïns. Om die beter te begrijpen, kan volgend plaatje helpen.\n\n\n\n\n\n\n\n\n\nDe originele studie achter deze data is de volgende: Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081\nMeer informatie over het pakket kan je hier vinden: https://allisonhorst.github.io/palmerpenguins/articles/intro.html",
+    "objectID": "Extra/Quarto_documenten.html#tutorials-op-youtube",
+    "href": "Extra/Quarto_documenten.html#tutorials-op-youtube",
+    "title": "Quarto documenten",
+    "section": "Tutorials op YouTube",
+    "text": "Tutorials op YouTube\nEr is een hele reeks op YouTube waarin een van de meest gerenomeerde docenten statistiek (internationaal), Andy Field, toont hoe je met Quarto aan de slag kan gaan. Hieronder enkele van z’n video’s.\nQuarto installeren:\n\n\nAan de slag met de Visual Editor (Deel 1):\n\n\nAan de slag met de Visual Editor (Deel 2) (hier leer je R Code chunks toevoegen etc):\n\n\nAan de slag met de YAML van het Quarto document om allerlei extra opties te activeren:",
     "crumbs": [
-      "Online (R) oefeningen"
-    ]
-  },
-  {
-    "objectID": "Rapporteren.html",
-    "href": "Rapporteren.html",
-    "title": "Rapporteren",
-    "section": "",
-    "text": "Deze cursus behandelt een hele reeks analysetechnieken en leert je ook hoe je deze dient uit te voeren in R en RStudio.\nDeze analyses uitvoeren en inzicht hebben in de resultaten is één zaak. Maar als onderzoeker is het ook belangrijk om helder te communiceren over de resultaten. In deze sectie vind je per analysetechniek een stukje voorbeeld rapportage dat we systematisch ontleden.\nDe voorbeelden zijn allen gebaseerd op de resultaten die je kan repliceren indien je de Online (R) oefeningen op deze website oplost.\n\n\n\nfiguur gemaakt met DALL-E",
-    "crumbs": [
-      "Rapporteren"
+      "Extra materiaal",
+      "Quarto documenten"
     ]
   },
   {
@@ -431,36 +445,44 @@
     ]
   },
   {
-    "objectID": "Extra/Quarto_documenten.html",
-    "href": "Extra/Quarto_documenten.html",
-    "title": "Quarto documenten",
+    "objectID": "Rapporteren.html",
+    "href": "Rapporteren.html",
+    "title": "Rapporteren",
     "section": "",
-    "text": "Doorheen mijn carrière als onderzoeker heb ik geleerd hoe moeilijk het kan zijn om alles wat je doet in het kader van een onderzoek voldoende goed te documenteren zodanig dat het onderzoek reproduceerbaar is.\nEen belangrijk aspect in het reproduceerbaar maken van je onderzoek is het goed documenteren van alle stappen in de analyses. Dit gaat over alle analysestappen die je zet, startend vanuit de ruwe dataset.\nR code delen en begrijpbaar maken, kan daartoe een krachtig hulpmiddel zijn. Maar, vaak zien we dat onderzoekers de code zeer ontransparant opstellen. De code wordt iteratief uitgewerkt en wat werkt wordt bewaard, zonder enige verdere toelichting. En laat het duidelijk zijn, ook ik heb me daaraan in het verleden vaak schuldig gemaakt.\nWaar ik ondertussen echter systematisch op hamer bij mezelf en medewerkers is het uitwerken van een analyserapport in een Quarto document. Zo’n Quarto document stelt je in staat om je R code te integreren met lopende tekst (ook deze pagina en hele website is gemaakt in Quarto trouwens). In RStudio kan je zo’n document opmaken in een interface die veel gelijkenissen vertoont met een typische tekst-editor (zoals Word bijvoorbeeld). Super handig!! En het gaat zelfs verder. Zo’n Quarto document kan je vervolgens, met één druk op de knop, vertalen in een html-file (hadig om te delen met anderen), een pdf of een Word-document. Je kan ook verder gaan en hele slideshows bouwen met Quarto waarin je je analyses integreert.\nInvesteren in een goed Quarto document is ook als student meer dan de moeite waard. Immers, zo kan je de verschillende stukjes code die we leren bij een techniek beter documenteren voor jezelf. Zo’n Quarto document is simpelweg een manier om lief te zijn voor je toekomstige ik!",
+    "text": "Deze cursus behandelt een hele reeks analysetechnieken en leert je ook hoe je deze dient uit te voeren in R en RStudio.\nDeze analyses uitvoeren en inzicht hebben in de resultaten is één zaak. Maar als onderzoeker is het ook belangrijk om helder te communiceren over de resultaten. In deze sectie vind je per analysetechniek een stukje voorbeeld rapportage dat we systematisch ontleden.\nDe voorbeelden zijn allen gebaseerd op de resultaten die je kan repliceren indien je de Online (R) oefeningen op deze website oplost.\n\n\n\nfiguur gemaakt met DALL-E",
     "crumbs": [
-      "Extra materiaal",
-      "Quarto documenten"
+      "Rapporteren"
     ]
   },
   {
-    "objectID": "Extra/Quarto_documenten.html#een-voorbeeld",
-    "href": "Extra/Quarto_documenten.html#een-voorbeeld",
-    "title": "Quarto documenten",
-    "section": "Een voorbeeld",
-    "text": "Een voorbeeld\nEen voorbeeld verduidelijkt allicht meer. In 2024 heb ik samen met een reeks collega’s een artikel gepubliceerd waarbij we ook een extra document publiceerden (via een website) met daarin alle stappen van de analyses.\nHet artikel kan je hier vinden:\nhttps://link.springer.com/article/10.1007/s11145-023-10483-7\nDe “Walkthrough” voor de analyses vind je terug via de volgende link (ik verwacht niet dat je dit document snapt ofzo, het is eerder illustratief bedoeld):\nhttps://majestic-pixie-28398c.netlify.app/",
+    "objectID": "Penguins.html",
+    "href": "Penguins.html",
+    "title": "Penguins",
+    "section": "",
+    "text": "Vertrouwd raken met R-code en bepaalde functies goed kunnen inzetten is cruciaal in dit vak. Om dit op zich in te oefenen, los van de gehele workflow in RStudio op zich hebben we hier een hele set aan oefeningen uitgewerkt die je simpelweg op deze website zelf kan doorlopen. Geen behoefte dus aan RStudio ofzo. Niet alle R functies zullen in deze oefeningen worden gebruikt, maar enkel dus een setje basisfuncties. Het hoofddoel hier is dus zeer rudimentair de link te maken tussen code, output en resultaat.",
     "crumbs": [
-      "Extra materiaal",
-      "Quarto documenten"
+      "Online (R) oefeningen"
     ]
   },
   {
-    "objectID": "Extra/Quarto_documenten.html#tutorials-op-youtube",
-    "href": "Extra/Quarto_documenten.html#tutorials-op-youtube",
-    "title": "Quarto documenten",
-    "section": "Tutorials op YouTube",
-    "text": "Tutorials op YouTube\nEr is een hele reeks op YouTube waarin een van de meest gerenomeerde docenten statistiek (internationaal), Andy Field, toont hoe je met Quarto aan de slag kan gaan. Hieronder enkele van z’n video’s.\nQuarto installeren:\n\n\nAan de slag met de Visual Editor (Deel 1):\n\n\nAan de slag met de Visual Editor (Deel 2) (hier leer je R Code chunks toevoegen etc):\n\n\nAan de slag met de YAML van het Quarto document om allerlei extra opties te activeren:",
+    "objectID": "Penguins.html#palmerpenguins",
+    "href": "Penguins.html#palmerpenguins",
+    "title": "Penguins",
+    "section": "Palmerpenguins",
+    "text": "Palmerpenguins\n\n\n\n\n\n\n\n\n\nHeel dit onderdeel maakt gebruik van interactieve code op de website. Dat betekent ook dat we deze oefeningenreeks baseren op een bestaande dataset die via R zelf beschikbaar is: de penguins dataset!\nHet pakket palmerpenguins bevat een dataset over een reeks metingen die biologen gedaan hebben bij drie soorten pinguïns. Dit pakket moeten we dus telkens laden bij de start van een oefening. In elk van de oefeningen zal je het volgende stukje R-code bovenaan terug vinden. Deze code laadt het het pakket palmerpenguins en activeert vervolgens de dataset penguins. Het is dus belangrijk om dit stukje code zeker te laten lopen (met de blauwe play-knop rechtsboven) bij de start van de oefeningen.\nHet dataframe in R waarmee we dus aan de slag gaan heet penguins.\n\n\n\n\n\n\n\n\nDe data zijn metingen bij 3 soorten pinguïns:\n\n\n\n\n\n\n\n\n\nDeze dataset bevat een setje variabelen die makkelijk te begrijpen zijn! Het volgende code blok bevat de functie str() waarbij we verwijzen naar het dataframe om zo te vragen aan R om de structuur van het dataframe te printen. Het resultaat is een lijstje van de verschillende variabelen in de dataset.\n\n\n\n\n\n\n\n\nUit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen. Twee van deze variabelen gaan over de dimensies van de snavels van de pinguïns. Om die beter te begrijpen, kan volgend plaatje helpen.\n\n\n\n\n\n\n\n\n\nDe originele studie achter deze data is de volgende: Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081\nMeer informatie over het pakket kan je hier vinden: https://allisonhorst.github.io/palmerpenguins/articles/intro.html",
+    "crumbs": [
+      "Online (R) oefeningen"
+    ]
+  },
+  {
+    "objectID": "Extra/Projecten.html",
+    "href": "Extra/Projecten.html",
+    "title": "Projecten in RStudio",
+    "section": "",
+    "text": "Werken in R en RStudio gaat gepaard met het werken met meerdere bestanden. Typisch voor een doorsnee analyses heb je alvast een databestand (ruwe data in .Rdata, .xlsx, .csv, …), een R script en eventueel een Quarto document.\nDoor het werken met verschillende documenten en het feit dat je vaak met code aan de slag gaat, kan het gebeuren dat heel de workflow redelijk rommelig wordt. Daarom raad ik je aan om te werken met “Projects” in “RStudio”. Zo’n project is eigenlijk een specifieke map op je pc die je hanteert om alle relevante documenten voor een bepaalde studie of analyse in onder te brengen. In RStudio kan je vervolgens aangeven dat deze map gerelateerd is aan een project. Het grote voordeel is dat alle documenten samen staan op één plaats en dat alle code waarin je verwijst naar een ander bestand (dus ook om bv data in te laden) vertrekt vanuit die map en niet vanuit je hele mappenstructuur specifiek op je pc.\nDat klinkt mogelijk redelijk abstract. Het wordt in de onderstaande tutorial van Andy Field echter zeer goed toegelicht. De workflow die hij voorstelt is echt het overwegen waard! Ook voor jou als student kan dit helpen. Bijvoorbeeld, maak een specfiek project voor de ZSO’s en zo leer je omgaan met die projecten.",
     "crumbs": [
       "Extra materiaal",
-      "Quarto documenten"
+      "Projecten in RStudio"
     ]
   },
   {

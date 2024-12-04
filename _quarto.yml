@@ -54,6 +54,9 @@ website:
         contents: 
           - text: "t-test"
             href: Zelftest_t_test.qmd
+          - text: "ANOVA"
+            href: Zelftest_ANOVA.qmd
+
 
       - section: "ZSO"
         contents: 

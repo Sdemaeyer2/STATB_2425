@@ -1,0 +1,112 @@
+---
+title: "ANOVA zelftoetsing"
+format: live-html
+engine: knitr
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+We werken verder met de pinguïns data om ook voor ANOVA de verschillende `R` functies en output onder de knie te krijgen. Meer achtergrond over deze dataset vind je via volgende link: [palmerpenguins](Penguins.qmd)
+
+```{webr}
+#| autorun: true
+#| runbutton: false
+library(palmerpenguins)
+data("penguins")
+```
+
+ANOVA voeren we uit indien de onderzoeksvraag een **kwantitatieve afhankelijke variabele** (= interval of ratio niveau) bevat en één (of meer, zie later) \*categorische onafhankelijke variabele (met meer dan 2 categorieën)\*\*.
+
+Voor deze oefening willen we volgende onderzoeksvraag beantwoorden:
+
+::: {.callout-note icon="false"}
+## Onderzoeksvraag
+
+| Wat zijn de verschillen in snavellengte (`bill_length_mm`) tussen de verschillende soorten penguïns (`species`)?
+:::
+
+## Oefening 1
+
+Als startpunt van de analyses willen we zicht krijgen op de verschillen in snavellengte tussen de verschillende soorten pinguïns in onze steekproef. We starten dus met gemiddelden te berekenen tussen de 3 soorten penguïns.
+
+*Vul onderstaande code aan om de gemiddeldes per pinguïnsoort te berekenen.*
+
+::: callout-tip
+Denk eraan dat er mogelijk wat ontbrekende waarden zijn. Dat maakt dat het berekenen van het gemiddelde per soort mogelijk in de soep draait. Daarom ook de nood aan een 4de argument in de onderstaande `tapply( )` functie.
+:::
+
+:::::: panel-tabset
+## Oefening
+
+```{webr}
+#| exercise: ex1
+#| caption: Oefening1
+
+tapply(_____ , _______ , _______ , _______)
+```
+
+```{webr}
+#| exercise: ex1
+#| check: true
+answer <- tapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)
+if (identical(.result, answer)) {
+  list(correct = TRUE, message = "Juist!")
+} else {
+  list(correct = FALSE, message = "Fout.")
+}
+```
+
+## Hints
+
+::: {.hint exercise="ex1"}
+
+Het eerste argument verwijst altijd naar de variabele waarop we berekeningen wensen uit te voeren. Maw, het eerste argument gaat over de **afhankelijke variabele**: `bill_length_mm`. 
+
+
+``` r
+tapply(penguins$_______ , ________ , _____, _______)
+```
+:::
+
+::: {.hint exercise="ex1"}
+
+We willen het gemiddelde per categorie van de variabele `species` berekenen. Dus, je moet in je code iets met die variabele doen.
+
+``` r
+tapply(penguins$bill_length_mm , penguins$______ , _____, _______)
+```
+
+:::
+
+::: {.hint exercise="ex1"}
+
+Als je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in `R` kan je hanteren om het gemiddelde te berekenen?
+
+``` r
+tapply(penguins$bill_length_mm, penguins$species , _____, _______)
+```
+:::
+
+::: {.hint exercise="ex1"}
+
+we kunnen de functie `mean()` gebruiken om per soort de gemiddelde snavellengte te berekenen. Echter, we moeten nog een extra argument meegeven omdat er voor sommige soorten enkele ontbrekende waarden zijn. In de functie `mean()` is er de mogelijkheid om een bijkomend argument mee te geven: `na.rm = T`. Dit extra argument geven we in de `tapply( )` functie ook mee als afzonderlijk argument.
+
+``` r
+tapply(penguins$bill_length_mm, penguins$species , mean , na.rm = T)
+```
+:::
+
+## Oplossing
+
+::: {.solution exercise="ex1"}
+**Oplossing:**
+
+De volledige oplossing ziet er zo uit!
+
+```{webr}
+#| exercise: ex1
+#| solution: true
+tapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)
+```
+:::
+::::::

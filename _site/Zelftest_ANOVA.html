@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ZSO 4 – Statistiek B</title>
+<title>ANOVA zelftoetsing – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,25 +57,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../ZSO/ZSO5.html" rel="next">
-<link href="../ZSO/ZSO3.html" rel="prev">
-<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ZSO/ZSO1.html" rel="next">
+<link href="./Zelftest_t_test.html" rel="prev">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -130,12 +132,13 @@ cookieconsent.run({
 });
 </script> 
   
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -147,7 +150,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Penguins.html">Online (R) oefeningen</a></li><li class="breadcrumb-item"><a href="./Zelftest_ANOVA.html">ANOVA</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -161,8 +164,8 @@ cookieconsent.run({
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/STAT B.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/STAT B.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://www.uantwerpen.be/nl/" title="uantwerpen.be/nl/" class="quarto-navigation-tool px-1" aria-label="uantwerpen.be/nl/"><i class="bi bi-globe"></i></a>
@@ -183,7 +186,7 @@ cookieconsent.run({
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welkom</span></a>
   </div>
 </li>
@@ -225,22 +228,22 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../Penguins.html" class="sidebar-item-text sidebar-link">
+            <a href="./Penguins.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Online (R) oefeningen</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Zelftest_t_test.html" class="sidebar-item-text sidebar-link">
+  <a href="./Zelftest_t_test.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">t-test</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Zelftest_ANOVA.html" class="sidebar-item-text sidebar-link">
+  <a href="./Zelftest_ANOVA.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ANOVA</span></a>
   </div>
 </li>
@@ -248,58 +251,58 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">ZSO</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO1.html" class="sidebar-item-text sidebar-link">
+  <a href="./ZSO/ZSO1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO1: van vraag naar methode</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO2.html" class="sidebar-item-text sidebar-link">
+  <a href="./ZSO/ZSO2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO2: t-test</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO3.html" class="sidebar-item-text sidebar-link">
+  <a href="./ZSO/ZSO3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO3: ANOVA</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ZSO/ZSO4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO4: Kruistabellen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO5.html" class="sidebar-item-text sidebar-link">
+  <a href="./ZSO/ZSO5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO5: Correlaties</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO6.html" class="sidebar-item-text sidebar-link">
+  <a href="./ZSO/ZSO6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO6: Bivariate regressie</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO7.html" class="sidebar-item-text sidebar-link">
+  <a href="./ZSO/ZSO7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO7: Multivariate regressie en assumpties</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ZSO/ZSO8.html" class="sidebar-item-text sidebar-link">
+  <a href="./ZSO/ZSO8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ZSO8: Dummy-variabelen en interacties</span></a>
   </div>
 </li>
@@ -307,7 +310,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../Rapporteren.html" class="sidebar-item-text sidebar-link">
+            <a href="./Rapporteren.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rapporteren</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -316,7 +319,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../t_test_Rapportage.html" class="sidebar-item-text sidebar-link">
+  <a href="./t_test_Rapportage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">t-test rapporteren</span></a>
   </div>
 </li>
@@ -333,13 +336,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Extra/Projecten.html" class="sidebar-item-text sidebar-link">
+  <a href="./Extra/Projecten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projecten in RStudio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link">
+  <a href="./Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto documenten</span></a>
   </div>
 </li>
@@ -350,7 +353,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../studiewijzer.html" class="sidebar-item-text sidebar-link">
+  <a href="./studiewijzer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Studiewijzer</span></a>
   </div>
 </li>
@@ -359,38 +362,13 @@ cookieconsent.run({
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Op deze pagina</h2>
-   
-  <ul>
-  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a>
-  <ul class="collapse">
-  <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
-  <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
-  </ul></li>
-  <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
-  <ul class="collapse">
-  <li><a href="#vraag-1-1" id="toc-vraag-1-1" class="nav-link" data-scroll-target="#vraag-1-1">Vraag 1</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1.2</a></li>
-  </ul></li>
-  <li><a href="#vraag-2-1" id="toc-vraag-2-1" class="nav-link" data-scroll-target="#vraag-2-1">Vraag 2</a>
-  <ul class="collapse">
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2.1</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2.2</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="ZSO4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ZSO/ZSO1.html">ZSO</a></li><li class="breadcrumb-item"><a href="../ZSO/ZSO4.html">ZSO4: Kruistabellen</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Penguins.html">Online (R) oefeningen</a></li><li class="breadcrumb-item"><a href="./Zelftest_ANOVA.html">ANOVA</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ZSO 4</h1>
+<h1 class="title">ANOVA zelftoetsing</h1>
 </div>
 
 
@@ -407,128 +385,134 @@ cookieconsent.run({
 </header>
 
 
-<section id="opdrachten" class="level1 unnumbered">
-<h1 class="unnumbered">OPDRACHTEN</h1>
-<section id="vraag-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
-<p>Na het zinken van de Titanic deden er verschillende verhalen de ronde. Na vele jaren onderzoek heeft men een nagenoeg volledig bestand kunnen aanleggen van eigenschappen van de passagiers. Nu zijn we in staat om enkele prangende vragen te onderzoeken. De eerste vraag die mensen boeide was of men tijdens die ramp echt wel voorrang heeft gegeven aan vrouwen. Hadden vrouwen een grotere overlevingskans dan mannen?</p>
-<p>Het bijhorende databestand (Titanic2.RData) bevat gegevens over een groot deel van de passagiers op de Titanic. De volgende drie variabelen zijn opgenomen in het bestand: - Survived (“Yes”, “No”); - Class (“1st”, “2nd”, “3rd”, “Crew”); - Gender (“Male”, “Female”).</p>
-<p><em>1.1 Ga na of er een verband is tussen het geslacht en de overlevingskans. Voer de gepaste analyses uit om deze vraag te beantwoorden. Geef de relevante output van je analyses en bespreek deze.</em></p>
-<p><em>1.2 Maak ook een gepaste visualisatie van het resultaat.</em></p>
-</section>
-<section id="vraag-2" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2">Vraag 2</h2>
-<p>Sommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de klasse waarin passagiers geboekt hadden meer invloed had op de kans op overleven dan kenmerken zoals het geslacht.</p>
-<p><em>2.1 Is er een effect van de klasse waarin men boekte? Staaf je antwoord met output van je analyses.</em></p>
-<p><em>2.2 Klopt de uitspraak dat de klasse meer invloed had op de overlevingskans dan het geslacht? Staaf je antwoord met gegevens uit de output van je analyses.</em></p>
-<p>[RESPONS ACHTERAAN DOCUMENT] </p>
-</section>
-</section>
-<section id="responsen" class="level1 unnumbered">
-<h1 class="unnumbered">RESPONSEN</h1>
-<p>Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in <code>R</code> en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando’s <code>load( )</code> en <code>source( )</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Titanic2.RData"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"OLP2 Functies.R"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="vraag-1-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1-1">Vraag 1</h2>
-<section id="section" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section">1.1</h3>
-<ol type="a">
-<li>Analyses</li>
-</ol>
-<p>Om het verband na te gaan maken we gebruik van een kruistabel, met in de kolommen ‘Gender’ (Eigenlijk kunnen we veronderstellen dat dit de onafhankelijke variabele is) en in de rijen ‘Survived’. Bovendien vragen we kolompercentages op.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     x
-y        Female      Male       Sum
-  no   26.80851  78.79838  67.69650
-  yes  73.19149  21.20162  32.30350
-  Sum 100.00000 100.00000 100.00000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Gender))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
+<p>We werken verder met de pinguïns data om ook voor ANOVA de verschillende <code>R</code> functies en output onder de knie te krijgen. Meer achtergrond over deze dataset vind je via volgende link: <a href="./Penguins.html">palmerpenguins</a></p>
+<div class="cell" data-autorun="true" data-runbutton="false">
+<div>
+<div id="webr-1" class="exercise-cell">
 
-data:  table(Titanic2$Survived, Titanic2$Gender)
-X-squared = 456.87, df = 1, p-value &lt; 2.2e-16
-95 percent confidence interval:
- 0.4138267 0.4973825
-sample estimates:
-Cramer's V 
- 0.4556048 </code></pre>
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImV2YWwiOnRydWUsImVkaXQiOnRydWUsImF1dG9ydW4iOnRydWUsInJ1bmJ1dHRvbiI6ZmFsc2V9LCJjb2RlIjoibGlicmFyeShwYWxtZXJwZW5ndWlucylcbmRhdGEoXCJwZW5ndWluc1wiKSJ9
+</script>
 </div>
 </div>
-<ol start="2" type="a">
-<li>Resultaten bespreken met verwijzing naar output</li>
-</ol>
-<p>Uit de kruistabel blijkt dat vrouwen (73,19%) duidelijk een grotere overlevingskans hebben dan mannen (21,20%). Uit de Chi-kwadraattoets (<em>chi²</em>(1) = 456.874, <em>p</em> &lt; 0.001) kunnen we bovendien afleiden dat de kans dat de nulhypothese opgaat zeer klein is. M.a.w. de kans dat in de populatie van Titanic-passagiers geen verschil in overlevingskans was tussen vrouwen en mannen is zo klein dat we deze verwerpen. (We verwerpen H0!) Het verband tussen ‘Survival’ en ‘Gender’ is dus statistisch significant. De sterkte van het verband is af te leiden uit de Cramer’s V (0.456) en dit geldt ook voor de populatie, 95% BI [0.414,0.497].</p>
-</section>
-<section id="section-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1">1.2</h3>
-<p>Om een grafiek te maken, gebruiken we <code>assocplot( )</code>. Let op de volgorde van de variabelen binnen dit commando!</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">assocplot</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Gender,Titanic2<span class="sc">$</span>Survived))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="ZSO4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
+<p>ANOVA voeren we uit indien de onderzoeksvraag een <strong>kwantitatieve afhankelijke variabele</strong> (= interval of ratio niveau) bevat en één (of meer, zie later) *categorische onafhankelijke variabele (met meer dan 2 categorieën)**.</p>
+<p>Voor deze oefening willen we volgende onderzoeksvraag beantwoorden:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Onderzoeksvraag
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<div class="line-block">Wat zijn de verschillen in snavellengte (<code>bill_length_mm</code>) tussen de verschillende soorten penguïns (<code>species</code>)?</div>
 </div>
-<div style="page-break-after: always;"></div>
-</section>
-</section>
-<section id="vraag-2-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2-1">Vraag 2</h2>
-<section id="section-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-2">2.1</h3>
-<ol type="a">
-<li>Analyses</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruistabel.kolom</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     x
-y           1st       2nd       3rd      Crew       Sum
-  no   37.53846  58.59649  74.78754  76.04520  67.69650
-  yes  62.46154  41.40351  25.21246  23.95480  32.30350
-  Sum 100.00000 100.00000 100.00000 100.00000 100.00000</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chi.kwadraat.test</span>(<span class="fu">table</span>(Titanic2<span class="sc">$</span>Survived, Titanic2<span class="sc">$</span>Class))</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
+<section id="oefening-1" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-1">Oefening 1</h2>
+<p>Als startpunt van de analyses willen we zicht krijgen op de verschillen in snavellengte tussen de verschillende soorten pinguïns in onze steekproef. We starten dus met gemiddelden te berekenen tussen de 3 soorten penguïns.</p>
+<p><em>Vul onderstaande code aan om de gemiddeldes per pinguïnsoort te berekenen.</em></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Denk eraan dat er mogelijk wat ontbrekende waarden zijn. Dat maakt dat het berekenen van het gemiddelde per soort mogelijk in de soep draait. Daarom ook de nood aan een 4de argument in de onderstaande <code>tapply( )</code> functie.</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Oefening</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Hints</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Oplossing</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell" data-exercise="ex1" data-caption="Oefening1">
+<div>
+<div id="webr-2" class="exercise-cell">
 
-data:  table(Titanic2$Survived, Titanic2$Class)
-X-squared = 190.4, df = 3, p-value &lt; 2.2e-16
-95 percent confidence interval:
- 0.2506724 0.3344483
-sample estimates:
-Cramer's V 
- 0.2941201 </code></pre>
+</div>
+<script type="webr-2-contents">
+eyJhdHRyIjp7ImV2YWwiOnRydWUsImVkaXQiOnRydWUsImV4ZXJjaXNlIjoiZXgxIiwiY2FwdGlvbiI6Ik9lZmVuaW5nMSJ9LCJjb2RlIjoiXG50YXBwbHkoX19fX18gLCBfX19fX19fICwgX19fX19fXyAsIF9fX19fX18pIn0=
+</script>
 </div>
 </div>
-<ol start="2" type="a">
-<li>Resultaten bespreken met verwijzing naar output</li>
-</ol>
-<p>Uit de kruistabel kan je aflezen dat de overlevingskans het grootst is voor passagiers uit 1ste klasse (62,462%), het tweede grootst voor passagiers uit 2de klasse (41,404%) en het laagst voor bemanningsleden (23,955%). Dit wijst duidelijk op een samenhang tussen ‘Survived’ en ‘Class’. Deze samenhang is ook statistisch significant (<em>chi²</em>(3) = 190.401, <em>p</em> &lt; 0.001). We kunnen dus stellen dat deze samenhang zich ook in de populatie van Titanic-passagiers zal voordoen. De sterkte van verband wordt uitgedrukt door Cramer’s V (0.294). Uit het 95% BI [0.251,0.334] rond Cramer’s V kunnen we afleiden dat de Cramer’s V ergens tussen 0.251 en 0.334 zal bedragen voor de populatie.</p>
-</section>
-<section id="section-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-3">2.2</h3>
-<p>Om na te gaan of ‘Class’ inderdaad meer invloed had op de overlevingskans (‘Survived’) dan geslacht(‘Gender’) vergelijken we de Cramer’s V voor beide kruistabellen. De Cramer’s V voor de associatie tussen geslacht en de ramp overleven bedraagt 0.456. Voor het verband tussen klasse en de ramp overleven is de Cramer’s V 0.294. De uitspraak dat klasse meer invloed had op de overlevingskans dan geslacht klopt dus niet.</p>
+<div class="cell" data-exercise="ex1" data-check="true">
+<script type="exercise-check-ex1-contents">
+eyJhdHRyIjp7ImV2YWwiOnRydWUsImVkaXQiOnRydWUsImV4ZXJjaXNlIjoiZXgxIiwiY2hlY2siOnRydWV9LCJjb2RlIjoiYW5zd2VyIDwtIHRhcHBseShwZW5ndWlucyRiaWxsX2xlbmd0aF9tbSwgcGVuZ3VpbnMkc3BlY2llcyAsIG1lYW4sIG5hLnJtID0gVClcbmlmIChpZGVudGljYWwoLnJlc3VsdCwgYW5zd2VyKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJKdWlzdCFcIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJGb3V0LlwiKVxufSJ9
+</script>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="ex1">
+<p>Het eerste argument verwijst altijd naar de variabele waarop we berekeningen wensen uit te voeren. Maw, het eerste argument gaat over de <strong>afhankelijke variabele</strong>: <code>bill_length_mm</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(penguins<span class="sc">$</span>_______ , ________ , _____, _______)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="ex1">
+<p>We willen het gemiddelde per categorie van de variabele <code>species</code> berekenen. Dus, je moet in je code iets met die variabele doen.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(penguins<span class="sc">$</span>bill_length_mm , penguins<span class="sc">$</span>______ , _____, _______)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="ex1">
+<p>Als je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in <code>R</code> kan je hanteren om het gemiddelde te berekenen?</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(penguins<span class="sc">$</span>bill_length_mm, penguins<span class="sc">$</span>species , _____, _______)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="ex1">
+<p>we kunnen de functie <code>mean()</code> gebruiken om per soort de gemiddelde snavellengte te berekenen. Echter, we moeten nog een extra argument meegeven omdat er voor sommige soorten enkele ontbrekende waarden zijn. In de functie <code>mean()</code> is er de mogelijkheid om een bijkomend argument mee te geven: <code>na.rm = T</code>. Dit extra argument geven we in de <code>tapply( )</code> functie ook mee als afzonderlijk argument.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(penguins<span class="sc">$</span>bill_length_mm, penguins<span class="sc">$</span>species , mean , <span class="at">na.rm =</span> T)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="ex1">
+<p><strong>Oplossing:</strong></p>
+<p>De volledige oplossing ziet er zo uit!</p>
+<div class="cell" data-exercise="ex1" data-solution="true">
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="ex1">
+<code id="interpolate-5" class="solution-code d-none">tapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)</code>
+<div class="sourceCode cell-code" id="interpolate-6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="interpolate-6-1"><a href="#interpolate-6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(penguins<span class="sc">$</span>bill_length_mm, penguins<span class="sc">$</span>species , mean, <span class="at">na.rm =</span> T)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
-</section>
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJodHRwczovL3dlYnIuci13YXNtLm9yZy92MC40LjEvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsiZXZhbHVhdGUiLCJrbml0ciIsImh0bWx0b29scyJdLCJyZXBvcyI6W119LCJyZW5kZXJfZGYiOiJkZWZhdWx0In0=
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV8yO1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIiwiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0yIiwiaW5saW5lIjpmYWxzZX0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMi1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIC8vIERlZmF1bHQgZXhlcmNpc2UgY29uZmlndXJhdGlvblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbihcbiAgICB7XG4gICAgICBpZDogXCJ3ZWJyLTItY29udGVudHNcIixcbiAgICAgIGVudmlyOiBgZXhlcmNpc2UtZW52LSR7YmxvY2suYXR0ci5leGVyY2lzZX1gLFxuICAgICAgZXJyb3I6IGZhbHNlLFxuICAgICAgY2FwdGlvbjogJ0V4ZXJjaXNlJyxcbiAgICB9LFxuICAgIGJsb2NrLmF0dHJcbiAgKTtcblxuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbnZpZXdvZiBfd2Vicl92YWx1ZV8yID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8yLCB7fSk7XG5fd2Vicl9mZWVkYmFja18yID0ge1xuICBjb25zdCB7IFdlYlJHcmFkZXIgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IGVtcHR5RmVlZGJhY2sgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcblxuICBjb25zdCBncmFkZXIgPSBuZXcgV2ViUkdyYWRlcihfd2Vicl92YWx1ZV8yLmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiIsImNlbGxOYW1lIjoid2Vici0yIiwiaW5saW5lIjpmYWxzZX0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzE7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4iLCJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTEiLCJpbmxpbmUiOmZhbHNlfSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzEgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8xID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xLCB7fSk7XG4iLCJjZWxsTmFtZSI6IndlYnItMSIsImlubGluZSI6ZmFsc2V9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICBjb25zdCB7IGludGVycG9sYXRlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBibG9ja19pZCA9IFwiNVwiO1xuICBjb25zdCBsYW5ndWFnZSA9IFwibm9uZVwiO1xuICBjb25zdCBkZWZfbWFwID0ge1xufTtcbiAgY29uc3QgZWxlbSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGBpbnRlcnBvbGF0ZS0ke2Jsb2NrX2lkfWApO1xuXG4gIC8vIFN0b3JlIG9yaWdpbmFsIHRlbXBsYXRlZCBIVE1MIGZvciByZWZlcmVuY2UgaW4gZnV0dXJlIHJlYWN0aXZlIHVwZGF0ZXNcbiAgaWYgKCFlbGVtLm9yaWdIVE1MKSBlbGVtLm9yaWdIVE1MID0gZWxlbS5pbm5lckhUTUw7XG5cbiAgLy8gSW50ZXJwb2xhdGUgcmVhY3RpdmUgT0pTIHZhcmlhYmxlcyBpbnRvIGVzdGFibGlzaGVkIEhUTUwgZWxlbWVudFxuICBlbGVtLmlubmVySFRNTCA9IGVsZW0ub3JpZ0hUTUw7XG4gIE9iamVjdC5rZXlzKGRlZl9tYXApLmZvckVhY2goKGRlZikgPT5cbiAgICBpbnRlcnBvbGF0ZShlbGVtLCBcIiR7XCIgKyBkZWYgKyBcIn1cIiwgZGVmX21hcFtkZWZdLCBsYW5ndWFnZSlcbiAgKTtcbn1cbiIsImNlbGxOYW1lIjoiaW50ZXJwb2xhdGUtNSIsImlubGluZSI6ZmFsc2V9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICBjb25zdCB7IGludGVycG9sYXRlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBibG9ja19pZCA9IFwiNlwiO1xuICBjb25zdCBsYW5ndWFnZSA9IFwiclwiO1xuICBjb25zdCBkZWZfbWFwID0ge1xufTtcbiAgY29uc3QgZWxlbSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGBpbnRlcnBvbGF0ZS0ke2Jsb2NrX2lkfWApO1xuXG4gIC8vIFN0b3JlIG9yaWdpbmFsIHRlbXBsYXRlZCBIVE1MIGZvciByZWZlcmVuY2UgaW4gZnV0dXJlIHJlYWN0aXZlIHVwZGF0ZXNcbiAgaWYgKCFlbGVtLm9yaWdIVE1MKSBlbGVtLm9yaWdIVE1MID0gZWxlbS5pbm5lckhUTUw7XG5cbiAgLy8gSW50ZXJwb2xhdGUgcmVhY3RpdmUgT0pTIHZhcmlhYmxlcyBpbnRvIGVzdGFibGlzaGVkIEhUTUwgZWxlbWVudFxuICBlbGVtLmlubmVySFRNTCA9IGVsZW0ub3JpZ0hUTUw7XG4gIE9iamVjdC5rZXlzKGRlZl9tYXApLmZvckVhY2goKGRlZikgPT5cbiAgICBpbnRlcnBvbGF0ZShlbGVtLCBcIiR7XCIgKyBkZWYgKyBcIn1cIiwgZGVmX21hcFtkZWZdLCBsYW5ndWFnZSlcbiAgKTtcbn1cbiIsImNlbGxOYW1lIjoiaW50ZXJwb2xhdGUtNiIsImlubGluZSI6ZmFsc2V9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoid2ViUk9qcyA9IHtcbiAgY29uc3QgeyBXZWJSIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lLldlYlI7XG4gIGNvbnN0IHtcbiAgICBXZWJSRXZhbHVhdG9yLFxuICAgIFdlYlJFbnZpcm9ubWVudE1hbmFnZXIsXG4gICAgc2V0dXBSLFxuICAgIGI2NERlY29kZSxcbiAgICBjb2xsYXBzZVBhdGhcbiAgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc3RhdHVzQ29udGFpbmVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJleGVyY2lzZS1sb2FkaW5nLXN0YXR1c1wiKTtcbiAgY29uc3QgaW5kaWNhdG9yQ29udGFpbmVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJleGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaW5kaWNhdG9yQ29udGFpbmVyLmNsYXNzTGlzdC5yZW1vdmUoXCJkLW5vbmVcIik7XG5cbiAgbGV0IHN0YXR1c1RleHQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiZGl2XCIpXG4gIHN0YXR1c1RleHQuY2xhc3NMaXN0ID0gXCJleGVyY2lzZS1sb2FkaW5nLWRldGFpbHNcIjtcbiAgc3RhdHVzVGV4dCA9IHN0YXR1c0NvbnRhaW5lci5hcHBlbmRDaGlsZChzdGF0dXNUZXh0KTtcbiAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBJbml0aWFsaXNlYDtcblxuICAvLyBIb2lzdCBpbmRpY2F0b3Igb3V0IGZyb20gZmluYWwgc2xpZGUgd2hlbiBydW5uaW5nIHVuZGVyIHJldmVhbFxuICBjb25zdCByZXZlYWxTdGF0dXMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCAuZXhlcmNpc2UtbG9hZGluZy1pbmRpY2F0b3JcIik7XG4gIGlmIChyZXZlYWxTdGF0dXMpIHtcbiAgICByZXZlYWxTdGF0dXMucmVtb3ZlKCk7XG4gICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXZlYWwgPiAuc2xpZGVzXCIpLmFwcGVuZENoaWxkKHJldmVhbFN0YXR1cyk7XG4gIH1cblxuICAvLyBNYWtlIGFueSByZXZlYWwgc2xpZGVzIHdpdGggbGl2ZSBjZWxscyBzY3JvbGxhYmxlXG4gIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoXCIucmV2ZWFsIC5leGVyY2lzZS1jZWxsXCIpLmZvckVhY2goKGVsKSA9PiB7XG4gICAgZWwuY2xvc2VzdCgnc2VjdGlvbi5zbGlkZScpLmNsYXNzTGlzdC5hZGQoXCJzY3JvbGxhYmxlXCIpO1xuICB9KVxuXG4gIC8vIHdlYlIgc3VwcGxlbWVudGFsIGRhdGEgYW5kIG9wdGlvbnNcbiAgY29uc3QgZGF0YUNvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici1kYXRhXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZGF0YSA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKGRhdGFDb250ZW50KSk7XG5cbiAgLy8gR3JhYiBsaXN0IG9mIHJlc291cmNlcyB0byBiZSBkb3dubG9hZGVkXG4gIGNvbnN0IGZpbGVzQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ2ZnMtZmlsZVxcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGZpbGVzID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZmlsZXNDb250ZW50KSk7XG5cbiAgLy8gSW5pdGlhbGlzZSB3ZWJSIGFuZCBzZXR1cCBmb3IgUiBjb2RlIGV2YWx1YXRpb25cbiAgbGV0IHdlYlJQcm9taXNlID0gKGFzeW5jICh3ZWJSKSA9PiB7XG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyB3ZWJSYDtcbiAgICBhd2FpdCB3ZWJSLmluaXQoKTtcblxuICAgIC8vIEluc3RhbGwgcHJvdmlkZWQgbGlzdCBvZiBwYWNrYWdlc1xuICAgIC8vIEVuc3VyZSB3ZWJSIGRlZmF1bHQgcmVwbyBpcyBpbmNsdWRlZFxuICAgIGRhdGEucGFja2FnZXMucmVwb3MucHVzaChcImh0dHBzOi8vcmVwby5yLXdhc20ub3JnXCIpXG4gICAgYXdhaXQgZGF0YS5wYWNrYWdlcy5wa2dzLm1hcCgocGtnKSA9PiAoKSA9PiB7XG4gICAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHBhY2thZ2U6ICR7cGtnfWA7XG4gICAgICByZXR1cm4gd2ViUi5ldmFsUlZvaWQoYFxuICAgICAgICB3ZWJyOjppbnN0YWxsKHBrZywgcmVwb3MgPSByZXBvcylcbiAgICAgICAgbGlicmFyeShwa2csIGNoYXJhY3Rlci5vbmx5ID0gVFJVRSlcbiAgICAgIGAsIHsgZW52OiB7XG4gICAgICAgIHBrZzogcGtnLFxuICAgICAgICByZXBvczogZGF0YS5wYWNrYWdlcy5yZXBvcyxcbiAgICAgIH19KTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcblxuICAgIC8vIERvd25sb2FkIGFuZCBpbnN0YWxsIHJlc291cmNlc1xuICAgIGF3YWl0IGZpbGVzLm1hcCgoZmlsZSkgPT4gYXN5bmMgKCkgPT4ge1xuICAgICAgY29uc3QgbmFtZSA9IGZpbGUuc3Vic3RyaW5nKGZpbGUubGFzdEluZGV4T2YoJy8nKSArIDEpO1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyByZXNvdXJjZTogJHtuYW1lfWA7XG4gICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKGZpbGUpO1xuICAgICAgaWYgKCFyZXNwb25zZS5vaykge1xuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYENhbid0IGRvd25sb2FkIFxcYCR7ZmlsZX1cXGAuIEVycm9yICR7cmVzcG9uc2Uuc3RhdHVzfTogXCIke3Jlc3BvbnNlLnN0YXR1c1RleHR9XCIuYCk7XG4gICAgICB9XG4gICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuYXJyYXlCdWZmZXIoKTtcblxuICAgICAgLy8gU3RvcmUgVVJMcyBpbiB0aGUgY3dkIHdpdGhvdXQgYW55IHN1YmRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGlmIChmaWxlLmluY2x1ZGVzKFwiOi8vXCIpKSB7XG4gICAgICAgIGZpbGUgPSBuYW1lO1xuICAgICAgfVxuXG4gICAgICAvLyBDb2xsYXBzZSBoaWdoZXIgZGlyZWN0b3J5IHN0cnVjdHVyZVxuICAgICAgZmlsZSA9IGNvbGxhcHNlUGF0aChmaWxlKTtcblxuICAgICAgLy8gQ3JlYXRlIGRpcmVjdG9yeSB0cmVlLCBpZ25vcmluZyBcImRpcmVjdG9yeSBleGlzdHNcIiBWRlMgZXJyb3JzXG4gICAgICBjb25zdCBwYXJ0cyA9IGZpbGUuc3BsaXQoJy8nKS5zbGljZSgwLCAtMSk7XG4gICAgICBsZXQgcGF0aCA9ICcnO1xuICAgICAgd2hpbGUgKHBhcnRzLmxlbmd0aCA+IDApIHtcbiAgICAgICAgcGF0aCArPSBwYXJ0cy5zaGlmdCgpICsgJy8nO1xuICAgICAgICB0cnkge1xuICAgICAgICAgIGF3YWl0IHdlYlIuRlMubWtkaXIocGF0aCk7XG4gICAgICAgIH0gY2F0Y2ggKGUpIHtcbiAgICAgICAgICBpZiAoIWUubWVzc2FnZS5pbmNsdWRlcyhcIkZTIGVycm9yXCIpKSB7XG4gICAgICAgICAgICB0aHJvdyBlO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuXG4gICAgICAvLyBXcml0ZSB0aGlzIGZpbGUgdG8gdGhlIFZGU1xuICAgICAgcmV0dXJuIGF3YWl0IHdlYlIuRlMud3JpdGVGaWxlKGZpbGUsIG5ldyBVaW50OEFycmF5KGRhdGEpKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcblxuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgSW5zdGFsbGluZyB3ZWJSIHNoaW1zYDtcbiAgICBhd2FpdCB3ZWJSLmV2YWxSVm9pZChgd2Vicjo6c2hpbV9pbnN0YWxsKClgKTtcblxuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgV2ViUiBlbnZpcm9ubWVudCBzZXR1cGA7XG4gICAgYXdhaXQgc2V0dXBSKHdlYlIsIGRhdGEpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHdlYlI7XG4gIH0pKG5ldyBXZWJSKGRhdGEub3B0aW9ucykpO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCB3ZWJSID0gYXdhaXQgd2ViUlByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFdlYlJFdmFsdWF0b3Iod2ViUiwgY29udGV4dClcbiAgICBhd2FpdCBldmFsdWF0b3IucHJvY2VzcyhpbnB1dHMpO1xuICAgIHJldHVybiBldmFsdWF0b3IuY29udGFpbmVyO1xuICB9XG5cbiAgcmV0dXJuIHtcbiAgICBwcm9jZXNzLFxuICAgIHdlYlJQcm9taXNlLFxuICAgIHJlbmRlcmVkT2pzLFxuICB9O1xufVxuIiwiY2VsbE5hbWUiOiJ3ZWJyLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlfV19
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -951,13 +935,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../ZSO/ZSO3.html" class="pagination-link" aria-label="ZSO3: ANOVA">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ZSO3: ANOVA</span>
+      <a href="./Zelftest_t_test.html" class="pagination-link" aria-label="t-test">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">t-test</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ZSO/ZSO5.html" class="pagination-link" aria-label="ZSO5: Correlaties">
-        <span class="nav-page-text">ZSO5: Correlaties</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ZSO/ZSO1.html" class="pagination-link" aria-label="ZSO1: van vraag naar methode">
+        <span class="nav-page-text">ZSO1: van vraag naar methode</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
