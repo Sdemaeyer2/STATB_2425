@@ -108,8 +108,8 @@ lang: nl
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: [cosmo, theme.scss]
+    mainfont: "Atkinson Hyperlegible"
     toc: true
     code-copy: true
     code-overflow: wrap
