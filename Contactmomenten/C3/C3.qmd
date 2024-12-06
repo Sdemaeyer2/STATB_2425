@@ -1,0 +1,38 @@
+---
+title: "Contactmoment 3"
+---
+
+We behandelen volgende inhouden:
+
+-   covariantie en correlatie
+
+-   bivariate regressie
+
+## Voorbereiding
+
+![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP
+
+![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen correlatie-analses
+
+![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen bivariate regressie-analyses
+
+![](/images/icons/zz_video_camera.png){width="30"} Video-tutorial correlatie-analyses
+![](/images/icons/zz_video_camera.png){width="30"} Video-tutorial bivariate regressie-analyse
+
+## Lesmateriaal
+
+![](/images/icons/zz_slides.png){width="30"} Slides Contactmoment 3
+
+![](/images/icons/zz_video_camera.png){width="30"} Lesopname (terug te vinden op Blackboard)
+
+![](/images/icons/guided-practice.png){width="30"} Opdrachten computer lab
+
+![](/images/icons/data.png){width="30"} Dataset computer lab
+
+![](/images/icons/worked-example.png){width="30"} Respons computer lab
+
+## Na de les
+
+![](/images/icons/singlelab.png){width="30"} [ZSO 5: correlaties](/ZSO/ZSO5.qmd)
+
+![](/images/icons/singlelab.png){width="30"} [ZSO 6: bivariate regressie](/ZSO/ZSO6.qmd)

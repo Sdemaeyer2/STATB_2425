@@ -1,0 +1,38 @@
+---
+title: "Contactmoment 2"
+---
+
+Dit tweede contactmoment behandelt volgende inhouden:
+
+-   ANOVA
+
+-   kruistabellen
+
+## Voorbereiding
+
+![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 2 en Hoofdstuk 4 uit het OLP
+
+![](/images/icons/singletutorial.png){width="30"} [Online (R) Oefeningen ANOVA](/Zelftest_ANOVA.qmd)
+
+![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen kruistabellen
+
+![](/images/icons/zz_video_camera.png){width="30"} Video-tutorial ANOVA
+![](/images/icons/zz_video_camera.png){width="30"} Video-tutorial kruistabellen
+
+## Lesmateriaal
+
+![](/images/icons/zz_slides.png){width="30"} Slides Contactmoment 2
+
+![](/images/icons/zz_video_camera.png){width="30"} Lesopname (terug te vinden op Blackboard)
+
+![](/images/icons/guided-practice.png){width="30"} Opdrachten computer lab
+
+![](/images/icons/data.png){width="30"} Dataset computer lab
+
+![](/images/icons/worked-example.png){width="30"} Respons computer lab
+
+## Na de les
+
+![](/images/icons/singlelab.png){width="30"} [ZSO 3: ANOVA](/ZSO/ZSO3.qmd)
+
+![](/images/icons/singlelab.png){width="30"} [ZSO 4: kruistabellen](/ZSO/ZSO4.qmd)

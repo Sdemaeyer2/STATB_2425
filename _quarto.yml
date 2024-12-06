@@ -5,7 +5,7 @@ website:
   announcement: 
     icon: info-circle
     dismissable: true
-    content: "**Alert** - deze website is nog in ontwikkeling - feedback altijd welkom bij sven.demaeyer@uantwperen.be"
+    content: "**Alert** - deze website is nog in ontwikkeling - feedback altijd welkom via sven.demaeyer@uantwperen.be"
     type: primary
     position: above-navbar
   google-analytics: 
@@ -45,7 +45,9 @@ website:
           - text: "C1"
             href: Contactmomenten/C1/C1.qmd
           - text: "C2"
+            href: Contactmomenten/C2/C2.qmd
           - text: "C3"
+            href: Contactmomenten/C3/C3.qmd
           - text: "C4"
           - text: "C5"
           - text: "C6"
@@ -114,4 +116,3 @@ format:
     code-copy: true
     code-overflow: wrap
     
-editor: visual

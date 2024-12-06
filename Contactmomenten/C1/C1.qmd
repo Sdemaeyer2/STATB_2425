@@ -4,7 +4,7 @@ title: "Contactmoment 1"
 
 Dit eerste contactmoment behandelt volgende inhouden:
 
--   Van onderzoeksvraag naar analysetechnieken
+-   van onderzoeksvraag naar analysetechnieken
 
 -   t-test
 
