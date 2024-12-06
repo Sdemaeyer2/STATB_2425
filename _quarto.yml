@@ -108,7 +108,7 @@ lang: nl
 
 format:
   html:
-    theme: [cosmo, theme.scss]
+    theme: theme.scss
     mainfont: "Atkinson Hyperlegible"
     toc: true
     code-copy: true
