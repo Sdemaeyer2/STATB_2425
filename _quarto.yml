@@ -101,7 +101,7 @@ website:
         href: https://www.uantwerpen.be/nl/
         text: "uantwerpen.be/nl/"
       - icon: github
-        href: https://github.com/openscapes/quarto-website-tutorial
+        href: https://github.com/Sdemaeyer2/STATB_2425
         text: "Statistiek B"
 
 lang: nl
