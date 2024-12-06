@@ -40,8 +40,10 @@ website:
       - section: "Open Leer Pakket"
       
       - section: "Contactmomenten"
+        href: Contactmomenten/Contactmomenten.qmd
         contents: 
           - text: "C1"
+            href: Contactmomenten/C1/C1.qmd
           - text: "C2"
           - text: "C3"
           - text: "C4"

@@ -1,0 +1,43 @@
+---
+title: "Contactmomenten"
+---
+
+Voor dit vak zijn er 7 contactmomenten gepland.
+
+Hieronder vind je een overzicht van de verschillende contactmomenten en welke thema's aan bod zullen komen.
+
++-----------------+--------+--------+--------+----------------------------------------------+
+| Contactmoment   | Datum  | Uur    | Lokaal | Onderwerp                                    |
++=================+========+========+========+==============================================+
+| [C1](C1/C1.qmd) |        |        |        | Van onderzoeksvraag naar methode t-test      |
++-----------------+--------+--------+--------+----------------------------------------------+
+| C2              |        |        |        | ANOVA                                        |
+|                 |        |        |        |                                              |
+|                 |        |        |        | Kruistabel                                   |
++-----------------+--------+--------+--------+----------------------------------------------+
+| C3              |        |        |        | Covariantie en correlatie                    |
+|                 |        |        |        |                                              |
+|                 |        |        |        | Bivariate regressie                          |
++-----------------+--------+--------+--------+----------------------------------------------+
+| C4              |        |        |        | Assumpties bij regressie                     |
+|                 |        |        |        |                                              |
+|                 |        |        |        | Meervoudige regressie                        |
++-----------------+--------+--------+--------+----------------------------------------------+
+| C5              |        |        |        | Regressie met dummyvariabelen en interacties |
++-----------------+--------+--------+--------+----------------------------------------------+
+| C6              |        |        |        | Regressie met dummyvariabelen en interacties |
++-----------------+--------+--------+--------+----------------------------------------------+
+| C7              |        |        |        | Oefenexamen                                  |
++-----------------+--------+--------+--------+----------------------------------------------+
+
+::: callout-important
+Om het maximale te halen uit deze contactmomenten kom je best goed voorbereid naar de les!
+
+Tijdens de contactmomenten starten we met een korte opfrissing van de kern van de inhoud om vervolgens richting de computerlokalen te gaan waar we een reeks oefeningen hebben voorbereid voor jou.
+
+We raden ten sterkste aan om deel te nemen aan deze oefeningen in de computerlokalen. Het geeft je de kans om vertrouwd te krijgen met `R` en `RStudio` in de computerlokalen (waar ook examens zullen doorgaan). Je kan werken aan een efficiënte workflow en je hebt de mogelijkheid om gerichte vragen te stellen aan de docenten.
+:::
+
+## Dataset voor computeroefeningen
+
+Per contactmoment voorzien we een set van oefeningen die overheen de verschillende contactmomenten uitgevoerd worden op dezelfde dataset: `Techniek.RData`. Om de oefeningen goed te kunnen uitvoeren is het belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit codeboek kan je raadplegen via volgende link:

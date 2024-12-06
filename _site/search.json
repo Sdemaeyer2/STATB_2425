@@ -352,6 +352,28 @@
     ]
   },
   {
+    "objectID": "Zelftest_ANOVA.html#oefening-2",
+    "href": "Zelftest_ANOVA.html#oefening-2",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 2",
+    "text": "Oefening 2\nNu we de gemiddelde snavellengte per pinguïnsoort in de steekproef weten, is het de vraag wat we kunnen leren aangaande een mogelijk verschil in de gehele populatie van pinguïns. Daartoe kunnen we een ANOVA-analyse uitvoeren. Maar vooraleer we dat doen, dienen we na te gaan of er voldaan wordt aan de assumptie van gelijke binnengroepenvariantie.\nVoer de test uit die ons inzicht geeft in de mate waarin voldaan wordt aan de assumptie van gelijke binnengroepenvarianties\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe dienen hiertoe een Levene-test uit te voeren.\nleveneTest(_______ , ________ )\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nleveneTest(penguins$bill_length_mm, penguins$species)\nleveneTest(penguins$bill_length_mm, penguins$species)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
+    "objectID": "Zelftest_ANOVA.html#oefening-3-1",
+    "href": "Zelftest_ANOVA.html#oefening-3-1",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 3",
+    "text": "Oefening 3\nVoer de ANOVA analyse uit, rekening houdende met de resultaten van de Levene-test.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe dienen hiertoe een Levene-test uit te voeren.\nleveneTest(_______ , ________ )\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nleveneTest(penguins$bill_length_mm, penguins$species)\nleveneTest(penguins$bill_length_mm, penguins$species)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
     "objectID": "Extra/Quarto_documenten.html",
     "href": "Extra/Quarto_documenten.html",
     "title": "Quarto documenten",
@@ -435,6 +457,16 @@
     ]
   },
   {
+    "objectID": "index.html#rapporteren",
+    "href": "index.html#rapporteren",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Rapporteren",
+    "text": "Rapporteren\nRapporteren over je resultaten is een belangrijke taak als onderzoeker. In deze sectie vind je een set van rapportages van verschillende analyses. Deze stukken rapportage ontleden we zodanig dat je inzicht krijgt in hoe je op een goede wijze kan rapporteren.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
     "objectID": "index.html#extra-materiaal",
     "href": "index.html#extra-materiaal",
     "title": "Statistiek B (AJ 2024-2025)",
@@ -445,6 +477,50 @@
     ]
   },
   {
+    "objectID": "Contactmomenten/C1/C1.html",
+    "href": "Contactmomenten/C1/C1.html",
+    "title": "Contactmoment 1",
+    "section": "",
+    "text": "Dit eerste contactmoment behandelt volgende inhouden:",
+    "crumbs": [
+      "Contactmomenten",
+      "C1"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C1/C1.html#voorbereiding",
+    "href": "Contactmomenten/C1/C1.html#voorbereiding",
+    "title": "Contactmoment 1",
+    "section": "Voorbereiding",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP\n Online (R) Oefeningen t-test\n Video-tutorial t-test",
+    "crumbs": [
+      "Contactmomenten",
+      "C1"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C1/C1.html#lesmateriaal",
+    "href": "Contactmomenten/C1/C1.html#lesmateriaal",
+    "title": "Contactmoment 1",
+    "section": "Lesmateriaal",
+    "text": "Lesmateriaal\n Slides Contactmoment 1\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "crumbs": [
+      "Contactmomenten",
+      "C1"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C1/C1.html#na-de-les",
+    "href": "Contactmomenten/C1/C1.html#na-de-les",
+    "title": "Contactmoment 1",
+    "section": "Na de les",
+    "text": "Na de les\n ZSO 1: Van onderzoeksvraag naar analyse\n ZSO 2: t-test",
+    "crumbs": [
+      "Contactmomenten",
+      "C1"
+    ]
+  },
+  {
     "objectID": "Rapporteren.html",
     "href": "Rapporteren.html",
     "title": "Rapporteren",
@@ -452,6 +528,26 @@
     "text": "Deze cursus behandelt een hele reeks analysetechnieken en leert je ook hoe je deze dient uit te voeren in R en RStudio.\nDeze analyses uitvoeren en inzicht hebben in de resultaten is één zaak. Maar als onderzoeker is het ook belangrijk om helder te communiceren over de resultaten. In deze sectie vind je per analysetechniek een stukje voorbeeld rapportage dat we systematisch ontleden.\nDe voorbeelden zijn allen gebaseerd op de resultaten die je kan repliceren indien je de Online (R) oefeningen op deze website oplost.\n\n\n\nfiguur gemaakt met DALL-E",
     "crumbs": [
       "Rapporteren"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/Contactmomenten.html",
+    "href": "Contactmomenten/Contactmomenten.html",
+    "title": "Contactmomenten",
+    "section": "",
+    "text": "Voor dit vak zijn er 7 contactmomenten gepland.\nHieronder vind je een overzicht van de verschillende contactmomenten en welke thema’s aan bod zullen komen.",
+    "crumbs": [
+      "Contactmomenten"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
+    "href": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
+    "title": "Contactmomenten",
+    "section": "Dataset voor computeroefeningen",
+    "text": "Dataset voor computeroefeningen\nPer contactmoment voorzien we een set van oefeningen die overheen de verschillende contactmomenten uitgevoerd worden op dezelfde dataset: Techniek.RData. Om de oefeningen goed te kunnen uitvoeren is het belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit codeboek kan je raadplegen via volgende link:",
+    "crumbs": [
+      "Contactmomenten"
     ]
   },
   {
