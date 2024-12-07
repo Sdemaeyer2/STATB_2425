@@ -476,7 +476,7 @@
     "href": "Contactmomenten/C1/C1.html#voorbereiding",
     "title": "Contactmoment 1",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP\n Online (R) Oefeningen t-test\n Screencastl t-test",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP\n Online (R) Oefeningen t-test\n Screencast t-test",
     "crumbs": [
       "Contactmomenten",
       "C1"
@@ -539,28 +539,44 @@
     "href": "Contactmomenten/C4/C4.html",
     "title": "Contactmoment 4",
     "section": "",
-    "text": "Volgende inhouden komen aan bod:"
+    "text": "Volgende inhouden komen aan bod:",
+    "crumbs": [
+      "Contactmomenten",
+      "C4"
+    ]
   },
   {
     "objectID": "Contactmomenten/C4/C4.html#voorbereiding",
     "href": "Contactmomenten/C4/C4.html#voorbereiding",
     "title": "Contactmoment 4",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties nagaan\n Screencast multivariate regressie-analyse"
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties nagaan\n Screencast multivariate regressie-analyse",
+    "crumbs": [
+      "Contactmomenten",
+      "C4"
+    ]
   },
   {
     "objectID": "Contactmomenten/C4/C4.html#lesmateriaal",
     "href": "Contactmomenten/C4/C4.html#lesmateriaal",
     "title": "Contactmoment 4",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 4\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab"
+    "text": "Lesmateriaal\n Slides Contactmoment 4\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "crumbs": [
+      "Contactmomenten",
+      "C4"
+    ]
   },
   {
     "objectID": "Contactmomenten/C4/C4.html#na-de-les",
     "href": "Contactmomenten/C4/C4.html#na-de-les",
     "title": "Contactmoment 4",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 6: bivariate regressie (deel 2)\n ZSO 7: multivariate regressie"
+    "text": "Na de les\n ZSO 6: bivariate regressie (deel 2)\n ZSO 7: multivariate regressie",
+    "crumbs": [
+      "Contactmomenten",
+      "C4"
+    ]
   },
   {
     "objectID": "index.html",

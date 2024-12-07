@@ -49,6 +49,7 @@ website:
           - text: "C3"
             href: Contactmomenten/C3/C3.qmd
           - text: "C4"
+            href: Contactmomenten/C4/C4.qmd
           - text: "C5"
           - text: "C6"
           - text: "C7"
@@ -86,7 +87,8 @@ website:
         contents: 
           - text: "t-test rapporteren"
             href: t_test_Rapportage.qmd
-      - section: "Screencasts"   
+            
+      - text: "Screencasts"
         href: Screencasts.qmd
         
       - section: "Extra materiaal"
