@@ -28,6 +28,10 @@ Voor dit vak hebben we ook een set van ZSO's opgestelt. Deze opdrachten gaan een
 
 Rapporteren over je resultaten is een belangrijke taak als onderzoeker. In deze sectie vind je een set van rapportages van verschillende analyses. Deze stukken rapportage ontleden we zodanig dat je inzicht krijgt in hoe je op een goede wijze kan rapporteren.
 
+## Screencasts
+
+Er zijn een aantal screencasts gemaakt waarin we een `R`-sessie tonen. Zie mij aan de slag in `R` terwijl ik analysetechnieken uitvoer en de resultaten interpreteer.
+
 ## Extra materiaal
 
 Onder extra materiaal vind je meer informatie en tutorials die je workflow in `R` en `RStudio` nog een pak efficiënter maken. Je vindt er links naar een aantal tutorials op YouTube. Weet dat dit facultatief materiaal is en dat dit niet dient toegepast worden op één of andere wijze om te kunnen slagen voor het vak.

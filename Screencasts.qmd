@@ -1,0 +1,16 @@
+---
+title: "Screencasts"
+
+sidebar: false
+editor: visual
+---
+
+[Terug naar de site](index.qmd)
+
+Voor dit vak zijn een set screencasts gemaakt. Deze worden gehost op de mediasite van de Universiteit Antwerpen en kan je hier allemaal streamen.
+
+Wil je naar de mediasite zelf: [KLIK HIER](https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public)
+
+<iframe title="Statistiek B (public)" width="1024" height="768" frameborder="0" scrolling="auto" marginheight="0" marginwidth="0" src="https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/embedded">
+
+</iframe>
