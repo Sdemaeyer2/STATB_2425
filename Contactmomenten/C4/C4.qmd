@@ -6,7 +6,7 @@ Volgende inhouden komen aan bod:
 
 -   assumpties bij regressie-analyse
 
--   mutlivariate regressie-analyse 
+-   mutlivariate regressie-analyse
 
 ## Voorbereiding
 
@@ -16,8 +16,9 @@ Volgende inhouden komen aan bod:
 
 ![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen multivariate regressie-analyses
 
-![](/images/icons/zz_video_camera.png){width="30"} Video-tutorial assumpties nagaan
-![](/images/icons/zz_video_camera.png){width="30"} Video-tutorial multivariate regressie-analyse
+![](/images/icons/zz_video_camera.png){width="30"} [Video-tutorial assumpties nagaan](https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/watch/2c331b97e90d4b8eb69830f50f7fa71d1d)
+
+![](/images/icons/zz_video_camera.png){width="30"} [Video-tutorial multivariate regressie-analyse](https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/watch/fffff6295ba0430f8e65e1d8b134b6bb1d)
 
 ## Lesmateriaal
 
