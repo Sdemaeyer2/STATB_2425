@@ -87,7 +87,7 @@ website:
           - text: "t-test rapporteren"
             href: t_test_Rapportage.qmd
       - section: "Screencasts"   
-        href: "Screencasts.qmd"
+        href: Screencasts.qmd
         
       - section: "Extra materiaal"
         contents: 
