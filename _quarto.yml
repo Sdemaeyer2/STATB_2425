@@ -86,7 +86,9 @@ website:
         contents: 
           - text: "t-test rapporteren"
             href: t_test_Rapportage.qmd
-            
+      - section: "Screencasts"   
+        href: "Screencasts.qmd"
+        
       - section: "Extra materiaal"
         contents: 
           - text: "Projecten in RStudio"

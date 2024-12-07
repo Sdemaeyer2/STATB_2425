@@ -388,7 +388,7 @@
     "href": "Contactmomenten/C2/C2.html#voorbereiding",
     "title": "Contactmoment 2",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 2 en Hoofdstuk 4 uit het OLP\n Online (R) Oefeningen ANOVA\n Online (R) Oefeningen kruistabellen\n Video-tutorial ANOVA\n Video-tutorial kruistabellen",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 2 en Hoofdstuk 4 uit het OLP\n Online (R) Oefeningen ANOVA\n Online (R) Oefeningen kruistabellen\n Screencast ANOVA\n Screencast kruistabellen",
     "crumbs": [
       "Contactmomenten",
       "C2"
@@ -432,7 +432,7 @@
     "href": "Contactmomenten/C3/C3.html#voorbereiding",
     "title": "Contactmoment 3",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP\n Online (R) Oefeningen correlatie-analses\n Online (R) Oefeningen bivariate regressie-analyses\n Video-tutorial correlatie-analyses\n Video-tutorial bivariate regressie-analyse",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP\n Online (R) Oefeningen correlatie-analses\n Online (R) Oefeningen bivariate regressie-analyses\n Screencast correlatie-analyses\n Screencast bivariate regressie-analyse",
     "crumbs": [
       "Contactmomenten",
       "C3"
@@ -476,7 +476,7 @@
     "href": "Contactmomenten/C1/C1.html#voorbereiding",
     "title": "Contactmoment 1",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP\n Online (R) Oefeningen t-test\n Video-tutorial t-test",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP\n Online (R) Oefeningen t-test\n Screencastl t-test",
     "crumbs": [
       "Contactmomenten",
       "C1"
@@ -546,7 +546,7 @@
     "href": "Contactmomenten/C4/C4.html#voorbereiding",
     "title": "Contactmoment 4",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Video-tutorial assumpties nagaan\n Video-tutorial multivariate regressie-analyse"
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties nagaan\n Screencast multivariate regressie-analyse"
   },
   {
     "objectID": "Contactmomenten/C4/C4.html#lesmateriaal",
@@ -977,6 +977,9 @@
     "href": "Screencasts.html",
     "title": "Screencasts",
     "section": "",
-    "text": "Terug naar de site\nVoor dit vak zijn een set screencasts gemaakt. Deze worden gehost op de mediasite van de Universiteit Antwerpen en kan je hier allemaal streamen.\nWil je naar de mediasite zelf: KLIK HIER"
+    "text": "Terug naar de site\nVoor dit vak zijn een set screencasts gemaakt. Deze worden gehost op de mediasite van de Universiteit Antwerpen en kan je hier allemaal streamen.\nWil je naar de mediasite zelf: KLIK HIER",
+    "crumbs": [
+      "Screencasts"
+    ]
   }
 ]
