@@ -9,6 +9,10 @@ editor: visual
 
 Voor dit vak zijn een set screencasts gemaakt. Deze worden gehost op de mediasite van de Universiteit Antwerpen en kan je hier allemaal streamen.
 
+::: callout-important
+Je moet ingelogd zijn met een Uantwerpen account om de screencasts te zien (zowel hier als op de mediasite zelf).
+:::
+
 Wil je naar de mediasite zelf: [KLIK HIER](https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public)
 
 <iframe title="Statistiek B (public)" width="1024" height="768" frameborder="0" scrolling="auto" marginheight="0" marginwidth="0" src="https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/embedded">
