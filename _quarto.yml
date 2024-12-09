@@ -51,8 +51,11 @@ website:
           - text: "C4"
             href: Contactmomenten/C4/C4.qmd
           - text: "C5"
+            href: Contactmomenten/C5/C5.qmd
           - text: "C6"
+            href: Contactmomenten/C6/C6.qmd
           - text: "C7"
+            href: Contactmomenten/C7/C7.qmd
 
       - section: "Online (R) oefeningen"
         href: Penguins.qmd

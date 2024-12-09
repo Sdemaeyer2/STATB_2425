@@ -1,0 +1,40 @@
+---
+title: "Contactmoment 5"
+---
+
+Dit contactmoment hebben we het over:
+
+-   assumpties bij regressie-analyses
+
+-   multivariate regressie
+
+## Voorbereiding
+
+![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP
+
+![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen assumpties bij regressie-analyses
+
+![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen multivariate regressie-analyses
+
+![](/images/icons/zz_video_camera.png){width="30"} Screencast assumpties regressie-analyse
+
+![](/images/icons/zz_video_camera.png){width="30"} Screencast multivariate regressie-analyse
+
+## Lesmateriaal
+
+![](/images/icons/zz_slides.png){width="30"} Slides Contactmoment 5
+
+![](/images/icons/zz_video_camera.png){width="30"} Lesopname (terug te vinden op Blackboard)
+
+![](/images/icons/guided-practice.png){width="30"} Opdrachten computer lab
+
+![](/images/icons/data.png){width="30"} Dataset computer lab
+
+![](/images/icons/worked-example.png){width="30"} Respons computer lab
+
+## Na de les
+
+![](/images/icons/singlelab.png){width="30"} [ZSO 6: Bivariate regressie (Deel 2)](/ZSO/ZSO6.qmd)
+
+![](/images/icons/singlelab.png){width="30"} [ZSO 7: Multivariate regressie](/ZSO/ZSO7.qmd)
+

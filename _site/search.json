@@ -417,47 +417,67 @@
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html",
-    "href": "Contactmomenten/C3/C3.html",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/C4/C4.html",
+    "href": "Contactmomenten/C4/C4.html",
+    "title": "Contactmoment 4",
     "section": "",
-    "text": "We behandelen volgende inhouden:",
+    "text": "Volgende inhouden komen aan bod:",
     "crumbs": [
       "Contactmomenten",
-      "C3"
+      "C4"
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html#voorbereiding",
-    "href": "Contactmomenten/C3/C3.html#voorbereiding",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/C4/C4.html#voorbereiding",
+    "href": "Contactmomenten/C4/C4.html#voorbereiding",
+    "title": "Contactmoment 4",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP\n Online (R) Oefeningen correlatie-analses\n Online (R) Oefeningen bivariate regressie-analyses\n Screencast correlatie-analyses\n Screencast bivariate regressie-analyse",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties nagaan\n Screencast multivariate regressie-analyse",
     "crumbs": [
       "Contactmomenten",
-      "C3"
+      "C4"
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html#lesmateriaal",
-    "href": "Contactmomenten/C3/C3.html#lesmateriaal",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/C4/C4.html#lesmateriaal",
+    "href": "Contactmomenten/C4/C4.html#lesmateriaal",
+    "title": "Contactmoment 4",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 3\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "text": "Lesmateriaal\n Slides Contactmoment 4\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
     "crumbs": [
       "Contactmomenten",
-      "C3"
+      "C4"
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html#na-de-les",
-    "href": "Contactmomenten/C3/C3.html#na-de-les",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/C4/C4.html#na-de-les",
+    "href": "Contactmomenten/C4/C4.html#na-de-les",
+    "title": "Contactmoment 4",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 5: correlaties\n ZSO 6: bivariate regressie",
+    "text": "Na de les\n ZSO 6: bivariate regressie (deel 2)\n ZSO 7: multivariate regressie",
     "crumbs": [
       "Contactmomenten",
-      "C3"
+      "C4"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/Contactmomenten.html",
+    "href": "Contactmomenten/Contactmomenten.html",
+    "title": "Contactmomenten",
+    "section": "",
+    "text": "Voor dit vak zijn er 7 contactmomenten gepland.\nHieronder vind je een overzicht van de verschillende contactmomenten en welke thema’s aan bod zullen komen.",
+    "crumbs": [
+      "Contactmomenten"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
+    "href": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
+    "title": "Contactmomenten",
+    "section": "Dataset voor computeroefeningen",
+    "text": "Dataset voor computeroefeningen\nPer contactmoment voorzien we een set van oefeningen die overheen de verschillende contactmomenten uitgevoerd worden op dezelfde dataset: Techniek.RData. Om de oefeningen goed te kunnen uitvoeren is het belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit codeboek kan je raadplegen via volgende link:",
+    "crumbs": [
+      "Contactmomenten"
     ]
   },
   {
@@ -515,67 +535,168 @@
     ]
   },
   {
-    "objectID": "Contactmomenten/Contactmomenten.html",
-    "href": "Contactmomenten/Contactmomenten.html",
-    "title": "Contactmomenten",
+    "objectID": "Contactmomenten/C7/C7.html",
+    "href": "Contactmomenten/C7/C7.html",
+    "title": "Contactmoment 7",
     "section": "",
-    "text": "Voor dit vak zijn er 7 contactmomenten gepland.\nHieronder vind je een overzicht van de verschillende contactmomenten en welke thema’s aan bod zullen komen.",
-    "crumbs": [
-      "Contactmomenten"
-    ]
-  },
-  {
-    "objectID": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
-    "href": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
-    "title": "Contactmomenten",
-    "section": "Dataset voor computeroefeningen",
-    "text": "Dataset voor computeroefeningen\nPer contactmoment voorzien we een set van oefeningen die overheen de verschillende contactmomenten uitgevoerd worden op dezelfde dataset: Techniek.RData. Om de oefeningen goed te kunnen uitvoeren is het belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit codeboek kan je raadplegen via volgende link:",
-    "crumbs": [
-      "Contactmomenten"
-    ]
-  },
-  {
-    "objectID": "Contactmomenten/C4/C4.html",
-    "href": "Contactmomenten/C4/C4.html",
-    "title": "Contactmoment 4",
-    "section": "",
-    "text": "Volgende inhouden komen aan bod:",
+    "text": "Dit contactmoment is van een heel andere aard. Dit keer dompelen we jullie onder in de concrete examen-context. Tijdens dit 3-uren durend contactmoment simuleren we de gehele examen setting.\nJe krijgt inzicht in het type vragen voor zowel het openboek als het gesloten boek gedeelte van het examen.\nTracht dit contactmoment zeker bij te wonen in de computerlokalen. Je gaat namelijk het examen zelf ook daar op die computers dienen uit te voeren\nWe overlopen ook de procedures die we tijdens het echte examen zullen doorlopen. Een voorbereid persoon is er 2 waard!!",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C7"
     ]
   },
   {
-    "objectID": "Contactmomenten/C4/C4.html#voorbereiding",
-    "href": "Contactmomenten/C4/C4.html#voorbereiding",
-    "title": "Contactmoment 4",
+    "objectID": "Contactmomenten/C7/C7.html#voorbereiding",
+    "href": "Contactmomenten/C7/C7.html#voorbereiding",
+    "title": "Contactmoment 7",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties nagaan\n Screencast multivariate regressie-analyse",
+    "text": "Voorbereiding\n Tracht alle onderwerpen uit de cursus al een keer te hebben doorgenomen\n Zorg dat je een goed werkend script hebt dat je ook richting examen wenst te gebruiken",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C7"
     ]
   },
   {
-    "objectID": "Contactmomenten/C4/C4.html#lesmateriaal",
-    "href": "Contactmomenten/C4/C4.html#lesmateriaal",
-    "title": "Contactmoment 4",
+    "objectID": "Contactmomenten/C7/C7.html#lesmateriaal",
+    "href": "Contactmomenten/C7/C7.html#lesmateriaal",
+    "title": "Contactmoment 7",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 4\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "text": "Lesmateriaal\n Slides Contactmoment 7\n Link Blackboard",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C7"
     ]
   },
   {
-    "objectID": "Contactmomenten/C4/C4.html#na-de-les",
-    "href": "Contactmomenten/C4/C4.html#na-de-les",
-    "title": "Contactmoment 4",
-    "section": "Na de les",
-    "text": "Na de les\n ZSO 6: bivariate regressie (deel 2)\n ZSO 7: multivariate regressie",
+    "objectID": "Contactmomenten/C6/C6.html",
+    "href": "Contactmomenten/C6/C6.html",
+    "title": "Contactmoment 6",
+    "section": "",
+    "text": "Dit contactmoment hebben we het over:",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C6"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C6/C6.html#voorbereiding",
+    "href": "Contactmomenten/C6/C6.html#voorbereiding",
+    "title": "Contactmoment 6",
+    "section": "Voorbereiding",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 10 uit het OLP\n Online (R) Oefeningen dummy-variabelen\n Online (R) Oefeningen interactie-effecten\n Screencast dummy-variabelen\n Screencast interactie-effecten",
+    "crumbs": [
+      "Contactmomenten",
+      "C6"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C6/C6.html#lesmateriaal",
+    "href": "Contactmomenten/C6/C6.html#lesmateriaal",
+    "title": "Contactmoment 6",
+    "section": "Lesmateriaal",
+    "text": "Lesmateriaal\n Slides Contactmoment 6\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "crumbs": [
+      "Contactmomenten",
+      "C6"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C6/C6.html#na-de-les",
+    "href": "Contactmomenten/C6/C6.html#na-de-les",
+    "title": "Contactmoment 6",
+    "section": "Na de les",
+    "text": "Na de les\n ZSO 8: Dummy-variabelen en interacties",
+    "crumbs": [
+      "Contactmomenten",
+      "C6"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C3/C3.html",
+    "href": "Contactmomenten/C3/C3.html",
+    "title": "Contactmoment 3",
+    "section": "",
+    "text": "We behandelen volgende inhouden:",
+    "crumbs": [
+      "Contactmomenten",
+      "C3"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C3/C3.html#voorbereiding",
+    "href": "Contactmomenten/C3/C3.html#voorbereiding",
+    "title": "Contactmoment 3",
+    "section": "Voorbereiding",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP\n Online (R) Oefeningen correlatie-analses\n Online (R) Oefeningen bivariate regressie-analyses\n Screencast correlatie-analyses\n Screencast bivariate regressie-analyse",
+    "crumbs": [
+      "Contactmomenten",
+      "C3"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C3/C3.html#lesmateriaal",
+    "href": "Contactmomenten/C3/C3.html#lesmateriaal",
+    "title": "Contactmoment 3",
+    "section": "Lesmateriaal",
+    "text": "Lesmateriaal\n Slides Contactmoment 3\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "crumbs": [
+      "Contactmomenten",
+      "C3"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C3/C3.html#na-de-les",
+    "href": "Contactmomenten/C3/C3.html#na-de-les",
+    "title": "Contactmoment 3",
+    "section": "Na de les",
+    "text": "Na de les\n ZSO 5: correlaties\n ZSO 6: bivariate regressie",
+    "crumbs": [
+      "Contactmomenten",
+      "C3"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C5/C5.html",
+    "href": "Contactmomenten/C5/C5.html",
+    "title": "Contactmoment 5",
+    "section": "",
+    "text": "Dit contactmoment hebben we het over:",
+    "crumbs": [
+      "Contactmomenten",
+      "C5"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C5/C5.html#voorbereiding",
+    "href": "Contactmomenten/C5/C5.html#voorbereiding",
+    "title": "Contactmoment 5",
+    "section": "Voorbereiding",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties bij regressie-analyses\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties regressie-analyse\n Screencast multivariate regressie-analyse",
+    "crumbs": [
+      "Contactmomenten",
+      "C5"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C5/C5.html#lesmateriaal",
+    "href": "Contactmomenten/C5/C5.html#lesmateriaal",
+    "title": "Contactmoment 5",
+    "section": "Lesmateriaal",
+    "text": "Lesmateriaal\n Slides Contactmoment 5\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "crumbs": [
+      "Contactmomenten",
+      "C5"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C5/C5.html#na-de-les",
+    "href": "Contactmomenten/C5/C5.html#na-de-les",
+    "title": "Contactmoment 5",
+    "section": "Na de les",
+    "text": "Na de les\n ZSO 6: Bivariate regressie (Deel 2)\n ZSO 7: Multivariate regressie",
+    "crumbs": [
+      "Contactmomenten",
+      "C5"
     ]
   },
   {
