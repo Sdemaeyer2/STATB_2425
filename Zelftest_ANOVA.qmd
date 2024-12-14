@@ -20,6 +20,60 @@ data("penguins")
 #| runbutton: false
 #| include: false
 
+### Functies uit car
+
+# moved from Rcmdr 13 July 2004
+
+# levene.test.default function slightly modified and generalized from Brian Ripley via R-help
+# the original generic version was contributed by Derek Ogle
+# last modified 2019-02-01 by J. Fox
+
+leveneTest <- function (y, ...) {
+	UseMethod("leveneTest") 
+}
+
+leveneTest.default <- function (y, group, center=median, ...) { # original levene.test
+	if (!is.numeric(y)) 
+		stop(deparse(substitute(y)), " is not a numeric variable")
+	if (!is.factor(group)) {
+		warning(deparse(substitute(group)), " coerced to factor.")
+		group <- as.factor(group)
+	}
+	valid <- complete.cases(y, group)
+	meds <- tapply(y[valid], group[valid], center, ...)
+	resp <- abs(y - meds[group])
+	table <- anova(lm(resp ~ group))[, c(1, 4, 5)]
+	rownames(table)[2] <- " "
+	dots <- deparse(substitute(...))
+	attr(table, "heading") <- paste("Levene's Test for Homogeneity of Variance (center = ", 
+			deparse(substitute(center)), if(!(dots == "NULL")) paste(":", dots),  ")", sep="")
+	table
+}
+
+
+leveneTest.formula <- function(y, data, ...) {
+	form <- y
+	mf <- if (missing(data)) model.frame(form) else model.frame(form, data)
+	if (any(sapply(2:dim(mf)[2], function(j) is.numeric(mf[[j]])))) 
+		stop("Levene's test is not appropriate with quantitative explanatory variables.")
+	y <- mf[,1]
+	if(dim(mf)[2]==2) group <- mf[,2]
+	else {
+		if (length(grep("\\+ | \\| | \\^ | \\:",form))>0) stop("Model must be completely crossed formula only.")
+		group <- interaction(mf[,2:dim(mf)[2]])
+	}
+	leveneTest.default(y=y, group=group, ...)
+}
+
+
+leveneTest.lm <- function(y, ...) {
+    m <- model.frame(y)
+    m$..y <- model.response(m)
+    f <- formula(y)
+    f[2] <- expression(..y)
+	leveneTest.formula(f, data=m, ...)
+}
+
 ### OLP2 Functies.R script
 
 freqtabel <- function(X){
@@ -1706,6 +1760,7 @@ Nu we de gemiddelde snavellengte per pinguïnsoort in de steekproef weten, is he
 *Voer de test uit die ons inzicht geeft in de mate waarin voldaan wordt aan de assumptie van gelijke binnengroepenvarianties*
 
 :::::: panel-tabset
+
 ## Oefening
 
 ```{webr}
@@ -1756,39 +1811,31 @@ leveneTest(penguins$bill_length_mm, penguins$species)
 
 ## Oefening 3
 
-
-*Voer de ANOVA analyse uit, rekening houdende met de resultaten van de Levene-test.*
+*Voer nu de ANOVA analyse uit om de nulhypothese te toetsen dat er in de populatie geen verschillen zijn tussen de drie pinguïnsoorten wat betreft snavellengte. Hou rekening met de resultaten van de Levene-test en bewaar het resultaat van de analyse in een object met de naam `M1`*
 
 :::::: panel-tabset
 ## Oefening
 
+
 ```{webr}
 #| exercise: ex3
+#| persist: true
 #| caption: Oefening3
 
 
 ```
 
-```{webr}
-#| exercise: ex2
-#| check: true
-answer <- leveneTest(penguins$bill_length_mm, penguins$species)
-if (identical(.result, answer)) {
-  list(correct = TRUE, message = "Juist!")
-} else {
-  list(correct = FALSE, message = "Fout.")
-}
-```
 
 ## Hints
 
 ::: {.hint exercise="ex2"}
 
-We dienen hiertoe een Levene-test uit te voeren. 
+De assumptie voor gelijke binnengroepenvarianties gaat op. Dus we kunnen de functie `aov( )` hanteren. De handigste manier is een nieuw object maken (`M1` in onderstaand geval) waarin we het resultaat wegschrijven van de `aov( )` functie. Vervolgens kunnen we via `summary(M1)` zicht krijgen op de resultaten.
 
 
 ``` r
-leveneTest(_______ , ________ )
+M1 <- aov(_______ ~ _______, data = penguins)
+summary(M1)
 ```
 :::
 
@@ -1798,12 +1845,65 @@ leveneTest(_______ , ________ )
 ::: {.solution exercise="ex1"}
 **Oplossing:**
 
-De volledige oplossing ziet er zo uit!
+De volledige oplossing ziet er zo uit! Met voor het `~` teken de afhankelijke variabele en na het `~` teken de onafhankelijke variabele. 
 
 ```{webr}
-#| exercise: ex2
+#| exercise: ex3
 #| solution: true
-leveneTest(penguins$bill_length_mm, penguins$species)
+M1 <- aov(bill_length_mm ~ species, data = penguins)
+summary(M1)
+```
+:::
+::::::
+
+## Oefening 4
+
+In de vorige oefening hebben we de ANOVA analyse uitgevoerd om de nulhypothese te toetsen dat er geen verschillen zijn tussen de drie soorten pinguïns aangaande snavellengte. Dat levert een algemene conclusie op: de kans dat er in de populatie geen verschillen zijn tussen de drie soorten pinguïns qua snavellengte is zeer klein (F = 410.6; df = 2, p < 0.001). 
+
+Een vervolgvraag is natuurlijk: is dit nu een groot verschil?
+
+*Doe het nodige om de effectgrootte van het effect van `species` op `bill_length_mm` na te gaan. Maak daarbij gebruik van je opgeslagen resultaten in het object `M1` uit de vorige oefening.*
+
+:::::: panel-tabset
+## Oefening
+
+```{webr}
+#| setup: true
+#| exercise: ex4
+M1 <- aov(bill_length_mm ~ species, data = penguins)
+```
+
+```{webr}
+#| exercise: ex4
+#| caption: Oefening4
+etasq(M1)
+```
+
+
+## Hints
+
+::: {.hint exercise="ex2"}
+
+Om de effectgrootte na te gaan bij ANOVA analyses maken we gebruik van Eta-kwadraat als maat. Deze kan je berekenen adhv de `etasq( )` functie.
+
+
+``` r
+etasq(_______)
+```
+:::
+
+
+## Oplossing
+
+::: {.solution exercise="ex1"}
+**Oplossing:**
+
+De handigste wijze is verwijzen naar `M1` in de `etasq( )` functie.  
+
+```{webr}
+#| exercise: 4
+#| solution: true
+etasq(M1)
 ```
 :::
 ::::::

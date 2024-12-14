@@ -850,7 +850,7 @@
     "href": "Zelftest_ANOVA.html#oefening-3-1",
     "title": "ANOVA zelftoetsing",
     "section": "Oefening 3",
-    "text": "Oefening 3\nVoer de ANOVA analyse uit, rekening houdende met de resultaten van de Levene-test.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe dienen hiertoe een Levene-test uit te voeren.\nleveneTest(_______ , ________ )\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nleveneTest(penguins$bill_length_mm, penguins$species)\nleveneTest(penguins$bill_length_mm, penguins$species)",
+    "text": "Oefening 3\nVoer nu de ANOVA analyse uit om de nulhypothese te toetsen dat er in de populatie geen verschillen zijn tussen de drie pinguïnsoorten wat betreft snavellengte. Hou rekening met de resultaten van de Levene-test en bewaar het resultaat van de analyse in een object met de naam M1\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe assumptie voor gelijke binnengroepenvarianties gaat op. Dus we kunnen de functie aov( ) hanteren. De handigste manier is een nieuw object maken (M1 in onderstaand geval) waarin we het resultaat wegschrijven van de aov( ) functie. Vervolgens kunnen we via summary(M1) zicht krijgen op de resultaten.\nM1 &lt;- aov(_______ ~ _______, data = penguins)\nsummary(M1)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit! Met voor het ~ teken de afhankelijke variabele en na het ~ teken de onafhankelijke variabele.\n\n\nM1 &lt;- aov(bill_length_mm ~ species, data = penguins)\nsummary(M1)\nM1 &lt;- aov(bill_length_mm ~ species, data = penguins)\nsummary(M1)",
     "crumbs": [
       "Online (R) oefeningen",
       "ANOVA"
@@ -1117,6 +1117,17 @@
     "text": "Terug naar de site\nVoor dit vak zijn een set screencasts gemaakt. Deze worden gehost op de mediasite van de Universiteit Antwerpen en kan je hier allemaal streamen.\n\n\n\n\n\n\nBelangrijk\n\n\n\nJe moet ingelogd zijn met een Uantwerpen account om de screencasts te zien (zowel hier als op de mediasite zelf).\n\n\nWil je naar de mediasite zelf: KLIK HIER",
     "crumbs": [
       "Screencasts"
+    ]
+  },
+  {
+    "objectID": "Zelftest_ANOVA.html#oefening-4-1",
+    "href": "Zelftest_ANOVA.html#oefening-4-1",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 4",
+    "text": "Oefening 4\nIn de vorige oefening hebben we de ANOVA analyse uitgevoerd om de nulhypothese te toetsen dat er geen verschillen zijn tussen de drie soorten pinguïns aangaande snavellengte. Dat levert een algemene conclusie op: de kans dat er in de populatie geen verschillen zijn tussen de drie soorten pinguïns qua snavellengte is zeer klein (F = 410.6; df = 2, p &lt; 0.001).\nEen vervolgvraag is natuurlijk: is dit nu een groot verschil?\nDoe het nodige om de effectgrootte van het effect van species op bill_length_mm na te gaan. Maak daarbij gebruik van je opgeslagen resultaten in het object M1 uit de vorige oefening.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm de effectgrootte na te gaan bij ANOVA analyses maken we gebruik van Eta-kwadraat als maat. Deze kan je berekenen adhv de etasq( ) functie.\netasq(_______)\n\n\n\n\nOplossing:\nDe handigste wijze is verwijzen naar M1 in de etasq( ) functie.\n\n\netasq(M1)\netasq(M1)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
     ]
   }
 ]
