@@ -1,0 +1,51 @@
+---
+title: "ANOVA rapporteren"
+format: 
+  closeread-html:
+    cr-style:
+      narrative-background-color-overlay: transparent
+      narrative-background-color-sidebar: "#ADA601"
+      section-background-color: transparent
+      narrative-text-color-sidebar: white
+      narrative-text-color-overlay: black
+sidebar: false
+
+---
+
+[terug naar overzicht](Rapporteren.qmd)
+
+We nemen je mee door cruciale elementen in de rapportage van resultaten van een ANOVA-analyse 
+
+Hiertoe hernemen we de resultaten van de oefeningen aangaande het verschil in snavellengte tussen de drie onderzochte pinguïnsoorten. De oefening kan je [hier](Zelftest_ANOVA.qmd) terug vinden.
+
+*Scroll op deze pagina door naar beneden en we analyseren, zin per zin het stukje rapportage.*
+
+
+:::{.cr-section}
+
+We starten met het meegeven van de beschrijvende statistieken voor de steekroef. Merk ook op hoe we heel expliciet verwijzen naar het woord steekproef in deze zin om alle verwarring te vermijden. [@cr-rapportage]{hlz="1"}
+
+We geven zowel het gemiddelde als de standaardafwijking weer per pinguïnsoort. Op die manier krijgt de lezer een beeld over welke pinguïnsoort gemiddeld de langste en kortste snavel heeft en hoe groot verschillen zijn tussen pinguïns van dezelfde soort. [@cr-rapportage]{highlight="cr-beschrijving1,cr-beschrijving2,cr-beschrijving3"}
+
+
+De volgende zin rapporteert expliciet de conclusie op basis van de Levene test om te bepalen of de assumptie van gelijke binnengroepenvariantie opgaat. Merk op hoe we ook hier expliciet verwijzen naar waarden uit de output: de F-waarde, het aantal vrijheidsgraden en de bijhorende p-waarde. Zo zijn we zeer transparant naar de lezers toe. [@cr-rapportage]{hlz="2" scale-by="1.5"}
+
+Zoomen we even in naar het stukje over de F-waarde hier, dan merk je dat we tussen haakjes meteen ook de vrijheidsgraden meegeven in de vorm van F(vrijheidsgraad1, vrijheidsgraad2). Hier zijn de vrijheidsgraden dus respievelijk 2 en 339. [@cr-rapportage]{highlight="cr-fwaarde" scale-by="1.5"}
+
+Daarna volgt de rapportage van de resultaten van de eigenlijke ANOVA-analyse. Opnieuw delen we de informatie uit de output met de lezer: de F-waarde, het aantal vrijheidsgraden en de p-waarde. [@cr-rapportage]{hlz="3"}
+
+Vervolgens is het van belang om ook een inzicht te geven in de effectgrootte. Bij ANOVA kunnen we eta² gebruiken als maat.[@cr-rapportage]{hlz="4"} 
+
+We rapporteren zowel het getal zelf ... [@cr-rapportage]{highlight="cr-eta" scale-by="1.5" pan-to="-25%,-50%"}
+
+als de interpretatie ervan (een groot effect in dit geval). [@cr-rapportage]{highlight="cr-grootte" scale-by="1.5" pan-to="-25%,-50%"}
+
+Tot slot rapporteren we over de post-hoc testen die typisch ook uitgevoerd worden bij ANOVA-analyses. [@cr-rapportage]{hlz="5"} 
+
+| {#cr-rapportage .scale-to-fill}
+| [In de steekproef waren er verschillen in de gemiddelde snavellengte van Adelie pinguïns]{#cr-steekproef} [(M = 38.791, SD = 2.663)]{#cr-beschrijving1}, Chinstrap pinguïns [(M = 48.834, SD = 3.339)]{#cr-beschrijving2} en Gentoo pinguïns [(M = 47.505, SD = 3.082)]{#cr-beschrijving3}.
+| Uit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor de drie soorten pinguïns (Chinstrap, Adelie, en Gentoo) niet significant afwijkt van 0 ([F(2,339)]{#cr-fwaarde} = 2.2425, p = 0.1078). De kans dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten bedraagt hier 11%. Deze kans is groter dan 0.05, wat betekent dat we er vanuit kunnen gaan dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten.
+| De ANOVA-analyse geeft aan dat de verschillen in gemiddelde snavellengte hoogstwaarschijnlijk ook in de populatie terug te vinden zijn (F(2,339) = 410.6, p < 0.001). 
+| Deze verschillen in snavellengte tussen de drie pinguïnsoorten kunnen we omschrijven als [een groot effect]{#cr-grootte} [(eta² = 0.708)]{#cr-eta}. 
+| Uit de post-hoc analyse blijkt dat alle drie de pinguïnsoorten statistisch significant van elkaar verschillen qua snavellengte: Chinstrap pinguïns hebben een langere snavel dan Adelie en Gentoo pinguïns. Gentoo pinguïns hebben op hun beurt een langere snavel dan Adelie pinguïns.
+:::

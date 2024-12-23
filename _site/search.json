@@ -525,6 +525,13 @@
     ]
   },
   {
+    "objectID": "ANOVA_Rapportage.html",
+    "href": "ANOVA_Rapportage.html",
+    "title": "ANOVA rapporteren",
+    "section": "",
+    "text": "terug naar overzicht\nWe nemen je mee door cruciale elementen in de rapportage van resultaten van een ANOVA-analyse\nHiertoe hernemen we de resultaten van de oefeningen aangaande het verschil in snavellengte tussen de drie onderzochte pinguïnsoorten. De oefening kan je hier terug vinden.\nScroll op deze pagina door naar beneden en we analyseren, zin per zin het stukje rapportage.\n\n\n\n\nWe starten met het meegeven van de beschrijvende statistieken voor de steekroef. Merk ook op hoe we heel expliciet verwijzen naar het woord steekproef in deze zin om alle verwarring\n\n\n\n\nWe geven zowel het gemiddelde als de standaardafwijking weer per pinguïnsoort. Op die manier scheppen we meteen een beeld over welke pinguïnsoort gemiddeld de langste en kortste snavel heeft en hoe groot verschillen zijn tussen pinguïns van dezelfde soort als het gaat om snavellengte.\n\n\n\n\nIn die zin benadrukken we dat deze gemiddelden gebaseerd zijn op steekproefgegevens.\n\n\n\n\nDe volgende zin rapporteert expliciet de conclusie op basis van de Levene test om te bepalen of de assumptie van gelijke binnengroepenvariantie opgaat.Merk op hoe we ook hier expliciet verwijzen naar waarden uit de output: de F-waarde, het aantal vrijheidsgraden (2 waarden) en de bijhorende p-waarde. Zo zijn we zeer transparant naar de lezers toe.\n\n\n\n\nZoomen we even in naar het stukje over de F-waarde hier, dan merk je dat we tussen haakjes meteen ook de vrijheidsgraden meegeven in de vorm van F(vrijheidsgraad1, vrijheidsgraad2). Hier zijn de vrijheidsgraden dus respievelijk 2 en 339.\n\n\n\n\nDaarna volgt de rapportage van de resultaten van de eigenlijke ANOVA-analyse. Opnieuw delen we de informatie uit de output met de lezer: de F-waarde, aantal vrijheidsgraden en de p-waarde.\n\n\n\n\n\n\nIn de steekproef waren er verschillen in de gemiddelde snavellengte van Adelie pinguïns (M = 38.791, SD = 2.663), Chinstrap pinguïns (M = 48.834, SD = 3.339) en Gentoo pinguïns (M = 47.505, SD = 3.082).\nUit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor de drie soorten pinguïns (Chinstrap, Adelie, en Gentoo) niet significant afwijkt van 0 (F(2,339) = 2.2425, p = 0.1078). De kans dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten bedraagt hier 11%. Deze kans is groter dan 0.05, wat betekent dat we er vanuit kunnen gaan dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten.\nDe ANOVA-analyse geeft aan dat de verschillen in gemiddelde snavellengte hoogstwaarschijnlijk ook in de populatie terug te vinden zijn (F(2,339) = 410.6, p &lt; 0.001).\nDeze verschillen in snavellengte tussen de drie pinguïnsoorten kunnen we omschrijven als een groot effect (eta² = 0.708).\nUit de post-hoc analyse blijkt dat alle drie de pinguïnsoorten statistisch significant van elkaar verschillen qua snavellengte: Chinstrap pinguïns hebben een langere snavel dan Adelie en Gentoo pinguïns. Gentoo pinguïns hebben op hun beurt een langere snavel dan Adelie pinguïns."
+  },
+  {
     "objectID": "Rapporteren.html",
     "href": "Rapporteren.html",
     "title": "Rapporteren",
@@ -532,6 +539,28 @@
     "text": "Deze cursus behandelt een hele reeks analysetechnieken en leert je ook hoe je deze dient uit te voeren in R en RStudio.\nDeze analyses uitvoeren en inzicht hebben in de resultaten is één zaak. Maar als onderzoeker is het ook belangrijk om helder te communiceren over de resultaten. In deze sectie vind je per analysetechniek een stukje voorbeeld rapportage dat we systematisch ontleden.\nDe voorbeelden zijn allen gebaseerd op de resultaten die je kan repliceren indien je de Online (R) oefeningen op deze website oplost.\n\n\n\nfiguur gemaakt met DALL-E",
     "crumbs": [
       "Rapporteren"
+    ]
+  },
+  {
+    "objectID": "Zelftest_kruistabellen.html",
+    "href": "Zelftest_kruistabellen.html",
+    "title": "Kruistabellen zelftoetsing",
+    "section": "",
+    "text": "Met kruistabllen kunnen we de (al dan niet veronderstelde causale) relatie tussen twee categorische variabelen nagaan. In dit onderdeel passen we dit toe op de pinguïns dataset.\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nVoor deze oefening willen we twee onderzoeksvragen beantwoorden:",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Kruistabellen"
+    ]
+  },
+  {
+    "objectID": "Zelftest_kruistabellen.html#oefening-1",
+    "href": "Zelftest_kruistabellen.html#oefening-1",
+    "title": "Kruistabellen zelftoetsing",
+    "section": "Oefening 1",
+    "text": "Oefening 1\nWe starten met OV1 waarin we het verband wensen na te gaan tussen species en island.\nMaak in onderstaande codeblok een kruistabel aan waarin we makkelijk het verband kunnen aflezen.\n\n\n\n\n\n\nTip\n\n\n\nWe wensen meteen relatieve frequenties (percentages) te berekenen. Denk goed na over mogelijke causaliteit die de onderzoeksvraag veronderstelt.\n\n\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe hebben in het OLP afgesproken als een soort conventie om te werken met kolompercentages in kruistabllen. De functie kruistabel.kolom( ) maakt een kruistabel aan met enkel kolompercentages.\nkruistabel.kolom(penguins$______, penguins$______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nkruistabel.kolom(penguins$species, penguins$island)\nkruistabel.kolom(penguins$species, penguins$island)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Kruistabellen"
     ]
   },
   {
@@ -857,6 +886,50 @@
     ]
   },
   {
+    "objectID": "Zelftest_ANOVA.html#oefening-4-1",
+    "href": "Zelftest_ANOVA.html#oefening-4-1",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 4",
+    "text": "Oefening 4\nIn de vorige oefening hebben we de ANOVA analyse uitgevoerd om de nulhypothese te toetsen dat er geen verschillen zijn tussen de drie soorten pinguïns aangaande snavellengte. Dat levert een algemene conclusie op: de kans dat er in de populatie geen verschillen zijn tussen de drie soorten pinguïns qua snavellengte is zeer klein (F = 410.6; df = 2, p &lt; 0.001).\nEen vervolgvraag is natuurlijk: is dit nu een groot verschil?\nDoe het nodige om de effectgrootte van het effect van species op bill_length_mm na te gaan. Maak daarbij gebruik van je opgeslagen resultaten in het object M1 uit de vorige oefening.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm de effectgrootte na te gaan bij ANOVA analyses maken we gebruik van Eta-kwadraat als maat. Deze kan je berekenen adhv de etasq( ) functie.\netasq(_______)\n\n\n\n\nOplossing:\nDe handigste wijze is verwijzen naar M1 in de etasq( ) functie.\n\n\netasq(M1)\netasq(M1)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
+    "objectID": "Zelftest_ANOVA.html#oefening-5-1",
+    "href": "Zelftest_ANOVA.html#oefening-5-1",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 5",
+    "text": "Oefening 5\nANOVA leert ons enkel iets over de algemene vraag of er verschillen zijn tussen de drie pinguïnsoorten aangaande snavellengte. We testen enkel de kans dat de nulhypothese opgaat die stelt dat we in de populatie van alle pinguïns geen verschil in snavellengte verwachten tussen de drie soorten pinguïns.\nWat we nog niet weten is of bijvoorbeeld de Adelie soort een andere snavellengte heeft dan specifiek de Chinstrap soort. Maw, we hebben geen specifieke informatie over de verschillen tussen twee soorten pinguïns onderling. Daartoe doen we typisch beroep op post-hoc testen.\nVoer post-hoc testen uit om inzicht te krijgen in de verschillen tussen telkens twee soorten pinguïns onderling que snavellengte. Maak meteen ook een visualisatie van de resultaten van deze post-hoc testen.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe functie die we kunnen hanteren is de TukeyHSD( ) functie. Tussen de haakjes moet je verwijzen naar het resultaat van een ANOVA analyse (meerbepaald het resultaat van een aov( ) functie in R).\nM1_Tukey &lt;- TukeyHSD(_______)\nM1_Tukey\nplot(M1_Tukey)\n\n\n\n\nOplossing:\nAangezien we eerder het resultaat van de ANOVA analyse reeds wegschreven in het object M1 kunnen we dit object op zich gebruiken om verdere analyses op uit te voeren.\nDe functie TukeyHSD( ) laat toe om een post-hoc testen uit te voeren. Door het resultaat van deze post-hoc testen op zich opnieuw weg te schrijven in een nieuw object M1_Tukey kunnen we handig gebruik maken van de generieke functie plot( ) om de resultaten van de post-hoc testen weer te geven.\n\n\nM1_Tukey &lt;- TukeyHSD(M1)\nM1_Tukey\nplot(M1_Tukey)\nM1_Tukey &lt;- TukeyHSD(M1)\nM1_Tukey\nplot(M1_Tukey)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
+    "objectID": "Zelftest_ANOVA.html#oefening-6-1",
+    "href": "Zelftest_ANOVA.html#oefening-6-1",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 6",
+    "text": "Oefening 6\nHieronder kan je de het resultaat van de post-hoc testen zien.\n\n\n\n\n\n\n\n\nNu vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.\n\nVraagAntwoordsleutel\n\n\nWelke van volgende uitspraken is fout?\n\nDe kans dat er in de populatie geen verschil is in snavellengte tussen Chinstrap en Adelie pinguïns is kleiner dan 1%\nIn de populatie verwachten we geen verschil in snavellengte tussen Gentoo en Chinstrap pinguïns\nIn 95% van de mogelijke steekproeven van pinguïns die we kunnen trekken, is het verschil in gemiddelde snavellengte tussen Gentoo en Adelie pinguïns ergens tussen de 7.87 en 9.56 mm\nDe analyse onderbouwt de conclusie dat in de populatie dat alle drie de soorten pinguïns van elkaar verschillen qua gemiddelde snavellengte\n\n\n\nJe diende uitspraak 2 te kiezen als foute uitspraak.\n\nDe kans dat er in de populatie geen verschil is in snavellengte tussen Chinstrap en Adelie pinguïns is kleiner dan 1%\n\n= JUIST! Dit kan je aflezen in de geprinte output. De laatste kolom met titel p adj geeft de probabiliteit weer van de nulhypothese. Bij de eerste lijn (de vergelijking van Chinstrap met Adelie pinguïns) is deze waarde &lt;0.001. De kans dat de nulhypothese juist is, is dus zeer laag. En de nulhypothese hier is dat er in de populatie GEEN verschil is in gemiddelde snavellengte.\n\nIn de populatie verwachten we geen verschil in snavellengte tussen Gentoo en Chinstrap pinguïns\n\n= FOUT! De informatie in de geprinte output (en ook de figuur) wijzen net de andere richting uit. Kijken we naar de geprinte output dan zien we dat de kans dat de nulhypothese juist is (wederom kolom p adj) lager is dan 5% (p = 0.009) (zie laatste rij in de output). Ook in de figuur zien we dat het 95%-betrouwbaarheidsinterval voor het verschil in gemiddelde snavellengte tussen Gentoo en Chinstrap pinguïns (onderste betrouwbaarheidsinterval) niet de waarde nul bevat. Ook dat onderbouwt dezelfde conclusie.\n\nIn 95% van de mogelijke steekproeven van pinguïns die we kunnen trekken, is het verschil in gemiddelde snavellengte tussen Gentoo en Adelie pinguïns ergens tussen de 7.87 en 9.56 mm\n\n= JUIST! In de geprinte output heb je de kolommen lwr en upr die respectievelijk de onder- en bovengrens van een 95%-betrouwbaarheidsinterval weergeven. Voor de middelste rij (Gentoo-Adelie) zie je de waarden 7.87 en 9.56 terug. Een 95%-betrouwbaarheidsinterval kan geïnterpreteerd worden als het resultaat van de denkoefening dat we alle mogelijke steekproeven zouden nemen en daaruit afleiden wat 95% van deze steekrpoeven aan beeld geeft over het verschil in gemiddelde snavellengte tussen beide soorten pinguïns.\n\nDe analyse onderbouwt de conclusie dat in de populatie dat alle drie de soorten pinguïns van elkaar verschillen qua gemiddelde snavellengte\n\n= JUIST! Alle p-waarden in de geprinte output zijn lager dan 0.05. Maw, voor elke paarsgewijze vergelijking van pinguïnsoorten kunnen we concluderen dat er een significant verschil is qua gemiddelde snavellengte.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
+    "objectID": "Zelftest_ANOVA.html#oefening-7",
+    "href": "Zelftest_ANOVA.html#oefening-7",
+    "title": "ANOVA zelftoetsing",
+    "section": "Oefening 7",
+    "text": "Oefening 7\nDe nodige analyses zijn uitgevoerd. Wat nu nog rest is het goed interpreteren en uitschrijven van conclusies op basis van de output die gegenereerd is tijdens de analyses.\nSchrijf voor jezelf een of meerdere alineas waarin je de nodige informatie opneemt om de resultaten van de analyse te communiceren.\n\n\n\n\n\n\nOplossing\n\n\n\n\n\nDit is een mogelijke verwoording van de resultaten:\nIn de steekproef waren er verschillen in de gemiddelde snavellengte van Adelie pinguïns (M = 38.791, SD = 2.663), Chinstrap pinguïns (M = 48.834, SD = 3.339) en Gentoo pinguïns (M = 47.505, SD = 3.082).\nUit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor de drie soorten pinguïns (Chinstrap, Adelie, en Gentoo) niet significant afwijkt van 0 (F(2,339) = 2.2425, p = 0.1078). De kans dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten bedraagt hier 11%. Deze kans is groter dan 0.05, wat betekent dat we er vanuit kunnen gaan dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten.\nDe ANOVA-analyse geeft aan dat de verschillen in snavellengte tussen de drie pinguïnsoorten hoogstwaarschijnlijk ook in de populatie terug te vinden zijn (F(2,339) = 410.6, p &lt; 0.001). Deze verschillen in snavellengte tussen de drie pinguïnsoorten kunnen we omschrijven als een groot effect (eta² = 0.708). Uit de post-hoc analyse blijkt dat alle drie de pinguïnsoorten statistisch significant van elkaar verschillen qua snavellengte: Chinstrap pinguïns hebben een langere snavel dan Adelie en Gentoo pinguïns. Gentoo pinguïns hebben op hun beurt een langere snavel dan Adelie pinguïns.\n\n\n\nRapporteren is van cruciaal belang. Wil je meer toelichting bij de bovenstaande rapportage, klik dan door naar hier.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "ANOVA"
+    ]
+  },
+  {
     "objectID": "t_test_Rapportage.html",
     "href": "t_test_Rapportage.html",
     "title": "t-test rapporteren",
@@ -1117,17 +1190,6 @@
     "text": "Terug naar de site\nVoor dit vak zijn een set screencasts gemaakt. Deze worden gehost op de mediasite van de Universiteit Antwerpen en kan je hier allemaal streamen.\n\n\n\n\n\n\nBelangrijk\n\n\n\nJe moet ingelogd zijn met een Uantwerpen account om de screencasts te zien (zowel hier als op de mediasite zelf).\n\n\nWil je naar de mediasite zelf: KLIK HIER",
     "crumbs": [
       "Screencasts"
-    ]
-  },
-  {
-    "objectID": "Zelftest_ANOVA.html#oefening-4-1",
-    "href": "Zelftest_ANOVA.html#oefening-4-1",
-    "title": "ANOVA zelftoetsing",
-    "section": "Oefening 4",
-    "text": "Oefening 4\nIn de vorige oefening hebben we de ANOVA analyse uitgevoerd om de nulhypothese te toetsen dat er geen verschillen zijn tussen de drie soorten pinguïns aangaande snavellengte. Dat levert een algemene conclusie op: de kans dat er in de populatie geen verschillen zijn tussen de drie soorten pinguïns qua snavellengte is zeer klein (F = 410.6; df = 2, p &lt; 0.001).\nEen vervolgvraag is natuurlijk: is dit nu een groot verschil?\nDoe het nodige om de effectgrootte van het effect van species op bill_length_mm na te gaan. Maak daarbij gebruik van je opgeslagen resultaten in het object M1 uit de vorige oefening.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm de effectgrootte na te gaan bij ANOVA analyses maken we gebruik van Eta-kwadraat als maat. Deze kan je berekenen adhv de etasq( ) functie.\netasq(_______)\n\n\n\n\nOplossing:\nDe handigste wijze is verwijzen naar M1 in de etasq( ) functie.\n\n\netasq(M1)\netasq(M1)",
-    "crumbs": [
-      "Online (R) oefeningen",
-      "ANOVA"
     ]
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contactmoment 3 – Statistiek B</title>
+<title>ANOVA rapporteren – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../Contactmomenten/C4/C4.html" rel="next">
-<link href="../../Contactmomenten/C2/C2.html" rel="prev">
-<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b86774849c83f8842429632de05d13be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6392951245190f3ede2802a6c60a044b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -96,289 +97,48 @@ cookieconsent.run({
 });
 </script> 
   
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
 
 
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <div id="quarto-announcement" data-announcement-id="b0e362a38869e05bc3e01903c80d0932" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
 <p><strong>Alert</strong> - deze website is nog in ontwikkeling - feedback altijd welkom via sven.demaeyer@uantwperen.be</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Contactmomenten/Contactmomenten.html">Contactmomenten</a></li><li class="breadcrumb-item"><a href="../../Contactmomenten/C3/C3.html">C3</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/STAT B.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.uantwerpen.be/nl/" title="uantwerpen.be/nl/" class="quarto-navigation-tool px-1" aria-label="uantwerpen.be/nl/"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/Sdemaeyer2/STATB_2425" title="Statistiek B" class="quarto-navigation-tool px-1" aria-label="Statistiek B"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Schakel leesmodus">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
-</div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Zoeken"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welkom</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Open Leer Pakket</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../Contactmomenten/Contactmomenten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Contactmomenten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C1/C1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">C1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C2/C2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">C2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C3/C3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">C3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C4/C4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">C4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C5/C5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">C5</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C6/C6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">C6</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C7/C7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">C7</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../Penguins.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Online (R) oefeningen</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Zelftest_t_test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">t-test</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Zelftest_ANOVA.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ANOVA</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Zelftest_kruistabellen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Kruistabellen</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">ZSO</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO1: van vraag naar methode</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO2: t-test</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO3: ANOVA</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO4: Kruistabellen</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO5: Correlaties</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO6: Bivariate regressie</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO7: Multivariate regressie en assumpties</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ZSO/ZSO8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ZSO8: Dummy-variabelen en interacties</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../Rapporteren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rapporteren</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../t_test_Rapportage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">t-test rapporteren</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Screencasts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Screencasts</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Extra materiaal</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Extra/Projecten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Projecten in RStudio</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto documenten</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
- <span class="menu-text">Data-manipulatie met dplyr</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../studiewijzer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Studiewijzer</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Op deze pagina</h2>
-   
-  <ul>
-  <li><a href="#voorbereiding" id="toc-voorbereiding" class="nav-link active" data-scroll-target="#voorbereiding">Voorbereiding</a></li>
-  <li><a href="#lesmateriaal" id="toc-lesmateriaal" class="nav-link" data-scroll-target="#lesmateriaal">Lesmateriaal</a></li>
-  <li><a href="#na-de-les" id="toc-na-de-les" class="nav-link" data-scroll-target="#na-de-les">Na de les</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-narrative-background-color-overlay: transparent;
+--cr-narrative-text-color-sidebar: white;
+--cr-narrative-text-color-overlay: black;
+--cr-narrative-background-color-sidebar: #ADA601;
+--cr-section-background-color: transparent;
+        }
+      </style>
+    
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Contactmomenten/Contactmomenten.html">Contactmomenten</a></li><li class="breadcrumb-item"><a href="../../Contactmomenten/C3/C3.html">C3</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contactmoment 3</h1>
+<h1 class="title">ANOVA rapporteren</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -390,34 +150,57 @@ cookieconsent.run({
 </header>
 
 
-<p>We behandelen volgende inhouden:</p>
-<ul>
-<li><p>covariantie en correlatie</p></li>
-<li><p>bivariate regressie</p></li>
-</ul>
-<section id="voorbereiding" class="level2">
-<h2 class="anchored" data-anchor-id="voorbereiding">Voorbereiding</h2>
-<p><img src="../../images/icons/book.png" class="img-fluid" width="30"> Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP</p>
-<p><img src="../../images/icons/singletutorial.png" class="img-fluid" width="30"> Online (R) Oefeningen correlatie-analses</p>
-<p><img src="../../images/icons/singletutorial.png" class="img-fluid" width="30"> Online (R) Oefeningen bivariate regressie-analyses</p>
-<p><img src="../../images/icons/zz_video_camera.png" class="img-fluid" width="30"> <a href="https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/watch/c1205c7fb4214396b4e5d5ba0e7275de1d">Screencast correlatie-analyses</a></p>
-<p><img src="../../images/icons/zz_video_camera.png" class="img-fluid" width="30"> <a href="https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/watch/bc68fd9c2ac44c4a822f6585022a55101d">Screencast bivariate regressie-analyse</a></p>
-</section>
-<section id="lesmateriaal" class="level2">
-<h2 class="anchored" data-anchor-id="lesmateriaal">Lesmateriaal</h2>
-<p><img src="../../images/icons/zz_slides.png" class="img-fluid" width="30"> Slides Contactmoment 3</p>
-<p><img src="../../images/icons/zz_video_camera.png" class="img-fluid" width="30"> Lesopname (terug te vinden op Blackboard)</p>
-<p><img src="../../images/icons/guided-practice.png" class="img-fluid" width="30"> Opdrachten computer lab</p>
-<p><img src="../../images/icons/data.png" class="img-fluid" width="30"> Dataset computer lab</p>
-<p><img src="../../images/icons/worked-example.png" class="img-fluid" width="30"> Respons computer lab</p>
-</section>
-<section id="na-de-les" class="level2">
-<h2 class="anchored" data-anchor-id="na-de-les">Na de les</h2>
-<p><img src="../../images/icons/singlelab.png" class="img-fluid" width="30"> <a href="../../ZSO/ZSO5.html">ZSO 5: correlaties</a></p>
-<p><img src="../../images/icons/singlelab.png" class="img-fluid" width="30"> <a href="../../ZSO/ZSO6.html">ZSO 6: bivariate regressie</a></p>
+<p><a href="./Rapporteren.html">terug naar overzicht</a></p>
+<p>We nemen je mee door cruciale elementen in de rapportage van resultaten van een ANOVA-analyse</p>
+<p>Hiertoe hernemen we de resultaten van de oefeningen aangaande het verschil in snavellengte tussen de drie onderzochte pinguïnsoorten. De oefening kan je <a href="./Zelftest_ANOVA.html">hier</a> terug vinden.</p>
+<p><em>Scroll op deze pagina door naar beneden en we analyseren, zin per zin het stukje rapportage.</em></p>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-hlz="1" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>We starten met het meegeven van de beschrijvende statistieken voor de steekroef. Merk ook op hoe we heel expliciet verwijzen naar het woord steekproef in deze zin om alle verwarring</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-highlight="cr-beschrijving1,cr-beschrijving2,cr-beschrijving3" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>We geven zowel het gemiddelde als de standaardafwijking weer per pinguïnsoort. Op die manier scheppen we meteen een beeld over welke pinguïnsoort gemiddeld de langste en kortste snavel heeft en hoe groot verschillen zijn tussen pinguïns van dezelfde soort als het gaat om snavellengte.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="cr-steekproef" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>In die zin benadrukken we dat deze gemiddelden gebaseerd zijn op steekproefgegevens.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="2" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>De volgende zin rapporteert expliciet de conclusie op basis van de Levene test om te bepalen of de assumptie van gelijke binnengroepenvariantie opgaat.Merk op hoe we ook hier expliciet verwijzen naar waarden uit de output: de F-waarde, het aantal vrijheidsgraden (2 waarden) en de bijhorende p-waarde. Zo zijn we zeer transparant naar de lezers toe.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="cr-levenetest" data-focus-on="cr-rapportage">
+<div class="narrative">
+<p>Zoomen we even in naar het stukje over de F-waarde hier, dan merk je dat we tussen haakjes meteen ook de vrijheidsgraden meegeven in de vorm van F(vrijheidsgraad1, vrijheidsgraad2). Hier zijn de vrijheidsgraden dus respievelijk 2 en 339.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Daarna volgt de rapportage van de resultaten van de eigenlijke ANOVA-analyse. Opnieuw delen we de informatie uit de output met de lezer: de F-waarde, aantal vrijheidsgraden en de p-waarde.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-rapportage" class="scale-to-fill sticky">
+<div class="line-block"><span id="lb1-1"><span id="cr-steekproef">In de steekproef waren er verschillen in de gemiddelde snavellengte van Adelie pinguïns</span> <span id="cf-beschrijving1">(M = 38.791, SD = 2.663)</span>, Chinstrap pinguïns <span id="cr-beschrijving2">(M = 48.834, SD = 3.339)</span> en Gentoo pinguïns <span id="cr-beschrijving3">(M = 47.505, SD = 3.082)</span>.</span><br>
+<span id="lb1-2">Uit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor de drie soorten pinguïns (Chinstrap, Adelie, en Gentoo) niet significant afwijkt van 0 <span id="cr-levenestest">(F(2,339)</span> = 2.2425, p = 0.1078). De kans dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten bedraagt hier 11%. Deze kans is groter dan 0.05, wat betekent dat we er vanuit kunnen gaan dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten.</span><br>
+<span id="lb1-3">De ANOVA-analyse geeft aan dat de verschillen in gemiddelde snavellengte hoogstwaarschijnlijk ook in de populatie terug te vinden zijn (F(2,339) = 410.6, p &lt; 0.001).</span><br>
+<span id="lb1-4">Deze verschillen in snavellengte tussen de drie pinguïnsoorten kunnen we omschrijven als een groot effect (eta² = 0.708).</span><br>
+<span id="lb1-5">Uit de post-hoc analyse blijkt dat alle drie de pinguïnsoorten statistisch significant van elkaar verschillen qua snavellengte: Chinstrap pinguïns hebben een langere snavel dan Adelie en Gentoo pinguïns. Gentoo pinguïns hebben op hun beurt een langere snavel dan Adelie pinguïns.</span></div>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -837,18 +620,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../Contactmomenten/C2/C2.html" class="pagination-link" aria-label="C2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">C2</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../Contactmomenten/C4/C4.html" class="pagination-link" aria-label="C4">
-        <span class="nav-page-text">C4</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

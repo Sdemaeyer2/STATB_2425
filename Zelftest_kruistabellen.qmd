@@ -1,12 +1,14 @@
 ---
-title: "ANOVA zelftoetsing"
+title: "Kruistabellen zelftoetsing"
 format: live-html
 engine: knitr
 ---
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-We werken verder met de pinguïns data om ook voor ANOVA de verschillende `R` functies en output onder de knie te krijgen. Meer achtergrond over deze dataset vind je via volgende link: [palmerpenguins](Penguins.qmd)
+Met kruistabllen kunnen we de (al dan niet veronderstelde causale) relatie tussen twee categorische variabelen nagaan. In dit onderdeel passen we dit toe op de pinguïns dataset.
+
+Meer achtergrond over deze dataset vind je via volgende link: [palmerpenguins](Penguins.qmd)
 
 ```{webr}
 #| autorun: true
@@ -73,8 +75,6 @@ leveneTest.lm <- function(y, ...) {
     f[2] <- expression(..y)
 	leveneTest.formula(f, data=m, ...)
 }
-
-
 
 ### OLP2 Functies.R script
 
@@ -1659,40 +1659,40 @@ effectplot<-function(x,y,ylab="y" ,xlab="x",main=" " )
 }
 ```
 
-ANOVA voeren we uit indien de onderzoeksvraag een **kwantitatieve afhankelijke variabele** (= interval of ratio niveau) bevat en één (of meer, zie later) \*categorische onafhankelijke variabele (met meer dan 2 categorieën)\*\*.
-
-Voor deze oefening willen we volgende onderzoeksvraag beantwoorden:
+Voor deze oefening willen we twee onderzoeksvragen beantwoorden:
 
 ::: {.callout-note icon="false"}
-## Onderzoeksvraag
+## Onderzoeksvragen
 
-| Wat zijn de verschillen in snavellengte (`bill_length_mm`) tussen de verschillende soorten penguïns (`species`)?
+| (OV1) In welke mate is de kans om een specifieke soort penguïn (`species`) te observeren afhankelijk van het eiland waarop de observatie plaats vindt (`island`) ?
+| (OV2) Is de kans om vrouwelijke penguïns (`sex`) te observeren verschillend naargelang de pinguïnsoort (`species`)?
+
 :::
 
 ## Oefening 1
 
-Als startpunt van de analyses willen we zicht krijgen op de verschillen in snavellengte tussen de verschillende soorten pinguïns in onze steekproef. We starten dus met gemiddelden te berekenen tussen de 3 soorten penguïns.
+We starten met OV1 waarin we het verband wensen na te gaan tussen `species` en `island`. 
 
-*Vul onderstaande code aan om de gemiddeldes per pinguïnsoort te berekenen.*
+*Maak in onderstaande codeblok een kruistabel aan waarin we makkelijk het verband kunnen aflezen.*
 
 ::: callout-tip
-Denk eraan dat er mogelijk wat ontbrekende waarden zijn. Dat maakt dat het berekenen van het gemiddelde per soort mogelijk in de soep draait. Daarom ook de nood aan een 4de argument in de onderstaande `tapply( )` functie.
+We wensen meteen relatieve frequenties (percentages) te berekenen. Denk goed na over mogelijke causaliteit die de onderzoeksvraag veronderstelt. 
 :::
 
-:::::::: panel-tabset
+:::::: panel-tabset
 ## Oefening
 
 ```{webr}
 #| exercise: ex1
 #| caption: Oefening1
 
-tapply(_____ , _______ , _______ , _______)
+
 ```
 
 ```{webr}
 #| exercise: ex1
 #| check: true
-answer <- tapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)
+answer <- kruistabel.kolom(penguins$species, penguins$island)
 if (identical(.result, answer)) {
   list(correct = TRUE, message = "Juist!")
 } else {
@@ -1703,36 +1703,16 @@ if (identical(.result, answer)) {
 ## Hints
 
 ::: {.hint exercise="ex1"}
-Het eerste argument verwijst altijd naar de variabele waarop we berekeningen wensen uit te voeren. Maw, het eerste argument gaat over de **afhankelijke variabele**: `bill_length_mm`.
+
+We hebben in het OLP afgesproken als een soort conventie om te werken met kolompercentages in kruistabllen. De functie `kruistabel.kolom( )` maakt een kruistabel aan met enkel kolompercentages. 
+
 
 ``` r
-tapply(penguins$_______ , ________ , _____, _______)
+kruistabel.kolom(penguins$______, penguins$______)
 ```
+
 :::
 
-::: {.hint exercise="ex1"}
-We willen het gemiddelde per categorie van de variabele `species` berekenen. Dus, je moet in je code iets met die variabele doen.
-
-``` r
-tapply(penguins$bill_length_mm , penguins$______ , _____, _______)
-```
-:::
-
-::: {.hint exercise="ex1"}
-Als je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in `R` kan je hanteren om het gemiddelde te berekenen?
-
-``` r
-tapply(penguins$bill_length_mm, penguins$species , _____, _______)
-```
-:::
-
-::: {.hint exercise="ex1"}
-we kunnen de functie `mean()` gebruiken om per soort de gemiddelde snavellengte te berekenen. Echter, we moeten nog een extra argument meegeven omdat er voor sommige soorten enkele ontbrekende waarden zijn. In de functie `mean()` is er de mogelijkheid om een bijkomend argument mee te geven: `na.rm = T`. Dit extra argument geven we in de `tapply( )` functie ook mee als afzonderlijk argument.
-
-``` r
-tapply(penguins$bill_length_mm, penguins$species , mean , na.rm = T)
-```
-:::
 
 ## Oplossing
 
@@ -1744,270 +1724,9 @@ De volledige oplossing ziet er zo uit!
 ```{webr}
 #| exercise: ex1
 #| solution: true
-tapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)
+kruistabel.kolom(penguins$species, penguins$island)
 ```
-:::
-::::::::
-
-## Oefening 2
-
-Nu we de gemiddelde snavellengte per pinguïnsoort in de steekproef weten, is het de vraag wat we kunnen leren aangaande een mogelijk verschil in de gehele populatie van pinguïns. Daartoe kunnen we een ANOVA-analyse uitvoeren. Maar vooraleer we dat doen, dienen we na te gaan of er voldaan wordt aan de assumptie van gelijke binnengroepenvariantie.
-
-*Voer de test uit die ons inzicht geeft in de mate waarin voldaan wordt aan de assumptie van gelijke binnengroepenvarianties*
-
-::::: panel-tabset
-## Oefening
-
-```{webr}
-#| exercise: ex2
-#| caption: Oefening2
-
-
-```
-
-```{webr}
-#| exercise: ex2
-#| check: true
-answer <- leveneTest(penguins$bill_length_mm, penguins$species)
-if (identical(.result, answer)) {
-  list(correct = TRUE, message = "Juist!")
-} else {
-  list(correct = FALSE, message = "Fout.")
-}
-```
-
-## Hints
-
-::: {.hint exercise="ex2"}
-We dienen hiertoe een Levene-test uit te voeren.
-
-``` r
-leveneTest(_______ , ________ )
-```
-:::
-
-## Oplossing
-
-::: {.solution exercise="ex2"}
-**Oplossing:**
-
-De volledige oplossing ziet er zo uit!
-
-```{webr}
-#| exercise: ex2
-#| solution: true
-leveneTest(penguins$bill_length_mm, penguins$species)
-```
-:::
-:::::
-
-## Oefening 3
-
-*Voer nu de ANOVA analyse uit om de nulhypothese te toetsen dat er in de populatie geen verschillen zijn tussen de drie pinguïnsoorten wat betreft snavellengte. Hou rekening met de resultaten van de Levene-test en bewaar het resultaat van de analyse in een object met de naam `M1`*
-
-::::: panel-tabset
-## Oefening
-
-```{webr}
-#| exercise: ex3
-#| persist: true
-#| caption: Oefening3
-
-
-```
-
-## Hints
-
-::: {.hint exercise="\"ex3"}
-De assumptie voor gelijke binnengroepenvarianties gaat op. Dus we kunnen de functie `aov( )` hanteren. De handigste manier is een nieuw object maken (`M1` in onderstaand geval) waarin we het resultaat wegschrijven van de `aov( )` functie. Vervolgens kunnen we via `summary(M1)` zicht krijgen op de resultaten.
-
-``` r
-M1 <- aov(_______ ~ _______, data = penguins)
-summary(M1)
-```
-:::
-
-## Oplossing
-
-::: {.solution exercise="ex3"}
-**Oplossing:**
-
-De volledige oplossing ziet er zo uit! Met voor het `~` teken de afhankelijke variabele en na het `~` teken de onafhankelijke variabele.
-
-```{webr}
-#| exercise: ex3
-#| solution: true
-M1 <- aov(bill_length_mm ~ species, data = penguins)
-summary(M1)
-```
-:::
-:::::
-
-## Oefening 4
-
-In de vorige oefening hebben we de ANOVA analyse uitgevoerd om de nulhypothese te toetsen dat er geen verschillen zijn tussen de drie soorten pinguïns aangaande snavellengte. Dat levert een algemene conclusie op: de kans dat er in de populatie geen verschillen zijn tussen de drie soorten pinguïns qua snavellengte is zeer klein (F = 410.6; df = 2, p \< 0.001).
-
-Een vervolgvraag is natuurlijk: is dit nu een groot verschil?
-
-*Doe het nodige om de effectgrootte van het effect van `species` op `bill_length_mm` na te gaan. Maak daarbij gebruik van je opgeslagen resultaten in het object `M1` uit de vorige oefening.*
-
-::::: panel-tabset
-## Oefening
-
-```{webr}
-#| setup: true
-#| exercise: ex4
-M1 <- aov(bill_length_mm ~ species, data = penguins)
-```
-
-```{webr}
-#| exercise: ex4
-#| caption: Oefening4
-
-```
-
-## Hints
-
-::: {.hint exercise="ex4"}
-Om de effectgrootte na te gaan bij ANOVA analyses maken we gebruik van Eta-kwadraat als maat. Deze kan je berekenen adhv de `etasq( )` functie.
-
-``` r
-etasq(_______)
-```
-:::
-
-## Oplossing
-
-::: {.solution exercise="ex4"}
-**Oplossing:**
-
-De handigste wijze is verwijzen naar `M1` in de `etasq( )` functie.
-
-```{webr}
-#| exercise: 4
-#| solution: true
-etasq(M1)
-```
-:::
-:::::
-
-## Oefening 5
-
-ANOVA leert ons enkel iets over de algemene vraag of er verschillen zijn tussen de drie pinguïnsoorten aangaande snavellengte. We testen enkel de kans dat de nulhypothese opgaat die stelt dat we in de populatie van alle pinguïns geen verschil in snavellengte verwachten tussen de drie soorten pinguïns.
-
-Wat we nog niet weten is of bijvoorbeeld de Adelie soort een andere snavellengte heeft dan specifiek de Chinstrap soort. Maw, we hebben geen specifieke informatie over de verschillen tussen twee soorten pinguïns onderling. Daartoe doen we typisch beroep op post-hoc testen.
-
-*Voer post-hoc testen uit om inzicht te krijgen in de verschillen tussen telkens twee soorten pinguïns onderling que snavellengte. Maak meteen ook een visualisatie van de resultaten van deze post-hoc testen.*
-
-::::: panel-tabset
-## Oefening
-
-```{webr}
-#| setup: true
-#| exercise: ex5
-M1 <- aov(bill_length_mm ~ species, data = penguins)
-```
-
-```{webr}
-#| exercise: ex5
-#| caption: Oefening5
-
-```
-
-## Hints
-
-::: {.hint exercise="ex5"}
-De functie die we kunnen hanteren is de `TukeyHSD( )` functie. Tussen de haakjes moet je verwijzen naar het resultaat van een ANOVA analyse (meerbepaald het resultaat van een `aov( )` functie in `R`).
-
-``` r
-M1_Tukey <- TukeyHSD(_______)
-M1_Tukey
-plot(M1_Tukey)
-```
-:::
-
-## Oplossing
-
-::: {.solution exercise="ex5"}
-**Oplossing:**
-
-Aangezien we eerder het resultaat van de ANOVA analyse reeds wegschreven in het object `M1` kunnen we dit object op zich gebruiken om verdere analyses op uit te voeren.
-
-De functie `TukeyHSD( )` laat toe om een post-hoc testen uit te voeren. Door het resultaat van deze post-hoc testen op zich opnieuw weg te schrijven in een nieuw object `M1_Tukey` kunnen we handig gebruik maken van de generieke functie `plot( )` om de resultaten van de post-hoc testen weer te geven.
-
-```{webr}
-#| exercise: 5
-#| solution: true
-M1_Tukey <- TukeyHSD(M1)
-M1_Tukey
-plot(M1_Tukey)
-```
-:::
-:::::
-
-## Oefening 6
-
-Hieronder kan je de het resultaat van de post-hoc testen zien.
-
-```{webr}
-#| autorun: true
-#| runbutton: false
-
-library(palmerpenguins)
-data("penguins")
-M1 <- aov(bill_length_mm ~ species, data = penguins)
-M1_Tukey <- TukeyHSD(M1)
-M1_Tukey
-plot(M1_Tukey)
-```
-
-Nu vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.
-
-::: {.panel-tabset}
-## Vraag
-
-Welke van volgende uitspraken is fout?
-
-1. De kans dat er in de populatie geen verschil is in snavellengte tussen Chinstrap en Adelie pinguïns is kleiner dan 1%
-2. In de populatie verwachten we geen verschil in snavellengte tussen Gentoo en Chinstrap pinguïns
-3. In 95% van de mogelijke steekproeven van pinguïns die we kunnen trekken, is het verschil in gemiddelde snavellengte tussen Gentoo en Adelie pinguïns ergens tussen de 7.87 en 9.56 mm
-4. De analyse onderbouwt de conclusie dat in de populatie dat alle drie de soorten pinguïns van elkaar verschillen qua gemiddelde snavellengte
-
-## Antwoordsleutel
-Je diende uitspraak 2 te kiezen als foute uitspraak.
-
-1. De kans dat er in de populatie geen verschil is in snavellengte tussen Chinstrap en Adelie pinguïns is kleiner dan 1%
-
-**= JUIST! Dit kan je aflezen in de geprinte output. De laatste kolom met titel `p adj` geeft de probabiliteit weer van de nulhypothese. Bij de eerste lijn (de vergelijking van Chinstrap met Adelie pinguïns) is deze waarde <0.001. De kans dat de nulhypothese juist is, is dus zeer laag. En de nulhypothese hier is dat er in de populatie GEEN verschil is in gemiddelde snavellengte.**
-
-2. In de populatie verwachten we geen verschil in snavellengte tussen Gentoo en Chinstrap pinguïns
-
-**= FOUT! De informatie in de geprinte output (en ook de figuur) wijzen net de andere richting uit. Kijken we naar de geprinte output dan zien we dat de kans dat de nulhypothese juist is (wederom kolom `p adj`) lager is dan 5% (p = 0.009) (zie laatste rij in de output). Ook in de figuur zien we dat het 95%-betrouwbaarheidsinterval voor het verschil in gemiddelde snavellengte tussen Gentoo en Chinstrap pinguïns (onderste betrouwbaarheidsinterval) niet de waarde nul bevat. Ook dat onderbouwt dezelfde conclusie.**
-
-3. In 95% van de mogelijke steekproeven van pinguïns die we kunnen trekken, is het verschil in gemiddelde snavellengte tussen Gentoo en Adelie pinguïns ergens tussen de 7.87 en 9.56 mm
-
-**= JUIST! In de geprinte output heb je de kolommen `lwr` en `upr` die respectievelijk de onder- en bovengrens van een 95%-betrouwbaarheidsinterval weergeven. Voor de middelste rij (`Gentoo-Adelie`) zie je de waarden 7.87 en 9.56 terug. Een 95%-betrouwbaarheidsinterval kan geïnterpreteerd worden als het resultaat van de denkoefening dat we alle mogelijke steekproeven zouden nemen en daaruit afleiden wat 95% van deze steekrpoeven aan beeld geeft over het verschil in gemiddelde snavellengte tussen beide soorten pinguïns.**
-
-4. De analyse onderbouwt de conclusie dat in de populatie dat alle drie de soorten pinguïns van elkaar verschillen qua gemiddelde snavellengte
-
-**= JUIST! Alle p-waarden in de geprinte output zijn lager dan 0.05. Maw, voor elke paarsgewijze vergelijking van pinguïnsoorten kunnen we concluderen dat er een significant verschil is qua gemiddelde snavellengte.**
 
 :::
 
-## Oefening 7
-
-De nodige analyses zijn uitgevoerd. Wat nu nog rest is het goed interpreteren en uitschrijven van conclusies op basis van de output die gegenereerd is tijdens de analyses.
-
-*Schrijf voor jezelf een of meerdere alineas waarin je de nodige informatie opneemt om de resultaten van de analyse te communiceren.*
-
-::: {.callout-tip title="Oplossing" collapse="true"}
-Dit is een mogelijke verwoording van de resultaten:
-
-*In de steekproef waren er verschillen in de gemiddelde snavellengte van Adelie pinguïns (M = 38.791, SD = 2.663), Chinstrap pinguïns (M = 48.834, SD = 3.339) en Gentoo pinguïns (M = 47.505, SD = 3.082).*
-
-*Uit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor de drie soorten pinguïns (Chinstrap, Adelie, en Gentoo) niet significant afwijkt van 0 (F(2,339) = 2.2425, p = 0.1078). De kans dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten bedraagt hier 11%. Deze kans is groter dan 0.05, wat betekent dat we er vanuit kunnen gaan dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten.* 
-
-*De ANOVA-analyse geeft aan dat de verschillen in snavellengte tussen de drie pinguïnsoorten hoogstwaarschijnlijk ook in de populatie terug te vinden zijn (F(2,339) = 410.6, p < 0.001). Deze verschillen in snavellengte tussen de drie pinguïnsoorten kunnen we omschrijven als een groot effect (eta² = 0.708). Uit de post-hoc analyse blijkt dat alle drie de pinguïnsoorten statistisch significant van elkaar verschillen qua snavellengte: Chinstrap pinguïns hebben een langere snavel dan Adelie en Gentoo pinguïns. Gentoo pinguïns hebben op hun beurt een langere snavel dan Adelie pinguïns.*
-:::
-
-Rapporteren is van cruciaal belang. Wil je meer toelichting bij de bovenstaande rapportage, klik dan door naar [hier](ANOVA_Rapportage.qmd).
+::::::

@@ -64,7 +64,8 @@ website:
             href: Zelftest_t_test.qmd
           - text: "ANOVA"
             href: Zelftest_ANOVA.qmd
-
+          - text: "Kruistabellen"
+            href: Zelftest_kruistabellen.qmd
 
       - section: "ZSO"
         contents: 
