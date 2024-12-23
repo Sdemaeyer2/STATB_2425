@@ -1,5 +1,6 @@
 ---
-title: "ANOVA zelftoetsing"
+title: "Online (`R`) oefeningen"
+subtitle: "ANOVA"
 format: live-html
 engine: knitr
 ---

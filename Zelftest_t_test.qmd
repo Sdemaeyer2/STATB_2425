@@ -1,5 +1,6 @@
 ---
-title: "t-test zelftoetsing"
+title: "Online (`R`) oefeningen"
+subtitle: "t-test"
 format: live-html
 engine: knitr
 ---

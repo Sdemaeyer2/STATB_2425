@@ -2,7 +2,7 @@
   {
     "objectID": "Zelftest_t_test.html",
     "href": "Zelftest_t_test.html",
-    "title": "t-test zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "",
     "text": "In wat volgt staan een aantal interactieve oefeningen die je kan doorlopen om te testen of je de materie aangaande t-testen voldoende onder de knie hebt.\nOm de oefeningen te kunnen uitvoeren hebben we de dataset penguins nodit uit het pakket palmerpenguins. Volgende code loopt automatisch zodanig dat je meteen aan de oefeningen kan beginnen!\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins",
     "crumbs": [
@@ -13,7 +13,7 @@
   {
     "objectID": "Zelftest_t_test.html#oefening-1",
     "href": "Zelftest_t_test.html#oefening-1",
-    "title": "t-test zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 1",
     "text": "Oefening 1\nWe zijn geïnteresseerd in verschillen tussen mannelijk en vrouwelijke pinguïns. Meerbepaald zijn we benieuwd wat het verschil in lichaamsmassa (body_mass_g) is tussen beide sekses (sex).\nVul onderstaande code aan om de gemiddeldes per sekse te berekenen.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen het gemiddelde per categorie van de variabele penguins$sex berekenen. Dus, je moet in je code iets met die variabele doen.\ntapply(penguins$body_mass_g, penguins$____ , _____)\n\n\nAls je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in R kan je hanteren om het gemiddelde te berekenen?\ntapply(penguins$body_mass_g, penguins$sex , _____)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\ntapply(penguins$body_mass_g, penguins$sex , mean)\ntapply(penguins$body_mass_g, penguins$sex , mean)",
     "crumbs": [
@@ -24,7 +24,7 @@
   {
     "objectID": "Zelftest_t_test.html#oefening-2",
     "href": "Zelftest_t_test.html#oefening-2",
-    "title": "t-test zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 2",
     "text": "Oefening 2\nIn de eerste oefening kregen we zicht op de gemiddelde lichaamsmassa van mannelijke en vrouwelijke pinguïns in de steekproef. Uiteraard zijn we meer geïnteresseerd in hoe dit in de populatie zit! We wensen dus een t-test uit te voeren.\nVoer in het onderstaande code blok de juiste code in om de t-test uit te voeren (je mag er even vanuit gaan dat er voldaan is aan de assumptie van gelijke varianties).\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen een t-test uitvoeren. Daartoe maak je best gebruik van de functie t.test( ).\nt.test(______ ~ _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nt.test(penguins$body_mass_g ~ penguins$sex)\nt.test(penguins$body_mass_g ~ penguins$sex)",
     "crumbs": [
@@ -35,7 +35,7 @@
   {
     "objectID": "Zelftest_t_test.html#oefening-3-1",
     "href": "Zelftest_t_test.html#oefening-3-1",
-    "title": "t-test zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 3",
     "text": "Oefening 3\nMet de t-test zijn we nagegaan of we statistische evidentie hebben dat het verschil in gemiddelden in de steekproef ook kan worden veralgemeend naar een verschil in de populatie van alle pinguïns. We zijn dus de statistische significantie nagegaan. Echter, het resultaat van zo’n test is afhankelijk van de steekproefgrootte. Om een algemeen beeld te krijgen over hoe groot het verschil is tussen beide groepen introduceren we het idee van effectgrootte.\nDoe de nodige analyse om tevens de effectgrootte na te gaan voor het verschil in lichaamsmasse tussen mannelijke en vrouwelijke pinguïns\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen Cohen’s d berekenen om de effectgrootte uit te drukken. Daartoe maak je best gebruik van de functie d( ).\nd(______ , _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\n\nd(penguins$body_mass_g, penguins$sex)\n\nd(penguins$body_mass_g, penguins$sex)",
     "crumbs": [
@@ -46,7 +46,7 @@
   {
     "objectID": "Zelftest_t_test.html#oefening-4-1",
     "href": "Zelftest_t_test.html#oefening-4-1",
-    "title": "t-test zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 4",
     "text": "Oefening 4\nIn oefening 2 hebben we abstractie gemaakt van de assumptie van gelijke binnen-groepen varianties voor beide sekses.\nTest nu de assumptie dat beide varianties gelijk zijn. Is het zo dat de variantie in lichaamsmassa voor mannelijke pinguïns vergelijkbaar is met de variantie in lichaamsmassa voor vrouwelijke pinguïns?\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm deze assumptie na te gaan dienen we een Levene test uit te voeren.\nleveneTest(_____, _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\n\nleveneTest(penguins$body_mass_g, penguins$sex)\n\nleveneTest(penguins$body_mass_g, penguins$sex)",
     "crumbs": [
@@ -57,7 +57,7 @@
   {
     "objectID": "Zelftest_t_test.html#oefening-5-1",
     "href": "Zelftest_t_test.html#oefening-5-1",
-    "title": "t-test zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 5",
     "text": "Oefening 5\nNu je meer zicht hebt op het feit dat de assumptie van gelijke varianties niet op gaat, betekent dit dat we de t-test opnieuw moeten uitvoeren adhv een andere functie.\nVoer de t-test opnieuw uit met de gepaste toets en functie in R.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHiertoe moeten we de functie t.test( ) uitbreiden met een extra argument dat aan R meegeeft dat de assumptie van gelijke varianties niet opgaat.\nt.test(penguins$body_mass_g ~ penguins$sex, _____)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\n\nt.test(penguins$body_mass_g ~ penguins$sex, var.equal = FALSE)\n\nt.test(penguins$body_mass_g ~ penguins$sex, var.equal = FALSE)",
     "crumbs": [
@@ -68,7 +68,7 @@
   {
     "objectID": "Zelftest_t_test.html#oefening-6-1",
     "href": "Zelftest_t_test.html#oefening-6-1",
-    "title": "t-test zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 6",
     "text": "Oefening 6\nDe nodige analyses zijn uitgevoerd. Wat nu nog rest is het goed interpreteren en uitschrijven van conclusies op basis van de output die gegenereerd is tijdens de analyses.\nSchrijf voor jezelf een alinea waarin je de nodige informatie opneemt om de resultaten van de analyse te communiceren.\n\n\n\n\n\n\nOplossing\n\n\n\n\n\nDit is een mogelijke verwoording van de resultaten;\nIn de steekproef van onderzochte pinguïns stellen we vast dat vrouwelijke pinguïns een lagere gemiddelde lichaamsmassa hebben (gemiddelde = 3862 gram) dan de mannelijke pinguïns (gemiddelde = 4546 gram). Dit verschil in lichaamsmassa tussen vrouwelijke en mannelijke pinguïns is statistisch significant (t = -8.55, df = 323.9, p &lt;0.001). Met andere woorden, de kans dat we dit verschil in lichaamsmassa vaststellen in onze steekproef indien er in de gehele populatie geen verschil zou zijn, is bijzonder laag. We concluderen dus dat er voldoende evidentie is om te stellen dat vrouwelijke pinguïns een lagere lichaamsmassa hebben dan de mannelijke pinguïns. Uit de effectgrootte (Cohen’s d = -0.94) kunnen we afleiden dat dit gezien kan worden als een groot verschil.\n\n\n\nRapporteren is van cruciaal belang. Wil je meer toelichting bij de bovenstaande rapportage, klik dan door naar hier.",
     "crumbs": [
@@ -548,9 +548,9 @@
   {
     "objectID": "Zelftest_kruistabellen.html",
     "href": "Zelftest_kruistabellen.html",
-    "title": "Kruistabellen zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "",
-    "text": "Met kruistabllen kunnen we de (al dan niet veronderstelde causale) relatie tussen twee categorische variabelen nagaan. In dit onderdeel passen we dit toe op de pinguïns dataset.\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nVoor deze oefening willen we twee onderzoeksvragen beantwoorden:",
+    "text": "Met kruistabellen kunnen we de (al dan niet veronderstelde causale) relatie tussen twee categorische variabelen nagaan. In dit onderdeel passen we dit toe op de pinguïns dataset.\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nVoor deze oefening willen we twee onderzoeksvragen beantwoorden:",
     "crumbs": [
       "Online (R) oefeningen",
       "Kruistabellen"
@@ -559,9 +559,53 @@
   {
     "objectID": "Zelftest_kruistabellen.html#oefening-1",
     "href": "Zelftest_kruistabellen.html#oefening-1",
-    "title": "Kruistabellen zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 1",
-    "text": "Oefening 1\nWe starten met OV1 waarin we het verband wensen na te gaan tussen species en island.\nMaak in onderstaande codeblok een kruistabel aan waarin we makkelijk het verband kunnen aflezen.\n\n\n\n\n\n\nTip\n\n\n\nWe wensen meteen relatieve frequenties (percentages) te berekenen. Denk goed na over mogelijke causaliteit die de onderzoeksvraag veronderstelt.\n\n\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe hebben in het OLP afgesproken als een soort conventie om te werken met kolompercentages in kruistabllen. De functie kruistabel.kolom( ) maakt een kruistabel aan met enkel kolompercentages.\nkruistabel.kolom(penguins$______, penguins$______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nkruistabel.kolom(penguins$species, penguins$island)\nkruistabel.kolom(penguins$species, penguins$island)",
+    "text": "Oefening 1\nWe starten met OV1 waarin we het verband wensen na te gaan tussen species en island.\nMaak in onderstaande codeblok een kruistabel aan waarin we makkelijk het verband kunnen aflezen.\n\n\n\n\n\n\nTip\n\n\n\nOm het verband na te gaan werken we best meteen met relatieve frequenties (percentages). Denk goed na over mogelijke causaliteit die de onderzoeksvraag veronderstelt en maak een tabel aan met kolom-percentages.\n\n\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe hebben in het OLP afgesproken als een soort conventie om te werken met kolompercentages in kruistabllen. De functie kruistabel.kolom( ) maakt een kruistabel aan met enkel kolompercentages.\nkruistabel.kolom(penguins$______, penguins$______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nkruistabel.kolom(penguins$species, penguins$island)\nkruistabel.kolom(penguins$species, penguins$island)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Kruistabellen"
+    ]
+  },
+  {
+    "objectID": "Zelftest_kruistabellen.html#oefening-2",
+    "href": "Zelftest_kruistabellen.html#oefening-2",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 2",
+    "text": "Oefening 2\nHieronder zie je nogmaals de kruistabel met kolompercentages.\n\n\n\n\n\n\n\n\nOp het examen vragen we soms een meerkeuzevraag over kruistabellen om na te gaan of je deze op een correcte wijze kan lezen. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.\n\nVraagAntwoordsleutel\n\n\nWelke van volgende uitspraken is fout? (slechts 1 antwoord mogelijk)\n\nOp het eiland Torgersen observeer je enkel Adelie pinguïns\nBijna 20% van de geobserveerde pinguïns in de dataset zijn Chinstrap pinguïns\n54.84% van de Chinstrap pinguïns kan je observeren op het Dream eiland\nDe kans om op Biscoe eiland een Gentoo pinguïn te observeren is bijna 3 keer zo groot dan de kans om op dat eiland een Adelie pinguïn te observeren\n\n\n\nJe diende uitspraak 3 te kiezen als foute uitspraak.\n\nOp het eiland Torgersen observeer je enkel Adelie pinguïns\n\n= JUIST! De kolom Torgersen toont dat 100% van de geobserveerde pinguïns op dat eiland Adelie pinguïns zijn.\n\nBijna 20% van de geobserveerde pinguïns in de dataset zijn Chinstrap pinguïns\n\n= JUIS! Dit lees je af in de laatste kolom (Sum) die de relatieve frequenties van geobserveerde pinguïns weergeeft overheen alle drie de eilanden. Daar lezen we af dat 19.77% (dus bijna 20%) van de geobserveerde pinguïns Chinstrap pinguïns zijn.\n\n54.84% van de Chinstrap pinguïns kan je observeren op het Dream eiland\n\n= FOUT! In de rij voor Chinstrap vinden we dit percentage wel terug, maar dit is geen rijpercentage! Die 54.84% betekent dat van alle geobserveerde pinguïns op Dream eiland 54.84% Chinstrap pinguïns zijn. Het is een kolompercentage!\n\nDe kans om op Biscoe eiland een Gentoo pinguïn te observeren is bijna 3 keer zo groot dan de kans om op dat eiland een Adelie pinguïn te observeren\n\n= JUIST! De kans om op Biscoe eiland een Gentoo pinguïn te observeren bedraagt bijna 74%. Dit is bijna 3 keer zo groot dat de kans om op datzelfde eiland een Adelie pinguïn te observeren (die kans is afgerond 26%). De verhouding van 74 tov 26 is 2.85 wat afgerond 3 benadert.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Kruistabellen"
+    ]
+  },
+  {
+    "objectID": "Zelftest_kruistabellen.html#oefening-3",
+    "href": "Zelftest_kruistabellen.html#oefening-3",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 3",
+    "text": "Oefening 3\nDe kruistabel die we maakten bij de eerste oefening geeft enkel inzicht in hoe de verdeling is van geobserveerde pinguïns overheen de combinatie van de variabelen species en island in de steekproef. Uiteraard willen we op basis van de steekproef inferenties doen naar de populatie toe.\nVoer een statistische test uit die ons helpt om de inferentie naar de populatie toe te maken. Formuleer ook voor jezelf een conclusie die je zou trekken op basis van deze analyse.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe test die we wensen uit te voeren is een chi-kwadraattoets. Kijk in het OLP om de juiste functie te vinden die deze statistische test uitvoert voor jou.\n\n\n\n\nOplossing:\nEr zijn verschillende manieren om deze test uit te voeren.\nEen eerste manier ziet er zo uit (waarbij we gebruik maken van de chisq.test( ) functie en tussen de haakjes de tabel aanmaken op basis van de twee betrokken variabelen):\n\n\nchisq.test(table(penguins$species, penguins$island))\nchisq.test(table(penguins$species, penguins$island))\n\n\nEen alternatief ziet er zo uit (waarbij we gebruik maken van de chisq.test( ) functie en tussen de haakjes verwijzen naar een object dat we net erboven aanmaken met daarin de tabel):\n\n\nMijntabel &lt;- table(penguins$species, penguins$island)\nchisq.test(Mijntabel)\nMijntabel &lt;- table(penguins$species, penguins$island)\nchisq.test(Mijntabel)\n\n\nNaast de functie chisq.test( ) kan je ook gebruik maken van de functie chi.kwadraat.test( ) die is opgenomen in het OLP. Deze functie werkt verder helemaal identiek als de chisq.test( ) maar geeft wat meer informatie in de output (ook Cramer’s V).\n\n\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\n\n\nConclusie:\nOngeacht de methode die je hanteert, bekom je een chi-kwadraatwaarde van 299.55 met 4 vrijheidsgraden. De bijhorende p-waarde is duidelijk lager dan 0.001. Bijgevolg kan je concluderen dat de kans dat we deze verdeling in de data zouden terug vinden indien de nulhypothese juist is (H0 = er is geen verband tussen pinguïnsoort en eiland) bijzonder klein is. Dat sterkt ons in de conclusie om te stellen dat er in de populatie ook een verband te vinden is tussen eiland en pinguïnsoort.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Kruistabellen"
+    ]
+  },
+  {
+    "objectID": "Zelftest_kruistabellen.html#oefening-4-1",
+    "href": "Zelftest_kruistabellen.html#oefening-4-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 4",
+    "text": "Oefening 4\nOngeacht welke analysetechniek we behandelen, we zijn altijd geïnteresseerd in een of andere maat van effectgrootte. Ook hier willen we meer weten over de effectgrootte van het effect van eiland op de kans om een bepaalde pinguïnsoort te observeren.\nBereken een maat van effectgrootte voor de eerder aangemaakte kruistabel. En wat kan je daaruit concluderen?\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm de effectgrootte bij kruistabellen uit te drukken maken we gebruik van Cramer’s V. Bekijk het OLP om te weten hoe je die snel kan laten berekenen in R.\n\n\n\n\nOplossing:\nHiertoe maken we gebruik van de functie chi.kwadraat.test( ) . Opnieuw zijn er twee verschillende manieren om deze test uit te voeren.\nEen eerste manier ziet er zo uit (tussen de haakjes maken we de tabel aan op basis van de twee betrokken variabelen):\n\n\nchi.kwadraat.test(table(penguins$species, penguins$island))\nchi.kwadraat.test(table(penguins$species, penguins$island))\n\n\nEen alternatief ziet er zo uit (waarbij we eerst een object aanmaken met daarin de tabel):\n\n\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\n\n\nConclusie:\nCramer’s V bedraag 0.66, wat een vrij hoge waarde is. In het OLP stellen we ten onrechte dat er geen vuistregels zijn voor Cramer’s V. Die zijn er eigenlijk wel (zie ook slides van het vak). Op basis van deze vuistregels van bijvoorbeeld Rea en Parker (1992) zouden we dit verband als een sterk verband benoemen.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Kruistabellen"
+    ]
+  },
+  {
+    "objectID": "Zelftest_kruistabellen.html#oefening-5-1",
+    "href": "Zelftest_kruistabellen.html#oefening-5-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 5",
+    "text": "Oefening 5\nSoms kan het verhelderend werken voor een doelpubliek om een visualisatie te geven van een verband.\nMaak een gepaste visualisatie voor de kruistabel van species en island.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe kunnen een associatieplot maken in R aan de hand van de functie assocplot( ).\n\n\n\n\nOplossing:\nHiertoe maken we gebruik van de functie assocplot( ) . Opnieuw zijn er twee verschillende manieren om deze test uit te voeren.\nEen eerste manier ziet er zo uit (tussen de haakjes maken we de tabel aan op basis van de twee betrokken variabelen). LET OP: eerste de kolommen en dan de rijen ingeven, wat tegenovergestelde is van wat we anders doen!\n\n\nassocplot(table(penguins$island, penguins$species))\nassocplot(table(penguins$island, penguins$species))\n\n\nEen alternatief ziet er zo uit (waarbij we eerst een object aanmaken met daarin de tabel). Ook hier goed opletten, de volgorde van de variabelen in de table( ) functie is omgedraaid.\n\n\n\nMijntabel2 &lt;- table(penguins$island, penguins$species)\nassocplot(Mijntabel2)\n\nMijntabel2 &lt;- table(penguins$island, penguins$species)\nassocplot(Mijntabel2)",
     "crumbs": [
       "Online (R) oefeningen",
       "Kruistabellen"
@@ -848,7 +892,7 @@
   {
     "objectID": "Zelftest_ANOVA.html",
     "href": "Zelftest_ANOVA.html",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "",
     "text": "We werken verder met de pinguïns data om ook voor ANOVA de verschillende R functies en output onder de knie te krijgen. Meer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nANOVA voeren we uit indien de onderzoeksvraag een kwantitatieve afhankelijke variabele (= interval of ratio niveau) bevat en één (of meer, zie later) *categorische onafhankelijke variabele (met meer dan 2 categorieën)**.\nVoor deze oefening willen we volgende onderzoeksvraag beantwoorden:",
     "crumbs": [
@@ -859,7 +903,7 @@
   {
     "objectID": "Zelftest_ANOVA.html#oefening-1",
     "href": "Zelftest_ANOVA.html#oefening-1",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 1",
     "text": "Oefening 1\nAls startpunt van de analyses willen we zicht krijgen op de verschillen in snavellengte tussen de verschillende soorten pinguïns in onze steekproef. We starten dus met gemiddelden te berekenen tussen de 3 soorten penguïns.\nVul onderstaande code aan om de gemiddeldes per pinguïnsoort te berekenen.\n\n\n\n\n\n\nTip\n\n\n\nDenk eraan dat er mogelijk wat ontbrekende waarden zijn. Dat maakt dat het berekenen van het gemiddelde per soort mogelijk in de soep draait. Daarom ook de nood aan een 4de argument in de onderstaande tapply( ) functie.\n\n\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHet eerste argument verwijst altijd naar de variabele waarop we berekeningen wensen uit te voeren. Maw, het eerste argument gaat over de afhankelijke variabele: bill_length_mm.\ntapply(penguins$_______ , ________ , _____, _______)\n\n\nWe willen het gemiddelde per categorie van de variabele species berekenen. Dus, je moet in je code iets met die variabele doen.\ntapply(penguins$bill_length_mm , penguins$______ , _____, _______)\n\n\nAls je die variabele mee opgenomen hebt in je code, moet je nog tegen R zeggen wat precies berekend moet worden. Hier gaat het om het gemiddelde berekenen. Welke functie in R kan je hanteren om het gemiddelde te berekenen?\ntapply(penguins$bill_length_mm, penguins$species , _____, _______)\n\n\nwe kunnen de functie mean() gebruiken om per soort de gemiddelde snavellengte te berekenen. Echter, we moeten nog een extra argument meegeven omdat er voor sommige soorten enkele ontbrekende waarden zijn. In de functie mean() is er de mogelijkheid om een bijkomend argument mee te geven: na.rm = T. Dit extra argument geven we in de tapply( ) functie ook mee als afzonderlijk argument.\ntapply(penguins$bill_length_mm, penguins$species , mean , na.rm = T)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\ntapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)\ntapply(penguins$bill_length_mm, penguins$species , mean, na.rm = T)",
     "crumbs": [
@@ -870,7 +914,7 @@
   {
     "objectID": "Zelftest_ANOVA.html#oefening-2",
     "href": "Zelftest_ANOVA.html#oefening-2",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 2",
     "text": "Oefening 2\nNu we de gemiddelde snavellengte per pinguïnsoort in de steekproef weten, is het de vraag wat we kunnen leren aangaande een mogelijk verschil in de gehele populatie van pinguïns. Daartoe kunnen we een ANOVA-analyse uitvoeren. Maar vooraleer we dat doen, dienen we na te gaan of er voldaan wordt aan de assumptie van gelijke binnengroepenvariantie.\nVoer de test uit die ons inzicht geeft in de mate waarin voldaan wordt aan de assumptie van gelijke binnengroepenvarianties\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe dienen hiertoe een Levene-test uit te voeren.\nleveneTest(_______ , ________ )\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nleveneTest(penguins$bill_length_mm, penguins$species)\nleveneTest(penguins$bill_length_mm, penguins$species)",
     "crumbs": [
@@ -881,7 +925,7 @@
   {
     "objectID": "Zelftest_ANOVA.html#oefening-3-1",
     "href": "Zelftest_ANOVA.html#oefening-3-1",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 3",
     "text": "Oefening 3\nVoer nu de ANOVA analyse uit om de nulhypothese te toetsen dat er in de populatie geen verschillen zijn tussen de drie pinguïnsoorten wat betreft snavellengte. Hou rekening met de resultaten van de Levene-test en bewaar het resultaat van de analyse in een object met de naam M1\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe assumptie voor gelijke binnengroepenvarianties gaat op. Dus we kunnen de functie aov( ) hanteren. De handigste manier is een nieuw object maken (M1 in onderstaand geval) waarin we het resultaat wegschrijven van de aov( ) functie. Vervolgens kunnen we via summary(M1) zicht krijgen op de resultaten.\nM1 &lt;- aov(_______ ~ _______, data = penguins)\nsummary(M1)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit! Met voor het ~ teken de afhankelijke variabele en na het ~ teken de onafhankelijke variabele.\n\n\nM1 &lt;- aov(bill_length_mm ~ species, data = penguins)\nsummary(M1)\nM1 &lt;- aov(bill_length_mm ~ species, data = penguins)\nsummary(M1)",
     "crumbs": [
@@ -892,7 +936,7 @@
   {
     "objectID": "Zelftest_ANOVA.html#oefening-4-1",
     "href": "Zelftest_ANOVA.html#oefening-4-1",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 4",
     "text": "Oefening 4\nIn de vorige oefening hebben we de ANOVA analyse uitgevoerd om de nulhypothese te toetsen dat er geen verschillen zijn tussen de drie soorten pinguïns aangaande snavellengte. Dat levert een algemene conclusie op: de kans dat er in de populatie geen verschillen zijn tussen de drie soorten pinguïns qua snavellengte is zeer klein (F = 410.6; df = 2, p &lt; 0.001).\nEen vervolgvraag is natuurlijk: is dit nu een groot verschil?\nDoe het nodige om de effectgrootte van het effect van species op bill_length_mm na te gaan. Maak daarbij gebruik van je opgeslagen resultaten in het object M1 uit de vorige oefening.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm de effectgrootte na te gaan bij ANOVA analyses maken we gebruik van Eta-kwadraat als maat. Deze kan je berekenen adhv de etasq( ) functie.\netasq(_______)\n\n\n\n\nOplossing:\nDe handigste wijze is verwijzen naar M1 in de etasq( ) functie.\n\n\netasq(M1)\netasq(M1)",
     "crumbs": [
@@ -903,7 +947,7 @@
   {
     "objectID": "Zelftest_ANOVA.html#oefening-5-1",
     "href": "Zelftest_ANOVA.html#oefening-5-1",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 5",
     "text": "Oefening 5\nANOVA leert ons enkel iets over de algemene vraag of er verschillen zijn tussen de drie pinguïnsoorten aangaande snavellengte. We testen enkel de kans dat de nulhypothese opgaat die stelt dat we in de populatie van alle pinguïns geen verschil in snavellengte verwachten tussen de drie soorten pinguïns.\nWat we nog niet weten is of bijvoorbeeld de Adelie soort een andere snavellengte heeft dan specifiek de Chinstrap soort. Maw, we hebben geen specifieke informatie over de verschillen tussen twee soorten pinguïns onderling. Daartoe doen we typisch beroep op post-hoc testen.\nVoer post-hoc testen uit om inzicht te krijgen in de verschillen tussen telkens twee soorten pinguïns onderling que snavellengte. Maak meteen ook een visualisatie van de resultaten van deze post-hoc testen.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe functie die we kunnen hanteren is de TukeyHSD( ) functie. Tussen de haakjes moet je verwijzen naar het resultaat van een ANOVA analyse (meerbepaald het resultaat van een aov( ) functie in R).\nM1_Tukey &lt;- TukeyHSD(_______)\nM1_Tukey\nplot(M1_Tukey)\n\n\n\n\nOplossing:\nAangezien we eerder het resultaat van de ANOVA analyse reeds wegschreven in het object M1 kunnen we dit object op zich gebruiken om verdere analyses op uit te voeren.\nDe functie TukeyHSD( ) laat toe om een post-hoc testen uit te voeren. Door het resultaat van deze post-hoc testen op zich opnieuw weg te schrijven in een nieuw object M1_Tukey kunnen we handig gebruik maken van de generieke functie plot( ) om de resultaten van de post-hoc testen weer te geven.\n\n\nM1_Tukey &lt;- TukeyHSD(M1)\nM1_Tukey\nplot(M1_Tukey)\nM1_Tukey &lt;- TukeyHSD(M1)\nM1_Tukey\nplot(M1_Tukey)",
     "crumbs": [
@@ -914,7 +958,7 @@
   {
     "objectID": "Zelftest_ANOVA.html#oefening-6-1",
     "href": "Zelftest_ANOVA.html#oefening-6-1",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 6",
     "text": "Oefening 6\nHieronder kan je de het resultaat van de post-hoc testen zien.\n\n\n\n\n\n\n\n\nNu vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.\n\nVraagAntwoordsleutel\n\n\nWelke van volgende uitspraken is fout?\n\nDe kans dat er in de populatie geen verschil is in snavellengte tussen Chinstrap en Adelie pinguïns is kleiner dan 1%\nIn de populatie verwachten we geen verschil in snavellengte tussen Gentoo en Chinstrap pinguïns\nIn 95% van de mogelijke steekproeven van pinguïns die we kunnen trekken, is het verschil in gemiddelde snavellengte tussen Gentoo en Adelie pinguïns ergens tussen de 7.87 en 9.56 mm\nDe analyse onderbouwt de conclusie dat in de populatie dat alle drie de soorten pinguïns van elkaar verschillen qua gemiddelde snavellengte\n\n\n\nJe diende uitspraak 2 te kiezen als foute uitspraak.\n\nDe kans dat er in de populatie geen verschil is in snavellengte tussen Chinstrap en Adelie pinguïns is kleiner dan 1%\n\n= JUIST! Dit kan je aflezen in de geprinte output. De laatste kolom met titel p adj geeft de probabiliteit weer van de nulhypothese. Bij de eerste lijn (de vergelijking van Chinstrap met Adelie pinguïns) is deze waarde &lt;0.001. De kans dat de nulhypothese juist is, is dus zeer laag. En de nulhypothese hier is dat er in de populatie GEEN verschil is in gemiddelde snavellengte.\n\nIn de populatie verwachten we geen verschil in snavellengte tussen Gentoo en Chinstrap pinguïns\n\n= FOUT! De informatie in de geprinte output (en ook de figuur) wijzen net de andere richting uit. Kijken we naar de geprinte output dan zien we dat de kans dat de nulhypothese juist is (wederom kolom p adj) lager is dan 5% (p = 0.009) (zie laatste rij in de output). Ook in de figuur zien we dat het 95%-betrouwbaarheidsinterval voor het verschil in gemiddelde snavellengte tussen Gentoo en Chinstrap pinguïns (onderste betrouwbaarheidsinterval) niet de waarde nul bevat. Ook dat onderbouwt dezelfde conclusie.\n\nIn 95% van de mogelijke steekproeven van pinguïns die we kunnen trekken, is het verschil in gemiddelde snavellengte tussen Gentoo en Adelie pinguïns ergens tussen de 7.87 en 9.56 mm\n\n= JUIST! In de geprinte output heb je de kolommen lwr en upr die respectievelijk de onder- en bovengrens van een 95%-betrouwbaarheidsinterval weergeven. Voor de middelste rij (Gentoo-Adelie) zie je de waarden 7.87 en 9.56 terug. Een 95%-betrouwbaarheidsinterval kan geïnterpreteerd worden als het resultaat van de denkoefening dat we alle mogelijke steekproeven zouden nemen en daaruit afleiden wat 95% van deze steekrpoeven aan beeld geeft over het verschil in gemiddelde snavellengte tussen beide soorten pinguïns.\n\nDe analyse onderbouwt de conclusie dat in de populatie dat alle drie de soorten pinguïns van elkaar verschillen qua gemiddelde snavellengte\n\n= JUIST! Alle p-waarden in de geprinte output zijn lager dan 0.05. Maw, voor elke paarsgewijze vergelijking van pinguïnsoorten kunnen we concluderen dat er een significant verschil is qua gemiddelde snavellengte.",
     "crumbs": [
@@ -925,7 +969,7 @@
   {
     "objectID": "Zelftest_ANOVA.html#oefening-7",
     "href": "Zelftest_ANOVA.html#oefening-7",
-    "title": "ANOVA zelftoetsing",
+    "title": "Online (R) oefeningen",
     "section": "Oefening 7",
     "text": "Oefening 7\nDe nodige analyses zijn uitgevoerd. Wat nu nog rest is het goed interpreteren en uitschrijven van conclusies op basis van de output die gegenereerd is tijdens de analyses.\nSchrijf voor jezelf een of meerdere alineas waarin je de nodige informatie opneemt om de resultaten van de analyse te communiceren.\n\n\n\n\n\n\nOplossing\n\n\n\n\n\nDit is een mogelijke verwoording van de resultaten:\nIn de steekproef waren er verschillen in de gemiddelde snavellengte van Adelie pinguïns (M = 38.791, SD = 2.663), Chinstrap pinguïns (M = 48.834, SD = 3.339) en Gentoo pinguïns (M = 47.505, SD = 3.082).\nUit de resultaten van de Levene’s test blijkt dat de binnen-groepen-variantie voor de drie soorten pinguïns (Chinstrap, Adelie, en Gentoo) niet significant afwijkt van 0 (F(2,339) = 2.2425, p = 0.1078). De kans dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten bedraagt hier 11%. Deze kans is groter dan 0.05, wat betekent dat we er vanuit kunnen gaan dat er geen verschil is in binnen-groepen-variantie tussen de drie pinguïnsoorten.\nDe ANOVA-analyse geeft aan dat de verschillen in snavellengte tussen de drie pinguïnsoorten hoogstwaarschijnlijk ook in de populatie terug te vinden zijn (F(2,339) = 410.6, p &lt; 0.001). Deze verschillen in snavellengte tussen de drie pinguïnsoorten kunnen we omschrijven als een groot effect (eta² = 0.708). Uit de post-hoc analyse blijkt dat alle drie de pinguïnsoorten statistisch significant van elkaar verschillen qua snavellengte: Chinstrap pinguïns hebben een langere snavel dan Adelie en Gentoo pinguïns. Gentoo pinguïns hebben op hun beurt een langere snavel dan Adelie pinguïns.\n\n\n\nRapporteren is van cruciaal belang. Wil je meer toelichting bij de bovenstaande rapportage, klik dan door naar hier.",
     "crumbs": [

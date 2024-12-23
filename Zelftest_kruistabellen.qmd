@@ -1,12 +1,13 @@
 ---
-title: "Kruistabellen zelftoetsing"
+title: "Online (`R`) oefeningen"
+subtitle: "Kruistabellen"
 format: live-html
 engine: knitr
 ---
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-Met kruistabllen kunnen we de (al dan niet veronderstelde causale) relatie tussen twee categorische variabelen nagaan. In dit onderdeel passen we dit toe op de pinguïns dataset.
+Met kruistabellen kunnen we de (al dan niet veronderstelde causale) relatie tussen twee categorische variabelen nagaan. In dit onderdeel passen we dit toe op de pinguïns dataset.
 
 Meer achtergrond over deze dataset vind je via volgende link: [palmerpenguins](Penguins.qmd)
 
@@ -1676,7 +1677,7 @@ We starten met OV1 waarin we het verband wensen na te gaan tussen `species` en `
 *Maak in onderstaande codeblok een kruistabel aan waarin we makkelijk het verband kunnen aflezen.*
 
 ::: callout-tip
-We wensen meteen relatieve frequenties (percentages) te berekenen. Denk goed na over mogelijke causaliteit die de onderzoeksvraag veronderstelt. 
+Om het verband na te gaan werken we best meteen met relatieve frequenties (percentages). Denk goed na over mogelijke causaliteit die de onderzoeksvraag veronderstelt en maak een tabel aan met kolom-percentages. 
 :::
 
 :::::: panel-tabset
@@ -1725,6 +1726,235 @@ De volledige oplossing ziet er zo uit!
 #| exercise: ex1
 #| solution: true
 kruistabel.kolom(penguins$species, penguins$island)
+```
+
+:::
+
+::::::
+
+## Oefening 2
+
+Hieronder zie je nogmaals de kruistabel met kolompercentages.
+
+```{webr}
+#| autorun: true
+#| runbutton: false
+
+library(palmerpenguins)
+data("penguins")
+kruistabel.kolom(penguins$species, penguins$island)
+```
+
+Op het examen vragen we soms een meerkeuzevraag over kruistabellen om na te gaan of je deze op een correcte wijze kan lezen. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.
+
+::: {.panel-tabset}
+## Vraag
+
+Welke van volgende uitspraken is fout? (slechts 1 antwoord mogelijk)
+
+1. Op het eiland Torgersen observeer je enkel Adelie pinguïns
+2. Bijna 20% van de geobserveerde pinguïns in de dataset zijn Chinstrap pinguïns
+3. 54.84% van de Chinstrap pinguïns kan je observeren op het Dream eiland
+4. De kans om op Biscoe eiland een Gentoo pinguïn te observeren is bijna 3 keer zo groot dan de kans om op dat eiland een Adelie pinguïn te observeren
+
+## Antwoordsleutel
+Je diende uitspraak 3 te kiezen als foute uitspraak.
+
+1. Op het eiland Torgersen observeer je enkel Adelie pinguïns
+
+**= JUIST! De kolom Torgersen toont dat 100% van de geobserveerde pinguïns op dat eiland Adelie pinguïns zijn.**
+
+2. Bijna 20% van de geobserveerde pinguïns in de dataset zijn Chinstrap pinguïns
+
+**= JUIS! Dit lees je af in de laatste kolom (`Sum`) die de relatieve frequenties van geobserveerde pinguïns weergeeft overheen alle drie de eilanden. Daar lezen we af dat 19.77% (dus bijna 20%) van de geobserveerde pinguïns Chinstrap pinguïns zijn.**
+
+3. 54.84% van de Chinstrap pinguïns kan je observeren op het Dream eiland
+
+**= FOUT! In de rij voor Chinstrap vinden we dit percentage wel terug, maar dit is geen rijpercentage! Die 54.84% betekent dat van alle geobserveerde pinguïns op Dream eiland 54.84% Chinstrap pinguïns zijn. Het is een kolompercentage!**
+
+4. De kans om op Biscoe eiland een Gentoo pinguïn te observeren is bijna 3 keer zo groot dan de kans om op dat eiland een Adelie pinguïn te observeren
+
+**= JUIST! De kans om op Biscoe eiland een Gentoo pinguïn te observeren bedraagt bijna 74%. Dit is bijna 3 keer zo groot dat de kans om op datzelfde eiland een Adelie pinguïn te observeren (die kans is afgerond 26%). De verhouding van 74 tov 26 is `{r} round(74/26,2)` wat afgerond 3 benadert.**
+
+:::
+
+## Oefening 3
+
+De kruistabel die we maakten bij de eerste oefening geeft enkel inzicht in hoe de verdeling is van geobserveerde pinguïns overheen de combinatie van de variabelen `species` en `island` in de steekproef. Uiteraard willen we op basis van de steekproef inferenties doen naar de populatie toe. 
+
+*Voer een statistische test uit die ons helpt om de inferentie naar de populatie toe te maken. Formuleer ook voor jezelf een conclusie die je zou trekken op basis van deze analyse.*
+
+:::::: panel-tabset
+## Oefening
+
+```{webr}
+#| exercise: ex3
+#| caption: Oefening3
+
+
+```
+
+
+## Hints
+
+::: {.hint exercise="ex3"}
+
+De test die we wensen uit te voeren is een chi-kwadraattoets. Kijk in het OLP om de juiste functie te vinden die deze statistische test uitvoert voor jou.
+
+:::
+
+
+## Oplossing
+
+::: {.solution exercise="ex3"}
+**Oplossing:**
+
+Er zijn verschillende manieren om deze test uit te voeren. 
+
+Een eerste manier ziet er zo uit (waarbij we gebruik maken van de `chisq.test( )` functie en tussen de haakjes de tabel aanmaken op basis van de twee betrokken variabelen):
+
+```{webr}
+#| exercise: ex3
+#| solution: true
+chisq.test(table(penguins$species, penguins$island))
+```
+
+Een alternatief ziet er zo uit (waarbij we gebruik maken van de `chisq.test( )` functie en tussen de haakjes verwijzen naar een object dat we net erboven aanmaken met daarin de tabel):
+
+```{webr}
+#| exercise: ex3
+#| solution: true
+Mijntabel <- table(penguins$species, penguins$island)
+chisq.test(Mijntabel)
+```
+
+Naast de functie `chisq.test( )` kan je ook gebruik maken van de functie `chi.kwadraat.test( )` die is opgenomen in het OLP. Deze functie werkt verder helemaal identiek als de `chisq.test( )` maar geeft wat meer informatie in de output (ook Cramer's V).
+
+```{webr}
+#| exercise: ex3
+#| solution: true
+Mijntabel <- table(penguins$species, penguins$island)
+chi.kwadraat.test(Mijntabel)
+```
+
+*Conclusie:*
+
+*Ongeacht de methode die je hanteert, bekom je een chi-kwadraatwaarde van 299.55 met 4 vrijheidsgraden. De bijhorende p-waarde is duidelijk lager dan 0.001. Bijgevolg kan je concluderen dat de kans dat we deze verdeling in de data zouden terug vinden indien de nulhypothese juist is (H0 = er is geen verband tussen pinguïnsoort en eiland) bijzonder klein is. Dat sterkt ons in de conclusie om te stellen dat er in de populatie ook een verband te vinden is tussen eiland en pinguïnsoort.*
+
+:::
+
+::::::
+
+## Oefening 4
+
+Ongeacht welke analysetechniek we behandelen, we zijn altijd geïnteresseerd in een of andere maat van effectgrootte. Ook hier willen we meer weten over de effectgrootte van het effect van eiland op de kans om een bepaalde pinguïnsoort te observeren.
+
+*Bereken een maat van effectgrootte voor de eerder aangemaakte kruistabel. En wat kan je daaruit concluderen?*
+
+:::::: panel-tabset
+## Oefening
+
+```{webr}
+#| exercise: ex4
+#| caption: Oefening4
+
+
+```
+
+
+## Hints
+
+::: {.hint exercise="ex4"}
+
+Om de effectgrootte bij kruistabellen uit te drukken maken we gebruik van Cramer's V. Bekijk het OLP om te weten hoe je die snel kan laten berekenen in `R`.
+
+:::
+
+
+## Oplossing
+
+::: {.solution exercise="ex4"}
+**Oplossing:**
+
+Hiertoe maken we gebruik van de functie `chi.kwadraat.test( )` . Opnieuw zijn er twee verschillende manieren om deze test uit te voeren. 
+
+Een eerste manier ziet er zo uit (tussen de haakjes maken we de tabel aan op basis van de twee betrokken variabelen):
+
+```{webr}
+#| exercise: ex4
+#| solution: true
+chi.kwadraat.test(table(penguins$species, penguins$island))
+```
+
+Een alternatief ziet er zo uit (waarbij we eerst een object aanmaken met daarin de tabel):
+
+
+```{webr}
+#| exercise: ex4
+#| solution: true
+Mijntabel <- table(penguins$species, penguins$island)
+chi.kwadraat.test(Mijntabel)
+```
+
+*Conclusie:*
+
+*Cramer's V bedraag 0.66, wat een vrij hoge waarde is. In het OLP stellen we ten onrechte dat er geen vuistregels zijn voor Cramer's V. Die zijn er eigenlijk wel (zie ook slides van het vak). Op basis van deze vuistregels van bijvoorbeeld Rea en Parker (1992) zouden we dit verband als een sterk verband benoemen.*
+
+:::
+
+::::::
+
+## Oefening 5
+
+Soms kan het verhelderend werken voor een doelpubliek om een visualisatie te geven van een verband. 
+
+*Maak een gepaste visualisatie voor de kruistabel van `species` en `island`.*
+
+:::::: panel-tabset
+## Oefening
+
+```{webr}
+#| exercise: ex5
+#| caption: Oefening5
+
+
+```
+
+
+## Hints
+
+::: {.hint exercise="ex5"}
+
+We kunnen een associatieplot maken in `R` aan de hand van de functie `assocplot( )`.
+
+:::
+
+
+## Oplossing
+
+::: {.solution exercise="ex5"}
+**Oplossing:**
+
+Hiertoe maken we gebruik van de functie `assocplot( )` . Opnieuw zijn er twee verschillende manieren om deze test uit te voeren. 
+
+Een eerste manier ziet er zo uit (tussen de haakjes maken we de tabel aan op basis van de twee betrokken variabelen). LET OP: eerste de kolommen en dan de rijen ingeven, wat tegenovergestelde is van wat we anders doen!
+
+```{webr}
+#| exercise: ex5
+#| solution: true
+assocplot(table(penguins$island, penguins$species))
+```
+
+Een alternatief ziet er zo uit (waarbij we eerst een object aanmaken met daarin de tabel). Ook hier goed opletten, de volgorde van de variabelen in de `table( )` functie is omgedraaid.
+
+
+```{webr}
+#| exercise: ex5
+#| solution: true
+
+Mijntabel2 <- table(penguins$island, penguins$species)
+assocplot(Mijntabel2)
+
 ```
 
 :::
