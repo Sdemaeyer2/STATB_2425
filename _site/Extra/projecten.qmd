@@ -1,0 +1,11 @@
+---
+title: "Projecten in RStudio"
+---
+
+Werken in `R` en `RStudio` gaat gepaard met het werken met meerdere bestanden. Typisch voor een doorsnee analyses heb je alvast een databestand (ruwe data in .Rdata, .xlsx, .csv, ...), een R script en eventueel een Quarto document.
+
+Door het werken met verschillende documenten en het feit dat je vaak met code aan de slag gaat, kan het gebeuren dat heel de workflow redelijk rommelig wordt. Daarom raad ik je aan om te werken met "Projects" in "RStudio". Zo'n project is eigenlijk een specifieke map op je pc die je hanteert om alle relevante documenten voor een bepaalde studie of analyse in onder te brengen. In RStudio kan je vervolgens aangeven dat deze map gerelateerd is aan een project. Het grote voordeel is dat alle documenten samen staan op één plaats en dat alle code waarin je verwijst naar een ander bestand (dus ook om bv data in te laden) vertrekt vanuit die map en niet vanuit je hele mappenstructuur specifiek op je pc. 
+
+Dat klinkt mogelijk redelijk abstract. Het wordt in de onderstaande tutorial van Andy Field echter zeer goed toegelicht. De workflow die hij voorstelt is echt het overwegen waard! Ook voor jou als student kan dit helpen. Bijvoorbeeld, maak een specfiek project voor de ZSO's en zo leer je omgaan met die projecten. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EA7JW2SfKSY?si=7aUyW-M24vwkppPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

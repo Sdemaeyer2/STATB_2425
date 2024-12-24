@@ -402,7 +402,8 @@ cookieconsent.run({
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a>
+  <li><a href="#voorbereiding" id="toc-voorbereiding" class="nav-link active" data-scroll-target="#voorbereiding">Voorbereiding</a></li>
+  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link" data-scroll-target="#opdrachten">OPDRACHTEN</a>
   <ul class="collapse">
   <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
   <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
@@ -437,14 +438,40 @@ cookieconsent.run({
 </header>
 
 
+<section id="voorbereiding" class="level1">
+<h1>Voorbereiding</h1>
+<p>Voor deze ZSO ga je aan de slag met de dataset met de naam <code>DataZSO2.RData</code>. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.</p>
+<p><a href="../ZSO/DataZSO2.RData">DOWNLOAD DE DATA</a></p>
+<p>Als je deze file hebt gedownload en geopend in <code>RStudio</code> zorg je ervoor dat er een dataframe in <code>R</code> actief is met de naam <code>Pisa2</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Een goede workflow in <code>RStudio</code> is van cruciaal belang op lange termijn. In dit vak is het geen verplichting, maar werken met projecten in <code>RStudio</code> kan je leven een pak makkelijker maken.</p>
+<p>Daarom raden we je aan om een nieuw project te maken per ZSO. Concreet betekent dit dat je tevens op je pc een map maakt per ZSO met daarin alle nodige files voor die ZSO:</p>
+<ul>
+<li><p>databestanden</p></li>
+<li><p><code>OLP2 functies.R</code> file</p></li>
+<li><p>Je script met analyses (of Quarto document)</p></li>
+</ul>
+<p>Meer uitleg over werken met projecten en Quarto documenten kan je vinden onder Extra materiaal (<a href="../extra/projecten.qmd">KLIK HIER</a>)</p>
+</div>
+</div>
+</section>
 <section id="opdrachten" class="level1 unnumbered">
 <h1 class="unnumbered">OPDRACHTEN</h1>
 <section id="vraag-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
-<p>Als minister van onderwijs enerzijds en van gelijke kansen anderzijds heeft Ella twee belangrijke speerpunten in haar beleid: wetenschapsonderwijs en ‘met goesting naar school gaan’. Op het kruispunt tussen haar twee beleidsdomeinen schrijft zij een onderzoeksopdracht uit: “Een stand van zaken inzake gelijke kansen met betrekking tot wetenschapskennis en schoolattitude. Is het allochtoon deficit anno 2020 weggewerkt?”.</p>
-<p>Jij dient als jonge onderzoeker, samen met de promotor van je thesis, hiervoor een projectvoorstel in. Jullie beloven om met behulp van de representatieve steekproef van PISA in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen in wetenschapskennis en attitude ten aanzien van de school. Hierbij gaan jullie ook na op welk van beide twee elementen allochtone afkomst meer van invloed is.</p>
-<p>‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschapstest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).</p>
-<p><em>Formuleer de onderzoeksvragen en hypotheses. Kies de gepaste analysetechniek.</em></p>
+<p>Als minister van onderwijs enerzijds en van gelijke kansen anderzijds heeft Ella twee belangrijke speerpunten in haar beleid: wetenschapsonderwijs en ‘met goesting naar school gaan’. Op het kruispunt tussen haar twee beleidsdomeinen schrijft zij een onderzoeksopdracht uit: <em>“Een stand van zaken inzake gelijke kansen met betrekking tot wetenschapskennis en schoolattitude. Is het allochtoon deficit anno 2020 weggewerkt?”</em>.</p>
+<p>Jij dient als jonge onderzoeker, samen met de promotor van je thesis, hiervoor een projectvoorstel in. Jullie beloven om, met behulp van de representatieve steekproef uit het PISA onderzoek, in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen in wetenschapskennis en attitude ten aanzien van de school. Hierbij gaan jullie ook na op welk van beide twee elementen allochtone afkomst meer van invloed is.</p>
+<p>‘Pisa2’ is een dataframe met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging van 2018 hun etnische afkomst (<code>Immigratie</code>), sociaal-economische status (<code>SESz</code>), hun score op een wiskunde- (<code>Wiskundez</code>), taal- (<code>Lezenz</code>) en wetenschapstest (<code>Wetenschappenz</code>), de attitude van leerlingen ten aanzien van de school (<code>Attitudeschoolz</code>) en ten aanzien van computers (<code>Attitudecomputersz</code>) en enkele scores op leerschalen (<code>Samenvattenz</code>, <code>Begrijpenz</code>, <code>Memoriserenz</code>).</p>
+<p><em>Formuleer de onderzoeksvragen en hypotheses die in het bovenstaand scenario worden geschetst. Kies de gepaste analysetechniek.</em></p>
 <p>[RESPONS ACHTERAAN DOCUMENT]</p>
 </section>
 <section id="vraag-2" class="level2 unnumbered">
@@ -458,7 +485,7 @@ cookieconsent.run({
 <h1 class="unnumbered">RESPONSEN</h1>
 <p>Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in <code>R</code> en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando’s <code>load( )</code> en <code>source( )</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Data ZSO2.RData"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"DataZSO2.RData"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"OLP2 Functies.R"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="vraag-1-1" class="level2 unnumbered">
@@ -531,11 +558,15 @@ cookieconsent.run({
 <p>Gezien we enkel geïnteresseerd zijn in het onderscheid tussen autochtone en allochtone leerlingen moeten we deze variabele eerst hercoderen. We voegen daarbij de categorieën ‘Second-generation’ en ‘First-generation’ samen tot ‘Allochtoon’. Daartoe maken we gebruik van het commando <code>recode</code> uit het pakket <code>car</code>. Ter controle vragen we ook een tabel met absolute frequenties op voor de nieuw gemaakte variabele.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Pisa2<span class="sc">$</span>Allochtoon<span class="ot">&lt;-</span><span class="fu">recode</span>(Pisa2<span class="sc">$</span>Immigratie,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"'Native'='Autochtoon';</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">                         'Second-Generation'='Allochtoon';</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">                         'First-Generation' ='Allochtoon'"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(Pisa2<span class="sc">$</span>Allochtoon) </span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Pisa2<span class="sc">$</span>Allochtoon<span class="ot">&lt;-</span><span class="fu">recode</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  Pisa2<span class="sc">$</span>Immigratie,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"'Native'='Autochtoon';</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">   'Second-Generation'='Allochtoon';</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">   'First-Generation' ='Allochtoon'"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(Pisa2<span class="sc">$</span>Allochtoon) </span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Allochtoon Autochtoon 

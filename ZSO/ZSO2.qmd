@@ -6,18 +6,39 @@ format:
   pdf: default
 ---
 
+# Voorbereiding
+
+Voor deze ZSO ga je aan de slag met de dataset met de naam `DataZSO2.RData`. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.
+
+[DOWNLOAD DE DATA](/ZSO/DataZSO2.RData)
+
+Als je deze file hebt gedownload en geopend in `RStudio` zorg je ervoor dat er een dataframe in `R` actief is met de naam `Pisa2`.
+
+::: callout-tip
+Een goede workflow in `RStudio` is van cruciaal belang op lange termijn. In dit vak is het geen verplichting, maar werken met projecten in `RStudio` kan je leven een pak makkelijker maken.
+
+Daarom raden we je aan om een nieuw project te maken per ZSO. Concreet betekent dit dat je tevens op je pc een map maakt per ZSO met daarin alle nodige files voor die ZSO:
+
+-   databestanden
+
+-   `OLP2 functies.R` file
+
+-   Je script met analyses (of Quarto document)
+
+Meer uitleg over werken met projecten en Quarto documenten kan je vinden onder Extra materiaal ([KLIK HIER](/extra/projecten.qmd))
+:::
 
 # OPDRACHTEN {.unnumbered}
 
 ## Vraag 1 {.unnumbered}
 
-Als minister van onderwijs enerzijds en van gelijke kansen anderzijds heeft Ella twee belangrijke speerpunten in haar beleid: wetenschapsonderwijs en ‘met goesting naar school gaan’. Op het kruispunt tussen haar twee beleidsdomeinen schrijft zij een onderzoeksopdracht uit: “Een stand van zaken inzake gelijke kansen met betrekking tot wetenschapskennis en schoolattitude. Is het allochtoon deficit anno 2020 weggewerkt?”.
+Als minister van onderwijs enerzijds en van gelijke kansen anderzijds heeft Ella twee belangrijke speerpunten in haar beleid: wetenschapsonderwijs en ‘met goesting naar school gaan’. Op het kruispunt tussen haar twee beleidsdomeinen schrijft zij een onderzoeksopdracht uit: *“Een stand van zaken inzake gelijke kansen met betrekking tot wetenschapskennis en schoolattitude. Is het allochtoon deficit anno 2020 weggewerkt?”*.
 
-Jij dient als jonge onderzoeker, samen met de promotor van je thesis, hiervoor een projectvoorstel in. Jullie beloven om met behulp van de representatieve steekproef van PISA in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen in wetenschapskennis en attitude ten aanzien van de school. Hierbij gaan jullie ook na op welk van beide twee elementen allochtone afkomst meer van invloed is.
+Jij dient als jonge onderzoeker, samen met de promotor van je thesis, hiervoor een projectvoorstel in. Jullie beloven om, met behulp van de representatieve steekproef uit het PISA onderzoek, in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen in wetenschapskennis en attitude ten aanzien van de school. Hierbij gaan jullie ook na op welk van beide twee elementen allochtone afkomst meer van invloed is.
 
-‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschapstest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).
+‘Pisa2’ is een dataframe met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging van 2018 hun etnische afkomst (`Immigratie`), sociaal-economische status (`SESz`), hun score op een wiskunde- (`Wiskundez`), taal- (`Lezenz`) en wetenschapstest (`Wetenschappenz`), de attitude van leerlingen ten aanzien van de school (`Attitudeschoolz`) en ten aanzien van computers (`Attitudecomputersz`) en enkele scores op leerschalen (`Samenvattenz`, `Begrijpenz`, `Memoriserenz`).
 
-*Formuleer de onderzoeksvragen en hypotheses. Kies de gepaste analysetechniek.*
+*Formuleer de onderzoeksvragen en hypotheses die in het bovenstaand scenario worden geschetst. Kies de gepaste analysetechniek.*
 
 \[RESPONS ACHTERAAN DOCUMENT\]
 
@@ -34,7 +55,7 @@ Nu we een keuze gemaakt hebben voor de analysetechnieken zijn we klaar om onze h
 Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in `R` en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando's `load( )` en `source( )`.
 
 ```{r}
-load("Data ZSO2.RData")
+load("DataZSO2.RData")
 source("OLP2 Functies.R")
 ```
 
@@ -105,10 +126,14 @@ Gezien we enkel geïnteresseerd zijn in het onderscheid tussen autochtone en all
 #| warning: false
 #| error: false 
 library(car)
-Pisa2$Allochtoon<-recode(Pisa2$Immigratie,
-                         "'Native'='Autochtoon';
-                         'Second-Generation'='Allochtoon';
-                         'First-Generation' ='Allochtoon'")
+
+Pisa2$Allochtoon<-recode(
+  Pisa2$Immigratie,
+  "'Native'='Autochtoon';
+   'Second-Generation'='Allochtoon';
+   'First-Generation' ='Allochtoon'"
+  )
+
 table(Pisa2$Allochtoon) 
 ```
 

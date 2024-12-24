@@ -431,7 +431,8 @@ window.Quarto = {
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#opdracht" id="toc-opdracht" class="nav-link active" data-scroll-target="#opdracht">OPDRACHT</a></li>
+  <li><a href="#voorbereiding" id="toc-voorbereiding" class="nav-link active" data-scroll-target="#voorbereiding">Voorbereiding</a></li>
+  <li><a href="#opdracht" id="toc-opdracht" class="nav-link" data-scroll-target="#opdracht">OPDRACHT</a></li>
   <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
   <ul class="collapse">
   <li><a href="#onderzoeksvragen" id="toc-onderzoeksvragen" class="nav-link" data-scroll-target="#onderzoeksvragen">Onderzoeksvragen</a></li>
@@ -462,11 +463,17 @@ window.Quarto = {
 </header>
 
 
+<section id="voorbereiding" class="level1">
+<h1>Voorbereiding</h1>
+<p>Voor deze ZSO ga je aan de slag met dezelfde dataset als die in ZSO2: <code>DataZSO2.RData</code>. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.</p>
+<p><a href="../ZSO/DataZSO2.RData">DOWNLOAD DE DATA</a></p>
+<p>Als je deze file hebt gedownload en geopend in <code>RStudio</code> zorg je ervoor dat er een dataframe in <code>R</code> actief is met de naam <code>Pisa2</code>.</p>
+</section>
 <section id="opdracht" class="level1 unnumbered">
 <h1 class="unnumbered">OPDRACHT</h1>
 <p>We pikken even de draad op bij Vraag 1 van ZSO 2. Daar diende je als jonge onderzoeker, samen met de promotor van je thesis, een projectvoorstel in om onderzoek te doen naar invloed van achtergrond van leerlingen. Jullie beloofden om met behulp van de representatieve steekproef PISA voor het Vlaamse onderwijs in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen met betrekking tot wetenschapskennis en attitude ten aanzien van de school.</p>
-<p>‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschappentest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).</p>
-<p>Op de stuurgroep van je project presenteer je de eerste resultaten van je onderzoek (ZSO - Vraag 1). De kabinetschef van de minister trekt nogal fel van leer tegen je conclusies: “Ander onderzoek wijst toch uit dat allochtonen van de eerste generatie anders te beschouwen zijn dan allochtonen van de tweede generatie. Met deze resultaten kunnen wij niet naar buiten komen, ze zijn te simplistisch om de complexe werkelijkheid samen te kunnen vatten.”</p>
+<p>‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (<code>Immigratie</code>), sociaal-economische status (<code>SESz</code>), hun score op een wiskunde- (<code>Wiskundez</code>), taal- (<code>Lezenz</code>) en wetenschappentest (<code>Wetenschappenz</code>), de attitude van leerlingen ten aanzien van de school (<code>Attitudeschoolz</code>) en ten aanzien van computers (<code>Attitudecomputersz</code>) en enkele scores op leerschalen (<code>Samenvattenz</code>, <code>Begrijpenz</code> en <code>Memoriserenz</code>).</p>
+<p>Op de stuurgroep van je project presenteer je de eerste resultaten van je onderzoek (ZSO - Vraag 1). De kabinetschef van de minister trekt nogal fel van leer tegen je conclusies: <em>“Ander onderzoek wijst toch uit dat allochtonen van de eerste generatie anders te beschouwen zijn dan allochtonen van de tweede generatie. Met deze resultaten kunnen wij niet naar buiten komen, ze zijn te simplistisch om de complexe werkelijkheid samen te kunnen vatten.”</em></p>
 <p>Er wordt besloten dat je meer fijnmazige analyses moet doen, ditmaal een onderscheid makend tussen allochtone leerlingen van de eerste en van de tweede generatie.</p>
 <p><em>Formuleer de onderzoeksvragen en hypotheses. Kies de gepaste analysetechniek.</em></p>
 <p><em>Voer de gepaste analyses uit om de onderzoeksvragen te beantwoorden. Geef de meest relevante output van je analyses en bespreek deze. Stel het resultaat ook visueel voor.</em></p>
@@ -476,7 +483,7 @@ window.Quarto = {
 <h1 class="unnumbered">RESPONSEN</h1>
 <p>Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in <code>R</code> en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando’s <code>load( )</code> en <code>source( )</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"Data ZSO2.RData"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"DataZSO2.RData"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"OLP2 Functies.R"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="onderzoeksvragen" class="level2 unnumbered">
@@ -649,7 +656,7 @@ Pisa2$Immigratie   0.001356105
 Residuals                   NA</code></pre>
 </div>
 </div>
-<p>In de Pisa-steekproef 2009 zijn er kleine verschillen naar etnische afkomst in de mate waarin 14-jarigen een positieve attitude hebben ten aanzien van de school: eerste (<em>M</em> = 0.118, <em>SD</em> = 1.001) en tweede generatie (<em>M</em> = 0.121, <em>SD</em> = 1.178) allochtone leerlingen zijn gemiddeld gezien iets positiever dan hun autochtone medestudenten (<em>M</em> = -0.009, <em>SD</em> = 0. 986). De resultaten van de Anova-analyse, gecorrigeerd voor ongelijke varianties binnen de drie groepen (<em>F</em> Levene’s test(2,4129) = 4.712, <em>p</em> = 0.009), toont aan dat deze verschillen echter niet door te trekken zijn naar de populatie (<em>F</em>(2,264.24) = 2.413, <em>p</em> = 0.092). We verwachten dus dat in de populatie de attitude ten aanzien van de school niet verschilt naar etnische afkomst. We verwerpen de nulhypothese m.a.w. niet. De <em>eta²</em> geeft bovendien ook aan dat er geen effect is van etnische origine op de attitude ten aanzien van de school (<em>eta</em><span class="math inline">\(^2\)</span> = 0.001).</p>
+<p>In de Pisa-steekproef 2018 zijn er kleine verschillen naar etnische afkomst in de mate waarin 14-jarigen een positieve attitude hebben ten aanzien van de school: eerste (<em>M</em> = 0.118, <em>SD</em> = 1.001) en tweede generatie (<em>M</em> = 0.121, <em>SD</em> = 1.178) allochtone leerlingen zijn gemiddeld gezien iets positiever dan hun autochtone medestudenten (<em>M</em> = -0.009, <em>SD</em> = 0. 986). De resultaten van de Anova-analyse, gecorrigeerd voor ongelijke varianties binnen de drie groepen (<em>F</em> Levene’s test(2,4129) = 4.712, <em>p</em> = 0.009), toont aan dat deze verschillen echter niet door te trekken zijn naar de populatie (<em>F</em>(2,264.24) = 2.413, <em>p</em> = 0.092). We verwachten dus dat in de populatie de attitude ten aanzien van de school niet verschilt naar etnische afkomst. We verwerpen de nulhypothese m.a.w. niet. De <em>eta²</em> geeft bovendien ook aan dat er geen effect is van etnische origine op de attitude ten aanzien van de school (<em>eta</em><span class="math inline">\(^2\)</span> = 0.001).</p>
 <p>We kunnen het ook grafisch tonen:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Pisa2<span class="sc">$</span>Attitudeschoolz <span class="sc">~</span> Pisa2<span class="sc">$</span>Immigratie)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>

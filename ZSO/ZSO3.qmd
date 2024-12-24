@@ -5,14 +5,21 @@ format:
   html: default
   pdf: default
 ---
+# Voorbereiding
+
+Voor deze ZSO ga je aan de slag met dezelfde dataset als die in ZSO2: `DataZSO2.RData`. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.
+
+[DOWNLOAD DE DATA](/ZSO/DataZSO2.RData)
+
+Als je deze file hebt gedownload en geopend in `RStudio` zorg je ervoor dat er een dataframe in `R` actief is met de naam `Pisa2`. 
 
 # OPDRACHT {.unnumbered}
 
 We pikken even de draad op bij Vraag 1 van ZSO 2. Daar diende je als jonge onderzoeker, samen met de promotor van je thesis, een projectvoorstel in om onderzoek te doen naar invloed van achtergrond van leerlingen. Jullie beloofden om met behulp van de representatieve steekproef PISA voor het Vlaamse onderwijs in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen met betrekking tot wetenschapskennis en attitude ten aanzien van de school.
 
-‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschappentest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).
+‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (`Immigratie`), sociaal-economische status (`SESz`), hun score op een wiskunde- (`Wiskundez`), taal- (`Lezenz`) en wetenschappentest (`Wetenschappenz`), de attitude van leerlingen ten aanzien van de school (`Attitudeschoolz`) en ten aanzien van computers (`Attitudecomputersz`) en enkele scores op leerschalen (`Samenvattenz`, `Begrijpenz` en `Memoriserenz`).
 
-Op de stuurgroep van je project presenteer je de eerste resultaten van je onderzoek (ZSO - Vraag 1). De kabinetschef van de minister trekt nogal fel van leer tegen je conclusies: “Ander onderzoek wijst toch uit dat allochtonen van de eerste generatie anders te beschouwen zijn dan allochtonen van de tweede generatie. Met deze resultaten kunnen wij niet naar buiten komen, ze zijn te simplistisch om de complexe werkelijkheid samen te kunnen vatten.”
+Op de stuurgroep van je project presenteer je de eerste resultaten van je onderzoek (ZSO - Vraag 1). De kabinetschef van de minister trekt nogal fel van leer tegen je conclusies: *“Ander onderzoek wijst toch uit dat allochtonen van de eerste generatie anders te beschouwen zijn dan allochtonen van de tweede generatie. Met deze resultaten kunnen wij niet naar buiten komen, ze zijn te simplistisch om de complexe werkelijkheid samen te kunnen vatten.”*
 
 Er wordt besloten dat je meer fijnmazige analyses moet doen, ditmaal een onderscheid makend tussen allochtone leerlingen van de eerste en van de tweede generatie.
 
@@ -27,7 +34,7 @@ Er wordt besloten dat je meer fijnmazige analyses moet doen, ditmaal een ondersc
 Vooraleer we de analyses kunnen uitvoeren moeten we uiteraard de data inladen in `R` en tevens de OLP2 Functies activeren. Dit doen we bijvoorbeeld door gebruk te maken van de commando's `load( )` en `source( )`.
 
 ```{r}
-load("Data ZSO2.RData")
+load("DataZSO2.RData")
 source("OLP2 Functies.R")
 ```
 
@@ -149,7 +156,7 @@ oneway.test(Pisa2$Attitudeschoolz ~ Pisa2$Immigratie)
 etasq(aov(Pisa2$Attitudeschoolz ~ Pisa2$Immigratie))
 ```
 
-In de Pisa-steekproef 2009 zijn er kleine verschillen naar etnische afkomst in de mate waarin 14-jarigen een positieve attitude hebben ten aanzien van de school: eerste (*M* = 0.118, *SD* = 1.001) en tweede generatie (*M* = 0.121, *SD* = 1.178) allochtone leerlingen zijn gemiddeld gezien iets positiever dan hun autochtone medestudenten (*M* = -0.009, *SD* = 0. 986). De resultaten van de Anova-analyse, gecorrigeerd voor ongelijke varianties binnen de drie groepen (*F* Levene’s test(2,4129) = 4.712, *p* = 0.009), toont aan dat deze verschillen echter niet door te trekken zijn naar de populatie (*F*(2,264.24) = 2.413, *p* = 0.092). We verwachten dus dat in de populatie de attitude ten aanzien van de school niet verschilt naar etnische afkomst. We verwerpen de nulhypothese m.a.w. niet. De *eta²* geeft bovendien ook aan dat er geen effect is van etnische origine op de attitude ten aanzien van de school (*eta*$^2$ = 0.001).
+In de Pisa-steekproef 2018 zijn er kleine verschillen naar etnische afkomst in de mate waarin 14-jarigen een positieve attitude hebben ten aanzien van de school: eerste (*M* = 0.118, *SD* = 1.001) en tweede generatie (*M* = 0.121, *SD* = 1.178) allochtone leerlingen zijn gemiddeld gezien iets positiever dan hun autochtone medestudenten (*M* = -0.009, *SD* = 0. 986). De resultaten van de Anova-analyse, gecorrigeerd voor ongelijke varianties binnen de drie groepen (*F* Levene’s test(2,4129) = 4.712, *p* = 0.009), toont aan dat deze verschillen echter niet door te trekken zijn naar de populatie (*F*(2,264.24) = 2.413, *p* = 0.092). We verwachten dus dat in de populatie de attitude ten aanzien van de school niet verschilt naar etnische afkomst. We verwerpen de nulhypothese m.a.w. niet. De *eta²* geeft bovendien ook aan dat er geen effect is van etnische origine op de attitude ten aanzien van de school (*eta*$^2$ = 0.001).
 
 We kunnen het ook grafisch tonen:
 
