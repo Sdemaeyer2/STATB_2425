@@ -2063,6 +2063,8 @@ assocplot(Mijntabel_oef6c)
 
 ```
 
-bla bla bla
+*De warning kan je in deze negereren.*
+
+Uit de kruistabel kan je aflezen dat de kans om een vrouwelijke pinguïn te observeren zowel voor Adelie als Chinstrap pinguïns 50% bevat. Voor Gentoo pinguïns is dat nagenoeg 49%. Er zijn dus nauwelijks verschillen tussen de pinguïnsoorten in de kans om vrouwelijke pinguïns te observeren.  Dit gebrek aan een duidelijke samenhang is ook af te lezen uit het feit dat de chi-kwadraat test wijst op een niet-statistisch significant (chi²(2) = 0.049, p = 0.976). De sterkte van verband wordt uitgedrukt door Cramer’s V (0.012) wat ook wijst op het ontbreken van een samenhang. 
 
 ::::::
