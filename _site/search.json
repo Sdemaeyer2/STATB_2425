@@ -1239,5 +1239,16 @@
     "crumbs": [
       "Screencasts"
     ]
+  },
+  {
+    "objectID": "Zelftest_kruistabellen.html#oefening-6-1",
+    "href": "Zelftest_kruistabellen.html#oefening-6-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 6",
+    "text": "Oefening 6\nEr is ook een tweede onderzoeksvraag die we wensen te beantwoorden:\n(OV2) Is de kans om vrouwelijke penguïns (sex) te observeren verschillend naargelang de pinguïnsoort (species)?\nVoer alle gepaste analyses uit om een antwoord op deze onderzoeksvraag te formuleren. Schrijf de conclusies voor jezelf neer in een gepaste paragraaf zodanig dat je een breed publiek kan informeren over je conclusies.\n\nOefeningHintsOplossingRapportage\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart met nadenken over een mogelijke causaliteit die verdoken zit in de onderzoeksvraag.\nVervolgens maak je een kruistabel aan met kolompercentages. Plaats de mogelijke onafhankelijke variabele in de kolommen.\nDoe de Chi-kwadraat test. Je kan in één beweging ook de maat voor effectgrootte nagaan (phi).\nMaak eventueel een visualisatie aan van het verband.\n\n\n\n\nOplossing:\nStart met nadenken over een mogelijke causaliteit die verdoken zit in de onderzoeksvraag.\nDe OV gaat over het voorspellen van de kans om vrouwelijke pinguïns te observeren. Daarom dat we de variabele sex kunnen beschouwen als afhankelijke variabele (komt in de rijen) en de variabele species in de kolommen zetten als mogelijke onafhankelijke variabele.\nVervolgens maak je een kruistabel aan met kolompercentages. Plaats de mogelijke onafhankelijke variabele in de kolommen.\n\n\n\nlibrary(palmerpenguins) # indien nodig package laden\ndata(\"penguins\")        # indien nodig de data laden\n\nMijntabel_oef6 &lt;- kruistabel.kolom(penguins$sex, penguins$species)\n\nlibrary(palmerpenguins) # indien nodig package laden\ndata(\"penguins\")        # indien nodig de data laden\n\nMijntabel_oef6 &lt;- kruistabel.kolom(penguins$sex, penguins$species)\n\n\nDoe de Chi-kwadraat test. Je kan in één beweging ook de maat voor effectgrootte nagaan (phi).\n\n\n\nchi.kwadraat.test(Mijntabel_oef6)\n\nchi.kwadraat.test(Mijntabel_oef6)\n\n\nMaak eventueel een visualisatie aan van het verband.\n\n\n\nassocplot(Mijntabel_oef6)\n\nassocplot(Mijntabel_oef6)\n\n\n\n\n\nIndien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.\n\n\n\n\n\n\n\n\nbla bla bla",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Kruistabellen"
+    ]
   }
 ]

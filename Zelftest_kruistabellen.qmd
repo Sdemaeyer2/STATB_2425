@@ -77,7 +77,9 @@ leveneTest.lm <- function(y, ...) {
 	leveneTest.formula(f, data=m, ...)
 }
 
+##########################
 ### OLP2 Functies.R script
+##########################
 
 freqtabel <- function(X){
   Table <- data.frame( table(X) )
@@ -241,7 +243,7 @@ chi.noncentral.conf<-function (chival, df, conf, prec = 1e-05)
 	uc <- c(chival, 2 * chival, 3 * chival)
 	llim <- (1 - conf)/2
 
-	while (pchisq(chival, df, uc[1]) < llim && uc>prec) {
+	while (pchisq(chival, df, uc[1]) < llim & uc[1]>prec) {
 		uc <- c(uc[1]/4, uc[1], uc[3])
 	}
 	while (pchisq(chival, df, uc[3]) > llim) {
@@ -1958,5 +1960,109 @@ assocplot(Mijntabel2)
 ```
 
 :::
+
+::::::
+
+## Oefening 6
+
+Er is ook een tweede onderzoeksvraag die we wensen te beantwoorden:
+
+| (OV2) Is de kans om vrouwelijke penguïns (`sex`) te observeren verschillend naargelang de pinguïnsoort (`species`)?
+
+
+*Voer alle gepaste analyses uit om een antwoord op deze onderzoeksvraag te formuleren. Schrijf de conclusies voor jezelf neer in een gepaste paragraaf zodanig dat je een breed publiek kan informeren over je conclusies.*
+
+:::::: panel-tabset
+## Oefening
+
+```{webr}
+#| exercise: ex6
+#| caption: Oefening6
+
+
+```
+
+
+## Hints
+
+::: {.hint exercise="ex6"}
+
+Start met nadenken over een mogelijke causaliteit die verdoken zit in de onderzoeksvraag.
+
+Vervolgens maak je een kruistabel aan met kolompercentages. Plaats de mogelijke onafhankelijke variabele in de kolommen.
+
+Doe de Chi-kwadraat test. Je kan in één beweging ook de maat voor effectgrootte nagaan (phi).
+
+Maak eventueel een visualisatie aan van het verband.
+
+:::
+
+
+## Oplossing
+
+::: {.solution exercise="ex6"}
+**Oplossing:**
+
+Start met nadenken over een mogelijke causaliteit die verdoken zit in de onderzoeksvraag.
+
+*De OV gaat over het voorspellen van de kans om vrouwelijke pinguïns te observeren. Daarom dat we de variabele `sex` kunnen beschouwen als afhankelijke variabele (komt in de rijen) en de variabele `species` in de kolommen zetten als mogelijke onafhankelijke variabele.*
+
+Vervolgens maak je een kruistabel aan met kolompercentages. Plaats de mogelijke onafhankelijke variabele in de kolommen.
+
+```{webr}
+#| exercise: ex6
+#| solution: true
+
+library(palmerpenguins) # indien nodig package laden
+data("penguins")        # indien nodig de data laden
+
+Mijntabel_oef6 <- kruistabel.kolom(penguins$sex, penguins$species)
+
+```
+
+Doe de Chi-kwadraat test. Je kan in één beweging ook de maat voor effectgrootte nagaan (phi).
+
+```{webr}
+#| exercise: ex6
+#| solution: true
+
+chi.kwadraat.test(Mijntabel_oef6)
+```
+
+Maak eventueel een visualisatie aan van het verband.
+
+```{webr}
+#| exercise: ex6
+#| solution: true
+
+assocplot(Mijntabel_oef6)
+```
+
+:::
+
+## Rapportage
+
+Indien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.
+
+```{webr}
+
+library(palmerpenguins) # indien nodig package laden
+data("penguins")        # indien nodig de data laden
+
+Mijntabel_oef6 <- kruistabel.kolom(penguins$sex, penguins$species)
+
+Mijntabel_oef6
+
+Mijntabel_oef6b <- table(penguins$sex, penguins$species)
+
+chi.kwadraat.test(Mijntabel_oef6b)
+
+Mijntabel_oef6c <- table(penguins$species, penguins$sex)
+
+assocplot(Mijntabel_oef6c)
+
+```
+
+bla bla bla
 
 ::::::
