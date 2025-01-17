@@ -1224,7 +1224,7 @@
     "href": "ZSO/ZSO5.html#vraag-2-1",
     "title": "ZSO 5",
     "section": "Vraag 2",
-    "text": "Vraag 2\n\n2.1\nHiertoe willen we voor meer dan 2 variabelen tegelijkertijd een correlatie berekenen. Om dat mogelijk te maken, maken we eerst een dataframe aan waarin enkel de nodige variabelen staan. We kunnen dit doen door gebruik te maken van het commando data.frame zoals hieronder:\n\nData_Cor &lt;- data.frame(Pirls_CNTRY$AVG_Reading,\n                       Pirls_CNTRY$AVG_Literary,\n                       Pirls_CNTRY$AVG_Informative,\n                       Pirls_CNTRY$AVG_Like_Reading,\n                       Pirls_CNTRY$AVG_Confident_Reading)\n\nEen sneller alternatief is gebruik maken van vierkante haakjes en verwijzen naar de kolomnummers waarin deze variabelen staan. Dit passen we hieronder toe waar we verwijzen naar kolommen 3 tem 7 uit het databestand:\n\nData_Cor &lt;- Pirls_CNTRY[ , 3:7]\n\n\nDit nieuwe dataframe gebruiken we als input voor de functie cor.prob()\n\ncor.prob(Data_Cor)\n\n                      AVG_Reading AVG_Literary AVG_Informative AVG_Like_Reading\nAVG_Reading             1.0000000    0.0000000    0.000000e+00       0.01681505\nAVG_Literary            0.9987420    1.0000000    4.440892e-16       0.01707106\nAVG_Informative         0.9983485    0.9943751    1.000000e+00       0.01701226\nAVG_Like_Reading       -0.5703593   -0.5692785   -5.695256e-01       1.00000000\nAVG_Confident_Reading   0.6331125    0.6437388    6.254626e-01      -0.49043277\n                      AVG_Confident_Reading\nAVG_Reading                     0.006370677\nAVG_Literary                    0.005295481\nAVG_Informative                 0.007248237\nAVG_Like_Reading                0.045639558\nAVG_Confident_Reading           1.000000000\n\n\nUit tabel staat boven de diagonaal telkens de p-waarde van de correlatie van een combinatie van 2 variabelen. Al deze p-waarden zijn lager dan 0.05 wat ons doet concluderen dat deze variabelen statistisch significant samenhangen. (We kunnen verwachten dat er in de populatie van alle onderwijssystemen een samenhang zal zijn tussen al deze cognitieve en affectieve outputmaten.)\nOnder de diagonaal staan de correlatiecoëfficiënten zelf. Wat meteen opvalt is dat alle correlaties tussen AVG_Like_Reading en de overige variabelen negatief zijn. Met andere woorden, de onderwijssystemen die erin slagen om hoge leesvaardigheid bij hun leerlingen te realiseren, zijn ook de onderwijssystemen waar de leerlingen aangeven dat ze minder graag lezen. Ook de samenhang tussen mate waarin leerlingen zelfzeker zijn aangaande lezen en de mate van graag lezen is negatief gecorreleerd op systeemniveau. Het lijkt er dus op dat inzetten op hoge cognitieve prestatiest als onderwijssysteem gepaard gaat met een lagere mate van leesmotivatie bij leerlingen.\n\n\n2.2\nOm deze tendensen in één overkoepelende figuur weer te geven maken we opnieuw gebruik van de plot( ) functie. Binnen de functie verwijzen we naar het object dat de betreffende variabelen alleen bevat (bij ons Data_Cor).\n\nplot(Data_Cor)",
+    "text": "Vraag 2\n\n2.1\nHiertoe willen we voor meer dan 2 variabelen tegelijkertijd een correlatie berekenen. Om dat mogelijk te maken, maken we eerst een dataframe aan waarin enkel de nodige variabelen staan. We kunnen dit doen door gebruik te maken van het commando data.frame zoals hieronder:\n\nData_Cor &lt;- data.frame(Pirls_CNTRY$AVG_Reading,\n                       Pirls_CNTRY$AVG_Literary,\n                       Pirls_CNTRY$AVG_Informative,\n                       Pirls_CNTRY$AVG_Like_Reading,\n                       Pirls_CNTRY$AVG_Confident_Reading)\n\nEen sneller alternatief is gebruik maken van vierkante haakjes en verwijzen naar de kolomnummers waarin deze variabelen staan. Dit passen we hieronder toe waar we verwijzen naar kolommen 3 tem 7 uit het databestand:\n\nData_Cor &lt;- Pirls_CNTRY[ , 3:7]\n\n\nDit nieuwe dataframe gebruiken we als input voor de functie cor.prob()\n\ncor.prob(Data_Cor)\n\n                      AVG_Reading AVG_Literary AVG_Informative AVG_Like_Reading\nAVG_Reading             1.0000000    0.0000000    0.000000e+00       0.01681505\nAVG_Literary            0.9987420    1.0000000    4.440892e-16       0.01707106\nAVG_Informative         0.9983485    0.9943751    1.000000e+00       0.01701226\nAVG_Like_Reading       -0.5703593   -0.5692785   -5.695256e-01       1.00000000\nAVG_Confident_Reading   0.6331125    0.6437388    6.254626e-01      -0.49043277\n                      AVG_Confident_Reading\nAVG_Reading                     0.006370677\nAVG_Literary                    0.005295481\nAVG_Informative                 0.007248237\nAVG_Like_Reading                0.045639558\nAVG_Confident_Reading           1.000000000\n\n\nIn deze tabel staat boven de diagonaal telkens de p-waarde van de correlatie van een combinatie van 2 variabelen. Al deze p-waarden zijn lager dan 0.05 wat ons doet concluderen dat deze variabelen statistisch significant samenhangen. (We kunnen verwachten dat er in de populatie van alle onderwijssystemen een samenhang zal zijn tussen al deze cognitieve en affectieve outputmaten.)\nOnder de diagonaal staan de correlatiecoëfficiënten zelf. Wat meteen opvalt is dat alle correlaties tussen AVG_Like_Reading en de overige variabelen negatief zijn. Met andere woorden, de onderwijssystemen die erin slagen om hoge leesvaardigheid bij hun leerlingen te realiseren, zijn ook de onderwijssystemen waar de leerlingen aangeven dat ze minder graag lezen. Ook de samenhang tussen mate waarin leerlingen zelfzeker zijn aangaande lezen en de mate van graag lezen is negatief gecorreleerd op systeemniveau. Het lijkt er dus op dat inzetten op hoge cognitieve prestatiest als onderwijssysteem gepaard gaat met een lagere mate van leesmotivatie bij leerlingen.\n\n\n2.2\nOm deze tendensen in één overkoepelende figuur weer te geven maken we opnieuw gebruik van de plot( ) functie. Binnen de functie verwijzen we naar het object dat de betreffende variabelen alleen bevat (bij ons Data_Cor).\n\nplot(Data_Cor)",
     "crumbs": [
       "ZSO",
       "ZSO5: Correlaties"
@@ -1249,6 +1249,116 @@
     "crumbs": [
       "Online (R) oefeningen",
       "Kruistabellen"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html",
+    "href": "Zelftest_correlaties.html",
+    "title": "Online (R) oefeningen",
+    "section": "",
+    "text": "We zijn nu aangekomen bij het onderdeel waarin we het verband tussen twee kwantitatieve variabelen wensen te onderzoeken: correlaties. Hoe we dit doen in R kan je hier oefenen, opnieuw adhv onze dataset over de pinguïns.\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nVoor deze oefening willen we twee onderzoeksvragen beantwoorden:",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-1",
+    "href": "Zelftest_correlaties.html#oefening-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 1",
+    "text": "Oefening 1\nDe eerste onderzoeksvraag gaat over het verband tussen de lengte van de snavel (bill_length_mm) en de breedte van de snavel (bill_depth_mm) van pinguïns.\nMaak in onderstaande codeblok een basisvisualisatie om dit verband te illustreren.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nplot(penguins$______, penguins$______)\n\n\n\n\nOplossing:\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nTussen haakjes moet je verwijzen naar beide variabelen. Indien er een vermoeden is van causaliteit, plaats je de onafhaneklijke variabele best op de x-as. In dit geval is er niet echt een duidelijk vermoeden van causaliteit, waardoor er geen reden is om de ene of de andere variabele op de x-as te zetten. Belangrijk is dat beide variabelen als numeric of als integer in de dataframe zijn gedefinieerd. Dat is in dit geval in orde.\nDe volledige oplossing ziet er zo uit!\n\n\nplot(penguins$bill_length_mm, penguins$bill_depth_mm)\nplot(penguins$bill_length_mm, penguins$bill_depth_mm)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-2",
+    "href": "Zelftest_correlaties.html#oefening-2",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 2",
+    "text": "Oefening 2\nDe figuur die je in de vorige oefening maakte wijst niet meteen zeer duidelijk op een verband. We hebben echter ook een maat om de samenhang na te gaan: de Pearson correlatiecoëfficiënt.\nBereken de Pearson correlatiecoëfficiënt voor het verband tussen beide kenmerken van de snavel van pinguïns. Doe ook een test om na te gaan of dit verband statistisch signifcant is.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe kunnen gebruik maken van de functie cor.test( ).\ncor.test(penguins$______, penguins$______)\n\n\n\n\nOplossing:\n\n\ncor.test(penguins$bill_length_mm, penguins$bill_depth_mm)\ncor.test(penguins$bill_length_mm, penguins$bill_depth_mm)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-3",
+    "href": "Zelftest_correlaties.html#oefening-3",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 3",
+    "text": "Oefening 3\nDe kruistabel die we maakten bij de eerste oefening geeft enkel inzicht in hoe de verdeling is van geobserveerde pinguïns overheen de combinatie van de variabelen species en island in de steekproef. Uiteraard willen we op basis van de steekproef inferenties doen naar de populatie toe.\nVoer een statistische test uit die ons helpt om de inferentie naar de populatie toe te maken. Formuleer ook voor jezelf een conclusie die je zou trekken op basis van deze analyse.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe test die we wensen uit te voeren is een chi-kwadraattoets. Kijk in het OLP om de juiste functie te vinden die deze statistische test uitvoert voor jou.\n\n\n\n\nOplossing:\nEr zijn verschillende manieren om deze test uit te voeren.\nEen eerste manier ziet er zo uit (waarbij we gebruik maken van de chisq.test( ) functie en tussen de haakjes de tabel aanmaken op basis van de twee betrokken variabelen):\n\n\nchisq.test(table(penguins$species, penguins$island))\nchisq.test(table(penguins$species, penguins$island))\n\n\nEen alternatief ziet er zo uit (waarbij we gebruik maken van de chisq.test( ) functie en tussen de haakjes verwijzen naar een object dat we net erboven aanmaken met daarin de tabel):\n\n\nMijntabel &lt;- table(penguins$species, penguins$island)\nchisq.test(Mijntabel)\nMijntabel &lt;- table(penguins$species, penguins$island)\nchisq.test(Mijntabel)\n\n\nNaast de functie chisq.test( ) kan je ook gebruik maken van de functie chi.kwadraat.test( ) die is opgenomen in het OLP. Deze functie werkt verder helemaal identiek als de chisq.test( ) maar geeft wat meer informatie in de output (ook Cramer’s V).\n\n\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\n\n\nConclusie:\nOngeacht de methode die je hanteert, bekom je een chi-kwadraatwaarde van 299.55 met 4 vrijheidsgraden. De bijhorende p-waarde is duidelijk lager dan 0.001. Bijgevolg kan je concluderen dat de kans dat we deze verdeling in de data zouden terug vinden indien de nulhypothese juist is (H0 = er is geen verband tussen pinguïnsoort en eiland) bijzonder klein is. Dat sterkt ons in de conclusie om te stellen dat er in de populatie ook een verband te vinden is tussen eiland en pinguïnsoort.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-4-1",
+    "href": "Zelftest_correlaties.html#oefening-4-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 4",
+    "text": "Oefening 4\nOngeacht welke analysetechniek we behandelen, we zijn altijd geïnteresseerd in een of andere maat van effectgrootte. Ook hier willen we meer weten over de effectgrootte van het effect van eiland op de kans om een bepaalde pinguïnsoort te observeren.\nBereken een maat van effectgrootte voor de eerder aangemaakte kruistabel. En wat kan je daaruit concluderen?\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm de effectgrootte bij kruistabellen uit te drukken maken we gebruik van Cramer’s V. Bekijk het OLP om te weten hoe je die snel kan laten berekenen in R.\n\n\n\n\nOplossing:\nHiertoe maken we gebruik van de functie chi.kwadraat.test( ) . Opnieuw zijn er twee verschillende manieren om deze test uit te voeren.\nEen eerste manier ziet er zo uit (tussen de haakjes maken we de tabel aan op basis van de twee betrokken variabelen):\n\n\nchi.kwadraat.test(table(penguins$species, penguins$island))\nchi.kwadraat.test(table(penguins$species, penguins$island))\n\n\nEen alternatief ziet er zo uit (waarbij we eerst een object aanmaken met daarin de tabel):\n\n\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\nMijntabel &lt;- table(penguins$species, penguins$island)\nchi.kwadraat.test(Mijntabel)\n\n\nConclusie:\nCramer’s V bedraag 0.66, wat een vrij hoge waarde is. In het OLP stellen we ten onrechte dat er geen vuistregels zijn voor Cramer’s V. Die zijn er eigenlijk wel (zie ook slides van het vak). Op basis van deze vuistregels van bijvoorbeeld Rea en Parker (1992) zouden we dit verband als een sterk verband benoemen.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-5-1",
+    "href": "Zelftest_correlaties.html#oefening-5-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 5",
+    "text": "Oefening 5\nDe visualisatie uit de voorgaande oefening duidt op een positief verband tussen elk van deze variabelen onderling. De vraag is uiteraard of dit een sterk verband is en in welke mate we dit verband kunnen verwachten te zien in de gehele populatie.\nBereken de drie correlatiecoëfficiënten in één beweging en schrijf voor jezelf een rapportage neer over de bekomen resultaten. Heb bij het schrijven van een conclusieluik ook oog voor “effectgrootte”.\n\nOefeningHintsOplossingRapportage\n\n\n\n\n\n\n\n\n\n\n\n\n\nNet als bij de visualisatie zijn er twee stappen nodig om een correlatiematrix te berekenen:\n\neen dataframe maken met daarin de variabelen (is zelfde eerste stap als in oefening 4);\nde correlatiematrix berekenen gebruikmakend van de functie cor.prob( ) .\n\n\n\n\n\nOplossing:\nOm deze correlatiematrix te berekenen maken we eerst een nieuwe dataframe aan (met de naam Variabelen) waarin de drie variabelen alleen zijn weggeschreven. Daarna gebruiken we die nieuwe dataframe Variabelen als inpunt voor de functie cor.prob( ).\n\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)\n\n\n\n\n\nIndien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.\n\n\n\n\n\n\n\n\nDe drie variabelen flipperlengte, snavellengte en gewicht zijn onderling sterk positief gecorreleerd. De correlaties situeren zich tussen 0,595 en 0,871 en zijn alledrie statistisch significant (p &lt;0,001). We verwachten in de populatie ook positieve correlaties te observeren tussen deze drie variabelen.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-6-1",
+    "href": "Zelftest_correlaties.html#oefening-6-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 6",
+    "text": "Oefening 6\nEr is ook een tweede onderzoeksvraag die we wensen te beantwoorden:\n(OV2) Is de kans om vrouwelijke penguïns (sex) te observeren verschillend naargelang de pinguïnsoort (species)?\nVoer alle gepaste analyses uit om een antwoord op deze onderzoeksvraag te formuleren. Schrijf de conclusies voor jezelf neer in een gepaste paragraaf zodanig dat je een breed publiek kan informeren over je conclusies.\n\nOefeningHintsOplossingRapportage\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart met nadenken over een mogelijke causaliteit die verdoken zit in de onderzoeksvraag.\nVervolgens maak je een kruistabel aan met kolompercentages. Plaats de mogelijke onafhankelijke variabele in de kolommen.\nDoe de Chi-kwadraat test. Je kan in één beweging ook de maat voor effectgrootte nagaan (phi).\nMaak eventueel een visualisatie aan van het verband.\n\n\n\n\nOplossing:\nStart met nadenken over een mogelijke causaliteit die verdoken zit in de onderzoeksvraag.\nDe OV gaat over het voorspellen van de kans om vrouwelijke pinguïns te observeren. Daarom dat we de variabele sex kunnen beschouwen als afhankelijke variabele (komt in de rijen) en de variabele species in de kolommen zetten als mogelijke onafhankelijke variabele.\nVervolgens maak je een kruistabel aan met kolompercentages. Plaats de mogelijke onafhankelijke variabele in de kolommen.\n\n\n\nlibrary(palmerpenguins) # indien nodig package laden\ndata(\"penguins\")        # indien nodig de data laden\n\nMijntabel_oef6 &lt;- kruistabel.kolom(penguins$sex, penguins$species)\n\nlibrary(palmerpenguins) # indien nodig package laden\ndata(\"penguins\")        # indien nodig de data laden\n\nMijntabel_oef6 &lt;- kruistabel.kolom(penguins$sex, penguins$species)\n\n\nDoe de Chi-kwadraat test. Je kan in één beweging ook de maat voor effectgrootte nagaan (phi).\n\n\n\nchi.kwadraat.test(Mijntabel_oef6)\n\nchi.kwadraat.test(Mijntabel_oef6)\n\n\nMaak eventueel een visualisatie aan van het verband.\n\n\n\nassocplot(Mijntabel_oef6)\n\nassocplot(Mijntabel_oef6)\n\n\n\n\n\nIndien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.\n\n\n\n\n\n\n\n\nDe warning kan je in deze negereren.\nUit de kruistabel kan je aflezen dat de kans om een vrouwelijke pinguïn te observeren zowel voor Adelie als Chinstrap pinguïns 50% bevat. Voor Gentoo pinguïns is dat nagenoeg 49%. Er zijn dus nauwelijks verschillen tussen de pinguïnsoorten in de kans om vrouwelijke pinguïns te observeren. Dit gebrek aan een duidelijke samenhang is ook af te lezen uit het feit dat de chi-kwadraat test wijst op een niet-statistisch significant (chi²(2) = 0.049, p = 0.976). De sterkte van verband wordt uitgedrukt door Cramer’s V (0.012) wat ook wijst op het ontbreken van een samenhang.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-3-1",
+    "href": "Zelftest_correlaties.html#oefening-3-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 3",
+    "text": "Oefening 3\nWe hernemen de oplossing uit de vorige oefening hieronder.\n\n\n\n\n\n\n\n\nOp het examen vragen we soms meerkeuzevragen over de interpretatie van de output. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.\n\nVraagAntwoordsleutel\n\n\nWelke van volgende uitspraken is fout? (slechts 1 antwoord mogelijk)\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\nBeide variabelen delen 5,5% variantie\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n\n\nJe diende uitspraak 4 te kiezen als foute uitspraak.\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\n\n= JUIST! Inderdaad. In de steekproef is de correlatie -0,235, een negatief getal dus ook een negatief verband.\n\nBeide variabelen delen 5,5% variantie\n\n= JUIST! Ook dit klopt aangezien het kwadraat van de correlatiecoëfficiënt kan geïnterpreteerd worden als gedeelde variantie tussen beide variabelen. Het kwadraat van -0,235 bedraat 0,055. Dit is een percentage uitgedrukt in een getal tussen 0 en 1. Doen we dit maal 100 dan krijgen we het percentage op 100 (5,5% in dit geval).\n\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\n\n= JUIST! Dit lezen we af in de output bij het 95 betrouwbaarheidsinterval. Zo’n betrouwbaarheidsinterval geeft een beeld van de steekproevenverdeling. Deze steekproevenverdeling is de verdeling van onze parameter, de correlatie, overheen alle mogelijke steekproeven die we zouden kunnen getrokken hebben. Uit die verdeling leren we dat 95% van deze mogelijke steekrpoeven een correlatie tussen -0,13 en -0,33 zou opleveren.\n\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n= FOUT! Dit is een typische verkeerde interpretatie van de p-waarde. Een p-waarde is een probabiliteit van de data onder de veronderstelling dat de nul-hypothese geldig is. Anders uitgedrukt: de p-waarde drukt de kans uit dat we een correlatiecoëfficiënt van -0,235 of extremer (meer negatief) zouden vaststellen in onze steekproef indien de correlatie in de populatie nul bedraagt.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-3-2",
+    "href": "Zelftest_correlaties.html#oefening-3-2",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 3",
+    "text": "Oefening 3\nDe kruistabel die we maakten bij de eerste oefening geeft enkel inzicht in hoe de verdeling is van geobserveerde pinguïns overheen de combinatie van de variabelen species en island in de steekproef. Uiteraard willen we op basis van de steekproef inferenties doen naar de populatie toe.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-4",
+    "href": "Zelftest_correlaties.html#oefening-4",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 4",
+    "text": "Oefening 4\nNu richten we onze aandacht op de tweede onderzoeksvraag. Centraal in die onderzoeksvraag staat het nagaan van het verband van meerdere kwantitatieve variabelen.\nCreër een visualisatie die de onderlinge samenhang tussen alle 3 de variabelen in één figuur weergeeft.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm deze figuur te maken moet je twee stappen doorlopen:\n\neen dataframe maken met daarin enkel de betrokken variabelen;\ndeze nieuwe dataframe ‘plotten’ met het commando plot( ).\n\n\n\n\n\nOplossing:\nVerschillende stappen zijn nodig om deze figuur te maken. In de onderstaande oplossing kan je de twee stappen zien.\n\n\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# plot maken van de nieuwe dataframe\nplot(CVariabelen)\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# plot maken van de nieuwe dataframe\nplot(CVariabelen)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
     ]
   }
 ]
