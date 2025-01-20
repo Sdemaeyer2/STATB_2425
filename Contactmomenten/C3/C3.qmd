@@ -12,7 +12,7 @@ We behandelen volgende inhouden:
 
 ![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP
 
-![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen correlatie-analses
+![](/images/icons/singletutorial.png){width="30"} [Online (R) Oefeningen correlatie-analses](/Zelftest_correlaties.qmd)
 
 ![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen bivariate regressie-analyses
 
