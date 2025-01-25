@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contactmoment 1 – Statistiek B</title>
+<title>Contactmoment 1: Respons computer lab – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,8 +63,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../Contactmomenten/C2/C2.html" rel="next">
-<link href="../../Contactmomenten/Contactmomenten.html" rel="prev">
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -112,7 +144,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Contactmomenten/Contactmomenten.html">Contactmomenten</a></li><li class="breadcrumb-item"><a href="../../Contactmomenten/C1/C1.html">C1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Contactmoment 1: Respons computer lab</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -160,14 +192,14 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../Contactmomenten/Contactmomenten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contactmomenten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Contactmomenten/C1/C1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Contactmomenten/C1/C1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">C1</span></a>
   </div>
 </li>
@@ -370,22 +402,14 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Op deze pagina</h2>
-   
-  <ul>
-  <li><a href="#voorbereiding" id="toc-voorbereiding" class="nav-link active" data-scroll-target="#voorbereiding">Voorbereiding</a></li>
-  <li><a href="#lesmateriaal" id="toc-lesmateriaal" class="nav-link" data-scroll-target="#lesmateriaal">Lesmateriaal</a></li>
-  <li><a href="#na-de-les" id="toc-na-de-les" class="nav-link" data-scroll-target="#na-de-les">Na de les</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="Respons_C1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Contactmomenten/Contactmomenten.html">Contactmomenten</a></li><li class="breadcrumb-item"><a href="../../Contactmomenten/C1/C1.html">C1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contactmoment 1</h1>
+<h1 class="title">Contactmoment 1: Respons computer lab</h1>
 </div>
 
 
@@ -402,32 +426,241 @@ cookieconsent.run({
 </header>
 
 
-<p>Dit eerste contactmoment behandelt volgende inhouden:</p>
-<ul>
-<li><p>van onderzoeksvraag naar analysetechnieken</p></li>
-<li><p>t-test</p></li>
-</ul>
-<section id="voorbereiding" class="level2">
-<h2 class="anchored" data-anchor-id="voorbereiding">Voorbereiding</h2>
-<p><img src="../../images/icons/book.png" class="img-fluid" width="30"> Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP</p>
-<p><img src="../../images/icons/singletutorial.png" class="img-fluid" width="30"> <a href="../../Zelftest_t_test.html">Online (R) Oefeningen t-test</a></p>
-<p><img src="../../images/icons/zz_video_camera.png" class="img-fluid" width="30"> <a href="https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/watch/9c0204b506eb4787a3d5bebc5b58c6e71d">Screencast t-test</a></p>
-</section>
-<section id="lesmateriaal" class="level2">
-<h2 class="anchored" data-anchor-id="lesmateriaal">Lesmateriaal</h2>
-<p><img src="../../images/icons/zz_slides.png" class="img-fluid" width="30"> Slides Contactmoment 1</p>
-<p><img src="../../images/icons/zz_video_camera.png" class="img-fluid" width="30"> Lesopname (terug te vinden op Blackboard)</p>
-<p><img src="../../images/icons/guided-practice.png" class="img-fluid" width="30"> <a href="../../Contactmomenten/C1/Opdrachten_C1.html">Opdrachten computer lab</a></p>
-<p><img src="../../images/icons/data.png" class="img-fluid" width="30"> <a href="../../Contactmomenten/Techniek.RData">Dataset computer lab</a></p>
-<p><img src="../../images/icons/worked-example.png" class="img-fluid" width="30"> <a href="../../Contactmomenten/C1/Respons_C1.html">Respons computer lab</a></p>
-</section>
-<section id="na-de-les" class="level2">
-<h2 class="anchored" data-anchor-id="na-de-les">Na de les</h2>
-<p><img src="../../images/icons/singlelab.png" class="img-fluid" width="30"> <a href="../../ZSO/ZSO1.html">ZSO 1: Van onderzoeksvraag naar analyse</a></p>
-<p><img src="../../images/icons/singlelab.png" class="img-fluid" width="30"> <a href="../../ZSO/ZSO2.html">ZSO 2: t-test</a></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Belangrijk
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket <code>car</code> te activeren en ook de OLP2 Functies te activeren.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-journal-richtext"></i> Oefening 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Is er een verschil in interesse voor techniek (<code>Interest.voor</code>) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (<code>Dipvader</code>)?</p></li>
+<li><p>Hoe groot is het effect van de variabele <code>Dipvader</code> op <code>Interest.voor</code>?</p></li>
+<li><p>Geef het effect visueel weer.</p></li>
+</ol>
+</div>
+</div>
+<ol type="a">
+<li></li>
+</ol>
+<p>Vooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Techniek<span class="sc">$</span>Interest.voor, Techniek<span class="sc">$</span>Dipvader)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+        Df F value Pr(&gt;F)
+group    1  0.0614 0.8043
+      2172               </code></pre>
+</div>
+</div>
+<p>Kijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.</p>
+<p>Nu zijn we klaar om de t-test zelf uit te voeren.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Dipvader,<span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Two Sample t-test
+
+data:  Techniek$Interest.voor by Techniek$Dipvader
+t = 3.9534, df = 2172, p-value = 7.95e-05
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ 0.08344689 0.24771611
+sample estimates:
+mean in group 0 mean in group 1 
+       3.022044        2.856463 </code></pre>
+</div>
+</div>
+<p>We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.</p>
+<p>Uit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje <code>p-value = 7.95e-05</code> wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.</p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p>Vervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d.&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Dipvader)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1701453</code></pre>
+</div>
+</div>
+<p>De Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.</p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Dipvader,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab=</span><span class="st">"Diploma HO vader"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab=</span><span class="st">"Interesse in techniek"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Respons_C1_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-journal-richtext"></i> Oefening 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Is er een verschil in interesse voor techniek (<code>Interesse.voor</code>) tussen eerste- en tweedejaars leerlingen (<code>Studiejaar</code>)?</p></li>
+<li><p>Hoe groot is het effect van <code>Studiejaar</code> op <code>Interesse.voor</code>?</p></li>
+<li><p>Geef het effect visueel weer.</p></li>
+</ol>
+</div>
+</div>
+<ol type="a">
+<li></li>
+</ol>
+<p>Opnieuw voeren we eerst de Levene Test uit.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Techniek<span class="sc">$</span>Interest.voor, Techniek<span class="sc">$</span>Studiejaar)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+        Df F value Pr(&gt;F)  
+group    1     5.5 0.0191 *
+      2288                 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Ditmaal is de bijhorende p-waarde lager dan 0.05 (zie <code>0.0191 *</code> in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in <code>R</code> door het argument <code>var.equal=FALSE</code> toe te voegen bij het opvragen van de t-test.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Studiejaar,<span class="at">var.equal=</span><span class="cn">FALSE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  Techniek$Interest.voor by Techniek$Studiejaar
+t = 13.277, df = 2260.6, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0
+95 percent confidence interval:
+ 0.4433075 0.5969520
+sample estimates:
+mean in group 1 mean in group 2 
+       3.211843        2.691714 </code></pre>
+</div>
+</div>
+<p>We lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).</p>
+<p>Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie <code>p-value &lt; 2.2e-16</code> in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.</p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p>Vervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Studiejaar)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5557404</code></pre>
+</div>
+</div>
+<p>De Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.</p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Studiejaar,</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab=</span><span class="st">"Studiejaar"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab=</span><span class="st">"Interesse in techniek"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Respons_C1_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-journal-richtext"></i> Oefening 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (<code>Interest.voor</code>) en aan het einde van datzelfde trimester (<code>Interest.na</code>). Daarom kunnen we de volgende onderzoeksvraag nagaan:</p>
+<ol type="a">
+<li><p>Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?</p></li>
+<li><p>Hoe groot is het effect van een trimester technieklessen?</p></li>
+<li><p>Geef het effect visueel weer.</p></li>
+</ol>
+</div>
+</div>
+<p>Deze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een <em>independent samples t-test</em> omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een <em>paired samples t-test</em> .</p>
+<ol type="a">
+<li></li>
+</ol>
+<p>Om deze <em>paired samples t-test</em> uit te voeren maken we gebruik van het argument <code>paired = TRUE</code> in de <code>t.test()</code> functie.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Interest.na, <span class="at">paired=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  Techniek$Interest.voor and Techniek$Interest.na
+t = 1.9696, df = 2289, p-value = 0.049
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 0.000149209 0.067973062
+sample estimates:
+mean difference 
+     0.03406114 </code></pre>
+</div>
+</div>
+<p>Het verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.</p>
+<p>We lezen af dat de p-waarde lager is dan 0.05 (zie <code>p-value = 0.049</code>). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.</p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p>Vervolgens berekenen we de Cohen’s d aan de hand van de functie <code>dpaired()</code>. Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dpaired</span>(<span class="fl">1.9696</span>,<span class="dv">2290</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.04115857</code></pre>
+</div>
+</div>
+<p>Cohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.</p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar2</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Interest.na,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab=</span><span class="st">"Meting voor en na"</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">ylab=</span><span class="st">"Interesse"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Respons_C1_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -847,18 +1080,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../Contactmomenten/Contactmomenten.html" class="pagination-link" aria-label="Contactmomenten">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Contactmomenten</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../Contactmomenten/C2/C2.html" class="pagination-link" aria-label="C2">
-        <span class="nav-page-text">C2</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
