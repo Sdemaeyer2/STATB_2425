@@ -37,7 +37,8 @@ website:
       - text: "Welkom"
         href: index.qmd
         
-      - section: "Open Leer Pakket"
+      - text: "Open Leer Pakket"
+        href: OLP.qmd
       
       - section: "Contactmomenten"
         href: Contactmomenten/Contactmomenten.qmd
@@ -68,6 +69,9 @@ website:
             href: Zelftest_kruistabellen.qmd
           - text: "Correlaties"
             href: Zelftest_correlaties.qmd
+            
+      - text: "Computer labs"
+        href: computer_labs.qmd
 
       - section: "ZSO"
         contents: 

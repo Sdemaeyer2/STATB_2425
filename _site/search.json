@@ -353,248 +353,310 @@
     ]
   },
   {
-    "objectID": "Penguins.html",
-    "href": "Penguins.html",
-    "title": "Penguins",
+    "objectID": "computer_labs.html",
+    "href": "computer_labs.html",
+    "title": "Computer labs",
     "section": "",
-    "text": "Vertrouwd raken met R-code en bepaalde functies goed kunnen inzetten is cruciaal in dit vak. Om dit op zich in te oefenen, los van de gehele workflow in RStudio op zich hebben we hier een hele set aan oefeningen uitgewerkt die je simpelweg op deze website zelf kan doorlopen. Geen behoefte dus aan RStudio ofzo. Niet alle R functies zullen in deze oefeningen worden gebruikt, maar enkel dus een setje basisfuncties. Het hoofddoel hier is dus zeer rudimentair de link te maken tussen code, output en resultaat.",
+    "text": "Tijdens de contactmomenten is er tijd voorzien om een reeks oefeningen uit te voeren in R in het bijzijn van de docenten. Dit noemen we de computer labs. Hieronder vind je een lijst van de oefeningen en responsen georganiseerd per contactmoment.\n\n C1: Opdrachten computer lab /  C1: Respons computer lab\n C2: Opdrachten computer lab /  C2: Respons computer lab\n C3: Opdrachten computer lab /  C3: Respons computer lab\n C4: Opdrachten computer lab /  C4: Respons computer lab\n C5: Opdrachten computer lab /  C5: Respons computer lab\n C6: Opdrachten computer lab /  C6: Respons computer lab\n\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie.",
     "crumbs": [
-      "Online (R) oefeningen"
+      "Computer labs"
     ]
   },
   {
-    "objectID": "Penguins.html#palmerpenguins",
-    "href": "Penguins.html#palmerpenguins",
-    "title": "Penguins",
-    "section": "Palmerpenguins",
-    "text": "Palmerpenguins\n\n\n\n\n\n\n\n\n\nHeel dit onderdeel maakt gebruik van interactieve code op de website. Dat betekent ook dat we deze oefeningenreeks baseren op een bestaande dataset die via R zelf beschikbaar is: de penguins dataset!\nHet pakket palmerpenguins bevat een dataset over een reeks metingen die biologen gedaan hebben bij drie soorten pinguïns. Dit pakket moeten we dus telkens laden bij de start van een oefening. In elk van de oefeningen zal je het volgende stukje R-code bovenaan terug vinden. Deze code laadt het het pakket palmerpenguins en activeert vervolgens de dataset penguins. Het is dus belangrijk om dit stukje code zeker te laten lopen (met de blauwe play-knop rechtsboven) bij de start van de oefeningen.\nHet dataframe in R waarmee we dus aan de slag gaan heet penguins.\n\n\n\n\n\n\n\n\nDe data zijn metingen bij 3 soorten pinguïns:\n\n\n\n\n\n\n\n\n\nDeze dataset bevat een setje variabelen die makkelijk te begrijpen zijn! Het volgende code blok bevat de functie str() waarbij we verwijzen naar het dataframe om zo te vragen aan R om de structuur van het dataframe te printen. Het resultaat is een lijstje van de verschillende variabelen in de dataset.\n\n\n\n\n\n\n\n\nUit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen. Twee van deze variabelen gaan over de dimensies van de snavels van de pinguïns. Om die beter te begrijpen, kan volgend plaatje helpen.\n\n\n\n\n\n\n\n\n\nDe originele studie achter deze data is de volgende: Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081\nMeer informatie over het pakket kan je hier vinden: https://allisonhorst.github.io/palmerpenguins/articles/intro.html",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "",
+    "text": "Welkom op de website voor de cursus Statistiek B (Schakelprogramma OOW, academiejaar 2024 - 2025). Op deze website vind je alle informatie en leermiddelen voor het vak.\nWat kan je op deze website allemaal terugvinden?",
     "crumbs": [
-      "Online (R) oefeningen"
+      "Welkom"
     ]
   },
   {
-    "objectID": "Contactmomenten/C2/C2.html",
-    "href": "Contactmomenten/C2/C2.html",
-    "title": "Contactmoment 2",
+    "objectID": "index.html#open-leer-pakket",
+    "href": "index.html#open-leer-pakket",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Open Leer Pakket",
+    "text": "Open Leer Pakket\nHet cursusmateriaal voor dit vak is het open leerpakket dat we opstelden.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "index.html#contactmomenten",
+    "href": "index.html#contactmomenten",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Contactmomenten",
+    "text": "Contactmomenten\nDit onderdeel van de websit bundelt de informatie per contactmoment. Voor elk contactmoment kan je hier de slides vinden, net als ook het materiaal dat hoort bij de computer lab oefeningen.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "index.html#online-r-oefeningen",
+    "href": "index.html#online-r-oefeningen",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Online (R) oefeningen",
+    "text": "Online (R) oefeningen\nJe vaardigheden in R inoefenen kan op verschillende manieren: op je eigen PC in RStudio maar net zo goed online. In deze sectie zit een hele opbouw van oefeningen die je kan doorlopen, los van RStudio. Dit deel focust dus voornamelijk op het goed begrijpen en inoefenen van de R code op zich, los van hoe je aan de slag gaat met R en RStudio op je pc.\nTijdens het examen voor dit vak is er tevens een gesloten boek onderdeel waarin we voornamelijk je kennis en inzicht in de materie wensen te testen. In dit deel van de website vind je een reeks voorbeeldvragen voor de verschillende onderdelen uit de cursus die representatief zijn voor het gesloten boek onderdeel. Wil je je eigen inzicht en kennis testen, doorloop dan zeker de verschillende testen hier.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "index.html#zso-zelfstudie-opdrachten",
+    "href": "index.html#zso-zelfstudie-opdrachten",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "ZSO (Zelfstudie opdrachten)",
+    "text": "ZSO (Zelfstudie opdrachten)\nVoor dit vak hebben we ook een set van ZSO’s opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO’s dien je ook de datasets op je eigen pc in RStudio op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO’s zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in RStudio en R, wat ook getoetst zal worden op het examen.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "index.html#rapporteren",
+    "href": "index.html#rapporteren",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Rapporteren",
+    "text": "Rapporteren\nRapporteren over je resultaten is een belangrijke taak als onderzoeker. In deze sectie vind je een set van rapportages van verschillende analyses. Deze stukken rapportage ontleden we zodanig dat je inzicht krijgt in hoe je op een goede wijze kan rapporteren.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "index.html#screencasts",
+    "href": "index.html#screencasts",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Screencasts",
+    "text": "Screencasts\nEr zijn een aantal screencasts gemaakt waarin we een R-sessie tonen. Zie mij aan de slag in R terwijl ik analysetechnieken uitvoer en de resultaten interpreteer.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "index.html#extra-materiaal",
+    "href": "index.html#extra-materiaal",
+    "title": "Statistiek B (AJ 2024-2025)",
+    "section": "Extra materiaal",
+    "text": "Extra materiaal\nOnder extra materiaal vind je meer informatie en tutorials die je workflow in R en RStudio nog een pak efficiënter maken. Je vindt er links naar een aantal tutorials op YouTube. Weet dat dit facultatief materiaal is en dat dit niet dient toegepast worden op één of andere wijze om te kunnen slagen voor het vak.",
+    "crumbs": [
+      "Welkom"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C2/Respons_C2.html",
+    "href": "Contactmomenten/C2/Respons_C2.html",
+    "title": "Contactmoment 2: Respons computer lab",
     "section": "",
-    "text": "Dit tweede contactmoment behandelt volgende inhouden:",
+    "text": "Belangrijk\n\n\n\nVooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket car te activeren en ook de OLP2 Functies te activeren.\n\n\n\n\n\n\n\n\n Oefening 1\n\n\n\nZouden onze leerlingen uit de verschillende categorieën (Richting5cat) anders scoren als het gaat over het begrijpen van techniek (Begrijpen.voor)?\nIndien dit zo is, welke groepen verschillen dan van elkaar?\n\n\nOm deze vragen te beantwoorden dienen we een ANOVA analyse uit te voeren. Hieronder volgen we de verschillende stappen van een ANOVA analyse om zo een volledig antwoord op deze vragen te kunnen formuleren.\nWe starten met het berekenen van de gemiddelde scores in de steekproef voor Begrijpen.voor van de leerlingen in de verschillende studierichtingen.\n\ntapply(Techniek$Begrijpen.voor, Techniek$Richting5cat, FUN=mean, na.rm=TRUE)\n\n        1         2         3         4         5 \n0.6216667 0.6452206 0.7098642 0.6337891 0.5429025 \n\n\nHieruit leren we dat in de steekproef leerlingen uit categorie 3 gemiddeld het hoogst scoren op Begrijpen.voor (gemiddelde = 0.71) en leerlingen uit categorie 5 scoren gemiddeld het laagst (gemiddelde = 0.54).\nVooraleer we de ANOVA zelf kunnen uitvoeren dienen we de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.\n\nleveneTest(Techniek$Begrijpen.voor, Techniek$Richting5cat)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value  Pr(&gt;F)  \ngroup    4  2.0016 0.09181 .\n      1873                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nUit de bovenstaande output leren we dat we de nulhypothese (= er zijn gelijke binnengroepenvarianties in de populatie) niet kunnen verwerpen. Maw, de assumptie gaat wel op. Dus, we kunnen de functie aov() hanteren.\n\nModel.Begrijpen &lt;- aov(Techniek$Begrijpen.voor~ Techniek$Richting5cat)\nsummary(Model.Begrijpen)\n\n                        Df Sum Sq Mean Sq F value Pr(&gt;F)    \nTechniek$Richting5cat    4   5.27  1.3182   49.34 &lt;2e-16 ***\nResiduals             1873  50.04  0.0267                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n489 observations deleted due to missingness\n\n\nDe analyses leren ons dat er een statistisch significant verband is tussen studierichting en Begrijpen.voor (F(4,1873) = 49.34, p&lt;0.001).\nEen volgende stap is nagaan hoe groot het effect is (effectgrootte berekenen).\n\netasq(Model.Begrijpen)\n\n                      Partial eta^2\nTechniek$Richting5cat     0.0953278\nResiduals                        NA\n\n\nEta-kwadraat bedraagt 0.095 en is dus tussen 0.06 en 0.14: het gaat om een medium effect.\nEen laatste stap is nagaan welke groepen onderling verschillen van elkaar. Dit doen we aan de hand van post-hoc testen door middel van de functie TukeyHSD( ).\n\nModel.Begrijpen.Tukey &lt;- TukeyHSD(Model.Begrijpen)\nModel.Begrijpen.Tukey\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = Techniek$Begrijpen.voor ~ Techniek$Richting5cat)\n\n$`Techniek$Richting5cat`\n           diff         lwr         upr     p adj\n2-1  0.02355392 -0.06121659  0.10832444 0.9422650\n3-1  0.08819755  0.04762624  0.12876886 0.0000000\n4-1  0.01212240 -0.02746614  0.05171093 0.9193976\n5-1 -0.07876412 -0.12536703 -0.03216122 0.0000413\n3-2  0.06464363 -0.01394620  0.14323346 0.1634082\n4-2 -0.01143153 -0.08951854  0.06665549 0.9946245\n5-2 -0.10231805 -0.18418477 -0.02045132 0.0059194\n4-3 -0.07607515 -0.09968814 -0.05246217 0.0000000\n5-3 -0.16696167 -0.20105203 -0.13287132 0.0000000\n5-4 -0.09088652 -0.12380115 -0.05797189 0.0000000\n\n\nKijken we naar de laatste kolom dan kunnen we daar de verschillende lijnen identificeren waarvoor geldt dat de p-waarde lager is dan 0.05 (lijnen 2, 4, 7, 8, 9, 10).\nWe kunnen deze post-hoc testen ook visualiseren:\n\nplot(Model.Begrijpen.Tukey)\n\n\n\n\n\n\n\n\nCONCLUSIE:\n\nAfhankelijk van de studierichting die een leerling volgt, verschilt de mate waarin techniek wordt begrepen. Het gaat om een medium (eta-kwadraat = 0.10) en statistisch significant effect (F(4,1873) = 49.34, p&lt;0.001). We verwachten dit effect dus ook in de populatie terug te vinden. Uit de post-hoc analyse blijkt dat leerlingen uit categorie 5 (Handel/STV) het meest verschillen van de andere leerlingen. Hun score op Begrijpen.voor is significant (p &lt; 0.05) lager dan deze van leerlingen uit categorie 2 (Kunst), categorie 3 (Latijn) en categorie 4 (Moderne wetenschappen). Ook tussen de groepen Latijn (categorie 3) en Techniek (categorie 1) is een significant verschil (p &lt; 0.05) in het begrijpen van techniek terug te vinden. De leerlingen uit de Latijnse scoren significant (p &lt; 0.05) beter dan de leerlingen uit de meer technische richtingen. De verschillen tussen leerlingen uit de technische (categorie 1), moderne (categorie 4) of kunstrichtingen (categorie 2) in onze steekproef kunnen we niet doortrekken naar de populatie (p &gt; 0.05).\n\n\n\n\n\n\n\n Oefening 2\n\n\n\nWe bekeken in de eerste oefening of er een verschil was in het begrijpen van techniek naargelang de studierichting.\nAls we de afhankelijke variabele (Begrijpen.voor) opdelen in vier categorieën op basis van de kwartielen kunnen we dit verband ook weergeven in een tabel.\n→ Hoe is de verdeling overheen de verschillende categorieën van begrijpen naar studierichting?\n→ Geef dit ook grafisch weer.\n\n\nDeze oefening vraagt om een analyse aan de hand van een kruistabel.\nAls start voor deze oefening maken we een categorische variant van de variabele Begrijpen.voor via de recode( ) functie.\n\n# Kwartielen berekenen\n\nquantile(Techniek$Begrijpen.voor, c(0.25,0.5,0.75), na.rm=TRUE)\n\n   25%    50%    75% \n0.5000 0.6875 0.7500 \n\n# Hercoderen \n\nTechniek$Begrijpen.voor.Cat &lt;- recode(\n  Techniek$Begrijpen.voor,\n  \"0:0.5 = 'Zeer laag'; \n  0.5:0.6875 = 'Laag'; \n  0.6875:0.75 = 'Hoog'; \n  0.75:1 = 'Zeer hoog'\",\n  as.factor = TRUE,\n  levels = c(\"Zeer laag\", \"Laag\", \"Hoog\", \"Zeer hoog\")\n  )\n\nNu kunnen we een kruistabel aanmaken. Meerbepaald maken we een tabel met kolompercentages waarin we da afhankelijke variabele (Begrijpen.voor.Cat) in de rijen plaatsen.\n\nkruistabel.kolom(Techniek$Begrijpen.voor.Cat, Techniek$Richting5cat)\n\n           x\ny                    1          2          3          4          5        Sum\n  Zeer laag  30.666667  29.411765  12.460064  28.485577  46.186441  25.559105\n  Laag       38.666667  29.411765  34.025559  38.100962  37.711864  36.581470\n  Hoog       13.333333  11.764706  17.731629  13.100962   9.322034  14.164004\n  Zeer hoog  17.333333  29.411765  35.782748  20.312500   6.779661  23.695421\n  Sum       100.000000 100.000000 100.000000 100.000000 100.000000 100.000000\n\n\nVervolgens berekenen we de Chi-kwadraat test. Door gebruik te maken van de functie chi.kwadraat.test() krijgen we in de output ook meteen een maat van effectgrootte mee (Cramer’s V).\n\nchi.kwadraat.test(\n  table(Techniek$Begrijpen.voor.Cat,\n        Techniek$Richting5cat)\n  )\n\n\n    Pearson's Chi-squared test\n\ndata:  table(Techniek$Begrijpen.voor.Cat, Techniek$Richting5cat)\nX-squared = 172.76, df = 12, p-value &lt; 2.2e-16\n95 percent confidence interval:\n 0.1428339 0.1959541\nsample estimates:\nCramer's V \n 0.1751129 \n\n\nTot slot visualiseren we de kruistabel. Let op dat je hier rijen en kolommen omwisselt in vergelijking met de vorige stukken code. Daarom dat we in de onderstaande code-blok eerst een nieuw object aanmaken Tabel_asso waarin de kruistabel staat met de rijen en kolommen omgewisseld.\n\nTabel_asso &lt;- table(Techniek$Richting5cat,Techniek$Begrijpen.voor.Cat)\nassocplot(Tabel_asso)\n\n\n\n\n\n\n\n\nAls we alle output overschouwen, dan komen we tot volgende conclusie.\nCONCLUSIE:\n\nDe kolompercentages geven weer hoe binnen de verschillende clusters van studierichtingen wordt gescoord op het begrijpen van techniek. We bespreken enkele ‘opvallende’ cijfers… Bij de leerlingen uit technische studierichtingen zit de grootste groep in de categorie “Laag” (38.67%). Het percentage van deze leerlingen in de categorie “Zeer hoog” bedraagt slechts 17.33%. De grootste groep leerlingen die Latijn volgen is terug te vinden in de categorie “Zeer hoog” (35.78%). Deze groep leerlingen scoort dus in het algemeen beter dan de leerlingen uit de andere studierichtingen. Handel/STV-leerlingen scoren dan weer sterk lager. 46.19% van deze leerlingen is terug te vinden in de categorie “Zeer Laag” en slechts 6.78% in de categorie “Zeer Hoog”. De chi²-analyse leert ons dat het verband statistisch significant is (p &lt; 0.05), maar eerder beperkt (Cramer’s V = 0.18).\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nWe zijn ook geïnteresseerd in welke mate de aanwezigheid van technisch speelgoed (Speelgoed) een invloed heeft op het begrijpen van techniek (Begrijpen.voor). We kunnen dit op 2 manieren analyseren nu we beschikken over een kwalitatieve en een kwantitatieve variabele die iets zeggen over het begrijpen van techniek (de originele variabele Begrijpen.voor en de aangemaakte categorische variabele uit oefening 2).\n→ Teken beide modellen en vermeld de analysetechniek.\n→ Maak beide oefeningen en vergelijk de resultaten.\n\n\n\nOptie 1: t-test\nEerst de Levene Test.\n\nleveneTest(Techniek$Begrijpen.voor, Techniek$Speelgoed)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)\ngroup    1  0.1089 0.7415\n      1890               \n\n\nP-waarde is hoger dan 0.05, dus de assumptie van gelijke binnengroepenvarianties gaat op. Nu kunnen we de t-test zelf uitvoeren.\n\nt.test(Techniek$Begrijpen.voor~Techniek$Speelgoed, var.equal=TRUE)\n\n\n    Two Sample t-test\n\ndata:  Techniek$Begrijpen.voor by Techniek$Speelgoed\nt = -3.6108, df = 1890, p-value = 0.0003132\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n -0.04621105 -0.01368049\nsample estimates:\nmean in group 0 mean in group 1 \n      0.6251900       0.6551357 \n\n\nOok de effectgrootte gaan we na (Cohen’s d).\n\nd(Techniek$Begrijpen.voor,Techniek$Speelgoed)\n\n[1] -0.1737467\n\n\nCONCLUSIE:\n\nIn de steekproef scoren leerlingen gemiddeld 0.66 op begrijpen van techniek, terwijl leerlingen die thuis geen technisch speelgoed hebben iets lager scoren (gemiddelde = 0.63). Het effect van al dan niet technisch speelgoed hebben, is statistisch significant (p &lt; 0.05). We kunnen het dus doortrekken naar de populatie. Het effect is echter zo klein (d = 0.17) dat het van weinig praktische waarde is.\n\nOptie 2: kruistabel\nEen tabel met kolompercentages aanmaken met afhankelijke variabele (Begrijpen.voor.Cat) in de rijen.\n\nkruistabel.kolom(Techniek$Begrijpen.voor.Cat,Techniek$Speelgoed)\n\n           x\ny                   0         1       Sum\n  Zeer laag  29.63526  24.06807  26.00423\n  Laag       38.44985  35.57536  36.57505\n  Hoog       12.15805  15.07293  14.05920\n  Zeer hoog  19.75684  25.28363  23.36152\n  Sum       100.00000 100.00000 100.00000\n\n\nDe Chi-kwadraattest uitvoeren.\n\nchi.kwadraat.test(table(Techniek$Begrijpen.voor.Cat, Techniek$Speelgoed))\n\n\n    Pearson's Chi-squared test\n\ndata:  table(Techniek$Begrijpen.voor.Cat, Techniek$Speelgoed)\nX-squared = 14.289, df = 3, p-value = 0.002537\n95 percent confidence interval:\n 0.03199597 0.12691805\nsample estimates:\nCramer's V \n0.08690546 \n\n\nEn tot slot ook de tabel visueel maken.\n\nTabel_asso &lt;- table(Techniek$Speelgoed,Techniek$Begrijpen.voor.Cat)\nassocplot(Tabel_asso)\n\n\n\n\n\n\n\n\nAlles samengenomen kunnen we het volgende concluderen uit deze analyse.\nConclusie:\n\nDe kolompercentages geven weer of leerlingen die al dan niet technisch speelgoed bezitten anders scoren op het begrijpen van techniek. Uit de kruistabel blijkt dat de verschillen eerder klein zijn. Beide groepen leerlingen hebben gelijkaardige percentages binnen de verschillende categorieën van ‘Begrijpen.voor.Cat’. Hoewel de chi²-analyse aangeeft dat het om een statistisch significant verband gaat (p &lt; 0.05), wijst de Cramer’s V op een klein effect (Cramer’s V = 0.09).\n\nVergelijken we beide analyses, dan komen we tot een vrij gelijkaardige conclusie. Er is een statistisch significant verband, maar het is verwaarloosbaar klein."
+  },
+  {
+    "objectID": "Contactmomenten/C5/C5.html",
+    "href": "Contactmomenten/C5/C5.html",
+    "title": "Contactmoment 5",
+    "section": "",
+    "text": "Dit contactmoment hebben we het over:",
     "crumbs": [
       "Contactmomenten",
-      "C2"
+      "C5"
     ]
   },
   {
-    "objectID": "Contactmomenten/C2/C2.html#voorbereiding",
-    "href": "Contactmomenten/C2/C2.html#voorbereiding",
-    "title": "Contactmoment 2",
+    "objectID": "Contactmomenten/C5/C5.html#voorbereiding",
+    "href": "Contactmomenten/C5/C5.html#voorbereiding",
+    "title": "Contactmoment 5",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 2 en Hoofdstuk 4 uit het OLP\n Online (R) Oefeningen ANOVA\n Online (R) Oefeningen kruistabellen\n Screencast ANOVA\n Screencast kruistabellen",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties bij regressie-analyses\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties regressie-analyse\n Screencast multivariate regressie-analyse",
     "crumbs": [
       "Contactmomenten",
-      "C2"
+      "C5"
     ]
   },
   {
-    "objectID": "Contactmomenten/C2/C2.html#lesmateriaal",
-    "href": "Contactmomenten/C2/C2.html#lesmateriaal",
-    "title": "Contactmoment 2",
+    "objectID": "Contactmomenten/C5/C5.html#lesmateriaal",
+    "href": "Contactmomenten/C5/C5.html#lesmateriaal",
+    "title": "Contactmoment 5",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 2\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "text": "Lesmateriaal\n Slides Contactmoment 5\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
     "crumbs": [
       "Contactmomenten",
-      "C2"
+      "C5"
     ]
   },
   {
-    "objectID": "Contactmomenten/C2/C2.html#na-de-les",
-    "href": "Contactmomenten/C2/C2.html#na-de-les",
-    "title": "Contactmoment 2",
+    "objectID": "Contactmomenten/C5/C5.html#na-de-les",
+    "href": "Contactmomenten/C5/C5.html#na-de-les",
+    "title": "Contactmoment 5",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 3: ANOVA\n ZSO 4: kruistabellen",
+    "text": "Na de les\n ZSO 6: Bivariate regressie (Deel 2)\n ZSO 7: Multivariate regressie",
     "crumbs": [
       "Contactmomenten",
-      "C2"
+      "C5"
     ]
   },
   {
-    "objectID": "Contactmomenten/C4/C4.html",
-    "href": "Contactmomenten/C4/C4.html",
-    "title": "Contactmoment 4",
+    "objectID": "Contactmomenten/C5/Respons_C5.html",
+    "href": "Contactmomenten/C5/Respons_C5.html",
+    "title": "Contactmoment 1: Respons computer lab",
     "section": "",
-    "text": "Volgende inhouden komen aan bod:",
+    "text": "Belangrijk\n\n\n\nVooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket car te activeren en ook de OLP2 Functies te activeren.\n\n\n\n\n\n\n\n\n Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nVooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.\n\nleveneTest(Techniek$Interest.voor, Techniek$Dipvader)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)\ngroup    1  0.0614 0.8043\n      2172               \n\n\nKijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.\nNu zijn we klaar om de t-test zelf uit te voeren.\n\nt.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)\n\n\n    Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Dipvader\nt = 3.9534, df = 2172, p-value = 7.95e-05\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n 0.08344689 0.24771611\nsample estimates:\nmean in group 0 mean in group 1 \n       3.022044        2.856463 \n\n\nWe starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (Dipvader heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (Dipvader heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.\nUit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje p-value = 7.95e-05 wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.\n\n\n\nVervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d. \n\nd(Techniek$Interest.voor,Techniek$Dipvader)\n\n[1] 0.1701453\n\n\nDe Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Dipvader,\n         xlab=\"Diploma HO vader\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nOpnieuw voeren we eerst de Levene Test uit.\n\nleveneTest(Techniek$Interest.voor, Techniek$Studiejaar)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)  \ngroup    1     5.5 0.0191 *\n      2288                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nDitmaal is de bijhorende p-waarde lager dan 0.05 (zie 0.0191 * in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in R door het argument var.equal=FALSE toe te voegen bij het opvragen van de t-test.\n\nt.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)\n\n\n    Welch Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Studiejaar\nt = 13.277, df = 2260.6, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n 0.4433075 0.5969520\nsample estimates:\nmean in group 1 mean in group 2 \n       3.211843        2.691714 \n\n\nWe lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).\nDit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie p-value &lt; 2.2e-16 in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.\n\n\n\nVervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.\n\nd(Techniek$Interest.voor,Techniek$Studiejaar)\n\n[1] 0.5557404\n\n\nDe Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Studiejaar,\n         xlab=\"Studiejaar\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\nDeze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een independent samples t-test omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een paired samples t-test .\n\n\n\nOm deze paired samples t-test uit te voeren maken we gebruik van het argument paired = TRUE in de t.test() functie.\n\nt.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)\n\n\n    Paired t-test\n\ndata:  Techniek$Interest.voor and Techniek$Interest.na\nt = 1.9696, df = 2289, p-value = 0.049\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.000149209 0.067973062\nsample estimates:\nmean difference \n     0.03406114 \n\n\nHet verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.\nWe lezen af dat de p-waarde lager is dan 0.05 (zie p-value = 0.049). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.\n\n\n\nVervolgens berekenen we de Cohen’s d aan de hand van de functie dpaired(). Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).\n\ndpaired(1.9696,2290)\n\n[1] 0.04115857\n\n\nCohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.\n\n\n\n\nerrorbar2(Techniek$Interest.voor,Techniek$Interest.na,\n          xlab=\"Meting voor en na\",\n          ylab=\"Interesse\")"
+  },
+  {
+    "objectID": "Contactmomenten/C4/Respons_C4.html",
+    "href": "Contactmomenten/C4/Respons_C4.html",
+    "title": "Contactmoment 1: Respons computer lab",
+    "section": "",
+    "text": "Belangrijk\n\n\n\nVooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket car te activeren en ook de OLP2 Functies te activeren.\n\n\n\n\n\n\n\n\n Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nVooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.\n\nleveneTest(Techniek$Interest.voor, Techniek$Dipvader)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)\ngroup    1  0.0614 0.8043\n      2172               \n\n\nKijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.\nNu zijn we klaar om de t-test zelf uit te voeren.\n\nt.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)\n\n\n    Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Dipvader\nt = 3.9534, df = 2172, p-value = 7.95e-05\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n 0.08344689 0.24771611\nsample estimates:\nmean in group 0 mean in group 1 \n       3.022044        2.856463 \n\n\nWe starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (Dipvader heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (Dipvader heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.\nUit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje p-value = 7.95e-05 wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.\n\n\n\nVervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d. \n\nd(Techniek$Interest.voor,Techniek$Dipvader)\n\n[1] 0.1701453\n\n\nDe Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Dipvader,\n         xlab=\"Diploma HO vader\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nOpnieuw voeren we eerst de Levene Test uit.\n\nleveneTest(Techniek$Interest.voor, Techniek$Studiejaar)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)  \ngroup    1     5.5 0.0191 *\n      2288                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nDitmaal is de bijhorende p-waarde lager dan 0.05 (zie 0.0191 * in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in R door het argument var.equal=FALSE toe te voegen bij het opvragen van de t-test.\n\nt.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)\n\n\n    Welch Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Studiejaar\nt = 13.277, df = 2260.6, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n 0.4433075 0.5969520\nsample estimates:\nmean in group 1 mean in group 2 \n       3.211843        2.691714 \n\n\nWe lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).\nDit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie p-value &lt; 2.2e-16 in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.\n\n\n\nVervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.\n\nd(Techniek$Interest.voor,Techniek$Studiejaar)\n\n[1] 0.5557404\n\n\nDe Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Studiejaar,\n         xlab=\"Studiejaar\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\nDeze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een independent samples t-test omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een paired samples t-test .\n\n\n\nOm deze paired samples t-test uit te voeren maken we gebruik van het argument paired = TRUE in de t.test() functie.\n\nt.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)\n\n\n    Paired t-test\n\ndata:  Techniek$Interest.voor and Techniek$Interest.na\nt = 1.9696, df = 2289, p-value = 0.049\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.000149209 0.067973062\nsample estimates:\nmean difference \n     0.03406114 \n\n\nHet verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.\nWe lezen af dat de p-waarde lager is dan 0.05 (zie p-value = 0.049). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.\n\n\n\nVervolgens berekenen we de Cohen’s d aan de hand van de functie dpaired(). Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).\n\ndpaired(1.9696,2290)\n\n[1] 0.04115857\n\n\nCohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.\n\n\n\n\nerrorbar2(Techniek$Interest.voor,Techniek$Interest.na,\n          xlab=\"Meting voor en na\",\n          ylab=\"Interesse\")"
+  },
+  {
+    "objectID": "Contactmomenten/C3/C3.html",
+    "href": "Contactmomenten/C3/C3.html",
+    "title": "Contactmoment 3",
+    "section": "",
+    "text": "We behandelen volgende inhouden:",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C3"
     ]
   },
   {
-    "objectID": "Contactmomenten/C4/C4.html#voorbereiding",
-    "href": "Contactmomenten/C4/C4.html#voorbereiding",
-    "title": "Contactmoment 4",
+    "objectID": "Contactmomenten/C3/C3.html#voorbereiding",
+    "href": "Contactmomenten/C3/C3.html#voorbereiding",
+    "title": "Contactmoment 3",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties nagaan\n Screencast multivariate regressie-analyse",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP\n Online (R) Oefeningen correlatie-analses\n Online (R) Oefeningen bivariate regressie-analyses\n Screencast correlatie-analyses\n Screencast bivariate regressie-analyse",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C3"
     ]
   },
   {
-    "objectID": "Contactmomenten/C4/C4.html#lesmateriaal",
-    "href": "Contactmomenten/C4/C4.html#lesmateriaal",
-    "title": "Contactmoment 4",
+    "objectID": "Contactmomenten/C3/C3.html#lesmateriaal",
+    "href": "Contactmomenten/C3/C3.html#lesmateriaal",
+    "title": "Contactmoment 3",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 4\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "text": "Lesmateriaal\n Slides Contactmoment 3\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C3"
     ]
   },
   {
-    "objectID": "Contactmomenten/C4/C4.html#na-de-les",
-    "href": "Contactmomenten/C4/C4.html#na-de-les",
-    "title": "Contactmoment 4",
+    "objectID": "Contactmomenten/C3/C3.html#na-de-les",
+    "href": "Contactmomenten/C3/C3.html#na-de-les",
+    "title": "Contactmoment 3",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 6: bivariate regressie (deel 2)\n ZSO 7: multivariate regressie",
+    "text": "Na de les\n ZSO 5: correlaties\n ZSO 6: bivariate regressie",
     "crumbs": [
       "Contactmomenten",
-      "C4"
+      "C3"
     ]
   },
   {
-    "objectID": "Contactmomenten/Contactmomenten.html",
-    "href": "Contactmomenten/Contactmomenten.html",
-    "title": "Contactmomenten",
+    "objectID": "Contactmomenten/C3/Respons_C3.html",
+    "href": "Contactmomenten/C3/Respons_C3.html",
+    "title": "Contactmoment 1: Respons computer lab",
     "section": "",
-    "text": "Voor dit vak zijn er 7 contactmomenten gepland.\nHieronder vind je een overzicht van de verschillende contactmomenten en welke thema’s aan bod zullen komen.",
-    "crumbs": [
-      "Contactmomenten"
-    ]
+    "text": "Belangrijk\n\n\n\nVooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket car te activeren en ook de OLP2 Functies te activeren.\n\n\n\n\n\n\n\n\n Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nVooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.\n\nleveneTest(Techniek$Interest.voor, Techniek$Dipvader)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)\ngroup    1  0.0614 0.8043\n      2172               \n\n\nKijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.\nNu zijn we klaar om de t-test zelf uit te voeren.\n\nt.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)\n\n\n    Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Dipvader\nt = 3.9534, df = 2172, p-value = 7.95e-05\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n 0.08344689 0.24771611\nsample estimates:\nmean in group 0 mean in group 1 \n       3.022044        2.856463 \n\n\nWe starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (Dipvader heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (Dipvader heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.\nUit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje p-value = 7.95e-05 wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.\n\n\n\nVervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d. \n\nd(Techniek$Interest.voor,Techniek$Dipvader)\n\n[1] 0.1701453\n\n\nDe Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Dipvader,\n         xlab=\"Diploma HO vader\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nOpnieuw voeren we eerst de Levene Test uit.\n\nleveneTest(Techniek$Interest.voor, Techniek$Studiejaar)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)  \ngroup    1     5.5 0.0191 *\n      2288                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nDitmaal is de bijhorende p-waarde lager dan 0.05 (zie 0.0191 * in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in R door het argument var.equal=FALSE toe te voegen bij het opvragen van de t-test.\n\nt.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)\n\n\n    Welch Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Studiejaar\nt = 13.277, df = 2260.6, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n 0.4433075 0.5969520\nsample estimates:\nmean in group 1 mean in group 2 \n       3.211843        2.691714 \n\n\nWe lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).\nDit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie p-value &lt; 2.2e-16 in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.\n\n\n\nVervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.\n\nd(Techniek$Interest.voor,Techniek$Studiejaar)\n\n[1] 0.5557404\n\n\nDe Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Studiejaar,\n         xlab=\"Studiejaar\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\nDeze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een independent samples t-test omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een paired samples t-test .\n\n\n\nOm deze paired samples t-test uit te voeren maken we gebruik van het argument paired = TRUE in de t.test() functie.\n\nt.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)\n\n\n    Paired t-test\n\ndata:  Techniek$Interest.voor and Techniek$Interest.na\nt = 1.9696, df = 2289, p-value = 0.049\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.000149209 0.067973062\nsample estimates:\nmean difference \n     0.03406114 \n\n\nHet verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.\nWe lezen af dat de p-waarde lager is dan 0.05 (zie p-value = 0.049). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.\n\n\n\nVervolgens berekenen we de Cohen’s d aan de hand van de functie dpaired(). Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).\n\ndpaired(1.9696,2290)\n\n[1] 0.04115857\n\n\nCohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.\n\n\n\n\nerrorbar2(Techniek$Interest.voor,Techniek$Interest.na,\n          xlab=\"Meting voor en na\",\n          ylab=\"Interesse\")"
   },
   {
-    "objectID": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
-    "href": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
-    "title": "Contactmomenten",
-    "section": "Dataset voor computeroefeningen",
-    "text": "Dataset voor computeroefeningen\nPer contactmoment voorzien we een set van oefeningen die overheen de verschillende contactmomenten uitgevoerd worden op dezelfde dataset: Techniek.RData. Om de oefeningen goed te kunnen uitvoeren is het belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit codeboek kan je raadplegen via volgende link:",
-    "crumbs": [
-      "Contactmomenten"
-    ]
-  },
-  {
-    "objectID": "Contactmomenten/C1/C1.html",
-    "href": "Contactmomenten/C1/C1.html",
-    "title": "Contactmoment 1",
+    "objectID": "Contactmomenten/C6/C6.html",
+    "href": "Contactmomenten/C6/C6.html",
+    "title": "Contactmoment 6",
     "section": "",
-    "text": "Dit eerste contactmoment behandelt volgende inhouden:",
+    "text": "Dit contactmoment hebben we het over:",
     "crumbs": [
       "Contactmomenten",
-      "C1"
+      "C6"
     ]
   },
   {
-    "objectID": "Contactmomenten/C1/C1.html#voorbereiding",
-    "href": "Contactmomenten/C1/C1.html#voorbereiding",
-    "title": "Contactmoment 1",
+    "objectID": "Contactmomenten/C6/C6.html#voorbereiding",
+    "href": "Contactmomenten/C6/C6.html#voorbereiding",
+    "title": "Contactmoment 6",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP\n Online (R) Oefeningen t-test\n Screencast t-test",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 10 uit het OLP\n Online (R) Oefeningen dummy-variabelen\n Online (R) Oefeningen interactie-effecten\n Screencast dummy-variabelen\n Screencast interactie-effecten",
     "crumbs": [
       "Contactmomenten",
-      "C1"
+      "C6"
     ]
   },
   {
-    "objectID": "Contactmomenten/C1/C1.html#lesmateriaal",
-    "href": "Contactmomenten/C1/C1.html#lesmateriaal",
-    "title": "Contactmoment 1",
+    "objectID": "Contactmomenten/C6/C6.html#lesmateriaal",
+    "href": "Contactmomenten/C6/C6.html#lesmateriaal",
+    "title": "Contactmoment 6",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 1\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "text": "Lesmateriaal\n Slides Contactmoment 6\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
     "crumbs": [
       "Contactmomenten",
-      "C1"
+      "C6"
     ]
   },
   {
-    "objectID": "Contactmomenten/C1/C1.html#na-de-les",
-    "href": "Contactmomenten/C1/C1.html#na-de-les",
-    "title": "Contactmoment 1",
+    "objectID": "Contactmomenten/C6/C6.html#na-de-les",
+    "href": "Contactmomenten/C6/C6.html#na-de-les",
+    "title": "Contactmoment 6",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 1: Van onderzoeksvraag naar analyse\n ZSO 2: t-test",
+    "text": "Na de les\n ZSO 8: Dummy-variabelen en interacties",
     "crumbs": [
       "Contactmomenten",
-      "C1"
+      "C6"
     ]
   },
   {
-    "objectID": "Contactmomenten/C1/Opdrachten_C1.html",
-    "href": "Contactmomenten/C1/Opdrachten_C1.html",
-    "title": "Contactmoment 1: Opdrachten computer lab",
+    "objectID": "Contactmomenten/C6/Respons_C6.html",
+    "href": "Contactmomenten/C6/Respons_C6.html",
+    "title": "Contactmoment 1: Respons computer lab",
     "section": "",
-    "text": "Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\n Respons computer lab\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie."
+    "text": "Belangrijk\n\n\n\nVooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket car te activeren en ook de OLP2 Functies te activeren.\n\n\n\n\n\n\n\n\n Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nVooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.\n\nleveneTest(Techniek$Interest.voor, Techniek$Dipvader)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)\ngroup    1  0.0614 0.8043\n      2172               \n\n\nKijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.\nNu zijn we klaar om de t-test zelf uit te voeren.\n\nt.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)\n\n\n    Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Dipvader\nt = 3.9534, df = 2172, p-value = 7.95e-05\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n 0.08344689 0.24771611\nsample estimates:\nmean in group 0 mean in group 1 \n       3.022044        2.856463 \n\n\nWe starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (Dipvader heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (Dipvader heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.\nUit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje p-value = 7.95e-05 wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.\n\n\n\nVervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d. \n\nd(Techniek$Interest.voor,Techniek$Dipvader)\n\n[1] 0.1701453\n\n\nDe Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Dipvader,\n         xlab=\"Diploma HO vader\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nOpnieuw voeren we eerst de Levene Test uit.\n\nleveneTest(Techniek$Interest.voor, Techniek$Studiejaar)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)  \ngroup    1     5.5 0.0191 *\n      2288                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nDitmaal is de bijhorende p-waarde lager dan 0.05 (zie 0.0191 * in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in R door het argument var.equal=FALSE toe te voegen bij het opvragen van de t-test.\n\nt.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)\n\n\n    Welch Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Studiejaar\nt = 13.277, df = 2260.6, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n 0.4433075 0.5969520\nsample estimates:\nmean in group 1 mean in group 2 \n       3.211843        2.691714 \n\n\nWe lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).\nDit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie p-value &lt; 2.2e-16 in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.\n\n\n\nVervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.\n\nd(Techniek$Interest.voor,Techniek$Studiejaar)\n\n[1] 0.5557404\n\n\nDe Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Studiejaar,\n         xlab=\"Studiejaar\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\nDeze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een independent samples t-test omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een paired samples t-test .\n\n\n\nOm deze paired samples t-test uit te voeren maken we gebruik van het argument paired = TRUE in de t.test() functie.\n\nt.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)\n\n\n    Paired t-test\n\ndata:  Techniek$Interest.voor and Techniek$Interest.na\nt = 1.9696, df = 2289, p-value = 0.049\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.000149209 0.067973062\nsample estimates:\nmean difference \n     0.03406114 \n\n\nHet verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.\nWe lezen af dat de p-waarde lager is dan 0.05 (zie p-value = 0.049). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.\n\n\n\nVervolgens berekenen we de Cohen’s d aan de hand van de functie dpaired(). Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).\n\ndpaired(1.9696,2290)\n\n[1] 0.04115857\n\n\nCohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.\n\n\n\n\nerrorbar2(Techniek$Interest.voor,Techniek$Interest.na,\n          xlab=\"Meting voor en na\",\n          ylab=\"Interesse\")"
   },
   {
-    "objectID": "Zelftest_correlaties.html",
-    "href": "Zelftest_correlaties.html",
-    "title": "Online (R) oefeningen",
+    "objectID": "Contactmomenten/C1/Respons_C1.html",
+    "href": "Contactmomenten/C1/Respons_C1.html",
+    "title": "Contactmoment 1: Respons computer lab",
     "section": "",
-    "text": "We zijn nu aangekomen bij het onderdeel waarin we het verband tussen twee kwantitatieve variabelen wensen te onderzoeken: correlaties. Hoe we dit doen in R kan je hier oefenen, opnieuw adhv onze dataset over de pinguïns.\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nVoor deze oefening willen we twee onderzoeksvragen beantwoorden:",
+    "text": "Belangrijk\n\n\n\nVooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket car te activeren en ook de OLP2 Functies te activeren.\n\n\n\n\n\n\n\n\n Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nVooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.\n\nleveneTest(Techniek$Interest.voor, Techniek$Dipvader)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)\ngroup    1  0.0614 0.8043\n      2172               \n\n\nKijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.\nNu zijn we klaar om de t-test zelf uit te voeren.\n\nt.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)\n\n\n    Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Dipvader\nt = 3.9534, df = 2172, p-value = 7.95e-05\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n 0.08344689 0.24771611\nsample estimates:\nmean in group 0 mean in group 1 \n       3.022044        2.856463 \n\n\nWe starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (Dipvader heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (Dipvader heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.\nUit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje p-value = 7.95e-05 wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.\n\n\n\nVervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d. \n\nd(Techniek$Interest.voor,Techniek$Dipvader)\n\n[1] 0.1701453\n\n\nDe Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Dipvader,\n         xlab=\"Diploma HO vader\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nOpnieuw voeren we eerst de Levene Test uit.\n\nleveneTest(Techniek$Interest.voor, Techniek$Studiejaar)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)  \ngroup    1     5.5 0.0191 *\n      2288                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nDitmaal is de bijhorende p-waarde lager dan 0.05 (zie 0.0191 * in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in R door het argument var.equal=FALSE toe te voegen bij het opvragen van de t-test.\n\nt.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)\n\n\n    Welch Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Studiejaar\nt = 13.277, df = 2260.6, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n 0.4433075 0.5969520\nsample estimates:\nmean in group 1 mean in group 2 \n       3.211843        2.691714 \n\n\nWe lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).\nDit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie p-value &lt; 2.2e-16 in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.\n\n\n\nVervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.\n\nd(Techniek$Interest.voor,Techniek$Studiejaar)\n\n[1] 0.5557404\n\n\nDe Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Studiejaar,\n         xlab=\"Studiejaar\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\nDeze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een independent samples t-test omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een paired samples t-test .\n\n\n\nOm deze paired samples t-test uit te voeren maken we gebruik van het argument paired = TRUE in de t.test() functie.\n\nt.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)\n\n\n    Paired t-test\n\ndata:  Techniek$Interest.voor and Techniek$Interest.na\nt = 1.9696, df = 2289, p-value = 0.049\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.000149209 0.067973062\nsample estimates:\nmean difference \n     0.03406114 \n\n\nHet verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.\nWe lezen af dat de p-waarde lager is dan 0.05 (zie p-value = 0.049). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.\n\n\n\nVervolgens berekenen we de Cohen’s d aan de hand van de functie dpaired(). Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).\n\ndpaired(1.9696,2290)\n\n[1] 0.04115857\n\n\nCohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.\n\n\n\n\nerrorbar2(Techniek$Interest.voor,Techniek$Interest.na,\n          xlab=\"Meting voor en na\",\n          ylab=\"Interesse\")"
+  },
+  {
+    "objectID": "Contactmomenten/C7/C7.html",
+    "href": "Contactmomenten/C7/C7.html",
+    "title": "Contactmoment 7",
+    "section": "",
+    "text": "Dit contactmoment is van een heel andere aard. Dit keer dompelen we jullie onder in de concrete examen-context. Tijdens dit 3-uren durend contactmoment simuleren we de gehele examen setting.\nJe krijgt inzicht in het type vragen voor zowel het openboek als het gesloten boek gedeelte van het examen.\nTracht dit contactmoment zeker bij te wonen in de computerlokalen. Je gaat namelijk het examen zelf ook daar op die computers dienen uit te voeren\nWe overlopen ook de procedures die we tijdens het echte examen zullen doorlopen. Een voorbereid persoon is er 2 waard!!",
     "crumbs": [
-      "Online (R) oefeningen",
-      "Correlaties"
+      "Contactmomenten",
+      "C7"
     ]
   },
   {
-    "objectID": "Zelftest_correlaties.html#oefening-1",
-    "href": "Zelftest_correlaties.html#oefening-1",
-    "title": "Online (R) oefeningen",
-    "section": "Oefening 1",
-    "text": "Oefening 1\nDe eerste onderzoeksvraag gaat over het verband tussen de lengte van de snavel (bill_length_mm) en de breedte van de snavel (bill_depth_mm) van pinguïns.\nMaak in onderstaande codeblok een basisvisualisatie om dit verband te illustreren.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nplot(penguins$______, penguins$______)\n\n\n\n\nOplossing:\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nTussen haakjes moet je verwijzen naar beide variabelen. Indien er een vermoeden is van causaliteit, plaats je de onafhaneklijke variabele best op de x-as. In dit geval is er niet echt een duidelijk vermoeden van causaliteit, waardoor er geen reden is om de ene of de andere variabele op de x-as te zetten. Belangrijk is dat beide variabelen als numeric of als integer in de dataframe zijn gedefinieerd. Dat is in dit geval in orde.\nDe volledige oplossing ziet er zo uit!\n\n\nplot(penguins$bill_length_mm, penguins$bill_depth_mm)\nplot(penguins$bill_length_mm, penguins$bill_depth_mm)",
+    "objectID": "Contactmomenten/C7/C7.html#voorbereiding",
+    "href": "Contactmomenten/C7/C7.html#voorbereiding",
+    "title": "Contactmoment 7",
+    "section": "Voorbereiding",
+    "text": "Voorbereiding\n Tracht alle onderwerpen uit de cursus al een keer te hebben doorgenomen\n Zorg dat je een goed werkend script hebt dat je ook richting examen wenst te gebruiken",
     "crumbs": [
-      "Online (R) oefeningen",
-      "Correlaties"
+      "Contactmomenten",
+      "C7"
     ]
   },
   {
-    "objectID": "Zelftest_correlaties.html#oefening-2",
-    "href": "Zelftest_correlaties.html#oefening-2",
-    "title": "Online (R) oefeningen",
-    "section": "Oefening 2",
-    "text": "Oefening 2\nDe figuur die je in de vorige oefening maakte wijst niet meteen zeer duidelijk op een verband. We hebben echter ook een maat om de samenhang na te gaan: de Pearson correlatiecoëfficiënt.\nBereken de Pearson correlatiecoëfficiënt voor het verband tussen beide kenmerken van de snavel van pinguïns. Doe ook een test om na te gaan of dit verband statistisch signifcant is.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe kunnen gebruik maken van de functie cor.test( ).\ncor.test(penguins$______, penguins$______)\n\n\n\n\nOplossing:\n\n\ncor.test(penguins$bill_length_mm, penguins$bill_depth_mm)\ncor.test(penguins$bill_length_mm, penguins$bill_depth_mm)",
+    "objectID": "Contactmomenten/C7/C7.html#lesmateriaal",
+    "href": "Contactmomenten/C7/C7.html#lesmateriaal",
+    "title": "Contactmoment 7",
+    "section": "Lesmateriaal",
+    "text": "Lesmateriaal\n Slides Contactmoment 7\n Link Blackboard",
     "crumbs": [
-      "Online (R) oefeningen",
-      "Correlaties"
+      "Contactmomenten",
+      "C7"
     ]
   },
   {
-    "objectID": "Zelftest_correlaties.html#oefening-3-1",
-    "href": "Zelftest_correlaties.html#oefening-3-1",
-    "title": "Online (R) oefeningen",
-    "section": "Oefening 3",
-    "text": "Oefening 3\nWe hernemen de oplossing uit de vorige oefening hieronder.\n\n\n\n\n\n\n\n\nOp het examen vragen we soms meerkeuzevragen over de interpretatie van de output. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.\n\nVraagAntwoordsleutel\n\n\nWelke van volgende uitspraken is fout? (slechts 1 antwoord mogelijk)\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\nBeide variabelen delen 5,5% variantie\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n\n\nJe diende uitspraak 4 te kiezen als foute uitspraak.\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\n\n= JUIST! Inderdaad. In de steekproef is de correlatie -0,235, een negatief getal dus ook een negatief verband.\n\nBeide variabelen delen 5,5% variantie\n\n= JUIST! Ook dit klopt aangezien het kwadraat van de correlatiecoëfficiënt kan geïnterpreteerd worden als gedeelde variantie tussen beide variabelen. Het kwadraat van -0,235 bedraat 0,055. Dit is een percentage uitgedrukt in een getal tussen 0 en 1. Doen we dit maal 100 dan krijgen we het percentage op 100 (5,5% in dit geval).\n\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\n\n= JUIST! Dit lezen we af in de output bij het 95 betrouwbaarheidsinterval. Zo’n betrouwbaarheidsinterval geeft een beeld van de steekproevenverdeling. Deze steekproevenverdeling is de verdeling van onze parameter, de correlatie, overheen alle mogelijke steekproeven die we zouden kunnen getrokken hebben. Uit die verdeling leren we dat 95% van deze mogelijke steekrpoeven een correlatie tussen -0,13 en -0,33 zou opleveren.\n\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n= FOUT! Dit is een typische verkeerde interpretatie van de p-waarde. Een p-waarde is een probabiliteit van de data onder de veronderstelling dat de nul-hypothese geldig is. Anders uitgedrukt: de p-waarde drukt de kans uit dat we een correlatiecoëfficiënt van -0,235 of extremer (meer negatief) zouden vaststellen in onze steekproef indien de correlatie in de populatie nul bedraagt.",
+    "objectID": "OLP.html",
+    "href": "OLP.html",
+    "title": "Open Leerpakket",
+    "section": "",
+    "text": "Handboek\n\n\n\nBivariate en multivariate statistiek met R. Een openleerpakket. De Maeyer, Coertjens en Ardies (2012)\nDit boek is verkrijgbaar in de winkel van ACCO.\nBij de verschillende hoofdstukken in het boek horen een allerlei datasets die gehanteerd worden in het boek. Deze datasets kan je hier downloaden als één zip-file:\n Alle databestanden OLP\n\n\nHet OLP is reeds in 2012 geschreven. We zijn op de achtergrond aan het werken aan een nieuw handboek en een hervorming van het vak. Dit is echter nog niet klaar voor dit academiejaar.\nDoorheen de tijd hebben we een aantal fouten in het handboek gevonden, of hebben we hier en daar wat zaken geupdate. Die kan je hieronder vinden in de vorm van twee pdf files:\n\n Wijzigingen aan hoofdstuk 2.pdf\nWijzigingen aan openleerpakket 20150310.pdf\n OLP Statistiek2 - Hoofdstuk 10 - nieuw.pdf\n Files_Hoodfstuk10_nieuw.zip",
     "crumbs": [
-      "Online (R) oefeningen",
-      "Correlaties"
-    ]
-  },
-  {
-    "objectID": "Zelftest_correlaties.html#oefening-4",
-    "href": "Zelftest_correlaties.html#oefening-4",
-    "title": "Online (R) oefeningen",
-    "section": "Oefening 4",
-    "text": "Oefening 4\nNu richten we onze aandacht op de tweede onderzoeksvraag. Centraal in die onderzoeksvraag staat het nagaan van het verband van meerdere kwantitatieve variabelen.\nCreër een visualisatie die de onderlinge samenhang tussen alle 3 de variabelen in één figuur weergeeft.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm deze figuur te maken moet je twee stappen doorlopen:\n\neen dataframe maken met daarin enkel de betrokken variabelen;\ndeze nieuwe dataframe ‘plotten’ met het commando plot( ).\n\n\n\n\n\nOplossing:\nVerschillende stappen zijn nodig om deze figuur te maken. In de onderstaande oplossing kan je de twee stappen zien.\n\n\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# plot maken van de nieuwe dataframe\nplot(CVariabelen)\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# plot maken van de nieuwe dataframe\nplot(CVariabelen)",
-    "crumbs": [
-      "Online (R) oefeningen",
-      "Correlaties"
-    ]
-  },
-  {
-    "objectID": "Zelftest_correlaties.html#oefening-5-1",
-    "href": "Zelftest_correlaties.html#oefening-5-1",
-    "title": "Online (R) oefeningen",
-    "section": "Oefening 5",
-    "text": "Oefening 5\nDe visualisatie uit de voorgaande oefening duidt op een positief verband tussen elk van deze variabelen onderling. De vraag is uiteraard of dit een sterk verband is en in welke mate we dit verband kunnen verwachten te zien in de gehele populatie.\nBereken de drie correlatiecoëfficiënten in één beweging en schrijf voor jezelf een rapportage neer over de bekomen resultaten. Heb bij het schrijven van een conclusieluik ook oog voor “effectgrootte”.\n\nOefeningHintsOplossingRapportage\n\n\n\n\n\n\n\n\n\n\n\n\n\nNet als bij de visualisatie zijn er twee stappen nodig om een correlatiematrix te berekenen:\n\neen dataframe maken met daarin de variabelen (is zelfde eerste stap als in oefening 4);\nde correlatiematrix berekenen gebruikmakend van de functie cor.prob( ) .\n\n\n\n\n\nOplossing:\nOm deze correlatiematrix te berekenen maken we eerst een nieuwe dataframe aan (met de naam Variabelen) waarin de drie variabelen alleen zijn weggeschreven. Daarna gebruiken we die nieuwe dataframe Variabelen als inpunt voor de functie cor.prob( ).\n\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)\n\n\n\n\n\nIndien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.\n\n\n\n\n\n\n\n\nDe drie variabelen flipperlengte, snavellengte en gewicht zijn onderling sterk positief gecorreleerd. De correlaties situeren zich tussen 0,595 en 0,871 en zijn alledrie statistisch significant (p &lt;0,001). We verwachten in de populatie ook positieve correlaties te observeren tussen deze drie variabelen.",
-    "crumbs": [
-      "Online (R) oefeningen",
-      "Correlaties"
+      "Open Leer Pakket"
     ]
   },
   {
@@ -696,255 +758,283 @@
     ]
   },
   {
-    "objectID": "Contactmomenten/C7/C7.html",
-    "href": "Contactmomenten/C7/C7.html",
-    "title": "Contactmoment 7",
+    "objectID": "Zelftest_correlaties.html",
+    "href": "Zelftest_correlaties.html",
+    "title": "Online (R) oefeningen",
     "section": "",
-    "text": "Dit contactmoment is van een heel andere aard. Dit keer dompelen we jullie onder in de concrete examen-context. Tijdens dit 3-uren durend contactmoment simuleren we de gehele examen setting.\nJe krijgt inzicht in het type vragen voor zowel het openboek als het gesloten boek gedeelte van het examen.\nTracht dit contactmoment zeker bij te wonen in de computerlokalen. Je gaat namelijk het examen zelf ook daar op die computers dienen uit te voeren\nWe overlopen ook de procedures die we tijdens het echte examen zullen doorlopen. Een voorbereid persoon is er 2 waard!!",
+    "text": "We zijn nu aangekomen bij het onderdeel waarin we het verband tussen twee kwantitatieve variabelen wensen te onderzoeken: correlaties. Hoe we dit doen in R kan je hier oefenen, opnieuw adhv onze dataset over de pinguïns.\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nVoor deze oefening willen we twee onderzoeksvragen beantwoorden:",
     "crumbs": [
-      "Contactmomenten",
-      "C7"
+      "Online (R) oefeningen",
+      "Correlaties"
     ]
   },
   {
-    "objectID": "Contactmomenten/C7/C7.html#voorbereiding",
-    "href": "Contactmomenten/C7/C7.html#voorbereiding",
-    "title": "Contactmoment 7",
+    "objectID": "Zelftest_correlaties.html#oefening-1",
+    "href": "Zelftest_correlaties.html#oefening-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 1",
+    "text": "Oefening 1\nDe eerste onderzoeksvraag gaat over het verband tussen de lengte van de snavel (bill_length_mm) en de breedte van de snavel (bill_depth_mm) van pinguïns.\nMaak in onderstaande codeblok een basisvisualisatie om dit verband te illustreren.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nplot(penguins$______, penguins$______)\n\n\n\n\nOplossing:\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nTussen haakjes moet je verwijzen naar beide variabelen. Indien er een vermoeden is van causaliteit, plaats je de onafhaneklijke variabele best op de x-as. In dit geval is er niet echt een duidelijk vermoeden van causaliteit, waardoor er geen reden is om de ene of de andere variabele op de x-as te zetten. Belangrijk is dat beide variabelen als numeric of als integer in de dataframe zijn gedefinieerd. Dat is in dit geval in orde.\nDe volledige oplossing ziet er zo uit!\n\n\nplot(penguins$bill_length_mm, penguins$bill_depth_mm)\nplot(penguins$bill_length_mm, penguins$bill_depth_mm)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-2",
+    "href": "Zelftest_correlaties.html#oefening-2",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 2",
+    "text": "Oefening 2\nDe figuur die je in de vorige oefening maakte wijst niet meteen zeer duidelijk op een verband. We hebben echter ook een maat om de samenhang na te gaan: de Pearson correlatiecoëfficiënt.\nBereken de Pearson correlatiecoëfficiënt voor het verband tussen beide kenmerken van de snavel van pinguïns. Doe ook een test om na te gaan of dit verband statistisch signifcant is.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe kunnen gebruik maken van de functie cor.test( ).\ncor.test(penguins$______, penguins$______)\n\n\n\n\nOplossing:\n\n\ncor.test(penguins$bill_length_mm, penguins$bill_depth_mm)\ncor.test(penguins$bill_length_mm, penguins$bill_depth_mm)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-3-1",
+    "href": "Zelftest_correlaties.html#oefening-3-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 3",
+    "text": "Oefening 3\nWe hernemen de oplossing uit de vorige oefening hieronder.\n\n\n\n\n\n\n\n\nOp het examen vragen we soms meerkeuzevragen over de interpretatie van de output. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.\n\nVraagAntwoordsleutel\n\n\nWelke van volgende uitspraken is fout? (slechts 1 antwoord mogelijk)\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\nBeide variabelen delen 5,5% variantie\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n\n\nJe diende uitspraak 4 te kiezen als foute uitspraak.\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\n\n= JUIST! Inderdaad. In de steekproef is de correlatie -0,235, een negatief getal dus ook een negatief verband.\n\nBeide variabelen delen 5,5% variantie\n\n= JUIST! Ook dit klopt aangezien het kwadraat van de correlatiecoëfficiënt kan geïnterpreteerd worden als gedeelde variantie tussen beide variabelen. Het kwadraat van -0,235 bedraat 0,055. Dit is een percentage uitgedrukt in een getal tussen 0 en 1. Doen we dit maal 100 dan krijgen we het percentage op 100 (5,5% in dit geval).\n\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\n\n= JUIST! Dit lezen we af in de output bij het 95 betrouwbaarheidsinterval. Zo’n betrouwbaarheidsinterval geeft een beeld van de steekproevenverdeling. Deze steekproevenverdeling is de verdeling van onze parameter, de correlatie, overheen alle mogelijke steekproeven die we zouden kunnen getrokken hebben. Uit die verdeling leren we dat 95% van deze mogelijke steekrpoeven een correlatie tussen -0,13 en -0,33 zou opleveren.\n\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n= FOUT! Dit is een typische verkeerde interpretatie van de p-waarde. Een p-waarde is een probabiliteit van de data onder de veronderstelling dat de nul-hypothese geldig is. Anders uitgedrukt: de p-waarde drukt de kans uit dat we een correlatiecoëfficiënt van -0,235 of extremer (meer negatief) zouden vaststellen in onze steekproef indien de correlatie in de populatie nul bedraagt.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-4",
+    "href": "Zelftest_correlaties.html#oefening-4",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 4",
+    "text": "Oefening 4\nNu richten we onze aandacht op de tweede onderzoeksvraag. Centraal in die onderzoeksvraag staat het nagaan van het verband van meerdere kwantitatieve variabelen.\nCreër een visualisatie die de onderlinge samenhang tussen alle 3 de variabelen in één figuur weergeeft.\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\nOm deze figuur te maken moet je twee stappen doorlopen:\n\neen dataframe maken met daarin enkel de betrokken variabelen;\ndeze nieuwe dataframe ‘plotten’ met het commando plot( ).\n\n\n\n\n\nOplossing:\nVerschillende stappen zijn nodig om deze figuur te maken. In de onderstaande oplossing kan je de twee stappen zien.\n\n\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# plot maken van de nieuwe dataframe\nplot(CVariabelen)\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# plot maken van de nieuwe dataframe\nplot(CVariabelen)",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Zelftest_correlaties.html#oefening-5-1",
+    "href": "Zelftest_correlaties.html#oefening-5-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 5",
+    "text": "Oefening 5\nDe visualisatie uit de voorgaande oefening duidt op een positief verband tussen elk van deze variabelen onderling. De vraag is uiteraard of dit een sterk verband is en in welke mate we dit verband kunnen verwachten te zien in de gehele populatie.\nBereken de drie correlatiecoëfficiënten in één beweging en schrijf voor jezelf een rapportage neer over de bekomen resultaten. Heb bij het schrijven van een conclusieluik ook oog voor “effectgrootte”.\n\nOefeningHintsOplossingRapportage\n\n\n\n\n\n\n\n\n\n\n\n\n\nNet als bij de visualisatie zijn er twee stappen nodig om een correlatiematrix te berekenen:\n\neen dataframe maken met daarin de variabelen (is zelfde eerste stap als in oefening 4);\nde correlatiematrix berekenen gebruikmakend van de functie cor.prob( ) .\n\n\n\n\n\nOplossing:\nOm deze correlatiematrix te berekenen maken we eerst een nieuwe dataframe aan (met de naam Variabelen) waarin de drie variabelen alleen zijn weggeschreven. Daarna gebruiken we die nieuwe dataframe Variabelen als inpunt voor de functie cor.prob( ).\n\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen &lt;- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)\n\n\n\n\n\nIndien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.\n\n\n\n\n\n\n\n\nDe drie variabelen flipperlengte, snavellengte en gewicht zijn onderling sterk positief gecorreleerd. De correlaties situeren zich tussen 0,595 en 0,871 en zijn alledrie statistisch significant (p &lt;0,001). We verwachten in de populatie ook positieve correlaties te observeren tussen deze drie variabelen.",
+    "crumbs": [
+      "Online (R) oefeningen",
+      "Correlaties"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C1/Opdrachten_C1.html",
+    "href": "Contactmomenten/C1/Opdrachten_C1.html",
+    "title": "Contactmoment 1: Opdrachten computer lab",
+    "section": "",
+    "text": "Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\n Respons computer lab\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie."
+  },
+  {
+    "objectID": "Contactmomenten/C1/C1.html",
+    "href": "Contactmomenten/C1/C1.html",
+    "title": "Contactmoment 1",
+    "section": "",
+    "text": "Dit eerste contactmoment behandelt volgende inhouden:",
+    "crumbs": [
+      "Contactmomenten",
+      "C1"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C1/C1.html#voorbereiding",
+    "href": "Contactmomenten/C1/C1.html#voorbereiding",
+    "title": "Contactmoment 1",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Tracht alle onderwerpen uit de cursus al een keer te hebben doorgenomen\n Zorg dat je een goed werkend script hebt dat je ook richting examen wenst te gebruiken",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 1 en Hoofdstuk 3 uit het OLP\n Online (R) Oefeningen t-test\n Screencast t-test",
     "crumbs": [
       "Contactmomenten",
-      "C7"
+      "C1"
     ]
   },
   {
-    "objectID": "Contactmomenten/C7/C7.html#lesmateriaal",
-    "href": "Contactmomenten/C7/C7.html#lesmateriaal",
-    "title": "Contactmoment 7",
+    "objectID": "Contactmomenten/C1/C1.html#lesmateriaal",
+    "href": "Contactmomenten/C1/C1.html#lesmateriaal",
+    "title": "Contactmoment 1",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 7\n Link Blackboard",
+    "text": "Lesmateriaal\n Slides Contactmoment 1\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
     "crumbs": [
       "Contactmomenten",
-      "C7"
+      "C1"
     ]
   },
   {
-    "objectID": "Contactmomenten/C1/Respons_C1.html",
-    "href": "Contactmomenten/C1/Respons_C1.html",
-    "title": "Contactmoment 1: Respons computer lab",
-    "section": "",
-    "text": "Belangrijk\n\n\n\nVooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket car te activeren en ook de OLP2 Functies te activeren.\n\n\n\n\n\n\n\n\n Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nVooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.\n\nleveneTest(Techniek$Interest.voor, Techniek$Dipvader)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)\ngroup    1  0.0614 0.8043\n      2172               \n\n\nKijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.\nNu zijn we klaar om de t-test zelf uit te voeren.\n\nt.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)\n\n\n    Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Dipvader\nt = 3.9534, df = 2172, p-value = 7.95e-05\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n 0.08344689 0.24771611\nsample estimates:\nmean in group 0 mean in group 1 \n       3.022044        2.856463 \n\n\nWe starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (Dipvader heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (Dipvader heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.\nUit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje p-value = 7.95e-05 wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.\n\n\n\nVervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d. \n\nd(Techniek$Interest.voor,Techniek$Dipvader)\n\n[1] 0.1701453\n\n\nDe Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Dipvader,\n         xlab=\"Diploma HO vader\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\nOpnieuw voeren we eerst de Levene Test uit.\n\nleveneTest(Techniek$Interest.voor, Techniek$Studiejaar)\n\nLevene's Test for Homogeneity of Variance (center = median)\n        Df F value Pr(&gt;F)  \ngroup    1     5.5 0.0191 *\n      2288                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nDitmaal is de bijhorende p-waarde lager dan 0.05 (zie 0.0191 * in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in R door het argument var.equal=FALSE toe te voegen bij het opvragen van de t-test.\n\nt.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)\n\n\n    Welch Two Sample t-test\n\ndata:  Techniek$Interest.voor by Techniek$Studiejaar\nt = 13.277, df = 2260.6, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n 0.4433075 0.5969520\nsample estimates:\nmean in group 1 mean in group 2 \n       3.211843        2.691714 \n\n\nWe lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).\nDit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie p-value &lt; 2.2e-16 in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.\n\n\n\nVervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.\n\nd(Techniek$Interest.voor,Techniek$Studiejaar)\n\n[1] 0.5557404\n\n\nDe Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.\n\n\n\n\nerrorbar(Techniek$Interest.voor~Techniek$Studiejaar,\n         xlab=\"Studiejaar\",\n         ylab=\"Interesse in techniek\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\nDeze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een independent samples t-test omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een paired samples t-test .\n\n\n\nOm deze paired samples t-test uit te voeren maken we gebruik van het argument paired = TRUE in de t.test() functie.\n\nt.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)\n\n\n    Paired t-test\n\ndata:  Techniek$Interest.voor and Techniek$Interest.na\nt = 1.9696, df = 2289, p-value = 0.049\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.000149209 0.067973062\nsample estimates:\nmean difference \n     0.03406114 \n\n\nHet verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.\nWe lezen af dat de p-waarde lager is dan 0.05 (zie p-value = 0.049). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.\n\n\n\nVervolgens berekenen we de Cohen’s d aan de hand van de functie dpaired(). Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).\n\ndpaired(1.9696,2290)\n\n[1] 0.04115857\n\n\nCohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.\n\n\n\n\nerrorbar2(Techniek$Interest.voor,Techniek$Interest.na,\n          xlab=\"Meting voor en na\",\n          ylab=\"Interesse\")"
-  },
-  {
-    "objectID": "Contactmomenten/C6/C6.html",
-    "href": "Contactmomenten/C6/C6.html",
-    "title": "Contactmoment 6",
-    "section": "",
-    "text": "Dit contactmoment hebben we het over:",
-    "crumbs": [
-      "Contactmomenten",
-      "C6"
-    ]
-  },
-  {
-    "objectID": "Contactmomenten/C6/C6.html#voorbereiding",
-    "href": "Contactmomenten/C6/C6.html#voorbereiding",
-    "title": "Contactmoment 6",
-    "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 10 uit het OLP\n Online (R) Oefeningen dummy-variabelen\n Online (R) Oefeningen interactie-effecten\n Screencast dummy-variabelen\n Screencast interactie-effecten",
-    "crumbs": [
-      "Contactmomenten",
-      "C6"
-    ]
-  },
-  {
-    "objectID": "Contactmomenten/C6/C6.html#lesmateriaal",
-    "href": "Contactmomenten/C6/C6.html#lesmateriaal",
-    "title": "Contactmoment 6",
-    "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 6\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
-    "crumbs": [
-      "Contactmomenten",
-      "C6"
-    ]
-  },
-  {
-    "objectID": "Contactmomenten/C6/C6.html#na-de-les",
-    "href": "Contactmomenten/C6/C6.html#na-de-les",
-    "title": "Contactmoment 6",
+    "objectID": "Contactmomenten/C1/C1.html#na-de-les",
+    "href": "Contactmomenten/C1/C1.html#na-de-les",
+    "title": "Contactmoment 1",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 8: Dummy-variabelen en interacties",
+    "text": "Na de les\n ZSO 1: Van onderzoeksvraag naar analyse\n ZSO 2: t-test",
     "crumbs": [
       "Contactmomenten",
-      "C6"
+      "C1"
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html",
-    "href": "Contactmomenten/C3/C3.html",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/C6/Opdrachten_C6.html",
+    "href": "Contactmomenten/C6/Opdrachten_C6.html",
+    "title": "Contactmoment 1: Opdrachten computer lab",
     "section": "",
-    "text": "We behandelen volgende inhouden:",
+    "text": "Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\n Respons computer lab\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie."
+  },
+  {
+    "objectID": "Contactmomenten/Contactmomenten.html",
+    "href": "Contactmomenten/Contactmomenten.html",
+    "title": "Contactmomenten",
+    "section": "",
+    "text": "Voor dit vak zijn er 7 contactmomenten gepland.\nHieronder vind je een overzicht van de verschillende contactmomenten en welke thema’s aan bod zullen komen.",
     "crumbs": [
-      "Contactmomenten",
-      "C3"
+      "Contactmomenten"
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html#voorbereiding",
-    "href": "Contactmomenten/C3/C3.html#voorbereiding",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
+    "href": "Contactmomenten/Contactmomenten.html#dataset-voor-computeroefeningen",
+    "title": "Contactmomenten",
+    "section": "Dataset voor computeroefeningen",
+    "text": "Dataset voor computeroefeningen\nPer contactmoment voorzien we een set van oefeningen die overheen de verschillende contactmomenten uitgevoerd worden op dezelfde dataset: Techniek.RData. Om de oefeningen goed te kunnen uitvoeren is het belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit codeboek kan je raadplegen via volgende link:",
+    "crumbs": [
+      "Contactmomenten"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C3/Opdrachten_C3.html",
+    "href": "Contactmomenten/C3/Opdrachten_C3.html",
+    "title": "Contactmoment 1: Opdrachten computer lab",
+    "section": "",
+    "text": "Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\n Respons computer lab\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie."
+  },
+  {
+    "objectID": "Contactmomenten/C4/Opdrachten_C4.html",
+    "href": "Contactmomenten/C4/Opdrachten_C4.html",
+    "title": "Contactmoment 1: Opdrachten computer lab",
+    "section": "",
+    "text": "Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\n Respons computer lab\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie."
+  },
+  {
+    "objectID": "Contactmomenten/C4/C4.html",
+    "href": "Contactmomenten/C4/C4.html",
+    "title": "Contactmoment 4",
+    "section": "",
+    "text": "Volgende inhouden komen aan bod:",
+    "crumbs": [
+      "Contactmomenten",
+      "C4"
+    ]
+  },
+  {
+    "objectID": "Contactmomenten/C4/C4.html#voorbereiding",
+    "href": "Contactmomenten/C4/C4.html#voorbereiding",
+    "title": "Contactmoment 4",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 5 en Hoofdstuk 6 uit het OLP\n Online (R) Oefeningen correlatie-analses\n Online (R) Oefeningen bivariate regressie-analyses\n Screencast correlatie-analyses\n Screencast bivariate regressie-analyse",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties regressie-analyse\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties nagaan\n Screencast multivariate regressie-analyse",
     "crumbs": [
       "Contactmomenten",
-      "C3"
+      "C4"
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html#lesmateriaal",
-    "href": "Contactmomenten/C3/C3.html#lesmateriaal",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/C4/C4.html#lesmateriaal",
+    "href": "Contactmomenten/C4/C4.html#lesmateriaal",
+    "title": "Contactmoment 4",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 3\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "text": "Lesmateriaal\n Slides Contactmoment 4\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
     "crumbs": [
       "Contactmomenten",
-      "C3"
+      "C4"
     ]
   },
   {
-    "objectID": "Contactmomenten/C3/C3.html#na-de-les",
-    "href": "Contactmomenten/C3/C3.html#na-de-les",
-    "title": "Contactmoment 3",
+    "objectID": "Contactmomenten/C4/C4.html#na-de-les",
+    "href": "Contactmomenten/C4/C4.html#na-de-les",
+    "title": "Contactmoment 4",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 5: correlaties\n ZSO 6: bivariate regressie",
+    "text": "Na de les\n ZSO 6: bivariate regressie (deel 2)\n ZSO 7: multivariate regressie",
     "crumbs": [
       "Contactmomenten",
-      "C3"
+      "C4"
     ]
   },
   {
-    "objectID": "Contactmomenten/C5/C5.html",
-    "href": "Contactmomenten/C5/C5.html",
-    "title": "Contactmoment 5",
+    "objectID": "Contactmomenten/C5/Opdrachten_C5.html",
+    "href": "Contactmomenten/C5/Opdrachten_C5.html",
+    "title": "Contactmoment 1: Opdrachten computer lab",
     "section": "",
-    "text": "Dit contactmoment hebben we het over:",
+    "text": "Oefening 1\n\n\n\n\nIs er een verschil in interesse voor techniek (Interest.voor) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (Dipvader)?\nHoe groot is het effect van de variabele Dipvader op Interest.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\n\nIs er een verschil in interesse voor techniek (Interesse.voor) tussen eerste- en tweedejaars leerlingen (Studiejaar)?\nHoe groot is het effect van Studiejaar op Interesse.voor?\nGeef het effect visueel weer.\n\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nIn het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (Interest.voor) en aan het einde van datzelfde trimester (Interest.na). Daarom kunnen we de volgende onderzoeksvraag nagaan:\n\nVerschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?\nHoe groot is het effect van een trimester technieklessen?\nGeef het effect visueel weer.\n\n\n\n Respons computer lab\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie."
+  },
+  {
+    "objectID": "Contactmomenten/C2/Opdrachten_C2.html",
+    "href": "Contactmomenten/C2/Opdrachten_C2.html",
+    "title": "Contactmoment 2: Opdrachten computer lab",
+    "section": "",
+    "text": "Oefening 1\n\n\n\nZouden onze leerlingen uit de verschillende categorieën (Richting5cat) anders scoren als het gaat over het begrijpen van techniek (Begrijpen.voor)?\nIndien dit zo is, welke groepen verschillen dan van elkaar?\n\n\n\n\n\n\n\n\n Oefening 2\n\n\n\nWe bekeken in de eerste oefening of er een verschil was in het begrijpen van techniek naargelang de studierichting.\nAls we de afhankelijke variabele (Begrijpen.voor) opdelen in vier categorieën op basis van de kwartielen kunnen we dit verband ook weergeven in een tabel.\n→ Hoe is de verdeling overheen de verschillende categorieën van begrijpen naar studierichting?\n→ Geef dit ook grafisch weer.\n\n\n\n\n\n\n\n\n Oefening 3\n\n\n\nWe zijn ook geïnteresseerd in welke mate de aanwezigheid van technisch speelgoed (Speelgoed) een invloed heeft op het begrijpen van techniek (Begrijpen.voor). We kunnen dit op 2 manieren analyseren nu we beschikken over een kwalitatieve en een kwantitatieve variabele die iets zeggen over het begrijpen van techniek (de originele variabele Begrijpen.voor en de aangemaakte categorische variabele uit oefening 2).\n→ Teken beide modellen en vermeld de analysetechniek.\n→ Maak beide oefeningen en vergelijk de resultaten.\n\n\n Respons computer lab\n\n\n\n\n\n\nTer info\n\n\n\nDoorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde computer labs op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: Techniek.RData.\nDe dataset kan je dowloaden via Blackboard of via deze link: download Techniek.RData\nDeze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: codeboek Techniek.RData.\nHet databestand is een .RData` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via Open file… in het menu van RStudio. Of, in je code via de load( ) functie."
+  },
+  {
+    "objectID": "Contactmomenten/C2/C2.html",
+    "href": "Contactmomenten/C2/C2.html",
+    "title": "Contactmoment 2",
+    "section": "",
+    "text": "Dit tweede contactmoment behandelt volgende inhouden:",
     "crumbs": [
       "Contactmomenten",
-      "C5"
+      "C2"
     ]
   },
   {
-    "objectID": "Contactmomenten/C5/C5.html#voorbereiding",
-    "href": "Contactmomenten/C5/C5.html#voorbereiding",
-    "title": "Contactmoment 5",
+    "objectID": "Contactmomenten/C2/C2.html#voorbereiding",
+    "href": "Contactmomenten/C2/C2.html#voorbereiding",
+    "title": "Contactmoment 2",
     "section": "Voorbereiding",
-    "text": "Voorbereiding\n Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP\n Online (R) Oefeningen assumpties bij regressie-analyses\n Online (R) Oefeningen multivariate regressie-analyses\n Screencast assumpties regressie-analyse\n Screencast multivariate regressie-analyse",
+    "text": "Voorbereiding\n Verwerk Hoofdstuk 2 en Hoofdstuk 4 uit het OLP\n Online (R) Oefeningen ANOVA\n Online (R) Oefeningen kruistabellen\n Screencast ANOVA\n Screencast kruistabellen",
     "crumbs": [
       "Contactmomenten",
-      "C5"
+      "C2"
     ]
   },
   {
-    "objectID": "Contactmomenten/C5/C5.html#lesmateriaal",
-    "href": "Contactmomenten/C5/C5.html#lesmateriaal",
-    "title": "Contactmoment 5",
+    "objectID": "Contactmomenten/C2/C2.html#lesmateriaal",
+    "href": "Contactmomenten/C2/C2.html#lesmateriaal",
+    "title": "Contactmoment 2",
     "section": "Lesmateriaal",
-    "text": "Lesmateriaal\n Slides Contactmoment 5\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
+    "text": "Lesmateriaal\n Slides Contactmoment 2\n Lesopname (terug te vinden op Blackboard)\n Opdrachten computer lab\n Dataset computer lab\n Respons computer lab",
     "crumbs": [
       "Contactmomenten",
-      "C5"
+      "C2"
     ]
   },
   {
-    "objectID": "Contactmomenten/C5/C5.html#na-de-les",
-    "href": "Contactmomenten/C5/C5.html#na-de-les",
-    "title": "Contactmoment 5",
+    "objectID": "Contactmomenten/C2/C2.html#na-de-les",
+    "href": "Contactmomenten/C2/C2.html#na-de-les",
+    "title": "Contactmoment 2",
     "section": "Na de les",
-    "text": "Na de les\n ZSO 6: Bivariate regressie (Deel 2)\n ZSO 7: Multivariate regressie",
+    "text": "Na de les\n ZSO 3: ANOVA\n ZSO 4: kruistabellen",
     "crumbs": [
       "Contactmomenten",
-      "C5"
+      "C2"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistiek B (AJ 2024-2025)",
+    "objectID": "Penguins.html",
+    "href": "Penguins.html",
+    "title": "Penguins",
     "section": "",
-    "text": "Welkom op de website voor de cursus Statistiek B (Schakelprogramma OOW, academiejaar 2024 - 2025). Op deze website vind je alle informatie en leermiddelen voor het vak.\nWat kan je op deze website allemaal terugvinden?",
+    "text": "Vertrouwd raken met R-code en bepaalde functies goed kunnen inzetten is cruciaal in dit vak. Om dit op zich in te oefenen, los van de gehele workflow in RStudio op zich hebben we hier een hele set aan oefeningen uitgewerkt die je simpelweg op deze website zelf kan doorlopen. Geen behoefte dus aan RStudio ofzo. Niet alle R functies zullen in deze oefeningen worden gebruikt, maar enkel dus een setje basisfuncties. Het hoofddoel hier is dus zeer rudimentair de link te maken tussen code, output en resultaat.",
     "crumbs": [
-      "Welkom"
+      "Online (R) oefeningen"
     ]
   },
   {
-    "objectID": "index.html#open-leer-pakket",
-    "href": "index.html#open-leer-pakket",
-    "title": "Statistiek B (AJ 2024-2025)",
-    "section": "Open Leer Pakket",
-    "text": "Open Leer Pakket\nHet cursusmateriaal voor dit vak is het open leerpakket dat we opstelden.",
+    "objectID": "Penguins.html#palmerpenguins",
+    "href": "Penguins.html#palmerpenguins",
+    "title": "Penguins",
+    "section": "Palmerpenguins",
+    "text": "Palmerpenguins\n\n\n\n\n\n\n\n\n\nHeel dit onderdeel maakt gebruik van interactieve code op de website. Dat betekent ook dat we deze oefeningenreeks baseren op een bestaande dataset die via R zelf beschikbaar is: de penguins dataset!\nHet pakket palmerpenguins bevat een dataset over een reeks metingen die biologen gedaan hebben bij drie soorten pinguïns. Dit pakket moeten we dus telkens laden bij de start van een oefening. In elk van de oefeningen zal je het volgende stukje R-code bovenaan terug vinden. Deze code laadt het het pakket palmerpenguins en activeert vervolgens de dataset penguins. Het is dus belangrijk om dit stukje code zeker te laten lopen (met de blauwe play-knop rechtsboven) bij de start van de oefeningen.\nHet dataframe in R waarmee we dus aan de slag gaan heet penguins.\n\n\n\n\n\n\n\n\nDe data zijn metingen bij 3 soorten pinguïns:\n\n\n\n\n\n\n\n\n\nDeze dataset bevat een setje variabelen die makkelijk te begrijpen zijn! Het volgende code blok bevat de functie str() waarbij we verwijzen naar het dataframe om zo te vragen aan R om de structuur van het dataframe te printen. Het resultaat is een lijstje van de verschillende variabelen in de dataset.\n\n\n\n\n\n\n\n\nUit het bovenstaande leren we dat er metingen van 344 pinguïns opgenomen zijn in de dataset. De data omvat 8 variabelen. Twee van deze variabelen gaan over de dimensies van de snavels van de pinguïns. Om die beter te begrijpen, kan volgend plaatje helpen.\n\n\n\n\n\n\n\n\n\nDe originele studie achter deze data is de volgende: Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081\nMeer informatie over het pakket kan je hier vinden: https://allisonhorst.github.io/palmerpenguins/articles/intro.html",
     "crumbs": [
-      "Welkom"
-    ]
-  },
-  {
-    "objectID": "index.html#contactmomenten",
-    "href": "index.html#contactmomenten",
-    "title": "Statistiek B (AJ 2024-2025)",
-    "section": "Contactmomenten",
-    "text": "Contactmomenten\nDit onderdeel van de websit bundelt de informatie per contactmoment. Voor elk contactmoment kan je hier de slides vinden, net als ook het materiaal dat hoort bij de computer lab oefeningen.",
-    "crumbs": [
-      "Welkom"
-    ]
-  },
-  {
-    "objectID": "index.html#online-r-oefeningen",
-    "href": "index.html#online-r-oefeningen",
-    "title": "Statistiek B (AJ 2024-2025)",
-    "section": "Online (R) oefeningen",
-    "text": "Online (R) oefeningen\nJe vaardigheden in R inoefenen kan op verschillende manieren: op je eigen PC in RStudio maar net zo goed online. In deze sectie zit een hele opbouw van oefeningen die je kan doorlopen, los van RStudio. Dit deel focust dus voornamelijk op het goed begrijpen en inoefenen van de R code op zich, los van hoe je aan de slag gaat met R en RStudio op je pc.\nTijdens het examen voor dit vak is er tevens een gesloten boek onderdeel waarin we voornamelijk je kennis en inzicht in de materie wensen te testen. In dit deel van de website vind je een reeks voorbeeldvragen voor de verschillende onderdelen uit de cursus die representatief zijn voor het gesloten boek onderdeel. Wil je je eigen inzicht en kennis testen, doorloop dan zeker de verschillende testen hier.",
-    "crumbs": [
-      "Welkom"
-    ]
-  },
-  {
-    "objectID": "index.html#zso-zelfstudie-opdrachten",
-    "href": "index.html#zso-zelfstudie-opdrachten",
-    "title": "Statistiek B (AJ 2024-2025)",
-    "section": "ZSO (Zelfstudie opdrachten)",
-    "text": "ZSO (Zelfstudie opdrachten)\nVoor dit vak hebben we ook een set van ZSO’s opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO’s dien je ook de datasets op je eigen pc in RStudio op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO’s zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in RStudio en R, wat ook getoetst zal worden op het examen.",
-    "crumbs": [
-      "Welkom"
-    ]
-  },
-  {
-    "objectID": "index.html#rapporteren",
-    "href": "index.html#rapporteren",
-    "title": "Statistiek B (AJ 2024-2025)",
-    "section": "Rapporteren",
-    "text": "Rapporteren\nRapporteren over je resultaten is een belangrijke taak als onderzoeker. In deze sectie vind je een set van rapportages van verschillende analyses. Deze stukken rapportage ontleden we zodanig dat je inzicht krijgt in hoe je op een goede wijze kan rapporteren.",
-    "crumbs": [
-      "Welkom"
-    ]
-  },
-  {
-    "objectID": "index.html#screencasts",
-    "href": "index.html#screencasts",
-    "title": "Statistiek B (AJ 2024-2025)",
-    "section": "Screencasts",
-    "text": "Screencasts\nEr zijn een aantal screencasts gemaakt waarin we een R-sessie tonen. Zie mij aan de slag in R terwijl ik analysetechnieken uitvoer en de resultaten interpreteer.",
-    "crumbs": [
-      "Welkom"
-    ]
-  },
-  {
-    "objectID": "index.html#extra-materiaal",
-    "href": "index.html#extra-materiaal",
-    "title": "Statistiek B (AJ 2024-2025)",
-    "section": "Extra materiaal",
-    "text": "Extra materiaal\nOnder extra materiaal vind je meer informatie en tutorials die je workflow in R en RStudio nog een pak efficiënter maken. Je vindt er links naar een aantal tutorials op YouTube. Weet dat dit facultatief materiaal is en dat dit niet dient toegepast worden op één of andere wijze om te kunnen slagen voor het vak.",
-    "crumbs": [
-      "Welkom"
+      "Online (R) oefeningen"
     ]
   },
   {

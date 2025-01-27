@@ -1,0 +1,29 @@
+---
+title: "Open Leerpakket"
+---
+
+
+::: {.callout-tip icon=false}
+## <i class="fa-solid fa-book"></i> Handboek
+
+*Bivariate en multivariate statistiek met R. Een openleerpakket.* De Maeyer, Coertjens en Ardies (2012)
+
+Dit boek is verkrijgbaar in de winkel van ACCO.
+
+Bij de verschillende hoofdstukken in het boek horen een allerlei datasets die gehanteerd worden in het boek. Deze datasets kan je hier downloaden als één zip-file:
+
+[<i class="fa-solid fa-file-zip"></i> Alle databestanden OLP](/OLP/Files.zip)
+
+:::
+
+Het OLP is reeds in 2012 geschreven. We zijn op de achtergrond aan het werken aan een nieuw handboek en een hervorming van het vak. Dit is echter nog niet klaar voor dit academiejaar. 
+
+Doorheen de tijd hebben we een aantal fouten in het handboek gevonden, of hebben we hier en daar wat zaken geupdate. Die kan je hieronder vinden in de vorm van twee pdf files:
+
+- [<i class="fa-solid fa-file-pdf"></i> Wijzigingen aan hoofdstuk 2.pdf](/OLP/Wijzigingen aan hoofdstuk 2.pdf)
+
+- [ <i class="fa-solid fa-file-pdf"></i>Wijzigingen aan openleerpakket 20150310.pdf](/OLP/Wijzigingen aan openleerpakket 20150310.pdf)
+
+- [<i class="fa-solid fa-file-pdf"></i> OLP Statistiek2 - Hoofdstuk 10 - nieuw.pdf](/OLP/OLP Statistiek2 - Hoofdstuk 10 - nieuw.pdf)
+
+- [<i class="fa-solid fa-file-zip"></i> Files_Hoodfstuk10_nieuw.zip](/OLP/Files_Hoodfstuk10_nieuw.zip)

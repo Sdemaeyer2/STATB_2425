@@ -1,0 +1,30 @@
+---
+title: "Computer labs"
+---
+
+Tijdens de contactmomenten is er tijd voorzien om een reeks oefeningen uit te voeren in `R` in het bijzijn van de docenten. Dit noemen we de *computer labs*. Hieronder vind je een lijst van de oefeningen en responsen georganiseerd per contactmoment.
+
+- ![](/images/icons/guided-practice.png){width="30"} [C1: Opdrachten computer lab](/Contactmomenten/C1/Opdrachten_C1.qmd) / ![](/images/icons/worked-example.png){width="30"} [C1: Respons computer lab](/Contactmomenten/C1/Respons_C1.qmd) 
+
+- ![](/images/icons/guided-practice.png){width="30"} [C2: Opdrachten computer lab](/Contactmomenten/C2/Opdrachten_C2.qmd) / ![](/images/icons/worked-example.png){width="30"} [C2: Respons computer lab](/Contactmomenten/C2/Respons_C2.qmd) 
+
+- ![](/images/icons/guided-practice.png){width="30"} [C3: Opdrachten computer lab](/Contactmomenten/C3/Opdrachten_C3.qmd) / ![](/images/icons/worked-example.png){width="30"} [C3: Respons computer lab](/Contactmomenten/C3/Respons_C3.qmd) 
+
+- ![](/images/icons/guided-practice.png){width="30"} [C4: Opdrachten computer lab](/Contactmomenten/C4/Opdrachten_C4.qmd) / ![](/images/icons/worked-example.png){width="30"} [C4: Respons computer lab](/Contactmomenten/C4/Respons_C4.qmd) 
+
+- ![](/images/icons/guided-practice.png){width="30"} [C5: Opdrachten computer lab](/Contactmomenten/C5/Opdrachten_C5.qmd) / ![](/images/icons/worked-example.png){width="30"} [C5: Respons computer lab](/Contactmomenten/C5/Respons_C5.qmd) 
+
+- ![](/images/icons/guided-practice.png){width="30"} [C6: Opdrachten computer lab](/Contactmomenten/C6/Opdrachten_C6.qmd) / ![](/images/icons/worked-example.png){width="30"} [C6: Respons computer lab](/Contactmomenten/C6/Respons_C6.qmd) 
+
+
+::: callout-note
+## Ter info
+
+Doorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde *computer labs* op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: `Techniek.RData`.
+
+De dataset kan je dowloaden via Blackboard of via deze link: [download Techniek.RData](/Contactmomenten/Techniek.RData)
+
+Deze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: [codeboek Techniek.RData](/Contacmomenten/Legende variabelen Techniek.pdf).
+
+Het databestand is een `.RData`\` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via *Open file...* in het menu van RStudio. Of, in je code via de `load( )` functie.
+:::

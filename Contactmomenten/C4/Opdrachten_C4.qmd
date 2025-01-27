@@ -1,0 +1,49 @@
+---
+title: "Contactmoment 1: Opdrachten computer lab"
+---
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 1
+
+(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
+
+(b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
+
+(c) Geef het effect visueel weer.
+:::
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 2
+
+(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
+
+(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
+
+(c) Geef het effect visueel weer.
+:::
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 3
+
+In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
+
+(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
+
+(b) Hoe groot is het effect van een trimester technieklessen?
+
+(c) Geef het effect visueel weer.
+:::
+
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C1/Respons_C1.qmd) 
+
+::: callout-note
+## Ter info
+
+Doorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde *computer labs* op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: `Techniek.RData`.
+
+De dataset kan je dowloaden via Blackboard of via deze link: [download Techniek.RData](/Contactmomenten/Techniek.RData)
+
+Deze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: [codeboek Techniek.RData](/Contacmomenten/Legende variabelen Techniek.pdf).
+
+Het databestand is een `.RData`\` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via *Open file...* in het menu van RStudio. Of, in je code via de `load( )` functie.
+:::

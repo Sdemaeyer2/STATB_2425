@@ -1,0 +1,53 @@
+---
+title: "Contactmoment 2: Opdrachten computer lab"
+---
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 1
+
+Zouden onze leerlingen uit de verschillende categorieën (`Richting5cat`) anders scoren als het gaat over
+het begrijpen van techniek (`Begrijpen.voor`)? 
+
+Indien dit zo is, welke groepen verschillen dan van elkaar?
+:::
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 2
+
+We bekeken in de eerste oefening of er een verschil was in het begrijpen van techniek naargelang de
+studierichting. 
+
+Als we de afhankelijke variabele (`Begrijpen.voor`) opdelen in vier categorieën op basis
+van de kwartielen kunnen we dit verband ook weergeven in een tabel.
+
+→ Hoe is de verdeling overheen de verschillende categorieën van begrijpen naar studierichting?
+
+→ Geef dit ook grafisch weer.
+:::
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 3
+
+We zijn ook geïnteresseerd in welke mate de aanwezigheid van technisch speelgoed (`Speelgoed`) een
+invloed heeft op het begrijpen van techniek (`Begrijpen.voor`). We kunnen dit op 2 manieren analyseren
+nu we beschikken over een kwalitatieve en een kwantitatieve variabele die iets zeggen over het
+begrijpen van techniek (de originele variabele `Begrijpen.voor` en de aangemaakte categorische variabele uit oefening 2).
+
+→ Teken beide modellen en vermeld de analysetechniek.
+
+→ Maak beide oefeningen en vergelijk de resultaten.
+:::
+
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C2/Respons_C2.qmd) 
+
+::: callout-note
+## Ter info
+
+Doorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde *computer labs* op deze website. Al deze oefeningen maken gebruik van dezelfde dataset: `Techniek.RData`.
+
+De dataset kan je dowloaden via Blackboard of via deze link: [download Techniek.RData](/Contactmomenten/Techniek.RData)
+
+Deze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: [codeboek Techniek.RData](/Contacmomenten/Legende variabelen Techniek.pdf).
+
+Het databestand is een `.RData`\` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via *Open file...* in het menu van RStudio. Of, in je code via de `load( )` functie.
+:::

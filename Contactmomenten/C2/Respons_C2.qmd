@@ -1,0 +1,275 @@
+---
+title: "Contactmoment 2: Respons computer lab"
+
+format: 
+  html: default
+  pdf: default
+---
+
+```{r}
+#| include: false
+library(here)
+load(here("Contactmomenten", "Techniek.RData"))
+library(car)
+source(here("Contactmomenten", "OLP2 Functies.R"))
+```
+
+::: callout-important
+Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de
+dataset te laden, het pakket `car` te activeren en ook de OLP2 Functies
+te activeren.
+:::
+
+::: {.callout-tip icon="false"}
+## <i class="bi bi-journal-richtext"></i> Oefening 1
+
+Zouden onze leerlingen uit de verschillende categorieën (`Richting5cat`)
+anders scoren als het gaat over het begrijpen van techniek
+(`Begrijpen.voor`)?
+
+Indien dit zo is, welke groepen verschillen dan van elkaar?
+:::
+
+Om deze vragen te beantwoorden dienen we een ANOVA analyse uit te
+voeren. Hieronder volgen we de verschillende stappen van een ANOVA
+analyse om zo een volledig antwoord op deze vragen te kunnen formuleren.
+
+We starten met het berekenen van de gemiddelde scores in de steekproef
+voor `Begrijpen.voor` van de leerlingen in de verschillende
+studierichtingen.
+
+```{r}
+tapply(Techniek$Begrijpen.voor, Techniek$Richting5cat, FUN=mean, na.rm=TRUE)
+```
+
+Hieruit leren we dat in de steekproef leerlingen uit categorie 3
+gemiddeld het hoogst scoren op `Begrijpen.voor` (gemiddelde = 0.71) en
+leerlingen uit categorie 5 scoren gemiddeld het laagst (gemiddelde =
+0.54).
+
+Vooraleer we de ANOVA zelf kunnen uitvoeren dienen we de assumptie van
+gelijke binnengroepenvarianties na te gaan aan de hand van de Levene
+Test.
+
+```{r}
+leveneTest(Techniek$Begrijpen.voor, Techniek$Richting5cat)
+```
+
+Uit de bovenstaande output leren we dat we de nulhypothese (= er zijn
+gelijke binnengroepenvarianties in de populatie) niet kunnen verwerpen.
+Maw, de assumptie gaat wel op. Dus, we kunnen de functie `aov()`
+hanteren.
+
+```{r}
+Model.Begrijpen <- aov(Techniek$Begrijpen.voor~ Techniek$Richting5cat)
+summary(Model.Begrijpen)
+```
+
+De analyses leren ons dat er een statistisch significant verband is
+tussen studierichting en `Begrijpen.voor` (F(4,1873) = 49.34, p\<0.001).
+
+Een volgende stap is nagaan hoe groot het effect is (effectgrootte
+berekenen).
+
+```{r}
+etasq(Model.Begrijpen)
+```
+
+Eta-kwadraat bedraagt 0.095 en is dus tussen 0.06 en 0.14: het gaat om
+een medium effect.
+
+Een laatste stap is nagaan welke groepen onderling verschillen van
+elkaar. Dit doen we aan de hand van post-hoc testen door middel van de
+functie `TukeyHSD( )`.
+
+```{r}
+Model.Begrijpen.Tukey <- TukeyHSD(Model.Begrijpen)
+Model.Begrijpen.Tukey
+```
+
+Kijken we naar de laatste kolom dan kunnen we daar de verschillende
+lijnen identificeren waarvoor geldt dat de p-waarde lager is dan 0.05
+(lijnen 2, 4, 7, 8, 9, 10).
+
+We kunnen deze post-hoc testen ook visualiseren:
+
+```{r}
+plot(Model.Begrijpen.Tukey)
+```
+
+**CONCLUSIE:**
+
+> Afhankelijk van de studierichting die een leerling volgt, verschilt de
+> mate waarin techniek wordt begrepen. Het gaat om een medium
+> (eta-kwadraat = 0.10) en statistisch significant effect (F(4,1873) =
+> 49.34, p\<0.001). We verwachten dit effect dus ook in de populatie
+> terug te vinden. Uit de post-hoc analyse blijkt dat leerlingen uit
+> categorie 5 (Handel/STV) het meest verschillen van de andere
+> leerlingen. Hun score op `Begrijpen.voor` is significant (p \< 0.05)
+> lager dan deze van leerlingen uit categorie 2 (Kunst), categorie 3
+> (Latijn) en categorie 4 (Moderne wetenschappen). Ook tussen de groepen
+> Latijn (categorie 3) en Techniek (categorie 1) is een significant
+> verschil (p \< 0.05) in het begrijpen van techniek terug te vinden. De
+> leerlingen uit de Latijnse scoren significant (p \< 0.05) beter dan de
+> leerlingen uit de meer technische richtingen. De verschillen tussen
+> leerlingen uit de technische (categorie 1), moderne (categorie 4) of
+> kunstrichtingen (categorie 2) in onze steekproef kunnen we niet
+> doortrekken naar de populatie (p \> 0.05).
+
+::: {.callout-tip icon="false"}
+## <i class="bi bi-journal-richtext"></i> Oefening 2
+
+We bekeken in de eerste oefening of er een verschil was in het begrijpen
+van techniek naargelang de studierichting.
+
+Als we de afhankelijke variabele (`Begrijpen.voor`) opdelen in vier
+categorieën op basis van de kwartielen kunnen we dit verband ook
+weergeven in een tabel.
+
+→ Hoe is de verdeling overheen de verschillende categorieën van
+begrijpen naar studierichting?
+
+→ Geef dit ook grafisch weer.
+:::
+
+Deze oefening vraagt om een analyse aan de hand van een kruistabel.
+
+Als start voor deze oefening maken we een categorische variant van de
+variabele `Begrijpen.voor` via de `recode( )` functie.
+
+```{r}
+# Kwartielen berekenen
+
+quantile(Techniek$Begrijpen.voor, c(0.25,0.5,0.75), na.rm=TRUE)
+
+# Hercoderen 
+
+Techniek$Begrijpen.voor.Cat <- recode(
+  Techniek$Begrijpen.voor,
+  "0:0.5 = 'Zeer laag'; 
+  0.5:0.6875 = 'Laag'; 
+  0.6875:0.75 = 'Hoog'; 
+  0.75:1 = 'Zeer hoog'",
+  as.factor = TRUE,
+  levels = c("Zeer laag", "Laag", "Hoog", "Zeer hoog")
+  )
+```
+
+Nu kunnen we een kruistabel aanmaken. Meerbepaald maken we een tabel met
+kolompercentages waarin we da afhankelijke variabele
+(`Begrijpen.voor.Cat`) in de rijen plaatsen.
+
+```{r}
+kruistabel.kolom(Techniek$Begrijpen.voor.Cat, Techniek$Richting5cat)
+```
+
+Vervolgens berekenen we de Chi-kwadraat test. Door gebruik te maken van
+de functie `chi.kwadraat.test()` krijgen we in de output ook meteen een
+maat van effectgrootte mee (Cramer's V).
+
+```{r}
+chi.kwadraat.test(
+  table(Techniek$Begrijpen.voor.Cat,
+        Techniek$Richting5cat)
+  )
+```
+
+Tot slot visualiseren we de kruistabel. Let op dat je hier rijen en
+kolommen omwisselt in vergelijking met de vorige stukken code. Daarom
+dat we in de onderstaande code-blok eerst een nieuw object aanmaken
+`Tabel_asso` waarin de kruistabel staat met de rijen en kolommen
+omgewisseld.
+
+```{r}
+Tabel_asso <- table(Techniek$Richting5cat,Techniek$Begrijpen.voor.Cat)
+assocplot(Tabel_asso)
+```
+
+Als we alle output overschouwen, dan komen we tot volgende conclusie.
+
+**CONCLUSIE:**
+
+> De kolompercentages geven weer hoe binnen de verschillende clusters
+> van studierichtingen wordt gescoord op het begrijpen van techniek. We
+> bespreken enkele ‘opvallende’ cijfers… Bij de leerlingen uit
+> technische studierichtingen zit de grootste groep in de categorie
+> “Laag” (38.67%). Het percentage van deze leerlingen in de categorie
+> “Zeer hoog” bedraagt slechts 17.33%. De grootste groep leerlingen die
+> Latijn volgen is terug te vinden in de categorie “Zeer hoog” (35.78%).
+> Deze groep leerlingen scoort dus in het algemeen beter dan de
+> leerlingen uit de andere studierichtingen. Handel/STV-leerlingen
+> scoren dan weer sterk lager. 46.19% van deze leerlingen is terug te
+> vinden in de categorie “Zeer Laag” en slechts 6.78% in de categorie
+> “Zeer Hoog”. De chi²-analyse leert ons dat het verband statistisch
+> significant is (p \< 0.05), maar eerder beperkt (Cramer’s V = 0.18).
+
+::: {.callout-tip icon="false"}
+## <i class="bi bi-journal-richtext"></i> Oefening 3
+
+We zijn ook geïnteresseerd in welke mate de aanwezigheid van technisch
+speelgoed (`Speelgoed`) een invloed heeft op het begrijpen van techniek
+(`Begrijpen.voor`). We kunnen dit op 2 manieren analyseren nu we
+beschikken over een kwalitatieve en een kwantitatieve variabele die iets
+zeggen over het begrijpen van techniek (de originele variabele
+`Begrijpen.voor` en de aangemaakte categorische variabele uit oefening
+2).
+
+→ Teken beide modellen en vermeld de analysetechniek.
+
+→ Maak beide oefeningen en vergelijk de resultaten.
+:::
+
+![](FiguurOef3.jpg)
+
+*Optie 1: t-test*
+
+Eerst de Levene Test.
+
+```{r}
+leveneTest(Techniek$Begrijpen.voor, Techniek$Speelgoed)
+```
+
+P-waarde is hoger dan 0.05, dus de assumptie van gelijke binnengroepenvarianties gaat op. Nu kunnen we de t-test zelf uitvoeren.
+
+```{r}
+t.test(Techniek$Begrijpen.voor~Techniek$Speelgoed, var.equal=TRUE)
+```
+
+Ook de effectgrootte gaan we na (Cohen's d).
+
+```{r}
+d(Techniek$Begrijpen.voor,Techniek$Speelgoed)
+```
+
+**CONCLUSIE:**
+
+> In de steekproef scoren leerlingen gemiddeld 0.66 op begrijpen van techniek, terwijl leerlingen die thuis geen technisch speelgoed hebben iets lager scoren (gemiddelde = 0.63). Het effect van al dan niet technisch speelgoed hebben, is statistisch significant (p < 0.05). We kunnen het dus doortrekken naar de populatie. Het effect is echter zo klein (d = 0.17) dat het van weinig praktische waarde is.
+
+*Optie 2: kruistabel*
+
+Een tabel met kolompercentages aanmaken met afhankelijke variabele (`Begrijpen.voor.Cat`) in de rijen.
+
+```{r}
+kruistabel.kolom(Techniek$Begrijpen.voor.Cat,Techniek$Speelgoed)
+```
+
+De Chi-kwadraattest uitvoeren.
+
+```{r}
+chi.kwadraat.test(table(Techniek$Begrijpen.voor.Cat, Techniek$Speelgoed))
+```
+
+En tot slot ook de tabel visueel maken.
+
+```{r}
+Tabel_asso <- table(Techniek$Speelgoed,Techniek$Begrijpen.voor.Cat)
+assocplot(Tabel_asso)
+```
+
+Alles samengenomen kunnen we het volgende concluderen uit deze analyse.
+
+**Conclusie:**
+
+> De kolompercentages geven weer of leerlingen die al dan niet technisch speelgoed bezitten anders scoren op het begrijpen van techniek. Uit de kruistabel blijkt dat de verschillen eerder klein zijn. Beide groepen leerlingen hebben gelijkaardige percentages binnen de verschillende categorieën van ‘Begrijpen.voor.Cat’. Hoewel de chi²-analyse aangeeft dat het om een statistisch significant verband gaat (p < 0.05), wijst de Cramer’s V op een klein effect (Cramer’s V = 0.09).
+
+*Vergelijken we beide analyses, dan komen we tot een vrij gelijkaardige conclusie. Er is een statistisch significant verband, maar het is verwaarloosbaar klein.*
