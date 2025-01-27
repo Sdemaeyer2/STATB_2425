@@ -1,40 +1,32 @@
 ---
-title: "Contactmoment 1: Opdrachten computer lab"
+title: "Contactmoment 3: Opdrachten computer lab"
 ---
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
 
-(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
+Een deel van de leerlingen volgden een project gericht op het domein techniek. We vragen ons af of de percepties van leerlingen m.b.t. het project (`Projectbijgeleerd`, `Projectleuk`, `Projectinteressant`, `Projectmoeilijk`) onderling samenhangen?
 
-(b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
+(a) Beantwoord de vraag a.d.h.v. de gepaste analyses.
 
-(c) Geef het effect visueel weer.
+(b) Visualiseer de resultaten.
 :::
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
 
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
+We vermoeden dat de lesstijl van een leerkracht een rol zou kunnen spelen in de ontwikkeling van de technische geletterdheid (`TAC.na`). We hebben evidentie om aan te nemen dat het belangrijk is dat:
 
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
+- leerlingen zelf experimenteren (`PISA_Experimenteren`)
+- leerlingen zelf onderwerpen kiezen (`PISA_EigenInbreng`)
+- de leerkracht de leerstof in een ruimer perspectief zet (`PISA_Orientatie`)
+- dit best kan d.m.v. interactie met de leerlingen (`PISA_Interactie`).
 
-(c) Geef het effect visueel weer.
+Formuleer voor deze 4 hypotheses een afzonderlijk besluit o.b.v. de resultaten van je analyses.
 :::
 
-::: {.callout-tip icon=false}
-## <i class="bi bi-journal-richtext"></i> Oefening 3
 
-In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
-
-(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
-
-(b) Hoe groot is het effect van een trimester technieklessen?
-
-(c) Geef het effect visueel weer.
-:::
-
-![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C1/Respons_C1.qmd) 
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C3/Respons_C3.qmd) 
 
 ::: callout-note
 ## Ter info
