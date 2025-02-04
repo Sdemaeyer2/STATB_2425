@@ -20,6 +20,10 @@ Je vaardigheden in `R` inoefenen kan op verschillende manieren: op je eigen PC i
 
 Tijdens het examen voor dit vak is er tevens een gesloten boek onderdeel waarin we voornamelijk je kennis en inzicht in de materie wensen te testen. In dit deel van de website vind je een reeks voorbeeldvragen voor de verschillende onderdelen uit de cursus die representatief zijn voor het gesloten boek onderdeel. Wil je je eigen inzicht en kennis testen, doorloop dan zeker de verschillende testen hier.
 
+## Computer labs
+
+Tijdens de fysieke contactmomenten trachten we tijd vrij te maken om jullie oefeningen in `R` te laten maken. Wij zijn als docenten aanwezig en helpen je graag verder tijdens die oefeningen. Alle oefeningen worden ook op deze plek in de website gebundeld (inclusief de responsen).
+
 ## ZSO (Zelfstudie opdrachten)
 
 Voor dit vak hebben we ook een set van ZSO's opgestelt. Deze opdrachten gaan een stapje verder dan de online R oefeningen op deze website. Voor de ZSO's dien je ook de datasets op je eigen pc in `RStudio` op te laden en aan de slag te gaan met bijvoorbeeld een R-script op je pc om de analyses uit te voeren. Deze ZSO's zijn cruciaal om je goed voor te bereiden op de gehele workflow van werken in `RStudio` en `R`, wat ook getoetst zal worden op het examen. 

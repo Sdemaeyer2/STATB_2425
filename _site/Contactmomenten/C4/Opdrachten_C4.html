@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contactmoment 1: Opdrachten computer lab – Statistiek B</title>
+<title>Contactmoment 4: Opdrachten computer lab – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Contactmoment 1: Opdrachten computer lab</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Contactmoment 4: Opdrachten computer lab</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -383,7 +383,7 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contactmoment 1: Opdrachten computer lab</h1>
+<h1 class="title">Contactmoment 4: Opdrachten computer lab</h1>
 </div>
 
 
@@ -406,14 +406,32 @@ cookieconsent.run({
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
+<i class="bi bi-journal"></i> Voorbereiding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Deze hele opdracht bevat drie oefeningen die op elkaar doorbouwen. Vooraleer we starten met de 3 oefeningen in <code>R</code> op te lossen, vragen we je enkele acties te ondernemen ter voorbereiding:</p>
+<ul>
+<li><p>Teken de modellen uit de 3 oefeningen</p></li>
+<li><p>Maak van alle variabelen die worden gebruikt in de oefeningen een z-score variant: <code>Interest.na</code>, <code>Interest.voor</code>, <code>Projectinteressant</code>, <code>Projectleuk</code>, <code>Projectbijgeleerd</code> en `Projectmoeilijk``</p></li>
+<li><p>Om de verschillende modellen te kunnen vergelijken, maken we meteen gebruik van een databestand zonder ontbrekende observaties (zonder NA’s) voor alle variabelen die je nodig hebt. (functie: <code>na.omit()</code>)</p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
 <i class="bi bi-journal-richtext"></i> Oefening 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>In een eerste model (Model1) onderzoeken we in welke mate het interessant vinden van het project (<code>Projectinteressant</code>) een invloed heeft op de interesse in techniek na het project (<code>Interest.na</code>).</p>
 <ol type="a">
-<li><p>Is er een verschil in interesse voor techniek (<code>Interest.voor</code>) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (<code>Dipvader</code>)?</p></li>
-<li><p>Hoe groot is het effect van de variabele <code>Dipvader</code> op <code>Interest.voor</code>?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
+<li><p>Schat het model en bespreek de relevante parameters</p></li>
+<li><p>Ga de assumpties m.b.t. dit model na</p></li>
 </ol>
 </div>
 </div>
@@ -427,10 +445,10 @@ cookieconsent.run({
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Wanneer blijkt dat de mate waarin de leerling het project als interessant ervaart er toe doet, kun je je natuurlijk afvragen hoe dat komt. Misschien is het zo dat leerlingen die techniek sowieso al interessant vonden voor het project (<code>Interest.voor</code>) nadien ook een hogere interesse behouden (die hadden ze tenslotte al voor het project). Om dit na te gaan, test je een tweede model (Model2) waarin je <code>Interest.voor</code> als controlevariabele aan het vorige model (Model1) toevoegt.</p>
 <ol type="a">
-<li><p>Is er een verschil in interesse voor techniek (<code>Interesse.voor</code>) tussen eerste- en tweedejaars leerlingen (<code>Studiejaar</code>)?</p></li>
-<li><p>Hoe groot is het effect van <code>Studiejaar</code> op <code>Interesse.voor</code>?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
+<li><p>Is dit model (Model2) een beter model dan Model1?</p></li>
+<li><p>Bespreek de relevante parameters van het beste model.</p></li>
 </ol>
 </div>
 </div>
@@ -444,15 +462,23 @@ cookieconsent.run({
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (<code>Interest.voor</code>) en aan het einde van datzelfde trimester (<code>Interest.na</code>). Daarom kunnen we de volgende onderzoeksvraag nagaan:</p>
+<p>Mogelijk zorgt het opnemen van de overige variabelen die de houdingen van de leerlingen m.b.t. het techniekproject meten (‘Projectleuk’, ‘Projectbijgeleerd’, ‘Projectmoeilijk’) voor een verbetering van het model. Om dit na te gaan, test je een derde model (Model3) waarin je deze drie variabelen als controlevariabelen aan het vorige model (Model2) toevoegt.</p>
 <ol type="a">
-<li><p>Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?</p></li>
-<li><p>Hoe groot is het effect van een trimester technieklessen?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
+<li><p>Gaan de assumpties op? Pas het model indien nodig aan.</p></li>
+<li><p>Is Model3 een beter model dan Model2?</p></li>
+<li><p>Bespreek de relevante parameters van het beste model.</p></li>
+<li><p>Welke score op ‘Interest.naZ’ behaalt iemand die:</p></li>
 </ol>
+<ul>
+<li>gemiddeld scoort op alle onafhankelijke variabelen in de steekproef</li>
+<li>gemiddeld scoort op alle onafhankelijke variabelen in de populatie</li>
+<li>1 SD hoger scoort voor ‘Interest.voorZ’ en 1 SD lager scoort voor ‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0) in de steekproef</li>
+<li>1 SD hoger scoort voor ‘Interest.voorZ’ en en 1 SD lager scoort voor ‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0) in de populatie</li>
+</ul>
+<p><strong>Rond bij het berekenen van de voorspelde scores altijd af tot op 3 cijfers na de komma!</strong></p>
 </div>
 </div>
-<p><img src="../../images/icons/worked-example.png" class="img-fluid" width="30"> <a href="../../Contactmomenten/C1/Respons_C1.html">Respons computer lab</a></p>
+<p><img src="../../images/icons/worked-example.png" class="img-fluid" width="30"> <a href="../../Contactmomenten/C4/Respons_C4.html">Respons computer lab</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
