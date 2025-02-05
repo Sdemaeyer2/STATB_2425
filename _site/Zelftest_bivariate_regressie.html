@@ -1,0 +1,3050 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Online (R) oefeningen – Statistiek B</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b86774849c83f8842429632de05d13be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WB6XE1H6V1"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WB6XE1H6V1', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"nl"
+  });
+});
+</script> 
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/editor/editor.main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+<style type="text/css">
+.monaco-editor pre {
+  background-color: unset !important;
+}
+
+.qwebr-editor-toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.qwebr-editor-toolbar-left-buttons, .qwebr-editor-toolbar-right-buttons {
+  display: flex;
+}
+
+.qwebr-non-interactive-loading-container.qwebr-cell-needs-evaluation, .qwebr-non-interactive-loading-container.qwebr-cell-evaluated {
+  justify-content: center;
+  display: flex;
+  background-color: rgba(250, 250, 250, 0.65);
+  border: 1px solid rgba(233, 236, 239, 0.65);
+  border-radius: 0.5rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.qwebr-r-project-logo {
+  color: #2767B0; /* R Project's blue color */
+}
+
+.qwebr-icon-status-spinner {
+  color: #7894c4;
+}
+
+.qwebr-icon-run-code {
+  color: #0d9c29
+}
+
+body.quarto-light .qwebr-output-code-stdout {
+  color: #111;
+}
+
+body.quarto-dark .qwebr-output-code-stdout {
+  color: #EEE;
+}
+
+.qwebr-output-code-stderr {
+  color: #db4133;
+}
+
+body.quarto-light .qwebr-editor {
+  border: 1px solid #EEEEEE;
+}
+
+body.quarto-light .qwebr-editor-toolbar {
+  background-color: #EEEEEE;
+  padding: 0.2rem 0.5rem;
+}
+
+body.quarto-dark .qwebr-editor {
+  border: 1px solid #111;
+}
+
+body.quarto-dark .qwebr-editor-toolbar {
+  background-color: #111;
+  padding: 0.2rem 0.5rem;
+}
+
+.qwebr-button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.375rem 0.75rem;
+  font-size: .9rem;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+body.quarto-light .qwebr-button {
+  background-color: #EEEEEE;
+  color: #000;
+  border-color: #dee2e6;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+body.quarto-dark .qwebr-button {
+  background-color: #111;
+  color: #EEE;
+  border-color: #dee2e6;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+body.quarto-light .qwebr-button:hover {
+  color: #000;
+  background-color: #d9dce0;
+  border-color: #c8ccd0;
+}
+
+body.quarto-dark .qwebr-button:hover {
+  color: #d9dce0;
+  background-color: #323232;
+  border-color: #d9dce0;
+}
+
+.qwebr-button:disabled,.qwebr-button.disabled,fieldset:disabled .qwebr-button {
+  pointer-events: none;
+  opacity: .65
+}
+
+.qwebr-button-reset {
+  color: #696969; /*#4682b4;*/
+}
+
+.qwebr-button-copy {
+  color: #696969;
+}
+
+/* Style the code highlight lines */
+body.quarto-light .qwebr-editor-highlight-line {
+  background-color: lightblue;
+}
+
+body.quarto-dark .qwebr-editor-highlight-line {
+  background-color: darkblue;
+}
+
+/* Style the modal pop-up */
+
+/* The Modal (background) */
+.qwebr-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content */
+.qwebr-modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.qwebr-modal-content-code {
+  max-height: 50vh;
+  min-height: 5vh;
+  overflow: scroll;
+  border: 1px solid #888;
+}
+
+/* The Close Button */
+.qwebr-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.qwebr-modal-close:hover,
+.qwebr-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.qwebr-download-btn {
+  margin-top: 10px;
+  text-decoration: none !important;
+}
+
+/* Styling to download image that is created */
+
+.qwebr-canvas-image {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.qwebr-canvas-image-download-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+figure:hover .qwebr-canvas-image-download-btn {
+  display: block;
+}
+
+/* Custom styling for RevealJS Presentations*/
+
+/* Reset the style of the interactive area */
+.reveal div.qwebr-interactive-area {
+  display: block;
+  box-shadow: none;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Provide space to entries */
+.reveal div.qwebr-output-code-area pre div {
+  margin: 1px 2px 1px 10px;
+}
+
+/* Collapse the inside code tags to avoid extra space between line outputs */
+.reveal pre div code.qwebr-output-code-stdout, .reveal pre div code.qwebr-output-code-stderr {
+  padding: 0;
+  display: contents;
+}
+
+body.reveal.quarto-light pre div code.qwebr-output-code-stdout {
+  color: #111;
+}
+
+body.reveal.quarto-dark pre div code.qwebr-output-code-stdout {
+  color: #EEEEEE;
+}
+
+.reveal pre div code.qwebr-output-code-stderr {
+  color: #db4133;
+}
+
+
+/* Create a border around console and output (does not effect graphs) */
+body.reveal.quarto-light div.qwebr-console-area {
+  border: 1px solid #EEEEEE;
+  box-shadow: 2px 2px 10px #EEEEEE;
+}
+
+body.reveal.quarto-dark div.qwebr-console-area {
+  border: 1px solid #111;
+  box-shadow: 2px 2px 10px #111;
+}
+
+
+/* Cap output height and allow text to scroll */
+/* TODO: Is there a better way to fit contents/max it parallel to the monaco editor size? */
+.reveal div.qwebr-output-code-area pre {
+  max-height: 400px;
+  overflow: scroll;
+}
+
+iframe.qwebr-output-code-browse {
+  width: 100%;
+
+  /*
+    TODO: How to make the height automatic according to the widget size,
+    or respect the quarto code block options?
+  */
+  min-height: 500px;
+}
+
+</style>
+<script type="module">
+// Document level settings ----
+
+// Determine if we need to install R packages
+globalThis.qwebrInstallRPackagesList = [''];
+
+// Specify possible locations to search for the repository
+globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
+
+// Check to see if we have an empty array, if we do set to skip the installation.
+globalThis.qwebrSetupRPackages = !(qwebrInstallRPackagesList.indexOf("") !== -1);
+globalThis.qwebrAutoloadRPackages = true;
+
+// Display a startup message?
+globalThis.qwebrShowStartupMessage = true;
+globalThis.qwebrShowHeaderMessage = false;
+
+// Describe the webR settings that should be used
+globalThis.qwebrCustomizedWebROptions = {
+  "baseURL": "https://webr.r-wasm.org/v0.4.0/",
+  "serviceWorkerUrl": "",
+  "homedir": "/home/web_user", 
+  "channelType": "ChannelType.Automatic"
+};
+
+// Store cell data
+globalThis.qwebrCellDetails = [{"code":"library(palmerpenguins)\ndata(\"penguins\")","id":1,"options":{"autorun":"true","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","runbutton":"false","warning":"true"}},{"code":"### Functies uit car\n\n# moved from Rcmdr 13 July 2004\n\n# levene.test.default function slightly modified and generalized from Brian Ripley via R-help\n# the original generic version was contributed by Derek Ogle\n# last modified 2019-02-01 by J. Fox\n\nleveneTest <- function (y, ...) {\n    UseMethod(\"leveneTest\") \n}\n\nleveneTest.default <- function (y, group, center=median, ...) { # original levene.test\n    if (!is.numeric(y)) \n        stop(deparse(substitute(y)), \" is not a numeric variable\")\n    if (!is.factor(group)) {\n        warning(deparse(substitute(group)), \" coerced to factor.\")\n        group <- as.factor(group)\n    }\n    valid <- complete.cases(y, group)\n    meds <- tapply(y[valid], group[valid], center, ...)\n    resp <- abs(y - meds[group])\n    table <- anova(lm(resp ~ group))[, c(1, 4, 5)]\n    rownames(table)[2] <- \" \"\n    dots <- deparse(substitute(...))\n    attr(table, \"heading\") <- paste(\"Levene's Test for Homogeneity of Variance (center = \", \n            deparse(substitute(center)), if(!(dots == \"NULL\")) paste(\":\", dots),  \")\", sep=\"\")\n    table\n}\n\n\nleveneTest.formula <- function(y, data, ...) {\n    form <- y\n    mf <- if (missing(data)) model.frame(form) else model.frame(form, data)\n    if (any(sapply(2:dim(mf)[2], function(j) is.numeric(mf[[j]])))) \n        stop(\"Levene's test is not appropriate with quantitative explanatory variables.\")\n    y <- mf[,1]\n    if(dim(mf)[2]==2) group <- mf[,2]\n    else {\n        if (length(grep(\"\\\\+ | \\\\| | \\\\^ | \\\\:\",form))>0) stop(\"Model must be completely crossed formula only.\")\n        group <- interaction(mf[,2:dim(mf)[2]])\n    }\n    leveneTest.default(y=y, group=group, ...)\n}\n\n\nleveneTest.lm <- function(y, ...) {\n    m <- model.frame(y)\n    m$..y <- model.response(m)\n    f <- formula(y)\n    f[2] <- expression(..y)\n    leveneTest.formula(f, data=m, ...)\n}\n\n##########################\n### OLP2 Functies.R script\n##########################\n\nfreqtabel <- function(X){\n  Table <- data.frame( table(X) )\n  Table$Percentage <- prop.table( Table$Freq )*100\n  Table$CumulativeN <- cumsum(Table$Freq)\n  Table$CumulativePerc <-  cumsum( Table$Percentage )\n  Table\n}\n\nreikwijdte <- function(X){max(X, na.rm=TRUE)-min(X, na.rm=TRUE)} \n\ninterkwartiel <- function(X){quantile(X,c(.75), na.rm=TRUE)-quantile(X, c(.25), na.rm=TRUE)} \n\ngemabsafw <- function(X){mean(abs(X-mean(X,na.rm=TRUE)),na.rm=TRUE)} \n\nzscore <- function(X){(X-mean(X,na.rm=TRUE))/sd(X, na.rm=TRUE)} \n\nstandaardfout<-function(X){sd(X,na.rm=TRUE)/sqrt(length(X))} \n\nbetr.interval = function(data, conf.level = 0.95) { \n    z = qnorm((1 - conf.level)/2, lower.tail = FALSE)   \n    xbar = mean(data,na.rm=TRUE) \n    sdx = sqrt(var(data,na.rm=TRUE)/length(data))\n    c(xbar - z * sdx, xbar + z * sdx)\n    }\n\nbetr.interval.Var1= function(data, conf.level = 0.95) { \n    halfalpha=(1-conf.level)/2\n    df=length(data)-1\n    v=var(data,na.rm=TRUE)\n    boven = v*df/qchisq(halfalpha,df)\n    onder = v*df/qchisq(1-halfalpha,df) \n    c(onder, boven)\n    }\n\nbetr.interval.Var2= function(x, n, conf.level = 0.95) { \n    halfalpha <- (1 - conf.level) / 2\n    df <- n - 1\n    v <- x\n    boven <- v * df / qchisq(halfalpha, df)\n    onder <- v * df / qchisq(1 - halfalpha, df) \n    output <- c(onder, boven)\n    output <- c(onder, boven)\n    variabelenaam <- paste(\"'\", deparse(substitute(x)), \"'\", sep = \"\")\n    cat(\"Dit is het 95% betrouwbaarheidsinterval rond de variantie van de variabele\", variabelenaam, sep = \" \", \"\\n\")\n    output\n    \n    }\n\nst.fout.Skew= function(X) { \n    sqrt(((6*length(X)*(length(X)-1))/((length(X)-2)*((length(X))+1)*(length(X)+3))))\n    }\n\nscheefheid=\nfunction (x, na.rm = FALSE) \n{\n    if (is.matrix(x)) \n        apply(x, 2, scheefheid, na.rm = na.rm)\n    else if (is.vector(x)) {\n    if (na.rm) x <- x[!is.na(x)] \n    n <- length(x)\n     (sum((x-mean(x))^3)/n)/(sum((x-mean(x))^2)/n)^(3/2)\n    }\n    else if (is.data.frame(x)) \n        sapply(x, scheefheid, na.rm = na.rm)\n    else scheefheid(as.vector(x), na.rm = na.rm)\n}\n\nbetr.interval.Skew=function(X,conf.level=0.95) { \n    onder=scheefheid(X,na.rm=TRUE)-(qnorm(conf.level+((1-conf.level)/2))*st.fout.Skew(X))\n    boven=scheefheid(X,na.rm=TRUE)+(qnorm(conf.level+((1-conf.level)/2))*st.fout.Skew(X))\n    c(onder,boven)\n    }\n\nkurtosisb <-\nfunction (x, na.rm = FALSE) \n{\n    if (is.matrix(x)) \n        apply(x, 2, kurtosisb, na.rm = na.rm)\n    else if (is.vector(x)) {\n    if (na.rm) x <- x[!is.na(x)] \n    n <- length(x)\n    n*sum( (x-mean(x))^4 )/(sum( (x-mean(x))^2 )^2)\n    }\n    else if (is.data.frame(x)) \n        sapply(x, kurtosisb, na.rm = na.rm)\n    else kurtosisb(as.vector(x), na.rm = na.rm)\n}\n\n\nst.fout.Kurt= function(X) { \n    2*st.fout.Skew(X)*sqrt(((length(X)^2)-1)/((length(X)-3)*(length(X)+5)))\n    }\n\n\nbetr.interval.Kurt=function(X,conf.level=0.95) { \n    onder=kurtosisb(X,na.rm=TRUE)-(qnorm(conf.level+((1-conf.level)/2))*st.fout.Kurt(X))\n    boven=kurtosisb(X,na.rm=TRUE)+(qnorm(conf.level+((1-conf.level)/2))*st.fout.Kurt(X))\n    c(onder,boven)\n    }\n\nvarP=function(X) { \n    verschil=X-mean(X,na.rm=TRUE)\n    verschilkwadraat=verschil^2\n    kwadratensom=sum(verschilkwadraat)\n    kwadratensom/length(X)\n    }\n\nsdP=function(X) { \n    sqrt(varP(X))\n    }\n\n\nstfoutproportie=function(p,n) { \n    sqrt((p*(1-p))/n)\n    }\n\nbetr.interval.Prop=function(p,n,conf.level=0.95) { \n    onder=p-(qnorm(conf.level+((1-conf.level)/2))*stfoutproportie(p,n))\n    boven=p+(qnorm(conf.level+((1-conf.level)/2))*stfoutproportie(p,n))\n    c(onder,boven)\n    }\n\n## hfdst kruistabellen\n\ncv.test <- function(x) {\n    CV<-sqrt(chisq.test(x)$statistic/(sum(x) * min(dim(x) - 1 )))\n    Phi<-sqrt(chisq.test(x)$statistic/(sum(x)))\n    print.noquote(\"Cramer's V & Phi (bij 2x2 tabel):\")\n     print(c(as.numeric(CV),as.numeric(Phi)))\n    print.noquote(\"Kolommen: \") \n    print(ncol(x))\n    print.noquote(\"Rijen: \") \n    print(nrow(x))\n    }\n\n\nchi.noncentral.conf<-function (chival, df, conf, prec = 1e-05) \n{\n    result <- NA\n    ulim <- 1 - (1 - conf)/2\n    lc <- c(0.001, chival/2, chival)\n    while (pchisq(chival, df, lc[1]) < ulim) {\n        if (pchisq(chival, df) < ulim) {\n            result <- (c(0, pchisq(chival, df)))\n            break\n        }\n        lc <- c(lc[1]/4, lc[1], lc[3])\n    }\n    diff <- 1\n    if (all(is.na(result))) {\n        while (diff > prec) {\n            if (pchisq(chival, df, lc[2]) < ulim) \n                lc <- c(lc[1], (lc[1] + lc[2])/2, lc[2])\n            else lc <- c(lc[2], (lc[2] + lc[3])/2, lc[3])\n            diff <- abs(pchisq(chival, df, lc[2]) - ulim)\n            ucdf <- pchisq(chival, df, lc[2])\n        }\n        result <- c(lc[2], ucdf)\n    }\n    uc <- c(chival, 2 * chival, 3 * chival)\n    llim <- (1 - conf)/2\n\n    while (pchisq(chival, df, uc[1]) < llim & uc[1]>prec) {\n        uc <- c(uc[1]/4, uc[1], uc[3])\n    }\n    while (pchisq(chival, df, uc[3]) > llim) {\n        uc <- c(uc[1], uc[3], uc[3] + chival)\n    }\n    diff <- 1\n    count<-0\n    while (diff > prec) {\n        if (pchisq(chival, df, uc[2]) < llim) \n            uc <- c(uc[1], (uc[1] + uc[2])/2, uc[2])\n        else uc <- c(uc[2], (uc[2] + uc[3])/2, uc[3])\n        diff <- abs(pchisq(chival, df, uc[2]) - llim)\n        lcdf <- pchisq(chival, df, uc[2])\n        count<-count+1\n        if(count>1000){\n            warning(\"Convergence not reached in chi.noncentral.conf .\")\n            uc[2]<-Inf\n            lcdf<-0\n            break\n        }\n    }\n    result <- rbind(result, c(uc[2], lcdf))\n    rownames(result) <- c(\"Lower\", \"Upper\")\n    colnames(result) <- c(\"Non-Central\", \"%\")\n    result\n}\n\n\nchi.kwadraat.test <- function (x, y = NULL, conservative = FALSE, cramers.v.conf=.95, simulate.p.value = FALSE, B = 10000) \n{\n\n    cramers.v<-function(chival,df,n,k,conf){\n        non.cent<-chi.noncentral.conf(chival,df,conf)\n        V<-sqrt(chival/(n*(k-1)))\n        low<-sqrt(non.cent[1,1]/(n*(k-1)))\n        hi<-sqrt(non.cent[2,1]/(n*(k-1)))\n        hi<-min(hi,1)\n        result<-c(V,low,hi)\n        names(result)<-c(\"Cramer's V\",(1-conf)/2,1-(1-conf)/2)\n        result\n    }\n    ESTIMATE<-NA\n    CONF.INT<-c(NA,NA)\n    DNAME <- deparse(substitute(x))\n    if (is.data.frame(x)) \n        x <- as.matrix(x)\n    if (is.matrix(x)) {\n        if (min(dim(x)) == 1) \n            x <- as.vector(x)\n    }\n    if (!is.matrix(x) && !is.null(y)) {\n        if (length(x) != length(y)) \n            stop(\"'x' and 'y' must have the same length\")\n        DNAME <- c(DNAME, deparse(substitute(y)))\n        OK <- complete.cases(x, y)\n        x <- factor(x[OK])\n        y <- factor(y[OK])\n        if ((nlevels(x) < 2) || (nlevels(y) < 2)) \n            stop(\"'x' and 'y' must have at least 2 levels\")\n        x <- table(x, y)\n        names(dimnames(x)) <- DNAME\n        DNAME <- paste(DNAME, collapse = \" and \")\n    }\n    if (any(x < 0) || any(is.na(x))) \n        stop(\"all entries of 'x' must be nonnegative and finite\")\n    if ((n <- sum(x)) == 0) \n        stop(\"at least one entry of 'x' must be positive\")\n    if (simulate.p.value) {\n        setMETH <- function() METHOD <<- paste(METHOD, \"with simulated\",if(conservative) \"(mid)\" else \"(conservative)\", \"p-value\\n\\t (based on\", \n            B, \"replicates)\")\n        almost.1 <- 1 - 64 * .Machine$double.eps\n        just.over.1 <- 1 + 64 * .Machine$double.eps\n    }\n    if (is.matrix(x)) {\n        METHOD <- \"Pearson's Chi-squared test\"\n        nr <- nrow(x)\n        nc <- ncol(x)\n        sr <- rowSums(x)\n        sc <- colSums(x)\n        E <- outer(sr, sc, \"*\")/n\n        dimnames(E) <- dimnames(x)\n        if (simulate.p.value && all(sr > 0) && all(sc > 0)) {\n            setMETH()\n            tmp <- .C(\"chisqsim\", as.integer(nr), as.integer(nc), \n                as.integer(sr), as.integer(sc), as.integer(n), \n                as.integer(B), as.double(E), integer(nr * nc), \n                double(n + 1), integer(nc), results = double(B),PACKAGE=\"stats\")\n            STATISTIC <- sum(sort((x - E)^2/E, decreasing = TRUE))\n            PARAMETER <- (nr - 1) * (nc - 1)\n            PVAL <- (1 + sum(tmp$results >= almost.1 * STATISTIC))/(B + \n                1)\n            if(!conservative)\n                PVAL<-PVAL - .5* (sum( (tmp$results <=just.over.1*STATISTIC) & (tmp$results>=almost.1*STATISTIC))/(B+1))\n            \n        }\n        else {\n            if (simulate.p.value) \n                warning(\"cannot compute simulated p-value with zero marginals\")\n            if (conservative && nrow(x) == 2 && ncol(x) == 2) {\n                YATES <- 0.5\n                METHOD <- paste(METHOD, \"with Yates' continuity correction\")\n            }else if(conservative && !(nrow(x) == 2 && ncol(x) == 2)){\n                warning(\"Conservative Yates correction only applies to 2X2 tables.\")\n                return(structure(list(estimate=NA,conf.int=NA,statistic = NA, parameter = NA, \n                                      p.value = NA, method = paste(METHOD, \"with Yates' continuity correction\"), \n                                      data.name = DNAME, observed = x, \n                                      expected = E, residuals = (x - E)/sqrt(E)), class = \"htest\"))\n            }else YATES <- 0\n            STATISTIC <- sum((abs(x - E) - YATES)^2/E)\n            PARAMETER <- (nr - 1) * (nc - 1)\n            PVAL <- pchisq(STATISTIC, PARAMETER, lower.tail = FALSE)\n            if(!conservative){\n                cramer<-cramers.v(STATISTIC,PARAMETER,n,min(nr,nc),cramers.v.conf)\n                ESTIMATE<-cramer[1]\n                CONF.INT<-cramer[2:3]\n                attr(CONF.INT, \"conf.level\")<-cramers.v.conf\n            }\n        }\n    }\n    else {\n        stop(\"Could not create table from x and y\")\n    }\n    names(STATISTIC) <- \"X-squared\"\n    names(PARAMETER) <- \"df\"\n    #if (any(E < 5) && is.finite(PARAMETER)) \n    #    warning(\"Chi-squared approximation may be incorrect\")\n    structure(list(estimate=ESTIMATE,conf.int=CONF.INT,statistic = STATISTIC, parameter = PARAMETER, \n        p.value = PVAL, method = METHOD, data.name = DNAME, observed = x, \n        expected = E, residuals = (x - E)/sqrt(E)), class = \"htest\")\n}\n\nkruistabel.kolom<- function(y,x) {\n    addmargins(prop.table(addmargins(table(y,x),2),2)*100,1)\n    }\n\nkruistabel.rij<- function(y,x) {\n    addmargins(prop.table(addmargins(table(y,x),1),1)*100,2)\n    }\n\n## hfdst ttest\n\nd=function(Y,X){\n    data<-na.omit(data.frame(Y,X))\n    laagste<-data$X[rank(data$X)==rank(data$X)[order(rank(data$X))][2]][1] \n    hoogste<-data$X[rank(data$X)==rank(data$X)[order(rank(data$X),decreasing = TRUE)][2]][1] \n    teller=mean(data$Y [which (data$X==laagste)], na.rm=TRUE)- mean(data$Y [which (data$X==hoogste)], na.rm=TRUE)\n    noemer=(sd(data$Y [which (data$X==laagste)], na.rm=TRUE) + sd(data$Y [which (data$X==hoogste)], na.rm=TRUE))/2\n    teller/noemer\n    }\n\ndpaired=function(Y,X){\n    teller=Y\n    noemer=sqrt(X)\n    teller/noemer\n    }\n\n## $Id: plotmeans.R 1365 2009-11-12 15:38:53Z warnes $\n\ninvalid <- function(x)\n  {\n    if( missing(x) || is.null(x) || length(x)==0 )\n      return(TRUE)\n    if(is.list(x))\n      return(all(sapply(x,invalid)))\n    else if(is.vector(x))\n      return(all(is.na(x)))\n    else\n      return(FALSE)\n  }\n\nerrorbar  <- function (formula, data = NULL, subset, na.action,\n                        bars=TRUE, p=0.95,\n                        minsd=0, minbar=NULL, maxbar=NULL,\n                        xlab=names(mf)[2], ylab=names(mf)[1],\n                        mean.labels=FALSE, ci.label=FALSE, n.label=TRUE,\n                        digits=getOption(\"digits\"), col=\"black\",\n                        barwidth=1,\n                        barcol=\"blue\",\n                        connect=FALSE,\n                        ccol=col,\n                        legends=names(means),\n                        xaxt,\n                        use.t = TRUE,\n                        ...)\n{\n  is.R <- get(\"is.R\")\n  if(is.null(is.R)) is.R <- function(x) FALSE\n\n  if(!is.R())\n    {\n      if(col==\"black\")\n        col <- 1\n      if(barcol==\"blue\")\n        barcol <- 2\n    }\n\n  if (invalid(formula) || (length(formula) != 3))\n    stop(\"formula missing or incorrect\")\n  if (invalid(na.action))\n    na.action <- options(\"na.action\")\n  m <- match.call(expand.dots = FALSE)\n  if(is.R())\n    {\n      if (is.matrix(eval(m$data, parent.frame())))\n        m$data <- as.data.frame(data)\n    }\n  else\n    {\n      if (is.matrix(eval(m$data, FALSE)))\n        m$data <- as.data.frame(data)\n    }\n  m$... <- m$bars <- m$barcol <- m$p <- NULL\n  m$minsd <- m$minbar <- m$maxbar <- NULL\n  m$xlab <- m$ylab <-  NULL\n  m$col  <- m$barwidth  <- NULL\n  m$digits  <- m$mean.labels  <- m$ci.label  <- m$n.label <- NULL\n  m$connect  <- m$ccol  <-  m$legends <- m$labels<- NULL\n  m$xaxt <- m$use.t <- NULL\n  m[[1]] <- as.name(\"model.frame\")\n  mf <- eval(m, parent.frame())\n  response <- attr(attr(mf, \"terms\"), \"response\")\n\n  ## drop unused levels in factors!!!\n  \n  wFact <- which(attr(attr(mf, \"terms\"),\"dataClasses\") == \"factor\")\n  for(i in wFact)\n    mf[,i] <- factor(mf[,i])\n  \n  means  <-  sapply(split(mf[[response]], mf[[-response]]), mean, na.rm=TRUE)\n  ns     <-  sapply(sapply(split(mf[[response]], mf[[-response]]), na.omit,\n                           simplify=FALSE), length )\n  xlim  <-  c(0.5, length(means)+0.5)\n\n\n  \n  if(!bars)\n    {\n      plot( means, ..., col=col, xlim=xlim)\n    }\n  else\n    {\n\n      myvar  <-  function(x) var(x[!is.na(x)])\n      vars <- sapply(split(mf[[response]], mf[[-response]]), myvar)\n\n      ## apply minimum variance specified by minsd^2\n      vars <- ifelse( vars < (minsd^2), (minsd^2), vars)\n\n      if(use.t)\n        ci.width  <- qt( (1+p)/2, ns-1 ) * sqrt(vars/ns)\n      else\n        ci.width  <- qnorm( (1+p)/2 ) * sqrt(vars/ns)\n\n      if(length(mean.labels)==1)\n        {\n          if (mean.labels==TRUE)\n            mean.labels  <-  format( round(means, digits=digits ))\n          else if (mean.labels==FALSE)\n            mean.labels  <- NULL\n        }\n\n      plotCI(x=1:length(means), y=means, uiw=ci.width, xaxt=\"n\",\n             xlab=xlab, ylab=ylab, labels=mean.labels, col=col, xlim=xlim,\n             lwd=barwidth, barcol=barcol, minbar=minbar, maxbar=maxbar, ... )\n      if(invalid(xaxt) || xaxt!=\"n\")\n        axis(1, at = 1:length(means), labels = legends)\n\n      if(ci.label)\n        {\n          ci.lower <- means-ci.width\n          ci.upper <- means+ci.width\n\n          if(!invalid(minbar))\n            ci.lower <- ifelse(ci.lower < minbar, minbar, ci.lower)\n          if(!invalid(maxbar))\n            ci.upper <- ifelse(ci.upper > maxbar, maxbar, ci.upper)\n\n          labels.lower <- paste( \" \\n\", format(round(ci.lower, digits=digits)),\n                                sep=\"\")\n          labels.upper <- paste( format(round(ci.upper, digits=digits)), \"\\n \",\n                                sep=\"\")\n\n          text(x=1:length(means),y=ci.lower, labels=labels.lower, col=col)\n          text(x=1:length(means),y=ci.upper, labels=labels.upper, col=col)\n        }\n\n    }\n\n\n  if(n.label)\n    if(is.R())\n      text(x=1:length(means),y=par(\"usr\")[3],\n           labels=paste(\"n=\",ns,\"\\n\",sep=\"\"))\n    else\n      {\n        axisadj <- (par(\"usr\")[4] - (par(\"usr\")[3]) )/75\n        text(x=1:length(means),y=par(\"usr\")[3] + axisadj,\n             labels=paste(\"n=\",ns,\"\\n\",sep=\"\"))\n      }\n\n  if(!invalid(connect) & !identical(connect,FALSE))\n    {\n      if(is.list(connect))\n        {\n          if(length(ccol)==1)\n            ccol  <-  rep(ccol, length(connect) )\n\n          for(which in 1:length(connect))\n            lines(x=connect[[which]],y=means[connect[[which]]],col=ccol[which])\n        }\n      else\n        lines(means, ..., col=ccol)\n    }\n\n\n\n}\n\n# $Id: plotCI.R 1318 2009-05-08 21:56:38Z warnes $\n\n\nplotCI <- function (x,\n                    y = NULL,\n                    uiw,\n                    liw = uiw,\n                    ui,\n                    li,\n\n                    err='y',\n                    ylim=NULL,\n                    xlim=NULL,\n                    type=\"p\",\n\n                    col=par(\"col\"),\n                    barcol=col,\n                    pt.bg = par(\"bg\"),\n\n                    sfrac = 0.01,\n                    gap=1,\n\n                    lwd=par(\"lwd\"),\n                    lty=par(\"lty\"),\n\n                    labels=FALSE,\n\n                    add=FALSE,\n                    xlab,\n                    ylab,\n\n                    minbar,\n                    maxbar,\n                    ...\n                    )\n{\n\n  if (is.list(x)) {\n    y <- x$y\n    x <- x$x\n  }\n\n  if(invalid(xlab))\n    xlab <- deparse(substitute(x))\n\n  if(invalid(ylab))\n    {\n      if(is.null(y))\n        {\n          xlab  <- \"\"\n          ylab <- deparse(substitute(x))\n        }\n      else\n        ylab <- deparse(substitute(y))\n    }\n\n  if (is.null(y)) {\n    if (is.null(x))\n      stop(\"both x and y NULL\")\n    y <- as.numeric(x)\n    x <- seq(along = x)\n  }\n\n\n  if(err==\"y\")\n    z  <- y\n  else\n    z  <- x\n\n  if(invalid(uiw))\n    uiw <- NA\n  if(invalid(liw))\n    liw <- NA\n  \n  \n  if(invalid(ui))\n    ui <- z + uiw\n  if(invalid(li))\n    li <- z - liw\n\n  if(!invalid(minbar))\n    li <- ifelse( li < minbar, minbar, li)\n\n  if(!invalid(maxbar))\n    ui <- ifelse( ui > maxbar, maxbar, ui)\n\n   if(err==\"y\")\n     {\n       if(is.null(ylim))\n         ylim <- range(c(y, ui, li), na.rm=TRUE)\n       if(is.null(xlim) && !is.R() )\n         xlim <- range( x, na.rm=TRUE)\n     }\n   else if(err==\"x\")\n     {\n       if(is.null(xlim))\n         xlim <- range(c(x, ui, li), na.rm=TRUE)\n       if(is.null(ylim) && !is.R() )\n         ylim <- range( x, na.rm=TRUE)\n     }\n\n  if(!add)\n    {\n      if(invalid(labels) || labels==FALSE )\n        plot(x, y, ylim = ylim, xlim=xlim, col=col,\n             xlab=xlab, ylab=ylab, ...)\n      else\n        {\n          plot(x, y, ylim = ylim, xlim=xlim, col=col, type=\"n\",\n               xlab=xlab, ylab=ylab,  ...)\n          text(x, y, label=labels, col=col, ... )\n        }\n    }\n  if(is.R())\n    myarrows <- function(...) arrows(...)\n  else\n    myarrows <- function(x1,y1,x2,y2,angle,code,length,...)\n      {\n        segments(x1,y1,x2,y2,open=TRUE,...)\n        if(code==1)\n          segments(x1-length/2,y1,x1+length/2,y1,...)\n        else\n          segments(x2-length/2,y2,x2+length/2,y2,...)\n      }\n\n  if(err==\"y\")\n    {\n      if(gap!=FALSE)\n        gap <- strheight(\"O\") * gap\n      smidge <- par(\"fin\")[1] * sfrac\n\n      # draw upper bar\n      if(!is.null(li))\n          myarrows(x , li, x, pmax(y-gap,li), col=barcol, lwd=lwd,\n                 lty=lty, angle=90, length=smidge, code=1)\n      # draw lower bar\n      if(!is.null(ui))\n          myarrows(x , ui, x, pmin(y+gap,ui), col=barcol,\n                 lwd=lwd, lty=lty, angle=90, length=smidge, code=1)\n    }\n  else\n    {\n      if(gap!=FALSE)\n        gap <- strwidth(\"O\") * gap\n      smidge <- par(\"fin\")[2] * sfrac\n\n      # draw left bar\n      if(!is.null(li))\n        myarrows(li, y, pmax(x-gap,li), y, col=barcol, lwd=lwd,\n                 lty=lty, angle=90, length=smidge, code=1)\n      if(!is.null(ui))\n        myarrows(ui, y, pmin(x+gap,ui), y, col=barcol, lwd=lwd,\n                 lty=lty, angle=90, length=smidge, code=1)\n\n    }\n\n  ## _now_ draw the points (to avoid having lines drawn 'through' points)\n  points(x, y, col = col, lwd = lwd, bg = pt.bg, type = type, ...)\n\n  invisible(list(x = x, y = y))\n}\n\n\nerrorbar2=function(Y,X,xlab=\"Meting\",ylab=\"Score\"){\n    x<-c(rep(1,length(Y)), rep(2,length(X)))\n    y<-c(Y,X)\n    errorbar(y~x,xlab=xlab,ylab=ylab)\n}\n\n# hoofdstuk ANOVA\nTSS=function(Y){\n    grandmean<-mean(Y,na.rm=TRUE)\n    afwijking<-(Y-grandmean)^2\n    TSS<-sum(afwijking)\n    TSS/1\n    }\n\nSSB=function(Y, X, A, B, C){\n    meanlaagste=mean(Y [which (X==1)], na.rm=TRUE)\n    meanmiddelste=mean(Y [which (X==2)], na.rm=TRUE)\n    meanhoogste=mean(Y [which (X==3)], na.rm=TRUE)\n    grandmean<-mean(Y,na.rm=TRUE)   \n    groepA=((meanlaagste-grandmean)^2)*A\n    groepB=((meanmiddelste-grandmean)^2)*B\n    groepC=((meanhoogste-grandmean)^2)*C\n    SSB<-sum(groepA, groepB, groepC)\n    SSB/1\n    }\n\neta.square=function(Y, X){\n    data<-na.omit(data.frame(Y,X))\n    grandmean<-mean(data$Y,na.rm=TRUE)\n    afwijking<-(data$Y-grandmean)^2\n    TSS<-sum(afwijking)\n    ESS<-sum(residuals(aov(data$Y~data$X))^2)\n    SSB<-TSS-ESS\n    SSB/TSS\n}\n\nvcov.default <- function(object, ...){\n    stop(paste(\"there is no vcov() method for models of class\",\n                    paste(class(object), collapse=\", \")))\n}\n\nhas.intercept.matrix <- function (model, ...) {\n    \"(Intercept)\" %in% colnames(model)\n}\n\n\nmakeHypothesis <- function(cnames, hypothesis, rhs = NULL){\n    parseTerms <- function(terms){\n        component <- gsub(\"^[-\\\\ 0-9\\\\.]+\", \"\", terms)\n        component <- gsub(\" \", \"\", component, fixed=TRUE)\n        component\n    }\n    stripchars <- function(x) {\n        x <- gsub(\" \", \"\", x, fixed = TRUE)\n        x <- gsub(\"*\", \"\", x, fixed = TRUE)\n        x <- gsub(\"-\", \"+-\", x, fixed = TRUE)\n        x <- strsplit(x, \"+\", fixed = TRUE)[[1]]\n        x <- x[x!=\"\"]\n        x\n    }\n    char2num <- function(x) {\n        x[x == \"\"] <- \"1\"\n        x[x == \"-\"] <- \"-1\"\n        as.numeric(x)\n    }\n    constants <- function(x, y) { \n        with.coef <- unique(unlist(sapply(y,\n                                function(z) which(z == parseTerms(x)))))\n        if (length(with.coef) > 0) x <- x[-with.coef]\n        x <- if (is.null(x)) 0 else sum(as.numeric(x))\n        if (any(is.na(x)))\n            stop('The hypothesis \"', hypothesis,\n                    '\" is not well formed: contains bad coefficient/variable names.')\n        x\n    }\n    coefvector <- function(x, y) {\n        rv <- gsub(\" \", \"\", x, fixed=TRUE) ==\n                parseTerms(y)\n        if (!any(rv)) return(0)\n        if (sum(rv) > 1) stop('The hypothesis \"', hypothesis,\n                    '\" is not well formed.')\n        rv <- sum(char2num(unlist(strsplit(y[rv], x, fixed=TRUE))))\n        if (is.na(rv))\n            stop('The hypothesis \"', hypothesis,\n                    '\" is not well formed: contains non-numeric coefficients.')\n        rv\n    }\n    \n    rhs <- rep(rhs, length.out = length(hypothesis))\n    if (length(hypothesis) > 1)\n        return(rbind(Recall(cnames, hypothesis[1], rhs[1]),\n                        Recall(cnames, hypothesis[-1], rhs[-1])))\n    \n    cnames_symb <- sapply(c(\"@\", \"#\", \"~\"), function(x) length(grep(x, cnames)) < 1)\n    \n    if(any(cnames_symb)) {\n        cnames_symb <- head(c(\"@\", \"#\", \"~\")[cnames_symb], 1)\n        cnames_symb <- paste(cnames_symb, seq_along(cnames), cnames_symb, sep = \"\")\n        hypothesis_symb <- hypothesis\n        for(i in order(nchar(cnames), decreasing = TRUE))\n            hypothesis_symb <- gsub(cnames[i], cnames_symb[i], hypothesis_symb, fixed = TRUE)\n    } else {\n        stop('The hypothesis \"', hypothesis,\n                '\" is not well formed: contains non-standard coefficient names.')\n    }\n    \n    lhs <- strsplit(hypothesis_symb, \"=\", fixed=TRUE)[[1]] \n    if (is.null(rhs)) {\n        if (length(lhs) < 2) rhs <- \"0\"\n        else if (length(lhs) == 2) {\n            rhs <- lhs[2]\n            lhs <- lhs[1]\n        }\n        else stop('The hypothesis \"', hypothesis,\n                    '\" is not well formed: contains more than one = sign.')\n    }\n    else {\n        if (length(lhs) < 2) as.character(rhs)\n        else stop('The hypothesis \"', hypothesis,\n                    '\" is not well formed: contains a = sign although rhs was specified.')\n    }\n    lhs <- stripchars(lhs)\n    rhs <- stripchars(rhs)\n    rval <- sapply(cnames_symb, coefvector, y = lhs) - sapply(cnames_symb, coefvector, y = rhs) \n    rval <- c(rval, constants(rhs, cnames_symb) - constants(lhs, cnames_symb)) \n    names(rval) <- c(cnames, \"*rhs*\")\n    rval\n}\n\nprintHypothesis <- function(L, rhs, cnames){\n    hyp <- rep(\"\", nrow(L))\n    for (i in 1:nrow(L)){\n        sel <- L[i,] != 0\n        h <- L[i, sel]\n        h <- ifelse(h < 0, as.character(h), paste(\"+\", h, sep=\"\"))\n        nms <- cnames[sel]\n        h <- paste(h, nms)\n        h <- gsub(\"-1\", \"-\", h)\n        h <- gsub(\"+1\", \"+\", h, fixed=TRUE)\n        h <- gsub(\"-\", \" - \", h)\n        h <- gsub(\"+\", \"  + \", h, fixed=TRUE)\n        h <- paste(h, collapse=\"\")\n        h <- gsub(\"  \", \" \", h, fixed=TRUE)\n        h <- sub(\"^\\\\ \\\\+\", \"\", h)\n        h <- sub(\"^\\\\ \", \"\", h)\n        h <- sub(\"^-\\\\ \", \"-\", h)\n        hyp[i] <- paste(h, \"=\", rhs[i])\n    }\n    hyp\n}\n\nlinearHypothesis <- function (model, ...)\n    UseMethod(\"linearHypothesis\")\n\nlht <- function (model, ...)\n    UseMethod(\"linearHypothesis\")\n\nlinearHypothesis.default <- function(model, hypothesis.matrix, rhs=NULL,\n        test=c(\"Chisq\", \"F\"), vcov.=NULL, singular.ok=FALSE, verbose=FALSE, ...){\n    df <- df.residual(model)\n    if (is.null(df)) df <- Inf ## if no residual df available\n    V <- if (is.null(vcov.)) vcov(model)\n            else if (is.function(vcov.)) vcov.(model) else vcov.\n    b <- coef(model)\n    if (any(aliased <- is.na(b)) && !singular.ok)\n        stop(\"there are aliased coefficients in the model\")\n    b <- b[!aliased]\n    if (is.null(b)) stop(paste(\"there is no coef() method for models of class\",\n                        paste(class(model), collapse=\", \")))\n    if (is.character(hypothesis.matrix)) {\n        L <- makeHypothesis(names(b), hypothesis.matrix, rhs)\n        if (is.null(dim(L))) L <- t(L)\n        rhs <- L[, NCOL(L)]\n        L <- L[, -NCOL(L), drop = FALSE]\n        rownames(L) <- hypothesis.matrix\n    }\n    else {\n        L <- if (is.null(dim(hypothesis.matrix))) t(hypothesis.matrix)\n                else hypothesis.matrix\n        if (is.null(rhs)) rhs <- rep(0, nrow(L))\n    }\n    q <- NROW(L)\n    if (verbose){\n        cat(\"\\nHypothesis matrix:\\n\")\n        print(L)\n        cat(\"\\nRight-hand-side vector:\\n\")\n        print(rhs)\n        cat(\"\\nEstimated linear function (hypothesis.matrix %*% coef - rhs)\\n\")\n        print(drop(L %*% b - rhs))\n        cat(\"\\n\")\n    }\n    SSH <- as.vector(t(L %*% b - rhs) %*% solve(L %*% V %*% t(L)) %*% (L %*% b - rhs))\n    test <- match.arg(test)\n    if (!(is.finite(df) && df > 0)) test <- \"Chisq\"\n    name <- try(formula(model), silent = TRUE)\n    if (inherits(name, \"try-error\")) name <- substitute(model)\n    title <- \"Linear hypothesis test\\n\\nHypothesis:\"\n    topnote <- paste(\"Model 1: restricted model\",\"\\n\", \"Model 2: \", \n            paste(deparse(name), collapse = \"\\n\"), sep = \"\")\n    note <- if (is.null(vcov.)) \"\"\n            else \"\\nNote: Coefficient covariance matrix supplied.\\n\"\n    rval <- matrix(rep(NA, 8), ncol = 4)\n    colnames(rval) <- c(\"Res.Df\", \"Df\", test, paste(\"Pr(>\", test, \")\", sep = \"\"))\n    rownames(rval) <- 1:2\n    rval[,1] <- c(df+q, df)\n    if (test == \"F\") {\n        f <- SSH/q\n        p <- pf(f, q, df, lower.tail = FALSE)\n        rval[2, 2:4] <- c(q, f, p)\n    }\n    else {\n        p <- pchisq(SSH, q, lower.tail = FALSE)\n        rval[2, 2:4] <- c(q, SSH, p)\n    }\n    if (!(is.finite(df) && df > 0)) rval <- rval[,-1]\n    structure(as.data.frame(rval),\n            heading = c(title, printHypothesis(L, rhs, names(b)), \"\", topnote, note),\n            class = c(\"anova\", \"data.frame\"))\n}\n\nlinearHypothesis.glm <- function(model, ...)\n    linearHypothesis.default(model, ...)\n\nlinearHypothesis.lm <- function(model, hypothesis.matrix, rhs=NULL,\n        test=c(\"F\", \"Chisq\"), vcov.=NULL,\n        white.adjust=c(FALSE, TRUE, \"hc3\", \"hc0\", \"hc1\", \"hc2\", \"hc4\"),\n        singular.ok=FALSE, ...){\n    if (!singular.ok && is.aliased(model))\n        stop(\"there are aliased coefficients in the model.\")\n    test <- match.arg(test)\n    white.adjust <- as.character(white.adjust)\n    white.adjust <- match.arg(white.adjust)\n    if (white.adjust != \"FALSE\"){\n        if (white.adjust == \"TRUE\") white.adjust <- \"hc3\"\n        vcov. <- hccm(model, type=white.adjust)\n    }\n    rval <- linearHypothesis.default(model, hypothesis.matrix, rhs = rhs,\n            test = test, vcov. = vcov., singular.ok=singular.ok, ...)\n    if (is.null(vcov.)) {\n        rval2 <- matrix(rep(NA, 4), ncol = 2)\n        colnames(rval2) <- c(\"RSS\", \"Sum of Sq\")\n        SSH <- rval[2,test]\n        if (test == \"F\") SSH <- SSH * abs(rval[2, \"Df\"])\n        df <- rval[2, \"Res.Df\"]\n        error.SS <- deviance(model)\n        rval2[,1] <- c(error.SS + SSH * error.SS/df, error.SS)\n        rval2[2,2] <- abs(diff(rval2[,1]))\n        rval2 <- cbind(rval, rval2)[,c(1, 5, 2, 6, 3, 4)]\n        class(rval2) <- c(\"anova\", \"data.frame\")\n        attr(rval2, \"heading\") <- attr(rval, \"heading\")\n        rval <- rval2\n    }\n    rval\n}\n\n\ncheck.imatrix <- function(X, terms){ \n# check block orthogonality of within-subjects model matrix\n    XX <- crossprod(X)\n    if (missing(terms)) terms <- attr(X, \"assign\")\n    for (term in unique(terms)){\n        subs <- term == terms\n        XX[subs, subs] <- 0\n    }\n    if (any(abs(XX) > sqrt(.Machine$double.eps)))\n        stop(\"Terms in the intra-subject model matrix are not orthogonal.\")\n}\n\nlinearHypothesis.mlm <- function(model, hypothesis.matrix, rhs=NULL, SSPE, V,\n        test, idata, icontrasts=c(\"contr.sum\", \"contr.poly\"), idesign, iterms,\n        check.imatrix=TRUE, P=NULL, title=\"\", verbose=FALSE, ...){\n    if (missing(test)) test <- c(\"Pillai\", \"Wilks\", \"Hotelling-Lawley\", \"Roy\")\n    test <- match.arg(test, c(\"Pillai\", \"Wilks\", \"Hotelling-Lawley\", \"Roy\"),\n            several.ok=TRUE)\n    df.residual <- df.residual(model)\n    wts <- if (!is.null(model$weights)) model$weights else rep(1,nrow(model.matrix(model)))\n    # V = (X'WX)^{-1}\n    if (missing (V)) V <- solve(wcrossprod(model.matrix(model), w=wts))\n    B <- coef(model)\n    if (is.character(hypothesis.matrix)) {\n        L <- makeHypothesis(rownames(B), hypothesis.matrix, rhs)\n        if (is.null(dim(L))) L <- t(L)\n        L <- L[, -NCOL(L), drop = FALSE]\n        rownames(L) <- hypothesis.matrix\n    }\n    else {\n        L <- if (is.null(dim(hypothesis.matrix))) t(hypothesis.matrix)\n                else hypothesis.matrix\n    }\n    # SSPE = E'WE\n    if (missing(SSPE)) SSPE <- wcrossprod(residuals(model),w=wts)\n    if (missing(idata)) idata <- NULL\n    if (missing(idesign)) idesign <- NULL\n    if (!is.null(idata)){\n        for (i in 1:length(idata)){\n            if (is.null(attr(idata[,i], \"contrasts\"))){\n                contrasts(idata[,i]) <- if (is.ordered(idata[,i])) icontrasts[2]\n                        else icontrasts[1]\n            }\n        }\n        if (is.null(idesign)) stop(\"idesign (intra-subject design) missing.\")\n        X.design <- model.matrix(idesign, data=idata)\n        if (check.imatrix) check.imatrix(X.design)\n        intercept <- has.intercept(X.design)\n        term.names <- term.names(idesign)\n        if (intercept) term.names <- c(\"(Intercept)\", term.names)\n        which.terms <- match(iterms, term.names)\n        if (any(nas <- is.na(which.terms))){\n            if (sum(nas) == 1)\n                stop('The term \"', iterms[nas],'\" is not in the intrasubject design.')\n            else stop(\"The following terms are not in the intrasubject design: \",\n                        paste(iterms[nas], collapse=\", \"), \".\")\n        }\n        select <- apply(outer(which.terms, attr(X.design, \"assign\") + intercept, \"==\"),\n                2, any)\n        P <- X.design[, select, drop=FALSE]\n    }\n    if (!is.null(P)){\n        rownames(P) <- colnames(B)\n        SSPE <- t(P) %*% SSPE %*% P\n        B <- B %*% P\n    }\n    rank <- sum(eigen(SSPE, only.values=TRUE)$values >= sqrt(.Machine$double.eps))\n    if (rank < ncol(SSPE))\n        stop(\"The error SSP matrix is apparently of deficient rank = \",\n                rank, \" < \", ncol(SSPE))\n    r <- ncol(B)\n    if (is.null(rhs)) rhs <- matrix(0, nrow(L), r)\n    rownames(rhs) <- rownames(L)\n    colnames(rhs) <- colnames(B)\n    q <- NROW(L)\n    if (verbose){\n        cat(\"\\nHypothesis matrix:\\n\")\n        print(L)\n        cat(\"\\nRight-hand-side matrix:\\n\")\n        print(rhs)\n        cat(\"\\nEstimated linear function (hypothesis.matrix %*% coef - rhs):\\n\")\n        print(drop(L %*% B - rhs))\n        cat(\"\\n\")\n    }\n    SSPH <- t(L %*% B - rhs) %*% solve(L %*% V %*% t(L)) %*% (L %*% B - rhs)\n    rval <- list(SSPH=SSPH, SSPE=SSPE, df=q, r=r, df.residual=df.residual, P=P,\n            title=title, test=test)\n    class(rval) <- \"linearHypothesis.mlm\"\n    rval\n}\n\n\n#linearHypothesis.mlm <- function(model, hypothesis.matrix, rhs=NULL, SSPE, V,\n#   test, idata, icontrasts=c(\"contr.sum\", \"contr.poly\"), idesign, iterms,\n#   check.imatrix=TRUE, P=NULL, title=\"\", verbose=FALSE, ...){\n#   if (missing(test)) test <- c(\"Pillai\", \"Wilks\", \"Hotelling-Lawley\", \"Roy\")\n#   test <- match.arg(test, c(\"Pillai\", \"Wilks\", \"Hotelling-Lawley\", \"Roy\"),\n#       several.ok=TRUE)\n#   df.residual <- df.residual(model)\n#   if (missing (V)) V <- solve(crossprod(model.matrix(model)))\n#   B <- coef(model)\n#   if (is.character(hypothesis.matrix)) {\n#       L <- makeHypothesis(rownames(B), hypothesis.matrix, rhs)\n#       if (is.null(dim(L))) L <- t(L)\n#       L <- L[, -NCOL(L), drop = FALSE]\n#       rownames(L) <- hypothesis.matrix\n#   }\n#   else {\n#       L <- if (is.null(dim(hypothesis.matrix))) t(hypothesis.matrix)\n#           else hypothesis.matrix\n#   }\n#   if (missing(SSPE)) SSPE <- crossprod(residuals(model))\n#   if (missing(idata)) idata <- NULL\n#   if (missing(idesign)) idesign <- NULL\n#   if (!is.null(idata)){\n#       for (i in 1:length(idata)){\n#           if (is.null(attr(idata[,i], \"contrasts\"))){\n#               contrasts(idata[,i]) <- if (is.ordered(idata[,i])) icontrasts[2]\n#                   else icontrasts[1]\n#           }\n#       }\n#       if (is.null(idesign)) stop(\"idesign (intra-subject design) missing.\")\n#       X.design <- model.matrix(idesign, data=idata)\n#       if (check.imatrix) check.imatrix(X.design)\n#       intercept <- has.intercept(X.design)\n#       term.names <- term.names(idesign)\n#       if (intercept) term.names <- c(\"(Intercept)\", term.names)\n#       which.terms <- match(iterms, term.names)\n#       if (any(nas <- is.na(which.terms))){\n#           if (sum(nas) == 1)\n#               stop('The term \"', iterms[nas],'\" is not in the intrasubject design.')\n#           else stop(\"The following terms are not in the intrasubject design: \",\n#                   paste(iterms[nas], collapse=\", \"), \".\")\n#       }\n#       select <- apply(outer(which.terms, attr(X.design, \"assign\") + intercept, \"==\"),\n#           2, any)\n#       P <- X.design[, select, drop=FALSE]\n#   }\n#   if (!is.null(P)){\n#       rownames(P) <- colnames(B)\n#       SSPE <- t(P) %*% SSPE %*% P\n#       B <- B %*% P\n#   }\n#   rank <- sum(eigen(SSPE, only.values=TRUE)$values >= sqrt(.Machine$double.eps))\n#   if (rank < ncol(SSPE))\n#       stop(\"The error SSP matrix is apparently of deficient rank = \",\n#           rank, \" < \", ncol(SSPE))\n#   r <- ncol(B)\n#   if (is.null(rhs)) rhs <- matrix(0, nrow(L), r)\n#   rownames(rhs) <- rownames(L)\n#   colnames(rhs) <- colnames(B)\n#   q <- NROW(L)\n#   if (verbose){\n#       cat(\"\\nHypothesis matrix:\\n\")\n#       print(L)\n#       cat(\"\\nRight-hand-side matrix:\\n\")\n#       print(rhs)\n#       cat(\"\\nEstimated linear function (hypothesis.matrix %*% coef - rhs):\\n\")\n#       print(drop(L %*% B - rhs))\n#       cat(\"\\n\")\n#   }\n#   SSPH <- t(L %*% B - rhs) %*% solve(L %*% V %*% t(L)) %*% (L %*% B - rhs)\n#   rval <- list(SSPH=SSPH, SSPE=SSPE, df=q, r=r, df.residual=df.residual, P=P,\n#       title=title, test=test)\n#   class(rval) <- \"linearHypothesis.mlm\"\n#   rval\n#}\n\nprint.linearHypothesis.mlm <- function(x, SSP=TRUE, SSPE=SSP,\n        digits=getOption(\"digits\"), ...){\n    test <- x$test\n    if (!is.null(x$P) && SSP){\n        P <- x$P\n        cat(\"\\n Response transformation matrix:\\n\")\n        attr(P, \"assign\") <- NULL\n        attr(P, \"contrasts\") <- NULL\n        print(P, digits=digits)\n    }\n    if (SSP){\n        cat(\"\\nSum of squares and products for the hypothesis:\\n\")\n        print(x$SSPH, digits=digits)\n    }\n    if (SSPE){\n        cat(\"\\nSum of squares and products for error:\\n\")\n        print(x$SSPE, digits=digits)\n    }\n    SSPE.qr <- qr(x$SSPE)\n    # the following code is adapted from summary.manova\n    eigs <- Re(eigen(qr.coef(SSPE.qr, x$SSPH), symmetric = FALSE)$values)\n    tests <- matrix(NA, 4, 4)\n    rownames(tests) <- c(\"Pillai\", \"Wilks\", \"Hotelling-Lawley\", \"Roy\")\n    if (\"Pillai\" %in% test)\n        tests[1, 1:4] <- stats:::Pillai(eigs, x$df, x$df.residual)\n    if (\"Wilks\" %in% test)\n        tests[2, 1:4] <- stats:::Wilks(eigs, x$df, x$df.residual)\n    if (\"Hotelling-Lawley\" %in% test)\n        tests[3, 1:4] <- stats:::HL(eigs, x$df, x$df.residual)\n    if (\"Roy\" %in% test)\n        tests[4, 1:4] <- stats:::Roy(eigs, x$df, x$df.residual)\n    tests <- na.omit(tests)\n    ok <- tests[, 2] >= 0 & tests[, 3] > 0 & tests[, 4] > 0\n    ok <- !is.na(ok) & ok\n    tests <- cbind(x$df, tests, pf(tests[ok, 2], tests[ok, 3], tests[ok, 4],\n                    lower.tail = FALSE))\n    colnames(tests) <- c(\"Df\", \"test stat\", \"approx F\", \"num Df\", \"den Df\", \"Pr(>F)\")\n    tests <- structure(as.data.frame(tests),\n            heading = paste(\"\\nMultivariate Test\",\n                    if (nrow(tests) > 1) \"s\", \": \", x$title, sep=\"\"),\n            class = c(\"anova\", \"data.frame\"))\n    print(tests, digits=digits)\n    invisible(x)\n}\n\nlinearHypothesis.survreg <- function(model, hypothesis.matrix, rhs=NULL,\n        test=c(\"Chisq\", \"F\"), vcov., verbose=FALSE, ...){\n    if (missing(vcov.)) {\n        vcov. <- vcov(model)\n        p <- nrow(vcov.)\n        vcov. <- vcov.[-p, -p]\n    }\n    linearHypothesis.default(model, hypothesis.matrix, rhs, test, vcov., verbose=verbose, ...)\n}\n\nlinearHypothesis.polr <- function (model, hypothesis.matrix, rhs=NULL, vcov., verbose=FALSE, ...){\n    k <- length(coef(model))\n    V <- vcov(model)[1:k, 1:k]\n    linearHypothesis.default(model, hypothesis.matrix, rhs, vcov.=V, verbose=verbose, ...)\n}\n\ncoef.multinom <- function(object, ...){\n    b <- nnet:::coef.multinom(object, ...)\n    cn <- colnames(b)\n    rn <- rownames(b)\n    b <- as.vector(t(b))\n    names(b) <- as.vector(outer(cn, rn, function(c, r) paste(r, c, sep=\":\")))\n    b\n}\n\n## functions for mixed models\n\nlinearHypothesis.mer <- function(model, hypothesis.matrix, rhs=NULL,\n        vcov.=NULL, singular.ok=FALSE, verbose=FALSE, ...){\n    V <- as.matrix(if (is.null(vcov.))vcov(model)\n                    else if (is.function(vcov.)) vcov.(model) else vcov.)\n    b <- fixef(model)\n    if (any(aliased <- is.na(b)) && !singular.ok)\n        stop(\"there are aliased coefficients in the model\")\n    b <- b[!aliased]\n    if (is.character(hypothesis.matrix)) {\n        L <- makeHypothesis(names(b), hypothesis.matrix, rhs)\n        if (is.null(dim(L))) L <- t(L)\n        rhs <- L[, NCOL(L)]\n        L <- L[, -NCOL(L), drop = FALSE]\n        rownames(L) <- hypothesis.matrix\n    }\n    else {\n        L <- if (is.null(dim(hypothesis.matrix))) t(hypothesis.matrix)\n                else hypothesis.matrix\n        if (is.null(rhs)) rhs <- rep(0, nrow(L))\n    }\n    q <- NROW(L)\n    if (verbose){\n        cat(\"\\nHypothesis matrix:\\n\")\n        print(L)\n        cat(\"\\nRight-hand-side vector:\\n\")\n        print(rhs)\n        cat(\"\\nEstimated linear function (hypothesis.matrix %*% coef - rhs)\\n\")\n        print(drop(L %*% b - rhs))\n        cat(\"\\n\")\n    }\n    df <- Inf\n    SSH <- as.vector(t(L %*% b - rhs) %*% solve(L %*% V %*% t(L)) %*% (L %*% b - rhs))\n    name <- try(formula(model), silent = TRUE)\n    if (inherits(name, \"try-error\")) name <- substitute(model)\n    title <- \"Linear hypothesis test\\n\\nHypothesis:\"\n    topnote <- paste(\"Model 1: restricted model\",\"\\n\", \"Model 2: \", \n            paste(deparse(name), collapse = \"\\n\"), sep = \"\")\n    note <- if (is.null(vcov.)) \"\"\n            else \"\\nNote: Coefficient covariance matrix supplied.\\n\"\n    rval <- matrix(rep(NA, 8), ncol = 4)\n    colnames(rval) <- c(\"Res.Df\", \"Df\", \"Chisq\",  paste(\"Pr(> Chisq)\", sep = \"\"))\n    rownames(rval) <- 1:2\n    rval[,1] <- c(df+q, df)\n    p <- pchisq(SSH, q, lower.tail = FALSE)\n    rval[2, 2:4] <- c(q, SSH, p)\n    rval <- rval[,-1]\n    structure(as.data.frame(rval),\n            heading = c(title, printHypothesis(L, rhs, names(b)), \"\", topnote, note),\n            class = c(\"anova\", \"data.frame\"))\n}\n\nlinearHypothesis.lme <- function(model, hypothesis.matrix, rhs=NULL,\n        vcov.=NULL, singular.ok=FALSE, verbose=FALSE, ...){\n    V <- as.matrix(if (is.null(vcov.))vcov(model)\n                    else if (is.function(vcov.)) vcov.(model) else vcov.)\n    b <- fixef(model)\n    if (any(aliased <- is.na(b)) && !singular.ok)\n        stop(\"there are aliased coefficients in the model\")\n    b <- b[!aliased]\n    if (is.character(hypothesis.matrix)) {\n        L <- makeHypothesis(names(b), hypothesis.matrix, rhs)\n        if (is.null(dim(L))) L <- t(L)\n        rhs <- L[, NCOL(L)]\n        L <- L[, -NCOL(L), drop = FALSE]\n        rownames(L) <- hypothesis.matrix\n    }\n    else {\n        L <- if (is.null(dim(hypothesis.matrix))) t(hypothesis.matrix)\n                else hypothesis.matrix\n        if (is.null(rhs)) rhs <- rep(0, nrow(L))\n    }\n    q <- NROW(L)\n    if (verbose){\n        cat(\"\\nHypothesis matrix:\\n\")\n        print(L)\n        cat(\"\\nRight-hand-side vector:\\n\")\n        print(rhs)\n        cat(\"\\nEstimated linear function (hypothesis.matrix %*% coef - rhs)\\n\")\n        print(drop(L %*% b - rhs))\n        cat(\"\\n\")\n    }\n    df <- Inf\n    SSH <- as.vector(t(L %*% b - rhs) %*% solve(L %*% V %*% t(L)) %*% (L %*% b - rhs))\n    name <- try(formula(model), silent = TRUE)\n    if (inherits(name, \"try-error\")) name <- substitute(model)\n    title <- \"Linear hypothesis test\\n\\nHypothesis:\"\n    topnote <- paste(\"Model 1: restricted model\",\"\\n\", \"Model 2: \", \n            paste(deparse(name), collapse = \"\\n\"), sep = \"\")\n    note <- if (is.null(vcov.)) \"\"\n            else \"\\nNote: Coefficient covariance matrix supplied.\\n\"\n    rval <- matrix(rep(NA, 8), ncol = 4)\n    colnames(rval) <- c(\"Res.Df\", \"Df\", \"Chisq\",  paste(\"Pr(> Chisq)\", sep = \"\"))\n    rownames(rval) <- 1:2\n    rval[,1] <- c(df+q, df)\n    p <- pchisq(SSH, q, lower.tail = FALSE)\n    rval[2, 2:4] <- c(q, SSH, p)\n    rval <- rval[,-1]\n    structure(as.data.frame(rval),\n            heading = c(title, printHypothesis(L, rhs, names(b)), \"\", topnote, note),\n            class = c(\"anova\", \"data.frame\"))\n}\n\n\n\n## matchCoefs\n\nmatchCoefs <- function(model, pattern, ...) UseMethod(\"matchCoefs\")\n\nmatchCoefs.default <- function(model, pattern, coef.=coef, ...){\n    names <- names(coef.(model))\n    grep(pattern, names, value=TRUE)\n}\n\nmatchCoefs.mer <- function(model, pattern, ...) NextMethod(coef.=fixef)\n\nmatchCoefs.lme <- function(model, pattern, ...) NextMethod(coef.=fixef)\n\n\nhas.intercept <- function (model, ...) {\n    UseMethod(\"has.intercept\")\n}\n\nhas.intercept.default <- function(model, ...) any(names(coefficients(model))==\"(Intercept)\")\n\nterm.names <- function (model, ...) {\n    UseMethod(\"term.names\")\n}\n\nterm.names.default <- function (model, ...) {\n    term.names <- labels(terms(model))\n    if (has.intercept(model)) c(\"(Intercept)\", term.names)\n    else term.names\n}\n\npredictor.names <- function(model, ...) {\n    UseMethod(\"predictor.names\")\n}\n\npredictor.names.default <- function(model, ...){\n    predictors <- attr(terms(model), \"variables\")\n    as.character(predictors[3:length(predictors)])\n}\n\nresponseName <- function (model, ...) {\n    UseMethod(\"responseName\")\n}\n\nresponseName.default <- function (model, ...) deparse(attr(terms(model), \"variables\")[[2]])\n\nresponse <- function(model, ...) {\n    UseMethod(\"response\")\n}\n\nresponse.default <- function (model, ...) model.response(model.frame(model))\n\n\nConjComp <- function(X, Z = diag( nrow(X)), ip = diag(nrow(X))) {\n    # This function by Georges Monette\n    # finds the conjugate complement of the proj of X in span(Z) wrt\n    #    inner product ip\n    # - assumes Z is of full column rank\n    # - projects X conjugately wrt ip into span Z\n    xq <- qr(t(Z) %*% ip %*% X)\n    if (xq$rank == 0) return(Z)\n    Z %*% qr.Q(xq, complete = TRUE) [ ,-(1:xq$rank)] \n}\n\nrelatives <- function(term, names, factors){\n    is.relative <- function(term1, term2) {\n        all(!(factors[,term1]&(!factors[,term2])))\n    }\n    if(length(names) == 1) return(NULL)\n    which.term <- which(term==names)\n    (1:length(names))[-which.term][sapply(names[-which.term], \n                    function(term2) is.relative(term, term2))]\n}\n\n\nAnova <- function(mod, ...){\n    UseMethod(\"Anova\", mod)\n}\n\n# linear models\n\nAnova.lm <- function(mod, error, type=c(\"II\",\"III\", 2, 3), \n        white.adjust=c(FALSE, TRUE, \"hc3\", \"hc0\", \"hc1\", \"hc2\", \"hc4\"), \n        singular.ok, ...){\n    type <- as.character(type)\n    white.adjust <- as.character(white.adjust)\n    type <- match.arg(type)\n    white.adjust <- match.arg(white.adjust)\n    if (missing(singular.ok)){\n        singular.ok <- type == \"2\" || type == \"II\"\n    }\n    if (has.intercept(mod) && length(coef(mod)) == 1 \n            && (type == \"2\" || type == \"II\")) {\n        type <- \"III\"\n        warning(\"the model contains only an intercept: Type III test substituted\")\n    }\n    if (white.adjust != \"FALSE\"){\n        if (white.adjust == \"TRUE\") white.adjust <- \"hc3\" \n        return(Anova.default(mod, type=type, vcov.=hccm(mod, type=white.adjust), test=\"F\", \n                        singular.ok=singular.ok))\n    }\n    switch(type,\n            II=Anova.II.lm(mod, error, singular.ok=singular.ok, ...),\n            III=Anova.III.lm(mod, error, singular.ok=singular.ok, ...),\n            \"2\"=Anova.II.lm(mod, error, singular.ok=singular.ok, ...),\n            \"3\"=Anova.III.lm(mod, error, singular.ok=singular.ok,...))\n}\n\nAnova.aov <- function(mod, ...){\n    class(mod) <- \"lm\"\n    Anova.lm(mod, ...)\n}\n\nAnova.II.lm <- function(mod, error, singular.ok=TRUE, ...){\n    if (!missing(error)){\n        sumry <- summary(error, corr=FALSE)\n        s2 <- sumry$sigma^2\n        error.df <- error$df.residual\n        error.SS <- s2*error.df\n    }\n    SS.term <- function(term){\n        which.term <- which(term == names)\n        subs.term <- which(assign == which.term)\n        relatives <- relatives(term, names, fac)\n        subs.relatives <- NULL\n        for (relative in relatives) \n            subs.relatives <- c(subs.relatives, which(assign == relative))\n        hyp.matrix.1 <- I.p[subs.relatives,,drop=FALSE]\n        hyp.matrix.1 <- hyp.matrix.1[, not.aliased, drop=FALSE]\n        hyp.matrix.2 <- I.p[c(subs.relatives,subs.term),,drop=FALSE]\n        hyp.matrix.2 <- hyp.matrix.2[, not.aliased, drop=FALSE]\n        hyp.matrix.term <- if (nrow(hyp.matrix.1) == 0) hyp.matrix.2\n                else t(ConjComp(t(hyp.matrix.1), t(hyp.matrix.2), vcov(mod)))\n        hyp.matrix.term <- hyp.matrix.term[!apply(hyp.matrix.term, 1, \n                        function(x) all(x == 0)), , drop=FALSE]\n        if (nrow(hyp.matrix.term) == 0)\n            return(c(SS=NA, df=0))\n        lh <- linearHypothesis(mod, hyp.matrix.term, \n                singular.ok=singular.ok, ...)\n        abs(c(SS=lh$\"Sum of Sq\"[2], df=lh$Df[2]))\n    }\n    not.aliased <- !is.na(coef(mod))\n    if (!singular.ok && !all(not.aliased))\n        stop(\"there are aliased coefficients in the model\")\n    fac <- attr(mod$terms, \"factors\")\n    intercept <- has.intercept(mod)\n    I.p <- diag(length(coefficients(mod)))\n    assign <- mod$assign\n    assign[!not.aliased] <- NA\n    names <- term.names(mod)\n    if (intercept) names <-names[-1]\n    n.terms <- length(names)\n    p <- df <- f <- SS <- rep(0, n.terms + 1)\n    sumry <- summary(mod, corr = FALSE)\n    SS[n.terms + 1] <- if (missing(error)) sumry$sigma^2*mod$df.residual \n            else error.SS   \n    df[n.terms + 1] <- if (missing(error)) mod$df.residual else error.df\n    p[n.terms + 1] <- f[n.terms + 1] <- NA\n    for (i in 1:n.terms){\n        ss <- SS.term(names[i])\n        SS[i] <- ss[\"SS\"]\n        df[i] <- ss[\"df\"]\n        f[i] <- df[n.terms+1]*SS[i]/(df[i]*SS[n.terms + 1])\n        p[i] <- pf(f[i], df[i], df[n.terms + 1], lower.tail = FALSE)\n    }    \n    result <- data.frame(SS, df, f, p)\n    row.names(result) <- c(names,\"Residuals\")\n    names(result) <- c(\"Sum Sq\", \"Df\", \"F value\", \"Pr(>F)\")\n    class(result) <- c(\"anova\", \"data.frame\")\n    attr(result, \"heading\") <- c(\"Anova Table (Type II tests)\\n\", \n            paste(\"Response:\", responseName(mod)))\n    result\n}\n\n# type III\n\nAnova.III.lm <- function(mod, error, singular.ok=FALSE, ...){\n    if (!missing(error)){\n        error.df <- df.residual(error)\n        error.SS <- deviance(error)\n    }\n    else {\n        error.df <- df.residual(mod)\n        error.SS <- deviance(mod)\n    }\n    intercept <- has.intercept(mod)\n    I.p <- diag(length(coefficients(mod)))\n    Source <- term.names(mod)\n    n.terms <- length(Source)\n    p <- df <- f <- SS <- rep(0, n.terms + 1)\n    assign <- mod$assign\n    not.aliased <- !is.na(coef(mod))\n    if (!singular.ok && !all(not.aliased))\n        stop(\"there are aliased coefficients in the model\")\n    for (term in 1:n.terms){\n        subs <- which(assign == term - intercept)\n        hyp.matrix <- I.p[subs,,drop=FALSE]\n        hyp.matrix <- hyp.matrix[, not.aliased, drop=FALSE]\n        hyp.matrix <- hyp.matrix[!apply(hyp.matrix, 1, function(x) all(x == 0)), , drop=FALSE]\n        if (nrow(hyp.matrix) == 0){\n            SS[term] <- NA\n            df[term] <- 0\n            f[term] <- NA\n            p[term] <- NA\n        }\n        else {\n            test <- if (missing(error)) linearHypothesis(mod, hyp.matrix, \n                                singular.ok=singular.ok, ...)\n                    else linearHypothesis(mod, hyp.matrix, error.SS=error.SS, error.df=error.df, \n                                singular.ok=singular.ok, ...)\n            SS[term] <- test$\"Sum of Sq\"[2]\n            df[term] <- test$\"Df\"[2]\n            f[term] <- test$\"F\"[2]\n            p[term] <- test$\"Pr(>F)\"[2]\n        }\n    }\n    Source[n.terms + 1] <- \"Residuals\"\n    SS[n.terms + 1] <- error.SS\n    df[n.terms + 1] <- error.df\n    p[n.terms + 1] <- f[n.terms + 1] <- NA\n    result <- data.frame(SS, df, f, p)\n    row.names(result) <- Source\n    names(result) <- c(\"Sum Sq\", \"Df\", \"F value\", \"Pr(>F)\")\n    class(result) <- c(\"anova\", \"data.frame\")\n    attr(result, \"heading\") <- c(\"Anova Table (Type III tests)\\n\", paste(\"Response:\", responseName(mod)))\n    result\n}\n\n\n\n\netasq <- function(x, ...){\n    UseMethod(\"etasq\", x)\n}\n\n\n\netasq.lm <- function(x, anova=FALSE, partial=TRUE, ...) {\n    aov <-Anova(x, ...)\n    neff <- nrow(aov)\n    SSH <- aov[-neff,1]\n    SSE <- aov[neff,1]\n    SST <- sum(SSH)\n    eta2 <- if (partial) c(SSH / (SSH + SSE), NA) else c(SSH / SST, NA)\n    etalab <- if (partial) \"Partial eta^2\" else \"eta^2\"\n    if (anova) {\n        result <- cbind(eta2, aov)\n        rownames(result) <- rownames(aov)\n        colnames(result) <- c(etalab, colnames(aov))\n        result <- structure(as.data.frame(result), \n                heading = attr(aov, \"heading\"), \n                class = c(\"anova\", \"data.frame\"))\n    }\n    else {\n        result <- data.frame(eta2)\n        rownames(result) <- rownames(aov)\n        colnames(result) <- etalab\n    }\n    result      \n}\n\n#### HOOFDSTUK 5: CORRELATIES\n\n\n\npn <- function(X){crossprod(!is.na(X))}\n\ncor.prob <- function(X, dfr = nrow(na.omit(X)) - 2,use=\"complete.obs\") {\n# Correlations Below Main Diagonal\n# Significance Tests with Pairwise Deletion\n# Above Main Diagonal\n# Believe part of this came from Bill Venables\npair.SampSize <- pn(X)\nabove1 <- row(pair.SampSize) < col(pair.SampSize)\npair.df <- pair.SampSize[above1] - 2\nR <- cor(X, use=\"pair\")\nabove2 <- row(R) < col(R)\nr2 <- R[above2]^2\nFstat <- (r2 * pair.df)/(1 - r2)\nR[above2] <- 1 - pf(Fstat, 1, pair.df)\nR\n}\n\n#### HOOFDSTUK 7: Regressie assumpties\n\ncooks_plot=function (X) \n{\n    p=length(X$coefficients)\n    n=length(X$residuals)\n    COOK<-cooks.distance(X)\n    names(COOK)<-seq(1:length(COOK))\n    cutoff<-4/(n-p-1)\n    plot(names(COOK),COOK,ylab=\"Cook's distance\",xlab=\"Case nr\")\n    abline(h=cutoff,lty=2,col=\"red\")\n    identify(names(COOK),COOK,names(COOK))\n}\n\nresiduals_plot2=function (X) \n{\n    p=length(X$coefficients)\n    n=length(X$residuals)\n    RSTUDENT<-na.omit(rstudent(X))\n    FITTED<-na.omit(X$fitted.values)\n    names(FITTED)<-seq(1:length(FITTED))\n    plot(FITTED,RSTUDENT,ylab=\"Studentized residuals\",xlab=\"Voorspelde waarden\")\n    abline(h=2,lty=2,col=\"red\")\n    abline(h=-2,lty=2,col=\"red\")\n    identify(FITTED,RSTUDENT)\n}\n\nresiduals_plot=function (X) \n{\n    p=length(X$coefficients)\n    n=length(X$residuals)\n    RSTUDENT<-rstudent(X)\n    FITTED<-X$fitted.values\n    names(FITTED)<-seq(1:length(FITTED))\n    plot(FITTED,RSTUDENT,ylab=\"Studentized residuals\",xlab=\"Voorspelde waarden\")\n    abline(h=2,lty=2,col=\"red\")\n      abline(h=-2,lty=2,col=\"red\")\n    identify(FITTED,RSTUDENT,names(FITTED))\n}\n\nbonferroni<-function(x,y) {pairwise.t.test(x,y,p.adjust.method=\"bonferroni\", pool.sd=F)}\n\n#### LOGISTISCHE REGRESSIE ####\n\nalog<-function(X) \n{   exp(X)/(1+exp(X))\n}\n\neffectplot<-function(x,y,ylab=\"y\" ,xlab=\"x\",main=\" \" )\n{   sequence<-order(x)\n    plot(x[sequence],y[sequence],type=\"l\",col=\"red\",lwd=1.5,xlab=xlab,ylab=ylab,main=main)\n}","id":2,"options":{"autorun":"true","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"include":"false","label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","runbutton":"false","warning":"true"}},{"code":"","id":3,"options":{"autorun":"false","caption":"Oefening1","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex1","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"plot(penguins$bill_length_mm, penguins$bill_depth_mm)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex1","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","solution":"true","warning":"true"}},{"code":"","id":5,"options":{"autorun":"false","caption":"Oefening2","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex2","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cor.test(penguins$bill_length_mm, penguins$bill_depth_mm)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex2","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","solution":"true","warning":"true"}},{"code":"library(palmerpenguins)\ndata(\"penguins\")\ncor.test(penguins$bill_length_mm, penguins$bill_depth_mm)","id":7,"options":{"autorun":"true","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","runbutton":"false","warning":"true"}},{"code":"","id":8,"options":{"autorun":"false","caption":"Oefening4","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex4","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Dataframe maken met enkel de betrokken variabelen\nVariabelen <- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# plot maken van de nieuwe dataframe\nplot(CVariabelen)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex4","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","solution":"true","warning":"true"}},{"code":"","id":10,"options":{"autorun":"false","caption":"Oefening5","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex5","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Dataframe maken met enkel de betrokken variabelen\nVariabelen <- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","exercise":"ex5","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","solution":"true","warning":"true"}},{"code":"library(palmerpenguins) # indien nodig package laden\ndata(\"penguins\")        # indien nodig de data laden\n\n# Dataframe maken met enkel de betrokken variabelen\nVariabelen <- data.frame(\n  penguins$flipper_length_mm,\n  penguins$bill_length_mm,\n  penguins$body_mass_g\n)\n\n# De correlatiematrix berkenen\n\ncor.prob(Variabelen)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+
+</script>
+<script type="module">
+// Declare startupMessageQWebR globally
+globalThis.qwebrStartupMessage = document.createElement("p");
+
+// Verify if OffScreenCanvas is supported
+globalThis.qwebrOffScreenCanvasSupport = function() {
+  return typeof OffscreenCanvas !== 'undefined'
+}
+
+// Function to set the button text
+globalThis.qwebrSetInteractiveButtonState = function(buttonText, enableCodeButton = true) {
+  document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
+    btn.innerHTML = buttonText;
+    btn.disabled = !enableCodeButton;
+  });
+}
+
+// Function to update the status message in non-interactive cells
+globalThis.qwebrUpdateStatusMessage = function(message) {
+  document.querySelectorAll(".qwebr-status-text.qwebr-cell-needs-evaluation").forEach((elem) => {
+    elem.innerText = message;
+  });
+}
+
+// Function to update the status message
+globalThis.qwebrUpdateStatusHeader = function(message) {
+  qwebrStartupMessage.innerHTML = `
+    <i class="fa-solid fa-spinner fa-spin qwebr-icon-status-spinner"></i>
+    <span>${message}</span>`;
+}
+
+// Function to return true if element is found, false if not
+globalThis.qwebrCheckHTMLElementExists = function(selector) {
+  const element = document.querySelector(selector);
+  return !!element;
+}
+
+// Function that detects whether reveal.js slides are present
+globalThis.qwebrIsRevealJS = function() {
+  // If the '.reveal .slides' selector exists, RevealJS is likely present
+  return qwebrCheckHTMLElementExists('.reveal .slides');
+}
+
+// Initialize the Quarto sidebar element
+function qwebrSetupQuartoSidebar() {
+  var newSideBarDiv = document.createElement('div');
+  newSideBarDiv.id = 'quarto-margin-sidebar';
+  newSideBarDiv.className = 'sidebar margin-sidebar';
+  newSideBarDiv.style.top = '0px';
+  newSideBarDiv.style.maxHeight = 'calc(0px + 100vh)';
+
+  return newSideBarDiv;
+}
+
+// Position the sidebar in the document
+function qwebrPlaceQuartoSidebar() {
+  // Get the reference to the element with id 'quarto-document-content'
+  var referenceNode = document.getElementById('quarto-document-content');
+
+  // Create the new div element
+  var newSideBarDiv = qwebrSetupQuartoSidebar();
+
+  // Insert the new div before the 'quarto-document-content' element
+  referenceNode.parentNode.insertBefore(newSideBarDiv, referenceNode);
+}
+
+function qwebrPlaceMessageContents(content, html_location = "title-block-header", revealjs_location = "title-slide") {
+
+  // Get references to header elements
+  const headerHTML = document.getElementById(html_location);
+  const headerRevealJS = document.getElementById(revealjs_location);
+
+  // Determine where to insert the quartoTitleMeta element
+  if (headerHTML || headerRevealJS) {
+    // Append to the existing "title-block-header" element or "title-slide" div
+    (headerHTML || headerRevealJS).appendChild(content);
+  } else {
+    // If neither headerHTML nor headerRevealJS is found, insert after "webr-monaco-editor-init" script
+    const monacoScript = document.getElementById("qwebr-monaco-editor-init");
+    const header = document.createElement("header");
+    header.setAttribute("id", "title-block-header");
+    header.appendChild(content);
+    monacoScript.after(header);
+  }
+}
+
+
+
+function qwebrOffScreenCanvasSupportWarningMessage() {
+  
+  // Verify canvas is supported.
+  if(qwebrOffScreenCanvasSupport()) return;
+
+  // Create the main container div
+  var calloutContainer = document.createElement('div');
+  calloutContainer.classList.add('callout', 'callout-style-default', 'callout-warning', 'callout-titled');
+
+  // Create the header div
+  var headerDiv = document.createElement('div');
+  headerDiv.classList.add('callout-header', 'd-flex', 'align-content-center');
+
+  // Create the icon container div
+  var iconContainer = document.createElement('div');
+  iconContainer.classList.add('callout-icon-container');
+
+  // Create the icon element
+  var iconElement = document.createElement('i');
+  iconElement.classList.add('callout-icon');
+
+  // Append the icon element to the icon container
+  iconContainer.appendChild(iconElement);
+
+  // Create the title container div
+  var titleContainer = document.createElement('div');
+  titleContainer.classList.add('callout-title-container', 'flex-fill');
+  titleContainer.innerText = 'Warning: Web Browser Does Not Support Graphing!';
+
+  // Append the icon container and title container to the header div
+  headerDiv.appendChild(iconContainer);
+  headerDiv.appendChild(titleContainer);
+
+  // Create the body container div
+  var bodyContainer = document.createElement('div');
+  bodyContainer.classList.add('callout-body-container', 'callout-body');
+
+  // Create the paragraph element for the body content
+  var paragraphElement = document.createElement('p');
+  paragraphElement.innerHTML = 'This web browser does not have support for displaying graphs through the <code>quarto-webr</code> extension since it lacks an <code>OffScreenCanvas</code>. Please upgrade your web browser to one that supports <code>OffScreenCanvas</code>.';
+
+  // Append the paragraph element to the body container
+  bodyContainer.appendChild(paragraphElement);
+
+  // Append the header div and body container to the main container div
+  calloutContainer.appendChild(headerDiv);
+  calloutContainer.appendChild(bodyContainer);
+
+  // Append the main container div to the document depending on format
+  qwebrPlaceMessageContents(calloutContainer, "title-block-header"); 
+
+}
+
+
+// Function that attaches the document status message and diagnostics
+function displayStartupMessage(showStartupMessage, showHeaderMessage) {
+  if (!showStartupMessage) {
+    return;
+  }
+
+  // Create the outermost div element for metadata
+  const quartoTitleMeta = document.createElement("div");
+  quartoTitleMeta.classList.add("quarto-title-meta");
+
+  // Create the first inner div element
+  const firstInnerDiv = document.createElement("div");
+  firstInnerDiv.setAttribute("id", "qwebr-status-message-area");
+
+  // Create the second inner div element for "WebR Status" heading and contents
+  const secondInnerDiv = document.createElement("div");
+  secondInnerDiv.setAttribute("id", "qwebr-status-message-title");
+  secondInnerDiv.classList.add("quarto-title-meta-heading");
+  secondInnerDiv.innerText = "WebR Status";
+
+  // Create another inner div for contents
+  const secondInnerDivContents = document.createElement("div");
+  secondInnerDivContents.setAttribute("id", "qwebr-status-message-body");
+  secondInnerDivContents.classList.add("quarto-title-meta-contents");
+
+  // Describe the WebR state
+  qwebrStartupMessage.innerText = "🟡 Loading...";
+  qwebrStartupMessage.setAttribute("id", "qwebr-status-message-text");
+  // Add `aria-live` to auto-announce the startup status to screen readers
+  qwebrStartupMessage.setAttribute("aria-live", "assertive");
+
+  // Append the startup message to the contents
+  secondInnerDivContents.appendChild(qwebrStartupMessage);
+
+  // Add a status indicator for COOP and COEP Headers if needed
+  if (showHeaderMessage) {
+    const crossOriginMessage = document.createElement("p");
+    crossOriginMessage.innerText = `${crossOriginIsolated ? '🟢' : '🟡'} COOP & COEP Headers`;
+    crossOriginMessage.setAttribute("id", "qwebr-coop-coep-header");
+    secondInnerDivContents.appendChild(crossOriginMessage);
+  }
+
+  // Combine the inner divs and contents
+  firstInnerDiv.appendChild(secondInnerDiv);
+  firstInnerDiv.appendChild(secondInnerDivContents);
+  quartoTitleMeta.appendChild(firstInnerDiv);
+
+  // Place message on webpage
+  qwebrPlaceMessageContents(quartoTitleMeta); 
+}
+
+function qwebrAddCommandHistoryModal() {
+  // Create the modal div
+  var modalDiv = document.createElement('div');
+  modalDiv.id = 'qwebr-history-modal';
+  modalDiv.className = 'qwebr-modal';
+
+  // Create the modal content div
+  var modalContentDiv = document.createElement('div');
+  modalContentDiv.className = 'qwebr-modal-content';
+
+  // Create the span for closing the modal
+  var closeSpan = document.createElement('span');
+  closeSpan.id = 'qwebr-command-history-close-btn';
+  closeSpan.className = 'qwebr-modal-close';
+  closeSpan.innerHTML = '&times;';
+
+  // Create the h1 element for the modal
+  var modalH1 = document.createElement('h1');
+  modalH1.textContent = 'R History Command Contents';
+
+  // Create an anchor element for downloading the Rhistory file 
+  var downloadLink = document.createElement('a');
+  downloadLink.href = '#';
+  downloadLink.id = 'qwebr-download-history-btn';
+  downloadLink.className = 'qwebr-download-btn';
+
+  // Create an 'i' element for the icon
+  var icon = document.createElement('i');
+  icon.className = 'bi bi-file-code';
+
+  // Append the icon to the anchor element
+  downloadLink.appendChild(icon);
+
+  // Add the text 'Download R History' to the anchor element
+  downloadLink.appendChild(document.createTextNode(' Download R History File'));
+
+  // Create the pre for command history contents
+  var commandContentsPre = document.createElement('pre');
+  commandContentsPre.id = 'qwebr-command-history-contents';
+  commandContentsPre.className = 'qwebr-modal-content-code';
+
+  // Append the close span, h1, and history contents pre to the modal content div
+  modalContentDiv.appendChild(closeSpan);
+  modalContentDiv.appendChild(modalH1);
+  modalContentDiv.appendChild(downloadLink);
+  modalContentDiv.appendChild(commandContentsPre);
+
+  // Append the modal content div to the modal div
+  modalDiv.appendChild(modalContentDiv);
+
+  // Append the modal div to the body
+  document.body.appendChild(modalDiv);
+}
+
+function qwebrRegisterRevealJSCommandHistoryModal() {
+  // Select the <ul> element inside the <div> with data-panel="Custom0"
+  let ulElement = document.querySelector('div[data-panel="Custom0"] > ul.slide-menu-items');
+
+  // Find the last <li> element with class slide-tool-item
+  let lastItem = ulElement.querySelector('li.slide-tool-item:last-child');
+
+  // Calculate the next data-item value
+  let nextItemValue = 0;
+  if (lastItem) {
+      nextItemValue = parseInt(lastItem.dataset.item) + 1;
+  }
+
+  // Create a new <li> element
+  let newListItem = document.createElement('li');
+  newListItem.className = 'slide-tool-item';
+  newListItem.dataset.item = nextItemValue.toString(); // Set the next available data-item value
+
+  // Create the <a> element inside the <li>
+  let newLink = document.createElement('a');
+  newLink.href = '#';
+  newLink.id = 'qwebrRHistoryButton'; // Set the ID for the new link
+  
+  // Create the <kbd> element inside the <a>
+  let newKbd = document.createElement('kbd');
+  newKbd.textContent = ' '; // Set to empty as we are not registering a keyboard shortcut
+
+  // Create text node for the link text
+  let newText = document.createTextNode(' View R History');
+
+  // Append <kbd> and text node to <a>
+  newLink.appendChild(newKbd);
+  newLink.appendChild(newText);
+
+  // Append <a> to <li>
+  newListItem.appendChild(newLink);
+
+  // Append <li> to <ul>
+  ulElement.appendChild(newListItem);
+}
+
+// Handle setting up the R history modal
+function qwebrCodeLinks() {
+
+  if (qwebrIsRevealJS()) {
+    qwebrRegisterRevealJSCommandHistoryModal();
+    return;
+  }
+
+  // Create the container div
+  var containerDiv = document.createElement('div');
+  containerDiv.className = 'quarto-code-links';
+
+  // Create the h2 element
+  var h2 = document.createElement('h2');
+  h2.textContent = 'webR Code Links';
+
+  // Create the ul element
+  var ul = document.createElement('ul');
+
+  // Create the li element
+  var li = document.createElement('li');
+
+  // Create the a_history_btn element
+  var a_history_btn = document.createElement('a');
+  a_history_btn.href = 'javascript:void(0)';
+  a_history_btn.setAttribute('id', 'qwebrRHistoryButton');
+
+  // Create the i_history_btn element
+  var i_history_btn = document.createElement('i');
+  i_history_btn.className = 'bi bi-file-code';
+
+  // Create the text node for the link text
+  var text_history_btn = document.createTextNode('View R History');
+
+  // Append the icon element and link text to the a element
+  a_history_btn.appendChild(i_history_btn);
+  a_history_btn.appendChild(text_history_btn);
+
+  // Append the a element to the li element
+  li.appendChild(a_history_btn);
+
+  // Append the li element to the ul element
+  ul.appendChild(li);
+
+  // Append the h2 and ul elements to the container div
+  containerDiv.appendChild(h2);
+  containerDiv.appendChild(ul);
+
+  // Append the container div to the element with the ID 'quarto-margin-sidebar'
+  var sidebar = document.getElementById('quarto-margin-sidebar');
+    
+  // If the sidebar element is not found, create it
+  if(!sidebar) {
+    qwebrPlaceQuartoSidebar();
+  }
+  
+  // Re-select the sidebar element (if it was just created)
+  sidebar = document.getElementById('quarto-margin-sidebar');   
+
+
+  // If the sidebar element exists, append the container div to it
+  if(sidebar) {
+    // Append the container div to the sidebar
+    sidebar.appendChild(containerDiv);
+    // Force the sidebar to be clickable by removing the 'zindex-bottom' class
+    // added in pre-release: https://github.com/quarto-dev/quarto-cli/commit/f0c53a1ffcaa1de4eccbf07803b096898248adcc
+    sidebar.className = 'sidebar margin-sidebar';
+  } else {
+    // Get a debugger ...
+    console.warn('Element with ID "quarto-margin-sidebar" not found.');
+  }
+}
+
+// Call the function to append the code links for qwebR into the right sidebar
+qwebrCodeLinks();
+
+// Add the command history modal
+qwebrAddCommandHistoryModal();
+
+displayStartupMessage(qwebrShowStartupMessage, qwebrShowHeaderMessage);
+qwebrOffScreenCanvasSupportWarningMessage();
+</script>
+<script type="module">
+// Define a global storage and retrieval solution ----
+
+// Store commands executed in R
+globalThis.qwebrRCommandHistory = [];
+
+// Function to retrieve the command history
+globalThis.qwebrFormatRHistory = function() {
+   return qwebrRCommandHistory.join("\n\n");
+}
+
+// Retrieve HTML Elements ----
+
+// Get the command modal
+const command_history_modal = document.getElementById("qwebr-history-modal");
+
+// Get the button that opens the command modal
+const command_history_btn = document.getElementById("qwebrRHistoryButton");
+
+// Get the <span> element that closes the command modal
+const command_history_close_span = document.getElementById("qwebr-command-history-close-btn");
+
+// Get the download button for r history information
+const command_history_download_btn = document.getElementById("qwebr-download-history-btn");
+
+// Plug in command history into modal/download button ----
+
+// Function to populate the modal with command history
+function populateCommandHistoryModal() {
+    document.getElementById("qwebr-command-history-contents").innerHTML = qwebrFormatRHistory() || "No commands have been executed yet.";
+}
+
+// Function to format the current date and time to
+// a string with the format YYYY-MM-DD-HH-MM-SS
+function formatDateTime() {
+    const now = new Date();
+
+    const year = now.getFullYear();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    return `${year}-${month}-${day}-${hours}-${minutes}-${seconds}`;
+}
+
+
+// Function to convert document title with datetime to a safe filename
+function safeFileName() {
+    // Get the current page title
+    let pageTitle = document.title;
+
+    // Combine the current page title with the current date and time
+    let pageNameWithDateTime = `Rhistory-${pageTitle}-${formatDateTime()}`;
+
+    // Replace unsafe characters with safe alternatives
+    let safeFilename = pageNameWithDateTime.replace(/[\\/:\*\?! "<>\|]/g, '-');
+
+    return safeFilename;
+}
+
+
+// Function to download list contents as text file
+function downloadRHistory() {
+    // Get the current page title + datetime and use it as the filename
+    const filename = `${safeFileName()}.R`;
+
+    // Get the text contents of the R History list
+    const text = qwebrFormatRHistory();
+
+    // Create a new Blob object with the text contents
+    const blob = new Blob([text], { type: 'text/plain' });
+  
+    // Create a new anchor element for the download
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+
+    // Append the anchor to the body, click it, and remove it
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Register event handlers ----
+
+// When the user clicks the View R History button, open the command modal
+command_history_btn.onclick = function() {
+    populateCommandHistoryModal();
+    command_history_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the command modal
+command_history_close_span.onclick = function() {
+    command_history_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the command modal, close it
+window.onclick = function(event) {
+    if (event.target == command_history_modal) {
+        command_history_modal.style.display = "none";
+    }
+}
+
+// Add an onclick event listener to the download button so that
+// the user can download the R history as a text file
+command_history_download_btn.onclick = function() {
+    downloadRHistory();
+};
+</script>
+<script type="module">
+// Supported Evaluation Types for Context
+globalThis.EvalTypes = Object.freeze({
+  Interactive: 'interactive',
+  Setup: 'setup',
+  Output: 'output',
+});
+
+// Function that obtains the font size for a given element 
+globalThis.qwebrCurrentFontSizeOnElement = function(element, cssProperty = 'font-size') {
+
+  const currentFontSize = parseFloat(
+    window
+    .getComputedStyle(element)
+    .getPropertyValue(cssProperty)
+  );
+  
+  return currentFontSize;
+}
+
+// Function to determine font scaling
+globalThis.qwebrScaledFontSize = function(div, qwebrOptions) {
+  // Determine if we should compute font-size using RevealJS's `--r-main-font-size` 
+  // or if we can directly use the document's `font-size`.
+  const cssProperty = document.body.classList.contains('reveal') ? 
+    "--r-main-font-size" : "font-size";
+  
+  // Get the current font size on the div element
+  const elementFontSize = qwebrCurrentFontSizeOnElement(div, cssProperty);
+
+  // Determine the scaled font size value
+  const scaledFontSize = ((qwebrOptions['editor-font-scale'] ?? 1) * elementFontSize) ?? 17.5;
+
+  return scaledFontSize;
+}
+
+
+// Function that dispatches the creation request
+globalThis.qwebrCreateHTMLElement = function (
+  cellData
+) {
+
+  // Extract key components
+  const evalType = cellData.options.context;
+  const qwebrCounter = cellData.id;
+
+  // We make an assumption that insertion points are defined by the Lua filter as:
+  // qwebr-insertion-location-{qwebrCounter} 
+  const elementLocator = document.getElementById(`qwebr-insertion-location-${qwebrCounter}`);
+
+  // Figure out the routine to use to insert the element.
+  let qwebrElement;
+  switch ( evalType ) {
+    case EvalTypes.Interactive:
+      qwebrElement = qwebrCreateInteractiveElement(qwebrCounter, cellData.options);
+      break;
+    case EvalTypes.Output: 
+      qwebrElement = qwebrCreateNonInteractiveOutputElement(qwebrCounter, cellData.options);
+      break;
+    case EvalTypes.Setup: 
+      qwebrElement = qwebrCreateNonInteractiveSetupElement(qwebrCounter, cellData.options);
+      break;
+    default: 
+      qwebrElement = document.createElement('div');
+      qwebrElement.textContent = 'Error creating `quarto-webr` element';
+  }
+
+  // Insert the dynamically generated object at the document location.
+  elementLocator.appendChild(qwebrElement);
+};
+
+// Function that setups the interactive element creation
+globalThis.qwebrCreateInteractiveElement = function (qwebrCounter, qwebrOptions) {
+
+  // Create main div element
+  var mainDiv = document.createElement('div');
+  mainDiv.id = 'qwebr-interactive-area-' + qwebrCounter;
+  mainDiv.className = `qwebr-interactive-area`;
+  if (qwebrOptions.classes) {
+    mainDiv.className += " " + qwebrOptions.classes
+  }
+
+  // Add a unique cell identifier that users can customize
+  if (qwebrOptions.label) {
+    mainDiv.setAttribute('data-id', qwebrOptions.label);
+  }
+
+  // Create toolbar div
+  var toolbarDiv = document.createElement('div');
+  toolbarDiv.className = 'qwebr-editor-toolbar';
+  toolbarDiv.id = 'qwebr-editor-toolbar-' + qwebrCounter;
+
+  // Create a div to hold the left buttons
+  var leftButtonsDiv = document.createElement('div');
+  leftButtonsDiv.className = 'qwebr-editor-toolbar-left-buttons';
+
+  // Create a div to hold the right buttons
+  var rightButtonsDiv = document.createElement('div');
+  rightButtonsDiv.className = 'qwebr-editor-toolbar-right-buttons';
+
+  // Create Run Code button
+  var runCodeButton = document.createElement('button');
+  runCodeButton.className = 'btn btn-default qwebr-button qwebr-button-run';
+  runCodeButton.disabled = true;
+  runCodeButton.type = 'button';
+  runCodeButton.id = 'qwebr-button-run-' + qwebrCounter;
+  runCodeButton.textContent = '🟡 Loading webR...';
+  runCodeButton.title = `Run code (Shift + Enter)`;
+
+  // Append buttons to the leftButtonsDiv
+  leftButtonsDiv.appendChild(runCodeButton);
+
+  // Create Reset button
+  var resetButton = document.createElement('button');
+  resetButton.className = 'btn btn-light btn-xs qwebr-button qwebr-button-reset';
+  resetButton.type = 'button';
+  resetButton.id = 'qwebr-button-reset-' + qwebrCounter;
+  resetButton.title = 'Start over';
+  resetButton.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i>';
+
+  // Create Copy button
+  var copyButton = document.createElement('button');
+  copyButton.className = 'btn btn-light btn-xs qwebr-button qwebr-button-copy';
+  copyButton.type = 'button';
+  copyButton.id = 'qwebr-button-copy-' + qwebrCounter;
+  copyButton.title = 'Copy code';
+  copyButton.innerHTML = '<i class="fa-regular fa-copy"></i>';
+
+  // Append buttons to the rightButtonsDiv
+  rightButtonsDiv.appendChild(resetButton);
+  rightButtonsDiv.appendChild(copyButton);
+
+  // Create console area div
+  var consoleAreaDiv = document.createElement('div');
+  consoleAreaDiv.id = 'qwebr-console-area-' + qwebrCounter;
+  consoleAreaDiv.className = 'qwebr-console-area';
+
+  // Create editor div
+  var editorDiv = document.createElement('div');
+  editorDiv.id = 'qwebr-editor-' + qwebrCounter;
+  editorDiv.className = 'qwebr-editor';
+
+  // Create output code area div
+  var outputCodeAreaDiv = document.createElement('div');
+  outputCodeAreaDiv.id = 'qwebr-output-code-area-' + qwebrCounter;
+  outputCodeAreaDiv.className = 'qwebr-output-code-area';
+  outputCodeAreaDiv.setAttribute('aria-live', 'assertive');
+
+  // Create pre element inside output code area
+  var preElement = document.createElement('pre');
+  preElement.style.visibility = 'hidden';
+  outputCodeAreaDiv.appendChild(preElement);
+
+  // Create output graph area div
+  var outputGraphAreaDiv = document.createElement('div');
+  outputGraphAreaDiv.id = 'qwebr-output-graph-area-' + qwebrCounter;
+  outputGraphAreaDiv.className = 'qwebr-output-graph-area';
+
+  // Append buttons to the toolbar
+  toolbarDiv.appendChild(leftButtonsDiv);
+  toolbarDiv.appendChild(rightButtonsDiv);
+
+  // Append all elements to the main div
+  mainDiv.appendChild(toolbarDiv);
+  consoleAreaDiv.appendChild(editorDiv);
+  consoleAreaDiv.appendChild(outputCodeAreaDiv);
+  mainDiv.appendChild(consoleAreaDiv);
+  mainDiv.appendChild(outputGraphAreaDiv);
+
+  return mainDiv;
+}
+
+// Function that adds output structure for non-interactive output
+globalThis.qwebrCreateNonInteractiveOutputElement = function(qwebrCounter, qwebrOptions) {
+  // Create main div element
+  var mainDiv = document.createElement('div');
+  mainDiv.id = 'qwebr-noninteractive-area-' + qwebrCounter;
+  mainDiv.className = `qwebr-noninteractive-area`;
+  if (qwebrOptions.classes) {
+    mainDiv.className += " " + qwebrOptions.classes
+  }
+  
+  // Add a unique cell identifier that users can customize
+  if (qwebrOptions.label) {
+    mainDiv.setAttribute('data-id', qwebrOptions.label);
+  }
+  
+  // Create a status container div
+  var statusContainer = createLoadingContainer(qwebrCounter);
+
+  // Create output code area div
+  var outputCodeAreaDiv = document.createElement('div');
+  outputCodeAreaDiv.id = 'qwebr-output-code-area-' + qwebrCounter;
+  outputCodeAreaDiv.className = 'qwebr-output-code-area';
+  outputCodeAreaDiv.setAttribute('aria-live', 'assertive');
+
+  // Create pre element inside output code area
+  var preElement = document.createElement('pre');
+  preElement.style.visibility = 'hidden';
+  outputCodeAreaDiv.appendChild(preElement);
+
+  // Create output graph area div
+  var outputGraphAreaDiv = document.createElement('div');
+  outputGraphAreaDiv.id = 'qwebr-output-graph-area-' + qwebrCounter;
+  outputGraphAreaDiv.className = 'qwebr-output-graph-area';
+
+  // Append all elements to the main div
+  mainDiv.appendChild(statusContainer);
+  mainDiv.appendChild(outputCodeAreaDiv);
+  mainDiv.appendChild(outputGraphAreaDiv);
+
+  return mainDiv;
+};
+
+// Function that adds a stub in the page to indicate a setup cell was used.
+globalThis.qwebrCreateNonInteractiveSetupElement = function(qwebrCounter, qwebrOptions) {
+  // Create main div element
+  var mainDiv = document.createElement('div');
+  mainDiv.id = `qwebr-noninteractive-setup-area-${qwebrCounter}`;
+  mainDiv.className = `qwebr-noninteractive-setup-area`;
+  if (qwebrOptions.classes) {
+    mainDiv.className += " " + qwebrOptions.classes
+  }
+
+
+  // Add a unique cell identifier that users can customize
+  if (qwebrOptions.label) {
+    mainDiv.setAttribute('data-id', qwebrOptions.label);
+  }
+
+  // Create a status container div
+  var statusContainer = createLoadingContainer(qwebrCounter);
+
+  // Append status onto the main div
+  mainDiv.appendChild(statusContainer);
+
+  return mainDiv;
+}
+
+
+// Function to create loading container with specified ID
+globalThis.createLoadingContainer = function(qwebrCounter) {
+
+  // Create a status container
+  const container = document.createElement('div');
+  container.id = `qwebr-non-interactive-loading-container-${qwebrCounter}`;
+  container.className = 'qwebr-non-interactive-loading-container qwebr-cell-needs-evaluation';
+
+  // Create an R project logo to indicate its a code space
+  const rProjectIcon = document.createElement('i');
+  rProjectIcon.className = 'fa-brands fa-r-project fa-3x qwebr-r-project-logo';
+
+  // Setup a loading icon from font awesome
+  const spinnerIcon = document.createElement('i');
+  spinnerIcon.className = 'fa-solid fa-spinner fa-spin fa-1x qwebr-icon-status-spinner';
+
+  // Add a section for status text
+  const statusText = document.createElement('p');
+  statusText.id = `qwebr-status-text-${qwebrCounter}`;
+  statusText.className = `qwebr-status-text qwebr-cell-needs-evaluation`;
+  statusText.innerText = 'Loading webR...';
+
+  // Incorporate an inner container
+  const innerContainer = document.createElement('div');
+
+  // Append elements to the inner container
+  innerContainer.appendChild(spinnerIcon);
+  innerContainer.appendChild(statusText);
+
+  // Append elements to the main container
+  container.appendChild(rProjectIcon);
+  container.appendChild(innerContainer);
+
+  return container;
+}
+</script>
+<script type="module">
+// Function to install a single package
+async function qwebrInstallRPackage(packageName) {
+  await mainWebR.evalRVoid(`webr::install('${packageName}');`);
+}
+
+// Function to load a single package
+async function qwebrLoadRPackage(packageName) {
+  await mainWebR.evalRVoid(`require('${packageName}', quietly = TRUE)`);
+}
+
+// Generic function to process R packages
+async function qwebrProcessRPackagesWithStatus(packages, processType, displayStatusMessageUpdate = true) {
+  // Switch between contexts
+  const messagePrefix = processType === 'install' ? 'Installing' : 'Loading';
+
+  // Modify button state
+  qwebrSetInteractiveButtonState(`🟡 ${messagePrefix} package ...`, false);
+
+  // Iterate over packages
+  for (let i = 0; i < packages.length; i++) {
+    const activePackage = packages[i];
+    const formattedMessage = `${messagePrefix} package ${i + 1} out of ${packages.length}: ${activePackage}`;
+
+    // Display the update in header
+    if (displayStatusMessageUpdate) {
+      qwebrUpdateStatusHeader(formattedMessage);
+    }
+
+    // Display the update in non-active areas
+    qwebrUpdateStatusMessage(formattedMessage);
+
+    // Run package installation
+    if (processType === 'install') {
+      await qwebrInstallRPackage(activePackage);
+    } else {
+      await qwebrLoadRPackage(activePackage);
+    }
+  }
+
+  // Clean slate
+  if (processType === 'load') {
+    await mainWebR.flush();
+  }
+}
+
+// Start a timer
+const initializeWebRTimerStart = performance.now();
+
+// Encase with a dynamic import statement
+globalThis.qwebrInstance = import(qwebrCustomizedWebROptions.baseURL + "webr.mjs").then(
+  async ({ WebR, ChannelType }) => {
+    // Populate WebR options with defaults or new values based on `webr` meta
+    globalThis.mainWebR = new WebR(qwebrCustomizedWebROptions);
+
+    // Initialization WebR
+    await mainWebR.init();
+
+    // Setup a shelter
+    globalThis.mainWebRCodeShelter = await new mainWebR.Shelter();
+
+    // Setup a pager to allow processing help documentation
+    await mainWebR.evalRVoid('webr::pager_install()');
+
+    // Setup a viewer to allow processing htmlwidgets.
+    // This might not be available in old webr version
+    await mainWebR.evalRVoid('try({ webr::viewer_install() })');
+
+    // Override the existing install.packages() to use webr::install()
+    await mainWebR.evalRVoid('webr::shim_install()');
+
+    // Specify the repositories to pull from
+    // Note: webR does not use the `repos` option, but instead uses `webr_pkg_repos`
+    // inside of `install()`. However, other R functions still pull from `repos`.
+    await mainWebR.evalRVoid(`
+      options(
+        webr_pkg_repos = c(${qwebrPackageRepoURLS.map(repoURL => `'${repoURL}'`).join(',')}),
+        repos = c(${qwebrPackageRepoURLS.map(repoURL => `'${repoURL}'`).join(',')})
+      )
+    `);
+
+    // Check to see if any packages need to be installed
+    if (qwebrSetupRPackages) {
+      // Obtain only a unique list of packages
+      const uniqueRPackageList = Array.from(new Set(qwebrInstallRPackagesList));
+
+      // Install R packages one at a time (either silently or with a status update)
+      await qwebrProcessRPackagesWithStatus(uniqueRPackageList, 'install', qwebrShowStartupMessage);
+
+      if (qwebrAutoloadRPackages) {
+        // Load R packages one at a time (either silently or with a status update)
+        await qwebrProcessRPackagesWithStatus(uniqueRPackageList, 'load', qwebrShowStartupMessage);
+      }
+    }
+  }
+);
+
+// Stop timer
+const initializeWebRTimerEnd = performance.now();
+
+</script>
+<script type="module">
+// Function to verify a given JavaScript Object is empty
+globalThis.qwebrIsObjectEmpty = function (arr) {
+    return Object.keys(arr).length === 0;
+}
+
+// Global version of the Escape HTML function that converts HTML
+// characters to their HTML entities.
+globalThis.qwebrEscapeHTMLCharacters = function(unsafe) {
+    return unsafe
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+};
+
+// Passthrough results
+globalThis.qwebrIdentity = function(x) {
+    return x;
+};
+
+// Append a comment
+globalThis.qwebrPrefixComment = function(x, comment) {
+    return `${comment}${x}`;
+};
+
+// Function to store the code in the history
+globalThis.qwebrLogCodeToHistory = function(codeToRun, options) {
+    qwebrRCommandHistory.push(
+        `# Ran code in ${options.label} at ${new Date().toLocaleString()} ----\n${codeToRun}`
+    );
+};
+
+// Function to attach a download button onto the canvas
+// allowing the user to download the image.
+function qwebrImageCanvasDownloadButton(canvas, canvasContainer) {
+
+    // Create the download button
+    const downloadButton = document.createElement('button');
+    downloadButton.className = 'qwebr-canvas-image-download-btn';
+    downloadButton.textContent = 'Download Image';
+    canvasContainer.appendChild(downloadButton);
+
+    // Trigger a download of the image when the button is clicked
+    downloadButton.addEventListener('click', function() {
+        const image = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = image;
+        link.download = 'qwebr-canvas-image.png';
+        link.click();
+    });
+}
+
+
+// Function to parse the pager results
+globalThis.qwebrParseTypePager = async function (msg) {
+
+    // Split out the event data
+    const { path, title, deleteFile } = msg.data;
+
+    // Process the pager data by reading the information from disk
+    const paged_data = await mainWebR.FS.readFile(path).then((data) => {
+        // Obtain the file content
+        let content = new TextDecoder().decode(data);
+
+        // Remove excessive backspace characters until none remain
+        while(content.match(/.[\b]/)){
+            content = content.replace(/.[\b]/g, '');
+        }
+
+        // Returned cleaned data
+        return content;
+    });
+
+    // Unlink file if needed
+    if (deleteFile) {
+        await mainWebR.FS.unlink(path);
+    }
+
+    // Return extracted data with spaces
+    return paged_data;
+};
+
+
+// Function to parse the browse results
+globalThis.qwebrParseTypeBrowse = async function (msg) {
+
+    // msg.type === "browse"
+    const path = msg.data.url;
+
+    // Process the browse data by reading the information from disk
+    const browse_data = await mainWebR.FS.readFile(path).then((data) => {
+        // Obtain the file content
+        let content = new TextDecoder().decode(data);
+
+        return content;
+    });
+
+    // Return extracted data as-is
+    return browse_data;
+};
+
+// Function to run the code using webR and parse the output
+globalThis.qwebrComputeEngine = async function(
+    codeToRun,
+    elements,
+    options) {
+
+    // Call into the R compute engine that persists within the document scope.
+    // To be prepared for all scenarios, the following happens:
+    // 1. We setup a canvas device to write to by making a namespace call into the {webr} package
+    // 2. We use values inside of the options array to set the figure size.
+    // 3. We capture the output stream information (STDOUT and STERR)
+    // 4. We disable the current device's image creation.
+    // 5. Piece-wise parse the results into the different output areas
+
+    // Create a pager variable for help/file contents
+    let pager = [];
+
+    // Handle how output is processed
+    let showMarkup = options.results === "markup" && options.output !== "asis";
+    let processOutput;
+
+    if (showMarkup) {
+        processOutput = qwebrEscapeHTMLCharacters;
+    } else {
+        processOutput = qwebrIdentity;
+    }
+
+    // ----
+    // Convert from Inches to Pixels by using DPI (dots per inch)
+    // for bitmap devices (dpi * inches = pixels)
+    let fig_width = options["fig-width"] * options["dpi"];
+    let fig_height = options["fig-height"] * options["dpi"];
+
+    // Initialize webR
+    await mainWebR.init();
+
+    // Configure capture output
+    let captureOutputOptions = {
+        withAutoprint: true,
+        captureStreams: true,
+        captureConditions: false,
+        // env: webR.objs.emptyEnv, // maintain a global environment for webR v0.2.0
+    };
+
+    // Determine if the browser supports OffScreen
+    if (qwebrOffScreenCanvasSupport()) {
+        // Mirror default options of webr::canvas()
+        // with changes to figure height and width.
+        captureOutputOptions.captureGraphics = {
+            width: fig_width,
+            height: fig_height,
+            bg: "white", // default: transparent
+            pointsize: 12,
+            capture: true
+        };
+    }  else {
+        // Disable generating graphics
+        captureOutputOptions.captureGraphics = false;
+    }
+
+    // Store the code to run in history
+    qwebrLogCodeToHistory(codeToRun, options);
+
+    // Setup a webR canvas by making a namespace call into the {webr} package
+    // Evaluate the R code
+    // Remove the active canvas silently
+    const result = await mainWebRCodeShelter.captureR(
+        `${codeToRun}`,
+        captureOutputOptions
+    );
+
+    // -----
+
+    // Start attempting to parse the result data
+    processResultOutput:try {
+
+        // Avoid running through output processing
+        if (options.results === "hide" || options.output === "false") {
+            break processResultOutput;
+        }
+
+        // Merge output streams of STDOUT and STDErr (messages and errors are combined.)
+        // Require both `warning` and `message` to be true to display `STDErr`.
+        const out = result.output
+        .filter(
+            evt => evt.type === "stdout" ||
+            ( evt.type === "stderr" && (options.warning === "true" && options.message === "true"))
+        )
+        .map((evt, index) => {
+            const className = `qwebr-output-code-${evt.type}`;
+            const outputResult = qwebrPrefixComment(processOutput(evt.data), options.comment);
+            return `<code id="${className}-editor-${elements.id}-result-${index + 1}" class="${className}">${outputResult}</code>`;
+        })
+        .join("\n");
+
+
+        // Clean the state
+        // We're now able to process pager events.
+        // As a result, we cannot maintain a true 1-to-1 output order
+        // without individually feeding each line
+        const msgs = await mainWebR.flush();
+
+        // Use `map` to process the filtered "pager" events asynchronously
+        const pager = [];
+        const browse = [];
+
+        await Promise.all(
+            msgs.map(
+                async (msg) => {
+
+                    const msgType = msg.type || "unknown";
+
+                    switch(msgType) {
+                        case 'pager':
+                            const pager_data = await qwebrParseTypePager(msg);
+                            pager.push(pager_data);
+                            break;
+                        case 'browse':
+                            const browse_data = await qwebrParseTypeBrowse(msg);
+                            browse.push(browse_data);
+                            break;
+                    }
+                    return;
+                }
+            )
+        );
+
+        // Nullify the output area of content
+        elements.outputCodeDiv.innerHTML = "";
+        elements.outputGraphDiv.innerHTML = "";
+
+        // Design an output object for messages
+        const pre = document.createElement("pre");
+        if (/\S/.test(out)) {
+            // Display results as HTML elements to retain output styling
+            const div = document.createElement("div");
+            div.innerHTML = out;
+
+            // Calculate a scaled font-size value
+            const scaledFontSize = qwebrScaledFontSize(
+                elements.outputCodeDiv, options);
+
+            // Override output code cell size
+            pre.style.fontSize = `${scaledFontSize}px`;
+            pre.appendChild(div);
+        } else {
+            // If nothing is present, hide the element.
+            pre.style.visibility = "hidden";
+        }
+
+        elements.outputCodeDiv.appendChild(pre);
+
+        // Determine if we have graphs to display
+        if (result.images.length > 0) {
+
+            // Create figure element
+            const figureElement = document.createElement("figure");
+            figureElement.className = "qwebr-canvas-image";
+
+            // Place each rendered graphic onto a canvas element
+            result.images.forEach((img) => {
+
+                // Construct canvas for object
+                const canvas = document.createElement("canvas");
+
+                // Add an image download button
+                qwebrImageCanvasDownloadButton(canvas, figureElement);
+
+                // Set canvas size to image
+                canvas.width = img.width;
+                canvas.height = img.height;
+
+                // Apply output truncations
+                canvas.style.width = options["out-width"] ? options["out-width"] : `${fig_width}px`;
+                if (options["out-height"]) {
+                    canvas.style.height = options["out-height"];
+                }
+
+                // Apply styling
+                canvas.style.display = "block";
+                canvas.style.margin = "auto";
+
+                // Draw image onto Canvas
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, img.width, img.height);
+
+                // Append canvas to figure output area
+                figureElement.appendChild(canvas);
+
+            });
+
+            if (options['fig-cap']) {
+                // Create figcaption element
+                const figcaptionElement = document.createElement('figcaption');
+                figcaptionElement.innerText = options['fig-cap'];
+                // Append figcaption to figure
+                figureElement.appendChild(figcaptionElement);
+            }
+
+            elements.outputGraphDiv.appendChild(figureElement);
+
+        }
+
+        // Display the pager data
+        if (pager.length > 0) {
+            // Use the `pre` element to preserve whitespace.
+            pager.forEach((paged_data, index) => {
+                const pre_pager = document.createElement("pre");
+                pre_pager.innerText = paged_data;
+                pre_pager.classList.add("qwebr-output-code-pager");
+                pre_pager.setAttribute("id", `qwebr-output-code-pager-editor-${elements.id}-result-${index + 1}`);
+                elements.outputCodeDiv.appendChild(pre_pager);
+            });
+        }
+
+        // Display the browse data
+        if (browse.length > 0) {
+            // Use the `pre` element to preserve whitespace.
+            browse.forEach((browse_data, index) => {
+                const iframe_browse = document.createElement('iframe');
+                iframe_browse.classList.add("qwebr-output-code-browse");
+                iframe_browse.setAttribute("id", `qwebr-output-code-browse-editor-${elements.id}-result-${index + 1}`);
+                iframe_browse.style.width = "100%";
+                iframe_browse.style.minHeight = "500px";
+                elements.outputCodeDiv.appendChild(iframe_browse);
+
+                iframe_browse.contentWindow.document.open();
+                iframe_browse.contentWindow.document.write(browse_data);
+                iframe_browse.contentWindow.document.close();
+            });
+        }
+    } finally {
+        // Clean up the remaining code
+        mainWebRCodeShelter.purge();
+    }
+};
+
+// Function to execute the code (accepts code as an argument)
+globalThis.qwebrExecuteCode = async function (
+    codeToRun,
+    id,
+    options = {}) {
+
+    // If options are not passed, we fall back on the bare minimum to handle the computation
+    if (qwebrIsObjectEmpty(options)) {
+        options = {
+            "context": "interactive",
+            "fig-width": 7, "fig-height": 5,
+            "out-width": "700px", "out-height": "",
+            "dpi": 72,
+            "results": "markup",
+            "warning": "true", "message": "true",
+        };
+    }
+
+    // Next, we access the compute areas values
+    const elements = {
+        runButton: document.getElementById(`qwebr-button-run-${id}`),
+        outputCodeDiv: document.getElementById(`qwebr-output-code-area-${id}`),
+        outputGraphDiv: document.getElementById(`qwebr-output-graph-area-${id}`),
+        id: id,
+    }
+
+    // Disallowing execution of other code cells
+    document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
+        btn.disabled = true;
+    });
+
+    if (options.context == EvalTypes.Interactive) {
+        // Emphasize the active code cell
+        elements.runButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin qwebr-icon-status-spinner"></i> <span>Run Code</span>';
+    }
+
+    // Evaluate the code and parse the output into the document
+    await qwebrComputeEngine(codeToRun, elements, options);
+
+    // Switch to allowing execution of code
+    document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
+        btn.disabled = false;
+    });
+
+    if (options.context == EvalTypes.Interactive) {
+        // Revert to the initial code cell state
+        elements.runButton.innerHTML = '<i class="fa-solid fa-play qwebr-icon-run-code"></i> <span>Run Code</span>';
+    }
+}
+
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <div id="quarto-announcement" data-announcement-id="b0e362a38869e05bc3e01903c80d0932" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Alert</strong> - deze website is nog in ontwikkeling - feedback altijd welkom via sven.demaeyer@uantwperen.be</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Online (<code>R</code>) oefeningen</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/STAT B.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://www.uantwerpen.be/nl/" title="uantwerpen.be/nl/" class="quarto-navigation-tool px-1" aria-label="uantwerpen.be/nl/"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/Sdemaeyer2/STATB_2425" title="Statistiek B" class="quarto-navigation-tool px-1" aria-label="Statistiek B"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Schakel leesmodus">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Zoeken"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welkom</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./OLP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Open Leer Pakket</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./Contactmomenten/Contactmomenten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contactmomenten</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contactmomenten/C1/C1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contactmomenten/C2/C2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contactmomenten/C3/C3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contactmomenten/C4/C4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contactmomenten/C5/C5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contactmomenten/C6/C6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contactmomenten/C7/C7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./Penguins.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Online (R) oefeningen</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Zelftest_t_test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">t-test</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Zelftest_ANOVA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Zelftest_kruistabellen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kruistabellen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Zelftest_correlaties.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Correlaties</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./computer_labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Computer labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">ZSO</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO1: van vraag naar methode</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO2: t-test</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO3: ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO4: Kruistabellen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO5: Correlaties</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO6: Bivariate regressie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO7: Multivariate regressie en assumpties</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ZSO/ZSO8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ZSO8: Dummy-variabelen en interacties</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./Rapporteren.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rapporteren</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./t_test_Rapportage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">t-test rapporteren</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ANOVA_Rapportage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ANOVA rapporteren</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Screencasts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Screencasts</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Extra materiaal</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Extra/Projecten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projecten in RStudio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Extra/Quarto_documenten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto documenten</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Data-manipulatie met dplyr</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./studiewijzer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studiewijzer</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Op deze pagina</h2>
+   
+  <ul>
+  <li><a href="#oefening-1" id="toc-oefening-1" class="nav-link active" data-scroll-target="#oefening-1">Oefening 1</a></li>
+  <li><a href="#oefening-2" id="toc-oefening-2" class="nav-link" data-scroll-target="#oefening-2">Oefening 2</a></li>
+  <li><a href="#oefening-3-1" id="toc-oefening-3-1" class="nav-link" data-scroll-target="#oefening-3-1">Oefening 3</a></li>
+  <li><a href="#oefening-4" id="toc-oefening-4" class="nav-link" data-scroll-target="#oefening-4">Oefening 4</a></li>
+  <li><a href="#oefening-5-1" id="toc-oefening-5-1" class="nav-link" data-scroll-target="#oefening-5-1">Oefening 5</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script>
+<script type="module" id="qwebr-monaco-editor-init">
+
+  // Configure the Monaco Editor's loader
+  require.config({
+    paths: {
+      'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs'
+    }
+  });
+</script>
+<script type="module">
+// Function to update Monaco Editors when body class changes
+function updateMonacoEditorsOnBodyClassChange() {
+    // Select the body element
+    const body = document.querySelector('body');
+
+    // Options for the observer (which mutations to observe)
+    const observerOptions = {
+        attributes: true,  // Observe changes to attributes
+        attributeFilter: ['class'] // Only observe changes to the 'class' attribute
+    };
+
+    // Callback function to execute when mutations are observed
+    const bodyClassChangeCallback = function(mutationsList, observer) {
+        for(let mutation of mutationsList) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                // Class attribute has changed
+                // Update all Monaco Editors on the page
+                updateMonacoEditorTheme();
+            }
+        }
+    };
+
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(bodyClassChangeCallback);
+
+    // Start observing the target node for configured mutations
+    observer.observe(body, observerOptions);
+}
+
+// Function to update all instances of Monaco Editors on the page
+function updateMonacoEditorTheme() {
+    // Determine what VS Theme to use
+    const vsThemeToUse = document.body.classList.contains("quarto-dark") ? 'vs-dark' : 'vs' ;
+
+    // Iterate through all initialized Monaco Editors
+    qwebrEditorInstances.forEach( function(editorInstance) { 
+        editorInstance.updateOptions({ theme: vsThemeToUse }); 
+    });
+}
+
+// Call the function to start observing changes to body class
+updateMonacoEditorsOnBodyClassChange();
+</script>
+<script type="module">
+// Global array to store Monaco Editor instances
+globalThis.qwebrEditorInstances = [];
+
+function isValidCodeLineNumbers(stringCodeLineNumbers) {
+  // Regular expression to match valid input strings
+  const regex = /^(\d+(-\d+)?)(,\d+(-\d+)?)*$/;
+  return regex.test(stringCodeLineNumbers);
+}
+
+// Function that builds and registers a Monaco Editor instance    
+globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
+
+  const initialCode = cellData.code;
+  const qwebrCounter = cellData.id;
+  const qwebrOptions = cellData.options;
+
+  // Retrieve the previously created document elements
+  let runButton = document.getElementById(`qwebr-button-run-${qwebrCounter}`);
+  let resetButton = document.getElementById(`qwebr-button-reset-${qwebrCounter}`);
+  let copyButton = document.getElementById(`qwebr-button-copy-${qwebrCounter}`);
+  let editorDiv = document.getElementById(`qwebr-editor-${qwebrCounter}`);
+
+  // Load the Monaco Editor and create an instance
+  let editor;
+  require(['vs/editor/editor.main'], function () {
+    editor = monaco.editor.create(editorDiv, {
+      value: initialCode,
+      language: 'r',
+      theme: 'vs-light',
+      automaticLayout: true,           // Works wonderfully with RevealJS
+      scrollBeyondLastLine: false,
+      minimap: {
+        enabled: false
+      },
+      fontSize: qwebrScaledFontSize(editorDiv, qwebrOptions),         
+      renderLineHighlight: "none",      // Disable current line highlighting
+      hideCursorInOverviewRuler: true,  // Remove cursor indictor in right hand side scroll bar
+      readOnly: qwebrOptions['read-only'] ?? false,
+      quickSuggestions: qwebrOptions['editor-quick-suggestions'] ?? false,
+      wordWrap: (qwebrOptions['editor-word-wrap'] == 'true' ? "on" : "off")
+    });
+
+    // Store the official counter ID to be used in keyboard shortcuts
+    editor.__qwebrCounter = qwebrCounter;
+
+    // Store the official div container ID
+    editor.__qwebrEditorId = `qwebr-editor-${qwebrCounter}`;
+
+    // Store the initial code value and options
+    editor.__qwebrinitialCode = initialCode;
+    editor.__qwebrOptions = qwebrOptions;
+
+    // Set at the model level the preferred end of line (EOL) character to LF.
+    // This prevent `\r\n` from being given to the webR engine if the user is on Windows.
+    // See details in: https://github.com/coatless/quarto-webr/issues/94
+    // Associated error text: 
+    // Error: <text>:1:7 unexpected input
+
+    // Retrieve the underlying model
+    const model = editor.getModel();
+    // Set EOL for the model
+    model.setEOL(monaco.editor.EndOfLineSequence.LF);
+    
+    // Dynamically modify the height of the editor window if new lines are added.
+    let ignoreEvent = false;
+    const updateHeight = () => {
+      // Increment editor height by 2 to prevent vertical scroll bar from appearing
+      const contentHeight = editor.getContentHeight() + 2;
+
+      // Retrieve editor-max-height option
+      const maxEditorHeight = qwebrOptions['editor-max-height'];
+
+      // If editor-max-height is missing, allow infinite growth. Otherwise, threshold.
+      const editorHeight = !maxEditorHeight ?  contentHeight : Math.min(contentHeight, maxEditorHeight);
+
+      // We're avoiding a width change
+      //editorDiv.style.width = `${width}px`;
+      editorDiv.style.height = `${editorHeight}px`;
+      try {
+        ignoreEvent = true;
+
+        // The key to resizing is this call
+        editor.layout();
+      } finally {
+        ignoreEvent = false;
+      }
+    };
+
+    // Function to generate decorations to highlight lines
+    // in the editor based on input string.
+    function decoratorHighlightLines(codeLineNumbers) {
+      // Store the lines to be lighlight
+      let linesToHighlight = [];
+      
+      // Parse the codeLineNumbers string to get the line numbers to highlight
+      // First, split the string by commas
+      codeLineNumbers.split(',').forEach(part => {
+        // Check if we have a range of lines
+        if (part.includes('-')) {
+            // Handle range of lines (e.g., "6-8")
+            const [start, end] = part.split('-').map(Number);
+            for (let i = start; i <= end; i++) {
+                linesToHighlight.push(i);
+            }
+        } else {
+            // Handle single line (e.g., "7")
+            linesToHighlight.push(Number(part));
+        }
+      });
+  
+      // Create monaco decorations for the lines to highlight
+      const decorations = linesToHighlight.map(lineNumber => ({
+          range: new monaco.Range(lineNumber, 1, lineNumber, 1),
+          options: {
+              isWholeLine: true,
+              className: 'qwebr-editor-highlight-line'
+          }
+      }));
+  
+      // Return decorations to be applied to the editor
+      return decorations;
+    }
+
+    // Ensure that the editor-code-line-numbers option is set and valid
+    // then apply styling
+    if (qwebrOptions['editor-code-line-numbers']) {
+      // Remove all whitespace from the string
+      const codeLineNumbers = qwebrOptions['editor-code-line-numbers'].replace(/\s/g,'');
+      // Check if the string is valid for line numbers, e.g., "1,3-5,7"
+      if (isValidCodeLineNumbers(codeLineNumbers)) {
+        // Apply the decorations to the editor
+        editor.createDecorationsCollection(decoratorHighlightLines(codeLineNumbers));
+      } else {
+        // Warn the user that the input is invalid
+        console.warn(`Invalid "editor-code-line-numbers" value in code cell ${qwebrOptions['label']}: ${codeLineNumbers}`);
+      }
+    }
+
+    // Helper function to check if selected text is empty
+    function isEmptyCodeText(selectedCodeText) {
+      return (selectedCodeText === null || selectedCodeText === undefined || selectedCodeText === "");
+    }
+
+    // Registry of keyboard shortcuts that should be re-added to each editor window
+    // when focus changes.
+    const addWebRKeyboardShortCutCommands = () => {
+      // Add a keydown event listener for Shift+Enter to run all code in cell
+      editor.addCommand(monaco.KeyMod.Shift | monaco.KeyCode.Enter, () => {
+
+        // Retrieve all text inside the editor
+        qwebrExecuteCode(editor.getValue(), editor.__qwebrCounter, editor.__qwebrOptions);
+      });
+
+      // Add a keydown event listener for CMD/Ctrl+Enter to run selected code
+      editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
+
+        // Get the selected text from the editor
+        const selectedText = editor.getModel().getValueInRange(editor.getSelection());
+        // Check if no code is selected
+        if (isEmptyCodeText(selectedText)) {
+          // Obtain the current cursor position
+          let currentPosition = editor.getPosition();
+          // Retrieve the current line content
+          let currentLine = editor.getModel().getLineContent(currentPosition.lineNumber);
+
+          // Propose a new position to move the cursor to
+          let newPosition = new monaco.Position(currentPosition.lineNumber + 1, 1);
+
+          // Check if the new position is beyond the last line of the editor
+          if (newPosition.lineNumber > editor.getModel().getLineCount()) {
+            // Add a new line at the end of the editor
+            editor.executeEdits("addNewLine", [{
+            range: new monaco.Range(newPosition.lineNumber, 1, newPosition.lineNumber, 1),
+            text: "\n", 
+            forceMoveMarkers: true,
+            }]);
+          }
+          
+          // Run the entire line of code.
+          qwebrExecuteCode(currentLine, editor.__qwebrCounter, editor.__qwebrOptions);
+
+          // Move cursor to new position
+          editor.setPosition(newPosition);
+        } else {
+          // Code to run when Ctrl+Enter is pressed with selected code
+          qwebrExecuteCode(selectedText, editor.__qwebrCounter, editor.__qwebrOptions);
+        }
+      });
+    }
+
+    // Register an on focus event handler for when a code cell is selected to update
+    // what keyboard shortcut commands should work.
+    // This is a workaround to fix a regression that happened with multiple
+    // editor windows since Monaco 0.32.0 
+    // https://github.com/microsoft/monaco-editor/issues/2947
+    editor.onDidFocusEditorText(addWebRKeyboardShortCutCommands);
+
+    // Register an on change event for when new code is added to the editor window
+    editor.onDidContentSizeChange(updateHeight);
+
+    // Manually re-update height to account for the content we inserted into the call
+    updateHeight();
+
+    // Store the editor instance in the global dictionary
+    qwebrEditorInstances[editor.__qwebrCounter] = editor;
+
+  });
+
+  // Add a click event listener to the run button
+  runButton.onclick = function () {
+    qwebrExecuteCode(editor.getValue(), editor.__qwebrCounter, editor.__qwebrOptions);
+  };
+
+  // Add a click event listener to the reset button
+  copyButton.onclick = function () {
+    // Retrieve current code data
+    const data = editor.getValue();
+    
+    // Write code data onto the clipboard.
+    navigator.clipboard.writeText(data || "");
+  };
+  
+  // Add a click event listener to the copy button
+  resetButton.onclick = function () {
+    editor.setValue(editor.__qwebrinitialCode);
+  };
+  
+}
+</script>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Online (<code>R</code>) oefeningen</h1>
+<p class="subtitle lead">Bivariatte regressie</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We zijn nu aangekomen bij het onderdeel waarin we het verband tussen twee kwantitatieve variabelen wensen te onderzoeken: correlaties. Hoe we dit doen in <code>R</code> kan je hier oefenen, opnieuw adhv onze dataset over de pinguïns.</p>
+<p>Meer achtergrond over deze dataset vind je via volgende link: <a href="./Penguins.html">palmerpenguins</a></p>
+<div class="cell" data-autorun="true" data-runbutton="false">
+<div id="qwebr-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div class="cell" data-autorun="true" data-runbutton="false">
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<p>Voor deze oefening willen we twee onderzoeksvragen beantwoorden:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Onderzoeksvragen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="line-block">(OV1) Wat is de samenhang tussen de lengte van de snavel (<code>bill_length_mm</code>) en de breedte van de snavel (<code>bill_depth_mm</code>) van pinguïns?<br>
+(OV2) Wat is het onderlinge verband tussen de volgende verschillende metingen van lichamelijke kenmerken van pinguïns: lengte van de flipper (<code>flipper_length_mm</code>), lengte van de snavel (<code>bill_length_mm</code>) en het gewicht (<code>body_mass_g</code>)?</div>
+</div>
+</div>
+<section id="oefening-1" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-1">Oefening 1</h2>
+<p>De eerste onderzoeksvraag gaat over het verband tussen de lengte van de snavel (<code>bill_length_mm</code>) en de breedte van de snavel (<code>bill_depth_mm</code>) van pinguïns.</p>
+<p><em>Maak in onderstaande codeblok een basisvisualisatie om dit verband te illustreren.</em></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Oefening</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Hints</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Oplossing</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell" data-exercise="ex1" data-caption="Oefening1">
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="hint" data-exercise="ex1">
+<p>Een basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een <strong>puntenwolk</strong>. Die kan je maken met de generieke functie <code>plot( )</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(penguins<span class="sc">$</span>______, penguins<span class="sc">$</span>______)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="proof solution" data-exercise="ex1">
+<p><span class="proof-title"><em>Oplossing</em>. </span><strong>Oplossing:</strong></p>
+<p>Een basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een <strong>puntenwolk</strong>. Die kan je maken met de generieke functie <code>plot( )</code>.</p>
+<p>Tussen haakjes moet je verwijzen naar beide variabelen. Indien er een vermoeden is van causaliteit, plaats je de onafhaneklijke variabele best op de x-as. In dit geval is er niet echt een duidelijk vermoeden van causaliteit, waardoor er geen reden is om de ene of de andere variabele op de x-as te zetten. Belangrijk is dat beide variabelen als <code>numeric</code> of als <code>integer</code> in de dataframe zijn gedefinieerd. Dat is in dit geval in orde.</p>
+<p>De volledige oplossing ziet er zo uit!</p>
+<div class="cell" data-exercise="ex1" data-solution="true">
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="oefening-2" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-2">Oefening 2</h2>
+<p>De figuur die je in de vorige oefening maakte wijst niet meteen zeer duidelijk op een verband. We hebben echter ook een maat om de samenhang na te gaan: de Pearson correlatiecoëfficiënt.</p>
+<p><em>Bereken de Pearson correlatiecoëfficiënt voor het verband tussen beide kenmerken van de snavel van pinguïns. Doe ook een test om na te gaan of dit verband statistisch signifcant is.</em></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Oefening</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Hints</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Oplossing</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell" data-exercise="ex2" data-caption="Oefening2">
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="hint" data-exercise="ex2">
+<p>We kunnen gebruik maken van de functie <code>cor.test( )</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(penguins<span class="sc">$</span>______, penguins<span class="sc">$</span>______)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="proof solution" data-exercise="ex2">
+<p><span class="proof-title"><em>Oplossing</em>. </span><strong>Oplossing:</strong></p>
+<div class="cell" data-exercise="ex2" data-solution="true">
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="oefening-3-1" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-3-1">Oefening 3</h2>
+<p>We hernemen de oplossing uit de vorige oefening hieronder.</p>
+<div class="cell" data-autorun="true" data-runbutton="false">
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<p>Op het examen vragen we soms meerkeuzevragen over de interpretatie van de output. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Vraag</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Antwoordsleutel</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Welke van volgende uitspraken is <em>fout</em>? (slechts 1 antwoord mogelijk)</p>
+<ol type="1">
+<li>In de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns</li>
+<li>Beide variabelen delen 5,5% variantie</li>
+<li>95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt</li>
+<li>De kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%</li>
+</ol>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>Je diende uitspraak 4 te kiezen als foute uitspraak.</p>
+<ol type="1">
+<li>In de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns</li>
+</ol>
+<p><strong>= JUIST! Inderdaad. In de steekproef is de correlatie -0,235, een negatief getal dus ook een negatief verband.</strong></p>
+<ol start="2" type="1">
+<li>Beide variabelen delen 5,5% variantie</li>
+</ol>
+<p><strong>= JUIST! Ook dit klopt aangezien het kwadraat van de correlatiecoëfficiënt kan geïnterpreteerd worden als gedeelde variantie tussen beide variabelen. Het kwadraat van -0,235 bedraat 0,055. Dit is een percentage uitgedrukt in een getal tussen 0 en 1. Doen we dit maal 100 dan krijgen we het percentage op 100 (5,5% in dit geval).</strong></p>
+<ol start="3" type="1">
+<li>95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt</li>
+</ol>
+<p><strong>= JUIST! Dit lezen we af in de output bij het 95 betrouwbaarheidsinterval. Zo’n betrouwbaarheidsinterval geeft een beeld van de steekproevenverdeling. Deze steekproevenverdeling is de verdeling van onze parameter, de correlatie, overheen alle mogelijke steekproeven die we zouden kunnen getrokken hebben. Uit die verdeling leren we dat 95% van deze mogelijke steekrpoeven een correlatie tussen -0,13 en -0,33 zou opleveren.</strong></p>
+<ol start="4" type="1">
+<li>De kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%</li>
+</ol>
+<p><strong>= FOUT! Dit is een typische verkeerde interpretatie van de p-waarde. Een p-waarde is een probabiliteit van de data onder de veronderstelling dat de nul-hypothese geldig is. Anders uitgedrukt: de p-waarde drukt de kans uit dat we een correlatiecoëfficiënt van -0,235 of extremer (meer negatief) zouden vaststellen in onze steekproef indien de correlatie in de populatie nul bedraagt.</strong></p>
+</div>
+</div>
+</div>
+</section>
+<section id="oefening-4" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-4">Oefening 4</h2>
+<p>Nu richten we onze aandacht op de tweede onderzoeksvraag. Centraal in die onderzoeksvraag staat het nagaan van het verband van meerdere kwantitatieve variabelen.</p>
+<p><em>Creër een visualisatie die de onderlinge samenhang tussen alle 3 de variabelen in één figuur weergeeft.</em></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Oefening</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Hints</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Oplossing</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="cell" data-exercise="ex4" data-caption="Oefening4">
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="hint" data-exercise="ex4">
+<p>Om deze figuur te maken moet je twee stappen doorlopen:</p>
+<ul>
+<li>een dataframe maken met daarin enkel de betrokken variabelen;</li>
+<li>deze nieuwe dataframe ‘plotten’ met het commando <code>plot( )</code>.</li>
+</ul>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<div class="proof solution" data-exercise="ex4">
+<p><span class="proof-title"><em>Oplossing</em>. </span><strong>Oplossing:</strong></p>
+<p>Verschillende stappen zijn nodig om deze figuur te maken. In de onderstaande oplossing kan je de twee stappen zien.</p>
+<div class="cell" data-exercise="ex4" data-solution="true">
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="oefening-5-1" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-5-1">Oefening 5</h2>
+<p>De visualisatie uit de voorgaande oefening duidt op een positief verband tussen elk van deze variabelen onderling. De vraag is uiteraard of dit een sterk verband is en in welke mate we dit verband kunnen verwachten te zien in de gehele populatie.</p>
+<p><em>Bereken de drie correlatiecoëfficiënten in één beweging en schrijf voor jezelf een rapportage neer over de bekomen resultaten. Heb bij het schrijven van een conclusieluik ook oog voor “effectgrootte”.</em></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Oefening</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Hints</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Oplossing</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false">Rapportage</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div class="cell" data-exercise="ex5" data-caption="Oefening5">
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="hint" data-exercise="ex5">
+<p>Net als bij de visualisatie zijn er twee stappen nodig om een <strong>correlatiematrix</strong> te berekenen:</p>
+<ul>
+<li>een dataframe maken met daarin de variabelen (is zelfde eerste stap als in oefening 4);</li>
+<li>de correlatiematrix berekenen gebruikmakend van de functie <code>cor.prob( )</code> .</li>
+</ul>
+</div>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<div class="proof solution" data-exercise="ex5">
+<p><span class="proof-title"><em>Oplossing</em>. </span><strong>Oplossing:</strong></p>
+<p>Om deze correlatiematrix te berekenen maken we eerst een nieuwe dataframe aan (met de naam <code>Variabelen</code>) waarin de drie variabelen alleen zijn weggeschreven. Daarna gebruiken we die nieuwe dataframe <code>Variabelen</code> als inpunt voor de functie <code>cor.prob( )</code>.</p>
+<div class="cell" data-exercise="ex5" data-solution="true">
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+<div id="tabset-5-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-4-tab">
+<p>Indien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.</p>
+<div class="cell">
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<p>De drie variabelen flipperlengte, snavellengte en gewicht zijn onderling sterk positief gecorreleerd. De correlaties situeren zich tussen 0,595 en 0,871 en zijn alledrie statistisch significant (p &lt;0,001). We verwachten in de populatie ook positieve correlaties te observeren tussen deze drie variabelen.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Gekopieerd!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Gekopieerd!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© CC-By Universiteit Antwerpen, 2024</p>
+</div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Wij maken gebruik van cookies om de surfervaring te verbeteren en om de website te optimaliseren. IP-adressen worden niet bewaard.</a></div></div>
+    <div class="nav-footer-right">
+<p>Gemaakt met veel ❤ en <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+<script type="module">
+// Handle cell initialization initialization
+qwebrCellDetails.map(
+  (entry) => {
+    // Handle the creation of the element
+    qwebrCreateHTMLElement(entry);
+    // In the event of interactive, initialize the monaco editor
+    if (entry.options.context == EvalTypes.Interactive) {
+      qwebrCreateMonacoEditorInstance(entry);
+    }
+  }
+);
+
+// Identify non-interactive cells (in order)
+const filteredEntries = qwebrCellDetails.filter(entry => {
+  const contextOption = entry.options && entry.options.context;
+  return ['output', 'setup'].includes(contextOption) || (contextOption == "interactive" && entry.options && entry.options.autorun === 'true');
+});
+
+// Condition non-interactive cells to only be run after webR finishes its initialization.
+qwebrInstance.then(
+  async () => {
+    const nHiddenCells = filteredEntries.length;
+    var currentHiddenCell = 0;
+
+
+    // Modify button state
+    qwebrSetInteractiveButtonState(`🟡 Running hidden code cells ...`, false);
+
+    // Begin processing non-interactive sections
+    // Due to the iteration policy, we must use a for() loop.
+    // Otherwise, we would need to switch to using reduce with an empty
+    // starting promise
+    for (const entry of filteredEntries) {
+
+      // Determine cell being examined
+      currentHiddenCell = currentHiddenCell + 1;
+      const formattedMessage = `Evaluating hidden cell ${currentHiddenCell} out of ${nHiddenCells}`;
+
+      // Update the document status header
+      if (qwebrShowStartupMessage) {
+        qwebrUpdateStatusHeader(formattedMessage);
+      }
+
+      // Display the update in non-active areas
+      qwebrUpdateStatusMessage(formattedMessage);
+
+      // Extract details on the active cell
+      const evalType = entry.options.context;
+      const cellCode = entry.code;
+      const qwebrCounter = entry.id;
+
+      if (['output', 'setup'].includes(evalType)) {
+        // Disable further global status updates
+        const activeContainer = document.getElementById(`qwebr-non-interactive-loading-container-${qwebrCounter}`);
+        activeContainer.classList.remove('qwebr-cell-needs-evaluation');
+        activeContainer.classList.add('qwebr-cell-evaluated');
+
+        // Update status on the code cell
+        const activeStatus = document.getElementById(`qwebr-status-text-${qwebrCounter}`);
+        activeStatus.innerText = " Evaluating hidden code cell...";
+        activeStatus.classList.remove('qwebr-cell-needs-evaluation');
+        activeStatus.classList.add('qwebr-cell-evaluated');
+      }
+
+      switch (evalType) {
+        case 'interactive':
+          // TODO: Make this more standardized.
+          // At the moment, we're overriding the interactive status update by pretending its
+          // output-like. 
+          const tempOptions = entry.options;
+          tempOptions["context"] = "output"
+          // Run the code in a non-interactive state that is geared to displaying output
+          await qwebrExecuteCode(`${cellCode}`, qwebrCounter, tempOptions);
+          break;
+        case 'output':
+          // Run the code in a non-interactive state that is geared to displaying output
+          await qwebrExecuteCode(`${cellCode}`, qwebrCounter, entry.options);
+          break;
+        case 'setup':
+          const activeDiv = document.getElementById(`qwebr-noninteractive-setup-area-${qwebrCounter}`);
+
+          // Store code in history
+          qwebrLogCodeToHistory(cellCode, entry.options);
+
+          // Run the code in a non-interactive state with all output thrown away
+          await mainWebR.evalRVoid(`${cellCode}`);
+          break;
+        default: 
+          break; 
+      }
+
+      if (['output', 'setup'].includes(evalType)) {
+        // Disable further global status updates
+        const activeContainer = document.getElementById(`qwebr-non-interactive-loading-container-${qwebrCounter}`);
+        // Disable visibility
+        activeContainer.style.visibility = 'hidden';
+        activeContainer.style.display = 'none';
+      }
+    }
+  }
+).then(
+  () => {
+    // Release document status as ready
+
+    if (qwebrShowStartupMessage) {
+      qwebrStartupMessage.innerText = "🟢 Ready!"
+    }
+  
+    qwebrSetInteractiveButtonState(
+      `<i class="fa-solid fa-play qwebr-icon-run-code"></i> <span>Run Code</span>`, 
+      true
+    );  
+  }
+);
+</script>
+
+
+
+
+</body></html>

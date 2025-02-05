@@ -1,8 +1,10 @@
 ---
 title: "Online (`R`) oefeningen"
-subtitle: "Correleaties"
-format: live-html
+subtitle: "Bivariatte regressie"
+format: html
 engine: knitr
+filters:
+  - webr
 ---
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}

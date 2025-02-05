@@ -831,6 +831,48 @@
     ]
   },
   {
+    "objectID": "Zelftest_bivariate_regressie.html",
+    "href": "Zelftest_bivariate_regressie.html",
+    "title": "Online (R) oefeningen",
+    "section": "",
+    "text": "We zijn nu aangekomen bij het onderdeel waarin we het verband tussen twee kwantitatieve variabelen wensen te onderzoeken: correlaties. Hoe we dit doen in R kan je hier oefenen, opnieuw adhv onze dataset over de pinguïns.\nMeer achtergrond over deze dataset vind je via volgende link: palmerpenguins\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nVoor deze oefening willen we twee onderzoeksvragen beantwoorden:"
+  },
+  {
+    "objectID": "Zelftest_bivariate_regressie.html#oefening-1",
+    "href": "Zelftest_bivariate_regressie.html#oefening-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 1",
+    "text": "Oefening 1\nDe eerste onderzoeksvraag gaat over het verband tussen de lengte van de snavel (bill_length_mm) en de breedte van de snavel (bill_depth_mm) van pinguïns.\nMaak in onderstaande codeblok een basisvisualisatie om dit verband te illustreren.\n\nOefeningHintsOplossing\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nplot(penguins$______, penguins$______)\n\n\n\n\nOplossing. Oplossing:\nEen basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een puntenwolk. Die kan je maken met de generieke functie plot( ).\nTussen haakjes moet je verwijzen naar beide variabelen. Indien er een vermoeden is van causaliteit, plaats je de onafhaneklijke variabele best op de x-as. In dit geval is er niet echt een duidelijk vermoeden van causaliteit, waardoor er geen reden is om de ene of de andere variabele op de x-as te zetten. Belangrijk is dat beide variabelen als numeric of als integer in de dataframe zijn gedefinieerd. Dat is in dit geval in orde.\nDe volledige oplossing ziet er zo uit!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Zelftest_bivariate_regressie.html#oefening-2",
+    "href": "Zelftest_bivariate_regressie.html#oefening-2",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 2",
+    "text": "Oefening 2\nDe figuur die je in de vorige oefening maakte wijst niet meteen zeer duidelijk op een verband. We hebben echter ook een maat om de samenhang na te gaan: de Pearson correlatiecoëfficiënt.\nBereken de Pearson correlatiecoëfficiënt voor het verband tussen beide kenmerken van de snavel van pinguïns. Doe ook een test om na te gaan of dit verband statistisch signifcant is.\n\nOefeningHintsOplossing\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nWe kunnen gebruik maken van de functie cor.test( ).\ncor.test(penguins$______, penguins$______)\n\n\n\n\nOplossing. Oplossing:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Zelftest_bivariate_regressie.html#oefening-3-1",
+    "href": "Zelftest_bivariate_regressie.html#oefening-3-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 3",
+    "text": "Oefening 3\nWe hernemen de oplossing uit de vorige oefening hieronder.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nOp het examen vragen we soms meerkeuzevragen over de interpretatie van de output. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.\n\nVraagAntwoordsleutel\n\n\nWelke van volgende uitspraken is fout? (slechts 1 antwoord mogelijk)\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\nBeide variabelen delen 5,5% variantie\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n\n\nJe diende uitspraak 4 te kiezen als foute uitspraak.\n\nIn de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns\n\n= JUIST! Inderdaad. In de steekproef is de correlatie -0,235, een negatief getal dus ook een negatief verband.\n\nBeide variabelen delen 5,5% variantie\n\n= JUIST! Ook dit klopt aangezien het kwadraat van de correlatiecoëfficiënt kan geïnterpreteerd worden als gedeelde variantie tussen beide variabelen. Het kwadraat van -0,235 bedraat 0,055. Dit is een percentage uitgedrukt in een getal tussen 0 en 1. Doen we dit maal 100 dan krijgen we het percentage op 100 (5,5% in dit geval).\n\n95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt\n\n= JUIST! Dit lezen we af in de output bij het 95 betrouwbaarheidsinterval. Zo’n betrouwbaarheidsinterval geeft een beeld van de steekproevenverdeling. Deze steekproevenverdeling is de verdeling van onze parameter, de correlatie, overheen alle mogelijke steekproeven die we zouden kunnen getrokken hebben. Uit die verdeling leren we dat 95% van deze mogelijke steekrpoeven een correlatie tussen -0,13 en -0,33 zou opleveren.\n\nDe kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%\n\n= FOUT! Dit is een typische verkeerde interpretatie van de p-waarde. Een p-waarde is een probabiliteit van de data onder de veronderstelling dat de nul-hypothese geldig is. Anders uitgedrukt: de p-waarde drukt de kans uit dat we een correlatiecoëfficiënt van -0,235 of extremer (meer negatief) zouden vaststellen in onze steekproef indien de correlatie in de populatie nul bedraagt."
+  },
+  {
+    "objectID": "Zelftest_bivariate_regressie.html#oefening-4",
+    "href": "Zelftest_bivariate_regressie.html#oefening-4",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 4",
+    "text": "Oefening 4\nNu richten we onze aandacht op de tweede onderzoeksvraag. Centraal in die onderzoeksvraag staat het nagaan van het verband van meerdere kwantitatieve variabelen.\nCreër een visualisatie die de onderlinge samenhang tussen alle 3 de variabelen in één figuur weergeeft.\n\nOefeningHintsOplossing\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nOm deze figuur te maken moet je twee stappen doorlopen:\n\neen dataframe maken met daarin enkel de betrokken variabelen;\ndeze nieuwe dataframe ‘plotten’ met het commando plot( ).\n\n\n\n\n\nOplossing. Oplossing:\nVerschillende stappen zijn nodig om deze figuur te maken. In de onderstaande oplossing kan je de twee stappen zien.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Zelftest_bivariate_regressie.html#oefening-5-1",
+    "href": "Zelftest_bivariate_regressie.html#oefening-5-1",
+    "title": "Online (R) oefeningen",
+    "section": "Oefening 5",
+    "text": "Oefening 5\nDe visualisatie uit de voorgaande oefening duidt op een positief verband tussen elk van deze variabelen onderling. De vraag is uiteraard of dit een sterk verband is en in welke mate we dit verband kunnen verwachten te zien in de gehele populatie.\nBereken de drie correlatiecoëfficiënten in één beweging en schrijf voor jezelf een rapportage neer over de bekomen resultaten. Heb bij het schrijven van een conclusieluik ook oog voor “effectgrootte”.\n\nOefeningHintsOplossingRapportage\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nNet als bij de visualisatie zijn er twee stappen nodig om een correlatiematrix te berekenen:\n\neen dataframe maken met daarin de variabelen (is zelfde eerste stap als in oefening 4);\nde correlatiematrix berekenen gebruikmakend van de functie cor.prob( ) .\n\n\n\n\n\nOplossing. Oplossing:\nOm deze correlatiematrix te berekenen maken we eerst een nieuwe dataframe aan (met de naam Variabelen) waarin de drie variabelen alleen zijn weggeschreven. Daarna gebruiken we die nieuwe dataframe Variabelen als inpunt voor de functie cor.prob( ).\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nIndien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nDe drie variabelen flipperlengte, snavellengte en gewicht zijn onderling sterk positief gecorreleerd. De correlaties situeren zich tussen 0,595 en 0,871 en zijn alledrie statistisch significant (p &lt;0,001). We verwachten in de populatie ook positieve correlaties te observeren tussen deze drie variabelen."
+  },
+  {
     "objectID": "Rapporteren.html",
     "href": "Rapporteren.html",
     "title": "Rapporteren",
