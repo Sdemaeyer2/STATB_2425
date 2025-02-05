@@ -40,9 +40,9 @@ Wanneer blijkt dat de mate waarin de leerling het project als interessant ervaar
 
 Mogelijk zorgt het opnemen van de overige variabelen die de houdingen van de leerlingen m.b.t. het techniekproject meten (‘Projectleuk’, ‘Projectbijgeleerd’, ‘Projectmoeilijk’) voor een verbetering van het model. Om dit na te gaan, test je een derde model (Model3) waarin je deze drie variabelen als controlevariabelen aan het vorige model (Model2) toevoegt.
 
-(a) Gaan de assumpties op? Pas het model indien nodig aan.
+(a) Ga na of er geen probleem is van multicollineariteit. Pas het model indien nodig aan.
 
-(b) Is Model3 een beter model dan Model2?
+(b) Is (een eventueel aangepaste versie van) Model3 een beter model dan Model2?
 
 (c) Bespreek de relevante parameters van het beste model.
 

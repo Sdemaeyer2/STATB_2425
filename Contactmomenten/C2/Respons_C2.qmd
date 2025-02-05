@@ -20,6 +20,8 @@ dataset te laden, het pakket `car` te activeren en ook de OLP2 Functies
 te activeren.
 :::
 
+## Oefening 1
+
 ::: {.callout-tip icon="false"}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
 
@@ -116,6 +118,8 @@ plot(Model.Begrijpen.Tukey)
 > kunstrichtingen (categorie 2) in onze steekproef kunnen we niet
 > doortrekken naar de populatie (p \> 0.05).
 
+## Oefening 2
+
 ::: {.callout-tip icon="false"}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
 
@@ -202,6 +206,8 @@ Als we alle output overschouwen, dan komen we tot volgende conclusie.
 > vinden in de categorie “Zeer Laag” en slechts 6.78% in de categorie
 > “Zeer Hoog”. De chi²-analyse leert ons dat het verband statistisch
 > significant is (p \< 0.05), maar eerder beperkt (Cramer’s V = 0.18).
+
+## Oefening 3
 
 ::: {.callout-tip icon="false"}
 ## <i class="bi bi-journal-richtext"></i> Oefening 3

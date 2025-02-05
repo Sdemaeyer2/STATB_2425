@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contactmoment 1: Respons computer lab – Statistiek B</title>
+<title>Contactmoment 4: Respons computer lab – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,6 +129,35 @@ cookieconsent.run({
 </script> 
   
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -144,7 +173,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Contactmoment 1: Respons computer lab</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Contactmoment 4: Respons computer lab</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -410,14 +439,23 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="Respons_C4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Op deze pagina</h2>
+   
+  <ul class="collapse">
+  <li><a href="#voorbereiding" id="toc-voorbereiding" class="nav-link active" data-scroll-target="#voorbereiding">Voorbereiding</a></li>
+  <li><a href="#oefening-1" id="toc-oefening-1" class="nav-link" data-scroll-target="#oefening-1">Oefening 1</a></li>
+  <li><a href="#oefening-2" id="toc-oefening-2" class="nav-link" data-scroll-target="#oefening-2">Oefening 2</a></li>
+  <li><a href="#oefening-3" id="toc-oefening-3" class="nav-link" data-scroll-target="#oefening-3">Oefening 3</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="Respons_C4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contactmoment 1: Respons computer lab</h1>
+<h1 class="title">Contactmoment 4: Respons computer lab</h1>
 </div>
 
 
@@ -447,6 +485,67 @@ Belangrijk
 <p>Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket <code>car</code> te activeren en ook de OLP2 Functies te activeren.</p>
 </div>
 </div>
+<section id="voorbereiding" class="level2">
+<h2 class="anchored" data-anchor-id="voorbereiding">Voorbereiding</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-journal"></i> Voorbereiding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Deze hele opdracht bevat drie oefeningen die op elkaar doorbouwen. Vooraleer we starten met de 3 oefeningen in <code>R</code> op te lossen, vragen we je enkele acties te ondernemen ter voorbereiding:</p>
+<ul>
+<li><p>Teken de modellen uit de 3 oefeningen</p></li>
+<li><p>Maak van alle variabelen die worden gebruikt in de oefeningen een z-score variant: <code>Interest.na</code>, <code>Interest.voor</code>, <code>Projectinteressant</code>, <code>Projectleuk</code>, <code>Projectbijgeleerd</code> en <code>Projectmoeilijk</code></p></li>
+<li><p>Om de verschillende modellen te kunnen vergelijken, maken we meteen gebruik van een databestand zonder ontbrekende observaties (zonder NA’s) voor alle variabelen die je nodig hebt. (functie: <code>na.omit()</code>)</p></li>
+</ul>
+</div>
+</div>
+<p>We starten met het uittekenen van de 3 modellen uit de onderzoeksvragen in de opdracht.</p>
+<p><img src="Modellen_gevisualiseerd.jpg" class="img-fluid" width="500"></p>
+<p>Een tweede voorbereidende stap is het herschalen van alle betrokken variabelen naar z-scores. Merk op dat we de herschaalde variabelen wegschrijven in telkens een nieuwe variabele eerder dan de originele variabele te overschrijven. In de verdere oefeningen maken we gebruik van deze nieuwe variabelen. Hieronder maken we gebruik van de functie <code>scale()</code>, maar je kan net zo goed de functie <code>z-score()</code> gebruiken.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Interest.voorZ <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Interest.voor)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Interest.naZ <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Interest.na)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>ProjectinteressantZ <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Projectinteressant)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>ProjectmoeilijkZ <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Projectmoeilijk)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>ProjectleukZ <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Projectleuk)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>ProjectbijgeleerdZ <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Projectbijgeleerd)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>De laatste stap is het aanmaken van een dataframe waarin enkel de data bewaard zijn van respondenten die voor geen van deze betrokken variabelen een ontbrekende waarde hebben. Dit doen we aan de hand van de <code>na.omit()</code> functie.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>DataC4 <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  Techniek[ ,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Interest.voorZ"</span>, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Interest.naZ"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">"ProjectinteressantZ"</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>              <span class="st">"ProjectmoeilijkZ"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">"ProjectleukZ"</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">"ProjectbijgeleerdZ"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Opmerking
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In het bovenstaande code-blok heb ik bewust een code-stijl gebruikt die veel overzichtelijker is. Door de code overheen verschillende lijnen te spreiden kan je makkelijker de haakjes van elkaar onderscheiden en zie je welke argumenten in welk onderdeel behoren.</p>
+</div>
+</div>
+</section>
+<section id="oefening-1" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-1">Oefening 1</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -457,64 +556,74 @@ Belangrijk
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>In een eerste model (Model1) onderzoeken we in welke mate het interessant vinden van het project (<code>Projectinteressant</code>) een invloed heeft op de interesse in techniek na het project (<code>Interest.na</code>).</p>
 <ol type="a">
-<li><p>Is er een verschil in interesse voor techniek (<code>Interest.voor</code>) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (<code>Dipvader</code>)?</p></li>
-<li><p>Hoe groot is het effect van de variabele <code>Dipvader</code> op <code>Interest.voor</code>?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
+<li><p>Schat het model en bespreek de relevante parameters</p></li>
+<li><p>Ga de assumpties m.b.t. dit model na</p></li>
 </ol>
 </div>
 </div>
 <ol type="a">
 <li></li>
 </ol>
-<p>Vooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.</p>
+<p>We starten met het schatten van het model. Daarbij maak ik uiteraard gebruik van de nieuw aangemaakte dataframe hierboven: <code>DataC4</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Techniek<span class="sc">$</span>Interest.voor, Techniek<span class="sc">$</span>Dipvader)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Levene's Test for Homogeneity of Variance (center = median)
-        Df F value Pr(&gt;F)
-group    1  0.0614 0.8043
-      2172               </code></pre>
-</div>
-</div>
-<p>Kijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.</p>
-<p>Nu zijn we klaar om de t-test zelf uit te voeren.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Dipvader,<span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Interest.naZ<span class="sc">~</span>ProjectinteressantZ, <span class="at">data =</span> DataC4)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Two Sample t-test
+Call:
+lm(formula = Interest.naZ ~ ProjectinteressantZ, data = DataC4)
 
-data:  Techniek$Interest.voor by Techniek$Dipvader
-t = 3.9534, df = 2172, p-value = 7.95e-05
-alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
-95 percent confidence interval:
- 0.08344689 0.24771611
-sample estimates:
-mean in group 0 mean in group 1 
-       3.022044        2.856463 </code></pre>
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.4811 -0.6902 -0.0363  0.6031  2.6525 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)         -0.004071   0.019856  -0.205    0.838    
+ProjectinteressantZ  0.324501   0.019861  16.339   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.9502 on 2288 degrees of freedom
+Multiple R-squared:  0.1045,    Adjusted R-squared:  0.1041 
+F-statistic:   267 on 1 and 2288 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<p>We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.</p>
-<p>Uit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje <code>p-value = 7.95e-05</code> wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.</p>
+<ul>
+<li><p>R-kwadraat = 0.10: het gaat om een medium effect (10% verklaarde variantie in <code>Interest.naZ</code>);</p></li>
+<li><p>met p &lt; 0.05 voorhet gehele model: kans dat we deze verklaarde variantie zouden vaststellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat dit model in de populatie WEL variantie verklaart in <code>Interest.naZ</code>.</p></li>
+<li><p>parameterschatting van het intercept = -0.004: voor een leerling die 0 scoort op <code>ProjectinteressantZ</code> verwachten we een score van -0.004 op <code>Interest.naZ</code></p></li>
+<li><p>met p &gt; 0.05 voor de parameterschatting van het intercept: kans dat we deze interceptwaarde vaststellen in onze steekproef indien H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dit NIET in de populatie terug te vinden. Het verwachte intercept in de populatie is dus 0. Dit is niet verwonderlijk aangezien zowel de onafhankelijke (<code>ProjectinteressantZ</code>) als de afhankelijke variabele (<code>Interest.naZ</code>) gestandaardiseerd zijn. Het intercept geeft hier dus de score weer op <code>Interest.naZ</code> voor een leerling die gemiddeld scoort op <code>ProjectinteressantZ</code>. M.a.w., in de populatie scoren leerlingen die gemiddeld scoren op <code>ProjectinteressantZ</code> ook gemiddeld op <code>Interest.naZ</code>.</p></li>
+<li><p><span class="math inline">\(\beta_{ProjectinteressantZ}\)</span> = 0.32, dus 1 SD (in standaarddeviaties uitgedrukt want z-score) hoger scoren op <code>ProjectinteressantZ</code> leidt tot 0.32 SD (in standaarddeviaties uitgedrukt want z-score) hoger scoren op <code>Interest.naZ</code></p></li>
+<li><p>met p &lt; 0.05: kans dat we deze slope in onze steekproef vaststellen indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat <code>ProjectinteressantZ</code> in de populatie WEL invloed heeft op <code>Interest.naZ</code>.</p></li>
+</ul>
+<p><strong>Conclusie</strong></p>
+<blockquote class="blockquote">
+<p>De mate waarin leerlingen het project interessant vinden (<code>ProjectinteressantZ</code>), heeft een medium significant effect op hun interesse in techniek na het project (<code>Interest.naZ</code>; R² = 0.10; p &lt; 0.05). Het effect is hier statistisch significant en positief (ß = 0.32, p &lt; 0.05). Voor elke SD dat een leerling meer scoort op <code>ProjectinteressantZ</code> zal de interesse in techniek na het project (<code>Interest.naZ</code>) met 0.32 SD toenemen. Een leerling die gemiddle scoort op <code>ProjectinteressantZ</code> scoort -0.004 op <code>Interest.naZ</code>. Dit kunnen we echter niet doortrekken naar de populatie (p &gt; 0.05). In de populatie verwachten we dat een leerling die het project gemiddeld interessant vindt, ook een gemiddelde interesse in techniek na het project zal hebben.</p>
+</blockquote>
 <ol start="2" type="a">
 <li></li>
 </ol>
-<p>Vervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d.&nbsp;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Dipvader)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1701453</code></pre>
+<p>Vervolgens gaan we de assumpties na voor dit model door verschillende visualisaties aan te maken.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Opmerking
 </div>
 </div>
-<p>De Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.</p>
-<ol start="3" type="a">
-<li></li>
-</ol>
+<div class="callout-body-container callout-body">
+<p>De twee laatste plots zijn <em>interactieve</em> plots. Dat wil zeggen dat je op je pc ook punten kan aanklikken en je krijgt vervolgens een nummer te zien. Dit is de case-nummer (rij-nummer) voor dat datapunt. In de output hier hebben we dat (omwille van technische redenen) niet kunnen doen.</p>
+</div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Dipvader,</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab=</span><span class="st">"Diploma HO vader"</span>,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab=</span><span class="st">"Interesse in techniek"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotvenster in 4 delen (2 rijen en 2 kolommen)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -522,7 +631,42 @@ mean in group 0 mean in group 1
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>)) <span class="co">#zo zet je het plotvenster terug op standaardweergave</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">residuals_plot</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Respons_C4_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>integer(0)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cooks_plot</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Respons_C4_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>integer(0)</code></pre>
+</div>
+</div>
+<p><strong>Homoscedasticiteit:</strong></p>
+<p>Grafiek ‘Residuals versus Fitted’: spreiding blijft quasi gelijk naarmate de fitted value toeneemt. Dit duidt op homoscedasticiteit.</p>
+<p>Grafiek ‘Scale-location plot’: de rode lijn in de plot loopt min of meer recht. Dit duidt op homoscedasticiteit.</p>
+<p><strong>Errortermen normaal verdeeld:</strong></p>
+<p>Grafiek ‘Q-Q plot’: alle punten vallen min of meer op de rechte lijn. Dit geeft aan dat de errortermen normaal verdeeld zijn.</p>
+<p><strong>geen clustering en een lineair verband:</strong></p>
+<p>Grafiek ‘Residuals versus Fitted’: op deze grafiek is geen clustering van waarnemingen terug te vinden. Noch kan je op basis van deze grafiek een niet-lineair verband vermoeden.</p>
+<p><strong>wel outliers:</strong></p>
+<p>Grafieken ‘Residuals plot’ &amp; ‘Cooks plot’: duidelijk aantal outliers zichtbaar. Deze zouden idealiter verwijderd moeten worden en dan zou je het model opnieuw kunnen schatten. Dat is hier niet de opdracht, dus doen we dat niet.</p>
+</section>
+<section id="oefening-2" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-2">Oefening 2</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -533,73 +677,81 @@ mean in group 0 mean in group 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Wanneer blijkt dat de mate waarin de leerling het project als interessant ervaart er toe doet, kun je je natuurlijk afvragen hoe dat komt. Misschien is het zo dat leerlingen die techniek sowieso al interessant vonden voor het project (<code>Interest.voor</code>) nadien ook een hogere interesse behouden (die hadden ze tenslotte al voor het project). Om dit na te gaan, test je een tweede model (Model2) waarin je <code>Interest.voor</code> als controlevariabele aan het vorige model (Model1) toevoegt.</p>
 <ol type="a">
-<li><p>Is er een verschil in interesse voor techniek (<code>Interesse.voor</code>) tussen eerste- en tweedejaars leerlingen (<code>Studiejaar</code>)?</p></li>
-<li><p>Hoe groot is het effect van <code>Studiejaar</code> op <code>Interesse.voor</code>?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
+<li><p>Is dit model (Model2) een beter model dan Model1?</p></li>
+<li><p>Bespreek de relevante parameters van het beste model.</p></li>
 </ol>
 </div>
 </div>
 <ol type="a">
 <li></li>
 </ol>
-<p>Opnieuw voeren we eerst de Levene Test uit.</p>
+<p>We schatten dit tweede model en vergelijken dit model met het eerste model.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Techniek<span class="sc">$</span>Interest.voor, Techniek<span class="sc">$</span>Studiejaar)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Interest.naZ <span class="sc">~</span> ProjectinteressantZ <span class="sc">+</span> Interest.voorZ, <span class="at">data =</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>DataC4)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(Model1, Model2)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Levene's Test for Homogeneity of Variance (center = median)
-        Df F value Pr(&gt;F)  
-group    1     5.5 0.0191 *
-      2288                 
+<pre><code>Analysis of Variance Table
+
+Model 1: Interest.naZ ~ ProjectinteressantZ
+Model 2: Interest.naZ ~ ProjectinteressantZ + Interest.voorZ
+  Res.Df    RSS Df Sum of Sq      F    Pr(&gt;F)    
+1   2288 2065.7                                  
+2   2287 1310.5  1    755.26 1318.1 &lt; 2.2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-<p>Ditmaal is de bijhorende p-waarde lager dan 0.05 (zie <code>0.0191 *</code> in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in <code>R</code> door het argument <code>var.equal=FALSE</code> toe te voegen bij het opvragen van de t-test.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Studiejaar,<span class="at">var.equal=</span><span class="cn">FALSE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Welch Two Sample t-test
-
-data:  Techniek$Interest.voor by Techniek$Studiejaar
-t = 13.277, df = 2260.6, p-value &lt; 2.2e-16
-alternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0
-95 percent confidence interval:
- 0.4433075 0.5969520
-sample estimates:
-mean in group 1 mean in group 2 
-       3.211843        2.691714 </code></pre>
-</div>
-</div>
-<p>We lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).</p>
-<p>Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie <code>p-value &lt; 2.2e-16</code> in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.</p>
+<p>De Residuals Sum of Squares (RSS) van Model1 = 2065.7, RSS van Model2 = 1310.5. Gebaseerd op de F-test voor het vergelijken van beide modellen leren we dat Model 2 statistisch significant beter bij de data past dan model 1 (p &lt; 0.05). We weerhouden dus best Model 2.</p>
 <ol start="2" type="a">
 <li></li>
 </ol>
-<p>Vervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.</p>
+<p>Nu we beslissen om Model2 te weerhouden, kunnen we de informatie over de parameterschattingen uit dat model opvragen in <code>R</code> via het <code>summary( )</code> commando.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Studiejaar)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model2)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5557404</code></pre>
+<pre><code>
+Call:
+lm(formula = Interest.naZ ~ ProjectinteressantZ + Interest.voorZ, 
+    data = DataC4)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.0384 -0.4520  0.0093  0.4924  2.7215 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)         -0.003766   0.015818  -0.238    0.812    
+ProjectinteressantZ  0.180850   0.016310  11.089   &lt;2e-16 ***
+Interest.voorZ       0.592104   0.016309  36.305   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.757 on 2287 degrees of freedom
+Multiple R-squared:  0.4319,    Adjusted R-squared:  0.4314 
+F-statistic: 869.3 on 2 and 2287 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<p>De Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.</p>
-<ol start="3" type="a">
-<li></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Studiejaar,</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab=</span><span class="st">"Studiejaar"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab=</span><span class="st">"Interesse in techniek"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Respons_C4_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<ul>
+<li><p>R-kwadraat = 0.43: het gaat om een groot effect (43% verklaarde variantie in <code>Interest.naZ</code>);</p></li>
+<li><p>Met p &lt; 0.05: kans dat we deze verklaarde variantie in onze steekproef zouden vaststellen indien H0 opgaat in de populatie is kleiner dan 5%, dus we verwachten dat dit model in de populatie WEL variantie verklaart in <code>Interest.naZ</code></p></li>
+<li><p>intercept = -0.004: een leerling die 0 scoort op <code>ProjectinteressantZ</code> en <code>Interest.voor</code> scoort -0.004 op <code>Interest.naZ</code>;</p></li>
+<li><p>Met p &gt; 0.05: kans dat we deze interceptwaarde in onze steekproef vaststellen indien H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dit NIET in de populatie terug te vinden. Het verwachtte intercept in de populatie is dus 0. Dit is niet verwonderlijke aangezien zowel de onafhankelijke variabelen (<code>Interest.voorZ</code> en <code>ProjectinteressantZ</code>) als de afhankelijke variabele (<code>Interest.naZ</code>) zijn gestandaardiseerd. Het intercept geeft hier dus de score weer op <code>Interest.naZ</code> voor leerlingen die gemiddeld scoren op <code>Interest.voorZ</code> en <code>ProjectinteressantZ</code>. M.a.w., in de populatie scoren leerlingen die gemiddeld scoren op <code>Interest.voorZ</code> en <code>ProjectinteressantZ</code> ook gemiddeld op <code>Interessant.na</code>.</p></li>
+<li><p><span class="math inline">\(\beta_{ProjectinteressantZ}\)</span> = 0.18, dus 1 SD (want z-score!) hoger scoren op <code>Projectinteressant</code> leidt tot 0.18 SD (want z-score!) hoger scoren op <code>Interest.na</code></p></li>
+<li><p>Met p &lt; 0.05: kans dat we deze slope vaststellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat <code>Projectinteressant</code> in de populatie WEL invloed heeft op <code>Interest.na</code>.</p></li>
+<li><p><span class="math inline">\(\beta_{Interest.voorZ} = 0.59\)</span>, dus 1 SD (want z-score!) hoger scoren op <code>Interest.voorZ</code> leidt tot 0.59 SD (want z-score!) hoger scoren op <code>Interest.na</code></p></li>
+<li><p>Met p &lt; 0.05: kans dat we deze slope vaststellen in de steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat <code>Interest.voorZ</code> in de populatie WEL invloed heeft op <code>Interest.naZ</code>.</p></li>
+<li><p>Bovendien is dit effect sterker dan dat van <code>ProjectinteressantZ</code>. (Je mag de sterkte van beide effecten met elkaar vergelijken, omdat beide variabelen gestandaardiseerd zijn en dus op dezelfde schaal staan.)</p></li>
+</ul>
+<p><strong>Conclusie</strong></p>
+<blockquote class="blockquote">
+<p>Interesse in techniek voor het project (<code>Interest.voorZ</code>) en de mate waarin leerlingen het project interessant (<code>ProjectinteressantZ</code>) vinden verklaren de interesse in techniek van leerlingen na het project (<code>Interest.naZ</code>) beter als het model waarin enkel <code>ProjectinteressantZ</code> als onafhankelijke variabele is opgenomen (∆RSS = 755.26, p &lt; 0.05). Het gaat bovendien om een sterk, significant effect (R-kwadraat = 0.43, p &lt; 0.05). Het intercept is niet statistisch significant (p &gt; 0.05). Een leerling die gemiddeld scoort op <code>ProjectinteressantZ</code> en <code>Interest.voorZ</code> scoort dus ook gemiddeld op <code>Interest.naZ</code> in de populatie. Zowel <code>ProjectinteressantZ</code> als <code>Interest.voorZ</code> hebben een positief en statistisch significant (p &lt; 0.05) effect op <code>Interest.naZ</code>. Een toename van 1 SD in <code>ProjectinteressantZ</code> leidt tot een toename van 0.18 SD in <code>Interest.naZ</code>. Het effect van <code>Interest.voorZ</code> is sterker (ß = 0.59). 1 SD hoger scoren op interesse in techniek voor het project leidt tot een toename van 0.59 SD in interesse in techniek na het project.</p>
+</blockquote>
+</section>
+<section id="oefening-3" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-3">Oefening 3</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -610,65 +762,146 @@ mean in group 1 mean in group 2
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (<code>Interest.voor</code>) en aan het einde van datzelfde trimester (<code>Interest.na</code>). Daarom kunnen we de volgende onderzoeksvraag nagaan:</p>
+<p>Mogelijk zorgt het opnemen van de overige variabelen die de houdingen van de leerlingen m.b.t. het techniekproject meten (‘Projectleuk’, ‘Projectbijgeleerd’, ‘Projectmoeilijk’) voor een verbetering van het model. Om dit na te gaan, test je een derde model (Model3) waarin je deze drie variabelen als controlevariabelen aan het vorige model (Model2) toevoegt.</p>
 <ol type="a">
-<li><p>Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?</p></li>
-<li><p>Hoe groot is het effect van een trimester technieklessen?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
+<li><p>Ga na of er geen probleem is van multicollineariteit. Pas het model indien nodig aan.</p></li>
+<li><p>Is (een eventueel aangepaste versie van) Model3 een beter model dan Model2?</p></li>
+<li><p>Bespreek de relevante parameters van het beste model.</p></li>
+<li><p>Welke score op ‘Interest.naZ’ behaalt iemand die:</p></li>
 </ol>
+<ul>
+<li>gemiddeld scoort op alle onafhankelijke variabelen in de steekproef</li>
+<li>gemiddeld scoort op alle onafhankelijke variabelen in de populatie</li>
+<li>1 SD hoger scoort voor ‘Interest.voorZ’ en 1 SD lager scoort voor ‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0) in de steekproef</li>
+<li>1 SD hoger scoort voor ‘Interest.voorZ’ en en 1 SD lager scoort voor ‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0) in de populatie</li>
+</ul>
+<p><strong>Rond bij het berekenen van de voorspelde scores altijd af tot op 3 cijfers na de komma!</strong></p>
 </div>
 </div>
-<p>Deze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een <em>independent samples t-test</em> omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een <em>paired samples t-test</em> .</p>
 <ol type="a">
 <li></li>
 </ol>
-<p>Om deze <em>paired samples t-test</em> uit te voeren maken we gebruik van het argument <code>paired = TRUE</code> in de <code>t.test()</code> functie.</p>
+<p>Hieronder schatten we dit model in z’n geheel en gaan meteen de multicollineariteit na aan de hand van de functie <code>vif()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Interest.na, <span class="at">paired=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Interest.naZ <span class="sc">~</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>               ProjectinteressantZ <span class="sc">+</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>               Interest.voorZ <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>               ProjectleukZ <span class="sc">+</span> </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>               ProjectbijgeleerdZ <span class="sc">+</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>               ProjectmoeilijkZ, </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> DataC4)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(Model3)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ProjectinteressantZ      Interest.voorZ        ProjectleukZ  ProjectbijgeleerdZ 
+           7.041215            1.117586            5.554361            3.859391 
+   ProjectmoeilijkZ 
+           1.278241 </code></pre>
+</div>
+</div>
+<p>Uit de bovenstaande output leren we dat de VIF voor <code>ProjectinteressantZ</code> 7.04 bedraagt en voor <code>ProjectleukZ</code> 5.55. Deze twee waarden duiden op een mogelijk probleem van multicollinearitet. We kunnen eveneens de correlatie berekenen tussen deze twee variabelen om meer zicht te krijgen op hun onderlinge samenhang al verklaring voor het mogelijk multicollineariteitsprobleem.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(DataC4<span class="sc">$</span>ProjectinteressantZ, DataC4<span class="sc">$</span>ProjectleukZ)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Paired t-test
+    Pearson's product-moment correlation
 
-data:  Techniek$Interest.voor and Techniek$Interest.na
-t = 1.9696, df = 2289, p-value = 0.049
-alternative hypothesis: true mean difference is not equal to 0
+data:  DataC4$ProjectinteressantZ and DataC4$ProjectleukZ
+t = 99.142, df = 2288, p-value &lt; 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.000149209 0.067973062
+ 0.8926227 0.9081126
 sample estimates:
-mean difference 
-     0.03406114 </code></pre>
+      cor 
+0.9006534 </code></pre>
 </div>
 </div>
-<p>Het verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.</p>
-<p>We lezen af dat de p-waarde lager is dan 0.05 (zie <code>p-value = 0.049</code>). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.</p>
+<p>Deze variabelen blijken zeer sterk te correleren (r = 0.90). Daarom is het aangewezen om het model de herdraaien zonder één van beide variabelen. Anders levert dit vertekende significantietoetsen voor de betrokken variabelen op. Daarom herschatten we het model zonder de controlevariabele <code>ProjectleukZ</code> (zie Model4).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>Model4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Interest.naZ <span class="sc">~</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>               ProjectinteressantZ <span class="sc">+</span> </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>               Interest.voorZ <span class="sc">+</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>               ProjectbijgeleerdZ <span class="sc">+</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>               ProjectmoeilijkZ, </span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> DataC4)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(Model4)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ProjectinteressantZ      Interest.voorZ  ProjectbijgeleerdZ    ProjectmoeilijkZ 
+           3.671585            1.107204            3.725005            1.278237 </code></pre>
+</div>
+</div>
+<p>Uit de output blijkt dat het multicollineariteitsprobleem in Model4 is opgelost. We werken dus verder met Model4.</p>
 <ol start="2" type="a">
 <li></li>
 </ol>
-<p>Vervolgens berekenen we de Cohen’s d aan de hand van de functie <code>dpaired()</code>. Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).</p>
+<p>Vervolgens gaan we dit Model4 vergelijken met Model2 om te weten of dit model beter de data vooropelt.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dpaired</span>(<span class="fl">1.9696</span>,<span class="dv">2290</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(Model2, Model4)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.04115857</code></pre>
+<pre><code>Analysis of Variance Table
+
+Model 1: Interest.naZ ~ ProjectinteressantZ + Interest.voorZ
+Model 2: Interest.naZ ~ ProjectinteressantZ + Interest.voorZ + ProjectbijgeleerdZ + 
+    ProjectmoeilijkZ
+  Res.Df    RSS Df Sum of Sq      F    Pr(&gt;F)    
+1   2287 1310.5                                  
+2   2285 1297.3  2    13.166 11.595 9.765e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-<p>Cohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.</p>
+<p>RSS voor Model2 = 1310.5; RSS voor Model4 = 1297.3, p &lt; 0.05 Model4 is statistisch significant beter dan Model2. Model4 heeft een lagere RSS. Het verschil in RSS (∆RSS = 13.17) is statistisch significant (p &lt; 0.05). Dus we kunnen concluderen dat Model4 de verschillen in interesse in techniek na het project (<code>Interest.naZ</code>) beter voorspelt dan Model2 (∆RSS = 13.17, p &lt; 0.05).</p>
 <ol start="3" type="a">
 <li></li>
 </ol>
+<p>We vragen de parameterschattingen van Model4 op.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar2</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Interest.na,</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab=</span><span class="st">"Meting voor en na"</span>,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">ylab=</span><span class="st">"Interesse"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Respons_C4_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model4)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Interest.naZ ~ ProjectinteressantZ + Interest.voorZ + 
+    ProjectbijgeleerdZ + ProjectmoeilijkZ, data = DataC4)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.0431 -0.4473  0.0046  0.4895  2.7835 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)         -0.003901   0.015746  -0.248    0.804    
+ProjectinteressantZ  0.188626   0.030178   6.250 4.87e-10 ***
+Interest.voorZ       0.576293   0.016572  34.776  &lt; 2e-16 ***
+ProjectbijgeleerdZ   0.034290   0.030389   1.128    0.259    
+ProjectmoeilijkZ    -0.085936   0.017852  -4.814 1.58e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.7535 on 2285 degrees of freedom
+Multiple R-squared:  0.4376,    Adjusted R-squared:  0.4366 
+F-statistic: 444.5 on 4 and 2285 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-</div>
+<ul>
+<li><p>R-kwadraat = 0.44: het gaat om een groot effect (44% verklaarde variantie in <code>Interest.naZ</code>)</p></li>
+<li><p>Met p &lt; 0.05: kans dat we dit vaststellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat dit model in de populatie WEL variantie verklaart in <code>Interest.naZ</code>.</p></li>
+<li><p>intercept = -0.004: een leerling die 0 scoort op <code>ProjectinteressantZ</code>, <code>Interest.voor</code>, <code>ProjectbijgeleerdZ</code> en <code>ProjectmoeilijkZ</code> behaalt -0.004 op <code>Interest.naZ</code></p></li>
+<li><p>Met p &gt; 0.05: kans dat we deze waarde voor het intercept in onze steekproef vaststellen indien H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dit NIET in de populatie terug te vinden. Het verwachtte intercept in de populatie is dus 0. Dit is niet verwonderlijke aangezien zowel de onafhankelijke variabelen als de afhankelijke variabele gestandaardiseerd zijn. Het intercept geeft hier dus de score weer op <code>Interest.naZ</code>voor leerlingen die gemiddeld scoren op alle onafhankelijke variabelen. M.a.w., in de populatie scoren leerlingen die gemiddeld scoren op <code>Interest.voorZ</code>, <code>ProjectinteressantZ</code>, <code>ProjectmoeilijkZ</code> en <code>ProjectbijgeleerdZ</code> ook gemiddeld op <code>Interest.naZ</code>.</p></li>
+<li><p><span class="math inline">\(\beta_{ProjectinteressantZ}\)</span> = 0.19, dus 1 SD (want z-score!) hoger scoren op <code>ProjectinteressantZ</code> leidt tot 0.19 SD (want z-score!) hoger scoren op <code>Interest.naZ</code></p></li>
+<li><p>Met p &lt; 0.05: kans dat we deze slope vaststellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat <code>ProjectinteressantZ</code> in de populatie WEL invloed heeft op <code>Interest.naZ</code>.</p></li>
+<li><p><span class="math inline">\(\beta_{Interest.voorZ}\)</span> = 0.58, dus 1 SD (want z-score!) hoger scoren op <code>Interest.voorZ</code>leidt tot 0.58 SD (want z-score!) hoger scoren op <code>Interest.naZ</code></p></li>
+<li><p>Met p &lt; 0.05: kans dat we deze slope vaststellen in de steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat <code>Interest.voorZ</code> in de populatie WEL invloed heeft op <code>Interest.naZ</code>. Bovendien is dit effect sterker dan dat van <code>ProjectinteressantZ</code> en dat van <code>ProjectmoeilijkZ</code>. (Je mag de sterkte van deze effecten met elkaar vergelijken, omdat beide variabelen gestandaardiseerd zijn en dus op dezelfde schaal staan.)</p></li>
+<li><p><span class="math inline">\(\beta_{ProjectibijgeleerdZ}\)</span> = 0.03, dus 1 SD (want z-score!) hoger scoren op <code>ProjectbijgeleerdZ</code> leidt tot 0.03 SD (want z-score!) hoger scoren op <code>Interest.naZ</code></p></li>
+<li><p>Met p &gt; 0.05: kans dat H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dat <code>ProjectinteressantZ</code> in de populatie GEEN invloed heeft op <code>Interest.naZ</code>.</p></li>
+<li><p><span class="math inline">\(\beta_{ProjectmoeilijkZ}\)</span> = -0.09, dus 1 SD (want z-score!) hoger scoren op <code>ProjectmoeilijkZ</code> leidt tot 0.09 SD (want z-score!) lager scoren op <code>Interest.naZ</code></p></li>
+<li><p>Met p &lt; 0.05: kans dat we deze hellingsgraad vastellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat <code>ProjectmoeilijkZ</code> in de populatie WEL invloed heeft op <code>Interest.naZ</code>.</p></li>
+</ul>
+<p><strong>Conclusie:</strong></p>
+<blockquote class="blockquote">
+<p><code>ProjectinteressantZ</code>, <code>Interest.voorZ</code>, <code>ProjectbijgeleerdZ</code> en <code>ProjectmoeilijkZ</code> verklaren 43% van de variantie in ‘Interest.naZ’. Het gaat dus om een sterk effect dat bovendien mag worden doorgetrokken naar de populatie (R2 = 0.44, p &lt; 0.05). Het intercept is niet statistisch significant (p &gt; 0.05). Een leerling die gemiddeld scoort op <code>ProjectinteressantZ</code>, <code>Interest.voorZ</code>, <code>ProjectbijgeleerdZ</code> en <code>ProjectmoeilijkZ</code> scoort dus ook gemiddeld op <code>Interest.naZ</code> in de populatie. Zowel <code>ProjectinteressantZ</code> als <code>Interest.voorZ</code> hebben een positief en statistisch significant (p &lt; 0.05) effect op <code>Interest.naZ</code>. Een toename van 1 SD in <code>ProjectinteressantZ</code> leidt tot een toename van 0.19 SD in <code>Interest.naZ</code>. Het effect van <code>Interest.voorZ</code> is sterker (ß = 0.58). 1 SD hoger scoren op interesse in techniek voor het project (<code>Interest.voorZ</code>) leidt tot een toename van 0.58 SD in interesse in techniek na het project (<code>Interest.naZ</code>). De invloed van <code>ProjectmoeilijkZ</code> op <code>Interest.naZ</code> is negatief en statistisch significant (p &lt; 0.05). Leerlingen die het project als 1 SD moeilijker ervaren, scoren 0.09 SD lager op <code>Interest.naZ</code>. De percepties van leerlingen m.b.t. bijleren tijdens het project (<code>ProjectbijgeleerdZ</code>) hebben geen significante invloed op hun interesse in techniek na het project (p &gt; 0.05).</p>
+</blockquote>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,8 +1,10 @@
 ---
-title: "Contactmoment 1: Respons computer lab"
+title: "Contactmoment 4: Respons computer lab"
 
 format: 
-  html: default
+  html: 
+    toc: true
+    toc-depth: 2
   pdf: default
 ---
 
@@ -14,147 +16,422 @@ library(car)
 source(here("Contactmomenten", "OLP2 Functies.R"))
 ```
 
-::: {.callout-important}
-Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket `car` te activeren en ook de OLP2 Functies te activeren. 
+::: callout-important
+Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de
+dataset te laden, het pakket `car` te activeren en ook de OLP2 Functies
+te activeren.
 :::
 
-::: {.callout-tip icon=false}
+## Voorbereiding
+
+::: {.callout-tip icon="false"}
+## <i class="bi bi-journal"></i> Voorbereiding
+
+Deze hele opdracht bevat drie oefeningen die op elkaar doorbouwen.
+Vooraleer we starten met de 3 oefeningen in `R` op te lossen, vragen we
+je enkele acties te ondernemen ter voorbereiding:
+
+-   Teken de modellen uit de 3 oefeningen
+
+-   Maak van alle variabelen die worden gebruikt in de oefeningen een
+    z-score variant: `Interest.na`, `Interest.voor`,
+    `Projectinteressant`, `Projectleuk`, `Projectbijgeleerd` en
+    `Projectmoeilijk`
+
+-   Om de verschillende modellen te kunnen vergelijken, maken we meteen
+    gebruik van een databestand zonder ontbrekende observaties (zonder
+    NA's) voor alle variabelen die je nodig hebt. (functie: `na.omit()`)
+:::
+
+We starten met het uittekenen van de 3 modellen uit de onderzoeksvragen
+in de opdracht.
+
+![](Modellen_gevisualiseerd.jpg){width="500"}
+
+Een tweede voorbereidende stap is het herschalen van alle betrokken
+variabelen naar z-scores. Merk op dat we de herschaalde variabelen
+wegschrijven in telkens een nieuwe variabele eerder dan de originele
+variabele te overschrijven. In de verdere oefeningen maken we gebruik
+van deze nieuwe variabelen. Hieronder maken we gebruik van de functie
+`scale()`, maar je kan net zo goed de functie `z-score()` gebruiken.
+
+```{r}
+Techniek$Interest.voorZ <- scale(Techniek$Interest.voor)
+Techniek$Interest.naZ <- scale(Techniek$Interest.na)
+Techniek$ProjectinteressantZ <- scale(Techniek$Projectinteressant)
+Techniek$ProjectmoeilijkZ <- scale(Techniek$Projectmoeilijk)
+Techniek$ProjectleukZ <- scale(Techniek$Projectleuk)
+Techniek$ProjectbijgeleerdZ <- scale(Techniek$Projectbijgeleerd)
+```
+
+De laatste stap is het aanmaken van een dataframe waarin enkel de data
+bewaard zijn van respondenten die voor geen van deze betrokken
+variabelen een ontbrekende waarde hebben. Dit doen we aan de hand van de
+`na.omit()` functie.
+
+```{r}
+DataC4 <- na.omit(
+  Techniek[ ,
+            c("Interest.voorZ", 
+              "Interest.naZ",
+              "ProjectinteressantZ", 
+              "ProjectmoeilijkZ",
+              "ProjectleukZ", 
+              "ProjectbijgeleerdZ"
+              )
+            ]
+  )
+```
+
+::: {.callout-note icon="true"}
+In het bovenstaande code-blok heb ik bewust een code-stijl gebruikt die
+veel overzichtelijker is. Door de code overheen verschillende lijnen te
+spreiden kan je makkelijker de haakjes van elkaar onderscheiden en zie
+je welke argumenten in welk onderdeel behoren.
+:::
+
+## Oefening 1
+
+::: {.callout-tip icon="false"}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
 
-(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
+In een eerste model (Model1) onderzoeken we in welke mate het
+interessant vinden van het project (`Projectinteressant`) een invloed
+heeft op de interesse in techniek na het project (`Interest.na`).
 
-(b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
+(a) Schat het model en bespreek de relevante parameters
 
-(c) Geef het effect visueel weer.
+(b) Ga de assumpties m.b.t. dit model na
 :::
 
 (a) 
 
-Vooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.
+We starten met het schatten van het model. Daarbij maak ik uiteraard
+gebruik van de nieuw aangemaakte dataframe hierboven: `DataC4`.
 
 ```{r}
-leveneTest(Techniek$Interest.voor, Techniek$Dipvader)
+Model1 <- lm(Interest.naZ~ProjectinteressantZ, data = DataC4)
+summary(Model1)
 ```
-Kijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan. 
 
-Nu zijn we klaar om de t-test zelf uit te voeren.
+-   R-kwadraat = 0.10: het gaat om een medium effect (10% verklaarde
+    variantie in `Interest.naZ`);
 
-```{r}
-t.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)
-```
-We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (`Dipvader` heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (`Dipvader` heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.
+-   met p \< 0.05 voorhet gehele model: kans dat we deze verklaarde
+    variantie zouden vaststellen in onze steekproef indien H0 opgaat in
+    de populatie is kleiner dan 5%. Dus we verwachten dat dit model in
+    de populatie WEL variantie verklaart in `Interest.naZ`.
 
-Uit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje `p-value = 7.95e-05` wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.
+-   parameterschatting van het intercept = -0.004: voor een leerling die
+    0 scoort op `ProjectinteressantZ` verwachten we een score van -0.004
+    op `Interest.naZ`
+
+-   met p \> 0.05 voor de parameterschatting van het intercept: kans dat
+    we deze interceptwaarde vaststellen in onze steekproef indien H0
+    opgaat in de populatie is groter dan 5%. Dus we verwachten dit NIET
+    in de populatie terug te vinden. Het verwachte intercept in de
+    populatie is dus 0. Dit is niet verwonderlijk aangezien zowel de
+    onafhankelijke (`ProjectinteressantZ`) als de afhankelijke variabele
+    (`Interest.naZ`) gestandaardiseerd zijn. Het intercept geeft hier
+    dus de score weer op `Interest.naZ` voor een leerling die gemiddeld
+    scoort op `ProjectinteressantZ`. M.a.w., in de populatie scoren
+    leerlingen die gemiddeld scoren op `ProjectinteressantZ` ook
+    gemiddeld op `Interest.naZ`.
+
+-   $\beta_{ProjectinteressantZ}$ = 0.32, dus 1 SD (in
+    standaarddeviaties uitgedrukt want z-score) hoger scoren op
+    `ProjectinteressantZ` leidt tot 0.32 SD (in standaarddeviaties
+    uitgedrukt want z-score) hoger scoren op `Interest.naZ`
+
+-   met p \< 0.05: kans dat we deze slope in onze steekproef vaststellen
+    indien H0 opgaat in de populatie is kleiner dan 5%. Dus we
+    verwachten dat `ProjectinteressantZ` in de populatie WEL invloed
+    heeft op `Interest.naZ`.
+
+**Conclusie**
+
+> De mate waarin leerlingen het project interessant vinden
+> (`ProjectinteressantZ`), heeft een medium significant effect op hun
+> interesse in techniek na het project (`Interest.naZ`; R² = 0.10; p \<
+> 0.05). Het effect is hier statistisch significant en positief (ß =
+> 0.32, p \< 0.05). Voor elke SD dat een leerling meer scoort op
+> `ProjectinteressantZ` zal de interesse in techniek na het project
+> (`Interest.naZ`) met 0.32 SD toenemen. Een leerling die gemiddle
+> scoort op `ProjectinteressantZ` scoort -0.004 op `Interest.naZ`. Dit
+> kunnen we echter niet doortrekken naar de populatie (p \> 0.05). In de
+> populatie verwachten we dat een leerling die het project gemiddeld
+> interessant vindt, ook een gemiddelde interesse in techniek na het
+> project zal hebben.
 
 (b) 
 
-Vervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen's d. 
+Vervolgens gaan we de assumpties na voor dit model door verschillende
+visualisaties aan te maken.
+
+::: {.callout-note icon="true"}
+De twee laatste plots zijn *interactieve* plots. Dat wil zeggen dat je
+op je pc ook punten kan aanklikken en je krijgt vervolgens een nummer te
+zien. Dit is de case-nummer (rij-nummer) voor dat datapunt. In de output
+hier hebben we dat (omwille van technische redenen) niet kunnen doen.
+:::
 
 ```{r}
-d(Techniek$Interest.voor,Techniek$Dipvader)
+# Plotvenster in 4 delen (2 rijen en 2 kolommen)
+par(mfrow = c(2, 2))
+plot(Model1)
+
+par(mfrow = c(1, 1)) #zo zet je het plotvenster terug op standaardweergave
+residuals_plot(Model1)
+cooks_plot(Model1)
 ```
 
-De Cohen's d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.
+**Homoscedasticiteit:**
 
+Grafiek ‘Residuals versus Fitted’: spreiding blijft quasi gelijk
+naarmate de fitted value toeneemt. Dit duidt op homoscedasticiteit.
 
-(c)
+Grafiek ‘Scale-location plot’: de rode lijn in de plot loopt min of meer
+recht. Dit duidt op homoscedasticiteit.
 
-```{r}
-#| message: false
-#| warning: false
-errorbar(Techniek$Interest.voor~Techniek$Dipvader,
-         xlab="Diploma HO vader",
-         ylab="Interesse in techniek")
-```
+**Errortermen normaal verdeeld:**
 
-::: {.callout-tip icon=false}
+Grafiek ‘Q-Q plot’: alle punten vallen min of meer op de rechte lijn.
+Dit geeft aan dat de errortermen normaal verdeeld zijn.
+
+**geen clustering en een lineair verband:**
+
+Grafiek ‘Residuals versus Fitted’: op deze grafiek is geen clustering
+van waarnemingen terug te vinden. Noch kan je op basis van deze grafiek
+een niet-lineair verband vermoeden.
+
+**wel outliers:**
+
+Grafieken ‘Residuals plot’ & ‘Cooks plot’: duidelijk aantal outliers
+zichtbaar. Deze zouden idealiter verwijderd moeten worden en dan zou je
+het model opnieuw kunnen schatten. Dat is hier niet de opdracht, dus
+doen we dat niet.
+
+## Oefening 2
+
+::: {.callout-tip icon="false"}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
 
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
+Wanneer blijkt dat de mate waarin de leerling het project als
+interessant ervaart er toe doet, kun je je natuurlijk afvragen hoe dat
+komt. Misschien is het zo dat leerlingen die techniek sowieso al
+interessant vonden voor het project (`Interest.voor`) nadien ook een
+hogere interesse behouden (die hadden ze tenslotte al voor het project).
+Om dit na te gaan, test je een tweede model (Model2) waarin je
+`Interest.voor` als controlevariabele aan het vorige model (Model1)
+toevoegt.
 
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
+(a) Is dit model (Model2) een beter model dan Model1?
 
-(c) Geef het effect visueel weer.
+(b) Bespreek de relevante parameters van het beste model.
+:::
+
+(a) 
+
+We schatten dit tweede model en vergelijken dit model met het eerste
+model.
+
+```{r}
+Model2 <- lm(Interest.naZ ~ ProjectinteressantZ + Interest.voorZ, data =
+DataC4)
+anova(Model1, Model2)
+```
+
+De Residuals Sum of Squares (RSS) van Model1 = 2065.7, RSS van Model2 =
+1310.5. Gebaseerd op de F-test voor het vergelijken van beide modellen
+leren we dat Model 2 statistisch significant beter bij de data past dan
+model 1 (p \< 0.05). We weerhouden dus best Model 2.
+
+(b) 
+
+Nu we beslissen om Model2 te weerhouden, kunnen we de informatie over de
+parameterschattingen uit dat model opvragen in `R` via het `summary( )`
+commando.
+
+```{r}
+summary(Model2)
+```
+
+-   R-kwadraat = 0.43: het gaat om een groot effect (43% verklaarde
+    variantie in `Interest.naZ`);
+
+-   Met p \< 0.05: kans dat we deze verklaarde variantie in onze
+    steekproef zouden vaststellen indien H0 opgaat in de populatie is
+    kleiner dan 5%, dus we verwachten dat dit model in de populatie WEL
+    variantie verklaart in `Interest.naZ`
+
+-   intercept = -0.004: een leerling die 0 scoort op
+    `ProjectinteressantZ` en `Interest.voor` scoort -0.004 op
+    `Interest.naZ`;
+
+-   Met p \> 0.05: kans dat we deze interceptwaarde in onze steekproef
+    vaststellen indien H0 opgaat in de populatie is groter dan 5%. Dus
+    we verwachten dit NIET in de populatie terug te vinden. Het
+    verwachtte intercept in de populatie is dus 0. Dit is niet
+    verwonderlijke aangezien zowel de onafhankelijke variabelen
+    (`Interest.voorZ` en `ProjectinteressantZ`) als de afhankelijke
+    variabele (`Interest.naZ`) zijn gestandaardiseerd. Het intercept
+    geeft hier dus de score weer op `Interest.naZ` voor leerlingen die
+    gemiddeld scoren op `Interest.voorZ` en `ProjectinteressantZ`.
+    M.a.w., in de populatie scoren leerlingen die gemiddeld scoren op
+    `Interest.voorZ` en `ProjectinteressantZ` ook gemiddeld op
+    `Interessant.na`.
+
+-   $\beta_{ProjectinteressantZ}$ = 0.18, dus 1 SD (want z-score!) hoger
+    scoren op `Projectinteressant` leidt tot 0.18 SD (want z-score!)
+    hoger scoren op `Interest.na`
+
+-   Met p \< 0.05: kans dat we deze slope vaststellen in onze steekproef
+    indien H0 opgaat in de populatie is kleiner dan 5%. Dus we
+    verwachten dat `Projectinteressant` in de populatie WEL invloed
+    heeft op `Interest.na`.
+
+-   $\beta_{Interest.voorZ} = 0.59$, dus 1 SD (want z-score!) hoger
+    scoren op `Interest.voorZ` leidt tot 0.59 SD (want z-score!) hoger
+    scoren op `Interest.na`
+
+-   Met p \< 0.05: kans dat we deze slope vaststellen in de steekproef
+    indien H0 opgaat in de populatie is kleiner dan 5%. Dus we
+    verwachten dat `Interest.voorZ` in de populatie WEL invloed heeft op
+    `Interest.naZ`.
+
+-   Bovendien is dit effect sterker dan dat van `ProjectinteressantZ`.
+    (Je mag de sterkte van beide effecten met elkaar vergelijken, omdat
+    beide variabelen gestandaardiseerd zijn en dus op dezelfde schaal
+    staan.)
+
+**Conclusie**
+
+> Interesse in techniek voor het project (`Interest.voorZ`) en de mate
+> waarin leerlingen het project interessant (`ProjectinteressantZ`)
+> vinden verklaren de interesse in techniek van leerlingen na het
+> project (`Interest.naZ`) beter als het model waarin enkel
+> `ProjectinteressantZ` als onafhankelijke variabele is opgenomen (∆RSS
+> = 755.26, p \< 0.05). Het gaat bovendien om een sterk, significant
+> effect (R-kwadraat = 0.43, p \< 0.05). Het intercept is niet
+> statistisch significant (p \> 0.05). Een leerling die gemiddeld scoort
+> op `ProjectinteressantZ` en `Interest.voorZ` scoort dus ook gemiddeld
+> op `Interest.naZ` in de populatie. Zowel `ProjectinteressantZ` als
+> `Interest.voorZ` hebben een positief en statistisch significant (p \<
+> 0.05) effect op `Interest.naZ`. Een toename van 1 SD in
+> `ProjectinteressantZ` leidt tot een toename van 0.18 SD in
+> `Interest.naZ`. Het effect van `Interest.voorZ` is sterker (ß = 0.59).
+> 1 SD hoger scoren op interesse in techniek voor het project leidt tot
+> een toename van 0.59 SD in interesse in techniek na het project.
+
+## Oefening 3
+
+::: {.callout-tip icon="false"}
+## <i class="bi bi-journal-richtext"></i> Oefening 3
+
+Mogelijk zorgt het opnemen van de overige variabelen die de houdingen
+van de leerlingen m.b.t. het techniekproject meten (‘Projectleuk’,
+‘Projectbijgeleerd’, ‘Projectmoeilijk’) voor een verbetering van het
+model. Om dit na te gaan, test je een derde model (Model3) waarin je
+deze drie variabelen als controlevariabelen aan het vorige model
+(Model2) toevoegt.
+
+(a) Ga na of er geen probleem is van multicollineariteit. Pas het model
+    indien nodig aan.
+
+(b) Is (een eventueel aangepaste versie van) Model3 een beter model dan
+    Model2?
+
+(c) Bespreek de relevante parameters van het beste model.
+
+(d) Welke score op ‘Interest.naZ’ behaalt iemand die:
+
+-   gemiddeld scoort op alle onafhankelijke variabelen in de steekproef
+-   gemiddeld scoort op alle onafhankelijke variabelen in de populatie
+-   1 SD hoger scoort voor ‘Interest.voorZ’ en 1 SD lager scoort voor
+    ‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0)
+    in de steekproef
+-   1 SD hoger scoort voor ‘Interest.voorZ’ en en 1 SD lager scoort voor
+    ‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0)
+    in de populatie
+
+**Rond bij het berekenen van de voorspelde scores altijd af tot op 3
+cijfers na de komma!**
 :::
 
 (a)
 
-Opnieuw voeren we eerst de Levene Test uit.
+Hieronder schatten we dit model in z'n geheel en gaan meteen de multicollineariteit na aan de hand van de functie `vif()`.
 
 ```{r}
-leveneTest(Techniek$Interest.voor, Techniek$Studiejaar)
+Model3 <- lm(Interest.naZ ~ 
+               ProjectinteressantZ + 
+               Interest.voorZ + 
+               ProjectleukZ + 
+               ProjectbijgeleerdZ +
+               ProjectmoeilijkZ, 
+             data = DataC4)
+vif(Model3)
 ```
 
-Ditmaal is de bijhorende p-waarde lager dan 0.05 (zie `0.0191 *` in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in `R` door het argument `var.equal=FALSE` toe te voegen bij het opvragen van de t-test. 
+Uit de bovenstaande output leren we dat de VIF voor `ProjectinteressantZ` 7.04 bedraagt en voor `ProjectleukZ` 5.55. Deze twee waarden duiden op een mogelijk probleem van multicollinearitet. We kunnen eveneens de correlatie berekenen tussen deze twee variabelen om meer zicht te krijgen op hun onderlinge samenhang al verklaring voor het mogelijk multicollineariteitsprobleem.
 
 ```{r}
-t.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)
+cor.test(DataC4$ProjectinteressantZ, DataC4$ProjectleukZ)
 ```
-We lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).
 
-Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie `p-value < 2.2e-16` in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.
+Deze variabelen blijken zeer sterk te correleren (r = 0.90). Daarom is het aangewezen om het model de herdraaien zonder één van beide variabelen. Anders levert dit vertekende significantietoetsen voor de betrokken variabelen op. Daarom herschatten we het model zonder de controlevariabele `ProjectleukZ` (zie Model4). 
+
+```{r}
+Model4 <- lm(Interest.naZ ~ 
+               ProjectinteressantZ + 
+               Interest.voorZ + 
+               ProjectbijgeleerdZ +
+               ProjectmoeilijkZ, 
+             data = DataC4)
+vif(Model4)
+```
+
+Uit de output blijkt dat het multicollineariteitsprobleem in Model4 is opgelost. We werken dus verder met Model4.
 
 (b)
 
-Vervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen's d.
+Vervolgens gaan we dit Model4 vergelijken met Model2 om te weten of dit model beter de data vooropelt. 
 
 ```{r}
-d(Techniek$Interest.voor,Techniek$Studiejaar)
+anova(Model2, Model4)
 ```
 
-De Cohen's d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.
+RSS voor Model2 = 1310.5; RSS voor Model4 = 1297.3, p < 0.05
+Model4 is statistisch significant beter dan Model2. Model4 heeft een lagere RSS. 
+Het verschil in RSS (∆RSS = 13.17) is statistisch significant (p < 0.05). Dus we kunnen concluderen dat Model4 de verschillen in interesse in techniek na het project (`Interest.naZ`) beter voorspelt dan Model2 (∆RSS = 13.17, p < 0.05).
 
 (c)
 
-```{r}
-#| warning: false
-errorbar(Techniek$Interest.voor~Techniek$Studiejaar,
-         xlab="Studiejaar",
-         ylab="Interesse in techniek")
-```
-
-::: {.callout-tip icon=false}
-## <i class="bi bi-journal-richtext"></i> Oefening 3
-
-In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
-
-(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
-
-(b) Hoe groot is het effect van een trimester technieklessen?
-
-(c) Geef het effect visueel weer.
-:::
-
-Deze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een *independent samples t-test* omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een *paired samples t-test* .
-
-(a)
-
-Om deze *paired samples t-test* uit te voeren maken we gebruik van het argument `paired = TRUE` in de `t.test()` functie.
+We vragen de parameterschattingen van Model4 op.
 
 ```{r}
-t.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)
+summary(Model4)
 ```
 
-Het verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03. 
+- R-kwadraat = 0.44: het gaat om een groot effect (44% verklaarde variantie in `Interest.naZ`)
+- Met p < 0.05: kans dat we dit vaststellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat dit model in de populatie WEL variantie verklaart in `Interest.naZ`.
 
-We lezen af dat de p-waarde lager is dan 0.05 (zie `p-value = 0.049`). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.
+- intercept = -0.004: een leerling die 0 scoort op `ProjectinteressantZ`, `Interest.voor`,
+`ProjectbijgeleerdZ` en `ProjectmoeilijkZ` behaalt -0.004 op `Interest.naZ`
+- Met p > 0.05: kans dat we deze waarde voor het intercept in onze steekproef vaststellen indien H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dit NIET in de populatie terug te vinden. Het verwachtte intercept in de populatie is dus 0. Dit is niet verwonderlijke aangezien zowel de onafhankelijke variabelen als de afhankelijke variabele  gestandaardiseerd zijn. Het intercept geeft hier dus de score weer op `Interest.naZ`voor leerlingen die gemiddeld scoren op alle onafhankelijke variabelen. M.a.w., in de populatie scoren leerlingen die gemiddeld scoren op `Interest.voorZ`, `ProjectinteressantZ`, `ProjectmoeilijkZ` en `ProjectbijgeleerdZ` ook gemiddeld op `Interest.naZ`.
 
-(b) 
+- $\beta_{ProjectinteressantZ}$ = 0.19, dus 1 SD (want z-score!) hoger scoren op `ProjectinteressantZ` leidt tot 0.19 SD (want z-score!) hoger scoren op `Interest.naZ`
+- Met p < 0.05: kans dat we deze slope vaststellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat `ProjectinteressantZ` in de populatie WEL invloed heeft op `Interest.naZ`.
 
-Vervolgens berekenen we de Cohen's d aan de hand van de functie `dpaired()`. Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).
+- $\beta_{Interest.voorZ}$ = 0.58, dus 1 SD (want z-score!) hoger scoren op `Interest.voorZ`leidt tot 0.58 SD (want z-score!) hoger scoren op `Interest.naZ`
+- Met p < 0.05: kans dat we deze slope vaststellen in de steekproef indien H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat `Interest.voorZ` in de populatie WEL invloed heeft op `Interest.naZ`. Bovendien is dit effect sterker dan dat van `ProjectinteressantZ` en dat van `ProjectmoeilijkZ`. (Je mag de sterkte van deze effecten met elkaar vergelijken, omdat beide variabelen gestandaardiseerd zijn en dus op dezelfde schaal staan.)
 
-```{r}
-dpaired(1.9696,2290)
-```
+- $\beta_{ProjectibijgeleerdZ}$ = 0.03, dus 1 SD (want z-score!) hoger scoren op `ProjectbijgeleerdZ` leidt tot 0.03 SD (want z-score!) hoger scoren op `Interest.naZ`
+- Met p > 0.05: kans dat H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dat `ProjectinteressantZ` in de populatie GEEN invloed heeft op `Interest.naZ`.
 
-Cohen's d is lager dan 0.2: het gaat om een verwaarloosbaar effect.
+- $\beta_{ProjectmoeilijkZ}$ = -0.09, dus 1 SD (want z-score!) hoger scoren op `ProjectmoeilijkZ` leidt tot 0.09 SD (want z-score!) lager scoren op `Interest.naZ`
+- Met p < 0.05: kans dat we deze hellingsgraad vastellen in onze steekproef indien H0 opgaat in de populatie is kleiner dan 5%.  Dus we verwachten dat `ProjectmoeilijkZ` in de populatie WEL invloed heeft op `Interest.naZ`.
 
-(c)
+**Conclusie:**
 
-```{r}
-#| warning: false
-errorbar2(Techniek$Interest.voor,Techniek$Interest.na,
-          xlab="Meting voor en na",
-          ylab="Interesse")
-```
-
+> `ProjectinteressantZ`, `Interest.voorZ`, `ProjectbijgeleerdZ` en `ProjectmoeilijkZ` verklaren 43% van de variantie in ‘Interest.naZ’. Het gaat dus om een sterk effect dat bovendien mag worden doorgetrokken naar de populatie (R2 = 0.44, p < 0.05). Het intercept is niet statistisch significant (p > 0.05). Een leerling die gemiddeld scoort op `ProjectinteressantZ`, `Interest.voorZ`, `ProjectbijgeleerdZ` en `ProjectmoeilijkZ` scoort dus ook gemiddeld op `Interest.naZ` in de populatie. Zowel `ProjectinteressantZ` als `Interest.voorZ` hebben een positief en statistisch significant (p < 0.05) effect op `Interest.naZ`. Een toename van 1 SD in `ProjectinteressantZ` leidt tot een toename van 0.19 SD in `Interest.naZ`. Het effect van `Interest.voorZ` is sterker (ß = 0.58). 1 SD hoger scoren op interesse in techniek voor het project (`Interest.voorZ`) leidt tot een toename van 0.58 SD in interesse in techniek na het project (`Interest.naZ`). De invloed van `ProjectmoeilijkZ` op `Interest.naZ` is negatief en statistisch significant (p < 0.05). Leerlingen die het project als 1 SD moeilijker ervaren, scoren 0.09 SD lager op `Interest.naZ`. De percepties van leerlingen m.b.t. bijleren tijdens het project (`ProjectbijgeleerdZ`) hebben geen significante invloed op hun interesse in techniek na het project (p > 0.05).
