@@ -69,6 +69,8 @@ website:
             href: Zelftest_kruistabellen.qmd
           - text: "Correlaties"
             href: Zelftest_correlaties.qmd
+          - text: "Bivariate regressie"
+            href: Zelftest_bivariate_regressie.qmd
             
       - text: "Computer labs"
         href: computer_labs.qmd

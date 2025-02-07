@@ -1,17 +1,18 @@
 ---
 title: "Online (`R`) oefeningen"
-subtitle: "Bivariatte regressie"
-format: html
+subtitle: "Bivariate regressie"
+format: live-html
 engine: knitr
-filters:
-  - webr
 ---
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-We zijn nu aangekomen bij het onderdeel waarin we het verband tussen twee kwantitatieve variabelen wensen te onderzoeken: correlaties. Hoe we dit doen in `R` kan je hier oefenen, opnieuw adhv onze dataset over de pinguïns.
+Tijd om de stap te zetten naar regressie-analyse. We starten onze reis
+in "regressieland" bij bivariate regressie-analyse. Hoe we dit doen in
+`R` kan je hier oefenen, opnieuw adhv onze dataset over de pinguïns.
 
-Meer achtergrond over deze dataset vind je via volgende link: [palmerpenguins](Penguins.qmd)
+Meer achtergrond over deze dataset vind je via volgende link:
+[palmerpenguins](Penguins.qmd)
 
 ```{webr}
 #| autorun: true
@@ -1664,24 +1665,42 @@ effectplot<-function(x,y,ylab="y" ,xlab="x",main=" " )
 }
 ```
 
-Voor deze oefening willen we twee onderzoeksvragen beantwoorden:
+::: {.callout-tip icon="false"}
+## Lichaamsgewicht voorspellen
+![](images/Observing_pinguins.jpeg){width="400"}
 
-::: {.callout-note icon="false"}
-## Onderzoeksvragen
+We gaan een nieuw scenario introduceren voor deze oefening. Stel dat
+onderzoekers geïnteresseerd zijn in hoe goed verschillende pinguïns het
+doen op de Zuidpool, gegeven de klimaatverandering. De hamvraag is: is
+er voldoende voedsel voor pinguïns of wordt dit aangetast door de
+klimaatverandering? Een manier om dat onderzoekbaar te maken is in de
+toekomst monitoren of er een afname is aangaande gemiddelde body mass
+van pinguïns. Het vergt echter zeer veel onderzoeksmiddelen om
+systematisch pinguïns te vangen en vervolgens te meten. Bovendien is dat
+een procedure die mogelijk een impact heeft op het welzijn van de
+pinguïns. Daarom willen ze weten of ze een voorspellend model kunnen
+maken voor body mass op basis van lichamelijke kenmerken die ze kunnen
+observeren zonder pinguïns te moeten vangen. Twee van die uiterlijke
+kenmerken zijn de dimensies van de snavel en de lengte van de flippers
+van de pinguïns. Daarom dat we onderstaande twee onderzoeksvragen wensen
+te beantwoorden aan de hand van de beschikbare data.
 
-| (OV1) Wat is de samenhang tussen de lengte van de snavel (`bill_length_mm`) en de breedte van de snavel (`bill_depth_mm`) van pinguïns?
-| (OV2) Wat is het onderlinge verband tussen de volgende verschillende metingen van lichamelijke kenmerken van pinguïns: lengte van de flipper (`flipper_length_mm`), lengte van de snavel (`bill_length_mm`) en het gewicht (`body_mass_g`)?
+**Onderzoeksvragen**
 
+| (OV1) In welke mate is de lengte van de flipper (`flipper_length_mm`) van een pinguïn voorspellend voor het gewicht (`body_mass_g`)?
+| (OV2) In welke mate is de lengte van de snavel (`bill_length_mm`) van een pinguïn voorspellend voor het gewicht (`body_mass_g`)?
 :::
 
 ## Oefening 1
 
-De eerste onderzoeksvraag gaat over het verband tussen de lengte van de snavel (`bill_length_mm`) en de breedte van de snavel (`bill_depth_mm`) van pinguïns. 
+De eerste onderzoeksvraag gaat over het verband tussen de lengte van de
+flipper (`flipper_length_mm`) en het lichaamsgewicht (`body_mass_g`) van
+pinguïns.
 
-*Maak in onderstaande codeblok een basisvisualisatie om dit verband te illustreren.*
+*Maak in onderstaande codeblok een basisvisualisatie om dit verband te
+illustreren.*
 
-
-:::::: panel-tabset
+::::: panel-tabset
 ## Oefening
 
 ```{webr}
@@ -1691,50 +1710,54 @@ De eerste onderzoeksvraag gaat over het verband tussen de lengte van de snavel (
 
 ```
 
-
 ## Hints
 
 ::: {.hint exercise="ex1"}
-
-Een basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een **puntenwolk**. Die kan je maken met de generieke functie `plot( )`.  
-
+Een basisvisualisatie om het verband tussen twee kwantitatieve
+variabelen na te gaan is een **puntenwolk**. Die kan je maken met de
+generieke functie `plot( )`. In deze oefening gaan we ook uit van een
+voorspellend effect van de lengte van de flipper op het lichaamsgewicht.
+Hou daarmee rekening in je visualisatie.
 
 ``` r
 plot(penguins$______, penguins$______)
 ```
-
 :::
-
 
 ## Oplossing
 
 ::: {.solution exercise="ex1"}
 **Oplossing:**
 
-Een basisvisualisatie om het verband tussen twee kwantitatieve variabelen na te gaan is een **puntenwolk**. Die kan je maken met de generieke functie `plot( )`. 
+Een basisvisualisatie om het verband tussen twee kwantitatieve
+variabelen na te gaan is een **puntenwolk**. Die kan je maken met de
+generieke functie `plot( )`.
 
-Tussen haakjes moet je verwijzen naar beide variabelen. Indien er een vermoeden is van causaliteit, plaats je de onafhaneklijke variabele best op de x-as. In dit geval is er niet echt een duidelijk vermoeden van causaliteit, waardoor er geen reden is om de ene of de andere variabele op de x-as te zetten. Belangrijk is dat beide variabelen als `numeric` of als `integer` in de dataframe zijn gedefinieerd. Dat is in dit geval in orde.
+Tussen haakjes moet je verwijzen naar beide variabelen. Indien er sprake
+is van causaliteit, plaats je de onafhankelijke variabele op de x-as. In
+dit geval is dat de flipperlengte. Belangrijk is dat beide variabelen
+als `numeric` of als `integer` in de dataframe zijn gedefinieerd. Dat is
+in dit geval in orde.
 
 De volledige oplossing ziet er zo uit!
 
 ```{webr}
 #| exercise: ex1
 #| solution: true
-plot(penguins$bill_length_mm, penguins$bill_depth_mm)
+plot(penguins$flipper_length_mm, penguins$body_mass_g)
 ```
-
 :::
-
-::::::
+:::::
 
 ## Oefening 2
 
-De figuur die je in de vorige oefening maakte wijst niet meteen zeer duidelijk op een verband. We hebben echter ook een maat om de samenhang na te gaan: de Pearson correlatiecoëfficiënt. 
+Om de onderzoeksvraag echt te kunnen beantwoorden maken we gebruik van
+een bivariate regressie-analyse.
 
-*Bereken de Pearson correlatiecoëfficiënt voor het verband tussen beide kenmerken van de snavel van pinguïns. Doe ook een test om na te gaan of dit verband statistisch signifcant is.*
+*Voer deze regressie-analyse uit waarin je het effect van flipperlengte
+nagaat op lichaamsgewicht en print de output.*
 
-
-:::::: panel-tabset
+::::: panel-tabset
 ## Oefening
 
 ```{webr}
@@ -1744,40 +1767,40 @@ De figuur die je in de vorige oefening maakte wijst niet meteen zeer duidelijk o
 
 ```
 
-
 ## Hints
 
 ::: {.hint exercise="ex2"}
-
-We kunnen gebruik maken van de functie  `cor.test( )`.  
-
+We kunnen gebruik maken van de functie `lm( )`. Het handigste is om het
+resultaat van deze analyse weg te schrijven in een afzonderlijk object
+(bv. `M1` in de hint hier).
 
 ``` r
-cor.test(penguins$______, penguins$______)
+M1 <- (______ ~ ______, data = penguins)
+summary(M1)
 ```
 :::
-
 
 ## Oplossing
 
 ::: {.solution exercise="ex2"}
 **Oplossing:**
 
+De code ziet er zo uit. Merk op dat we hier opnieuw het pakket
+`palmerpenguins` laden en de data `penguins` activeren, zodanig dat de
+code op zich kan lopen, zonder dat je de andere oefeningen uitvoert.
 
 ```{webr}
 #| exercise: ex2
 #| solution: true
-cor.test(penguins$bill_length_mm, penguins$bill_depth_mm)
+M1 <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
+summary(M1)
 ```
-
-
 :::
-
-::::::
+:::::
 
 ## Oefening 3
 
-We hernemen de oplossing uit de vorige oefening hieronder. 
+We hernemen de oplossing uit de vorige oefening hieronder.
 
 ```{webr}
 #| autorun: true
@@ -1785,48 +1808,79 @@ We hernemen de oplossing uit de vorige oefening hieronder.
 
 library(palmerpenguins)
 data("penguins")
-cor.test(penguins$bill_length_mm, penguins$bill_depth_mm)
+M1 <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
+summary(M1)
 ```
 
-Op het examen vragen we soms meerkeuzevragen over de interpretatie van de output. Hieronder vind je een typische meerkeuzevraag (met de antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot een antwoord te komen en toets vervolgens jouw antwoord af met de antwoordsleutel.
+Op het examen vragen we soms meerkeuzevragen over de interpretatie van
+de output. Hieronder vind je een typische meerkeuzevraag (met de
+antwoordsleutel op een afzonderlijk tabbladje). Probeer eerst zelf tot
+een antwoord te komen en toets vervolgens jouw antwoord af met de
+antwoordsleutel.
 
-::: {.panel-tabset}
+::: panel-tabset
 ## Vraag
 
 Welke van volgende uitspraken is *fout*? (slechts 1 antwoord mogelijk)
 
-1. In de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns
-2. Beide variabelen delen 5,5% variantie
-3. 95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt
-4. De kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%
+1.  Volgens dit regressiemodel is de verwachtte body mass -5781 gram
+    indien een pinguïn een flipper langte van 0 mm heeft
+2.  Bijna 76% van de variantie in lichaamsgewicht tussen pinguïns kunnen
+    we verklaren door de variabele flipper lengte
+3.  Doordat het intercept significant negatief is kunnen we concluderen
+    dat er een negatief verband is tussen flipper lengte en
+    lichaamsgewicht van pinguïns
+4.  De kans dat we de hellingsgraad van 49.87 vaststellen in onze data
+    indien er in de gehele populatie van pinguïns geen verband zou zijn
+    tussen flipper lengte en lichaamsgewicht is duidelijk lager dan 5%
 
 ## Antwoordsleutel
-Je diende uitspraak 4 te kiezen als foute uitspraak.
 
-1. In de steekproef is er een negatief verband tussen lengte en breedte van de snavel van pinguïns
+Je diende uitspraak 3 te kiezen als foute uitspraak.
 
-**= JUIST! Inderdaad. In de steekproef is de correlatie -0,235, een negatief getal dus ook een negatief verband.**
+1.  Volgens dit regressiemodel is de verwachtte body mass -5781 gram
+    indien een pinguïn een flipper langte van 0 mm heeft
 
-2. Beide variabelen delen 5,5% variantie
+**= JUIST! Inderdaad. Het intercept bedraagt -5781. Het intercept is de
+verwachtte waarde voor de afhankelijke variabele (lichaamsgewicht)
+indien de waarde voor de onafhankelijke variabele (flipper lengte)
+gelijk is aan nul.**
 
-**= JUIST! Ook dit klopt aangezien het kwadraat van de correlatiecoëfficiënt kan geïnterpreteerd worden als gedeelde variantie tussen beide variabelen. Het kwadraat van -0,235 bedraat 0,055. Dit is een percentage uitgedrukt in een getal tussen 0 en 1. Doen we dit maal 100 dan krijgen we het percentage op 100 (5,5% in dit geval).**
+2.  Bijna 76% van de variantie in lichaamsgewicht tussen pinguïns kunnen
+    we verklaren door de variabele flipper lengte
 
-3. 95% van gelijkaardige steekproeven zou een correlatiecoëfficiënt opleveren die tussen -0,13 en -0,33 valt
+**= JUIST! Dit lezen we af in de output bij de R-kwadraat die gelijk is
+aan 0.7583.**
 
-**= JUIST! Dit lezen we af in de output bij het 95 betrouwbaarheidsinterval. Zo'n betrouwbaarheidsinterval geeft een beeld van de steekproevenverdeling. Deze steekproevenverdeling is de verdeling van onze parameter, de correlatie, overheen alle mogelijke steekproeven die we zouden kunnen getrokken hebben. Uit die verdeling leren we dat 95% van deze mogelijke steekrpoeven een correlatie tussen -0,13 en -0,33 zou opleveren.**
+3.  Doordat het intercept significant negatief is kunnen we concluderen
+    dat er een negatief verband is tussen flipper lengte en
+    lichaamsgewicht van pinguïns
 
-4. De kans dat we deze correlatiecoëfficiënt (-0,235) ook in de populatie vast zouden stellen is groter dan 5%
+**= FOUT! Dit is een fout die we helaas geregeld zien op het examen
+waarbij het intercept wordt interpreteert alsof die waarde ons iets kan
+leren over de samenhang tussen de onafhankelijke en afhankelijke
+variabele. Dit is niet juist. Enkel de hellingsgraad zegt iets over de
+samenhang of het veband tussen beide variabelen.**
 
-**= FOUT! Dit is een typische verkeerde interpretatie van de p-waarde. Een p-waarde is een probabiliteit van de data onder de veronderstelling dat de nul-hypothese geldig is. Anders uitgedrukt: de p-waarde drukt de kans uit dat we een correlatiecoëfficiënt van -0,235 of extremer (meer negatief) zouden vaststellen in onze steekproef indien de correlatie in de populatie nul bedraagt.**
+4.  De kans dat we de hellingsgraad van 49.87 vaststellen in onze data
+    indien er in de gehele populatie van pinguïns geen verband zou zijn
+    tussen flipper lengte en lichaamsgewicht is duidelijk lager dan 5%
 
+**= JUIST! Dit is de correcte interpretatie van de p-waarde (oftewel de
+significantie toets). Elke significantietoets gaat de kans uitdrukken
+dat we een bepaalde observatie doen in onze steekproef (hier de waarde
+van het effect van flipper lengte op lichaamsgewicht) indien de
+nulhypothese zou gelden in de populatie. De nulhypothese hier is dat er
+geen verband is tussen beide variabelen in de populatie.**
 :::
-
 
 ## Oefening 4
 
-Nu richten we onze aandacht op de tweede onderzoeksvraag. Centraal in die onderzoeksvraag staat het nagaan van het verband van meerdere kwantitatieve variabelen.
+Nu richten we onze aandacht op de tweede onderzoeksvraag waarbij willen
+nagaan in welke mate snavellengte voorspellend is voor lichaamsgewicht.
 
-*Creër een visualisatie die de onderlinge samenhang tussen alle 3 de variabelen in één figuur weergeeft.*
+*Voer deze regressie-analyse uit en tracht alle relevante onderdelen van
+de output te interpreteren.*
 
 :::::: panel-tabset
 ## Oefening
@@ -1838,123 +1892,114 @@ Nu richten we onze aandacht op de tweede onderzoeksvraag. Centraal in die onderz
 
 ```
 
-
 ## Hints
 
 ::: {.hint exercise="ex4"}
-
 Om deze figuur te maken moet je twee stappen doorlopen:
 
-- een dataframe maken met daarin enkel de betrokken variabelen;
-- deze nieuwe dataframe  'plotten' met het commando `plot( )`.
-
+-   een dataframe maken met daarin enkel de betrokken variabelen;
+-   deze nieuwe dataframe 'plotten' met het commando `plot( )`.
 :::
-
 
 ## Oplossing
 
 ::: {.solution exercise="ex4"}
 **Oplossing:**
 
-Verschillende stappen zijn nodig om deze figuur te maken. In de onderstaande oplossing kan je de twee stappen zien.
+De code om de analyse uit te voeren ziet er als volgt uit:
 
 ```{webr}
 #| exercise: ex4
 #| solution: true
-
-# Dataframe maken met enkel de betrokken variabelen
-Variabelen <- data.frame(
-  penguins$flipper_length_mm,
-  penguins$bill_length_mm,
-  penguins$body_mass_g
-)
-
-# plot maken van de nieuwe dataframe
-plot(CVariabelen)
+library(palmerpenguins)
+data("penguins")
+M2 <- lm(body_mass_g ~ bill_length_mm, data = penguins)
+summary(M2)
 
 ```
-
 :::
 
+::: {.solution exercise="ex4"}
+**Interpretatie:**
+
+-   R-kwadraat bedraagt 0.35 met een bijhorende p-waarde die lager is
+    dan 0.05. 35% van de variantie in lichaamsgewicht wordt voorspeld
+    door snavellengte. De kans dat we dit vaststellen in onze
+    steekproefdata indien er in de populatie geen variantie zou
+    verklaard worden (= H0) is lager dan 5%.
+
+-   Het intercept bedraagt 362.3. Dit is het verwachtte lichaamsgewicht
+    van een pinguïn die een snavellengte van 0 mm heeft (wat totaal geen
+    steek houdt natuurlijk). Deze parameterschatting is niet statistisch
+    significant. Dit wil zeggen dat de kans dat we deze waarde in onze
+    steekproef vaststellen indien in de populatie het intercept 0 zou
+    bedragen (= H0) groter is dan 5% Daarom weerlegeen we H0 NIET.
+
+-   De hellingsgraad (slope) bedraagt 87.4. Per mm dat een snavel langer
+    is van een pinguïn verwachten we dat het lichaamsgewicht met 87.4
+    gram stijgt. Deze parameterschatting is statistisch significant (p
+    \<0.05). Dus, de kans dat we deze waarde zouden vaststellen in onze
+    steekproef indien de nulhypothese opgaat (= er is geen verband in de
+    populatie) is klein. We concluderen dat er wel een verband is in de
+    populatie van pinguïns.
+:::
 ::::::
 
 ## Oefening 5
 
-De visualisatie uit de voorgaande oefening duidt op een positief verband tussen elk van deze variabelen onderling. De vraag is uiteraard of dit een sterk verband is en in welke mate we dit verband kunnen verwachten te zien in de gehele populatie. 
+We hebben nu twee modellen geanalyseerd. Hieronder een voorbeeldvraag
+die je op het examen zou kunnen krijgen. Tracht eerst voor jezelf tot
+een antwoord te komen vooraleer je naar de oplossing gaat kijken.
 
-*Bereken de drie correlatiecoëfficiënten in één beweging en schrijf voor jezelf een rapportage neer over de bekomen resultaten. Heb bij het schrijven van een conclusieluik ook oog voor "effectgrootte".*
-
-:::::: panel-tabset
+::: panel-tabset
 ## Oefening
 
-```{webr}
-#| exercise: ex5
-#| caption: Oefening5
+Bij de start van de oefening schetstten we het scenario dat onderzoekers
+graag pinguïns hun lichaamsgewicht willen kunnen inschatten door middel
+van het observeren van externe lichaamskenmerken (flipperlengte en
+snavellengte).
 
-
-```
-
-
-## Hints
-
-::: {.hint exercise="ex5"}
-
-Net als bij de visualisatie zijn er twee stappen nodig om een **correlatiematrix** te berekenen:
-
-- een dataframe maken met daarin de variabelen (is zelfde eerste stap als in oefening 4);
-- de correlatiematrix berekenen gebruikmakend van de functie `cor.prob( )` .
-
-:::
-
+Stel dat deze onderzoekers jouw advies vragen. Ze willen weten waarop ze
+best inzetten: observatoren goed trainen om flipperlengte te meten of
+snavellengte te meten. Wat zou je hen aanraden en hoe onderbouw je je
+advies vanuit de analyse?
 
 ## Oplossing
 
-::: {.solution exercise="ex5"}
-**Oplossing:**
-
-Om deze correlatiematrix te berekenen maken we eerst een nieuwe dataframe aan (met de naam `Variabelen`) waarin de drie variabelen alleen zijn weggeschreven. Daarna gebruiken we die nieuwe dataframe `Variabelen` als inpunt voor de functie `cor.prob( )`.
-
-```{webr}
-#| exercise: ex5
-#| solution: true
-# Dataframe maken met enkel de betrokken variabelen
-Variabelen <- data.frame(
-  penguins$flipper_length_mm,
-  penguins$bill_length_mm,
-  penguins$body_mass_g
-)
-
-# De correlatiematrix berkenen
-
-cor.prob(Variabelen)
-```
-
-
+Gegeven de resultaten van beide modellen is Het beste advies
+observatoren trainen op het goed observeren en meten van de
+flipperlengte. Immers, kijken we naar de verklaarde varianties in beide
+modellen dan stellen we vast dat deze een stuk hoger is voor het model
+met flipperlengte als voorspeller voor lichaamsgewicht (R-kwadraat =
+0.76) dan voor het model met snavellengte als voorspelle (R-kwadraat =
+0.35). Flipperlengte is dus een veel betere voorspeller voor
+lichaamsgewicht dan snavellengte.
 :::
 
-## Rapportage
+## Oefening 6
 
-Indien je alle output graag ter beschikking hebt om de rapportage na te kunnen lezen, kan je onderstaand codeblok nog een keer laten lopen.
+Hieronder een andere voorbeeldvraag die je op het examen zou kunnen krijgen. Tracht eerst voor jezelf tot een antwoord te komen vooraleer je naar de oplossing gaat kijken.
 
-```{webr}
+::: panel-tabset
+## Oefening
 
-library(palmerpenguins) # indien nodig package laden
-data("penguins")        # indien nodig de data laden
+We hernemen hieronder het resultaat van de analyse van M1 en schrijven dit weg in een regressievergelijking.
 
-# Dataframe maken met enkel de betrokken variabelen
-Variabelen <- data.frame(
-  penguins$flipper_length_mm,
-  penguins$bill_length_mm,
-  penguins$body_mass_g
-)
+$\text{Lichaamsgewicht}_i = -5780.83 + 49.69 * \text{flipperlengte}_i + e_i$
 
-# De correlatiematrix berkenen
+Oriel observeert 2 pinguïns tijdens haar observatiemoment. Ze slaagt er ook in om van beide pinguïns de flipperlengte op te meten met haar speciale tool in haar verrekijker:
 
-cor.prob(Variabelen)
+- pinguïn 1: flipperlengte = 200 mm
 
-```
+- pinguïn 2: flipperlengte = 235 mm
 
-De drie variabelen flipperlengte, snavellengte en gewicht zijn onderling sterk positief gecorreleerd. De correlaties situeren zich tussen 0,595 en 0,871 en zijn alledrie statistisch significant (p <0,001). We verwachten in de populatie ook positieve correlaties te observeren tussen deze drie variabelen.
+Bereken voor beide pinguïns het verwachtte lichaamsgewicht.
 
+## Oplossing
+
+We dienen de regressievergelijking te hanteren en simpelweg de flipperlengte in te vullen. Hieronder doen we dit voor beide pinguïns. *Merk op dat we een hoedje plaatsen boven lichaamsgewicht in de vergelijking hier. Dat doen we om aan te duiden dat het om een verwachtte waarde gaat.*
+
+- pinguïn 1: $\widehat{\text{Lichaamsgewicht}} = -5780.83 + 49.69 * 200$ = `r round(-5780.83 + 49.69 * 200,2)`gram
+
+- pinguïn 2: $\widehat{\text{Lichaamsgewicht}} = -5780.83 + 49.69 * 235$ = `r round(-5780.83 + 49.69 * 235, 2)`gram
 :::
-
