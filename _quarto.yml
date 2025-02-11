@@ -111,7 +111,8 @@ website:
             href: Extra/Projecten.qmd
           - text: "Quarto documenten"
             href: Extra/Quarto_documenten.qmd
-          - text: "Data-manipulatie met dplyr"
+          - text: "dplyr en tidyr"
+            href: Extra/dplyr.qmd
           
       - text: "Studiewijzer"
         href: studiewijzer.qmd
