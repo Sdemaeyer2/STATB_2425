@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="JJ Allaire and Yihui Xie">
 
-<title>Tufte Handout – Statistiek B</title>
+<title>Data manipuleren met dplyr en tidyr – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -111,7 +144,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Tufte Handout</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Data manipuleren met <code>dplyr</code> en <code>tidyr</code></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
@@ -387,16 +420,11 @@ cookieconsent.run({
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">Opdrachten</a>
-  <ul class="collapse">
-  <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
-  <li><a href="#vraag-2" id="toc-vraag-2" class="nav-link" data-scroll-target="#vraag-2">Vraag 2</a></li>
-  </ul></li>
-  <li><a href="#responsen" id="toc-responsen" class="nav-link" data-scroll-target="#responsen">RESPONSEN</a>
-  <ul class="collapse">
-  <li><a href="#vraag-1-1" id="toc-vraag-1-1" class="nav-link" data-scroll-target="#vraag-1-1">Vraag 1</a></li>
-  <li><a href="#vraag-2-1" id="toc-vraag-2-1" class="nav-link" data-scroll-target="#vraag-2-1">Vraag 2</a></li>
-  </ul></li>
+  <li><a href="#cases-uitfilteren" id="toc-cases-uitfilteren" class="nav-link active" data-scroll-target="#cases-uitfilteren">Cases uitfilteren</a></li>
+  <li><a href="#complete-observaties-filteren" id="toc-complete-observaties-filteren" class="nav-link" data-scroll-target="#complete-observaties-filteren">Complete observaties filteren</a></li>
+  <li><a href="#variabelen-hercoderen" id="toc-variabelen-hercoderen" class="nav-link" data-scroll-target="#variabelen-hercoderen">Variabelen hercoderen</a></li>
+  <li><a href="#variabelen-selecteren" id="toc-variabelen-selecteren" class="nav-link" data-scroll-target="#variabelen-selecteren">Variabelen selecteren</a></li>
+  <li><a href="#tutorials-op-youtube" id="toc-tutorials-op-youtube" class="nav-link" data-scroll-target="#tutorials-op-youtube">Tutorials op YouTube</a></li>
   </ul>
 </nav>
     </div>
@@ -405,27 +433,14 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tufte Handout</h1>
-<p class="subtitle lead">An implementation in R Markdown</p>
+<h1 class="title">Data manipuleren met <code>dplyr</code> en <code>tidyr</code></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Auteur</div>
-    <div class="quarto-title-meta-contents">
-             <p>JJ Allaire and Yihui Xie </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Publicatiedatum</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">11 februari 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -435,36 +450,113 @@ cookieconsent.run({
 </header>
 
 
-<section id="opdrachten" class="level1 unnumbered">
-<h1 class="unnumbered">Opdrachten</h1>
-<section id="vraag-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
-<p>Als minister van onderwijs enerzijds en van gelijke kansen anderzijds heeft Ella twee belangrijke speerpunten in haar beleid: wetenschapsonderwijs en ‘met goesting naar school gaan’. Op het kruispunt tussen haar twee beleidsdomeinen schrijft zij een onderzoeksopdracht uit: “Een stand van zaken inzake gelijke kansen met betrekking tot wetenschapskennis en schoolattitude. Is het allochtoon deficit anno 2020 weggewerkt?”.</p>
-<p>Jij dient als jonge onderzoeker, samen met de promotor van je thesis, hiervoor een projectvoorstel in. Jullie beloven om met behulp van de representatieve steekproef PISA voor het Vlaamse onderwijs in kaart te brengen of en hoe groot de verschillen zijn tussen allochtone en autochtone 14-jarige leerlingen met betrekking tot wetenschapskennis en attitude ten aanzien van de school. Hierbij gaan jullie ook na op welk van beide twee elementen allochtone afkomst meer van invloed is.</p>
-<p>‘Pisa2’ is een file met daarin voor alle Vlaamse leerlingen uit de PISA-bevraging 2018 hun etnische afkomst (‘Immigratie’), sociaal-economische status (‘SESz’), hun score op een wiskunde- (‘Wiskundez’), taal- (‘Lezenz’) en wetenschappentest (‘Wetenschappenz’), de attitude van leerlingen ten aanzien van de school (‘Attitudeschoolz’) en ten aanzien van computers (‘Attitudecomputersz’) en enkele scores op leerschalen (‘Samenvattenz’, ‘Begrijpenz’, ‘Memoriserenz’).</p>
-<p><em>Formuleer de onderzoeksvragen en hypotheses. Kies de gepaste analysetechniek.</em></p>
-<p>[RESPONS ACHTERAAN DOCUMENT]</p>
+<p>In <code>R</code> kan je op zeer verschillende manieren werken. Meerdere packages worden gemaakt om analyses in <code>R</code> “makkelijker” te maken.</p>
+<p>Een hele groep ontwikkelaars hebben de krachten gebundeld om een consistente aanpak in <code>R</code> uit te werken en een hele reeks packages te bouwen die elk een eigen doel hebben, maar die ook op gedeelde principes gestoeld zijn. Dit resulteert in een soort <em>super package</em>: <code>tidyverse</code>.</p>
+<p>In <code>tidyverse</code> zitten verschillende packages gebundeld: o.a. <code>ggplot2</code> (superkrachtig om visualisaties te maken - waarover later in de opleiding meer), <code>broom</code> (om resultaten van analyses makkelijker te vertalen in tabellen etc.), <code>dplyr</code> en <code>tidyr</code> (om allerlei data-wrangling stappen te faciliteren), …</p>
+<p>De laatste twee packages (<code>dplyr</code> en <code>tidyr</code>) bevat een aantal zeer handige functies om typische datahandelingen uit te voeren: variabelen hercoderen, cases uitfilteren, variabelen selecteren, aggregeren, bestanden koppelen, data sorteren, enzovoort. Deze functies zijn een pak makkelijker te lezen dan de code die je zou hanteren indien je dit doet aan de hand van basis <code>R</code> code.</p>
+<p>Hieronder twee voorbeelden van handelingen die we in dit vak al een keer uitvoeren. We tonen de originele <code>R</code> code en nadien de variant op basis van functies uit <code>dplyr</code> of <code>tidyr</code>.</p>
+<p>We doen dit door te werken met de dataset <code>penguins</code> uit het package <code>palmerpenguins</code>. Dit is dezelfde dataset die we ook hanteren voor de online oefeningen op deze website. Meer info over die datset vind je hier: <a href="../Penguins.html">Penguins dataset</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("palmerpenguins") </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"penguins"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We moeten uiteraard ook eerst <code>dplyr</code> en <code>tidyr</code> laden. We gaan dit hieronder doen door meteen het overkoepelend package <code>tidyverse</code> te laden. Het is een goede reflex om eigenlijk meteen altijd dat package te laden. Vergeet het natuurlijk niet eerst te installeren op je pc via <code>install.packages()</code> of door te klikken in <code>Rstudio</code>.</p>
+<section id="cases-uitfilteren" class="level2">
+<h2 class="anchored" data-anchor-id="cases-uitfilteren">Cases uitfilteren</h2>
+<p>De dataset bevat data van drie soorten pinguïns (variabele <code>species</code>). Stel dat ik een afzonderlijke selectie wil maken van de Adelie pinguïns en dit wil doen met “klassieke” R-code dan zou dat er zo uit zien:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Adelie_penguins <span class="ot">&lt;-</span> penguins[penguins<span class="sc">$</span>species <span class="sc">==</span> <span class="st">"Adelie"</span>, ]</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We hanteren dan de vierkante haakjes en daartussen kunnen we rijen (voor de komma) en kolommen selecteren.</p>
+<p>Met <code>dplyr</code> functies zou dit er zo uit zien:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Adelie_penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">"Adelie"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Een belangrijke operator om in deze taal te snappen is de <strong>pipe operator</strong> : <code>%&gt;%</code>. Deze operator pakt de code voor de operator en geeft die vervolgens door aan de volgende functie na de operator. Hier kan je dat dus als volgt lezen: neem de dataframe <code>penguins</code> en ga vervolgens cases filteren. Het resultaat schrijf je weg in het nieuwe object <code>Adelie_penguins</code>.</p>
 </section>
-<section id="vraag-2" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2">Vraag 2</h2>
-<p>Nu we een keuze gemaakt hebben voor de analysetechnieken zijn we klaar om onze handen vuil te maken en empirisch op zoek te gaan naar antwoorden voor deze onderzoeksvragen.</p>
-<p><em>Voer de gepaste analyses uit om de onderzoeksvragen te beantwoorden. Geef de relevante output van je analyses en bespreek deze. Stel het resultaat ook visueel voor.</em></p>
-<p>[RESPONS ACHTERAAN DOCUMENT]</p>
+<section id="complete-observaties-filteren" class="level2">
+<h2 class="anchored" data-anchor-id="complete-observaties-filteren">Complete observaties filteren</h2>
+<p>Er zijn situaties dat we cases willen verwijderen die één of meerdere ontbrekende waarden hebben voor een (set van) variabelen. In de cursus introduceren we daartoe de <code>na.omit()</code> functie. Die functie is niet altijd even leesbaar. <code>dplyr</code> geeft ons tools om dat wat makkelijker te doen.</p>
+<p>In de dataset zitten twee variabelen die de afmetingen van de snavel bevatten: <code>bill_length_mm</code> (snavellengte) en <code>bill_depth_mm</code> (snavelbreedte). Stel dat je enkel de data van pinguïns wil selecteren van peguïns waarvan we volledige gegevens hebben over de snavel. Met <code>na.omit( )</code> zou dit er zo uitzien:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Snavelgegevens_compleet <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(penguins[,<span class="fu">c</span>(<span class="st">"bill_length_mm"</span>, <span class="st">"bill_depth_mm"</span>)])</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Gebruiken we de functie <code>drop_na()</code> uit <code>tidyr</code> dan kan dat als volgt:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Snavelgegevens_compleet <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>   bill_length_mm,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   bill_depth_mm</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Merk op dat code via <code>drop_na()</code> toch veel makkelijker te lezen is.</p>
 </section>
+<section id="variabelen-hercoderen" class="level2">
+<h2 class="anchored" data-anchor-id="variabelen-hercoderen">Variabelen hercoderen</h2>
+<p>Voor het hercoderen van variabelen maken we normaal gebruik van de <code>recode( )</code> functie uit <code>car</code>.</p>
+<p>Stel dat we de variabele <code>species</code> willen hercoderen naar een variant met codes 1, 2 en 3 eerder dan de namen van de pinguïnsoorten. Dan doen we dit zo via <code>recode( )</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>penguins<span class="sc">$</span>species_hc <span class="ot">&lt;-</span> <span class="fu">recode</span>(penguins<span class="sc">$</span>species, <span class="st">"'Adelie' = 1; 'Chinstrap' = 2; 'Gentoo' = 3 "</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(penguins<span class="sc">$</span>species, penguins<span class="sc">$</span>species_hc)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           
+              1   2   3
+  Adelie    152   0   0
+  Chinstrap   0  68   0
+  Gentoo      0   0 124</code></pre>
+</div>
+</div>
+<p>Via <code>dplyr</code> doen we het als volgt, gebruik makend van de powercombo <code>mutate( )</code> en <code>case_when( )</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">species_hc =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Adelie"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Chinstrap"</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Gentoo"</span> <span class="sc">~</span> <span class="dv">3</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(penguins<span class="sc">$</span>species, penguins<span class="sc">$</span>species_hc)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           
+              1   2   3
+  Adelie    152   0   0
+  Chinstrap   0  68   0
+  Gentoo      0   0 124</code></pre>
+</div>
+</div>
+<p>Deze weg lijkt wat meer code te zijn, maar is vooral handig als je straks veel complexere hercoderingen wil uitvoeren (bv indien we informatie uit meerdere variabelen willen combineren).</p>
 </section>
-<section id="responsen" class="level1 unnumbered">
-<h1 class="unnumbered">RESPONSEN</h1>
-<section id="vraag-1-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-1-1">Vraag 1</h2>
-<p>Onderzoeksvraag 1:</p>
-<p>OV1: In welke mate heeft etnische afkomst een invloed op de wetenschapskennis van leerlingen?</p>
-<p>Visueel:</p>
+<section id="variabelen-selecteren" class="level2">
+<h2 class="anchored" data-anchor-id="variabelen-selecteren">Variabelen selecteren</h2>
+<p>Tot slot is het ook handig om variabelen te selecteren via <code>dplyr</code>. Stel dat we een nieuwe dataframe willen aanmaken met daarin enkel de informatie over de snavels, gecombineerd met de info over <code>species</code>. Dan doen we dit bijvoorbeeld zo in <code>R</code> basistaal.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Snavelgegevens <span class="ot">&lt;-</span> penguins[,<span class="fu">c</span>(<span class="st">"species"</span>, <span class="st">"bill_length_mm"</span>, <span class="st">"bill_depth_mm"</span>)]</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Via <code>dplyr</code> doen we het zo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Snavelgegevens <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    species,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    bill_length_mm,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    bill_depth_mm</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="vraag-2-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vraag-2-1">Vraag 2</h2>
+<section id="tutorials-op-youtube" class="level2">
+<h2 class="anchored" data-anchor-id="tutorials-op-youtube">Tutorials op YouTube</h2>
+<p>Uiteraard is er online veel meer terug te vinden over deze functies. Zo kan je bijvoorbeeld de volgende YouTube tutorial bekijken.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uoqFm1Jyyvw?si=ZtuIN0_Rx-hjBBfW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

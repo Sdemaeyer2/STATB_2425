@@ -1,0 +1,130 @@
+---
+title: "Data manipuleren met `dplyr` en `tidyr`"
+---
+
+In `R` kan je op zeer verschillende manieren werken. Meerdere packages worden gemaakt om analyses in `R` "makkelijker" te maken. 
+
+Een hele groep ontwikkelaars hebben de krachten gebundeld om een consistente aanpak in `R` uit te werken en een hele reeks packages te bouwen die elk een eigen doel hebben, maar die ook op gedeelde principes gestoeld zijn. Dit resulteert in een soort *super package*: `tidyverse`. 
+
+In `tidyverse` zitten verschillende packages gebundeld: o.a. `ggplot2` (superkrachtig om visualisaties te maken - waarover later in de opleiding meer), `broom` (om resultaten van analyses makkelijker te vertalen in tabellen etc.), `dplyr` en `tidyr` (om allerlei data-wrangling stappen te faciliteren), ...
+
+De laatste twee packages (`dplyr` en `tidyr`) bevat een aantal zeer handige functies om typische datahandelingen uit te voeren: variabelen hercoderen, cases uitfilteren, variabelen selecteren, aggregeren, bestanden koppelen, data sorteren, enzovoort. Deze functies zijn een pak makkelijker te lezen dan de code die je zou hanteren indien je dit doet aan de hand van basis `R` code. 
+
+Hieronder twee voorbeelden van handelingen die we in dit vak al een keer uitvoeren. We tonen de originele `R` code en nadien de variant op basis van functies uit `dplyr` of `tidyr`.
+
+We doen dit door te werken met de dataset `penguins` uit het package `palmerpenguins`. Dit is dezelfde dataset die we ook hanteren voor de online oefeningen op deze website. Meer info over die datset vind je hier: [Penguins dataset](/Penguins.qmd).
+
+```{r}
+#| message: false
+#| warning: false
+
+# install.packages("palmerpenguins") 
+library(palmerpenguins)
+data("penguins")
+```
+We moeten uiteraard ook eerst `dplyr` en `tidyr` laden. We gaan dit hieronder doen door meteen het overkoepelend package `tidyverse` te laden. Het is een goede reflex om eigenlijk meteen altijd dat package te laden. Vergeet het natuurlijk niet eerst te installeren op je pc via `install.packages()` of door te klikken in `Rstudio`.
+
+## Cases uitfilteren
+
+De dataset bevat data van drie soorten pinguïns (variabele `species`). Stel dat ik een afzonderlijke selectie wil maken van de Adelie pinguïns en dit wil doen met "klassieke" R-code dan zou dat er zo uit zien:
+
+```{r}
+Adelie_penguins <- penguins[penguins$species == "Adelie", ]
+```
+
+We hanteren dan de vierkante haakjes en daartussen kunnen we rijen (voor de komma) en kolommen selecteren. 
+
+Met `dplyr` functies zou dit er zo uit zien:
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+Adelie_penguins <- penguins %>%
+  filter(species=="Adelie")
+```
+
+Een belangrijke operator om in deze taal te snappen is de **pipe operator** : `%>%`. Deze operator pakt de code voor de operator en geeft die vervolgens door aan de volgende functie na de operator. Hier kan je dat dus als volgt lezen: neem de dataframe `penguins` en ga vervolgens cases filteren. Het resultaat schrijf je weg in het nieuwe object `Adelie_penguins`.
+
+## Complete observaties filteren
+
+Er zijn situaties dat we cases willen verwijderen die één of meerdere ontbrekende waarden hebben voor een (set van) variabelen. In de cursus introduceren we daartoe de `na.omit()` functie. Die functie is niet altijd even leesbaar. `dplyr` geeft ons tools om dat wat makkelijker te doen. 
+
+In de dataset zitten twee variabelen die de afmetingen van de snavel bevatten: `bill_length_mm` (snavellengte) en `bill_depth_mm` (snavelbreedte). Stel dat je enkel de data van pinguïns wil selecteren van peguïns waarvan we volledige gegevens hebben over de snavel. Met `na.omit( )` zou dit er zo uitzien:
+
+```{r}
+Snavelgegevens_compleet <- na.omit(penguins[,c("bill_length_mm", "bill_depth_mm")])
+```
+
+Gebruiken we de functie `drop_na()` uit `tidyr` dan kan dat als volgt:
+
+```{r}
+Snavelgegevens_compleet <- penguins %>%
+  drop_na(
+   bill_length_mm,
+   bill_depth_mm
+  )
+```
+
+
+Merk op dat code via `drop_na()` toch veel makkelijker te lezen is. 
+
+## Variabelen hercoderen
+
+Voor het hercoderen van variabelen maken we normaal gebruik van de `recode( )` functie uit `car`. 
+
+Stel dat we de variabele `species` willen hercoderen naar een variant met codes 1, 2 en 3 eerder dan de namen van de pinguïnsoorten. Dan doen we dit zo via `recode( )`.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(car)
+
+penguins$species_hc <- recode(penguins$species, "'Adelie' = 1; 'Chinstrap' = 2; 'Gentoo' = 3 ")
+
+table(penguins$species, penguins$species_hc)
+```
+Via `dplyr` doen we het als volgt, gebruik makend van de powercombo `mutate( )` en `case_when( )`:
+
+```{r}
+penguins <- penguins %>%
+  mutate(
+    species_hc = case_when(
+      species == "Adelie" ~ 1,
+      species == "Chinstrap" ~ 2,
+      species == "Gentoo" ~ 3
+    )
+  )
+
+table(penguins$species, penguins$species_hc)
+```
+
+Deze weg lijkt wat meer code te zijn, maar is vooral handig als je straks veel complexere hercoderingen wil uitvoeren (bv indien we informatie uit meerdere variabelen willen combineren).
+
+## Variabelen selecteren
+
+Tot slot is het ook handig om variabelen te selecteren via `dplyr`. Stel dat we een nieuwe dataframe willen aanmaken met daarin enkel de informatie over de snavels, gecombineerd met de info over `species`. Dan doen we dit bijvoorbeeld zo in `R` basistaal.
+
+```{r}
+Snavelgegevens <- penguins[,c("species", "bill_length_mm", "bill_depth_mm")]
+```
+
+Via `dplyr` doen we het zo.
+
+```{r}
+Snavelgegevens <- penguins %>%
+  select(
+    species,
+    bill_length_mm,
+    bill_depth_mm
+  )
+```
+
+## Tutorials op YouTube
+
+Uiteraard is er online veel meer terug te vinden over deze functies. Zo kan je bijvoorbeeld de volgende YouTube tutorial bekijken.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uoqFm1Jyyvw?si=ZtuIN0_Rx-hjBBfW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
