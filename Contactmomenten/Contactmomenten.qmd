@@ -84,16 +84,8 @@ kern van de inhoud om vervolgens richting de computerlokalen te gaan
 waar we een reeks oefeningen hebben voorbereid voor jou.
 
 We raden ten sterkste aan om deel te nemen aan deze oefeningen in de
-computerlokalen. Het geeft je de kans om vertrouwd te krijgen met `R` en
+computerlokalen. Het geeft je de kans om vertrouwd te raken met `R` en
 `RStudio` in de computerlokalen (waar ook examens zullen doorgaan). Je
 kan werken aan een efficiënte workflow en je hebt de mogelijkheid om
 gerichte vragen te stellen aan de docenten.
 :::
-
-## Dataset voor computeroefeningen
-
-Per contactmoment voorzien we een set van oefeningen die overheen de
-verschillende contactmomenten uitgevoerd worden op dezelfde dataset:
-`Techniek.RData`. Om de oefeningen goed te kunnen uitvoeren is het
-belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit
-codeboek kan je raadplegen via volgende link:
