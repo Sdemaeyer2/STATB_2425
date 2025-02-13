@@ -4,40 +4,96 @@ title: "Contactmomenten"
 
 Voor dit vak zijn er 7 contactmomenten gepland.
 
-Hieronder vind je een overzicht van de verschillende contactmomenten en welke thema's aan bod zullen komen.
+Hieronder vind je een overzicht van de verschillende contactmomenten en
+welke thema's aan bod zullen komen.
 
-+-----------------+------------+---------------+---------+----------------------------------------------+
-| Contactmoment   | Datum      | Uur           | Lokaal  | Onderwerp                                    |
-+=================+============+===============+=========+==============================================+
-| [C1](C1/C1.qmd) | 19/02/2025 | 18u30 - 22u   |         | Van onderzoeksvraag naar methode t-test      |
-+-----------------+------------+---------------+---------+----------------------------------------------+
-| [C2](C2/C2.qmd) | 05/03/2025 | 17u - 19u     |         | ANOVA                                        |
-|                 |            |               |         |                                              |
-|                 |            |               |         | Kruistabel                                   |
-+-----------------+------------+---------------+---------+----------------------------------------------+
-| [C3](C3/C3.qmd) | 19/03/2025 | 16u - 18u     |         | Covariantie en correlatie                    |
-|                 |            |               |         |                                              |
-|                 |            |               |         | Bivariate regressie                          |
-+-----------------+------------+---------------+---------+----------------------------------------------+
-| [C4](C4/C4.qmd) | 26/03/2025 | 19u30 - 22u   |         | Assumpties bij regressie                     |
-|                 |            |               |         |                                              |
-|                 |            |               |         | Meervoudige regressie                        |
-+-----------------+------------+---------------+---------+----------------------------------------------+
-| [C5](C5/C5.qmd) | 23/04/2025 | 17u - 19u     |         | Regressie met dummyvariabelen en interacties |
-+-----------------+------------+---------------+---------+----------------------------------------------+
-| [C6](C6/C6.qmd) | 07/05/2025 | 19u30 - 21u30 |         | Regressie met dummyvariabelen en interacties |
-+-----------------+------------+---------------+---------+----------------------------------------------+
-| [C7](C7/C7.qmd) | 21/05/2025 | 18u - 21u30   |         | Oefenexamen                                  |
-+-----------------+------------+---------------+---------+----------------------------------------------+
++----------+----------+----------+----------+-----------------------+
+| Conta    | Datum    | Uur      | Lokaal   | Onderwerp             |
+| ctmoment |          |          |          |                       |
++==========+==========+==========+==========+=======================+
+| [C1](C1  | 19       | 18u30 -  | Plenair: | Van onderzoeksvraag   |
+| /C1.qmd) | /02/2025 | 22u      | S.R.008  | naar methode          |
+|          |          |          |          |                       |
+|          |          |          | Computer | t-test                |
+|          |          |          | labs:    |                       |
+|          |          |          | S.N. 202 |                       |
+|          |          |          | en S.N.  |                       |
+|          |          |          | 302      |                       |
++----------+----------+----------+----------+-----------------------+
+| [C2](C2  | 05       | 17u -    | Plenair: | ANOVA                 |
+| /C2.qmd) | /03/2025 | 19u      | S.R.008  |                       |
+|          |          |          |          | Kruistabel            |
+|          |          |          | Computer |                       |
+|          |          |          | labs:    |                       |
+|          |          |          | S.N. 202 |                       |
+|          |          |          | en S.N.  |                       |
+|          |          |          | 302      |                       |
++----------+----------+----------+----------+-----------------------+
+| [C3](C3  | 19       | 16u -    | Plenair: | Covariantie en        |
+| /C3.qmd) | /03/2025 | 18u      | S.R.008  | correlatie            |
+|          |          |          |          |                       |
+|          |          |          | Computer | Bivariate regressie   |
+|          |          |          | labs:    |                       |
+|          |          |          | S.N. 102 |                       |
+|          |          |          | en S.N.  |                       |
+|          |          |          | 202      |                       |
++----------+----------+----------+----------+-----------------------+
+| [C4](C4  | 26       | 19u30 -  | Plenair: | Assumpties bij        |
+| /C4.qmd) | /03/2025 | 22u      | S.R.008  | regressie             |
+|          |          |          |          |                       |
+|          |          |          | Computer | Meervoudige regressie |
+|          |          |          | labs:    |                       |
+|          |          |          | S.N. 202 |                       |
+|          |          |          | en S.N.  |                       |
+|          |          |          | 302      |                       |
++----------+----------+----------+----------+-----------------------+
+| [C5](C5  | 23       | 17u -    | Plenair: | Regressie met         |
+| /C5.qmd) | /04/2025 | 19u      | S.R.008  | dummyvariabelen en    |
+|          |          |          |          | interacties           |
+|          |          |          | Computer |                       |
+|          |          |          | labs:    |                       |
+|          |          |          | S.N. 202 |                       |
+|          |          |          | en S.N.  |                       |
+|          |          |          | 302      |                       |
++----------+----------+----------+----------+-----------------------+
+| [C6](C6  | 07       | 19u30 -  | Plenair: | Regressie met         |
+| /C6.qmd) | /05/2025 | 21u30    | S.R.008  | dummyvariabelen en    |
+|          |          |          |          | interacties           |
+|          |          |          | Computer |                       |
+|          |          |          | labs:    |                       |
+|          |          |          | S.N. 202 |                       |
+|          |          |          | en S.N.  |                       |
+|          |          |          | 302      |                       |
++----------+----------+----------+----------+-----------------------+
+| [C7](C7  | 21       | 18u -    | Plenair: | Oefenexamen           |
+| /C7.qmd) | /05/2025 | 21u30    | S.R.008  |                       |
+|          |          |          |          |                       |
+|          |          |          | Computer |                       |
+|          |          |          | labs:    |                       |
+|          |          |          | S.N. 202 |                       |
+|          |          |          | en S.N.  |                       |
+|          |          |          | 302      |                       |
++----------+----------+----------+----------+-----------------------+
 
 ::: callout-important
-Om het maximale te halen uit deze contactmomenten kom je best goed voorbereid naar de les!
+Om het maximale te halen uit deze contactmomenten kom je best goed
+voorbereid naar de les!
 
-Tijdens de contactmomenten starten we met een korte opfrissing van de kern van de inhoud om vervolgens richting de computerlokalen te gaan waar we een reeks oefeningen hebben voorbereid voor jou.
+Tijdens de contactmomenten starten we met een korte opfrissing van de
+kern van de inhoud om vervolgens richting de computerlokalen te gaan
+waar we een reeks oefeningen hebben voorbereid voor jou.
 
-We raden ten sterkste aan om deel te nemen aan deze oefeningen in de computerlokalen. Het geeft je de kans om vertrouwd te krijgen met `R` en `RStudio` in de computerlokalen (waar ook examens zullen doorgaan). Je kan werken aan een efficiënte workflow en je hebt de mogelijkheid om gerichte vragen te stellen aan de docenten.
+We raden ten sterkste aan om deel te nemen aan deze oefeningen in de
+computerlokalen. Het geeft je de kans om vertrouwd te krijgen met `R` en
+`RStudio` in de computerlokalen (waar ook examens zullen doorgaan). Je
+kan werken aan een efficiënte workflow en je hebt de mogelijkheid om
+gerichte vragen te stellen aan de docenten.
 :::
 
 ## Dataset voor computeroefeningen
 
-Per contactmoment voorzien we een set van oefeningen die overheen de verschillende contactmomenten uitgevoerd worden op dezelfde dataset: `Techniek.RData`. Om de oefeningen goed te kunnen uitvoeren is het belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit codeboek kan je raadplegen via volgende link:
+Per contactmoment voorzien we een set van oefeningen die overheen de
+verschillende contactmomenten uitgevoerd worden op dezelfde dataset:
+`Techniek.RData`. Om de oefeningen goed te kunnen uitvoeren is het
+belangrijk dat je zicht hebt op het codeboek van deze dataset. Dit
+codeboek kan je raadplegen via volgende link:
