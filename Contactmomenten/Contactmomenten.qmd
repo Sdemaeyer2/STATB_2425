@@ -11,8 +11,8 @@ welke thema's aan bod zullen komen.
 | Conta      | Datum      | Uur        | Lokaal     | Onderwerp  |
 | ctmoment   |            |            |            |            |
 +============+============+============+============+============+
-| [C1](      | 19         | 18u30 -    | Plenair:   | Van onde   |
-| C1/C1.qmd) | /02/2025   | 22u        | S.R.008    | r          |
+| [C1](      | 19         | 18u30 -    | Plenair:   | Van        |
+| C1/C1.qmd) | /02/2025   | 22u        | S.R.008    | onder      |
 |            |            |            |            | zoeksvraag |
 |            |            |            | Computer   | naar       |
 |            |            |            | labs: S.N. | methode    |
