@@ -609,13 +609,25 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsInJ1bmJ1dHRvbiI6
 </script>
 </div>
 </div>
+<p>De eerste figuur die we kunnen bekijken is de <code>Residuals vs Fitted</code> plot (linksboven). Wat opvalt is dat er toch wel enige structuur te zien is in die puntenwolk. We kunnen eigenlijk 2 ietwat onderscheiden puntenwolken zien in de figuur. Dat kan wijzen op <strong>clustering</strong>. Ook de rode lijn loopt niet mooi horizontaal, maar vertoont eerder een dalende en dan weer stijgende trend. Dat maakt dat we de assumptie van <strong>lineariteit</strong> toch ook in vraag kunnen stellen. De spreiding rond de horizontale referentielijn (stippellijn) lijkt ook niet helemaal constant. Rond het midden van de figuur lijkt er sprake te zijn van grotere spreiding tussen de punten dan aan de uiteinden. Dat kan wijzen op een probleem van <strong>heteroscedasticiteit</strong>.</p>
+<p>Om dat mogelijk probleem van <strong>heteroscedasticiteit</strong> beter te vatten kunnen we ook kijken naar de figuur <code>Scale-location</code> (linksonder). In deze figuur kijken we naar het verloop van de rode lijn. Deze loopt zo goed als horizontaal, wat eigenlijk erop duidt dat de spreiding van de errortermen niet afhankelijk is van de waarden op de x-as. Deze figuur blijkt eerder te wijzen dat er geen probleem is van <strong>heteroscedasticiteit</strong>.</p>
+<p>Vervolgens kijken we naar de figuur rechts bovenaan, de <code>Q-Q Residuals</code> plot. Deze geeft ons een beeld over hoe normaal de errortermen verdeeld zijn. Gegeven dat alle punten nagenoeg mooi op de diagonale lijn vallen, concluderen we dat er voldaan wordt aan de assumptie van <strong>normaal verdeelde errorteremen</strong>.</p>
+<p><strong>Conclusie:</strong></p>
+<ul>
+<li><p>non-lineariteit is mogelijk een probleem</p></li>
+<li><p>er zijn twee groepen te zien, wat ons de vraag kan doen stellen of we geen belangrijke variabele vergeten zijn in het model (<em>denk hier zelf alvast even over na, wij hebben een sterk vermoeden welke variabele ontbreekt in ons model</em>)</p></li>
+<li><p>er is geen overtuigende evidentie om te spreken van een probleem van heteroscedasticiteit</p></li>
+<li><p>de errortermen lijken normaal verdeeld te zijn</p></li>
+</ul>
 </div>
 </div>
 </div>
 </section>
 <section id="oefening-3-1" class="level2">
 <h2 class="anchored" data-anchor-id="oefening-3-1">Oefening 3</h2>
-<p>We hernemen de oplossing uit de vorige oefening hieronder.</p>
+<p>In het OLP introdcueerden we ook twee specifieke visualisaties om na te gaan of er bepaalde <strong>outliers</strong> (extreme waarden) zijn die de resultaten mogelijk vertekenen.</p>
+<p><em>Maak beide visualisaties aan en interpreteer de resultaten.</em></p>
+<p>Geen interactie mogelijk in deze omgeving…</p>
 <div class="cell" data-autorun="true" data-runbutton="false">
 <div>
 <div id="webr-12" class="exercise-cell">
