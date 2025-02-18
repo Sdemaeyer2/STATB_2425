@@ -7,73 +7,66 @@ Voor dit vak zijn er 7 contactmomenten gepland.
 Hieronder vind je een overzicht van de verschillende contactmomenten en
 welke thema's aan bod zullen komen.
 
-+----------+----------+----------+----------+-----------------------+
-| Conta    | Datum    | Uur      | Lokaal   | Onderwerp             |
-| ctmoment |          |          |          |                       |
-+==========+==========+==========+==========+=======================+
-| [C1](C1  | 19       | 18u30 -  | Plenair: | Van onderzoeksvraag   |
-| /C1.qmd) | /02/2025 | 22u      | S.R.008  | naar methode          |
-|          |          |          |          |                       |
-|          |          |          | Computer | t-test                |
-|          |          |          | labs:    |                       |
-|          |          |          | S.N. 202 |                       |
-|          |          |          | en S.N.  |                       |
-|          |          |          | 302      |                       |
-+----------+----------+----------+----------+-----------------------+
-| [C2](C2  | 05       | 17u -    | Plenair: | ANOVA                 |
-| /C2.qmd) | /03/2025 | 19u      | S.R.008  |                       |
-|          |          |          |          | Kruistabel            |
-|          |          |          | Computer |                       |
-|          |          |          | labs:    |                       |
-|          |          |          | S.N. 202 |                       |
-|          |          |          | en S.N.  |                       |
-|          |          |          | 302      |                       |
-+----------+----------+----------+----------+-----------------------+
-| [C3](C3  | 19       | 16u -    | Plenair: | Covariantie en        |
-| /C3.qmd) | /03/2025 | 18u      | S.R.008  | correlatie            |
-|          |          |          |          |                       |
-|          |          |          | Computer | Bivariate regressie   |
-|          |          |          | labs:    |                       |
-|          |          |          | S.N. 102 |                       |
-|          |          |          | en S.N.  |                       |
-|          |          |          | 202      |                       |
-+----------+----------+----------+----------+-----------------------+
-| [C4](C4  | 26       | 19u30 -  | Plenair: | Assumpties bij        |
-| /C4.qmd) | /03/2025 | 22u      | S.R.008  | regressie             |
-|          |          |          |          |                       |
-|          |          |          | Computer | Meervoudige regressie |
-|          |          |          | labs:    |                       |
-|          |          |          | S.N. 202 |                       |
-|          |          |          | en S.N.  |                       |
-|          |          |          | 302      |                       |
-+----------+----------+----------+----------+-----------------------+
-| [C5](C5  | 23       | 17u -    | Plenair: | Regressie met         |
-| /C5.qmd) | /04/2025 | 19u      | S.R.008  | dummyvariabelen en    |
-|          |          |          |          | interacties           |
-|          |          |          | Computer |                       |
-|          |          |          | labs:    |                       |
-|          |          |          | S.N. 202 |                       |
-|          |          |          | en S.N.  |                       |
-|          |          |          | 302      |                       |
-+----------+----------+----------+----------+-----------------------+
-| [C6](C6  | 07       | 19u30 -  | Plenair: | Regressie met         |
-| /C6.qmd) | /05/2025 | 21u30    | S.R.008  | dummyvariabelen en    |
-|          |          |          |          | interacties           |
-|          |          |          | Computer |                       |
-|          |          |          | labs:    |                       |
-|          |          |          | S.N. 202 |                       |
-|          |          |          | en S.N.  |                       |
-|          |          |          | 302      |                       |
-+----------+----------+----------+----------+-----------------------+
-| [C7](C7  | 21       | 18u -    | Plenair: | Oefenexamen           |
-| /C7.qmd) | /05/2025 | 21u30    | S.R.008  |                       |
-|          |          |          |          |                       |
-|          |          |          | Computer |                       |
-|          |          |          | labs:    |                       |
-|          |          |          | S.N. 202 |                       |
-|          |          |          | en S.N.  |                       |
-|          |          |          | 302      |                       |
-+----------+----------+----------+----------+-----------------------+
++------------+------------+------------+------------+------------+
+| Conta      | Datum      | Uur        | Lokaal     | Onderwerp  |
+| ctmoment   |            |            |            |            |
++============+============+============+============+============+
+| [C1](      | 19         | 18u30 -    | Plenair:   | Van onde   |
+| C1/C1.qmd) | /02/2025   | 22u        | S.R.008    | r          |
+|            |            |            |            | zoeksvraag |
+|            |            |            | Computer   | naar       |
+|            |            |            | labs: S.N. | methode    |
+|            |            |            | 202 en     |            |
+|            |            |            | S.N. 302   | t-test     |
++------------+------------+------------+------------+------------+
+| [C2](      | 05         | 17u - 19u  | Plenair:   | ANOVA      |
+| C2/C2.qmd) | /03/2025   |            | S.R.008    |            |
+|            |            |            |            | Kruistabel |
+|            |            |            | Computer   |            |
+|            |            |            | labs: S.N. |            |
+|            |            |            | 202 en     |            |
+|            |            |            | S.N. 302   |            |
++------------+------------+------------+------------+------------+
+| [C3](      | 19         | 16u - 18u  | Plenair:   | C          |
+| C3/C3.qmd) | /03/2025   |            | S.R.008    | ovariantie |
+|            |            |            |            | en         |
+|            |            |            | Computer   | correlatie |
+|            |            |            | labs: S.N. |            |
+|            |            |            | 102 en     | Bivariate  |
+|            |            |            | S.N. 202   | regressie  |
++------------+------------+------------+------------+------------+
+| [C4](      | 26         | 19u30 -    | Plenair:   | Assumpties |
+| C4/C4.qmd) | /03/2025   | 22u        | S.R.008    | bij        |
+|            |            |            |            | regressie  |
+|            |            |            | Computer   |            |
+|            |            |            | labs: S.N. | M          |
+|            |            |            | 202 en     | eervoudige |
+|            |            |            | S.N. 302   | regressie  |
++------------+------------+------------+------------+------------+
+| [C5](      | 23         | 17u - 19u  | Plenair:   | Regressie  |
+| C5/C5.qmd) | /04/2025   |            | S.R.008    | met dumm   |
+|            |            |            |            | y          |
+|            |            |            | Computer   | variabelen |
+|            |            |            | labs: S.N. | en         |
+|            |            |            | 202 en     | i          |
+|            |            |            | S.N. 302   | nteracties |
++------------+------------+------------+------------+------------+
+| [C6](      | 07         | 19u30 -    | Plenair:   | Regressie  |
+| C6/C6.qmd) | /05/2025   | 21u30      | S.R.008    | met dumm   |
+|            |            |            |            | y          |
+|            |            |            | Computer   | variabelen |
+|            |            |            | labs: S.N. | en         |
+|            |            |            | 202 en     | i          |
+|            |            |            | S.N. 302   | nteracties |
++------------+------------+------------+------------+------------+
+| [C7](      | 21         | 18u -      | Plenair:   | O          |
+| C7/C7.qmd) | /05/2025   | 21u30      | S.R.008    | efenexamen |
+|            |            |            |            |            |
+|            |            |            | Computer   |            |
+|            |            |            | labs: S.N. |            |
+|            |            |            | 202 en     |            |
+|            |            |            | S.N. 302   |            |
++------------+------------+------------+------------+------------+
 
 ::: callout-important
 Om het maximale te halen uit deze contactmomenten kom je best goed
