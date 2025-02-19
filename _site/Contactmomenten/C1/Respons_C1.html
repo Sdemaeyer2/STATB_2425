@@ -514,7 +514,7 @@ mean in group 0 mean in group 1
        3.022044        2.856463 </code></pre>
 </div>
 </div>
-<p>We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.</p>
+<p>We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is hoger dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.</p>
 <p>Uit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje <code>p-value = 7.95e-05</code> wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.</p>
 <ol start="2" type="a">
 <li></li>
@@ -595,7 +595,7 @@ mean in group 1 mean in group 2
 </div>
 </div>
 <p>We lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).</p>
-<p>Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie <code>p-value &lt; 2.2e-16</code> in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.</p>
+<p>Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie <code>p-value &lt; 2.2e-16</code> in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van leerjaar 1 en leerjaar 2.</p>
 <ol start="2" type="a">
 <li></li>
 </ol>
@@ -669,7 +669,7 @@ mean difference
 <ol start="2" type="a">
 <li></li>
 </ol>
-<p>Vervolgens berekenen we de Cohen’s d aan de hand van de functie <code>dpaired()</code>. Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).</p>
+<p>Vervolgens berekenen we de Cohen’s d aan de hand van de functie <code>dpaired()</code>. Hierbij moeten we de t-waarde ingeven die we bekwamen bij de t-test en het aantal respondenten waarop deze t-test is uitgevoerd (zie hierboven). Dat laatste - het aantal respondenten - kan je eigenlijk ook aflezen in de output van de paired samples t-test. Namelijk, het aantal vrijheidsgraden plus 1 is het aantal respondenten. Hier zijn er 2289 vrijheidsgraden, dus daaruit kunnen we eigenlijk afleiden dat er 2290 respondenten zijn wiens data gebruikt is om de t-test uit te voeren.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dpaired</span>(<span class="fl">1.9696</span>,<span class="dv">2290</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
