@@ -47,7 +47,9 @@ Doorheen het vak maken we oefeningen in de computerlokalen. De zogenaamde *compu
 
 De dataset kan je dowloaden via Blackboard of via deze link: [download Techniek.RData](/Contactmomenten/Techniek.RData)
 
-Deze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: [codeboek Techniek.RData](/Contacmomenten/Legende variabelen Techniek.pdf).
+Deze dataset bevat een hele reeks variabelen. Check bij alle oefeningen het codeboek dat bij deze dataset hoort. Dit codeboek kan je downloaden via volgende link: [codeboek Techniek.RData](/Contactmomenten/Legende variabelen Techniek.pdf).
 
 Het databestand is een `.RData`\` bestand. Dat wil zeggen dat je dit bestand in RStudio kan openen via *Open file...* in het menu van RStudio. Of, in je code via de `load( )` functie.
+
+Ook *OLP2 Functies.R* kan je downloaden: [download OLP2 Functies.R](/Contactmomenten/OLP2 Functies.R)
 :::

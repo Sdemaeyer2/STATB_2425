@@ -15,9 +15,9 @@ title: "Contactmoment 1: Opdrachten computer lab"
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
 
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
+(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
 
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
+(b) Hoe groot is het effect van `Studiejaar` op `Interest.voor`?
 
 (c) Geef het effect visueel weer.
 :::
@@ -27,7 +27,7 @@ title: "Contactmoment 1: Opdrachten computer lab"
 
 In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
 
-(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
+(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (`Interest.voor`) van de interesee van leerlingen voor techniek aan het einde van een trimester (`Interest.na`)?
 
 (b) Hoe groot is het effect van een trimester technieklessen?
 
