@@ -25,7 +25,7 @@ Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
 
-(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
+(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs behaalde (`Dipvader`)?
 
 (b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
 
@@ -76,9 +76,9 @@ errorbar(Techniek$Interest.voor~Techniek$Dipvader,
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
 
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
+(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
 
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
+(b) Hoe groot is het effect van `Studiejaar` op `Interest.voor`?
 
 (c) Geef het effect visueel weer.
 :::
