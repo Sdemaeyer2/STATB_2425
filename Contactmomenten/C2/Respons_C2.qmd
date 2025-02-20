@@ -25,11 +25,10 @@ te activeren.
 ::: {.callout-tip icon="false"}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
 
-Zouden onze leerlingen uit de verschillende categorieën (`Richting5cat`)
-anders scoren als het gaat over het begrijpen van techniek
-(`Begrijpen.voor`)?
+In welke mate scoren leerlingen uit de verschillende studierichtingen (`Richting5cat`) anders als het gaat over
+het begrijpen van techniek (`Begrijpen.voor`)? 
 
-Indien dit zo is, welke groepen verschillen dan van elkaar?
+Indien dit zo is, welke groepen van leerlingen verschillen dan statistisch significant van elkaar?
 :::
 
 Om deze vragen te beantwoorden dienen we een ANOVA analyse uit te
