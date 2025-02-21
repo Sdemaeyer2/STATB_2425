@@ -26,7 +26,7 @@
     "href": "Zelftest_t_test.html#oefening-2",
     "title": "Online (R) oefeningen",
     "section": "Oefening 2",
-    "text": "Oefening 2\nIn de eerste oefening kregen we zicht op de gemiddelde lichaamsmassa van mannelijke en vrouwelijke pinguïns in de steekproef. Uiteraard zijn we meer geïnteresseerd in hoe dit in de populatie zit! We wensen dus een t-test uit te voeren.\nVoer in het onderstaande code blok de juiste code in om de t-test uit te voeren (je mag er even vanuit gaan dat er voldaan is aan de assumptie van gelijke varianties).\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen een t-test uitvoeren. Daartoe maak je best gebruik van de functie t.test( ).\nt.test(______ ~ _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nt.test(penguins$body_mass_g ~ penguins$sex)\nt.test(penguins$body_mass_g ~ penguins$sex)",
+    "text": "Oefening 2\nIn de eerste oefening kregen we zicht op de gemiddelde lichaamsmassa van mannelijke en vrouwelijke pinguïns in de steekproef. Uiteraard zijn we meer geïnteresseerd in hoe dit in de populatie zit! We wensen dus een t-test uit te voeren.\nVoer in het onderstaande code blok de juiste code in om de t-test uit te voeren (je mag er even vanuit gaan dat er voldaan is aan de assumptie van gelijke varianties).\n\nOefeningHintsOplossing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe willen een t-test uitvoeren. Daartoe maak je best gebruik van de functie t.test( ).\nt.test(______ ~ _______)\n\n\n\n\nOplossing:\nDe volledige oplossing ziet er zo uit!\n\n\nt.test(penguins$body_mass_g ~ penguins$sex, var.equal = TRUE)\nt.test(penguins$body_mass_g ~ penguins$sex, var.equal = TRUE)",
     "crumbs": [
       "Online (R) oefeningen",
       "t-test"

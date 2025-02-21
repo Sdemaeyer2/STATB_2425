@@ -175,7 +175,7 @@ In de eerste oefening kregen we zicht op de gemiddelde lichaamsmassa van manneli
 ```{webr}
 #| exercise: ex2
 #| check: true
-answer <- t.test(penguins$body_mass_g ~penguins$sex)
+answer <- t.test(penguins$body_mass_g ~penguins$sex, var.equal = TRUE)
 if (identical(.result, answer)) {
   list(correct = TRUE, message = "Juist!")
 } else {
@@ -204,7 +204,7 @@ De volledige oplossing ziet er zo uit!
 ```{webr}
 #| exercise: ex2
 #| solution: true
-t.test(penguins$body_mass_g ~ penguins$sex)
+t.test(penguins$body_mass_g ~ penguins$sex, var.equal = TRUE)
 ```
 
 :::

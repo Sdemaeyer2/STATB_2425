@@ -540,7 +540,7 @@ eyJhdHRyIjp7ImNhcHRpb24iOiJPZWZlbmluZzIiLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVy
 </div>
 <div class="cell" data-exercise="ex2" data-check="true">
 <script type="exercise-check-ex2-contents">
-eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImV4MiJ9LCJjb2RlIjoiYW5zd2VyIDwtIHQudGVzdChwZW5ndWlucyRib2R5X21hc3NfZyB+cGVuZ3VpbnMkc2V4KVxuaWYgKGlkZW50aWNhbCgucmVzdWx0LCBhbnN3ZXIpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkp1aXN0IVwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkZvdXQuXCIpXG59In0=
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImV4MiJ9LCJjb2RlIjoiYW5zd2VyIDwtIHQudGVzdChwZW5ndWlucyRib2R5X21hc3NfZyB+cGVuZ3VpbnMkc2V4LCB2YXIuZXF1YWwgPSBUUlVFKVxuaWYgKGlkZW50aWNhbCgucmVzdWx0LCBhbnN3ZXIpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkp1aXN0IVwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkZvdXQuXCIpXG59In0=
 </script>
 </div>
 </div>
@@ -556,8 +556,8 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImV4
 <p>De volledige oplossing ziet er zo uit!</p>
 <div class="cell" data-exercise="ex2" data-solution="true">
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="ex2">
-<code id="interpolate-11" class="solution-code d-none">t.test(penguins$body_mass_g ~ penguins$sex)</code>
-<div class="sourceCode cell-code" id="interpolate-12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="interpolate-12-1"><a href="#interpolate-12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(penguins<span class="sc">$</span>body_mass_g <span class="sc">~</span> penguins<span class="sc">$</span>sex)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<code id="interpolate-11" class="solution-code d-none">t.test(penguins$body_mass_g ~ penguins$sex, var.equal = TRUE)</code>
+<div class="sourceCode cell-code" id="interpolate-12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="interpolate-12-1"><a href="#interpolate-12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(penguins<span class="sc">$</span>body_mass_g <span class="sc">~</span> penguins<span class="sc">$</span>sex, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
