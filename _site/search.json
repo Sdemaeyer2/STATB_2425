@@ -1602,7 +1602,7 @@
     "href": "ZSO/ZSO4.html",
     "title": "ZSO 4",
     "section": "",
-    "text": "Na het zinken van de Titanic deden er verschillende verhalen de ronde. Na vele jaren onderzoek heeft men een nagenoeg volledig bestand kunnen aanleggen van eigenschappen van de passagiers. Nu zijn we in staat om enkele prangende vragen te onderzoeken. De eerste vraag die mensen boeide was of men tijdens die ramp echt wel voorrang heeft gegeven aan vrouwen. Hadden vrouwen een grotere overlevingskans dan mannen?\nHet bijhorende databestand (Titanic2.RData) bevat gegevens over een groot deel van de passagiers op de Titanic. De volgende drie variabelen zijn opgenomen in het bestand: - Survived (“Yes”, “No”); - Class (“1st”, “2nd”, “3rd”, “Crew”); - Gender (“Male”, “Female”).\n1.1 Ga na of er een verband is tussen het geslacht en de overlevingskans. Voer de gepaste analyses uit om deze vraag te beantwoorden. Geef de relevante output van je analyses en bespreek deze.\n1.2 Maak ook een gepaste visualisatie van het resultaat.\n\n\n\nSommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de klasse waarin passagiers geboekt hadden meer invloed had op de kans op overleven dan kenmerken zoals het geslacht.\n2.1 Is er een effect van de klasse waarin men boekte? Staaf je antwoord met output van je analyses.\n2.2 Klopt de uitspraak dat de klasse meer invloed had op de overlevingskans dan het geslacht? Staaf je antwoord met gegevens uit de output van je analyses.\n[RESPONS ACHTERAAN DOCUMENT]",
+    "text": "Voor deze ZSO ga je aan de slag met een nieuwe dataset: Titanic2.RData. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.\nDOWNLOAD DE DATA\n\n\n\n\n\n\nTip\n\n\n\nEen goede workflow in RStudio is van cruciaal belang op lange termijn. In dit vak is het geen verplichting, maar werken met projecten in RStudio kan je leven een pak makkelijker maken.\nDaarom raden we je aan om een nieuw project te maken per ZSO. Concreet betekent dit dat je tevens op je pc een map maakt per ZSO met daarin alle nodige files voor die ZSO:\n\ndatabestanden\nOLP2 functies.R file\nJe script met analyses (of Quarto document)\n\nMeer uitleg over werken met projecten en Quarto documenten kan je vinden onder Extra materiaal (KLIK HIER)",
     "crumbs": [
       "ZSO",
       "ZSO4: Kruistabellen"
@@ -1612,8 +1612,8 @@
     "objectID": "ZSO/ZSO4.html#vraag-1",
     "href": "ZSO/ZSO4.html#vraag-1",
     "title": "ZSO 4",
-    "section": "",
-    "text": "Na het zinken van de Titanic deden er verschillende verhalen de ronde. Na vele jaren onderzoek heeft men een nagenoeg volledig bestand kunnen aanleggen van eigenschappen van de passagiers. Nu zijn we in staat om enkele prangende vragen te onderzoeken. De eerste vraag die mensen boeide was of men tijdens die ramp echt wel voorrang heeft gegeven aan vrouwen. Hadden vrouwen een grotere overlevingskans dan mannen?\nHet bijhorende databestand (Titanic2.RData) bevat gegevens over een groot deel van de passagiers op de Titanic. De volgende drie variabelen zijn opgenomen in het bestand: - Survived (“Yes”, “No”); - Class (“1st”, “2nd”, “3rd”, “Crew”); - Gender (“Male”, “Female”).\n1.1 Ga na of er een verband is tussen het geslacht en de overlevingskans. Voer de gepaste analyses uit om deze vraag te beantwoorden. Geef de relevante output van je analyses en bespreek deze.\n1.2 Maak ook een gepaste visualisatie van het resultaat.",
+    "section": "Vraag 1",
+    "text": "Vraag 1\nNa het zinken van de Titanic deden er verschillende verhalen de ronde. Na vele jaren onderzoek heeft men een nagenoeg volledig bestand kunnen aanleggen van eigenschappen van de passagiers. Nu zijn we in staat om enkele prangende vragen te onderzoeken. De eerste vraag die mensen boeide was of men tijdens die ramp echt wel voorrang heeft gegeven aan vrouwen. Hadden vrouwen een grotere overlevingskans dan mannen?\nHet bijhorende databestand (Titanic2.RData) bevat gegevens over een groot deel van de passagiers op de Titanic. De volgende drie variabelen zijn opgenomen in het bestand: - Survived (“Yes”, “No”); - Class (“1st”, “2nd”, “3rd”, “Crew”); - Gender (“Male”, “Female”).\n1.1 Ga na of er een verband is tussen het geslacht en de overlevingskans. Voer de gepaste analyses uit om deze vraag te beantwoorden. Geef de relevante output van je analyses en bespreek deze.\n1.2 Maak ook een gepaste visualisatie van het resultaat.",
     "crumbs": [
       "ZSO",
       "ZSO4: Kruistabellen"
@@ -1623,8 +1623,8 @@
     "objectID": "ZSO/ZSO4.html#vraag-2",
     "href": "ZSO/ZSO4.html#vraag-2",
     "title": "ZSO 4",
-    "section": "",
-    "text": "Sommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de klasse waarin passagiers geboekt hadden meer invloed had op de kans op overleven dan kenmerken zoals het geslacht.\n2.1 Is er een effect van de klasse waarin men boekte? Staaf je antwoord met output van je analyses.\n2.2 Klopt de uitspraak dat de klasse meer invloed had op de overlevingskans dan het geslacht? Staaf je antwoord met gegevens uit de output van je analyses.\n[RESPONS ACHTERAAN DOCUMENT]",
+    "section": "Vraag 2",
+    "text": "Vraag 2\nSommige onderzoekers van de ramp met de Titanic beweerden kort na de ramp dat de klasse waarin passagiers geboekt hadden meer invloed had op de kans op overleven dan kenmerken zoals het geslacht.\n2.1 Is er een effect van de klasse waarin men boekte? Staaf je antwoord met output van je analyses.\n2.2 Klopt de uitspraak dat de klasse meer invloed had op de overlevingskans dan het geslacht? Staaf je antwoord met gegevens uit de output van je analyses.\n[RESPONS ACHTERAAN DOCUMENT]",
     "crumbs": [
       "ZSO",
       "ZSO4: Kruistabellen"
