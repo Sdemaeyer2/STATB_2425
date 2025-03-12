@@ -5,12 +5,33 @@ format:
   html: default
   pdf: default
 ---
+# Voorbereiding 
+
+Voor deze ZSO ga je aan de slag met een nieuwe dataset: `Oecd.RData`. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.
+
+[DOWNLOAD DE DATA](/ZSO/Oecd.RData)
+
+::: callout-tip
+Een goede workflow in `RStudio` is van cruciaal belang op lange termijn. In dit vak is het geen verplichting, maar werken met projecten in `RStudio` kan je leven een pak makkelijker maken.
+
+Daarom raden we je aan om een nieuw project te maken per ZSO. Concreet betekent dit dat je tevens op je pc een map maakt per ZSO met daarin alle nodige files voor die ZSO:
+
+-   databestanden
+-   `OLP2 functies.R` file
+-   Je script met analyses (of Quarto document)
+
+Meer uitleg over werken met projecten en Quarto documenten kan je vinden onder Extra materiaal ([KLIK HIER](/Extra/Projecten.qmd))
+:::
 
 # OPDRACHTEN {.unnumbered}
 
 ## Vraag 1 {.unnumbered}
 
-Voor deze opdracht maken we gebruik van een databestand dat door ons werd samengesteld op basis van OESO-gegevens. Voor een reeks landen hebben we twee variabelen opgenomen: - Exptotal: dit is het gemiddeld bedrag dat aan een leerling besteed wordt door de overheid om een leerling van onderwijs te voorzien gedurende de gehele carrière van het plichtonderwijs, uitgedrukt in US Dollars. - Reading: de gemiddelde score voor een internationaal vergelijkbare leestoets afgenomen bij 14-jarigen.
+Voor deze opdracht maken we gebruik van een databestand dat door ons werd samengesteld op basis van OESO-gegevens. Voor een reeks landen hebben we twee variabelen opgenomen: 
+
+- `Exptotal`: dit is het gemiddeld bedrag dat aan een leerling besteed wordt door de overheid om een leerling van onderwijs te voorzien gedurende de gehele carrière van het plichtonderwijs, uitgedrukt in US Dollars. 
+
+- `Reading`: de gemiddelde score voor een internationaal vergelijkbare leestoets afgenomen bij 14-jarigen.
 
 Een wederkerende discussie die je hoort op allerlei beleidsniveaus aangaande onderwijskwaliteit is de vraag naar de rol van de “centen”. Zo zijn er mensen die beweren dat grote verschillen tussen landen in cognitieve outputmaten te verklaren zijn vanuit een verschillend budget dat overheden vrijmaken voor onderwijs.
 
@@ -46,7 +67,7 @@ library(car)
 
 a)  Analyses 
 
-We willen het effect nagaan van onderwijsuitgaven (‘Exptotal’) op de gemiddelde leesscore (‘Reading’). Het onderstaande commando geeft als resultaat een regressieanalyse van ‘Exptotal’ op ‘Reading’. Het resultaat wordt weggeschreven in het object met naam ‘Model1’. Via summary( ) roepen we vervolgens de concrete output op.
+We willen het effect nagaan van onderwijsuitgaven (`Exptotal`) op de gemiddelde leesscore (`Reading`). Het onderstaande commando geeft als resultaat een regressieanalyse van `Exptotal` op `Reading`. Het resultaat wordt weggeschreven in het object met naam `Model1`. Via `summary( )` roepen we vervolgens de concrete output op.
 
 ```{r, comment=""}
 #| message: false
@@ -58,7 +79,7 @@ summary(Model1)
 
 b)  Resultaten bespreken met verwijzing naar output 
 
-Uit $R^2$ blijkt dat het gemiddeld bedrag dat aan leerlingen wordt uitgegeven (‘Exptotal’) 14,25% van de verschillen in leesscore (‘Reading’) verklaart. De gemiddelde uitgave per leerling heeft dus een groot effect op de leesvaardigheid. Bovendien geeft het resultaat van de F-toets aan dat we dit verband hoogst waarschijnlijk ook in de populatie van landen zullen terugvinden (*F*(1,32) = 5.319, *p* = 0.028). De kans dat er geen verschillen in leesscore zijn naar gemiddeld gespendeerd budget per leerling is duidelijk lager dan 0.05. ‘Exptotal’ zal dus ook in de populatie van landen verschillen in leesprestaties (‘Reading’) verklaren. De hellingsgraad ($\beta_1$ = 0.000263, *p* = 0.028) geeft aan dat het om een positief verband gaat. Per US Dollar dat een land meer spendeert aan de studieloopbaan van een leerling, stijgt de gemiddelde leesscore met 0.00026 eenheden. Het intercept bedraagt 467.7 (*p* \< 0.001). Dus, voor landen die hypothetisch gezien niets zouden spenderen aan onderwijs van leerlingen, zou de gemiddelde leerling een leesscore behalen van 467.7. \newpage    
+Uit $R^2$ blijkt dat het gemiddeld bedrag dat aan leerlingen wordt uitgegeven (`Exptotal`) 14,25% van de verschillen in leesscore (`Reading`) verklaart. De gemiddelde uitgave per leerling heeft dus een groot effect op de leesvaardigheid. Bovendien geeft het resultaat van de F-toets aan dat we dit verband hoogst waarschijnlijk ook in de populatie van landen zullen terugvinden (*F*(1,32) = 5.319, *p* = 0.028). De kans dat er geen verschillen in leesscore zijn naar gemiddeld gespendeerd budget per leerling is duidelijk lager dan 0.05. `Exptotal` zal dus ook in de populatie van landen verschillen in leesprestaties (`Reading`) verklaren. De hellingsgraad ($\beta_1$ = 0.000263, *p* = 0.028) geeft aan dat het om een positief verband gaat. Per US Dollar dat een land meer spendeert aan de studieloopbaan van een leerling, stijgt de gemiddelde leesscore met 0.00026 eenheden. Het intercept bedraagt 467.7 (*p* \< 0.001). Dus, voor landen die hypothetisch gezien niets zouden spenderen aan onderwijs van leerlingen, zou de gemiddelde leerling een leesscore behalen van 467.7. \newpage    
 
 ## 1.2 {.unnumbered}
 
@@ -104,7 +125,7 @@ Oecd
 
 b)  Resultaten bespreken met verwijzing naar output 
 
-De bovenstaande output toont dat de voorspelde score voor Brazilië het verste af ligt van de werkelijke leesscore voor dat land. Het verschil bedraagt 60.84 punten. Dus, de gemiddelde Braziliaanse leerlingen doen het opvallend minder goed voor lezen dan wat zou verwacht mogen worden op basis van het budget dat besteed wordt aan onderwijs.
+De bovenstaande output toont dat de voorspelde score voor Brazilië het verste af ligt van de werkelijke leesscore voor dat land. Het verschil bedraagt 60.84 punten. Dus, de gemiddelde Braziliaanse leerling doet het opvallend minder goed voor lezen dan wat zou verwacht mogen worden op basis van het budget dat besteed wordt aan onderwijs.
 
 ## 1.4 {.unnumbered}
 
@@ -126,4 +147,4 @@ summary(Model2)
 
 b)  Resultaten bespreken met verwijzing naar output 
 
-De algemene conclusie is net hetzelfde als in de oorspronkelijke analyse. Je zou net zo goed concluderen dat uitgaven een grote invloed hebben op leesprestaties. Dit kan je afleiden uit de $R^2$ van 0.143 en de p-waarde lager dan 0.05 (*F*(1,32) = 5.319, p = 0.028). Het intercept bedraagt nu echter -23.451 (*p* = 0.042). Dit is een gevolg van het centreren van de afhankelijke variabele ‘Reading’. Dit betekent dat een score van 0 op ‘Read2’ hetzelfde betekent als als land gemiddeld scoren voor lezen. Het intercept bedraagt -23.451, een land dat nul scoort op ‘Expend2’, dat geen geld uitgeeft aan onderwijs, scoort 23.451 punten lager dan het gemiddelde voor lezen. Het intercept wijkt nog steeds statistische significant af van 0. De hellingsgraad bedraagt 0.264 (*p* = 0.028). Dus, per 1000 USD dat een land meer uitgeeft per kind aan onderwijs stijgt de gemiddelde leesscore voor dat land met 0.264 punten. Want 1 eenheid stijgen op de variabele ‘Expend2’ staat nu gelijk aan 1000 USD meer uitgeven. Dit effect vinden we vermoedelijk ook de in de populatie terug aangezien de kans dat er in de populatie geen effect van ‘Expend2’ is, slechts 0.028 bedraagt.
+De algemene conclusie is net hetzelfde als in de oorspronkelijke analyse. Je zou net zo goed concluderen dat uitgaven een grote invloed hebben op leesprestaties. Dit kan je afleiden uit de $R^2$ van 0.143 en de p-waarde lager dan 0.05 (*F*(1,32) = 5.319, p = 0.028). Het intercept bedraagt nu echter -23.451 (*p* = 0.042). Dit is een gevolg van het centreren van de afhankelijke variabele `Reading`. Dit betekent dat een score van 0 op `Read2` hetzelfde betekent als als land gemiddeld scoren voor lezen. Het intercept bedraagt -23.451, een land dat nul scoort op `Expend2`, dat geen geld uitgeeft aan onderwijs, scoort 23.451 punten lager dan het gemiddelde voor lezen. Het intercept wijkt nog steeds statistische significant af van 0. De hellingsgraad bedraagt 0.264 (*p* = 0.028). Dus, per 1000 USD dat een land meer uitgeeft per kind aan onderwijs stijgt de gemiddelde leesscore voor dat land met 0.264 punten. Want 1 eenheid stijgen op de variabele `Expend2` staat nu gelijk aan 1000 USD meer uitgeven. Dit effect vinden we vermoedelijk ook de in de populatie terug aangezien de kans dat er in de populatie geen effect van `Expend2` is, slechts 0.028 bedraagt.
