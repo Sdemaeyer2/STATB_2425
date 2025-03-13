@@ -454,7 +454,8 @@ window.Quarto = {
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link active" data-scroll-target="#opdrachten">OPDRACHTEN</a>
+  <li><a href="#voorbereiding" id="toc-voorbereiding" class="nav-link active" data-scroll-target="#voorbereiding">Voorbereiding</a></li>
+  <li><a href="#opdrachten" id="toc-opdrachten" class="nav-link" data-scroll-target="#opdrachten">OPDRACHTEN</a>
   <ul class="collapse">
   <li><a href="#vraag-1" id="toc-vraag-1" class="nav-link" data-scroll-target="#vraag-1">Vraag 1</a></li>
   </ul></li>
@@ -490,11 +491,40 @@ window.Quarto = {
 </header>
 
 
+<section id="voorbereiding" class="level1">
+<h1>Voorbereiding</h1>
+<p>Voor deze ZSO ga je aan de slag met een nieuwe dataset: <code>Oecd.RData</code>. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.</p>
+<p><a href="../ZSO/Oecd.RData">DOWNLOAD DE DATA</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Een goede workflow in <code>RStudio</code> is van cruciaal belang op lange termijn. In dit vak is het geen verplichting, maar werken met projecten in <code>RStudio</code> kan je leven een pak makkelijker maken.</p>
+<p>Daarom raden we je aan om een nieuw project te maken per ZSO. Concreet betekent dit dat je tevens op je pc een map maakt per ZSO met daarin alle nodige files voor die ZSO:</p>
+<ul>
+<li>databestanden</li>
+<li><code>OLP2 functies.R</code> file</li>
+<li>Je script met analyses (of Quarto document)</li>
+</ul>
+<p>Meer uitleg over werken met projecten en Quarto documenten kan je vinden onder Extra materiaal (<a href="../Extra/Projecten.html">KLIK HIER</a>)</p>
+</div>
+</div>
+</section>
 <section id="opdrachten" class="level1 unnumbered">
 <h1 class="unnumbered">OPDRACHTEN</h1>
 <section id="vraag-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="vraag-1">Vraag 1</h2>
-<p>Voor deze opdracht maken we gebruik van een databestand dat door ons werd samengesteld op basis van OESO-gegevens. Voor een reeks landen hebben we twee variabelen opgenomen: - Exptotal: dit is het gemiddeld bedrag dat aan een leerling besteed wordt door de overheid om een leerling van onderwijs te voorzien gedurende de gehele carrière van het plichtonderwijs, uitgedrukt in US Dollars. - Reading: de gemiddelde score voor een internationaal vergelijkbare leestoets afgenomen bij 14-jarigen.</p>
+<p>Voor deze opdracht maken we gebruik van een databestand dat door ons werd samengesteld op basis van OESO-gegevens. Voor een reeks landen hebben we twee variabelen opgenomen:</p>
+<ul>
+<li><p><code>Exptotal</code>: dit is het gemiddeld bedrag dat aan een leerling besteed wordt door de overheid om een leerling van onderwijs te voorzien gedurende de gehele carrière van het plichtonderwijs, uitgedrukt in US Dollars.</p></li>
+<li><p><code>Reading</code>: de gemiddelde score voor een internationaal vergelijkbare leestoets afgenomen bij 14-jarigen.</p></li>
+</ul>
 <p>Een wederkerende discussie die je hoort op allerlei beleidsniveaus aangaande onderwijskwaliteit is de vraag naar de rol van de “centen”. Zo zijn er mensen die beweren dat grote verschillen tussen landen in cognitieve outputmaten te verklaren zijn vanuit een verschillend budget dat overheden vrijmaken voor onderwijs.</p>
 <p><em>1.1 Ga na of de hypothese klopt dat meer uitgaven aan onderwijs doorgaans leidt tot betere leerresultaten van leerlingen. Rapporteer zo volledig mogelijk.</em></p>
 <p><em>1.2 Maak een grafiek met daarin de trend die je kan afleiden op basis van je analyses.</em></p>
@@ -518,7 +548,7 @@ window.Quarto = {
 <ol type="a">
 <li>Analyses</li>
 </ol>
-<p>We willen het effect nagaan van onderwijsuitgaven (‘Exptotal’) op de gemiddelde leesscore (‘Reading’). Het onderstaande commando geeft als resultaat een regressieanalyse van ‘Exptotal’ op ‘Reading’. Het resultaat wordt weggeschreven in het object met naam ‘Model1’. Via summary( ) roepen we vervolgens de concrete output op.</p>
+<p>We willen het effect nagaan van onderwijsuitgaven (<code>Exptotal</code>) op de gemiddelde leesscore (<code>Reading</code>). Het onderstaande commando geeft als resultaat een regressieanalyse van <code>Exptotal</code> op <code>Reading</code>. Het resultaat wordt weggeschreven in het object met naam <code>Model1</code>. Via <code>summary( )</code> roepen we vervolgens de concrete output op.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Oecd<span class="sc">$</span>Reading <span class="sc">~</span> Oecd<span class="sc">$</span>Exptotal)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model1)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -546,7 +576,7 @@ F-statistic: 5.319 on 1 and 32 DF,  p-value: 0.02772</code></pre>
 <ol start="2" type="a">
 <li>Resultaten bespreken met verwijzing naar output</li>
 </ol>
-<p>Uit <span class="math inline">\(R^2\)</span> blijkt dat het gemiddeld bedrag dat aan leerlingen wordt uitgegeven (‘Exptotal’) 14,25% van de verschillen in leesscore (‘Reading’) verklaart. De gemiddelde uitgave per leerling heeft dus een groot effect op de leesvaardigheid. Bovendien geeft het resultaat van de F-toets aan dat we dit verband hoogst waarschijnlijk ook in de populatie van landen zullen terugvinden (<em>F</em>(1,32) = 5.319, <em>p</em> = 0.028). De kans dat er geen verschillen in leesscore zijn naar gemiddeld gespendeerd budget per leerling is duidelijk lager dan 0.05. ‘Exptotal’ zal dus ook in de populatie van landen verschillen in leesprestaties (‘Reading’) verklaren. De hellingsgraad (<span class="math inline">\(\beta_1\)</span> = 0.000263, <em>p</em> = 0.028) geeft aan dat het om een positief verband gaat. Per US Dollar dat een land meer spendeert aan de studieloopbaan van een leerling, stijgt de gemiddelde leesscore met 0.00026 eenheden. Het intercept bedraagt 467.7 (<em>p</em> &lt; 0.001). Dus, voor landen die hypothetisch gezien niets zouden spenderen aan onderwijs van leerlingen, zou de gemiddelde leerling een leesscore behalen van 467.7. </p>
+<p>Uit <span class="math inline">\(R^2\)</span> blijkt dat het gemiddeld bedrag dat aan leerlingen wordt uitgegeven (<code>Exptotal</code>) 14,25% van de verschillen in leesscore (<code>Reading</code>) verklaart. De gemiddelde uitgave per leerling heeft dus een groot effect op de leesvaardigheid. Bovendien geeft het resultaat van de F-toets aan dat we dit verband hoogst waarschijnlijk ook in de populatie van landen zullen terugvinden (<em>F</em>(1,32) = 5.319, <em>p</em> = 0.028). De kans dat er geen verschillen in leesscore zijn naar gemiddeld gespendeerd budget per leerling is duidelijk lager dan 0.05. <code>Exptotal</code> zal dus ook in de populatie van landen verschillen in leesprestaties (<code>Reading</code>) verklaren. De hellingsgraad (<span class="math inline">\(\beta_1\)</span> = 0.000263, <em>p</em> = 0.028) geeft aan dat het om een positief verband gaat. Per US Dollar dat een land meer spendeert aan de studieloopbaan van een leerling, stijgt de gemiddelde leesscore met 0.00026 eenheden. Het intercept bedraagt 467.7 (<em>p</em> &lt; 0.001). Dus, voor landen die hypothetisch gezien niets zouden spenderen aan onderwijs van leerlingen, zou de gemiddelde leerling een leesscore behalen van 467.7. </p>
 </section>
 <section id="section-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="section-1">1.2</h2>
@@ -663,7 +693,7 @@ F-statistic: 5.319 on 1 and 32 DF,  p-value: 0.02772</code></pre>
 <ol start="2" type="a">
 <li>Resultaten bespreken met verwijzing naar output</li>
 </ol>
-<p>De bovenstaande output toont dat de voorspelde score voor Brazilië het verste af ligt van de werkelijke leesscore voor dat land. Het verschil bedraagt 60.84 punten. Dus, de gemiddelde Braziliaanse leerlingen doen het opvallend minder goed voor lezen dan wat zou verwacht mogen worden op basis van het budget dat besteed wordt aan onderwijs.</p>
+<p>De bovenstaande output toont dat de voorspelde score voor Brazilië het verste af ligt van de werkelijke leesscore voor dat land. Het verschil bedraagt 60.84 punten. Dus, de gemiddelde Braziliaanse leerling doet het opvallend minder goed voor lezen dan wat zou verwacht mogen worden op basis van het budget dat besteed wordt aan onderwijs.</p>
 </section>
 <section id="section-3" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="section-3">1.4</h2>
@@ -702,7 +732,7 @@ F-statistic: 5.319 on 1 and 32 DF,  p-value: 0.02772</code></pre>
 <ol start="2" type="a">
 <li>Resultaten bespreken met verwijzing naar output</li>
 </ol>
-<p>De algemene conclusie is net hetzelfde als in de oorspronkelijke analyse. Je zou net zo goed concluderen dat uitgaven een grote invloed hebben op leesprestaties. Dit kan je afleiden uit de <span class="math inline">\(R^2\)</span> van 0.143 en de p-waarde lager dan 0.05 (<em>F</em>(1,32) = 5.319, p = 0.028). Het intercept bedraagt nu echter -23.451 (<em>p</em> = 0.042). Dit is een gevolg van het centreren van de afhankelijke variabele ‘Reading’. Dit betekent dat een score van 0 op ‘Read2’ hetzelfde betekent als als land gemiddeld scoren voor lezen. Het intercept bedraagt -23.451, een land dat nul scoort op ‘Expend2’, dat geen geld uitgeeft aan onderwijs, scoort 23.451 punten lager dan het gemiddelde voor lezen. Het intercept wijkt nog steeds statistische significant af van 0. De hellingsgraad bedraagt 0.264 (<em>p</em> = 0.028). Dus, per 1000 USD dat een land meer uitgeeft per kind aan onderwijs stijgt de gemiddelde leesscore voor dat land met 0.264 punten. Want 1 eenheid stijgen op de variabele ‘Expend2’ staat nu gelijk aan 1000 USD meer uitgeven. Dit effect vinden we vermoedelijk ook de in de populatie terug aangezien de kans dat er in de populatie geen effect van ‘Expend2’ is, slechts 0.028 bedraagt.</p>
+<p>De algemene conclusie is net hetzelfde als in de oorspronkelijke analyse. Je zou net zo goed concluderen dat uitgaven een grote invloed hebben op leesprestaties. Dit kan je afleiden uit de <span class="math inline">\(R^2\)</span> van 0.143 en de p-waarde lager dan 0.05 (<em>F</em>(1,32) = 5.319, p = 0.028). Het intercept bedraagt nu echter -23.451 (<em>p</em> = 0.042). Dit is een gevolg van het centreren van de afhankelijke variabele <code>Reading</code>. Dit betekent dat een score van 0 op <code>Read2</code> hetzelfde betekent als als land gemiddeld scoren voor lezen. Het intercept bedraagt -23.451, een land dat nul scoort op <code>Expend2</code>, dat geen geld uitgeeft aan onderwijs, scoort 23.451 punten lager dan het gemiddelde voor lezen. Het intercept wijkt nog steeds statistische significant af van 0. De hellingsgraad bedraagt 0.264 (<em>p</em> = 0.028). Dus, per 1000 USD dat een land meer uitgeeft per kind aan onderwijs stijgt de gemiddelde leesscore voor dat land met 0.264 punten. Want 1 eenheid stijgen op de variabele <code>Expend2</code> staat nu gelijk aan 1000 USD meer uitgeven. Dit effect vinden we vermoedelijk ook de in de populatie terug aangezien de kans dat er in de populatie geen effect van <code>Expend2</code> is, slechts 0.028 bedraagt.</p>
 
 
 </section>

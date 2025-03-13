@@ -5,6 +5,23 @@ format:
   html: default
   pdf: default
 ---
+# Voorbereiding 
+
+Voor deze ZSO ga je aan de slag met een andere dataset uit een internationaal vergelijkend onderzoek: `CivedZSO7.RData`. De data kan je downloaden door op onderstaande link te klikken met een rechtermuisklik.
+
+[DOWNLOAD DE DATA](/ZSO/CivedZSO7.RData)
+
+::: callout-tip
+Een goede workflow in `RStudio` is van cruciaal belang op lange termijn. In dit vak is het geen verplichting, maar werken met projecten in `RStudio` kan je leven een pak makkelijker maken.
+
+Daarom raden we je aan om een nieuw project te maken per ZSO. Concreet betekent dit dat je tevens op je pc een map maakt per ZSO met daarin alle nodige files voor die ZSO:
+
+-   databestanden
+-   `OLP2 functies.R` file
+-   Je script met analyses (of Quarto document)
+
+Meer uitleg over werken met projecten en Quarto documenten kan je vinden onder Extra materiaal ([KLIK HIER](/Extra/Projecten.qmd))
+:::
 
 # OPDRACHTEN {.unnumbered}
 
