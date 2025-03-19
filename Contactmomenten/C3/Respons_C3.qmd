@@ -34,7 +34,7 @@ Een deel van de leerlingen volgden een project gericht op het domein techniek. W
 
 (a) 
 
-Om de vraag te beantwoorden berekenen we de onderlinge correlaties tussen deze variabelen en testen we de statistische significantie van deze correlaties. In de onderstaande code doen we dit in één beweging voor alle variabelen tegelijkertijd. Eerst maken we een object aan (`Project`) met daarin enkel de variabelen waartussen we een correlatie willen berekenen. Je ziet ook ee optionele tussenstap waarin we de kolomnamen (variabelenamen) van de variabelen in `Project` aanpassen om kortere namen te hebben. Zo is de correlatietabel makkelijker leesbaar. Vervolgens berekenen we de correlaties door middel van de `cor.prob()` functie.
+Om de vraag te beantwoorden berekenen we de onderlinge correlaties tussen deze variabelen en testen we de statistische significantie van deze correlaties. In de onderstaande code doen we dit in één beweging voor alle variabelen tegelijkertijd. Eerst maken we een object aan (`Project`) met daarin enkel de variabelen waartussen we een correlatie willen berekenen. Je ziet ook een optionele tussenstap waarin we de kolomnamen (variabelenamen) van de variabelen in `Project` aanpassen om kortere namen te hebben. Zo is de correlatietabel die we zullen verktrijgen meer leesbaar. Vervolgens berekenen we de correlaties door middel van de `cor.prob()` functie.
 
 ```{r}
 # Object aanmaken met enkel de variabelen
@@ -100,10 +100,9 @@ Adjusted R-kwadraat = -0.0003: het gaat om een verwaarloosbaar effect (negatief 
 
 De p-waarde voor de test op modelniveau is 0.52: kans op de tendensen in onze steekproef indien H0 opgaat in de populatie is groter dan 5%. Dus, er is niet voldoende evidentie om te stellen dat dit model in de populatie variantie verklaart in `TAC.na`.
 
-Het intercept bedraagt 0.60. Dit betekent dat een leerling die 0 scoort op de variabele `PISA_Experimenteren` 0.60 punten zal scoren op `TAC.na`. De p-waarde voor het intercept is lager dan  0.05: kans dat we deze waarde voor het intercept in onze steekproef vaststellen indien de H0 opgaat in de populatie is kleiner dan 5%. De nulhypothese is dat de waarde van het intercept gelijk is aan nul. Die nulhypothese kunnen we verwerpen.
+Het intercept bedraagt 0.60. Dit betekent dat een leerling die 0 scoort op de variabele `PISA_Experimenteren` 0.60 punten zal scoren op `TAC.na`. De p-waarde voor het intercept is lager dan  0.05: kans dat we deze waarde voor het intercept in onze steekproef vaststellen indien de H0 opgaat in de populatie is kleiner dan 5%. De nulhypothese is dat de waarde van het intercept gelijk is aan nul. Die nulhypothese kunnen we bijgevolg verwerpen.
 
-$\beta_{experimenteren}$ = -0.005. Dus 1 punt hoger scoren op `PISA_Experimenteren` leidt tot 0.005
-punten lager scoren op `TAC.na`. Met p = 0.52: we kunnen de nulhypothese (H0 = deze regressiecoëfficiënt is in de populatie gelijk aan nul) niet verwerpen. Maw, we verwachten in de populatie geen invloed van experimenteren op technische geletterdheid. 
+$\beta_{experimenteren}$ = -0.005. Dus 1 punt hoger scoren op `PISA_Experimenteren` leidt tot 0.005 punten lager scoren op `TAC.na`. Met p = 0.52: we kunnen de nulhypothese (H0 = deze regressiecoëfficiënt is in de populatie gelijk aan nul) niet verwerpen. Maw, we verwachten in de populatie geen invloed van experimenteren op technische geletterdheid. 
 
 **Eigen Inbreng**
 
