@@ -1,0 +1,221 @@
+---
+title: "OLS uitgelegd"
+format:
+  closeread-html:
+    embed-resources: true
+sidebar: false
+---
+
+Bij bivariate regressieanalyse trachten we het verband tussen twee kwantitatieve variabelen samen te vatten aan de hand van een **regressierechte** (= ons lineair model). 
+
+Maar *hoe bepalen we welke rechte een goede weerspiegeling is van het verband?*
+
+Hiertoe maken we gebruik van een schattingsmethode met de naam **Ordinary Least Squares (OLS)** of methode van de kleinste kwadraten.
+
+Maar waarom net deze methode en wat betekent die? Hieronder nemen we je mee in de logica hierachter.
+
+```{r warning=F, echo=F, message=F}
+library(tidyverse)
+
+set.seed(1975)
+
+Uren <- rnorm(20)
+Error <- rnorm(20, sd = 1.2)
+Examenscore <- 11 + 3.5 * Uren + Error
+
+Data <- tibble::data_frame(Uren, Examenscore)
+
+P1 <- ggplot(Data,
+    aes(
+        x = Uren,
+        y = Examenscore
+    )) +
+    geom_point() +
+    theme_minimal()
+```
+
+:::::::::::::: cr-section
+
+
+We starten met een datasetje @cr-start
+ waarin we het verband nagaan tussen het aantal uren gestudeerd voor een vak (uitgedrukt in een z-score) (`Uren`) en de behaalde score voor het examen van dat vak (`Examenscore`).
+
+
+::: {#cr-start}
+```{r warning=F, echo=F, message=F}
+P1
+```
+:::
+
+Een rechte die het verband goed samenvat zorgt er idealiter voor dat de **predictiefouten** zo klein mogelijk zijn. 
+
+Met predictiefouten verwijzen we naar de afstand tussen de rechte en elk individueel punt.  
+
+Laat ons dat een keer op een zeer naïve wijze toepassen en we tekenen een horizontale rechte ter hoogte van de gemiddelde examenscore (`Examenscore` = 11.36). @cr-lijn1
+
+::: {#cr-lijn1}
+```{r warning=F, echo=F, message=F}
+P1 + 
+    geom_abline(
+        intercept = 11.36, 
+        slope = 0,
+        color = "red")
+```
+:::
+
+Voor elk individueel punt kunnen we vervolgens een predictiefout berekenen. We nemen er even het punt uit van de student die het minst aantal uren studeerde. Voor deze student zien we dat de predictiefout 7.15 bedraagt.  @cr-lijn1-predictiefout1
+
+::: {#cr-lijn1-predictiefout1}
+```{r warning=F, echo=F, message=F}
+
+Xmin <- min(Data$Uren)
+
+Yend <- filter(Data, Uren == Xmin)$Examenscore
+
+P1 + 
+    geom_abline(
+        intercept = 11.36, 
+        slope = 0,
+        color = "red") +
+    geom_segment(
+        aes(
+            x = Xmin,
+            y = 11.36,
+            xend = Xmin,
+            yend = Yend
+        ),
+    arrow = arrow(
+        length = unit(0.3, "cm"),
+        ends = "both",
+        type = "closed"),
+    color = "red",
+    linetype = "dashed"
+    ) + 
+    annotate(
+        geom="text", 
+        x=Xmin+0.2, 
+        y=11.36-(7.15/2), 
+        label="-7.15",
+        color="red"
+        )
+    
+```
+:::
+
+Bekijken we de student die het meeste aantal uren studeerde, dan merken we dat de rechte leidt tot een predictiefout van 6.85, een stevige onderschatting van die student's werkelijk behaalde examenresultaat.  @cr-lijn1-predictiefout2
+
+::: {#cr-lijn1-predictiefout2}
+```{r warning=F, echo=F, message=F}
+
+Xmax <- max(Data$Uren)
+
+Yend <- filter(Data, Uren == Xmax)$Examenscore
+
+P1 + 
+    geom_abline(
+        intercept = 11.36, 
+        slope = 0,
+        color = "red") +
+    geom_segment(
+        aes(
+            x = Xmax,
+            y = 11.36,
+            xend = Xmax,
+            yend = Yend
+        ),
+    arrow = arrow(
+        length = unit(0.3, "cm"),
+        ends = "both",
+        type = "closed"),
+    color = "blue",
+    linetype = "dashed"
+    ) + 
+    annotate(
+        geom="text", 
+        x=Xmax-0.2, 
+        y=11.36+(6.85/2), 
+        label="6.85",
+        color="blue"
+        )
+    
+```
+:::
+
+Keren we terug naar de vraag: hoe bepalen we de beste rechte? Welke regressielijn vat het verband het best samen? Het principe dat we hanteren is zoeken naar de lijn met de kleinste predictiefouten. 
+
+@cr-data-lijn1
+
+Maar, gewoonweg de predictiefouten berekenen en optellen helpt ons niet! Kijken we opnieuw naar de rode rechte in de figuur dan zullen we vaststellen dat het allemaal optellen van de predictiefouten leidt tot een "totale predictiefout" van nagenoeg nul (door afronding is dit niet precies nul). Dit zien we in deze code.
+
+
+::: {#cr-data-lijn1}
+```{r warning=F, echo=T, message=F}
+
+# Voorspelling op basis van de rechte toevoegen aan de data
+Data$Voorspelling <- 11.36    
+
+# De predctiefout voor elk individu berekenen
+Data$Predictiefout <- Data$Examenscore - Data$Voorspelling
+
+#Alle predictiefouten samen optellen
+sum(Data$Predictiefout)
+```
+:::
+
+De oplettende lezer had dit ook zien aankomen! Dat is nu eenmaal eigen aan het gemiddelde gebruiken als voorspelling: voor elke observatie het gemiddelde aftrekken van die observatie en vervolgens deze verschillen allemaal optellen resulteert in de waarde nul.
+
+We moeten dus op een andere wijze de totale predictiefout gaan berekenen, willen we dit als een soort leidend principe hanteren om de best passende rechte te vinden. Hiertoe komen we terecht bij het truukje dat we ook eerder hanteerden om  de variantie te berekenen: **predictiefouten kwadrateren**.  
+
+
+
+En dat is dus de essentie van een **OLS** (Ordinary Least Squares) schatter: de rechte schatten waarvoor geldt dat gekwadrateerde predictiefouten geminimaliseerd zijn. 
+
+@cr-lijn2
+
+Dit zien we mooi in deze figuur waar de rode lijn de regressierechte is waarvoor geldt dat de som van de gekwadrateerde predictiefouten zo klein mogelijk is. In de figuur zien we opnieuw de predictiefout voor de student die het meest aantal uren studeerde. Deze predictiefout wordt gekwadrateerd net zo goed als alle andere predictefouten en vervolgens worden deze kwadraten allen opgeteld. 
+
+::: {#cr-lijn2}
+```{r warning=F, echo=F, message=F}
+
+Xmax <- max(Data$Uren)
+
+Yend <- filter(Data, Uren == Xmax)$Examenscore
+
+M1 <- lm(Examenscore ~ Uren, data = Data)
+
+Intercept <- M1$coefficients[1]
+Slope     <- M1$coefficients[2]
+
+Ystart <- Intercept + Slope*Xmax
+
+P1 + 
+    geom_abline(
+        intercept = M1$coefficients[1], 
+        slope = M1$coefficients[2],
+        color = "red") +
+    geom_segment(
+        aes(
+            x = Xmax,
+            y = Ystart,
+            xend = Xmax,
+            yend = Yend
+        ),
+    arrow = arrow(
+        length = unit(0.3, "cm"),
+        ends = "both",
+        type = "closed"),
+    color = "blue",
+    linetype = "dashed"
+    ) + 
+    annotate(
+        geom="text", 
+        x=Xmax-0.15, 
+        y=Ystart+(1/2), 
+        label="1.00²",
+        color="blue"
+        )
+    
+```
+:::
+::::::::::::::
+
