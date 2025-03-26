@@ -29,7 +29,15 @@ Het databestand bevat de gegevens van de lerarenbevraging uit de ‘Civic Educat
 
 Concreet bevat dit bestand een selectie van de gegevens uit de leerkrachtenbevraging. Meerbepaald bevat het bestand o.a. de volgende variabelen:
 
--‘Ondmeth1’: burgerschapsopvoeding als afzonderlijk vak; -‘Onderwijservaring’: aantal jaren onderwijservaring; -‘ErvaringBO’: aantal jaren ervaring in het geven van burgerschapsopvoeding; -‘DiplomaBO’: respondent heeft een diploma in een discipline die gerelateerd is aan burgerschapsopvoeding; -‘NavormBO’: respondent heeft navorming genoten in een discipline die gerelateerd is aan burgerschapsopvoeding; -‘Leeftijd’: leeftijd van de leraar (als continue variabele); -‘Leeftijd6’: leeftijd van de leraar (ingedeeld in 6 categorieën); -‘Belang’: belang dat gehecht wordt aan het geven van kennisinhouden bij burgerschapsopvoeding; -‘Zelfver’: zelfvertrouwen in het geven van kennisinhouden bij burgerschapsopvoeding.
+- ‘Ondmeth1’: burgerschapsopvoeding als afzonderlijk vak; 
+- ‘Onderwijservaring’: aantal jaren onderwijservaring; 
+- ‘ErvaringBO’: aantal jaren ervaring in het geven van burgerschapsopvoeding; 
+- ‘DiplomaBO’: respondent heeft een diploma in een discipline die gerelateerd is aan burgerschapsopvoeding; 
+- ‘NavormBO’: respondent heeft navorming genoten in een discipline die gerelateerd is aan burgerschapsopvoeding; 
+- ‘Leeftijd’: leeftijd van de leraar (als continue variabele); 
+- ‘Leeftijd6’: leeftijd van de leraar (ingedeeld in 6 categorieën); 
+- ‘Belang’: belang dat gehecht wordt aan het geven van kennisinhouden bij burgerschapsopvoeding; 
+- ‘Zelfver’: zelfvertrouwen in het geven van kennisinhouden bij burgerschapsopvoeding.
 
 Er bestaan verschillende psychologische theorieën die stellen dat een persoon voornamelijk belang hecht aan zaken waarvan hij of zij ook zeker is dat hij of zij ze kan uitvoeren. Als we dit toepassen op deze data, dan kan je veronderstellen dat zelfvertrouwen in het geven van kennisinhouden aangaande burgerschapsopvoeding bij leerkrachten (‘Zelfver’) een goede voorspeller is van het belang dat leerkrachten hechten aan het geven van kennisinhouden (‘Belang’).
 

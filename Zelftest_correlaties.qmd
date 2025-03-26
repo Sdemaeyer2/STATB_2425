@@ -1,6 +1,6 @@
 ---
 title: "Online (`R`) oefeningen"
-subtitle: "Correleaties"
+subtitle: "Correlaties"
 format: live-html
 engine: knitr
 ---
