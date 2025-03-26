@@ -12,7 +12,7 @@ Volgende inhouden komen aan bod:
 
 ![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP
 
-![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen assumpties regressie-analyse
+![](/images/icons/singletutorial.png){width="30"} [Online (R) Oefeningen assumpties regressie-analyse](/Zelftest_assumpties_regressie.qmd)
 
 ![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen multivariate regressie-analyses
 
@@ -22,18 +22,16 @@ Volgende inhouden komen aan bod:
 
 ## Lesmateriaal
 
-![](/images/icons/zz_slides.png){width="30"} Slides Contactmoment 4
+![](/images/icons/zz_slides.png){width="30"} [Slides Contactmoment 4](/PPT_STATB/Sta%20B_2025_C4_assump_meervreg.pptx)
 
 ![](/images/icons/zz_video_camera.png){width="30"} Lesopname (terug te vinden op Blackboard)
 
-![](/images/icons/guided-practice.png){width="30"} Opdrachten computer lab
+![](/images/icons/guided-practice.png){width="30"} [Opdrachten computer lab](/Contactmomenten/C4/Opdrachten_C4.qmd)
 
-![](/images/icons/data.png){width="30"} Dataset computer lab
+![](/images/icons/data.png){width="30"} [Dataset computer lab](/Contactmomenten/Techniek.RData)
 
-![](/images/icons/worked-example.png){width="30"} Respons computer lab
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C4/Respons_C4.qmd)
 
 ## Na de les
 
-![](/images/icons/singlelab.png){width="30"} [ZSO 6: bivariate regressie (deel 2)](/ZSO/ZSO5.qmd)
-
-![](/images/icons/singlelab.png){width="30"} [ZSO 7: multivariate regressie](/ZSO/ZSO6.qmd)
+![](/images/icons/singlelab.png){width="30"} [ZSO 7: Multivariate regressie en assumpties](/ZSO/ZSO7.qmd)

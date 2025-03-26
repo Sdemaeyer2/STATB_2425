@@ -13,11 +13,9 @@ We behandelen volgende inhouden:
 ![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 5 en Hoofdstuk
 6 uit het OLP
 
-![](/images/icons/singletutorial.png){width="30"} [Online (R) Oefeningen
-correlatie-analses](/Zelftest_correlaties.qmd)
+![](/images/icons/singletutorial.png){width="30"} [Online (R) Oefeningen correlatie-analses](/Zelftest_correlaties.qmd)
 
-![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen
-bivariate regressie-analyses
+![](/images/icons/singletutorial.png){width="30"} [Online (R) Oefeningen bivariate regressie-analyses](/Zelftest_bivariate_regressie.qmd)
 
 ![](/images/icons/zz_video_camera.png){width="30"} [Screencast
 correlatie-analyses](https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-b-public/watch/c1205c7fb4214396b4e5d5ba0e7275de1d)
@@ -31,14 +29,16 @@ regressie-analyse](https://mediasite.uantwerpen.be/Mediasite/Channel/statistiek-
 
 ![](/images/icons/data.png){width="30"} [Dataset uit de slides](/Contactmomenten/StatistiekB.RData)
 
-![](/images/icons/zz_video_camera.png){width="30"} Lesopname (terug te
-vinden op Blackboard)
+![](/images/icons/zz_video_camera.png){width="30"} [Lesopname (terug te
+vinden op Blackboard)](https://mediasite.uantwerpen.be/Mediasite/Play/7a0e1ea435c94d3b8a27617ad3ce639f1d)
 
 ![](/images/icons/guided-practice.png){width="30"} [Opdrachten computer lab](/Contactmomenten/C3/Opdrachten_C3.qmd)
 
 ![](/images/icons/data.png){width="30"} [Dataset computer lab](/Contactmomenten/Techniek.RData)
 
 ![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C3/Respons_C3.qmd) 
+
+![](/images/icons/book.png){width="30"} [OLS Uitgelegd](/Scrollytelling_pages/OLS.qmd)
 
 ## Na de les
 
