@@ -1,5 +1,6 @@
 ---
 title: "OLS uitgelegd"
+lang: be-nl
 format:
   closeread-html:
     embed-resources: true

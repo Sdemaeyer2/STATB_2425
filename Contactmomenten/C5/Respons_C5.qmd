@@ -1,8 +1,9 @@
 ---
-title: "Contactmoment 1: Respons computer lab"
-
+title: "Contactmoment 5: Respons computer lab"
+lang: be-nl
 format: 
-  html: default
+  html:
+    math: true
   pdf: default
 ---
 
@@ -18,143 +19,307 @@ source(here("Contactmomenten", "OLP2 Functies.R"))
 Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket `car` te activeren en ook de OLP2 Functies te activeren. 
 :::
 
+## Voorbereiding
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal"></i> Voorbereiding
+
+Om alles eenvoudig interpreteerbaar te houden, maak je van alle kwantitatieve variabelen die je nodig hebt eerst een z-score. Het gaat om de variabelen `TAC.na`,`Gender.voor`, `PISA_EigenInbreng` en `PISA_Experimenteren`.
+
+Maak een dummy variabele voor `Geslacht` die aanstaat voor “meisje”. Zet de variabele `Richting5cat` om in een reeks dummy variabelen zodanig dat je in je analyses de volgende groepen van studierichtingen met elkaar kan vergelijken: de studierichting "Latijn”, de studierichting “Moderne wetenschappen” en de studierichtingen “Overige”. Deze laatste groep omvat de studierichtingen “Technische”, “Kunst” en “STV/Handel”.
+:::
+
+Eerste stap: variabelen standaardiseren (door `scale()` te gebruiken of `zscore()`)
+
+```{r}
+ # Variabelen standaardiseren #
+Techniek$TAC.naZ <- scale(Techniek$TAC.na)
+Techniek$PISA_EigenInbrengZ <- scale(Techniek$PISA_EigenInbreng)
+Techniek$PISA_ExperimenterenZ <- scale(Techniek$PISA_Experimenteren)
+Techniek$Gender.voorZ <- scale(Techniek$Gender.voor)
+```
+
+Vervolgens maken we de gevraagde dummy variabelen aan
+
+```{r}
+# Dummy variabelen maken #
+Techniek$GeslachtD <- (Techniek$Geslacht=="0")*1
+
+# Nagaan of het goed is gelukt
+table(Techniek$GeslachtD, Techniek$Geslacht)
+
+## Controleer of je de dummyvariabele correct aanmaakte!
+Techniek$LatijnD <- (Techniek$Richting5cat=="3")*1
+Techniek$Mod_wetD <- (Techniek$Richting5cat=="4")*1
+Techniek$OverigeD <- (Techniek$Richting5cat=="1" | Techniek$Richting5cat=="2" | Techniek$Richting5cat=="5")*1
+## | staat in R voor de logische operator OF...
+## Als ‘Richting5cat’ gelijk is aan 1 OF aan 2 OF aan 5 geef die dan de
+## waarde 1.
+
+## Controleer of je de dummyvariabele correct aanmaakte!
+table(Techniek$LatijnD, Techniek$Richting5cat)
+```
+
+## Oefening 1
+
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
 
-(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
+(a) Doe de nodige analyses om de volgende onderzoeksvraag te beantwoorden en bespreek zo grondig mogelijk de output: 
 
-(b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
+*Scoren de leerlingen uit de 3 studierichtingen verschillend op technische geletterdheid (`TAC.naZ`) ongeacht de mate waarin leerlingen een eigen inbreng in de les krijgen (`PISA_EigenInbrengZ`) of waarin er geëxperimenteerd wordt in de les (`PISA_ExperimenterenZ`)?*
 
-(c) Geef het effect visueel weer.
+(b) Voortbouwend op het model dat je in a) hebt getest, vraagt een collega-onderzoeker aan jou of het niet zinvoller is om volgende onderzoeksvraag te onderzoeken: 
+
+*Is het effect van eigen inbreng in de les (`PISA_EigenInbrengZ`) op technische geletterdheid (`TAC.naZ`) wel identiek voor leerlingen uit Moderne wetenschappen? Doe hiertoe de nodige analyses en bespreek kort de essentie om bovenstaande vraag te beantwoorden.*
+
+(c) Bereken de voorspelde score voor een leerling uit Moderne wetenschappen, die 2 SD hoger dan gemiddeld scoort op `PISA_EigenInbrengZ` en 2.5 SD lager op `PISA_ExperimenterenZ`. Bereken dit zowel voor de steekproef als voor de populatie.(Rond daarbij zowel de tussenstappen als de uitkomst af tot op 2 cijfers na de komma.)
 :::
 
-(a) 
+(a)
 
-Vooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.
-
-```{r}
-leveneTest(Techniek$Interest.voor, Techniek$Dipvader)
-```
-Kijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan. 
-
-Nu zijn we klaar om de t-test zelf uit te voeren.
+De eerste stap is een dataset aanmaken die geen NA's meer bevat voor alle variabelen die gehanteerd zullen worden in deze oefening 1. Deze stap is nodig omdat we verder in de oefening ook modellen met elkaar gaan vergelijken.
 
 ```{r}
-t.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)
+DataC5a <- na.omit(
+  Techniek[
+    c("TAC.naZ", 
+      "PISA_ExperimenterenZ",
+      "PISA_EigenInbrengZ", "LatijnD", "Mod_wetD",
+      "OverigeD"
+      )
+    ]
+  )
 ```
-We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (`Dipvader` heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (`Dipvader` heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.
 
-Uit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje `p-value = 7.95e-05` wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.
-
-(b) 
-
-Vervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen's d. 
+Nu zijn we klaar om de modellen te schatten, gebruikmakend van de nieuwe dataset `DataC5a`.
 
 ```{r}
-d(Techniek$Interest.voor,Techniek$Dipvader)
+# Model schatten #
+Model1 <- lm(
+  TAC.naZ ~ Mod_wetD + OverigeD + PISA_EigenInbrengZ + PISA_ExperimenterenZ,
+  data=DataC5a)
 ```
 
-De Cohen's d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.
+In dit model is 'Latijn' de referentiecategorie. Dit maakt het mogelijk om ook na te gaan of leerlingen uit deze categorie significant verschillen m.b.t. `TAC.naZ` deze uit de overige studierichtingen.
 
+Na het schatten kunnen we ook de output bestuderen.
+
+```{r}
+summary(Model1)
+```
+
+- R-kwadraat = 0.14: het gaat om een groot effect (14% verklaarde variantie in `TAC.naZ`). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%; dus we verwachten dat dit model in de populatie WEL variantie verklaart in `TAC.naZ`.
+
+- intercept = 0.45: een leerling uit de studierichting Latijn die gemiddeld scoort op `PISA_EigenInbrengZ` en `PISA_ExperimenterenZ` (want allemaal z-scores) scoort 0.45 SD lager dan gemiddeld op `TAC.naZ` in de steekproef. Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we hebben voldoende evidentie om te stellen dat in de populatie het intercept anders is dan 0. 
+
+- $\beta_{Mod\_wetD}$ = -0.52, dus een leerling uit de richting Moderne Wetenschappen scoort 0.52 SD(want z-score!) lager op `TAC.naZ` dan een leerling die Latijn volgt (=referentiecategorie). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dit verschil in score op `TAC.naZ` tussen leerlingen die Latijn en leerlingen die Moderne Wetenschappen volgen ook in de populatie terug te vinden.
+
+- $\beta_{OverigeD}$ = -0.73, dus een leerling uit een overige studierichting scoort 0.73 SD (want z-score!) lager op `TAC.naZ` dan een leerling die Latijn volgt (=referentiecategorie). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%.  Dus we verwachten dit verschil in score op `TAC.naZ` tussen leerlingen die Latijn en leerlingen die een overige studierichting volgen ook in de populatie terug te vinden.
+
+- $\beta_{PISA\_EigenInbrengZ}$ = -0.23, dus 1 SD (want z-score!) hoger scoren op `PISA_EigenInbrengZ` leidt tot 0.23 SD (want z-score!) lager scoren op `TAC.naZ`. Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat `PISA_EigenInbrengZ` in de populatie WEL invloed heeft op `TAC.naZ`. Bovendien is dit effect sterker dan dat van `PISA_ExperimenterenZ`. (Je mag de sterkte van deze effecten met elkaar vergelijken, omdat beide variabelen gestandaardiseerd zijn en dus op dezelfde schaal staan)
+
+- $\beta_{PISA\_ExperimenterenZ}$ = 0.12, dus 1 SD (want z-score!) hoger scoren op `PISA_ExperimenterenZ` leidt tot 0.12 SD (want z-score!) hoger scoren op `TAC.naZ`. Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat `PISA_ExperimenterenZ` in de populatie WEL invloed heeft op `TAC.naZ`.
+
+In de analyse in Model1 vormen de leerlingen die Latijn volgen de referentiecategorie. Op basis van bovenstaande analyse kunnen we dus geen uitspraken doen over het verschil in score op `TAC.naZ` tussen leerlingen die Moderne Wetenschappen volgen en leerlingen uit de overige studierichtingen. Om hier een zicht op te krijgen, schatten we hetzelfde model (`Model1_alternatief`) en nemen de dummyvariabele die aanstaat voor “Latijn” op in het model en laten een andere dummyvariabele weg. De output van deze analyse vind je hieronder.
+
+```{r}
+Model1_alternatief <- lm(
+  TAC.naZ ~ LatijnD + OverigeD + PISA_EigenInbrengZ + PISA_ExperimenterenZ,
+  data=DataC5a)
+summary(Model1_alternatief)
+```
+
+Uiteraard veranderen enkele parameters van waarde. Maar waar we nu voornamelijk naar willen kijken is het effect van de dummy variabele `OverigeD`. 
+
+- $\beta_{OverigeD}$ = -0.22, dus een leerling uit een overige studierichting scoort 0.22 SD (want z-score!) lager op `TAC.naZ` dan een leerling die Moderne Wetenschappen volgt (=nu de referentiecategorie). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%.  Dus we verwachten dit verschil in score op `TAC.naZ` tussen leerlingen die Moderne Wetenschappen en leerlingen die een overige studierichting volgen ook in de populatie terug te vinden.
+
+(b)
+
+Nu schatten we een model met daarin een extra parameter: het interactie-effect tussen `Mod_wetD` en `PISA_EigenInbrengZ`. 
+
+```{r}
+Model1b <- lm(
+  TAC.naZ ~ Mod_wetD + OverigeD + Mod_wetD*PISA_EigenInbrengZ + PISA_EigenInbrengZ + PISA_ExperimenterenZ,
+  data=DataC5a)
+```
+
+We vergelijken dit model met het model uit deel (a) van de oefening via de functie `anova()`.
+
+```{r}
+anova(Model1, Model1b)
+```
+
+We kunnen in deze output de *Residuals Sum of Squares (RSS)* (eigenlijk de SSE uit het OLP) voor beide modellen aflezen:
+
+- RSS_Model1 = 1361.8, 
+- RSS_Model2 = 1361.2, p = 0.41
+
+Model1b heeft wel een lagere RSS, maar dat verschil in RSS (∆RSS = 0.69) is te klein om te kunnen doortrekken naar de populatie (p > 0.05). Model1b is dus NIET statistisch significant beter dan Model1. We verwachten bijgevolg GEEN verschil in RSS in de populatie.
+
+We kunnen desalniettemin de output van dit tweede model wel bekijken.
+
+```{r}
+summary(Model1b)
+```
+
+- $\beta_{Mod\_wetD*PISA\_EigenInbrengZ}$ = 0.04, dus leerlingen die moderne wetenschappen volgen scoren voor elke 1 SD hoger op `PISA_EigenInbrengZ`nog eens 0.04 SD (want z-score!) hoger op `TAC.naZ`.
+
+(Een voorbeeld: een leerling die moderne wetenschappen volgt en 2 SD hoger scoort op `PISA_EigenInbrengZ` scoort -0.46 op `TAC.naZ` in de steekproef: 0.45 + (-0.51) + (2*-0.24) + (2*0.04) = -0.46)
+
+Met p > 0.05: kans dat H0 opgaat in de populatie is groter dan 5%. Dus we verwachten het interactie-effect tussen `PISA_EigenInbrengZ` en `Mod_wetD` NIET terug te vinden in de populatie.
+
+**CONCLUSIE:**
+
+>De studierichting die leerlingen volgen (`Mod_wetD`, `OverigeD`), de mate waarin leerlingen een eigen inbreng hebben (`PISA_EigenInbrengZ`) en de mate waarin leerlingen mogen experimenteren tijdens de lessen (`PISA_ExperimenterenZ`) verklaren samen de technische geletterdheid van leerlingen (`TAC.naZ`). Een model waarin bovendien de interactie tussen `PISA_EigenInbrengZ` en `Mod_wetD` is opgenomen is geen beter model dan een model met enkel hoofdeffecten (∆RSS = 0.69, p = 0.41). Bovendien is de interactieterm ook niet statistisch significant (p > 0.05).
+>Het model (Model1) zonder interactieterm verklaart 14% van de variantie in `TAC.naZ`. Het gaat dus om een sterk, statistisch significant effect (R-kwadraat = 0.14, p < 0.05). Leerlingen die moderne wetenschappen of een overige studierichting volgen, scoren respectievelijk 0.52 en 0.73 SD lager op `TAC.naZ` dan leerlingen die Latijn volgen. Leerlingen uit de overige studierichtingen scoren op hun beurt 0.22 SD lager op technische geletterdheid dan leerlingen die moderne wetenschappen volgen. Al deze verschillen verwachten we bovendien ook in de populatie (p <0.05).
+>Zowel `PISA_EigenInbrengZ` als `PISA_ExperimenterenZ` hebben een statistisch significant (p <0.05) effect op `TAC.naZ`. Een toename van 1 SD in `PISA_EigenInbrengZ` leidt tot een afname van 0.22 SD in `TAC.naZ`. Het effect van `PISA_ExperimenterenZ` is kleiner (ß = 0.12): 1 SD hoger scoren op `PISA_ExperimenterenZ` leidt tot een toename van 0.12 SD in technische geletterdheid.
 
 (c)
 
+Tot slot gaan we voorspelde scores berekenen aan de hand van `Model1`. 
+
+Hernemen we de resultaten:
+
 ```{r}
-#| message: false
-#| warning: false
-errorbar(Techniek$Interest.voor~Techniek$Dipvader,
-         xlab="Diploma HO vader",
-         ylab="Interesse in techniek")
+summary(Model1)
 ```
+
+We starten met nog een keer de regressievergelijking op te stellen:
+
+$\text{TAC.naZ} = \beta_{0} + \beta_{1} \cdot \text{Mod\_wetD} + \beta_{2} \cdot \text{OverigeD} + \beta_{3} \cdot \text{PISA\_EigenInbrengZ} + \beta_{4} \cdot \text{PISA\_ExperimenterenZ}$
+
+Vullen we de parameters in dan krijgen we dit:
+
+$\text{TAC.naZ} = 0.45 + (-0.52 \cdot \text{Mod\_wetD}) + (-0.73 \cdot \text{OverigeD}) + (-0.23 \cdot \text{PISA\_EigenInbrengZ}) + (0.12 \cdot \text{PISA\_ExperimenterenZ})$
+
+Nu kunnen we de score berekenen voor **de steekproef** door de waarden in te vullen ipv de namen van de variabelen. We zijn geïnteresseerd in een leerling die les volgt in moderne wetenschappen (`Mod_wetD = 1` & `OvergeD = 0`), 2 SD hoger scoort op `PISA_EigenInbrengZ` en 2.5 SD
+lager op `PISA_ExperimenterenZ` in de steekproef:
+
+$\text{TAC.naZ} = 0.45 + (-0.52 \cdot 1) + (-0.73 \cdot 0) + (-0.23 \cdot 2) + (0.12 \cdot -2.5)$
+
+Rekenen we dit uit dan komen we op `{r} 0.45 + (-0.52*1) + (-0.73*0) + (-0.23*2) + (0.12*-2.5)` .
+
+Voor **de populatie** is het net dezelfde werkwijze. Immers, alle parameterschattingen zijn statistisch signifcant (p<0.05).
+
+$\text{TAC.naZ} = 0.45 + (-0.52 \cdot 1) + (-0.73 \cdot 0) + (-0.23 \cdot 2) + (0.12 \cdot -2.5)$
+
+Rekenen we dit uit dan komen we op `{r} 0.45 + (-0.52*1) + (-0.73*0) + (-0.23*2) + (0.12*-2.5)` .
+
+## Oefening 2
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
 
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
+We richten onze aandacht nu op een andere afhankelijke variabele: `Gender.voorZ`. Deze variabele meet de mate waarin de respondenten vinden dat het onderwerp techniek iets is dat gepast is voor zowel jongens als meisjes. Hoe hoger de score, hoe meer de respondent daarmee akkoord gaat.
 
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
+(a) Doe de nodige analyses om de volgende onderzoeksvraag te beantwoorden en bespreek zo grondig mogelijk de output: 
 
-(c) Geef het effect visueel weer.
+*Is er een verschil tussen jongens en meisjes in de mate van techniek iets vinden voor beide geslachten (`Gender.voorZ`) en is dit verschil afhankelijk van al dan niet een technische richting volgen (`Richting2cat`)?*
+
+(b) Hoeveel scoren jongens/meisjes die al dan niet techniek volgen op `Gender.voorZ`?
+
+Vul o.b.v. je output onderstaande gegevens in. (Rond daarbij zowel de tussenstappen als de uitkomst af tot op 2 cijfers na de komma.)
+
+Voorspelde scores **voor de steekproef**:
+
+- Jongen - Geen techniek = ...
+- Jongen - Wel techniek = ...
+- Meisje - Geen techniek = ...
+- Meisje - Wel tecchniek = ...
+
+Voorspelde scores **voor de populatie**:
+
+- Jongen - Geen techniek = ...
+- Jongen - Wel techniek = ...
+- Meisje - Geen techniek = ...
+- Meisje - Wel techniek = ...
 :::
 
 (a)
 
-Opnieuw voeren we eerst de Levene Test uit.
+We starten met het schatten van het model.
 
 ```{r}
-leveneTest(Techniek$Interest.voor, Techniek$Studiejaar)
+# Model schatten #
+Model2 <- lm(Gender.voorZ ~ GeslachtD + Richting2cat + GeslachtD*Richting2cat, data=Techniek)
+summary(Model2)
 ```
 
-Ditmaal is de bijhorende p-waarde lager dan 0.05 (zie `0.0191 *` in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in `R` door het argument `var.equal=FALSE` toe te voegen bij het opvragen van de t-test. 
+We overlopen de verschillende relevante delen uit de output.
 
-```{r}
-t.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)
-```
-We lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).
+- R-kwadraat = 0.09: het gaat om een medium effect (9% verklaarde variantie in `Gender.voorZ`). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dat dit model in de populatie WEL variantie verklaart in `Gender.voorZ`.
 
-Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie `p-value < 2.2e-16` in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.
+- intercept = -0.32: een jongen die geen techniek volgt, scoort 0.32 SD (want z-score) lager dan gemiddeld op `Gender.voorZ`. Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dit WEL in de populatie terug te vinden.
+
+- $\beta_{GeslachtD}$ = 0.58, dus een meisje dat geen techniek volgt, scoort 0.58 SD (want z-score!) hoger op `Gender.voorZ` dan een jongen die geen techniek volgt. Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dit verschil in score op ‘Gender.voorZ’ tussen jongens en meisjes die geen techniek volgen ook in de populatie terug te vinden.
+
+- $\beta_{Richting2cat1}$ = -0.07, dus een jongen die wel techniek volgt, scoort 0.07 SD (want z-score!) lager op `Gender.voorZ` dan een jongen die geen techniek volgt. Met p > 0.05: kans dat H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dit verschil in score op `Gender.voorZ` tussen een jongen die geen techniek en een jongen die wel techniek volgt NIET in de populatie terug te vinden.
+
+- $\beta_{GeslachtD:Richting2cat1}$ = 0.51, dus een meisje dat wel techniek volgt (=scoort 1 op `GeslachtD` en op `Richting2cat`) scoort nog eens 0.51 SD (want z-score!) hoger op `Gender.voorZ`. (Dus, een meisje dat techniek volgt scoort 0.77 op `Gender.voorZ` in de steekproef: -0.32 + 0.58*1 + (-0.07)*1 + 0.51*1*1 = 0.7). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten de interactie tussen `GeslachtD` en `Richting2cat` ook terug te vinden in de populatie.
 
 (b)
 
-Vervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen's d.
+Vooraleer we de berekeningen doen, schrijven we de regressievergelijking opnieuw op.
 
-```{r}
-d(Techniek$Interest.voor,Techniek$Studiejaar)
-```
+$\text{Gender.voorZ} = \beta_{0} + \beta_{1} \cdot \text{GeslachtD} + \beta_{2} \cdot \text{Richting2cat1} + \beta_{3} \cdot \text{GelachtD:Richting2cat1}$
 
-De Cohen's d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.
+Voorspelde scores **voor de steekproef**:
 
-(c)
+Om de scores te berekenen voor de steekproef vullen we alle parameters in uit de output. 
 
-```{r}
-#| warning: false
-errorbar(Techniek$Interest.voor~Techniek$Studiejaar,
-         xlab="Studiejaar",
-         ylab="Interesse in techniek")
-```
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \text{GeslachtD} + -0.07 \cdot \text{Richting2cat1} + 0.51 \cdot \text{GelachtD:Richting2cat1}$
 
-::: {.callout-tip icon=false}
-## <i class="bi bi-journal-richtext"></i> Oefening 3
+- Jongen (`GenderD` = 0) - Geen techniek (`Richting2cat1`= 0)  
 
-In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + -0.07 \cdot 0 + 0.51 \cdot 0 \cdot 0$
 
-(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
+Resultaat: `{r} -0.32 + 0.58 * 0 + -0.07 * 0 + 0.51 * 0 * 0`
 
-(b) Hoe groot is het effect van een trimester technieklessen?
+- Jongen (`GenderD` = 0) - Wel techniek (`Richting2cat1`= 1)
 
-(c) Geef het effect visueel weer.
-:::
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + -0.07 \cdot 1 + 0.51 \cdot 0 \cdot 1$
 
-Deze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een *independent samples t-test* omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een *paired samples t-test* .
+Resultaat: `{r} -0.32 + 0.58 * 0 + -0.07 * 1 + 0.51 * 0 * 1`
 
-(a)
+- Meisje (`GenderD` = 1) - Geen techniek (`Richting2cat1`= 0)
 
-Om deze *paired samples t-test* uit te voeren maken we gebruik van het argument `paired = TRUE` in de `t.test()` functie.
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + -0.07 \cdot 0 + 0.51 \cdot 1 \cdot 0$
 
-```{r}
-t.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)
-```
+Resultaat: `{r} -0.32 + 0.58 * 1 + -0.07 * 0 + 0.51 * 1 * 0`
 
-Het verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03. 
+- Meisje (`GenderD` = 1) - Wel tecchniek (`Richting2cat1`= 1)
 
-We lezen af dat de p-waarde lager is dan 0.05 (zie `p-value = 0.049`). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + -0.07 \cdot 1 + 0.51 \cdot 1 \cdot 1$
 
-(b) 
+Resultaat: `{r} -0.32 + 0.58 * 1 + -0.07 * 1 + 0.51 * 1 * 1`
 
-Vervolgens berekenen we de Cohen's d aan de hand van de functie `dpaired()`. Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).
+Voorspelde scores **voor de populatie**:
 
-```{r}
-dpaired(1.9696,2290)
-```
+Om de scores te berekenen voor de populatie vullen we enkel de statistisch significante parameters uit de output in onze vergelijking. Parameters die niet statistisch significant zijn vervangen we door de waarde 0. 
 
-Cohen's d is lager dan 0.2: het gaat om een verwaarloosbaar effect.
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \text{GeslachtD} + 0 \cdot \text{Richting2cat1} + 0.51 \cdot \text{GelachtD:Richting2cat1}$
 
-(c)
+- Jongen (`GenderD` = 0) - Geen techniek (`Richting2cat1`= 0)  
 
-```{r}
-#| warning: false
-errorbar2(Techniek$Interest.voor,Techniek$Interest.na,
-          xlab="Meting voor en na",
-          ylab="Interesse")
-```
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + 0 \cdot 0 + 0.51 \cdot 0 \cdot 0$
 
+Resultaat: `{r} -0.32 + 0.58 * 0 + 0 * 0 + 0.51 * 0 * 0`
+
+- Jongen (`GenderD` = 0) - Wel techniek (`Richting2cat1`= 1)
+
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + 0 \cdot 1 + 0.51 \cdot 0 \cdot 1$
+
+Resultaat: `{r} -0.32 + 0.58 * 0 + 0 * 1 + 0.51 * 0 * 1`
+
+- Meisje (`GenderD` = 1) - Geen techniek (`Richting2cat1`= 0)
+
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + 0 \cdot 0 + 0.51 \cdot 1 \cdot 0$
+
+Resultaat: `{r} -0.32 + 0.58 * 1 + 0 * 0 + 0.51 * 1 * 0`
+
+- Meisje (`GenderD` = 1) - Wel tecchniek (`Richting2cat1`= 1)
+
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + 0 \cdot 1 + 0.51 \cdot 1 \cdot 1$
+
+Resultaat: `{r} -0.32 + 0.58 * 1 + 0 * 1 + 0.51 * 1 * 1`

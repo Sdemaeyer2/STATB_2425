@@ -1,40 +1,60 @@
 ---
-title: "Contactmoment 1: Opdrachten computer lab"
+title: "Contactmoment 5: Opdrachten computer lab"
+lang: be-nl
 ---
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal"></i> Voorbereiding
+
+Om alles eenvoudig interpreteerbaar te houden, maak je van alle kwantitatieve variabelen die je nodig hebt eerst een z-score. Het gaat om de variabelen `TAC.na`,`Gender.voor`, `PISA_EigenInbreng` en `PISA_Experimenteren`.
+
+Maak een dummy variabele voor `Geslacht` die aanstaat voor “meisje”. Zet de variabele `Richting5cat` om in een reeks dummy variabelen zodanig dat je in je analyses de volgende groepen van studierichtingen met elkaar kan vergelijken: de studierichting "Latijn”, de studierichting “Moderne wetenschappen” en de studierichtingen “Overige”. Deze laatste groep omvat de studierichtingen “Technische”, “Kunst” en “STV/Handel”.
+:::
+
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
 
-(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
+(a) Doe de nodige analyses om de volgende onderzoeksvraag te beantwoorden en bespreek zo grondig mogelijk de output: 
 
-(b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
+*Scoren de leerlingen uit de 3 studierichtingen verschillend op technische geletterdheid (`TAC.naZ`) ongeacht de mate waarin leerlingen een eigen inbreng in de les krijgen (`PISA_EigenInbrengZ`) of waarin er geëxperimenteerd wordt in de les (`PISA_ExperimenterenZ`)?*
 
-(c) Geef het effect visueel weer.
+(b) Voortbouwend op het model dat je in a) hebt getest, vraagt een collega-onderzoeker aan jou of het niet zinvoller is om volgende onderzoeksvraag te onderzoeken: 
+
+*Is het effect van eigen inbreng in de les (`PISA_EigenInbrengZ`) op technische geletterdheid (`TAC.naZ`) wel identiek voor leerlingen uit Moderne wetenschappen? Doe hiertoe de nodige analyses en bespreek kort de essentie om bovenstaande vraag te beantwoorden.*
+
+(c) Bereken de voorspelde score voor een leerling uit Moderne wetenschappen, die 2 SD hoger dan gemiddeld scoort op `PISA_EigenInbrengZ` en 2.5 SD lager op `PISA_ExperimenterenZ`. Bereken dit zowel voor de steekproef als voor de populatie.(Rond daarbij zowel de tussenstappen als de uitkomst af tot op 2 cijfers na de komma.)
 :::
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
 
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
+We richten onze aandacht nu op een andere afhankelijke variabele: `Gender.voorZ`. Deze variabele meet de mate waarin de respondenten vinden dat het onderwerp techniek iets is dat gepast is voor zowel jongens als meisjes. Hoe hoger de score, hoe meer de respondent daarmee akkoord gaat.
 
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
+(a) Doe de nodige analyses om de volgende onderzoeksvraag te beantwoorden en bespreek zo grondig mogelijk de output: 
 
-(c) Geef het effect visueel weer.
+*Is er een verschil tussen jongens en meisjes in de mate van techniek iets vinden voor beide geslachten (`Gender.voorZ`) en is dit verschil afhankelijk van al dan niet een technische richting volgen (`Richting2cat`)?*
+
+(b) Hoeveel scoren jongens/meisjes die al dan niet techniek volgen op `Gender.voorZ`?
+
+Vul o.b.v. je output onderstaande gegevens in. (Rond daarbij zowel de tussenstappen als de uitkomst af tot op 2 cijfers na de komma.)
+
+Voorspelde scores **voor de steekproef**:
+
+- Jongen - Geen techniek = ...
+- Jongen - Wel techniek = ...
+- Meisje - Geen techniek = ...
+- Meisje - Wel tecchniek = ...
+
+Voorspelde scores **voor de populatie**:
+
+- Jongen - Geen techniek = ...
+- Jongen - Wel techniek = ...
+- Meisje - Geen techniek = ...
+- Meisje - Wel tecchniek = ...
 :::
 
-::: {.callout-tip icon=false}
-## <i class="bi bi-journal-richtext"></i> Oefening 3
-
-In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
-
-(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
-
-(b) Hoe groot is het effect van een trimester technieklessen?
-
-(c) Geef het effect visueel weer.
-:::
-
-![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C1/Respons_C1.qmd) 
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C5/Respons_C5.qmd) 
 
 ::: callout-note
 ## Ter info

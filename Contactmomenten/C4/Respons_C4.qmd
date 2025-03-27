@@ -1,6 +1,6 @@
 ---
 title: "Contactmoment 4: Respons computer lab"
-
+lang: be-nl
 format: 
   html: 
     toc: true
@@ -434,4 +434,44 @@ summary(Model4)
 
 **Conclusie:**
 
-> `ProjectinteressantZ`, `Interest.voorZ`, `ProjectbijgeleerdZ` en `ProjectmoeilijkZ` verklaren 43% van de variantie in ‘Interest.naZ’. Het gaat dus om een sterk effect dat bovendien mag worden doorgetrokken naar de populatie (R2 = 0.44, p < 0.05). Het intercept is niet statistisch significant (p > 0.05). Een leerling die gemiddeld scoort op `ProjectinteressantZ`, `Interest.voorZ`, `ProjectbijgeleerdZ` en `ProjectmoeilijkZ` scoort dus ook gemiddeld op `Interest.naZ` in de populatie. Zowel `ProjectinteressantZ` als `Interest.voorZ` hebben een positief en statistisch significant (p < 0.05) effect op `Interest.naZ`. Een toename van 1 SD in `ProjectinteressantZ` leidt tot een toename van 0.19 SD in `Interest.naZ`. Het effect van `Interest.voorZ` is sterker (ß = 0.58). 1 SD hoger scoren op interesse in techniek voor het project (`Interest.voorZ`) leidt tot een toename van 0.58 SD in interesse in techniek na het project (`Interest.naZ`). De invloed van `ProjectmoeilijkZ` op `Interest.naZ` is negatief en statistisch significant (p < 0.05). Leerlingen die het project als 1 SD moeilijker ervaren, scoren 0.09 SD lager op `Interest.naZ`. De percepties van leerlingen m.b.t. bijleren tijdens het project (`ProjectbijgeleerdZ`) hebben geen significante invloed op hun interesse in techniek na het project (p > 0.05).
+>`ProjectinteressantZ`, `Interest.voorZ`, `ProjectbijgeleerdZ` en `ProjectmoeilijkZ` verklaren 43% van de variantie in ‘Interest.naZ’. Het gaat dus om een sterk effect dat bovendien mag worden doorgetrokken naar de populatie (R2 = 0.44, p < 0.05). Het intercept is niet statistisch significant (p > 0.05). Een leerling die gemiddeld scoort op `ProjectinteressantZ`, `Interest.voorZ`, `ProjectbijgeleerdZ` en `ProjectmoeilijkZ` scoort dus ook gemiddeld op `Interest.naZ` in de populatie. Zowel `ProjectinteressantZ` als `Interest.voorZ` hebben een positief en statistisch significant (p < 0.05) effect op `Interest.naZ`. Een toename van 1 SD in `ProjectinteressantZ` leidt tot een toename van 0.19 SD in `Interest.naZ`. Het effect van `Interest.voorZ` is sterker (ß = 0.58). 1 SD hoger scoren op interesse in techniek voor het project (`Interest.voorZ`) leidt tot een toename van 0.58 SD in interesse in techniek na het project (`Interest.naZ`). De invloed van `ProjectmoeilijkZ` op `Interest.naZ` is negatief en statistisch significant (p < 0.05). Leerlingen die het project als 1 SD moeilijker ervaren, scoren 0.09 SD lager op `Interest.naZ`. De percepties van leerlingen m.b.t. bijleren tijdens het project (`ProjectbijgeleerdZ`) hebben geen significante invloed op hun interesse in techniek na het project (p > 0.05).
+
+(d)
+
+Om de gevraagde voorspelde scores te berekenen schrijven we eerst de gehele regressievergelijking uit.
+
+$\text{Interest.naZ} = \beta_{0} + \beta_{1} \cdot \text{Projectinteressant2} + \beta_{2} \cdot \text{Interest.voorZ} + \beta_{3} \cdot \text{ProjectbijgeleerdZ} + \beta_{4} \cdot \text{ProjectmoeilijkZ}$
+
+Vervolgens maken we een versie van deze regressievergelijking met daarin alle parameterschattingen uit de output. Deze versie gebruiken we om de voorspelde scores voor iemand uit de steekproef te berekenen.
+
+$\text{Interest.naZ} = -0.00 + 0.19 \cdot \text{Projectinteressant2} + 0.58 \cdot \text{Interest.voorZ} + 0.03 \cdot \text{ProjectbijgeleerdZ} + -0.09 \cdot \text{ProjectmoeilijkZ}$
+
+Tot slot kunnen we een versie van de regressievergelijking maken waarin enkel de statistisch significante parameters worden ingevuld. De andere parameters zetten we gelijk aan nul. Deze versie zullen we gebruiken om voorspelde scores te berekenen voor iemand uit de populatie.
+
+$\text{Interest.naZ} = 0 + 0.19 \cdot \text{Projectinteressant2} + 0.58 \cdot \text{Interest.voorZ} + 0 \cdot \text{ProjectbijgeleerdZ} + -0.09 \cdot \text{ProjectmoeilijkZ}$
+
+Welke score op ‘Interest.naZ’ behaalt iemand die:
+
+-   gemiddeld scoort op alle onafhankelijke variabelen in de steekproef (dus, voor alle variabelen een waarde 0)
+
+$\text{Interest.naZ} = -0.00 + 0.19 \cdot 0 + 0.58 \cdot 0 + 0.03 \cdot 0 + -0.09 \cdot 0$
+
+Dit resulteert in een voorspelde score van -0.00 (eigenlijk -0.004).
+
+-   gemiddeld scoort op alle onafhankelijke variabelen in de populatie
+
+$\text{Interest.naZ} = 0 + 0.19 \cdot 0 + 0.58 \cdot 0 + 0 \cdot 0 + -0.09 \cdot 0$
+
+Dit resulteert in een voorspelde score 0.
+
+-   1 SD hoger scoort voor ‘Interest.voorZ’ en 1 SD lager scoort voor ‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0) in de steekproef
+
+$\text{Interest.naZ} = -0.00 + 0.19 \cdot 0 + 0.58 \cdot 1 + 0.03 \cdot -1 + -0.09 \cdot 0$
+
+Dit resulteert in volgende voorspelde score: `{r} -0.00 + 0.19 * 0 + 0.58 * 1 + 0.03 * -1 + -0.09 * 0`. 
+
+-   1 SD hoger scoort voor ‘Interest.voorZ’ en en 1 SD lager scoort voor‘ProjectbijgeleerdZ’ (en op alle andere onafhankelijke variabelen 0) in de populatie
+
+$\text{Interest.naZ} = 0 + 0.19 \cdot 0 + 0.58 \cdot 1 + 0 \cdot -1 + -0.09 \cdot 0$
+
+Dit resulteert in volgende voorspelde score: `{r} 0 + 0.19 * 0 + 0.58 * 1 + 0 * -1 + -0.09 * 0`. 
