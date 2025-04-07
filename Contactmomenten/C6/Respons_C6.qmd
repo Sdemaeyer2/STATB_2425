@@ -1,6 +1,6 @@
 ---
-title: "Contactmoment 1: Respons computer lab"
-
+title: "Contactmoment 6: Respons computer lab"
+lang: be-nl
 format: 
   html: default
   pdf: default
@@ -18,143 +18,238 @@ source(here("Contactmomenten", "OLP2 Functies.R"))
 Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket `car` te activeren en ook de OLP2 Functies te activeren. 
 :::
 
+## Oefening 1
+
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
+Is er een verschil tussen eerste en tweedejaars in technische geletterdheid (`TAC.na`) en is het zo dat het effect van “eigen inbreng in de les” (`PISA_EigenInbreng`) op de technische geletterdheid anders is voor eerste dan wel voor tweedejaars (`Studiejaar`)? 
 
-(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
+Vooraleer je deze analyse draait, maak je een dummyvariabele aan voor de variabele `Studiejaar`. Zorg ervoor dat deze dummy aanstaat voor de categorie “tweedejaars”. Hanteer deze dummyvariabele in je verdere analyses.
+:::
 
-(b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
+We starten met het aanmaken van de dummy variabele en checken of we dit goed gedaan hebben door een tabel aan te maken waarin we de oorspronkelijke variabele kruisen met de aangemaakte dummy variabele.
 
-(c) Geef het effect visueel weer.
+```{r}
+Techniek$Tweedejaars<-(Techniek$Studiejaar=='2')*1
+table(Techniek$Studiejaar,Techniek$Tweedejaars)
+```
+
+We schatten nu het model met daarin enerzijds de hoofdeffecten van `PISA_EigenInbreng` en `Tweedejaars` en anderzijds het interactie-effect tussen beide. (Je merkt in onderstaand codeblok dat we werken met wat meer 'enters' en de code over lijnen spreiden om ze leesbaar te houden)
+
+```{r}
+M_EigenInbreng <- lm(
+  TAC.na ~ PISA_EigenInbreng + Tweedejaars + PISA_EigenInbreng*Tweedejaars,
+  data=Techniek
+  )
+
+summary(M_EigenInbreng)
+```
+
+De mate waarin leerlingen eigen inbreng mogen doen, het studiejaar waarin leerlingen zitten en de interactie tussen deze beide variabelen verklaren samen 4.28% van de variantie (R-kwadraat = 0.0428) in technische geletterdheid (`TAC.na`). We verwachten dat deze variabelen ook in de populatie een invloed gaan hebben op technische geletterdheid (F(3,1675) = 25.98, p < 0.001).
+
+Aangaande de vraag of er een verschil is in technische geletterdheid tussen eerste- en tweedejaars studenten stellen we vast dat er geen statistisch significant effect is van de variabele `Tweedejaars` op `TAC.na` (β = 0.01, p =0.678).  
+
+De variabele `PISA_EigenInbreng` heeft wel een statistisch significant hoofdeffect (β = -0.05, p < 0.05). Leerlingen die één eenheid hoger scoren op de mate waarin ze vinden eigen inbreng te mogen hebben in de les scoren 0.05 eenheden lager op technische geletterdheid. In de populatie verwachten we ook een effect gegeven de p-waarde die kleiner is dan 0.05.
+Onze hypothese met betrekking tot verschil in het effect van `PISA_EigenInbreng` tussen eerste- en tweedejaars dienen we te verwerpen. Het is niet zo dat leerlingen in het tweede jaar meer baat hebben bij het hebben van eigen inbreng in de les. Het interactie-effect van deze lesstijl met het jaar is niet significant (β = -0.007, p = 0.579). Anders gesteld: leerlingen uit het eerste of tweede jaar hebben dezelfde mate van eigen inbreng nodig in de les om technisch geletterder te worden.
+
+## Oefening 2
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 2
+En hoe zit dat met de andere leerkrachtstijlen (`PISA_Experimenteren`; `PISA_Orientatie`)? Hebben die hetzelfde effect voor eerste en tweedejaars? 
+
+Gebruik opnieuw de dummyvariabele (`Tweedejaars`) om deze hypotheses te toetsen. Toets elk van die hypotheses in een afzonderlijk model.
+:::
+
+We gaan eerst de twee nieuwe modellen schatten, ééntje met daarin `PISA_Experimenteren` als voorspeller en ééntje met `PISA_Orientatie` als voorspeller.
+
+```{r}
+M_Experimenteren <- lm(
+  TAC.na ~ PISA_Experimenteren + Tweedejaars + PISA_Experimenteren * Tweedejaars,
+  data = Techniek
+)
+
+M_Orientatie <- lm(
+  TAC.na ~ PISA_Orientatie + Tweedejaars + PISA_Orientatie * Tweedejaars,
+  data = Techniek
+)
+```
+
+We bekijken de output voor beide modellen.
+
+```{r}
+summary(M_Experimenteren)
+summary(M_Orientatie)
+```
+
+Wat beide andere lesstijlen betreft, blijkt dat de verklaarde variantie in technische geletterdheid (`TAC.na`) telkens verwaarloosbaar is (R-kwadraat Experimenteren= -0.0012, R-kwadraat Orientatie= 0.0028) en bovendien niet statistisch significant (p Experimenteren= 0.816, p Orientatie= 0.054). De onafhankelijke variabelen hebben dus geen effect op technische geletterdheid in de populatie. Bovendien is voor beide modellen zowel `Tweedejaars` (β Experimenteren = -0.007, p = 0.471; β Orientatie= 0.016, p = 0.137 ) als de interactie tussen `Tweedejaars` en lesstijl (β Experimenteren*Tweedejaars = -0.011, p = 0.496; β Orientatie*Tweedejaars= 0.005, p = 0.723) niet statistisch significant. In de populatie vinden we deze effecten dus niet terug.
+
+## Oefening 3
+
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 3
+Tijdens een vorig contactmoment gingen we al na in welke mate de interesse van leerlingen in het project (`Projectinteressant.z`) en de mate van interesse in techniek voor het project (`Interest.voor.z`) een invloed hebben op de interesse na het project (`Interest.na.z`). 
+
+Op basis van een uitgebreide literatuurstudie vermoeden we echter dat de interesse in techniek na het project niet voor alle studierichtingen hetzelfde is.
+
+(a) Ga deze hypothese na. Zet de variabele `Richting5cat` eerst om in de nodige dummyvariabelen. Hanteer vervolgens de studierichting “Technisch” als referentiecategorie in je analyses. Maak ook de nodige gestandaardiseerde variabelen aan.
+
+(b) Interpreteer vervolgens ook de andere parameterschattingen.
 :::
 
 (a) 
 
-Vooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.
+We starten met het aanmaken van de nodige dummy-variabelen.
 
-```{r}
-leveneTest(Techniek$Interest.voor, Techniek$Dipvader)
-```
-Kijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan. 
+::: {.callout-note}
+Om te weten welke code van `Richting5cat` hoort bij welke studierichting grijp je best terug naar het codeboek. 
 
-Nu zijn we klaar om de t-test zelf uit te voeren.
-
-```{r}
-t.test(Techniek$Interest.voor~Techniek$Dipvader,var.equal=TRUE)
-```
-We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (`Dipvader` heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (`Dipvader` heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.
-
-Uit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje `p-value = 7.95e-05` wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.
-
-(b) 
-
-Vervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen's d. 
-
-```{r}
-d(Techniek$Interest.voor,Techniek$Dipvader)
-```
-
-De Cohen's d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.
-
-
-(c)
-
-```{r}
-#| message: false
-#| warning: false
-errorbar(Techniek$Interest.voor~Techniek$Dipvader,
-         xlab="Diploma HO vader",
-         ylab="Interesse in techniek")
-```
-
-::: {.callout-tip icon=false}
-## <i class="bi bi-journal-richtext"></i> Oefening 2
-
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
-
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
-
-(c) Geef het effect visueel weer.
+In de onderstaande code maken we de dummy-variabelen aan. Soms voeren we nog een extra controle uit via het `table()` commando. Dat doen we hier niet. We zijn overtuigd dat we het goed deden 😀!
 :::
 
-(a)
-
-Opnieuw voeren we eerst de Levene Test uit.
-
 ```{r}
-leveneTest(Techniek$Interest.voor, Techniek$Studiejaar)
+Techniek$Technisch <- (Techniek$Richting5cat=='1')*1
+Techniek$Kunst     <- (Techniek$Richting5cat=='2')*1
+Techniek$Latijn    <- (Techniek$Richting5cat=='3')*1
+Techniek$ModWet    <- (Techniek$Richting5cat=='4')*1
+Techniek$Handel    <- (Techniek$Richting5cat=='5')*1
 ```
 
-Ditmaal is de bijhorende p-waarde lager dan 0.05 (zie `0.0191 *` in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in `R` door het argument `var.equal=FALSE` toe te voegen bij het opvragen van de t-test. 
+Daarnaast moeten we enkele variabelen standaardiseren.
 
 ```{r}
-t.test(Techniek$Interest.voor~Techniek$Studiejaar,var.equal=FALSE)
+Techniek$Projectinteressant.z <- scale(Techniek$Projectinteressant)
+Techniek$Interest.voor.z      <- scale(Techniek$Interest.voor)
+Techniek$Interest.na.z        <- scale(Techniek$Interest.na)
 ```
-We lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).
 
-Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie `p-value < 2.2e-16` in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.
+Nu zijn we klaar om het gevraagde model te schatten en de output op te vragen.
+
+```{r}
+Model3a<-lm(
+  Interest.na.z ~ Projectinteressant.z +
+    Interest.voor.z + 
+    Kunst + 
+    Latijn +
+    ModWet +
+    Handel,
+  data=Techniek
+  )
+ summary(Model3a)
+```
+
+De hypothese klopt! Uit de analyses blijkt dat leerlingen die gemiddeld scoren op `Projectinteressant.z` en `Interest.voor.z` maar les volgen in de studierichtingen Latijn (β = -0.34, p < 0.001), Moderne Wetenschappen (β = -0.311, p < 0.001) of Handel (β = -0.301, p < 0.001) significant lager scoren op `Interest.na.z` in vergelijking met leerlingen uit een technische richting. Het verschil in score op `Interest.na.z` tussen leerlingen uit Kunst en leerlingen uit een technische richting is niet significant (β = -0.028, p = 0.832).
 
 (b)
 
-Vervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen's d.
+Een leerling uit een technische richting die gemiddeld scoort op ‘Projectinteressant.z’ en op ‘Interest.voor.z’ behaalt een score van 0.281 SD boven het gemiddelde (β 0 = 0.281, p < 0.001). De kans dat het intercept in de populatie 0 bedraagt, is zeer klein (p < 0.001). We gaan er dus vanuit dat dit ook voor de populatie geldt. Als we het effect van `Projectinteressant.z` op `Interest.na.z` vergelijken met dat van `Interest.voor.z` op `Interest.na.z`, dan blijkt dat het effect van de laatste variabele groter is. We mogen beide effecten vergelijken, omdat het in beide gevallen om gestandaardiseerde variabelen gaat. 
 
-```{r}
-d(Techniek$Interest.voor,Techniek$Studiejaar)
-```
+`Interest.voor.z` heeft een positief effect op `Interst.na.z` (β = 0.567, p < 0.001). Voor elke SD die een leerling hoger scoort op `Interest.voor.z` stijgt diens score op `Interest.na.z` met 0.567 SD, ongeacht de studierichting waarin de leerling les volgt en diens score op `Project.interessant.z`. (Ook de toename in `Interest.na.z` mogen we in SD’s interpreteren aangezien ook deze variabele is gestandaardiseerd.) Aangezien de p-waarde kleiner is dan 0.05 verwachten we dit effect ook in de populatie terug te vinden. Hetzelfde geldt voor het effect van `Projectinteressant.z`. Eén SD hoger score op deze variabele leidt tot een toename van 0.188 SD op `Interest.na.z` (β = 0.188, p < 0.001), ongeacht de studierichting waarin een leerling les volgt en zijn score op `Interest.voor.z`.
 
-De Cohen's d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.
+Ten slotte blijkt dat dit model 43.9% van de variantie in `Interest.na.z` verklaart (adj. R-kwadraat = 0.439) De F-toets leert dat we dit ook in de populatie mogen verwachten (F(6,2236) = 293.2, p < 0.001). Dus ook de in populatie verklaren de onafhankelijke variabelen ene deel van de verschillen in interesse in techniek na het project.
 
-(c)
-
-```{r}
-#| warning: false
-errorbar(Techniek$Interest.voor~Techniek$Studiejaar,
-         xlab="Studiejaar",
-         ylab="Interesse in techniek")
-```
+## Oefening 4
 
 ::: {.callout-tip icon=false}
-## <i class="bi bi-journal-richtext"></i> Oefening 3
+## <i class="bi bi-journal-richtext"></i> Oefening 4
+Ten slotte verwachten we dat het effect van `Interest.voor.z` op interesse in techniek mogelijk anders is voor leerlingen uit de studierichting “Technisch”.
 
-In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
+(a) Ga ook deze hypothese na. Rapporteer je bevindingen a.d.h.v. de output van je analyses.
 
-(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
+(b) Bereken de scores van volgende leerlingen in de steekproef en in de populatie:
 
-(b) Hoe groot is het effect van een trimester technieklessen?
+- een leerling die 0 scoort op alle onafhankelijke variabelen
 
-(c) Geef het effect visueel weer.
+- een leerling uit een technische richting die 1SD hoger scoort op `Interest.voor.z` en 2 SD hoger scoort op `Projectinteressant.z`
 :::
-
-Deze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een *independent samples t-test* omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een *paired samples t-test* .
 
 (a)
 
-Om deze *paired samples t-test* uit te voeren maken we gebruik van het argument `paired = TRUE` in de `t.test()` functie.
+Om deze onderzoeksvraag op een efficiënte wijze te vertalen in een model is het handiger om een andere referentiecategorie te nemen voor studierichting dan `Technisch`. In de code hieronder kiezen we ervoor om een andere grotere groep leerlingen te hanteren als refentiecategorie: de leerlingen uit Moderne Wetenschappen. Dit zie je in de code omdat de dummy variabele `ModWet`niet is opgenomen in het model. De vraag naar het interactie-effect vertalen we in het model door de term `(Interest.voor.z * Technisch)` op te nemen. 
 
 ```{r}
-t.test(Techniek$Interest.voor,Techniek$Interest.na, paired=TRUE)
+Model4 <- lm(
+  Interest.na.z ~ Projectinteressant.z + 
+    Interest.voor.z + 
+    Technisch + 
+    Latijn + 
+    Kunst + 
+    Handel +
+    (Interest.voor.z * Technisch),
+  data=Techniek
+  )
+
+summary(Model4)
 ```
 
-Het verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03. 
+De vooropgestelde hypothese klopt niet! Uit de analyse blijkt dat het interactie-effect tussen `Interest.voor.z` en een technische studierichting volgen (`Technisch`) niet statistisch significant is (β = 0.067, p = 0.364). Het effect van `Interest.voor.z` op `Interest.na.z` is in de populatie dus niet anders voor leerlingen uit een technische studierichting. 
 
-We lezen af dat de p-waarde lager is dan 0.05 (zie `p-value = 0.049`). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.
+::: {.callout-note}
+Als dit wel statistisch significant zou zijn, dan zou dat betekenen dat voor leerlingen uit een technische
+studierichting het effect van `Interest.voor.z` op `Interest.na.z` groter zou zijn. 1 SD hoger scoren op
+`Interest.voor.z` leidt dan voor een leerling uit een technische studierichting tot een toename van 0.631 
+(= 0.564 + 0.067) SD op `Interest.na.z`. 
+:::
 
-(b) 
+(b)
 
-Vervolgens berekenen we de Cohen's d aan de hand van de functie `dpaired()`. Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).
+*"Een leerling die 0 scoort op alle onafhankelijke variabelen"* 
 
-```{r}
-dpaired(1.9696,2290)
-```
+... is een leerling die gemiddeld scoort op alle onafhankelijke kwantitatieve variabelen en die tot de referentiecategorie behoort (Moderne Wetenschappen). Onze beste inschatting is dat deze leerling zowel in de steekproef een score op `Interest.na.z` van -0.03 (= het intercept!) behaalt. Voor de populatie verwachten we dat zo'n leerling een score 0 behaalt (het intercept is immers niet statistisch significant).
 
-Cohen's d is lager dan 0.2: het gaat om een verwaarloosbaar effect.
 
-(c)
+*"Een leerling uit een technische richting die 1 SD hoger scoort op `Interest.voor.z` en 2 SD hoger scoort op `Projectinteressant.z`"*
 
-```{r}
-#| warning: false
-errorbar2(Techniek$Interest.voor,Techniek$Interest.na,
-          xlab="Meting voor en na",
-          ylab="Interesse")
-```
+Vooraleer we de berekeningen doen, schrijven we de regressievergelijking opnieuw op.
 
+\begin{equation}
+ \begin{aligned}
+    \text{Interest.na.Z}  = & \beta_{0} + \beta_{1} \cdot \text{Projectinteressant.z} + \beta_{2} \cdot \text{Interest.voor.z} + \\
+                            & \beta_{3} \cdot \text{Technisch} + \beta_{4} \cdot \text{Latijn} + \beta_{5} \cdot \text{Kunst} + \beta_{6} \cdot \text{Handel} +\\
+                            & \beta_{7} \cdot (\text{Technisch} * \text{Interest.voor.z})
+  \end{aligned}
+\end{equation}
+
+Voorspelde scores **voor de steekproef**:
+
+Om de scores te berekenen voor de steekproef vullen we alle parameters in uit de output. 
+
+\begin{equation}
+ \begin{aligned}
+    \text{Interest.na.Z} = & \textcolor{green}{-0.03} + \textcolor{green}{0.188} \cdot \text{Projectinteressant.z} + \textcolor{green}{0.564} \cdot \text{Interest.voor.z} + \\
+                            & \textcolor{green}{0.253} \cdot \text{Technisch} + \textcolor{green}{-0.030} \cdot \text{Latijn} + \textcolor{green}{0.282} \cdot \text{Kunst} + \textcolor{green}{0.009} \cdot \text{Handel} +\\
+                            & \textcolor{green}{0.067} \cdot (\text{Technisch} * \text{Interest.voor.z})
+  \end{aligned}
+\end{equation}
+
+Nu we de parameters hebben ingevuld, kunnen we ook de waarden voor de variabelen invullen die de betrokken leerling behaalt.
+
+\begin{equation}
+ \begin{aligned}
+    \text{Interest.na.Z}  = & -0.03 + 0.188 \cdot \textcolor{red}{2} + 0.564 \cdot \textcolor{red}{1} + \\
+                            & 0.253 \cdot \textcolor{red}{1} + -0.030 \cdot \textcolor{red}{0} + 0.282 \cdot \textcolor{red}{0} + 0.009 \cdot \textcolor{red}{0} +\\
+                            & 0.067 \cdot (\textcolor{red}{1} * \textcolor{red}{1}) \textcolor{blue}{= 1.23}
+  \end{aligned}
+\end{equation}
+
+Voorspelde scores **voor de populatie**:
+
+Om de scores te berekenen voor de populatie vullen we enkel de statistisch significante parameters uit de output in onze vergelijking in. Parameters die niet statistisch significant zijn vervangen we door de waarde 0. 
+
+\begin{equation}
+ \begin{aligned}
+    \text{Interest.na.Z} = & \textcolor{green}{0} + \textcolor{green}{0.188} \cdot \text{Projectinteressant.z} + \textcolor{green}{0.564} \cdot \text{Interest.voor.z} + \\
+                            & \textcolor{green}{0.253} \cdot \text{Technisch} + \textcolor{green}{0} \cdot \text{Latijn} + \textcolor{green}{0.282} \cdot \text{Kunst} + \textcolor{green}{0} \cdot \text{Handel} +\\
+                            & \textcolor{green}{0} \cdot (\text{Technisch} * \text{Interest.voor.z})
+  \end{aligned}
+\end{equation}
+
+Vervolgens kunnen we de waarden invullen die de bewuste leerling behaalde op elk van de variabelen in ons model.
+
+\begin{equation}
+ \begin{aligned}
+    \text{Interest.na.Z}  = & 0 + 0.188 \cdot \textcolor{red}{2} + 0.564 \cdot \textcolor{red}{1} + \\
+                            & 0.253 \cdot \textcolor{red}{1} + 0 \cdot \textcolor{red}{0} + 0.282 \cdot \textcolor{red}{0} + 0 \cdot \textcolor{red}{0} +\\
+                            & 0 \cdot (\textcolor{red}{1} * \textcolor{red}{1}) \textcolor{blue}{= 1.193}
+  \end{aligned}
+\end{equation}

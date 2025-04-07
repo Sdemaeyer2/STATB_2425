@@ -191,18 +191,18 @@ $\text{TAC.naZ} = \beta_{0} + \beta_{1} \cdot \text{Mod\_wetD} + \beta_{2} \cdot
 
 Vullen we de parameters in dan krijgen we dit:
 
-$\text{TAC.naZ} = 0.45 + (-0.52 \cdot \text{Mod\_wetD}) + (-0.73 \cdot \text{OverigeD}) + (-0.23 \cdot \text{PISA\_EigenInbrengZ}) + (0.12 \cdot \text{PISA\_ExperimenterenZ})$
+$\text{TAC.naZ} = \textcolor{green}{0.45} + (\textcolor{green}{-0.52} \cdot \text{Mod\_wetD}) + (\textcolor{green}{-0.73} \cdot \text{OverigeD}) + (\textcolor{green}{-0.23} \cdot \text{PISA\_EigenInbrengZ}) + (\textcolor{green}{0.12} \cdot \text{PISA\_ExperimenterenZ})$
 
 Nu kunnen we de score berekenen voor **de steekproef** door de waarden in te vullen ipv de namen van de variabelen. We zijn geïnteresseerd in een leerling die les volgt in moderne wetenschappen (`Mod_wetD = 1` & `OvergeD = 0`), 2 SD hoger scoort op `PISA_EigenInbrengZ` en 2.5 SD
 lager op `PISA_ExperimenterenZ` in de steekproef:
 
-$\text{TAC.naZ} = 0.45 + (-0.52 \cdot 1) + (-0.73 \cdot 0) + (-0.23 \cdot 2) + (0.12 \cdot -2.5)$
+$\text{TAC.naZ} = 0.45 + (-0.52 \cdot \textcolor{red}{1}) + (-0.73 \cdot \textcolor{red}{0}) + (-0.23 \cdot \textcolor{red}{2}) + (0.12 \cdot \textcolor{red}{-2.5})$
 
 Rekenen we dit uit dan komen we op `{r} 0.45 + (-0.52*1) + (-0.73*0) + (-0.23*2) + (0.12*-2.5)` .
 
-Voor **de populatie** is het net dezelfde werkwijze. Immers, alle parameterschattingen zijn statistisch signifcant (p<0.05).
+Voor **de populatie** is het net dezelfde werkwijze. Immers, alle parameterschattingen zijn statistisch signifcant (p < 0.05).
 
-$\text{TAC.naZ} = 0.45 + (-0.52 \cdot 1) + (-0.73 \cdot 0) + (-0.23 \cdot 2) + (0.12 \cdot -2.5)$
+$\text{TAC.naZ} = 0.45 + (-0.52 \cdot \textcolor{red}{1}) + (-0.73 \cdot \textcolor{red}{0}) + (-0.23 \cdot \textcolor{red}{2}) + (0.12 \cdot \textcolor{red}{-2.5})$
 
 Rekenen we dit uit dan komen we op `{r} 0.45 + (-0.52*1) + (-0.73*0) + (-0.23*2) + (0.12*-2.5)` .
 
@@ -268,29 +268,29 @@ Voorspelde scores **voor de steekproef**:
 
 Om de scores te berekenen voor de steekproef vullen we alle parameters in uit de output. 
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \text{GeslachtD} + -0.07 \cdot \text{Richting2cat1} + 0.51 \cdot \text{GelachtD:Richting2cat1}$
+$\text{Gender.voorZ} = \textcolor{green}{-0.32} + \textcolor{green}{0.58} \cdot \text{GeslachtD} + \textcolor{green}{-0.07} \cdot \text{Richting2cat1} + \textcolor{green}{0.51} \cdot \text{GelachtD:Richting2cat1}$
 
 - Jongen (`GenderD` = 0) - Geen techniek (`Richting2cat1`= 0)  
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + -0.07 \cdot 0 + 0.51 \cdot 0 \cdot 0$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + -0.07 \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{0}$
 
 Resultaat: `{r} -0.32 + 0.58 * 0 + -0.07 * 0 + 0.51 * 0 * 0`
 
 - Jongen (`GenderD` = 0) - Wel techniek (`Richting2cat1`= 1)
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + -0.07 \cdot 1 + 0.51 \cdot 0 \cdot 1$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + -0.07 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{1}$
 
 Resultaat: `{r} -0.32 + 0.58 * 0 + -0.07 * 1 + 0.51 * 0 * 1`
 
 - Meisje (`GenderD` = 1) - Geen techniek (`Richting2cat1`= 0)
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + -0.07 \cdot 0 + 0.51 \cdot 1 \cdot 0$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + -0.07 \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{0}$
 
 Resultaat: `{r} -0.32 + 0.58 * 1 + -0.07 * 0 + 0.51 * 1 * 0`
 
 - Meisje (`GenderD` = 1) - Wel tecchniek (`Richting2cat1`= 1)
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + -0.07 \cdot 1 + 0.51 \cdot 1 \cdot 1$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + -0.07 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{1}$
 
 Resultaat: `{r} -0.32 + 0.58 * 1 + -0.07 * 1 + 0.51 * 1 * 1`
 
@@ -298,28 +298,28 @@ Voorspelde scores **voor de populatie**:
 
 Om de scores te berekenen voor de populatie vullen we enkel de statistisch significante parameters uit de output in onze vergelijking. Parameters die niet statistisch significant zijn vervangen we door de waarde 0. 
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \text{GeslachtD} + 0 \cdot \text{Richting2cat1} + 0.51 \cdot \text{GelachtD:Richting2cat1}$
+$\text{Gender.voorZ} = \textcolor{green}{-0.32} + \textcolor{green}{0.58} \cdot \text{GeslachtD} + \textcolor{green}{0} \cdot \text{Richting2cat1} + \textcolor{green}{0.51} \cdot \text{GelachtD:Richting2cat1}$
 
 - Jongen (`GenderD` = 0) - Geen techniek (`Richting2cat1`= 0)  
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + 0 \cdot 0 + 0.51 \cdot 0 \cdot 0$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + \textcolor{red}{0} \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{0}$
 
 Resultaat: `{r} -0.32 + 0.58 * 0 + 0 * 0 + 0.51 * 0 * 0`
 
 - Jongen (`GenderD` = 0) - Wel techniek (`Richting2cat1`= 1)
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + 0 \cdot 1 + 0.51 \cdot 0 \cdot 1$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + 0 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{1}$
 
 Resultaat: `{r} -0.32 + 0.58 * 0 + 0 * 1 + 0.51 * 0 * 1`
 
 - Meisje (`GenderD` = 1) - Geen techniek (`Richting2cat1`= 0)
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + 0 \cdot 0 + 0.51 \cdot 1 \cdot 0$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + 0 \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{0}$
 
 Resultaat: `{r} -0.32 + 0.58 * 1 + 0 * 0 + 0.51 * 1 * 0`
 
 - Meisje (`GenderD` = 1) - Wel tecchniek (`Richting2cat1`= 1)
 
-$\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + 0 \cdot 1 + 0.51 \cdot 1 \cdot 1$
+$\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + 0 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{1}$
 
 Resultaat: `{r} -0.32 + 0.58 * 1 + 0 * 1 + 0.51 * 1 * 1`

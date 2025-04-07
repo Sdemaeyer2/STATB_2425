@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="be-nl" xml:lang="be-nl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contactmoment 1: Respons computer lab – Statistiek B</title>
+<title>Contactmoment 6: Respons computer lab – Statistiek B</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,17 +88,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Geen resultaten",
-    "search-matching-documents-text": "Gevonden documenten",
-    "search-copy-link-title": "Kopieer link om te zoeken",
-    "search-hide-matches-text": "Extra overeenkomsten verbergen",
-    "search-more-match-text": "meer overeenkomst in dit document",
-    "search-more-matches-text": "meer overeenkomsten in dit document",
-    "search-clear-button-title": "Wissen",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Annuleren",
-    "search-submit-button-title": "Verzenden",
-    "search-label": "Zoeken"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WB6XE1H6V1"></script>
@@ -123,12 +123,41 @@ cookieconsent.run({
   "preferences_center_close_button_hide":false,
   "website_name":""
   ,
-"language":"nl"
+"language":"be-nl"
   });
 });
 </script> 
   
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -141,13 +170,13 @@ cookieconsent.run({
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Contactmoment 1: Respons computer lab</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Contactmoment 6: Respons computer lab</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Zoeken" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -164,7 +193,7 @@ cookieconsent.run({
       <div class="sidebar-tools-main tools-wide">
     <a href="https://www.uantwerpen.be/nl/" title="uantwerpen.be/nl/" class="quarto-navigation-tool px-1" aria-label="uantwerpen.be/nl/"><i class="bi bi-globe"></i></a>
     <a href="https://github.com/Sdemaeyer2/STATB_2425" title="Statistiek B" class="quarto-navigation-tool px-1" aria-label="Statistiek B"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Schakel leesmodus">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -173,7 +202,7 @@ cookieconsent.run({
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Zoeken"></div>
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -194,7 +223,7 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../Contactmomenten/Contactmomenten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contactmomenten</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -247,7 +276,7 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../Penguins.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Online (R) oefeningen</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -294,7 +323,7 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">ZSO</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -353,7 +382,7 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../Rapporteren.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rapporteren</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -382,7 +411,7 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Extra materiaal</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Schakel sectie">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -419,14 +448,23 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Andere formaten</h2><ul><li><a href="Respons_C6.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#oefening-1" id="toc-oefening-1" class="nav-link active" data-scroll-target="#oefening-1">Oefening 1</a></li>
+  <li><a href="#oefening-2" id="toc-oefening-2" class="nav-link" data-scroll-target="#oefening-2">Oefening 2</a></li>
+  <li><a href="#oefening-3" id="toc-oefening-3" class="nav-link" data-scroll-target="#oefening-3">Oefening 3</a></li>
+  <li><a href="#oefening-4" id="toc-oefening-4" class="nav-link" data-scroll-target="#oefening-4">Oefening 4</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Respons_C6.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contactmoment 1: Respons computer lab</h1>
+<h1 class="title">Contactmoment 6: Respons computer lab</h1>
 </div>
 
 
@@ -449,13 +487,15 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Belangrijk
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Vooraleer je de oefeningen kan oplossen is het belangrijk om zowel de dataset te laden, het pakket <code>car</code> te activeren en ook de OLP2 Functies te activeren.</p>
 </div>
 </div>
+<section id="oefening-1" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-1">Oefening 1</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -466,72 +506,60 @@ Belangrijk
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Is er een verschil in interesse voor techniek (<code>Interest.voor</code>) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (<code>Dipvader</code>)?</p></li>
-<li><p>Hoe groot is het effect van de variabele <code>Dipvader</code> op <code>Interest.voor</code>?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
-</ol>
+<p>Is er een verschil tussen eerste en tweedejaars in technische geletterdheid (<code>TAC.na</code>) en is het zo dat het effect van “eigen inbreng in de les” (<code>PISA_EigenInbreng</code>) op de technische geletterdheid anders is voor eerste dan wel voor tweedejaars (<code>Studiejaar</code>)?</p>
+<p>Vooraleer je deze analyse draait, maak je een dummyvariabele aan voor de variabele <code>Studiejaar</code>. Zorg ervoor dat deze dummy aanstaat voor de categorie “tweedejaars”. Hanteer deze dummyvariabele in je verdere analyses.</p>
 </div>
 </div>
-<ol type="a">
-<li></li>
-</ol>
-<p>Vooraleer we de t-test zelf kunnen uitvoeren dienen we eerst de assumptie van gelijke binnengroepenvarianties na te gaan aan de hand van de Levene Test.</p>
+<p>We starten met het aanmaken van de dummy variabele en checken of we dit goed gedaan hebben door een tabel aan te maken waarin we de oorspronkelijke variabele kruisen met de aangemaakte dummy variabele.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Techniek<span class="sc">$</span>Interest.voor, Techniek<span class="sc">$</span>Dipvader)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Tweedejaars<span class="ot">&lt;-</span>(Techniek<span class="sc">$</span>Studiejaar<span class="sc">==</span><span class="st">'2'</span>)<span class="sc">*</span><span class="dv">1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(Techniek<span class="sc">$</span>Studiejaar,Techniek<span class="sc">$</span>Tweedejaars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Levene's Test for Homogeneity of Variance (center = median)
-        Df F value Pr(&gt;F)
-group    1  0.0614 0.8043
-      2172               </code></pre>
+<pre><code>   
+       0    1
+  1 1083    0
+  2    0 1284</code></pre>
 </div>
 </div>
-<p>Kijken we naar de p-waarde van deze test dan zien we dat deze hoger is 0.05. Met andere woorden, we kunnen ervan uit gaan dat aan de assumptie van gelijke varianties is voldaan.</p>
-<p>Nu zijn we klaar om de t-test zelf uit te voeren.</p>
+<p>We schatten nu het model met daarin enerzijds de hoofdeffecten van <code>PISA_EigenInbreng</code> en <code>Tweedejaars</code> en anderzijds het interactie-effect tussen beide. (Je merkt in onderstaand codeblok dat we werken met wat meer ‘enters’ en de code over lijnen spreiden om ze leesbaar te houden)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Dipvader,<span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>M_EigenInbreng <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  TAC.na <span class="sc">~</span> PISA_EigenInbreng <span class="sc">+</span> Tweedejaars <span class="sc">+</span> PISA_EigenInbreng<span class="sc">*</span>Tweedejaars,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data=</span>Techniek</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(M_EigenInbreng)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Two Sample t-test
+Call:
+lm(formula = TAC.na ~ PISA_EigenInbreng + Tweedejaars + PISA_EigenInbreng * 
+    Tweedejaars, data = Techniek)
 
-data:  Techniek$Interest.voor by Techniek$Dipvader
-t = 3.9534, df = 2172, p-value = 7.95e-05
-alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
-95 percent confidence interval:
- 0.08344689 0.24771611
-sample estimates:
-mean in group 0 mean in group 1 
-       3.022044        2.856463 </code></pre>
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.62846 -0.14602  0.01189  0.16344  0.47802 
+
+Coefficients:
+                               Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                    0.679370   0.018249  37.228  &lt; 2e-16 ***
+PISA_EigenInbreng             -0.053860   0.009498  -5.671 1.67e-08 ***
+Tweedejaars                    0.010221   0.024576   0.416    0.678    
+PISA_EigenInbreng:Tweedejaars -0.007273   0.013114  -0.555    0.579    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.2041 on 1675 degrees of freedom
+  (688 observations deleted due to missingness)
+Multiple R-squared:  0.04447,   Adjusted R-squared:  0.04275 
+F-statistic: 25.98 on 3 and 1675 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<p>We starten met het aflezen van de geobserveerde gemiddelden in de steekproef. De gemiddelde score voor interesse in techniek van de leerlingen in de steekproef wiens vader geen diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 0, waarvoor je de betekenis kan nagaan in het codeboek) bedraagt 3.02. Dit gemiddelde is lager dan de gemiddelede score voor interesse in techniek van leerlingen in de steekproef van wie de vader wel een diploma hoger onderwijs heeft (<code>Dipvader</code> heeft de woorde 1, waarvoor je de betekenis kan nagaan in het codeboek): 2.86.</p>
-<p>Uit de output leren we dat er een statistisch significant effect is van diploma vader op interesse voor statistiek. Dit lezen we af in het stukje <code>p-value = 7.95e-05</code> wat betekent dat de p-waarde lager is dan 0.05. Dit betekent dat de kans zeer klein is dat we het vastgestelde verschil in onze steekproef zouden waarnemen indien de nulhypothese opgaat. Dat sterkt ons in de conclusie dat er in de populatie wel degelijk een verschil is in interesse voor techniek naargelang diploma van de vader.</p>
-<ol start="2" type="a">
-<li></li>
-</ol>
-<p>Vervolgens gaan we de ook altijd de effecgrootte na. Hier maken we gebruik van Cohen’s d.&nbsp;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Dipvader)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1701453</code></pre>
-</div>
-</div>
-<p>De Cohen’s d is lager dan 0.2. Daarom kunnen we concluderen dat dit een verwaarloosbaar klein effect is.</p>
-<ol start="3" type="a">
-<li></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Dipvader,</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab=</span><span class="st">"Diploma HO vader"</span>,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab=</span><span class="st">"Interesse in techniek"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Respons_C6_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<p>De mate waarin leerlingen eigen inbreng mogen doen, het studiejaar waarin leerlingen zitten en de interactie tussen deze beide variabelen verklaren samen 4.28% van de variantie (R-kwadraat = 0.0428) in technische geletterdheid (<code>TAC.na</code>). We verwachten dat deze variabelen ook in de populatie een invloed gaan hebben op technische geletterdheid (F(3,1675) = 25.98, p &lt; 0.001).</p>
+<p>Aangaande de vraag of er een verschil is in technische geletterdheid tussen eerste- en tweedejaars studenten stellen we vast dat er geen statistisch significant effect is van de variabele <code>Tweedejaars</code> op <code>TAC.na</code> (β = 0.01, p =0.678).</p>
+<p>De variabele <code>PISA_EigenInbreng</code> heeft wel een statistisch significant hoofdeffect (β = -0.05, p &lt; 0.05). Leerlingen die één eenheid hoger scoren op de mate waarin ze vinden eigen inbreng te mogen hebben in de les scoren 0.05 eenheden lager op technische geletterdheid. In de populatie verwachten we ook een effect gegeven de p-waarde die kleiner is dan 0.05. Onze hypothese met betrekking tot verschil in het effect van <code>PISA_EigenInbreng</code> tussen eerste- en tweedejaars dienen we te verwerpen. Het is niet zo dat leerlingen in het tweede jaar meer baat hebben bij het hebben van eigen inbreng in de les. Het interactie-effect van deze lesstijl met het jaar is niet significant (β = -0.007, p = 0.579). Anders gesteld: leerlingen uit het eerste of tweede jaar hebben dezelfde mate van eigen inbreng nodig in de les om technisch geletterder te worden.</p>
+</section>
+<section id="oefening-2" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-2">Oefening 2</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -542,73 +570,79 @@ mean in group 0 mean in group 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Is er een verschil in interesse voor techniek (<code>Interesse.voor</code>) tussen eerste- en tweedejaars leerlingen (<code>Studiejaar</code>)?</p></li>
-<li><p>Hoe groot is het effect van <code>Studiejaar</code> op <code>Interesse.voor</code>?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
-</ol>
+<p>En hoe zit dat met de andere leerkrachtstijlen (<code>PISA_Experimenteren</code>; <code>PISA_Orientatie</code>)? Hebben die hetzelfde effect voor eerste en tweedejaars?</p>
+<p>Gebruik opnieuw de dummyvariabele (<code>Tweedejaars</code>) om deze hypotheses te toetsen. Toets elk van die hypotheses in een afzonderlijk model.</p>
 </div>
 </div>
-<ol type="a">
-<li></li>
-</ol>
-<p>Opnieuw voeren we eerst de Levene Test uit.</p>
+<p>We gaan eerst de twee nieuwe modellen schatten, ééntje met daarin <code>PISA_Experimenteren</code> als voorspeller en ééntje met <code>PISA_Orientatie</code> als voorspeller.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Techniek<span class="sc">$</span>Interest.voor, Techniek<span class="sc">$</span>Studiejaar)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Levene's Test for Homogeneity of Variance (center = median)
-        Df F value Pr(&gt;F)  
-group    1     5.5 0.0191 *
-      2288                 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>M_Experimenteren <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  TAC.na <span class="sc">~</span> PISA_Experimenteren <span class="sc">+</span> Tweedejaars <span class="sc">+</span> PISA_Experimenteren <span class="sc">*</span> Tweedejaars,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> Techniek</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>M_Orientatie <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  TAC.na <span class="sc">~</span> PISA_Orientatie <span class="sc">+</span> Tweedejaars <span class="sc">+</span> PISA_Orientatie <span class="sc">*</span> Tweedejaars,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> Techniek</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>Ditmaal is de bijhorende p-waarde lager dan 0.05 (zie <code>0.0191 *</code> in de output). Dit betekent dat de assumptie van gelijke binnengroepenvarianties niet opgaat. Bijgevolg moeten we hiermee expliciet rekening houden bij het uitvoeren van de t-test in <code>R</code> door het argument <code>var.equal=FALSE</code> toe te voegen bij het opvragen van de t-test.</p>
+<p>We bekijken de output voor beide modellen.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Studiejaar,<span class="at">var.equal=</span><span class="cn">FALSE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(M_Experimenteren)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Welch Two Sample t-test
+Call:
+lm(formula = TAC.na ~ PISA_Experimenteren + Tweedejaars + PISA_Experimenteren * 
+    Tweedejaars, data = Techniek)
 
-data:  Techniek$Interest.voor by Techniek$Studiejaar
-t = 13.277, df = 2260.6, p-value &lt; 2.2e-16
-alternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0
-95 percent confidence interval:
- 0.4433075 0.5969520
-sample estimates:
-mean in group 1 mean in group 2 
-       3.211843        2.691714 </code></pre>
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.59012 -0.16213  0.00697  0.18210  0.41744 
+
+Coefficients:
+                                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                      0.582276   0.029566  19.694   &lt;2e-16 ***
+PISA_Experimenteren              0.001171   0.012381   0.095    0.925    
+Tweedejaars                      0.028006   0.038866   0.721    0.471    
+PISA_Experimenteren:Tweedejaars -0.011252   0.016513  -0.681    0.496    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.2088 on 1675 degrees of freedom
+  (688 observations deleted due to missingness)
+Multiple R-squared:  0.000561,  Adjusted R-squared:  -0.001229 
+F-statistic: 0.3134 on 3 and 1675 DF,  p-value: 0.8157</code></pre>
 </div>
-</div>
-<p>We lezen eerst de geobserveerde gemiddelden in de steekproef af in de output. Het gemiddelde voor de eerste groep (Studiejaar = leerjaar 1) bedraag 3.21 wat hoger is dan het gemiddelde voor de tweede groep (Studiejaar = leerjaar 2) (gemiddelde = 2.69).</p>
-<p>Dit verschil in interesse voor techniek tussen beide groepen leerlingen is bovendien statistisch significant. De p-waarde in de output is lager dan 0.05 (zie <code>p-value &lt; 2.2e-16</code> in de output). We concluderen dat er in de populatie ook een verschil in interesse voor techniek zal zijn tussen leerlingen van wie de vader geen diploma hoger onderwijs heeft en leerlingen van wie de vader wel een diploma hoger onderwijs heeft.</p>
-<ol start="2" type="a">
-<li></li>
-</ol>
-<p>Vervolgens gaan we opnieuw de effectgrootte na aan de hand van Cohen’s d.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Studiejaar)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(M_Orientatie)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5557404</code></pre>
+<pre><code>
+Call:
+lm(formula = TAC.na ~ PISA_Orientatie + Tweedejaars + PISA_Orientatie * 
+    Tweedejaars, data = Techniek)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.60970 -0.16449  0.00952  0.17363  0.42555 
+
+Coefficients:
+                             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                  0.544560   0.028204  19.308   &lt;2e-16 ***
+PISA_Orientatie              0.016128   0.010834   1.489    0.137    
+Tweedejaars                 -0.005354   0.035844  -0.149    0.881    
+PISA_Orientatie:Tweedejaars  0.005019   0.014177   0.354    0.723    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.2083 on 1675 degrees of freedom
+  (688 observations deleted due to missingness)
+Multiple R-squared:  0.004543,  Adjusted R-squared:  0.002761 
+F-statistic: 2.548 on 3 and 1675 DF,  p-value: 0.05431</code></pre>
 </div>
 </div>
-<p>De Cohen’s d voor dit effect van Studiejaar op interesse voor techniek valt tussen 0.5 en 0.7: het gaat om een medium effect.</p>
-<ol start="3" type="a">
-<li></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar</span>(Techniek<span class="sc">$</span>Interest.voor<span class="sc">~</span>Techniek<span class="sc">$</span>Studiejaar,</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab=</span><span class="st">"Studiejaar"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab=</span><span class="st">"Interesse in techniek"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Respons_C6_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<p>Wat beide andere lesstijlen betreft, blijkt dat de verklaarde variantie in technische geletterdheid (<code>TAC.na</code>) telkens verwaarloosbaar is (R-kwadraat Experimenteren= -0.0012, R-kwadraat Orientatie= 0.0028) en bovendien niet statistisch significant (p Experimenteren= 0.816, p Orientatie= 0.054). De onafhankelijke variabelen hebben dus geen effect op technische geletterdheid in de populatie. Bovendien is voor beide modellen zowel <code>Tweedejaars</code> (β Experimenteren = -0.007, p = 0.471; β Orientatie= 0.016, p = 0.137 ) als de interactie tussen <code>Tweedejaars</code> en lesstijl (β Experimenteren<em>Tweedejaars = -0.011, p = 0.496; β Orientatie</em>Tweedejaars= 0.005, p = 0.723) niet statistisch significant. In de populatie vinden we deze effecten dus niet terug.</p>
+</section>
+<section id="oefening-3" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-3">Oefening 3</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -619,65 +653,228 @@ mean in group 1 mean in group 2
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (<code>Interest.voor</code>) en aan het einde van datzelfde trimester (<code>Interest.na</code>). Daarom kunnen we de volgende onderzoeksvraag nagaan:</p>
+<p>Tijdens een vorig contactmoment gingen we al na in welke mate de interesse van leerlingen in het project (<code>Projectinteressant.z</code>) en de mate van interesse in techniek voor het project (<code>Interest.voor.z</code>) een invloed hebben op de interesse na het project (<code>Interest.na.z</code>).</p>
+<p>Op basis van een uitgebreide literatuurstudie vermoeden we echter dat de interesse in techniek na het project niet voor alle studierichtingen hetzelfde is.</p>
 <ol type="a">
-<li><p>Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?</p></li>
-<li><p>Hoe groot is het effect van een trimester technieklessen?</p></li>
-<li><p>Geef het effect visueel weer.</p></li>
+<li><p>Ga deze hypothese na. Zet de variabele <code>Richting5cat</code> eerst om in de nodige dummyvariabelen. Hanteer vervolgens de studierichting “Technisch” als referentiecategorie in je analyses. Maak ook de nodige gestandaardiseerde variabelen aan.</p></li>
+<li><p>Interpreteer vervolgens ook de andere parameterschattingen.</p></li>
 </ol>
 </div>
 </div>
-<p>Deze derde oefening verschilt van de eerste twee oefeningen. Bij de eerste twee oefeningen deden we een <em>independent samples t-test</em> omdat we de gemiddelde scores van twee verschillende groepen leerlingen wensten te vergelijken met elkaar. Bij deze oefening vergelijken we twee gemiddeldes die gemeten zijn bij dezelfde groep leerlingen. Daarom maken we in deze oefening gebruik van een <em>paired samples t-test</em> .</p>
 <ol type="a">
 <li></li>
 </ol>
-<p>Om deze <em>paired samples t-test</em> uit te voeren maken we gebruik van het argument <code>paired = TRUE</code> in de <code>t.test()</code> functie.</p>
+<p>We starten met het aanmaken van de nodige dummy-variabelen.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Om te weten welke code van <code>Richting5cat</code> hoort bij welke studierichting grijp je best terug naar het codeboek.</p>
+<p>In de onderstaande code maken we de dummy-variabelen aan. Soms voeren we nog een extra controle uit via het <code>table()</code> commando. Dat doen we hier niet. We zijn overtuigd dat we het goed deden 😀!</p>
+</div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Interest.na, <span class="at">paired=</span><span class="cn">TRUE</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Technisch <span class="ot">&lt;-</span> (Techniek<span class="sc">$</span>Richting5cat<span class="sc">==</span><span class="st">'1'</span>)<span class="sc">*</span><span class="dv">1</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Kunst     <span class="ot">&lt;-</span> (Techniek<span class="sc">$</span>Richting5cat<span class="sc">==</span><span class="st">'2'</span>)<span class="sc">*</span><span class="dv">1</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Latijn    <span class="ot">&lt;-</span> (Techniek<span class="sc">$</span>Richting5cat<span class="sc">==</span><span class="st">'3'</span>)<span class="sc">*</span><span class="dv">1</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>ModWet    <span class="ot">&lt;-</span> (Techniek<span class="sc">$</span>Richting5cat<span class="sc">==</span><span class="st">'4'</span>)<span class="sc">*</span><span class="dv">1</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Handel    <span class="ot">&lt;-</span> (Techniek<span class="sc">$</span>Richting5cat<span class="sc">==</span><span class="st">'5'</span>)<span class="sc">*</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Daarnaast moeten we enkele variabelen standaardiseren.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Projectinteressant.z <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Projectinteressant)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Interest.voor.z      <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Interest.voor)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Techniek<span class="sc">$</span>Interest.na.z        <span class="ot">&lt;-</span> <span class="fu">scale</span>(Techniek<span class="sc">$</span>Interest.na)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Nu zijn we klaar om het gevraagde model te schatten en de output op te vragen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Model3a<span class="ot">&lt;-</span><span class="fu">lm</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  Interest.na.z <span class="sc">~</span> Projectinteressant.z <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    Interest.voor.z <span class="sc">+</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    Kunst <span class="sc">+</span> </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    Latijn <span class="sc">+</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    ModWet <span class="sc">+</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    Handel,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">data=</span>Techniek</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a> <span class="fu">summary</span>(Model3a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Paired t-test
+Call:
+lm(formula = Interest.na.z ~ Projectinteressant.z + Interest.voor.z + 
+    Kunst + Latijn + ModWet + Handel, data = Techniek)
 
-data:  Techniek$Interest.voor and Techniek$Interest.na
-t = 1.9696, df = 2289, p-value = 0.049
-alternative hypothesis: true mean difference is not equal to 0
-95 percent confidence interval:
- 0.000149209 0.067973062
-sample estimates:
-mean difference 
-     0.03406114 </code></pre>
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.9210 -0.4538  0.0149  0.4781  2.7577 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           0.28057    0.05886   4.767 1.99e-06 ***
+Projectinteressant.z  0.18773    0.01643  11.423  &lt; 2e-16 ***
+Interest.voor.z       0.56743    0.01706  33.259  &lt; 2e-16 ***
+Kunst                -0.02814    0.13274  -0.212    0.832    
+Latijn               -0.33973    0.06588  -5.157 2.73e-07 ***
+ModWet               -0.31074    0.06355  -4.890 1.08e-06 ***
+Handel               -0.30135    0.07370  -4.089 4.49e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.7497 on 2236 degrees of freedom
+  (124 observations deleted due to missingness)
+Multiple R-squared:  0.4403,    Adjusted R-squared:  0.4388 
+F-statistic: 293.2 on 6 and 2236 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<p>Het verschil in gemiddelden voor interesse in techniek tussen het begin en het einde van het trimester bedraagt 0.03.</p>
-<p>We lezen af dat de p-waarde lager is dan 0.05 (zie <code>p-value = 0.049</code>). De kans om het verschil in gemiddelen in onze steekproef vast te stellen indien de nulhypothese opgaat is kleiner dan 5%. Dit sterkt ons om te concluderen dat er in de populatie WEL een verschil is in interesse in techniek tussen het begin en het einde van het trimester.</p>
+<p>De hypothese klopt! Uit de analyses blijkt dat leerlingen die gemiddeld scoren op <code>Projectinteressant.z</code> en <code>Interest.voor.z</code> maar les volgen in de studierichtingen Latijn (β = -0.34, p &lt; 0.001), Moderne Wetenschappen (β = -0.311, p &lt; 0.001) of Handel (β = -0.301, p &lt; 0.001) significant lager scoren op <code>Interest.na.z</code> in vergelijking met leerlingen uit een technische richting. Het verschil in score op <code>Interest.na.z</code> tussen leerlingen uit Kunst en leerlingen uit een technische richting is niet significant (β = -0.028, p = 0.832).</p>
 <ol start="2" type="a">
 <li></li>
 </ol>
-<p>Vervolgens berekenen we de Cohen’s d aan de hand van de functie <code>dpaired()</code>. Hierbij moeten we de t-waarde en het aantal vrijheidsgraden ingeven die we bekwamen bij de t-test (zie hierboven).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dpaired</span>(<span class="fl">1.9696</span>,<span class="dv">2290</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.04115857</code></pre>
+<p>Een leerling uit een technische richting die gemiddeld scoort op ‘Projectinteressant.z’ en op ‘Interest.voor.z’ behaalt een score van 0.281 SD boven het gemiddelde (β 0 = 0.281, p &lt; 0.001). De kans dat het intercept in de populatie 0 bedraagt, is zeer klein (p &lt; 0.001). We gaan er dus vanuit dat dit ook voor de populatie geldt. Als we het effect van <code>Projectinteressant.z</code> op <code>Interest.na.z</code> vergelijken met dat van <code>Interest.voor.z</code> op <code>Interest.na.z</code>, dan blijkt dat het effect van de laatste variabele groter is. We mogen beide effecten vergelijken, omdat het in beide gevallen om gestandaardiseerde variabelen gaat.</p>
+<p><code>Interest.voor.z</code> heeft een positief effect op <code>Interst.na.z</code> (β = 0.567, p &lt; 0.001). Voor elke SD die een leerling hoger scoort op <code>Interest.voor.z</code> stijgt diens score op <code>Interest.na.z</code> met 0.567 SD, ongeacht de studierichting waarin de leerling les volgt en diens score op <code>Project.interessant.z</code>. (Ook de toename in <code>Interest.na.z</code> mogen we in SD’s interpreteren aangezien ook deze variabele is gestandaardiseerd.) Aangezien de p-waarde kleiner is dan 0.05 verwachten we dit effect ook in de populatie terug te vinden. Hetzelfde geldt voor het effect van <code>Projectinteressant.z</code>. Eén SD hoger score op deze variabele leidt tot een toename van 0.188 SD op <code>Interest.na.z</code> (β = 0.188, p &lt; 0.001), ongeacht de studierichting waarin een leerling les volgt en zijn score op <code>Interest.voor.z</code>.</p>
+<p>Ten slotte blijkt dat dit model 43.9% van de variantie in <code>Interest.na.z</code> verklaart (adj. R-kwadraat = 0.439) De F-toets leert dat we dit ook in de populatie mogen verwachten (F(6,2236) = 293.2, p &lt; 0.001). Dus ook de in populatie verklaren de onafhankelijke variabelen ene deel van de verschillen in interesse in techniek na het project.</p>
+</section>
+<section id="oefening-4" class="level2">
+<h2 class="anchored" data-anchor-id="oefening-4">Oefening 4</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-journal-richtext"></i> Oefening 4
 </div>
 </div>
-<p>Cohen’s d is lager dan 0.2: het gaat om een verwaarloosbaar effect.</p>
-<ol start="3" type="a">
+<div class="callout-body-container callout-body">
+<p>Ten slotte verwachten we dat het effect van <code>Interest.voor.z</code> op interesse in techniek mogelijk anders is voor leerlingen uit de studierichting “Technisch”.</p>
+<ol type="a">
+<li><p>Ga ook deze hypothese na. Rapporteer je bevindingen a.d.h.v. de output van je analyses.</p></li>
+<li><p>Bereken de scores van volgende leerlingen in de steekproef en in de populatie:</p></li>
+</ol>
+<ul>
+<li><p>een leerling die 0 scoort op alle onafhankelijke variabelen</p></li>
+<li><p>een leerling uit een technische richting die 1SD hoger scoort op <code>Interest.voor.z</code> en 2 SD hoger scoort op <code>Projectinteressant.z</code></p></li>
+</ul>
+</div>
+</div>
+<ol type="a">
 <li></li>
 </ol>
+<p>Om deze onderzoeksvraag op een efficiënte wijze te vertalen in een model is het handiger om een andere referentiecategorie te nemen voor studierichting dan <code>Technisch</code>. In de code hieronder kiezen we ervoor om een andere grotere groep leerlingen te hanteren als refentiecategorie: de leerlingen uit Moderne Wetenschappen. Dit zie je in de code omdat de dummy variabele <code>ModWet</code>niet is opgenomen in het model. De vraag naar het interactie-effect vertalen we in het model door de term <code>(Interest.voor.z * Technisch)</code> op te nemen.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">errorbar2</span>(Techniek<span class="sc">$</span>Interest.voor,Techniek<span class="sc">$</span>Interest.na,</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab=</span><span class="st">"Meting voor en na"</span>,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">ylab=</span><span class="st">"Interesse"</span>)</span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Respons_C6_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Model4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  Interest.na.z <span class="sc">~</span> Projectinteressant.z <span class="sc">+</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    Interest.voor.z <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    Technisch <span class="sc">+</span> </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    Latijn <span class="sc">+</span> </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    Kunst <span class="sc">+</span> </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    Handel <span class="sc">+</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    (Interest.voor.z <span class="sc">*</span> Technisch),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">data=</span>Techniek</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Interest.na.z ~ Projectinteressant.z + Interest.voor.z + 
+    Technisch + Latijn + Kunst + Handel + (Interest.voor.z * 
+    Technisch), data = Techniek)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.9124 -0.4541  0.0083  0.4787  2.7545 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)               -0.030234   0.023577  -1.282  0.19985    
+Projectinteressant.z       0.187985   0.016437  11.437  &lt; 2e-16 ***
+Interest.voor.z            0.563815   0.017519  32.183  &lt; 2e-16 ***
+Technisch                  0.253368   0.089634   2.827  0.00475 ** 
+Latijn                    -0.029504   0.036677  -0.804  0.42124    
+Kunst                      0.282396   0.120925   2.335  0.01962 *  
+Handel                     0.008868   0.049540   0.179  0.85794    
+Interest.voor.z:Technisch  0.066976   0.073794   0.908  0.36418    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.7497 on 2235 degrees of freedom
+  (124 observations deleted due to missingness)
+Multiple R-squared:  0.4405,    Adjusted R-squared:  0.4388 
+F-statistic: 251.4 on 7 and 2235 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
+<p>De vooropgestelde hypothese klopt niet! Uit de analyse blijkt dat het interactie-effect tussen <code>Interest.voor.z</code> en een technische studierichting volgen (<code>Technisch</code>) niet statistisch significant is (β = 0.067, p = 0.364). Het effect van <code>Interest.voor.z</code> op <code>Interest.na.z</code> is in de populatie dus niet anders voor leerlingen uit een technische studierichting.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Als dit wel statistisch significant zou zijn, dan zou dat betekenen dat voor leerlingen uit een technische studierichting het effect van <code>Interest.voor.z</code> op <code>Interest.na.z</code> groter zou zijn. 1 SD hoger scoren op <code>Interest.voor.z</code> leidt dan voor een leerling uit een technische studierichting tot een toename van 0.631 (= 0.564 + 0.067) SD op <code>Interest.na.z</code>.</p>
+</div>
+</div>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><em>“Een leerling die 0 scoort op alle onafhankelijke variabelen”</em></p>
+<p>… is een leerling die gemiddeld scoort op alle onafhankelijke kwantitatieve variabelen en die tot de referentiecategorie behoort (Moderne Wetenschappen). Onze beste inschatting is dat deze leerling zowel in de steekproef een score op <code>Interest.na.z</code> van -0.03 (= het intercept!) behaalt. Voor de populatie verwachten we dat zo’n leerling een score 0 behaalt (het intercept is immers niet statistisch significant).</p>
+<p><em>“Een leerling uit een technische richting die 1 SD hoger scoort op <code>Interest.voor.z</code> en 2 SD hoger scoort op <code>Projectinteressant.z</code>”</em></p>
+<p>Vooraleer we de berekeningen doen, schrijven we de regressievergelijking opnieuw op.</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+    \text{Interest.na.Z}  = &amp; \beta_{0} + \beta_{1} \cdot \text{Projectinteressant.z} + \beta_{2} \cdot \text{Interest.voor.z} + \\
+                            &amp; \beta_{3} \cdot \text{Technisch} + \beta_{4} \cdot \text{Latijn} + \beta_{5} \cdot \text{Kunst} + \beta_{6} \cdot \text{Handel} +\\
+                            &amp; \beta_{7} \cdot (\text{Technisch} * \text{Interest.voor.z})
+  \end{aligned}
+\end{equation}\]</span></p>
+<p>Voorspelde scores <strong>voor de steekproef</strong>:</p>
+<p>Om de scores te berekenen voor de steekproef vullen we alle parameters in uit de output.</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+    \text{Interest.na.Z} = &amp; \textcolor{green}{-0.03} + \textcolor{green}{0.188} \cdot \text{Projectinteressant.z} + \textcolor{green}{0.564} \cdot \text{Interest.voor.z} + \\
+                            &amp; \textcolor{green}{0.253} \cdot \text{Technisch} + \textcolor{green}{-0.030} \cdot \text{Latijn} + \textcolor{green}{0.282} \cdot \text{Kunst} + \textcolor{green}{0.009} \cdot \text{Handel} +\\
+                            &amp; \textcolor{green}{0.067} \cdot (\text{Technisch} * \text{Interest.voor.z})
+  \end{aligned}
+\end{equation}\]</span></p>
+<p>Nu we de parameters hebben ingevuld, kunnen we ook de waarden voor de variabelen invullen die de betrokken leerling behaalt.</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+    \text{Interest.na.Z}  = &amp; -0.03 + 0.188 \cdot \textcolor{red}{2} + 0.564 \cdot \textcolor{red}{1} + \\
+                            &amp; 0.253 \cdot \textcolor{red}{1} + -0.030 \cdot \textcolor{red}{0} + 0.282 \cdot \textcolor{red}{0} + 0.009 \cdot \textcolor{red}{0} +\\
+                            &amp; 0.067 \cdot (\textcolor{red}{1} * \textcolor{red}{1}) \textcolor{blue}{= 1.23}
+  \end{aligned}
+\end{equation}\]</span></p>
+<p>Voorspelde scores <strong>voor de populatie</strong>:</p>
+<p>Om de scores te berekenen voor de populatie vullen we enkel de statistisch significante parameters uit de output in onze vergelijking in. Parameters die niet statistisch significant zijn vervangen we door de waarde 0.</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+    \text{Interest.na.Z} = &amp; \textcolor{green}{0} + \textcolor{green}{0.188} \cdot \text{Projectinteressant.z} + \textcolor{green}{0.564} \cdot \text{Interest.voor.z} + \\
+                            &amp; \textcolor{green}{0.253} \cdot \text{Technisch} + \textcolor{green}{0} \cdot \text{Latijn} + \textcolor{green}{0.282} \cdot \text{Kunst} + \textcolor{green}{0} \cdot \text{Handel} +\\
+                            &amp; \textcolor{green}{0} \cdot (\text{Technisch} * \text{Interest.voor.z})
+  \end{aligned}
+\end{equation}\]</span></p>
+<p>Vervolgens kunnen we de waarden invullen die de bewuste leerling behaalde op elk van de variabelen in ons model.</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+    \text{Interest.na.Z}  = &amp; 0 + 0.188 \cdot \textcolor{red}{2} + 0.564 \cdot \textcolor{red}{1} + \\
+                            &amp; 0.253 \cdot \textcolor{red}{1} + 0 \cdot \textcolor{red}{0} + 0.282 \cdot \textcolor{red}{0} + 0 \cdot \textcolor{red}{0} +\\
+                            &amp; 0 \cdot (\textcolor{red}{1} * \textcolor{red}{1}) \textcolor{blue}{= 1.193}
+  \end{aligned}
+\end{equation}\]</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -723,12 +920,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Gekopieerd!");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Gekopieerd!");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

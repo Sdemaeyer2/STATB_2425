@@ -769,12 +769,12 @@ F-statistic: 66.58 on 4 and 1635 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>We starten met nog een keer de regressievergelijking op te stellen:</p>
 <p><span class="math inline">\(\text{TAC.naZ} = \beta_{0} + \beta_{1} \cdot \text{Mod\_wetD} + \beta_{2} \cdot \text{OverigeD} + \beta_{3} \cdot \text{PISA\_EigenInbrengZ} + \beta_{4} \cdot \text{PISA\_ExperimenterenZ}\)</span></p>
 <p>Vullen we de parameters in dan krijgen we dit:</p>
-<p><span class="math inline">\(\text{TAC.naZ} = 0.45 + (-0.52 \cdot \text{Mod\_wetD}) + (-0.73 \cdot \text{OverigeD}) + (-0.23 \cdot \text{PISA\_EigenInbrengZ}) + (0.12 \cdot \text{PISA\_ExperimenterenZ})\)</span></p>
+<p><span class="math inline">\(\text{TAC.naZ} = \textcolor{green}{0.45} + (\textcolor{green}{-0.52} \cdot \text{Mod\_wetD}) + (\textcolor{green}{-0.73} \cdot \text{OverigeD}) + (\textcolor{green}{-0.23} \cdot \text{PISA\_EigenInbrengZ}) + (\textcolor{green}{0.12} \cdot \text{PISA\_ExperimenterenZ})\)</span></p>
 <p>Nu kunnen we de score berekenen voor <strong>de steekproef</strong> door de waarden in te vullen ipv de namen van de variabelen. We zijn geïnteresseerd in een leerling die les volgt in moderne wetenschappen (<code>Mod_wetD = 1</code> &amp; <code>OvergeD = 0</code>), 2 SD hoger scoort op <code>PISA_EigenInbrengZ</code> en 2.5 SD lager op <code>PISA_ExperimenterenZ</code> in de steekproef:</p>
-<p><span class="math inline">\(\text{TAC.naZ} = 0.45 + (-0.52 \cdot 1) + (-0.73 \cdot 0) + (-0.23 \cdot 2) + (0.12 \cdot -2.5)\)</span></p>
+<p><span class="math inline">\(\text{TAC.naZ} = 0.45 + (-0.52 \cdot \textcolor{red}{1}) + (-0.73 \cdot \textcolor{red}{0}) + (-0.23 \cdot \textcolor{red}{2}) + (0.12 \cdot \textcolor{red}{-2.5})\)</span></p>
 <p>Rekenen we dit uit dan komen we op -0.83 .</p>
-<p>Voor <strong>de populatie</strong> is het net dezelfde werkwijze. Immers, alle parameterschattingen zijn statistisch signifcant (p&lt;0.05).</p>
-<p><span class="math inline">\(\text{TAC.naZ} = 0.45 + (-0.52 \cdot 1) + (-0.73 \cdot 0) + (-0.23 \cdot 2) + (0.12 \cdot -2.5)\)</span></p>
+<p>Voor <strong>de populatie</strong> is het net dezelfde werkwijze. Immers, alle parameterschattingen zijn statistisch signifcant (p &lt; 0.05).</p>
+<p><span class="math inline">\(\text{TAC.naZ} = 0.45 + (-0.52 \cdot \textcolor{red}{1}) + (-0.73 \cdot \textcolor{red}{0}) + (-0.23 \cdot \textcolor{red}{2}) + (0.12 \cdot \textcolor{red}{-2.5})\)</span></p>
 <p>Rekenen we dit uit dan komen we op -0.83 .</p>
 </section>
 <section id="oefening-2" class="level2">
@@ -862,49 +862,49 @@ F-statistic: 74.16 on 3 and 2286 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><span class="math inline">\(\text{Gender.voorZ} = \beta_{0} + \beta_{1} \cdot \text{GeslachtD} + \beta_{2} \cdot \text{Richting2cat1} + \beta_{3} \cdot \text{GelachtD:Richting2cat1}\)</span></p>
 <p>Voorspelde scores <strong>voor de steekproef</strong>:</p>
 <p>Om de scores te berekenen voor de steekproef vullen we alle parameters in uit de output.</p>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \text{GeslachtD} + -0.07 \cdot \text{Richting2cat1} + 0.51 \cdot \text{GelachtD:Richting2cat1}\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = \textcolor{green}{-0.32} + \textcolor{green}{0.58} \cdot \text{GeslachtD} + \textcolor{green}{-0.07} \cdot \text{Richting2cat1} + \textcolor{green}{0.51} \cdot \text{GelachtD:Richting2cat1}\)</span></p>
 <ul>
 <li>Jongen (<code>GenderD</code> = 0) - Geen techniek (<code>Richting2cat1</code>= 0)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + -0.07 \cdot 0 + 0.51 \cdot 0 \cdot 0\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + -0.07 \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{0}\)</span></p>
 <p>Resultaat: -0.32</p>
 <ul>
 <li>Jongen (<code>GenderD</code> = 0) - Wel techniek (<code>Richting2cat1</code>= 1)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + -0.07 \cdot 1 + 0.51 \cdot 0 \cdot 1\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + -0.07 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{1}\)</span></p>
 <p>Resultaat: -0.39</p>
 <ul>
 <li>Meisje (<code>GenderD</code> = 1) - Geen techniek (<code>Richting2cat1</code>= 0)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + -0.07 \cdot 0 + 0.51 \cdot 1 \cdot 0\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + -0.07 \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{0}\)</span></p>
 <p>Resultaat: 0.26</p>
 <ul>
 <li>Meisje (<code>GenderD</code> = 1) - Wel tecchniek (<code>Richting2cat1</code>= 1)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + -0.07 \cdot 1 + 0.51 \cdot 1 \cdot 1\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + -0.07 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{1}\)</span></p>
 <p>Resultaat: 0.7</p>
 <p>Voorspelde scores <strong>voor de populatie</strong>:</p>
 <p>Om de scores te berekenen voor de populatie vullen we enkel de statistisch significante parameters uit de output in onze vergelijking. Parameters die niet statistisch significant zijn vervangen we door de waarde 0.</p>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \text{GeslachtD} + 0 \cdot \text{Richting2cat1} + 0.51 \cdot \text{GelachtD:Richting2cat1}\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = \textcolor{green}{-0.32} + \textcolor{green}{0.58} \cdot \text{GeslachtD} + \textcolor{green}{0} \cdot \text{Richting2cat1} + \textcolor{green}{0.51} \cdot \text{GelachtD:Richting2cat1}\)</span></p>
 <ul>
 <li>Jongen (<code>GenderD</code> = 0) - Geen techniek (<code>Richting2cat1</code>= 0)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + 0 \cdot 0 + 0.51 \cdot 0 \cdot 0\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + \textcolor{red}{0} \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{0}\)</span></p>
 <p>Resultaat: -0.32</p>
 <ul>
 <li>Jongen (<code>GenderD</code> = 0) - Wel techniek (<code>Richting2cat1</code>= 1)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 0 + 0 \cdot 1 + 0.51 \cdot 0 \cdot 1\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{0} + 0 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{0} \cdot \textcolor{red}{1}\)</span></p>
 <p>Resultaat: -0.32</p>
 <ul>
 <li>Meisje (<code>GenderD</code> = 1) - Geen techniek (<code>Richting2cat1</code>= 0)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + 0 \cdot 0 + 0.51 \cdot 1 \cdot 0\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + 0 \cdot \textcolor{red}{0} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{0}\)</span></p>
 <p>Resultaat: 0.26</p>
 <ul>
 <li>Meisje (<code>GenderD</code> = 1) - Wel tecchniek (<code>Richting2cat1</code>= 1)</li>
 </ul>
-<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot 1 + 0 \cdot 1 + 0.51 \cdot 1 \cdot 1\)</span></p>
+<p><span class="math inline">\(\text{Gender.voorZ} = -0.32 + 0.58 \cdot \textcolor{red}{1} + 0 \cdot \textcolor{red}{1} + 0.51 \cdot \textcolor{red}{1} \cdot \textcolor{red}{1}\)</span></p>
 <p>Resultaat: 0.77</p>
 
 

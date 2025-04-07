@@ -1,40 +1,48 @@
 ---
-title: "Contactmoment 1: Opdrachten computer lab"
+title: "Contactmoment 6: Opdrachten computer lab"
+lang: be-nl
 ---
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 1
+Is er een verschil tussen eerste en tweedejaars in technische geletterdheid (`TAC.na`) en is het zo dat het effect van “eigen inbreng in de les” (`PISA_EigenInbreng`) op de technische geletterdheid anders is voor eerste dan wel voor tweedejaars (`Studiejaar`)? 
 
-(a) Is er een verschil in interesse voor techniek (`Interest.voor`) tussen leerlingen met een vader die wel of niet een diploma hoger onderwijs kehaalde (`Dipvader`)?
-
-(b) Hoe groot is het effect van de variabele `Dipvader` op `Interest.voor`?
-
-(c) Geef het effect visueel weer.
+Vooraleer je deze analyse draait, maak je een dummyvariabele aan voor de variabele `Studiejaar`. Zorg ervoor dat deze dummy aanstaat voor de categorie “tweedejaars”. Hanteer deze dummyvariabele in je verdere analyses.
 :::
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 2
+En hoe zit dat met de andere leerkrachtstijlen (`PISA_Experimenteren`; `PISA_Oriëntatie`)? Hebben die hetzelfde effect voor eerste en tweedejaars? 
 
-(a) Is er een verschil in interesse voor techniek (`Interesse.voor`) tussen eerste- en tweedejaars leerlingen (`Studiejaar`)?
-
-(b) Hoe groot is het effect van `Studiejaar` op `Interesse.voor`?
-
-(c) Geef het effect visueel weer.
+Gebruik opnieuw de dummyvariabele (`Tweedejaars`) om deze hypotheses te toetsen. Toets elk van die hypotheses in een afzonderlijk model.
 :::
 
 ::: {.callout-tip icon=false}
 ## <i class="bi bi-journal-richtext"></i> Oefening 3
+Tijdens een vorig contactmoment gingen we al na in welke mate de interesse van leerlingen in het project (`Projectinteressant.z`) en de mate van interesse in techniek voor het project (`Interest.voor.z`) een invloed hebben op de interesse na het project (`Interest.na.z`). 
 
-In het onderzoek achter de dataset is de interesse van leerlingen voor techniek op twee meetmomenten gemeten: aan het begin van een trimester (`Interest.voor`) en aan het einde van datzelfde trimester (`Interest.na`). Daarom kunnen we de volgende onderzoeksvraag nagaan:
+Op basis van een uitgebreide literatuurstudie vermoeden we echter dat de interesse in techniek na het project niet voor alle studierichtingen hetzelfde is.
 
-(a) Verschilt de interesse voor techniek van leerlingen in het begin van een trimester (‘Interest.voor’) van de interesee van leerlingen voor techniek aan het einde van een trimester (‘Interest.na’)?
+(a) Ga deze hypothese na. Zet de variabele `Richting5cat` eerst om in de nodige dummyvariabelen. Hanteer vervolgens de studierichting “Technisch” als referentiecategorie in je analyses. Maak ook de nodige gestandaardiseerde variabelen aan.
 
-(b) Hoe groot is het effect van een trimester technieklessen?
-
-(c) Geef het effect visueel weer.
+(b) Interpreteer vervolgens ook de andere parameterschattingen.
 :::
 
-![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C1/Respons_C1.qmd) 
+::: {.callout-tip icon=false}
+## <i class="bi bi-journal-richtext"></i> Oefening 4
+Ten slotte verwachten we dat het effect van `Interest.voor.z` op interesse in techniek mogelijk anders is voor leerlingen uit de studierichting “Technisch”.
+
+(a) Ga ook deze hypothese na. Rapporteer je bevindingen a.d.h.v. de output van je analyses.
+
+(b) Bereken de scores van volgende leerlingen in de steekproef en in de populatie:
+
+- een leerling die 0 scoort op alle onafhankelijke variabelen
+
+- een leerling uit een technische richting die 1SD hoger scoort op `Interest.voor.z` en 2 SD hoger scoort op `Projectinteressant.z`
+:::
+
+
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C6/Respons_C6.qmd) 
 
 ::: callout-note
 ## Ter info
