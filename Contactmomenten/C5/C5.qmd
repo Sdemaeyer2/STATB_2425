@@ -4,21 +4,17 @@ title: "Contactmoment 5"
 
 Dit contactmoment hebben we het over:
 
--   assumpties bij regressie-analyses
-
--   multivariate regressie
+-   Regressie-analyse als Lingua Franca
+-   Werken met dummy-variabelen
+-   Interactie-effecten
 
 ## Voorbereiding
 
-![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 7 en Hoofdstuk 8 uit het OLP
+![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 10 [Download nieuwe versie HFDST 10](/OLP/OLP%20Statistiek2%20-%20Hoofdstuk%2010%20-%20nieuw.pdf)
 
-![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen assumpties bij regressie-analyses
+![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen bij regressie met dummy-variabelen (deze moeten nog worden uitgewerkt)
 
-![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen multivariate regressie-analyses
-
-![](/images/icons/zz_video_camera.png){width="30"} Screencast assumpties regressie-analyse
-
-![](/images/icons/zz_video_camera.png){width="30"} Screencast multivariate regressie-analyse
+![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen bij interactie effecten (deze moeten nog worden uitgewerkt)
 
 ## Lesmateriaal
 
@@ -26,15 +22,12 @@ Dit contactmoment hebben we het over:
 
 ![](/images/icons/zz_video_camera.png){width="30"} Lesopname (terug te vinden op Blackboard)
 
-![](/images/icons/guided-practice.png){width="30"} Opdrachten computer lab
+![](/images/icons/guided-practice.png){width="30"} [Opdrachten computer lab](/Contactmomenten/C5/Opdrachten_C5.qmd)
 
-![](/images/icons/data.png){width="30"} Dataset computer lab
+![](/images/icons/data.png){width="30"} [Dataset computer lab](/Contactmomenten/Techniek.RData)
 
-![](/images/icons/worked-example.png){width="30"} Respons computer lab
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C5/Respons_C5.qmd)
 
 ## Na de les
 
-![](/images/icons/singlelab.png){width="30"} [ZSO 6: Bivariate regressie (Deel 2)](/ZSO/ZSO6.qmd)
-
-![](/images/icons/singlelab.png){width="30"} [ZSO 7: Multivariate regressie](/ZSO/ZSO7.qmd)
-
+![](/images/icons/singlelab.png){width="30"} [ZSO 8: Dummy-variabelen en interacties](/ZSO/ZSO8.qmd)

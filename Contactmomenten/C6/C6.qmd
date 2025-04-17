@@ -4,21 +4,13 @@ title: "Contactmoment 6"
 
 Dit contactmoment hebben we het over:
 
--   dummy-variabelen in het regressiemodel
-
--   interactie-effecten in het regressiemodel
+-   Regressie-analyse als Lingua Franca
+-   Werken met dummy-variabelen
+-   Interactie-effecten
 
 ## Voorbereiding
 
-![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 10 uit het OLP
-
-![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen dummy-variabelen
-
-![](/images/icons/singletutorial.png){width="30"} Online (R) Oefeningen interactie-effecten
-
-![](/images/icons/zz_video_camera.png){width="30"} Screencast dummy-variabelen
-
-![](/images/icons/zz_video_camera.png){width="30"} Screencast interactie-effecten
+![](/images/icons/book.png){width="30"} Verwerk Hoofdstuk 10 [Download nieuwe versie HFDST 10](/OLP/OLP%20Statistiek2%20-%20Hoofdstuk%2010%20-%20nieuw.pdf)
 
 ## Lesmateriaal
 
@@ -26,11 +18,11 @@ Dit contactmoment hebben we het over:
 
 ![](/images/icons/zz_video_camera.png){width="30"} Lesopname (terug te vinden op Blackboard)
 
-![](/images/icons/guided-practice.png){width="30"} Opdrachten computer lab
+![](/images/icons/guided-practice.png){width="30"} [Opdrachten computer lab](/Contactmomenten/C6/Opdrachten_C6.qmd)
 
-![](/images/icons/data.png){width="30"} Dataset computer lab
+![](/images/icons/data.png){width="30"} [Dataset computer lab](/Contactmomenten/Techniek.RData)
 
-![](/images/icons/worked-example.png){width="30"} Respons computer lab
+![](/images/icons/worked-example.png){width="30"} [Respons computer lab](/Contactmomenten/C6/Respons_C6.qmd)
 
 ## Na de les
 
