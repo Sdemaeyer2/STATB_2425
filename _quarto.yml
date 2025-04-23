@@ -1,6 +1,9 @@
 project:
   type: website
 
+extensions:
+  - r-wasm/quarto-live
+
 website:
   announcement: 
     icon: info-circle

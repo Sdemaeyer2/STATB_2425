@@ -111,7 +111,7 @@ summary(Model1)
 
 - R-kwadraat = 0.14: het gaat om een groot effect (14% verklaarde variantie in `TAC.naZ`). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%; dus we verwachten dat dit model in de populatie WEL variantie verklaart in `TAC.naZ`.
 
-- intercept = 0.45: een leerling uit de studierichting Latijn die gemiddeld scoort op `PISA_EigenInbrengZ` en `PISA_ExperimenterenZ` (want allemaal z-scores) scoort 0.45 SD lager dan gemiddeld op `TAC.naZ` in de steekproef. Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we hebben voldoende evidentie om te stellen dat in de populatie het intercept anders is dan 0. 
+- intercept = 0.45: een leerling uit de studierichting Latijn die gemiddeld scoort op `PISA_EigenInbrengZ` en `PISA_ExperimenterenZ` (want allemaal z-scores) scoort 0.45 SD hoger dan gemiddeld op `TAC.naZ` in de steekproef. Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we hebben voldoende evidentie om te stellen dat in de populatie het intercept anders is dan 0. 
 
 - $\beta_{Mod\_wetD}$ = -0.52, dus een leerling uit de richting Moderne Wetenschappen scoort 0.52 SD(want z-score!) lager op `TAC.naZ` dan een leerling die Latijn volgt (=referentiecategorie). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten dit verschil in score op `TAC.naZ` tussen leerlingen die Latijn en leerlingen die Moderne Wetenschappen volgen ook in de populatie terug te vinden.
 
@@ -153,7 +153,7 @@ anova(Model1, Model1b)
 We kunnen in deze output de *Residuals Sum of Squares (RSS)* (eigenlijk de SSE uit het OLP) voor beide modellen aflezen:
 
 - RSS_Model1 = 1361.8, 
-- RSS_Model2 = 1361.2, p = 0.41
+- RSS_Model1b = 1361.2, p = 0.41
 
 Model1b heeft wel een lagere RSS, maar dat verschil in RSS (∆RSS = 0.69) is te klein om te kunnen doortrekken naar de populatie (p > 0.05). Model1b is dus NIET statistisch significant beter dan Model1. We verwachten bijgevolg GEEN verschil in RSS in de populatie.
 
