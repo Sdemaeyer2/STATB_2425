@@ -165,7 +165,7 @@ summary(Model1b)
 
 - $\beta_{Mod\_wetD*PISA\_EigenInbrengZ}$ = 0.04, dus leerlingen die moderne wetenschappen volgen scoren voor elke 1 SD hoger op `PISA_EigenInbrengZ`nog eens 0.04 SD (want z-score!) hoger op `TAC.naZ`.
 
-(Een voorbeeld: een leerling die moderne wetenschappen volgt en 2 SD hoger scoort op `PISA_EigenInbrengZ` scoort -0.46 op `TAC.naZ` in de steekproef: 0.45 + (-0.51) + (2*-0.24) + (2*0.04) = -0.46)
+(Een voorbeeld: een leerling die moderne wetenschappen volgt en 2 SD hoger scoort op `PISA_EigenInbrengZ` scoort -0.46 op `TAC.naZ` in de steekproef: $0.45 + (-0.51) + (2*-0.24) + (2*1*.04) = -0.46)$
 
 Met p > 0.05: kans dat H0 opgaat in de populatie is groter dan 5%. Dus we verwachten het interactie-effect tussen `PISA_EigenInbrengZ` en `Mod_wetD` NIET terug te vinden in de populatie.
 
