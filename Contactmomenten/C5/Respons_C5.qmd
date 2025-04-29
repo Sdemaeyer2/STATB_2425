@@ -256,7 +256,7 @@ We overlopen de verschillende relevante delen uit de output.
 
 - $\beta_{Richting2cat1}$ = -0.07, dus een jongen die wel techniek volgt, scoort 0.07 SD (want z-score!) lager op `Gender.voorZ` dan een jongen die geen techniek volgt. Met p > 0.05: kans dat H0 opgaat in de populatie is groter dan 5%. Dus we verwachten dit verschil in score op `Gender.voorZ` tussen een jongen die geen techniek en een jongen die wel techniek volgt NIET in de populatie terug te vinden.
 
-- $\beta_{GeslachtD:Richting2cat1}$ = 0.51, dus een meisje dat wel techniek volgt (=scoort 1 op `GeslachtD` en op `Richting2cat`) scoort nog eens 0.51 SD (want z-score!) hoger op `Gender.voorZ`. (Dus, een meisje dat techniek volgt scoort 0.77 op `Gender.voorZ` in de steekproef: -0.32 + 0.58*1 + (-0.07)*1 + 0.51*1*1 = 0.7). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten de interactie tussen `GeslachtD` en `Richting2cat` ook terug te vinden in de populatie.
+- $\beta_{GeslachtD:Richting2cat1}$ = 0.51, dus een meisje dat wel techniek volgt (=scoort 1 op `GeslachtD` en op `Richting2cat`) scoort nog eens 0.51 SD (want z-score!) hoger op `Gender.voorZ`. (Dus, een meisje dat techniek volgt scoort 0.77 op `Gender.voorZ` in de steekproef: $-0.32 + 0.58*1 + (-0.07)*1 + 0.51*1*1 = 0.7$). Met p < 0.05: kans dat H0 opgaat in de populatie is kleiner dan 5%. Dus we verwachten de interactie tussen `GeslachtD` en `Richting2cat` ook terug te vinden in de populatie.
 
 (b)
 
